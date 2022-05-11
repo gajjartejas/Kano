@@ -1,0 +1,44 @@
+default_platform(:android)
+
+fastlane_require "dotenv"
+
+before_all do
+  Dotenv.load ".env.secret"
+end
+
+platform :android do
+  desc "Runs all the tests"
+  lane :test do
+    gradle(task: "test")
+  end
+
+desc "Build"
+lane :build do
+  gradle(task: "clean assembleRelease")
+end
+
+
+  desc "Fastlane Firebase Distribution"
+    lane :distribute do
+#         gradle(task: "clean assembleRelease")
+        # build_android_app is a built-in fastlane action.
+
+        firebase_app_distribution(
+            app: "1:605232211566:android:f6e0cd9188c635d1",
+            testers: "rtempest805@gmail.com, gajjartejas26@gmail.com",
+            release_notes: "Russian language support!"
+        )
+    end
+
+  desc "Deploy a new version to the Google Play"
+  lane :deploy do
+    gradle(task: "clean bundleRelease")
+    upload_to_play_store
+  end
+
+    desc "Deploy a new version to the Google Play"
+    lane :alpha do
+      gradle(task: "clean bundleRelease")
+      upload_to_play_store(track: 'alpha')
+    end
+end
