@@ -1,6 +1,6 @@
 import { Platform } from 'react-native';
-import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
-import { useCallback, useEffect, useState } from 'react';
+import { DOMParser } from '@xmldom/xmldom';
+import { useCallback, useState } from 'react';
 var RNFS = require('react-native-fs');
 
 interface IParsedSVG {
@@ -17,10 +17,10 @@ const useSvgReader = () => {
   const [parsedSvgPaths, setParsedSvgPaths] = useState<IParsedSVGPaths>();
   const [error, setError] = useState<Error | null>();
 
-  const readSvgSilently = useCallback((name: string): Promise<IParsedSVGPaths> => {
+  const readSvgSilently = useCallback((name: string, path: string): Promise<IParsedSVGPaths> => {
     return new Promise((resolve, reject) => {
       if (Platform.OS === 'ios') {
-        RNFS.readFile(`${RNFS.MainBundlePath}/assets/svgs/${name}`)
+        RNFS.readFile(`${RNFS.MainBundlePath}/${path}/${name}`)
           .then((res: string) => {
             let parsedSVGText = parseSvgText(res);
             resolve(parsedSVGText);
@@ -29,7 +29,7 @@ const useSvgReader = () => {
             reject(e);
           });
       } else if (Platform.OS === 'android') {
-        RNFS.readFileAssets(`${name}`)
+        RNFS.readFileAssets(`${path}/${name}`)
           .then((res: string) => {
             let parsedSVGText = parseSvgText(res);
             resolve(parsedSVGText);
@@ -42,8 +42,8 @@ const useSvgReader = () => {
   }, []);
 
   const readSvg = useCallback(
-    (name: string) => {
-      readSvgSilently(name)
+    (name: string, path: string) => {
+      readSvgSilently(name, path)
         .then(paths => {
           setParsedSvgPaths(paths);
         })
