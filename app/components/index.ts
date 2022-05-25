@@ -7,6 +7,7 @@ import SelectAccentDialog from './SelectAccentColorDialog';
 import DashboardItem from './DashboardItem';
 import AnimatedStroke from './AnimatedStroke';
 import AnimatedCharacter from './AnimatedCharacter';
+import HomeListItem from './HomeListItem';
 
 export default {
   AppNoConnection,
@@ -18,4 +19,5 @@ export default {
   DashboardItem,
   AnimatedStroke,
   AnimatedCharacter,
+  HomeListItem,
 };
