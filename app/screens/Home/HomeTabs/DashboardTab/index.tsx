@@ -1,24 +1,24 @@
-import React from 'react';
-import { View, Image, ScrollView, StatusBar } from 'react-native';
+import React, { useState } from 'react';
+import { View } from 'react-native';
 
 //ThirdParty
-import { Text } from 'react-native-paper';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { useTheme } from 'react-native-paper';
+import { Button, useTheme } from 'react-native-paper';
 import { useTranslation } from 'react-i18next';
 
-//App modules
+//App Modules
 import Components from 'app/components';
-import styles from './styles';
 import { IAdsActivity } from 'app/components/DashboardItem';
 import Utils from 'app/utils';
-import Config from 'app/config';
+import AnimatedCharacter from 'app/components/AnimatedCharacter';
+import Animated, { Easing, FadeIn, Layout } from 'react-native-reanimated';
 
 //Params
 type RootStackParamList = {
   DashboardTab: { userId: string };
   Purchase: {};
 };
+
 type Props = NativeStackScreenProps<RootStackParamList, 'DashboardTab'>;
 
 const DashboardTab = ({ navigation }: Props) => {
@@ -31,6 +31,7 @@ const DashboardTab = ({ navigation }: Props) => {
   const { t } = useTranslation();
 
   //States
+  const [show, setShow] = useState(false);
 
   const cardTapped = (item: IAdsActivity, _index: number) => {
     Utils.rateApp.saveItem(item);
@@ -41,27 +42,36 @@ const DashboardTab = ({ navigation }: Props) => {
   };
 
   return (
-    <View style={[styles.container, { backgroundColor: colors.background }]}>
-      <StatusBar translucent={true} backgroundColor={'transparent'} />
+    <View
+      style={{
+        flex: 1,
+        marginTop: 100,
+        alignContent: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#ecf0f1',
+      }}>
+      <Button
+        onPress={() => {
+          setShow(!show);
+        }}>
+        {'Animate'}
+      </Button>
 
-      <ScrollView style={styles.carouselContainer}>
-        <View style={styles.headerDetailContainer} />
-
-        <View style={styles.listContainer}>
-          {/* {groupedEntries.map((section, sectionIndex) => {
-            return (
-              <View style={styles.section} key={section.title}>
-                <Text style={styles.sectionHeader}>{t(section.title)}</Text>
-                <View style={styles.sectionItem}>
-                  {section.data.map((item, index) => {
-                    return renderItem({ item, index, sectionIndex });
-                  })}
-                </View>
-              </View>
-            );
-          })} */}
-        </View>
-      </ScrollView>
+      {show && (
+        <Animated.View
+          entering={FadeIn.duration(1200).easing(Easing.bezierFn(1, 0, 0.17, 0.98))}
+          layout={Layout.springify()}
+          style={{ flex: 1 }}>
+          <AnimatedCharacter
+            emptyStroke="#00000020"
+            stroke="black"
+            strokeWidth={6}
+            initialDelay={0}
+            path={'assets/svgs'}
+            name={'ka.svg'}
+          />
+        </Animated.View>
+      )}
     </View>
   );
 };

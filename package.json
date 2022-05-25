@@ -27,7 +27,6 @@
     "react-native-easy-icon": "^1.0.7",
     "react-native-fs": "^2.19.0",
     "react-native-gesture-handler": "^2.4.1",
-    "react-native-iap": "^8.0.5",
     "react-native-in-app-review": "^3.3.2",
     "react-native-inappbrowser-reborn": "^3.6.3",
     "react-native-localize": "^2.2.0",
