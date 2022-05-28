@@ -20,29 +20,27 @@ const styles = StyleSheet.create({
   },
   headerImage: {
     width: '100%',
-    height: 250,
+    height: 300,
     borderBottomLeftRadius: 40,
     borderBottomRightRadius: 40,
     position: 'absolute',
+    backgroundColor: 'red',
+    overflow: 'hidden',
   },
-  section: { paddingHorizontal: 16 },
-  sectionItem: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    flexWrap: 'wrap',
-  },
+  section: { paddingHorizontal: 20 },
+  sectionItem: {},
   listContainer: {
     paddingTop: 16,
   },
   headerDetailContainer: {
     paddingHorizontal: 16,
-    paddingTop: 60,
+    paddingTop: 80,
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
   headerDetailText: {
-    fontSize: 16,
-    fontWeight: '800',
+    fontSize: 40,
+    fontWeight: '500',
     color: 'white',
   },
 });

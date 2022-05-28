@@ -1,22 +1,23 @@
-import React, { useState } from 'react';
-import { View } from 'react-native';
+import React from 'react';
+import { View, Dimensions, ScrollView, StatusBar } from 'react-native';
 
 //ThirdParty
+import { Text, useTheme } from 'react-native-paper';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { Button, useTheme } from 'react-native-paper';
 import { useTranslation } from 'react-i18next';
+import DeviceInfo from 'react-native-device-info';
 
-//App Modules
+//App modules
 import Components from 'app/components';
-import { IAdsActivity } from 'app/components/DashboardItem';
+import styles from './styles';
 import Utils from 'app/utils';
-import AnimatedCharacter from 'app/components/AnimatedCharacter';
-import Animated, { Easing, FadeIn, Layout } from 'react-native-reanimated';
+import Config from 'app/config';
+import Hooks from 'app/hooks/index';
+import { IHomeListItem } from 'app/components/HomeListItem';
 
 //Params
 type RootStackParamList = {
   DashboardTab: { userId: string };
-  Purchase: {};
 };
 
 type Props = NativeStackScreenProps<RootStackParamList, 'DashboardTab'>;
@@ -28,50 +29,58 @@ const DashboardTab = ({ navigation }: Props) => {
 
   //Constants
   const { colors } = useTheme();
+  const groupedEntries = Hooks.useHomeListItems();
   const { t } = useTranslation();
 
   //States
-  const [show, setShow] = useState(false);
-
-  const cardTapped = (item: IAdsActivity, _index: number) => {
+  const cardTapped = (item: IHomeListItem, _index: number, _sectionIndex: number) => {
     Utils.rateApp.saveItem(item);
   };
 
-  const renderItem = ({ item, index }: { item: IAdsActivity; index: number; sectionIndex: number }) => {
-    return <Components.DashboardItem key={item.id} item={item} index={index} onPress={cardTapped} />;
+  const renderItem = ({ item, index, sectionIndex }: { item: IHomeListItem; index: number; sectionIndex: number }) => {
+    return (
+      <Components.HomeListItem
+        key={item.id}
+        item={item}
+        index={index}
+        sectionIndex={sectionIndex}
+        onPress={cardTapped}
+      />
+    );
   };
 
   return (
-    <View
-      style={{
-        flex: 1,
-        marginTop: 100,
-        alignContent: 'center',
-        justifyContent: 'center',
-        backgroundColor: '#ecf0f1',
-      }}>
-      <Button
-        onPress={() => {
-          setShow(!show);
-        }}>
-        {'Animate'}
-      </Button>
+    <View style={[styles.container, { backgroundColor: colors.background }]}>
+      <StatusBar translucent={true} backgroundColor={'transparent'} />
 
-      {show && (
-        <Animated.View
-          entering={FadeIn.duration(1200).easing(Easing.bezierFn(1, 0, 0.17, 0.98))}
-          layout={Layout.springify()}
-          style={{ flex: 1 }}>
-          <AnimatedCharacter
-            emptyStroke="#00000020"
-            stroke="black"
-            strokeWidth={6}
-            initialDelay={0}
-            path={'assets/svgs'}
-            name={'ka.svg'}
-          />
-        </Animated.View>
-      )}
+      <ScrollView style={styles.carouselContainer}>
+        <View style={styles.headerImage}>
+          <Components.WaveBackground />
+        </View>
+
+        <View style={styles.headerDetailContainer}>
+          <View>
+            <Text style={styles.headerDetailText}>{'Welcome back\nTejas'}</Text>
+          </View>
+        </View>
+
+        <View style={styles.listContainer}>
+          {groupedEntries.map((section, sectionIndex) => {
+            return (
+              <View style={styles.section} key={section.title}>
+                <Text style={[styles.sectionHeader, sectionIndex === 0 ? styles.whiteSectionHeader : null]}>
+                  {t(section.title)}
+                </Text>
+                <View style={styles.sectionItem}>
+                  {section.data.map((item, index) => {
+                    return renderItem({ item, index, sectionIndex });
+                  })}
+                </View>
+              </View>
+            );
+          })}
+        </View>
+      </ScrollView>
     </View>
   );
 };
