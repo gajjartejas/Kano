@@ -34,6 +34,11 @@ declare global {
       onSurface: string;
 
       error: string;
+      shadow: string;
+
+      textTitle: string;
+      card: string;
+      opacity: string;
     }
 
     interface Theme {}
@@ -104,13 +109,18 @@ const RootNavigation: React.FC = () => {
       primary: primary,
       onPrimary: '#FFFFFF',
 
-      background: '#FFFFFF',
+      background: '#F9F9F9',
       onBackground: '#000000',
 
-      surface: '#eeeeee',
+      surface: '#F9F9F9',
       onSurface: '#000000',
 
       error: '#FF0000',
+      shadow: '#000000',
+
+      textTitle: '#535b6b',
+      card: '#FFFFFF',
+      opacity: '55',
     },
   };
 
@@ -128,6 +138,11 @@ const RootNavigation: React.FC = () => {
       onSurface: '#FFFFFF',
 
       error: '#FF0000',
+      shadow: '#000000',
+
+      textTitle: '#FFFFFF',
+      card: '#1E1E1E',
+      opacity: 'FF',
     },
   };
 

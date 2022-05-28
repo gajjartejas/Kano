@@ -1,11 +1,11 @@
 import React from 'react';
-import { Dimensions, View, StyleSheet } from 'react-native';
+
+import { View, StyleSheet } from 'react-native';
 
 //Third Party
 import { TouchableRipple, useTheme, Text } from 'react-native-paper';
-
-//Constants
-const { width } = Dimensions.get('window');
+import CircularProgress from './CircularProgress';
+import SVGIcon from './SVGIcon';
 
 //Interface
 export interface IHomeListItem {
@@ -33,22 +33,40 @@ const HomeListItem = (props: IHomeListItemProps) => {
   const { colors } = useTheme();
   const { item, index } = props;
   const sectionIndex = props.sectionIndex;
+  const iconName = props.item.iconName;
 
   return (
-    <View
-      style={[styles.container, { backgroundColor: `${colors.background}`, shadowColor: `${colors.onBackground}11` }]}>
+    <View style={[styles.container, { backgroundColor: `${colors.card}`, shadowColor: `${colors.shadow}` }]}>
       <TouchableRipple
         rippleColor={`${colors.primary}20`}
-        style={[styles.touchableButton, { backgroundColor: `${colors.onBackground}20` }]}
+        style={[styles.touchableButton, { backgroundColor: `${colors.card}20` }]}
         onPress={() => props.onPress(item, index, sectionIndex)}>
-        <>
-          <Text numberOfLines={1} style={[styles.titleText, { color: colors.text }]}>
-            {item.title}
-          </Text>
-          <Text numberOfLines={2} style={[styles.subtitleText, { color: `${colors.text}60` }]}>
-            {item.subTitle}
-          </Text>
-        </>
+        <View style={styles.iconTextContainer}>
+          <View style={styles.iconTextContainer1}>
+            <SVGIcon iconName={iconName} style={styles.leftIcon} width={44} height={44} />
+            <View style={styles.textContainer}>
+              <Text numberOfLines={2} style={[styles.titleText, { color: colors.textTitle }]}>
+                {item.title}
+              </Text>
+              <Text numberOfLines={2} style={[styles.subtitleText, { color: `${colors.primary}${colors.opacity}` }]}>
+                {item.subTitle}
+              </Text>
+            </View>
+          </View>
+
+          <CircularProgress
+            style={[styles.circularProgress]}
+            textColor={colors.text}
+            fill={colors.card}
+            textSize={12}
+            pgColor={colors.primary}
+            bgColor={colors.card}
+            size={40}
+            text={'80%'}
+            strokeWidth={StyleSheet.hairlineWidth}
+            progressPercent={80}
+          />
+        </View>
       </TouchableRipple>
     </View>
   );
@@ -56,33 +74,47 @@ const HomeListItem = (props: IHomeListItemProps) => {
 
 const styles = StyleSheet.create({
   container: {
-    overflow: 'hidden',
-    width: width / 2 - 24,
-    borderRadius: 18,
-    shadowRadius: 2,
+    borderRadius: 8,
+    shadowRadius: 4,
     shadowOffset: {
       width: 0,
       height: 0,
     },
     elevation: 8,
-    shadowOpacity: 1.0,
-    marginBottom: 16,
+    shadowOpacity: 0.2,
+    flex: 1,
+    height: 98,
+    marginBottom: 8,
   },
   touchableButton: {
     flex: 1,
-    paddingVertical: 16,
-    paddingHorizontal: 16,
+    justifyContent: 'center',
   },
   titleText: {
-    fontWeight: 'bold',
+    fontWeight: '600',
     fontSize: 15,
     marginTop: 8,
   },
   subtitleText: {
     fontSize: 12,
-    fontWeight: '500',
+    fontWeight: '600',
     marginTop: 4,
   },
+  circularProgress: {
+    marginHorizontal: 20,
+    shadowRadius: 2,
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    elevation: 8,
+    shadowOpacity: 0.41,
+    borderRadius: 20,
+  },
+  iconTextContainer: { flex: 1, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
+  iconTextContainer1: { flex: 1, flexDirection: 'row', alignItems: 'center' },
+  leftIcon: { marginHorizontal: 20 },
+  textContainer: { marginRight: 8, flex: 1 },
 });
 
 export default HomeListItem;

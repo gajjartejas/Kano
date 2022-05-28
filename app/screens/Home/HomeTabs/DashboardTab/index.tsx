@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Image, ScrollView, StatusBar } from 'react-native';
+import { View, Dimensions, ScrollView, StatusBar } from 'react-native';
 
 //ThirdParty
 import { Text, useTheme } from 'react-native-paper';
@@ -54,14 +54,13 @@ const DashboardTab = ({ navigation }: Props) => {
       <StatusBar translucent={true} backgroundColor={'transparent'} />
 
       <ScrollView style={styles.carouselContainer}>
-        {/* <Image source={Config.Images.icons.home_header} style={styles.headerImage} /> */}
+        <View style={styles.headerImage}>
+          <Components.WaveBackground />
+        </View>
 
         <View style={styles.headerDetailContainer}>
           <View>
-            <Text style={styles.headerDetailText}>{t('miui_version', { version: 'Lorem' })}</Text>
-            <Text style={styles.headerDetailText}>
-              {t('android_version', { version: DeviceInfo.getSystemVersion() })}
-            </Text>
+            <Text style={styles.headerDetailText}>{'Welcome back\nTejas'}</Text>
           </View>
         </View>
 
