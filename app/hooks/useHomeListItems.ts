@@ -24,6 +24,12 @@ const useHomeListItems = (): IHomeListSection[] => {
       title: 'Introduction to Barakhadi \n(consonants & vowels)',
       subTitle: '10 hours, 19 lessons',
       iconName: 'ic_barakhadi.svg',
+    }, 
+    {
+      id: 3,
+      title: 'Introduction to\nGujarati numerals',
+      subTitle: '10 hours, 19 lessons',
+      iconName: 'ic_numbers.svg',
     },
   ];
 

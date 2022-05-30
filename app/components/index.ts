@@ -11,6 +11,7 @@ import HomeListItem from './HomeListItem';
 import WaveBackground from './WaveBackground';
 import CircularProgress from './CircularProgress';
 import SvgIcon from './SVGIcon';
+import ConsonantListItem from './ConsonantListItem';
 
 export default {
   AppNoConnection,
@@ -26,4 +27,5 @@ export default {
   WaveBackground,
   CircularProgress,
   SvgIcon,
+  ConsonantListItem
 };

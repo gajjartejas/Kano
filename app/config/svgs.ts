@@ -10,6 +10,9 @@ const svgIconForName = (name: string) => {
     case 'ic_barakhadi.svg':
       return () => React.lazy(() => import(`app/assets/svgs/ic_barakhadi.svg`));
 
+      case 'ic_numbers.svg':
+        return () => React.lazy(() => import(`app/assets/svgs/ic_numbers.svg`));
+
     default:
       return () => React.lazy(() => import(`app/assets/svgs/ic_intro.svg`));
   }

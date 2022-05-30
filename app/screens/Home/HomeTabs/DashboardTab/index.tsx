@@ -34,7 +34,8 @@ const DashboardTab = ({ navigation }: Props) => {
 
   //States
   const cardTapped = (item: IHomeListItem, _index: number, _sectionIndex: number) => {
-    Utils.rateApp.saveItem(item);
+    // Utils.rateApp.saveItem(item);
+    navigation.push('LearnPracticeConsonantsList', {})
   };
 
   const renderItem = ({ item, index, sectionIndex }: { item: IHomeListItem; index: number; sectionIndex: number }) => {

@@ -16,6 +16,7 @@ import About from 'app/screens/Settings/About';
 import SelectAppearance from 'app/screens/Settings/SelectAppearance';
 import License from 'app/screens/Settings/License';
 import Translators from 'app/screens/Settings/Translators';
+import LearnPracticeConsonantsList from 'app/screens/ConsonantsIntro/LearnPracticeConsonantsList';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -62,6 +63,7 @@ const LoggedInTabNavigator: React.FC<IProps> = () => {
       <Stack.Screen name="SelectAppearance" component={SelectAppearance} options={{ headerShown: false }} />
       <Stack.Screen name="License" component={License} options={{ headerShown: false }} />
       <Stack.Screen name="Translators" component={Translators} options={{ headerShown: false }} />
+      <Stack.Screen name="LearnPracticeConsonantsList" component={LearnPracticeConsonantsList} options={{ headerShown: false }} />
     </LoggedInStack.Navigator>
   );
 };
