@@ -1,12 +1,12 @@
 //ThirdParty
-import { IConsonantListItem, IConsonantListSection } from 'app/components/ConsonantListItem';
+import { IVowelstListItem, IVowelstListSection } from 'app/components/VowelstListItem';
 import { useTranslation } from 'react-i18next';
 
-const useConsonantListItems = (): IConsonantListSection[] => {
+const useVowelstListItems = (): IVowelstListSection[] => {
     //Constants
     const { t } = useTranslation();
 
-    let entries: IConsonantListItem[] = [
+    let entries: IVowelstListItem[] = [
         {
             id: 0,
             title: 'Alphabets Chart',
@@ -30,7 +30,7 @@ const useConsonantListItems = (): IConsonantListSection[] => {
         },
     ];
 
-    let entries1: IConsonantListItem[] = [
+    let entries1: IVowelstListItem[] = [
         {
             id: 0,
             title: 'Practice by Order',
@@ -47,7 +47,7 @@ const useConsonantListItems = (): IConsonantListSection[] => {
         },
     ];
 
-    let sections: IConsonantListSection[] = [
+    let sections: IVowelstListSection[] = [
         {
             title: 'Learn',
             data: entries,
@@ -61,4 +61,4 @@ const useConsonantListItems = (): IConsonantListSection[] => {
     return sections;
 };
 
-export default useConsonantListItems;
+export default useVowelstListItems;

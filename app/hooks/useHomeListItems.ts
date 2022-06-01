@@ -11,25 +11,36 @@ const useHomeListItems = (): IHomeListSection[] => {
       id: 0,
       title: 'Introduction to Gujarati\nScript',
       subTitle: '10 hours, 19 lessons',
-      iconName: 'ic_intro.svg',
+      iconName: 'egg',
+      iconFamily: 'material-community'
     },
     {
       id: 1,
-      title: 'Introduction to\nConsonants(vyañjana)',
+      title: 'Introduction to\nVowels(svara)',
       subTitle: '10 hours, 19 lessons',
-      iconName: 'ic_consonants.svg',
+      iconName: 'egg-easter',
+      iconFamily: 'material-community'
     },
     {
       id: 2,
-      title: 'Introduction to Barakhadi \n(consonants & vowels)',
+      title: 'Introduction to\nConsonants(vyañjana)',
       subTitle: '10 hours, 19 lessons',
-      iconName: 'ic_barakhadi.svg',
-    }, 
+      iconName: 'baby',
+      iconFamily: 'material-community'
+    },
     {
       id: 3,
+      title: 'Introduction to Barakhadi \n(consonants & vowels)',
+      subTitle: '10 hours, 19 lessons',
+      iconName: 'walking',
+      iconFamily: 'font-awesome5'
+    },
+    {
+      id: 4,
       title: 'Introduction to\nGujarati numerals',
       subTitle: '10 hours, 19 lessons',
-      iconName: 'ic_numbers.svg',
+      iconName: 'number',
+      iconFamily: 'octicon'
     },
   ];
 

@@ -13,27 +13,27 @@ import styles from './styles';
 import Utils from 'app/utils';
 import Config from 'app/config';
 import Hooks from 'app/hooks/index';
-import { IConsonantListItem } from 'app/components/ConsonantListItem';
+import { IVowelstListItem } from 'app/components/VowelstListItem';
 
 //Params
 type RootStackParamList = {
-  LearnPracticeConsonantsList: {};
+  LearnVowelsList: {};
 };
 
-type Props = NativeStackScreenProps<RootStackParamList, 'LearnPracticeConsonantsList'>;
+type Props = NativeStackScreenProps<RootStackParamList, 'LearnVowelsList'>;
 
-const LearnPracticeConsonantsList = ({ navigation }: Props) => {
+const LearnVowelsList = ({ navigation }: Props) => {
   //Refs
 
   //Actions
 
   //Constants
   const { colors } = useTheme();
-  const groupedEntries = Hooks.useConsonantListItems();
+  const groupedEntries = Hooks.useVowelstListItems();
   const { t } = useTranslation();
 
   //States
-  const cardTapped = (item: IConsonantListItem, _index: number, _sectionIndex: number) => {
+  const cardTapped = (item: IVowelstListItem, _index: number, _sectionIndex: number) => {
     Utils.rateApp.saveItem(item);
   };
 
@@ -42,12 +42,12 @@ const LearnPracticeConsonantsList = ({ navigation }: Props) => {
     index,
     sectionIndex,
   }: {
-    item: IConsonantListItem;
+    item: IVowelstListItem;
     index: number;
     sectionIndex: number;
   }) => {
     return (
-      <Components.ConsonantListItem
+      <Components.VowelstListItem
         key={item.id}
         item={item}
         index={index}
@@ -89,4 +89,4 @@ const LearnPracticeConsonantsList = ({ navigation }: Props) => {
   );
 };
 
-export default LearnPracticeConsonantsList;
+export default LearnVowelsList;

@@ -9,7 +9,7 @@ import Icon from 'react-native-easy-icon';
 import { IconType } from 'react-native-easy-icon/src/Icon';
 
 //Interface
-export interface IHomeListItem {
+export interface IBarakhadiListItem {
   id: number;
   title: string;
   subTitle: string;
@@ -17,20 +17,20 @@ export interface IHomeListItem {
   iconFamily: IconType;
 }
 
-export interface IHomeListSection {
+export interface IBarakhadiListSection {
   title: string;
-  data: IHomeListItem[];
+  data: IBarakhadiListItem[];
 }
 
 //Interface
-interface IHomeListItemProps {
-  item: IHomeListItem;
+interface IBarakhadiListItemProps {
+  item: IBarakhadiListItem;
   index: number;
   sectionIndex: number;
-  onPress: (item: IHomeListItem, index: number, sectionIndex: number) => void;
+  onPress: (item: IBarakhadiListItem, index: number, sectionIndex: number) => void;
 }
 
-const HomeListItem = (props: IHomeListItemProps) => {
+const BarakhadiListItem = (props: IBarakhadiListItemProps) => {
   //Const
   const { colors } = useTheme();
   const { item, index } = props;
@@ -128,4 +128,4 @@ const styles = StyleSheet.create({
   textContainer: { marginRight: 8, flex: 1 },
 });
 
-export default HomeListItem;
+export default BarakhadiListItem;

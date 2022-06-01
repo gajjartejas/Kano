@@ -17,7 +17,11 @@ import { IHomeListItem } from 'app/components/HomeListItem';
 
 //Params
 type RootStackParamList = {
-  DashboardTab: { userId: string };
+  DashboardTab: {};
+  LearnConsonantsList: {};
+  LearnVowelsList: {};
+  LearnBarakhadisList: {};
+  LearnNumeralsList: {};
 };
 
 type Props = NativeStackScreenProps<RootStackParamList, 'DashboardTab'>;
@@ -33,9 +37,18 @@ const DashboardTab = ({ navigation }: Props) => {
   const { t } = useTranslation();
 
   //States
-  const cardTapped = (item: IHomeListItem, _index: number, _sectionIndex: number) => {
+  const cardTapped = (item: IHomeListItem, index: number, sectionIndex: number) => {
+    if (sectionIndex === 0 && index === 0) {
+    } else if (sectionIndex === 0 && index === 1) {
+      navigation.push('LearnVowelsList', {});
+    } else if (sectionIndex === 0 && index === 2) {
+      navigation.push('LearnConsonantsList', {});
+    } else if (sectionIndex === 0 && index === 3) {
+      navigation.push('LearnBarakhadisList', {});
+    } else if (sectionIndex === 0 && index === 4) {
+      navigation.push('LearnNumeralsList', {});
+    }
     // Utils.rateApp.saveItem(item);
-    navigation.push('LearnPracticeConsonantsList', {})
   };
 
   const renderItem = ({ item, index, sectionIndex }: { item: IHomeListItem; index: number; sectionIndex: number }) => {
