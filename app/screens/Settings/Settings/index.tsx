@@ -31,68 +31,68 @@ const Settings = ({ navigation }: Props) => {
   const [apps, setApps] = useState<ISettingSection[]>([
     {
       id: 0,
-      title: t('SETTINGS_COMMON_HEADER'),
+      title: t('settings.commonHeader'),
       items: [
         {
           id: 0,
           iconName: 'wb-sunny',
           iconType: 'material',
-          title: t('SETTINGS_APPEARANCE_TITLE'),
-          description: t('SETTINGS_APPEARANCE_SUB_TITLE'),
+          title: t('settings.appearanceTitle'),
+          description: t('settings.appearanceSubTitle'),
           route: 'SelectAppearance',
         },
       ],
     },
     {
       id: 1,
-      title: t('SETTINGS_INFO_HEADER'),
+      title: t('settings.infoHeader'),
       items: [
         {
           id: 0,
           iconName: 'notes',
           iconType: 'material',
-          title: t('SETTINGS_CHANGELOG_TITLE'),
-          description: t('SETTINGS_CHANGELOG_SUB_TITLE'),
+          title: t('settings.changelogTitle'),
+          description: t('settings.changelogSubTitle'),
           route: 'Changelog',
         },
         {
           id: 1,
           iconName: 'library-shelves',
           iconType: 'material-community',
-          title: t('SETTINGS_LIBRARIES_TITLE'),
-          description: t('SETTINGS_LIBRARIES_SUB_TITLE'),
+          title: t('settings.librariesTitle'),
+          description: t('settings.librariesSubTitle'),
           route: 'License',
         },
         {
           id: 2,
           iconName: 'frequently-asked-questions',
           iconType: 'material-community',
-          title: t('SETTINGS_FAQ_TITLE'),
-          description: t('SETTINGS_FAQ_SUB_TITLE'),
+          title: t('settings.faqTitle'),
+          description: t('settings.faqSubTitle'),
           route: 'FAQ',
         },
         {
           id: 3,
           iconName: 'language',
           iconType: 'ionicon',
-          title: t('SETTINGS_TRANSLATE_TITLE'),
-          description: t('SETTINGS_TRANSLATE_SUB_TITLE'),
+          title: t('settings.translateTitle'),
+          description: t('settings.translateSubTitle'),
           route: 'Translate',
         },
         {
           id: 4,
           iconName: 'people',
           iconType: 'ionicon',
-          title: t('SETTINGS_TRANSLATORS_TITLE'),
-          description: t('SETTINGS_TRANSLATORS_SUB_TITLE'),
+          title: t('settings.translatorsTitle'),
+          description: t('settings.translatorsSubTitle'),
           route: 'Translators',
         },
         {
           id: 5,
           iconName: 'privacy-tip',
           iconType: 'material',
-          title: t('SETTINGS_PRIVACY_TITLE'),
-          description: t('SETTINGS_PRIVACY_SUB_TITLE'),
+          title: t('settings.privacyTitle'),
+          description: t('settings.privacySubTitle'),
           route: 'PrivacyPolicy',
         },
       ],
@@ -132,7 +132,7 @@ const Settings = ({ navigation }: Props) => {
 
       <Appbar.Header style={{ backgroundColor: colors.background }}>
         <Appbar.BackAction onPress={onGoBack} />
-        <Appbar.Content title={t('SETTINGS_TITLE')} subtitle="" />
+        <Appbar.Content title={t('settings.title')} subtitle="" />
       </Appbar.Header>
       <View style={styles.safeArea}>
         <ScrollView>

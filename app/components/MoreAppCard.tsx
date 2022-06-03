@@ -29,10 +29,10 @@ function MoreAppCard(props: IMoreAppCard) {
       {props.showLinks && (
         <>
           <Button style={styles.githubButton} onPress={props.onPressGithub}>
-            {t('MORE_APP_GITHUB')}
+            {t('moreApps.appsGithub')}
           </Button>
           <Button style={styles.playstoreButton} onPress={props.onPressPlayStore}>
-            {t('MORE_APP_PLAY_STORE')}
+            {t('moreApps.appsPlayStore')}
           </Button>
         </>
       )}

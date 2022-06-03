@@ -100,7 +100,7 @@ const Translators = ({ navigation }: Props) => {
 
       <Appbar.Header style={{ backgroundColor: colors.background }}>
         <Appbar.BackAction onPress={onGoBack} />
-        <Appbar.Content title={t('TRANSLATORS_TITLE')} subtitle="" />
+        <Appbar.Content title={t('translatorsScreen.title')} subtitle="" />
       </Appbar.Header>
       <View style={styles.subView}>
         <FlatList

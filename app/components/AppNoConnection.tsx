@@ -12,7 +12,7 @@ const AppNoInternetConnection = () => {
 
   return (
     <View style={[styles.container, { backgroundColor: colors.error }]}>
-      <Text style={[styles.titleTextStyle, { color: colors.onPrimary }]}>{t('NO_INTERNET')}</Text>
+      <Text style={[styles.titleTextStyle, { color: colors.onPrimary }]}>{t('general.noInternet')}</Text>
     </View>
   );
 };

@@ -52,37 +52,37 @@ const MoreTab = ({ navigation }: Props) => {
       id: 0,
       iconName: 'feedback',
       iconType: 'material',
-      title: t('ABOUT_SEND_FEEDBACK'),
+      title: t('about.sendFeedback',),
     },
     {
       id: 1,
       iconName: 'star',
       iconType: 'font-awesome',
-      title: t('ABOUT_RATE_APP'),
+      title: t('about.rateApp'),
     },
     {
       id: 2,
       iconName: 'apps',
       iconType: 'material-community',
-      title: t('ABOUT_MORE_APPS'),
+      title: t('about.moreApps'),
     },
     {
       id: 3,
       iconName: 'github',
       iconType: 'entypo',
-      title: t('ABOUT_GITHUB'),
+      title: t('about.github'),
     },
     {
       id: 4,
       iconName: 'gear',
       iconType: 'font-awesome',
-      title: t('ABOUT_SETTING'),
+      title: t('about.setting'),
     },
     {
       id: 5,
       iconName: 'info-circle',
       iconType: 'font-awesome',
-      title: t('ABOUT_APP'),
+      title: t('about.app'),
     },
   ]);
 
@@ -137,7 +137,7 @@ const MoreTab = ({ navigation }: Props) => {
   };
   const onPressEmail = async () => {
     const email = Config.Constants.ABOUT_SUPPORT_EMAIL;
-    const subject = `${t('APPNAME')} feedback`;
+    const subject = `${t('general.appname')} feedback`;
     const osType = Platform.OS;
     const systemVersion = DeviceInfo.getSystemVersion();
     const brand = DeviceInfo.getBrand();

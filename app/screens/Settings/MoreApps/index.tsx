@@ -42,24 +42,24 @@ const MoreApps = ({ navigation }: Props) => {
     {
       id: 0,
       icon: Config.Images.icons.app_icon,
-      title: t('MORE_APPS_1_TITLE'),
-      description: t('MORE_APPS_1_DESC'),
+      title: t('moreApps.apps1Title'),
+      description: t('moreApps.apps1Desc'),
       showLinks: false,
     },
     {
       id: 1,
       icon: Config.Images.icons.ic_more_app_miuiadshelper,
-      title: t('MORE_APPS_2_TITLE'),
-      description: t('MORE_APPS_2_DESC'),
+      title: t('moreApps.apps2Title'),
+      description: t('moreApps.apps2Desc'),
       showLinks: true,
       github: Config.Constants.MORE_APPS_MIUI_ADS_HELPER_GITHUB,
       playStore: Config.Constants.MORE_APPS_MIUI_ADS_HELPER_PLAY_STORE,
     },
     {
-      id: 1,
+      id: 2,
       icon: Config.Images.icons.ic_more_app_ohmclient,
-      title: t('MORE_APPS_3_TITLE'),
-      description: t('MORE_APPS_3_DESC'),
+      title: t('moreApps.apps3Title'),
+      description: t('moreApps.apps3Desc'),
       showLinks: true,
       github: Config.Constants.MORE_APPS_OHMCLIENT_GITHUB,
       playStore: Config.Constants.MORE_APPS_OHMCLIENT_PLAY_STORE,
@@ -102,16 +102,16 @@ const MoreApps = ({ navigation }: Props) => {
 
       <Appbar.Header style={{ backgroundColor: colors.background }}>
         <Appbar.BackAction onPress={onGoBack} />
-        <Appbar.Content title={t('MORE_APPS_TITLE')} subtitle="" />
+        <Appbar.Content title={t('moreApps.appsTitle')} subtitle="" />
       </Appbar.Header>
       <View style={styles.safeArea}>
         <ScrollView style={styles.scrollView}>
           {apps.map((item, index) => {
             return (
               <Components.MoreAppCard
+                key={item.id.toString()}
                 style={styles.moreCard}
                 icon={item.icon}
-                key={item.id.toString()}
                 showLinks={item.showLinks}
                 title={item.title}
                 description={item.description}

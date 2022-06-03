@@ -39,36 +39,36 @@ const SelectAppearance = ({ navigation }: Props) => {
   const [apps, setApps] = useState<ISettingSection[]>([
     {
       id: 0,
-      title: t('SETTINGS_INTERFACE_HEADER'),
+      title: t('appearanceSettings.interfaceHeader'),
       items: [
         {
           id: 0,
           iconName: 'wb-sunny',
           iconType: 'material',
-          title: t('SETTINGS_THEME_TITLE'),
-          description: t('SETTINGS_THEME_SUB_TITLE'),
+          title: t('appearanceSettings.themeTitle'),
+          description: t('appearanceSettings.themeSubTitle'),
           route: 'SelectAppearance',
         },
         {
           id: 1,
           iconName: 'app-settings-alt',
           iconType: 'material',
-          title: t('SETTINGS_ACCENT_COLOR_TITLE'),
-          description: t('SETTINGS_ACCENT_COLOR_SUB_TITLE'),
+          title: t('appearanceSettings.accentColorTitle'),
+          description: t('appearanceSettings.accentColorSubTitle'),
           route: '',
         },
       ],
     },
     {
       id: 1,
-      title: t('SETTINGS_OTHER_HEADER'),
+      title: t('appearanceSettings.otherHeader'),
       items: [
         {
           id: 0,
           iconName: 'backup-restore',
           iconType: 'material-community',
-          title: t('SETTINGS_OTHER_TITLE'),
-          description: t('SETTINGS_OTHER_SUB_TITLE'),
+          title: t('appearanceSettings.otherTitle'),
+          description: t('appearanceSettings.otherSubTitle'),
           route: 'SelectAppearance',
         },
       ],
@@ -81,17 +81,17 @@ const SelectAppearance = ({ navigation }: Props) => {
   const [themeOptions, setThemeOptions] = React.useState<ISettingThemeOptions[]>([
     {
       id: 0,
-      title: t('SETTINGS_THEME_OPTION_1'),
+      title: t('appearanceSettings.themeOption1'),
       value: IAppearanceType.Light,
     },
     {
       id: 1,
-      title: t('SETTINGS_THEME_OPTION_2'),
+      title: t('appearanceSettings.themeOption2'),
       value: IAppearanceType.Dark,
     },
     {
       id: 2,
-      title: t('SETTINGS_THEME_OPTION_3'),
+      title: t('appearanceSettings.themeOption3'),
       value: IAppearanceType.Auto,
     },
   ]);
@@ -185,7 +185,7 @@ const SelectAppearance = ({ navigation }: Props) => {
 
       <Appbar.Header style={{ backgroundColor: colors.background }}>
         <Appbar.BackAction onPress={onGoBack} />
-        <Appbar.Content title={t('SETTINGS_APPEARANCE_TITLE')} subtitle="" />
+        <Appbar.Content title={t('appearanceSettings.title')} subtitle="" />
       </Appbar.Header>
       <View style={styles.safeArea}>
         <ScrollView>

@@ -85,7 +85,7 @@ const License = ({ navigation }: Props) => {
 
       <Appbar.Header style={{ backgroundColor: colors.background }}>
         <Appbar.BackAction onPress={onGoBack} />
-        <Appbar.Content title={t('LIBRARIES_TITLE')} subtitle="" />
+        <Appbar.Content title={t('librariesScreen.title')} subtitle="" />
       </Appbar.Header>
       <View style={styles.subView}>
         <FlatList

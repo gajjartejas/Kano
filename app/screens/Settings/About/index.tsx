@@ -32,60 +32,60 @@ const Settings = ({ navigation }: Props) => {
   const [apps, setApps] = useState<ISettingSection[]>([
     {
       id: 0,
-      title: t('ABOUT_INFO_HEADER'),
+      title: t('aboutScreen.infoHeader'),
       items: [
         {
           id: 0,
           iconName: 'wb-sunny',
           iconType: 'material',
-          title: t('ABOUT_INFO_DESC_TITLE'),
+          title: t('aboutScreen.infoDescTitle'),
         },
         {
           id: 1,
           iconName: 'app-settings-alt',
           iconType: 'material',
-          title: t('ABOUT_INFO_AUTHOR_NAME_TITLE'),
+          title: t('aboutScreen.infoAuthorNameTitle'),
         },
       ],
     },
     {
       id: 1,
-      title: t('ABOUT_DEVELOPER_TITLE'),
+      title: t('aboutScreen.developerTitle'),
       items: [
         {
           id: 0,
           iconName: 'notes',
           iconType: 'material',
-          title: t('ABOUT_PORTFOLIO_TITLE'),
-          description: t('ABOUT_PORTFOLIO_SUB_TITLE'),
+          title: t('aboutScreen.portfolioTitle'),
+          description: t('aboutScreen.portfolioSubTitle'),
         },
         {
           id: 1,
           iconName: 'library-shelves',
           iconType: 'material-community',
-          title: t('ABOUT_INSTAGRAM_TITLE'),
-          description: t('ABOUT_INSTAGRAM_SUB_TITLE'),
+          title: t('aboutScreen.instagramTitle'),
+          description: t('aboutScreen.instagramSubTitle'),
         },
         {
           id: 3,
           iconName: 'frequently-asked-questions',
           iconType: 'material-community',
-          title: t('ABOUT_TELEGRAM_TITLE'),
-          description: t('ABOUT_TELEGRAM_SUB_TITLE'),
+          title: t('aboutScreen.telegramTitle'),
+          description: t('aboutScreen.telegramSubTitle'),
         },
         {
           id: 4,
           iconName: 'language',
           iconType: 'ionicon',
-          title: t('ABOUT_GITHUB_TITLE'),
-          description: t('ABOUT_GITHUB_SUB_TITLE'),
+          title: t('aboutScreen.githubTitle'),
+          description: t('aboutScreen.githubSubTitle'),
         },
         {
           id: 5,
           iconName: 'people',
           iconType: 'ionicon',
-          title: t('ABOUT_TWITTER_TITLE'),
-          description: t('ABOUT_TWITTER_SUB_TITLE'),
+          title: t('aboutScreen.twitterTitle'),
+          description: t('aboutScreen.twitterSubTitle'),
         },
       ],
     },
@@ -123,7 +123,7 @@ const Settings = ({ navigation }: Props) => {
 
       <Appbar.Header style={{ backgroundColor: colors.background }}>
         <Appbar.BackAction onPress={onGoBack} />
-        <Appbar.Content title={t('ABOUT_INFO_TITLE')} subtitle="" />
+        <Appbar.Content title={t('aboutScreen.title')} subtitle="" />
       </Appbar.Header>
 
       <ScrollView contentContainerStyle={styles.scrollView}>
