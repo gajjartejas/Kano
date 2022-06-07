@@ -66,7 +66,7 @@ const LearnBarakhadisList = ({ navigation }: Props) => {
 
       <Appbar.Header style={{ backgroundColor: colors.background }}>
         <Appbar.BackAction onPress={onGoBack} />
-        <Appbar.Content title={t('MORE_APPS_TITLE')} subtitle="" />
+        <Appbar.Content title={t('learnBarakhadiListScreen.header.title')} subtitle="" />
       </Appbar.Header>
       <View style={styles.safeArea}>
         <ScrollView style={styles.scrollView}>

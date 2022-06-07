@@ -1,53 +1,51 @@
 //ThirdParty
-import { IHomeListItem, IHomeListSection } from 'app/components/HomeListItem';
+import { IHomeListSection } from 'app/components/HomeListItem';
 import { useTranslation } from 'react-i18next';
 
 const useHomeListItems = (): IHomeListSection[] => {
   //Constants
   const { t } = useTranslation();
 
-  let entries: IHomeListItem[] = [
-    {
-      id: 0,
-      title: 'Introduction to Gujarati\nScript',
-      subTitle: '10 hours, 19 lessons',
-      iconName: 'egg',
-      iconFamily: 'material-community'
-    },
-    {
-      id: 1,
-      title: 'Introduction to\nVowels(svara)',
-      subTitle: '10 hours, 19 lessons',
-      iconName: 'egg-easter',
-      iconFamily: 'material-community'
-    },
-    {
-      id: 2,
-      title: 'Introduction to\nConsonants(vyañjana)',
-      subTitle: '10 hours, 19 lessons',
-      iconName: 'baby',
-      iconFamily: 'material-community'
-    },
-    {
-      id: 3,
-      title: 'Introduction to Barakhadi \n(consonants & vowels)',
-      subTitle: '10 hours, 19 lessons',
-      iconName: 'walking',
-      iconFamily: 'font-awesome5'
-    },
-    {
-      id: 4,
-      title: 'Introduction to\nGujarati numerals',
-      subTitle: '10 hours, 19 lessons',
-      iconName: 'number',
-      iconFamily: 'octicon'
-    },
-  ];
-
   let sections: IHomeListSection[] = [
     {
-      title: 'Introduction',
-      data: entries,
+      title: t('homeScreen.listItemSection1Title'),
+      data: [
+        {
+          id: 0,
+          title: t('homeScreen.listItemsSection1.itemTitle1'),
+          subTitle: t('homeScreen.listItemsSection1.itemSubTitle1'),
+          iconName: 'egg',
+          iconFamily: 'material-community',
+        },
+        {
+          id: 1,
+          title: t('homeScreen.listItemsSection1.itemTitle2'),
+          subTitle: t('homeScreen.listItemsSection1.itemSubTitle2'),
+          iconName: 'egg-easter',
+          iconFamily: 'material-community',
+        },
+        {
+          id: 2,
+          title: t('homeScreen.listItemsSection1.itemTitle3'),
+          subTitle: t('homeScreen.listItemsSection1.itemSubTitle3'),
+          iconName: 'baby',
+          iconFamily: 'material-community',
+        },
+        {
+          id: 3,
+          title: t('homeScreen.listItemsSection1.itemTitle4'),
+          subTitle: t('homeScreen.listItemsSection1.itemSubTitle4'),
+          iconName: 'walking',
+          iconFamily: 'font-awesome5',
+        },
+        {
+          id: 4,
+          title: t('homeScreen.listItemsSection1.itemTitle5'),
+          subTitle: t('homeScreen.listItemsSection1.itemSubTitle5'),
+          iconName: 'number',
+          iconFamily: 'octicon',
+        },
+      ],
     },
   ];
 

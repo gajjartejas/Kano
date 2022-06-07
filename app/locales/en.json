@@ -60,9 +60,7 @@
     "themeOption": "Theme",
     "themeOption1": "Light",
     "themeOption2": "Dark",
-    "themeOption3": "System default",
-
-    "accentColorOption": "Accent color"
+    "themeOption3": "System default"
   },
   "librariesScreen": {
     "title": "Libraries"
@@ -86,5 +84,112 @@
     "githubSubTitle": "Developer profile and list of open sourced projects",
     "twitterTitle": "Twitter",
     "twitterSubTitle": "Personal micro-blog"
+  },
+  "homeScreen": {
+    "header": {
+      "title": "Welcome back\n{{name}}"
+    },
+    "listItemSection1Title": "Introduction",
+    "listItemsSection1": {
+      "itemTitle1": "Introduction to\nGujarati Script",
+      "itemSubTitle1": "10 hours, 19 lessons",
+      "itemTitle2": "Introduction to\nVowels(svara)",
+      "itemSubTitle2": "10 hours, 19 lessons",
+      "itemTitle3": "Introduction to\nConsonants(vyañjana)",
+      "itemSubTitle3": "10 hours, 19 lessons",
+      "itemTitle4": "Introduction to Barakhadi \n(consonants & vowels)",
+      "itemSubTitle4": "10 hours, 19 lessons",
+      "itemTitle5": "Introduction to\nGujarati numerals",
+      "itemSubTitle5": "10 hours, 19 lessons"
+    }
+  },
+  "learnIntroScreen": {
+    "header": {
+      "title": "Introduction"
+    }
+  },
+  "learnVowelsListScreen": {
+    "header": {
+      "title": "Learn Vowels"
+    },
+    "listItemSection1Title": "Learn",
+    "listItemsSection1": {
+      "itemTitle1": "Vowels Chart",
+      "itemSubTitle1": "10 hours, 19 lessons",
+      "itemTitle2": "Learn in Sequence",
+      "itemSubTitle2": "10 hours, 19 lessons",
+      "itemTitle3": "Memorize by Random Order",
+      "itemSubTitle3": "10 hours, 19 lessons"
+    },
+    "listItemSection2Title": "Practice",
+    "listItemsSection2": {
+      "itemTitle1": "Practice by Order",
+      "itemSubTitle1": "10 hours, 19 lessons",
+      "itemTitle2": "Practice by Random Order",
+      "itemSubTitle2": "10 hours, 19 lessons"
+    }
+  },
+  "learnConsonantsListScreen": {
+    "header": {
+      "title": "Learn Consonants"
+    },
+    "listItemSection1Title": "Learn",
+    "listItemsSection1": {
+      "itemTitle1": "Consonants Chart",
+      "itemSubTitle1": "10 hours, 19 lessons",
+      "itemTitle2": "Learn in Sequence",
+      "itemSubTitle2": "10 hours, 19 lessons",
+      "itemTitle3": "Memorize by Random Order",
+      "itemSubTitle3": "10 hours, 19 lessons"
+    },
+    "listItemSection2Title": "Practice",
+    "listItemsSection2": {
+      "itemTitle1": "Practice by Order",
+      "itemSubTitle1": "10 hours, 19 lessons",
+      "itemTitle2": "Practice by Random Order",
+      "itemSubTitle2": "10 hours, 19 lessons"
+    }
+  },
+  "learnBarakhadiListScreen": {
+    "header": {
+      "title": "Learn Barakhadi"
+    },
+    "listItemSection1Title": "Learn",
+    "listItemsSection1": {
+      "itemTitle1": "Barakhadi Chart",
+      "itemSubTitle1": "10 hours, 19 lessons",
+      "itemTitle2": "Learn in Sequence",
+      "itemSubTitle2": "10 hours, 19 lessons",
+      "itemTitle3": "Memorize by Random Order",
+      "itemSubTitle3": "10 hours, 19 lessons"
+    },
+    "listItemSection2Title": "Practice",
+    "listItemsSection2": {
+      "itemTitle1": "Practice by Order",
+      "itemSubTitle1": "10 hours, 19 lessons",
+      "itemTitle2": "Practice by Random Order",
+      "itemSubTitle2": "10 hours, 19 lessons"
+    }
+  },
+  "learnNumeralsListScreen": {
+    "header": {
+      "title": "Learn Numerals"
+    },
+    "listItemSection1Title": "Learn",
+    "listItemsSection1": {
+      "itemTitle1": "Numerals Chart",
+      "itemSubTitle1": "10 hours, 19 lessons",
+      "itemTitle2": "Learn in Sequence",
+      "itemSubTitle2": "10 hours, 19 lessons",
+      "itemTitle3": "Memorize by Random Order",
+      "itemSubTitle3": "10 hours, 19 lessons"
+    },
+    "listItemSection2Title": "Practice",
+    "listItemsSection2": {
+      "itemTitle1": "Practice by Order",
+      "itemSubTitle1": "10 hours, 19 lessons",
+      "itemTitle2": "Practice by Random Order",
+      "itemSubTitle2": "10 hours, 19 lessons"
+    }
   }
 }

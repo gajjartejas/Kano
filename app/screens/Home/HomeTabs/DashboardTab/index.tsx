@@ -22,6 +22,7 @@ type RootStackParamList = {
   LearnVowelsList: {};
   LearnBarakhadisList: {};
   LearnNumeralsList: {};
+  GujaratiScriptIntro: {};
 };
 
 type Props = NativeStackScreenProps<RootStackParamList, 'DashboardTab'>;
@@ -39,6 +40,7 @@ const DashboardTab = ({ navigation }: Props) => {
   //States
   const cardTapped = (item: IHomeListItem, index: number, sectionIndex: number) => {
     if (sectionIndex === 0 && index === 0) {
+      navigation.push('GujaratiScriptIntro', {});
     } else if (sectionIndex === 0 && index === 1) {
       navigation.push('LearnVowelsList', {});
     } else if (sectionIndex === 0 && index === 2) {
@@ -74,7 +76,7 @@ const DashboardTab = ({ navigation }: Props) => {
 
         <View style={styles.headerDetailContainer}>
           <View>
-            <Text style={styles.headerDetailText}>{'Welcome back\nTejas'}</Text>
+            <Text style={styles.headerDetailText}>{t('homeScreen.header.title', { name: 'Tejas' })}</Text>
           </View>
         </View>
 
