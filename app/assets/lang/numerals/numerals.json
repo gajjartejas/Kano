@@ -1,0 +1,709 @@
+[
+  {
+    "id": 0,
+    "en": 0,
+    "gu": "૦",
+    "name_gu": "શૂન્ય",
+    "name_en": "śūnya"
+  },
+  {
+    "id": 1,
+    "en": 1,
+    "gu": "૧",
+    "name_gu": "એક",
+    "name_en": "ek"
+  },
+  {
+    "id": 2,
+    "en": 2,
+    "gu": "૨",
+    "name_gu": "બે",
+    "name_en": "be"
+  },
+  {
+    "id": 3,
+    "en": 3,
+    "gu": "૩",
+    "name_gu": "ત્રણ",
+    "name_en": "tra"
+  },
+  {
+    "id": 4,
+    "en": 4,
+    "gu": "૪",
+    "name_gu": "ચાર",
+    "name_en": "chār"
+  },
+  {
+    "id": 5,
+    "en": 5,
+    "gu": "૫",
+    "name_gu": "પાંચ",
+    "name_en": "pāṅch"
+  },
+  {
+    "id": 6,
+    "en": 6,
+    "gu": "૬",
+    "name_gu": "છ",
+    "name_en": "chha"
+  },
+  {
+    "id": 7,
+    "en": 7,
+    "gu": "૭",
+    "name_gu": "સાત",
+    "name_en": "sāt"
+  },
+  {
+    "id": 8,
+    "en": 8,
+    "gu": "૮",
+    "name_gu": "આઠ",
+    "name_en": "āṭh"
+  },
+  {
+    "id": 9,
+    "en": 9,
+    "gu": "૯",
+    "name_gu": "નવ",
+    "name_en": "nav"
+  },
+  {
+    "id": 10,
+    "en": 10,
+    "gu": "૧૦",
+    "name_gu": "દસ",
+    "name_en": "das"
+  },
+  {
+    "id": 11,
+    "en": 11,
+    "gu": "૧૧",
+    "name_gu": "અગિયાર",
+    "name_en": "agiyār"
+  },
+  {
+    "id": 12,
+    "en": 12,
+    "gu": "૧૨",
+    "name_gu": "બાર",
+    "name_en": "bār"
+  },
+  {
+    "id": 13,
+    "en": 13,
+    "gu": "૧૩",
+    "name_gu": "તેર",
+    "name_en": "tēr"
+  },
+  {
+    "id": 14,
+    "en": 14,
+    "gu": "૧૪",
+    "name_gu": "ચૌદ",
+    "name_en": "chaud"
+  },
+  {
+    "id": 15,
+    "en": 15,
+    "gu": "૧૫",
+    "name_gu": "પંદર",
+    "name_en": "paṃdar"
+  },
+  {
+    "id": 16,
+    "en": 16,
+    "gu": "૧૬",
+    "name_gu": "સોળ",
+    "name_en": "soļ"
+  },
+  {
+    "id": 17,
+    "en": 17,
+    "gu": "૧૭",
+    "name_gu": "સત્તર",
+    "name_en": "sattar"
+  },
+  {
+    "id": 18,
+    "en": 18,
+    "gu": "૧૮",
+    "name_gu": "અઢાર",
+    "name_en": "aḑhār"
+  },
+  {
+    "id": 19,
+    "en": 19,
+    "gu": "૧૯",
+    "name_gu": "ઓગણિસ",
+    "name_en": "ogaņis"
+  },
+  {
+    "id": 20,
+    "en": 20,
+    "gu": "૨૦",
+    "name_gu": "વીસ",
+    "name_en": "vīs"
+  },
+  {
+    "id": 21,
+    "en": 21,
+    "gu": "૨૧",
+    "name_gu": "એકવીસ",
+    "name_en": "ēkavīs"
+  },
+  {
+    "id": 22,
+    "en": 22,
+    "gu": "૨૨",
+    "name_gu": "બાવીસ",
+    "name_en": "bāvīs"
+  },
+  {
+    "id": 23,
+    "en": 23,
+    "gu": "૨૩",
+    "name_gu": "તેવીસ",
+    "name_en": "tēvīs"
+  },
+  {
+    "id": 24,
+    "en": 24,
+    "gu": "૨૪",
+    "name_gu": "ચોવીસ",
+    "name_en": "chōvīs"
+  },
+  {
+    "id": 25,
+    "en": 25,
+    "gu": "૨૫",
+    "name_gu": "પચ્ચીસ",
+    "name_en": "pachchīs"
+  },
+  {
+    "id": 26,
+    "en": 26,
+    "gu": "૨૬",
+    "name_gu": "છવીસ",
+    "name_en": "chhavīs"
+  },
+  {
+    "id": 27,
+    "en": 27,
+    "gu": "૨૭",
+    "name_gu": "સત્તાવીસ",
+    "name_en": "sattāvīs"
+  },
+  {
+    "id": 28,
+    "en": 28,
+    "gu": "૨૮",
+    "name_gu": "અઠ્ઠાવીસ",
+    "name_en": "aṭhṭhāvīs"
+  },
+  {
+    "id": 29,
+    "en": 29,
+    "gu": "૨૯",
+    "name_gu": "ઓગણત્રીસ",
+    "name_en": "ōgaṇatrīs"
+  },
+  {
+    "id": 30,
+    "en": 30,
+    "gu": "૩૦",
+    "name_gu": "ત્રીસ",
+    "name_en": "trīs"
+  },
+  {
+    "id": 31,
+    "en": 31,
+    "gu": "૩૧",
+    "name_gu": "એકત્રીસ",
+    "name_en": "ēkatrīs"
+  },
+  {
+    "id": 32,
+    "en": 32,
+    "gu": "૩૨",
+    "name_gu": "બત્રીસ",
+    "name_en": "batrīs"
+  },
+  {
+    "id": 33,
+    "en": 33,
+    "gu": "૩૩",
+    "name_gu": "તેત્રીસ",
+    "name_en": "tētrīs"
+  },
+  {
+    "id": 34,
+    "en": 34,
+    "gu": "૩૪",
+    "name_gu": "ચોત્રીસ",
+    "name_en": "chōtrīs"
+  },
+  {
+    "id": 35,
+    "en": 35,
+    "gu": "૩૫",
+    "name_gu": "પાંત્રીસ",
+    "name_en": "pāntrīs"
+  },
+  {
+    "id": 36,
+    "en": 36,
+    "gu": "૩૬",
+    "name_gu": "છત્રીસ",
+    "name_en": "chhatrīs"
+  },
+  {
+    "id": 37,
+    "en": 37,
+    "gu": "૩૭",
+    "name_gu": "સડત્રીસ",
+    "name_en": "saḍatrīs"
+  },
+  {
+    "id": 38,
+    "en": 38,
+    "gu": "૩૮",
+    "name_gu": "અડત્રીસ",
+    "name_en": "aḍatrīs"
+  },
+  {
+    "id": 39,
+    "en": 39,
+    "gu": "૩૯",
+    "name_gu": "ઓગણચાલીસ",
+    "name_en": "ōgaṇachālīs"
+  },
+  {
+    "id": 40,
+    "en": 40,
+    "gu": "૪૦",
+    "name_gu": "ચાલીસ",
+    "name_en": "chālīs"
+  },
+  {
+    "id": 41,
+    "en": 41,
+    "gu": "૪૧",
+    "name_gu": "એકતાલીસ",
+    "name_en": "ēkatālīs"
+  },
+  {
+    "id": 42,
+    "en": 42,
+    "gu": "૪૨",
+    "name_gu": "બેતાલીસ",
+    "name_en": "betālīs"
+  },
+  {
+    "id": 43,
+    "en": 43,
+    "gu": "૪૩",
+    "name_gu": "ત્રેતાલીસ",
+    "name_en": "tretālīs"
+  },
+  {
+    "id": 44,
+    "en": 44,
+    "gu": "૪૪",
+    "name_gu": "ચુંમાલીસ",
+    "name_en": "chun̄mālīs"
+  },
+  {
+    "id": 45,
+    "en": 45,
+    "gu": "૪૫",
+    "name_gu": "પિસ્તાલીસ",
+    "name_en": "pistālīs"
+  },
+  {
+    "id": 46,
+    "en": 46,
+    "gu": "૪૬",
+    "name_gu": "છેતાલીસ",
+    "name_en": "chhetālīs"
+  },
+  {
+    "id": 47,
+    "en": 47,
+    "gu": "૪૭",
+    "name_gu": "સુડતાલીસ",
+    "name_en": "suḍatālīs"
+  },
+  {
+    "id": 48,
+    "en": 48,
+    "gu": "૪૮",
+    "name_gu": "અડતાલીસ",
+    "name_en": "aḍatālīs"
+  },
+  {
+    "id": 49,
+    "en": 49,
+    "gu": "૪૯",
+    "name_gu": "ઓગણપચાસ",
+    "name_en": "ogaṇapachās"
+  },
+  {
+    "id": 50,
+    "en": 50,
+    "gu": "૫૦",
+    "name_gu": "પચાસ",
+    "name_en": "pachās"
+  },
+  {
+    "id": 51,
+    "en": 51,
+    "gu": "૫૧",
+    "name_gu": "એકાવન",
+    "name_en": "ekāvan"
+  },
+  {
+    "id": 52,
+    "en": 52,
+    "gu": "૫૨",
+    "name_gu": "બાવન",
+    "name_en": "bāvan"
+  },
+  {
+    "id": 53,
+    "en": 53,
+    "gu": "૫૩",
+    "name_gu": "ત્રેપન",
+    "name_en": "trepan"
+  },
+  {
+    "id": 54,
+    "en": 54,
+    "gu": "૫૪",
+    "name_gu": "ચોપન",
+    "name_en": "chopan"
+  },
+  {
+    "id": 55,
+    "en": 55,
+    "gu": "૫૫",
+    "name_gu": "પંચાવન",
+    "name_en": "pan̄chāvan"
+  },
+  {
+    "id": 56,
+    "en": 56,
+    "gu": "૫૬",
+    "name_gu": "છપ્પન",
+    "name_en": "chhappan"
+  },
+  {
+    "id": 57,
+    "en": 57,
+    "gu": "૫૭",
+    "name_gu": "સત્તાવન",
+    "name_en": "sattāvan"
+  },
+  {
+    "id": 58,
+    "en": 58,
+    "gu": "૫૮",
+    "name_gu": "અઠ્ઠાવન",
+    "name_en": "aṭhṭhāvan"
+  },
+  {
+    "id": 59,
+    "en": 59,
+    "gu": "૫૯",
+    "name_gu": "ઓગણસાઠ",
+    "name_en": "ogaṇasāṭh"
+  },
+  {
+    "id": 60,
+    "en": 60,
+    "gu": "૬૦",
+    "name_gu": "સાઈઠ",
+    "name_en": "sāīṭh"
+  },
+  {
+    "id": 61,
+    "en": 61,
+    "gu": "૬૧",
+    "name_gu": "એકસઠ",
+    "name_en": "ekasaṭh"
+  },
+  {
+    "id": 62,
+    "en": 62,
+    "gu": "૬૨",
+    "name_gu": "બાસઠ",
+    "name_en": "bāsaṭh"
+  },
+  {
+    "id": 63,
+    "en": 63,
+    "gu": "૬૩",
+    "name_gu": "ત્રેસઠ",
+    "name_en": "tresaṭh"
+  },
+  {
+    "id": 64,
+    "en": 64,
+    "gu": "૬૪",
+    "name_gu": "ચોસઠ",
+    "name_en": "chosaṭh"
+  },
+  {
+    "id": 65,
+    "en": 65,
+    "gu": "૬૫",
+    "name_gu": "પાંસઠ",
+    "name_en": "pān̄saṭh"
+  },
+  {
+    "id": 66,
+    "en": 66,
+    "gu": "૬૬",
+    "name_gu": "છાસઠ",
+    "name_en": "chhāsaṭh"
+  },
+  {
+    "id": 67,
+    "en": 67,
+    "gu": "૬૭",
+    "name_gu": "સડસઠ",
+    "name_en": "saḍasaṭh"
+  },
+  {
+    "id": 68,
+    "en": 68,
+    "gu": "૬૮",
+    "name_gu": "અડસઠ",
+    "name_en": "aḍasaṭh"
+  },
+  {
+    "id": 69,
+    "en": 69,
+    "gu": "૬૯",
+    "name_gu": "અગણોસિત્તેર",
+    "name_en": "agaṇositter"
+  },
+  {
+    "id": 70,
+    "en": 70,
+    "gu": "૭૦",
+    "name_gu": "સિત્તેર",
+    "name_en": "sitter"
+  },
+  {
+    "id": 71,
+    "en": 71,
+    "gu": "૭૧",
+    "name_gu": "એકોતેર",
+    "name_en": "ekoter"
+  },
+  {
+    "id": 72,
+    "en": 72,
+    "gu": "૭૨",
+    "name_gu": "બોતેર",
+    "name_en": "boter"
+  },
+  {
+    "id": 73,
+    "en": 73,
+    "gu": "૭૩",
+    "name_gu": "તોતેર",
+    "name_en": "toter"
+  },
+  {
+    "id": 74,
+    "en": 74,
+    "gu": "૭૪",
+    "name_gu": "ચુમોતેર",
+    "name_en": "chumoter"
+  },
+  {
+    "id": 75,
+    "en": 75,
+    "gu": "૭૫",
+    "name_gu": "પંચોતેર",
+    "name_en": "pan̄choter"
+  },
+  {
+    "id": 76,
+    "en": 76,
+    "gu": "૭૬",
+    "name_gu": "છોતેર",
+    "name_en": "chhoter"
+  },
+  {
+    "id": 77,
+    "en": 77,
+    "gu": "૭૭",
+    "name_gu": "સિત્યોતેર",
+    "name_en": "sityoter"
+  },
+  {
+    "id": 78,
+    "en": 78,
+    "gu": "૭૮",
+    "name_gu": "ઇઠ્યોતેર",
+    "name_en": "iṭhyoter"
+  },
+  {
+    "id": 79,
+    "en": 79,
+    "gu": "૭૯",
+    "name_gu": "ઓગણાએંસી",
+    "name_en": "ogaṇāen̄sī"
+  },
+  {
+    "id": 80,
+    "en": 80,
+    "gu": "૮૦",
+    "name_gu": "એંસી",
+    "name_en": "en̄sī"
+  },
+  {
+    "id": 81,
+    "en": 81,
+    "gu": "૮૧",
+    "name_gu": "એક્યાસી",
+    "name_en": "ekyāsī"
+  },
+  {
+    "id": 82,
+    "en": 82,
+    "gu": "૮૨",
+    "name_gu": "બ્યાસી",
+    "name_en": "byāsī"
+  },
+  {
+    "id": 83,
+    "en": 83,
+    "gu": "૮૩",
+    "name_gu": "ત્યાસી",
+    "name_en": "tyāsī"
+  },
+  {
+    "id": 84,
+    "en": 84,
+    "gu": "૮૪",
+    "name_gu": "ચોર્યાસી",
+    "name_en": "choryāsī"
+  },
+  {
+    "id": 85,
+    "en": 85,
+    "gu": "૮૫",
+    "name_gu": "પંચાસી",
+    "name_en": "pn̄chāsī"
+  },
+  {
+    "id": 86,
+    "en": 86,
+    "gu": "૮૬",
+    "name_gu": "છ્યાસી",
+    "name_en": "chhyāsī"
+  },
+  {
+    "id": 87,
+    "en": 87,
+    "gu": "૮૭",
+    "name_gu": "સિત્યાસી",
+    "name_en": "sityāsī"
+  },
+  {
+    "id": 88,
+    "en": 88,
+    "gu": "૮૮",
+    "name_gu": "ઈઠ્યાસી",
+    "name_en": "īṭhyāsī"
+  },
+  {
+    "id": 89,
+    "en": 89,
+    "gu": "૮૯",
+    "name_gu": "નેવ્યાસી",
+    "name_en": "nevyāsī"
+  },
+  {
+    "id": 90,
+    "en": 90,
+    "gu": "૯૦",
+    "name_gu": "નેવું",
+    "name_en": "nevun̄"
+  },
+  {
+    "id": 91,
+    "en": 91,
+    "gu": "૯૧",
+    "name_gu": "એકાણું",
+    "name_en": "ekāṇun̄"
+  },
+  {
+    "id": 92,
+    "en": 92,
+    "gu": "૯૨",
+    "name_gu": "બાણું",
+    "name_en": "bāṇun̄"
+  },
+  {
+    "id": 93,
+    "en": 93,
+    "gu": "૯૩",
+    "name_gu": "ત્રાણું",
+    "name_en": "trāṇun̄"
+  },
+  {
+    "id": 94,
+    "en": 94,
+    "gu": "૯૪",
+    "name_gu": "ચોરાણું",
+    "name_en": "chorāṇun̄"
+  },
+  {
+    "id": 95,
+    "en": 95,
+    "gu": "૯૫",
+    "name_gu": "પંચાણું",
+    "name_en": "pan̄chāṇun̄"
+  },
+  {
+    "id": 96,
+    "en": 96,
+    "gu": "૯૬",
+    "name_gu": "છન્નું",
+    "name_en": "chhannun̄"
+  },
+  {
+    "id": 97,
+    "en": 97,
+    "gu": "૯૭",
+    "name_gu": "સત્તાણું",
+    "name_en": "sattāṇun̄"
+  },
+  {
+    "id": 98,
+    "en": 98,
+    "gu": "૯૮",
+    "name_gu": "અઠ્ઠાણું",
+    "name_en": "aṭhṭhāṇun̄"
+  },
+  {
+    "id": 99,
+    "en": 99,
+    "gu": "૯૯",
+    "name_gu": "નવ્વાણું",
+    "name_en": "navvāṇun̄"
+  },
+  {
+    "id": 100,
+    "en": 100,
+    "gu": "૧૦૦",
+    "name_gu": "સો",
+    "name_en": "sō"
+  }
+]

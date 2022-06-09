@@ -191,5 +191,10 @@
       "itemTitle2": "Practice by Random Order",
       "itemSubTitle2": "10 hours, 19 lessons"
     }
+  },
+  "learnVowelsChartScreen":{
+    "header": {
+      "title": "Vowels Chart"
+    }
   }
 }

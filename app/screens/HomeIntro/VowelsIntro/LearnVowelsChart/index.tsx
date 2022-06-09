@@ -13,12 +13,11 @@ import styles from './styles';
 import Utils from 'app/utils';
 import Config from 'app/config';
 import Hooks from 'app/hooks/index';
-import { IVowelstListItem } from 'app/components/VowelstListItem';
+import { IVovelCharCellItem } from 'app/components/VowelCharCellItem';
 
 //Params
 type RootStackParamList = {
   LearnVowelsList: {};
-  LearnVowelsChart: {};
 };
 
 type Props = NativeStackScreenProps<RootStackParamList, 'LearnVowelsList'>;
@@ -30,22 +29,12 @@ const LearnVowelsList = ({ navigation }: Props) => {
 
   //Constants
   const { colors } = useTheme();
-  const groupedEntries = Hooks.useVowelstListItems();
+  const groupedEntries = Hooks.useVowels();
   const { t } = useTranslation();
 
   //States
-  const cardTapped = (item: IVowelstListItem, index: number, sectionIndex: number) => {
-    if (sectionIndex === 0 && index === 0) {
-      navigation.push('LearnVowelsChart', {});
-    } else if (sectionIndex === 0 && index === 1) {
-      //navigation.push('LearnVowelsList', {});
-    } else if (sectionIndex === 0 && index === 2) {
-      // navigation.push('LearnConsonantsList', {});
-    } else if (sectionIndex === 0 && index === 3) {
-      //navigation.push('LearnBarakhadisList', {});
-    } else if (sectionIndex === 0 && index === 4) {
-      //navigation.push('LearnNumeralsList', {});
-    }
+  const cardTapped = (item: IVovelCharCellItem, _index: number, _sectionIndex: number) => {
+    Utils.rateApp.saveItem(item);
   };
 
   const renderItem = ({
@@ -53,12 +42,12 @@ const LearnVowelsList = ({ navigation }: Props) => {
     index,
     sectionIndex,
   }: {
-    item: IVowelstListItem;
+    item: IVovelCharCellItem;
     index: number;
     sectionIndex: number;
   }) => {
     return (
-      <Components.VowelstListItem
+      <Components.VowelCharCellItem
         key={item.id}
         item={item}
         index={index}
@@ -78,7 +67,7 @@ const LearnVowelsList = ({ navigation }: Props) => {
 
       <Appbar.Header style={{ backgroundColor: colors.background }}>
         <Appbar.BackAction onPress={onGoBack} />
-        <Appbar.Content title={t('learnVowelsChartScreen.header.title')} subtitle="" />
+        <Appbar.Content title={t('learnVowelsListScreen.header.title')} subtitle="" />
       </Appbar.Header>
       <View style={styles.safeArea}>
         <ScrollView style={styles.scrollView}>

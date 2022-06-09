@@ -13,6 +13,7 @@ import ConsonantListItem from './ConsonantListItem';
 import BarakhadiListItem from './BarakhadiListItem';
 import VowelstListItem from './VowelstListItem';
 import NumeralListItem from './VowelstListItem';
+import VowelCharCellItem from './VowelCharCellItem';
 
 export default {
   AppNoConnection,
@@ -29,5 +30,6 @@ export default {
   ConsonantListItem,
   BarakhadiListItem,
   VowelstListItem,
-  NumeralListItem
+  NumeralListItem,
+  VowelCharCellItem,
 };
