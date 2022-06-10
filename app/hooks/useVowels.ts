@@ -14,6 +14,7 @@ const useVowels = (): IVovelListSection[] => {
       id: charInfo.id,
       en: charInfo.en,
       gu: charInfo.gu,
+      diacritic: charInfo.diacritic!,
     };
 
     return transformed;
@@ -26,7 +27,7 @@ const useVowels = (): IVovelListSection[] => {
     };
   };
 
-  let vowelsCellVMs = vowels.map(v => transformCharToCellVM(v));
+  let vowelsCellVMs = vowels.map((v: ICharInfo) => transformCharToCellVM(v));
   let vowelsSectionsVMs = [transformCharsToSectionVM(vowelsCellVMs)];
   return vowelsSectionsVMs;
 };

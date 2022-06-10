@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'red',
     overflow: 'hidden',
   },
-  section: { paddingHorizontal: 20 },
+  section: { paddingHorizontal: 20, },
   sectionItem: {
     flexDirection: 'row',
     flexWrap: 'wrap',

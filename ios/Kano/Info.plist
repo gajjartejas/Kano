@@ -36,7 +36,7 @@
 		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string/>
 	<key>UIAppFonts</key>
 	<array>
 		<string>AntDesign.ttf</string>
@@ -55,6 +55,15 @@
 		<string>Octicons.ttf</string>
 		<string>Zocial.ttf</string>
 		<string>Fontisto.ttf</string>
+		<string>NotoSansGujarati-Black.ttf</string>
+		<string>NotoSansGujarati-Bold.ttf</string>
+		<string>NotoSansGujarati-ExtraBold.ttf</string>
+		<string>NotoSansGujarati-ExtraLight.ttf</string>
+		<string>NotoSansGujarati-Light.ttf</string>
+		<string>NotoSansGujarati-Medium.ttf</string>
+		<string>NotoSansGujarati-Regular.ttf</string>
+		<string>NotoSansGujarati-SemiBold.ttf</string>
+		<string>NotoSansGujarati-Thin.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>BootSplash</string>

@@ -1,7 +1,10 @@
 import Images from './images';
 import Constants from './app-constant';
+import Fonts from './fonts';
 
-export default {
+const Config = {
   Images,
   Constants,
+  Fonts,
 };
+export default Config;

@@ -1,5 +1,6 @@
+import Config from 'app/config';
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, useWindowDimensions } from 'react-native';
 
 //Third Party
 import { TouchableRipple, useTheme, Text } from 'react-native-paper';
@@ -10,6 +11,7 @@ export interface IVovelCharCellItem {
   id: number;
   en: string;
   gu: string;
+  diacritic: string;
 }
 
 export interface IVovelListSection {
@@ -31,16 +33,33 @@ const CharCellItem = (props: IVovelCharCellItemProps) => {
   const { item, index } = props;
   const sectionIndex = props.sectionIndex;
 
+  const dim = useWindowDimensions();
+
   return (
-    <View style={[styles.container, { backgroundColor: `${colors.card}`, shadowColor: `${colors.shadow}` }]}>
+    <View
+      style={[
+        styles.container,
+        {
+          backgroundColor: `${colors.card}`,
+          // backgroundColor: `red`,
+          shadowColor: `${colors.shadow}`,
+          width: (dim.width - 40 - 18) / 3,
+          height: (dim.width - 40) / 3,
+        },
+      ]}>
       <TouchableRipple
         rippleColor={`${colors.primary}20`}
         style={[styles.touchableButton, { backgroundColor: `${colors.card}20` }]}
         onPress={() => props.onPress(item, index, sectionIndex)}>
-        <View style={styles.iconTextContainer}>
-          <Text numberOfLines={2} style={[styles.titleText, { color: colors.textTitle }]}>
-            {item.gu}
-          </Text>
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+          <View style={styles.iconTextContainer}>
+            <Text numberOfLines={1} style={[styles.titleText, { color: colors.textTitle }]}>
+              {item.gu}
+            </Text>
+            <Text numberOfLines={1} style={[styles.subTitleText, { color: colors.textTitle }]}>
+              {`${item.en} / ${item.diacritic}`}
+            </Text>
+          </View>
         </View>
       </TouchableRipple>
     </View>
@@ -49,49 +68,29 @@ const CharCellItem = (props: IVovelCharCellItemProps) => {
 
 const styles = StyleSheet.create({
   container: {
-    borderRadius: 8,
-    shadowRadius: 4,
+    borderRadius: 4,
+    shadowRadius: 2,
     shadowOffset: {
       width: 0,
       height: 0,
     },
     elevation: 8,
     shadowOpacity: 0.2,
-
-    width: 98,
-    height: 98,
-    marginBottom: 8,
+    marginBottom: 6,
+    marginHorizontal: 3,
   },
-  touchableButton: {
-    flex: 1,
-    justifyContent: 'center',
-  },
+  touchableButton: { flex: 1 },
   titleText: {
     fontWeight: '600',
-    fontSize: 15,
-    marginTop: 8,
+    fontSize: 30,
+    fontFamily: Config.Fonts.notoSansGujarati.Regular
   },
-  subtitleText: {
-    fontSize: 12,
-    fontWeight: '600',
-    marginTop: 4,
+  subTitleText: {
+    fontWeight: '500',
+    fontSize: 20,
   },
-  circularProgress: {
-    marginHorizontal: 20,
-    shadowRadius: 2,
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    elevation: 8,
-    shadowOpacity: 0.41,
-    borderRadius: 20,
-  },
-  iconTextContainer: { flex: 1, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
-  iconTextContainer1: { flex: 1, flexDirection: 'row', alignItems: 'center' },
-  leftIcon: { alignSelf: 'center' },
-  iconContainer: { marginHorizontal: 20, width: 44 },
-  textContainer: { marginRight: 8, flex: 1 },
+
+  iconTextContainer: { alignItems: 'center', justifyContent: 'center' },
 });
 
 export default CharCellItem;
