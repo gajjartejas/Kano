@@ -10,6 +10,7 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import Config from 'app/config';
 import styles from './styles';
 import Utils from 'app/utils';
+import * as RouterParamTypes from 'app/config/router-params';
 
 //Modals
 import Icon from 'react-native-easy-icon';
@@ -17,7 +18,7 @@ import { ISettingItem, ISettingSection } from 'app/models/viewModels/settingItem
 
 //Params
 type RootStackParamList = {
-  Settings: {};
+  Settings: RouterParamTypes.SettingsParams;
 };
 type Props = NativeStackScreenProps<RootStackParamList, 'Settings'>;
 

@@ -9,6 +9,7 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 //App modules
 import Config from 'app/config';
 import Utils from 'app/utils';
+import * as RouterParamTypes from 'app/config/router-params';
 
 //Modals
 import styles from './styles';
@@ -27,9 +28,10 @@ interface IMoreAppItem {
 
 //Params
 type RootStackParamList = {
-  DeviceLists: {};
+  MoreApps: RouterParamTypes.MoreAppsParams;
 };
-type Props = NativeStackScreenProps<RootStackParamList, 'DeviceLists'>;
+
+type Props = NativeStackScreenProps<RootStackParamList, 'MoreApps'>;
 
 const MoreApps = ({ navigation }: Props) => {
   //Constants

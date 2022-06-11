@@ -15,12 +15,13 @@ import Config from 'app/config';
 import Icon from 'react-native-easy-icon';
 import { ISettingItem, ISettingSection } from 'app/models/viewModels/settingItem';
 import styles from './styles';
+import * as RouterParamTypes from 'app/config/router-params';
 
 //Params
 type RootStackParamList = {
-  DeviceLists: {};
+  Settings: RouterParamTypes.SettingsParams;
 };
-type Props = NativeStackScreenProps<RootStackParamList, 'DeviceLists'>;
+type Props = NativeStackScreenProps<RootStackParamList, 'Settings'>;
 
 const Settings = ({ navigation }: Props) => {
   //Constants

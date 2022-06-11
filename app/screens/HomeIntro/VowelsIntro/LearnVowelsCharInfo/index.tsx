@@ -13,28 +13,28 @@ import styles from './styles';
 import Utils from 'app/utils';
 import Config from 'app/config';
 import Hooks from 'app/hooks/index';
-import { IConsonantListItem } from 'app/components/ConsonantListItem';
+import { IVovelCharCellItem } from 'app/components/VowelCharCellItem';
 import * as RouterParamTypes from 'app/config/router-params';
 
 //Params
 type RootStackParamList = {
-  LearnConsonantsList: RouterParamTypes.LearnConsonantsListParams;
+  LearnVowelsCharInfo: RouterParamTypes.LearnVowelsCharInfoParams;
 };
 
-type Props = NativeStackScreenProps<RootStackParamList, 'LearnConsonantsList'>;
+type Props = NativeStackScreenProps<RootStackParamList, 'LearnVowelsCharInfo'>;
 
-const LearnConsonantsList = ({ navigation }: Props) => {
+const LearnVowelsCharInfo = ({ navigation }: Props) => {
   //Refs
 
   //Actions
 
   //Constants
   const { colors } = useTheme();
-  const groupedEntries = Hooks.useConsonantListItems();
+  const groupedEntries = Hooks.useVowels();
   const { t } = useTranslation();
 
   //States
-  const cardTapped = (item: IConsonantListItem, _index: number, _sectionIndex: number) => {
+  const cardTapped = (item: IVovelCharCellItem, _index: number, _sectionIndex: number) => {
     Utils.rateApp.saveItem(item);
   };
 
@@ -43,12 +43,12 @@ const LearnConsonantsList = ({ navigation }: Props) => {
     index,
     sectionIndex,
   }: {
-    item: IConsonantListItem;
+    item: IVovelCharCellItem;
     index: number;
     sectionIndex: number;
   }) => {
     return (
-      <Components.ConsonantListItem
+      <Components.VowelCharCellItem
         key={item.id}
         item={item}
         index={index}
@@ -68,26 +68,11 @@ const LearnConsonantsList = ({ navigation }: Props) => {
 
       <Appbar.Header style={{ backgroundColor: colors.background }}>
         <Appbar.BackAction onPress={onGoBack} />
-        <Appbar.Content title={t('learnConsonantsListScreen.header.title')} subtitle="" />
+        <Appbar.Content title={t('learnVowelsChartScreen.header.title')} subtitle="" />
       </Appbar.Header>
-      <View style={styles.safeArea}>
-        <ScrollView style={styles.scrollView}>
-          {groupedEntries.map((section, sectionIndex) => {
-            return (
-              <View style={styles.section} key={section.title}>
-                <Text style={styles.sectionHeader}>{t(section.title)}</Text>
-                <View style={styles.sectionItem}>
-                  {section.data.map((item, index) => {
-                    return renderItem({ item, index, sectionIndex });
-                  })}
-                </View>
-              </View>
-            );
-          })}
-        </ScrollView>
-      </View>
+      <View style={styles.safeArea}></View>
     </View>
   );
 };
 
-export default LearnConsonantsList;
+export default LearnVowelsCharInfo;

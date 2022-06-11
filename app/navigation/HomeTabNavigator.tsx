@@ -22,6 +22,7 @@ import LearnVowelsList from 'app/screens/HomeIntro/VowelsIntro/LearnVowelsList';
 import LearnNumeralsList from 'app/screens/HomeIntro/NumeralsIntro/LearnNumeralsList';
 import GujaratiScriptIntro from 'app/screens/HomeIntro/IntroductionToGujaratiScript/GujaratiScriptIntro';
 import LearnVowelsChart from 'app/screens/HomeIntro/VowelsIntro/LearnVowelsChart';
+import LearnVowelsCharInfo from 'app/screens/HomeIntro/VowelsIntro/LearnVowelsCharInfo';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -74,6 +75,7 @@ const LoggedInTabNavigator: React.FC<IProps> = () => {
       <Stack.Screen name="LearnNumeralsList" component={LearnNumeralsList} options={{ headerShown: false }} />
       <Stack.Screen name="GujaratiScriptIntro" component={GujaratiScriptIntro} options={{ headerShown: false }} />
       <Stack.Screen name="LearnVowelsChart" component={LearnVowelsChart} options={{ headerShown: false }} />
+      <Stack.Screen name="LearnVowelsCharInfo" component={LearnVowelsCharInfo} options={{ headerShown: false }} />
     </LoggedInStack.Navigator>
   );
 };

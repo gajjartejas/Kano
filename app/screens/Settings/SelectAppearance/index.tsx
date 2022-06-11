@@ -11,6 +11,7 @@ import Icon from 'react-native-easy-icon';
 //App modules
 import styles from './styles';
 import Components from 'app/components';
+import * as RouterParamTypes from 'app/config/router-params';
 
 //Modals
 import { ISettingItem, ISettingSection, ISettingThemeOptions } from 'app/models/viewModels/settingItem';
@@ -22,8 +23,7 @@ import * as themeActions from 'app/store/actions/themeActions';
 
 //Params
 type RootStackParamList = {
-  SelectAppearance: {};
-  Purchase: { fromTheme: boolean };
+  SelectAppearance: RouterParamTypes.SelectAppearanceParams;
 };
 type Props = NativeStackScreenProps<RootStackParamList, 'SelectAppearance'>;
 

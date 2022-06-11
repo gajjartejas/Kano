@@ -11,13 +11,15 @@ import DeviceInfo from 'react-native-device-info';
 import Components from 'app/components';
 import styles from './styles';
 import Utils from 'app/utils';
-import Config from 'app/config';
 import Hooks from 'app/hooks/index';
-import { IVovelCharCellItem } from 'app/components/VowelCharCellItem';
+import Config from 'app/config';
+import { IVovelCharCellItem, IVovelListSection } from 'app/components/VowelCharCellItem';
+import * as RouterParamTypes from 'app/config/router-params';
 
 //Params
 type RootStackParamList = {
-  LearnVowelsList: {};
+  LearnVowelsList: RouterParamTypes.LearnVowelsListParams;
+  LearnVowelsCharInfo: RouterParamTypes.LearnVowelsCharInfoParams;
 };
 
 type Props = NativeStackScreenProps<RootStackParamList, 'LearnVowelsList'>;
@@ -33,8 +35,8 @@ const LearnVowelsList = ({ navigation }: Props) => {
   const { t } = useTranslation();
 
   //States
-  const cardTapped = (item: IVovelCharCellItem, _index: number, _sectionIndex: number) => {
-    Utils.rateApp.saveItem(item);
+  const cardTapped = (item: IVovelCharCellItem, index: number, sectionIndex: number) => {
+    navigation.push('LearnVowelsCharInfo', { index, sectionIndex, groupedEntries });
   };
 
   const renderItem = ({
@@ -67,7 +69,7 @@ const LearnVowelsList = ({ navigation }: Props) => {
 
       <Appbar.Header style={{ backgroundColor: colors.background }}>
         <Appbar.BackAction onPress={onGoBack} />
-        <Appbar.Content title={t('learnVowelsListScreen.header.title')} subtitle="" />
+        <Appbar.Content title={t('learnVowelsChartScreen.header.title')} subtitle="" />
       </Appbar.Header>
       <View style={styles.safeArea}>
         <ScrollView style={styles.scrollView}>

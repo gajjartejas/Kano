@@ -14,15 +14,16 @@ import Utils from 'app/utils';
 import Config from 'app/config';
 import Hooks from 'app/hooks/index';
 import { IHomeListItem } from 'app/components/HomeListItem';
+import * as RouterParamTypes from 'app/config/router-params';
 
 //Params
 type RootStackParamList = {
-  DashboardTab: {};
-  LearnConsonantsList: {};
-  LearnVowelsList: {};
-  LearnBarakhadisList: {};
-  LearnNumeralsList: {};
-  GujaratiScriptIntro: {};
+  DashboardTab: RouterParamTypes.DashboardTabParams;
+  LearnConsonantsList: RouterParamTypes.LearnConsonantsListParams;
+  LearnVowelsList: RouterParamTypes.LearnVowelsListParams;
+  LearnBarakhadisList: RouterParamTypes.LearnBarakhadisListParams;
+  LearnNumeralsList: RouterParamTypes.LearnNumeralsListParams;
+  GujaratiScriptIntro: RouterParamTypes.GujaratiScriptIntroParams;
 };
 
 type Props = NativeStackScreenProps<RootStackParamList, 'DashboardTab'>;

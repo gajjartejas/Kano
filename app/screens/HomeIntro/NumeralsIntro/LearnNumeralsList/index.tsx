@@ -14,10 +14,11 @@ import Utils from 'app/utils';
 import Config from 'app/config';
 import Hooks from 'app/hooks/index';
 import { INumeralListItem } from 'app/components/NumeralListItem';
+import * as RouterParamTypes from 'app/config/router-params';
 
 //Params
 type RootStackParamList = {
-  LearnNumeralsList: {};
+  LearnNumeralsList: RouterParamTypes.LearnNumeralsListParams;
 };
 
 type Props = NativeStackScreenProps<RootStackParamList, 'LearnNumeralsList'>;

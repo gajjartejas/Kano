@@ -1,5 +1,5 @@
 const Fonts = {
-  notoSansGujarati: {
+  NotoSansGujarati: {
     Regular: 'NotoSansGujarati-Regular',
     Thin: 'NotoSansGujarati-Thin',
     ExtraLight: 'NotoSansGujarati-ExtraLight',

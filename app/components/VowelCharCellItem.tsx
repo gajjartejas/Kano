@@ -56,8 +56,8 @@ const CharCellItem = (props: IVovelCharCellItemProps) => {
             <Text numberOfLines={1} style={[styles.titleText, { color: colors.textTitle }]}>
               {item.gu}
             </Text>
-            <Text numberOfLines={1} style={[styles.subTitleText, { color: colors.textTitle }]}>
-              {`${item.en} / ${item.diacritic}`}
+            <Text numberOfLines={1} style={[styles.subTitleText, { color: `${colors.textTitle}99` }]}>
+              {`${item.en}${item.diacritic ? ' / ' : ''}${item.diacritic}`}
             </Text>
           </View>
         </View>
@@ -83,11 +83,12 @@ const styles = StyleSheet.create({
   titleText: {
     fontWeight: '600',
     fontSize: 30,
-    fontFamily: Config.Fonts.notoSansGujarati.Regular
+    fontFamily: Config.Fonts.NotoSansGujarati.Regular,
   },
   subTitleText: {
     fontWeight: '500',
-    fontSize: 20,
+    fontSize: 18,
+    fontFamily: Config.Fonts.NotoSansGujarati.Regular,
   },
 
   iconTextContainer: { alignItems: 'center', justifyContent: 'center' },

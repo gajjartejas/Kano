@@ -12,10 +12,11 @@ import styles from './styles';
 import Utils from 'app/utils';
 import Config from 'app/config';
 import Hooks from 'app/hooks/index';
+import * as RouterParamTypes from 'app/config/router-params';
 
 //Params
 type RootStackParamList = {
-  GujaratiScriptIntro: {};
+  GujaratiScriptIntro: RouterParamTypes.GujaratiScriptIntroParams;
 };
 
 type Props = NativeStackScreenProps<RootStackParamList, 'GujaratiScriptIntro'>;
@@ -45,7 +46,7 @@ const GujaratiScriptIntro = ({ navigation }: Props) => {
       </Appbar.Header>
       <View style={styles.safeArea}>
         <ScrollView style={styles.scrollView}>
-          <Text>{'\n\n    Work In Progress...'}</Text>
+          <Text>{'\n\n    WIP: Work In Progress...'}</Text>
         </ScrollView>
       </View>
     </View>

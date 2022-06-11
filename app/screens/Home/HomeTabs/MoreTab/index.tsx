@@ -17,6 +17,7 @@ import Utils from 'app/utils';
 import Config from 'app/config';
 import Components from 'app/components';
 import styles from './styles';
+import * as RouterParamTypes from 'app/config/router-params';
 
 //Interfaces
 interface IMoreItem {
@@ -28,10 +29,10 @@ interface IMoreItem {
 
 //Params
 type RootStackParamList = {
-  DeviceLists: {};
-  MoreApps: {};
-  Settings: {};
-  About: {};
+  DeviceLists: RouterParamTypes.DeviceListsParams;
+  MoreApps: RouterParamTypes.MoreAppsParams;
+  Settings: RouterParamTypes.SettingsParams;
+  About: RouterParamTypes.AboutParams;
 };
 type Props = NativeStackScreenProps<RootStackParamList, 'DeviceLists'>;
 

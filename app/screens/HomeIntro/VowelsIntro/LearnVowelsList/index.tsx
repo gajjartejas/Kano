@@ -14,11 +14,12 @@ import Utils from 'app/utils';
 import Config from 'app/config';
 import Hooks from 'app/hooks/index';
 import { IVowelstListItem } from 'app/components/VowelstListItem';
+import * as RouterParamTypes from 'app/config/router-params';
 
 //Params
 type RootStackParamList = {
-  LearnVowelsList: {};
-  LearnVowelsChart: {};
+  LearnVowelsList: RouterParamTypes.LearnVowelsListParams;
+  LearnVowelsChart: RouterParamTypes.LearnVowelsChartParams;
 };
 
 type Props = NativeStackScreenProps<RootStackParamList, 'LearnVowelsList'>;
@@ -78,7 +79,7 @@ const LearnVowelsList = ({ navigation }: Props) => {
 
       <Appbar.Header style={{ backgroundColor: colors.background }}>
         <Appbar.BackAction onPress={onGoBack} />
-        <Appbar.Content title={t('learnVowelsChartScreen.header.title')} subtitle="" />
+        <Appbar.Content title={t('learnVowelsListScreen.header.title')} subtitle="" />
       </Appbar.Header>
       <View style={styles.safeArea}>
         <ScrollView style={styles.scrollView}>

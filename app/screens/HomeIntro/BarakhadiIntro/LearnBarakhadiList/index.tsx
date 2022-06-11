@@ -13,10 +13,11 @@ import Utils from 'app/utils';
 import Config from 'app/config';
 import Hooks from 'app/hooks/index';
 import { IBarakhadiListItem } from 'app/components/BarakhadiListItem';
+import * as RouterParamTypes from 'app/config/router-params';
 
 //Params
 type RootStackParamList = {
-  LearnBarakhadisList: {};
+  LearnBarakhadisList: RouterParamTypes.LearnBarakhadisListParams;
 };
 
 type Props = NativeStackScreenProps<RootStackParamList, 'LearnBarakhadisList'>;
