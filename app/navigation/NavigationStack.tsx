@@ -18,6 +18,7 @@ import HomeTabNavigator from 'app/navigation/HomeTabNavigator';
 
 //Redux
 import IState from 'app/models/models/appState';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 //App Modules
 
@@ -67,35 +68,37 @@ const Navigator: React.FC<IProps> = (props: IProps) => {
   const isDark = useSelector((state: IState) => state.themeReducer.isDark);
 
   return (
-    <NavigationContainer
-      ref={navigationRef}
-      onReady={() => {
-        routeNameRef.current = navigationRef.current!.getCurrentRoute().name;
-      }}
-      onStateChange={async () => {
-        const previousRouteName = routeNameRef.current;
-        let currentRoute = navigationRef.current.getCurrentRoute();
-        let currentRouteName = currentRoute.name;
-        let currentScreenName = currentRoute.name;
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <NavigationContainer
+        ref={navigationRef}
+        onReady={() => {
+          routeNameRef.current = navigationRef.current!.getCurrentRoute().name;
+        }}
+        onStateChange={async () => {
+          const previousRouteName = routeNameRef.current;
+          let currentRoute = navigationRef.current.getCurrentRoute();
+          let currentRouteName = currentRoute.name;
+          let currentScreenName = currentRoute.name;
 
-        if (previousRouteName !== currentRouteName) {
-          await analytics().logScreenView({
-            screen_name: currentScreenName,
-            screen_class: currentRouteName,
-          });
-        }
-        routeNameRef.current = currentRouteName;
-      }}
-      theme={theme}>
-      <StatusBar
-        backgroundColor={isDark ? '#000000' : '#00000000'}
-        barStyle={isDark ? 'light-content' : 'dark-content'}
-        translucent={false}
-      />
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeTabNavigator} options={homeOptions} />
-      </Stack.Navigator>
-    </NavigationContainer>
+          if (previousRouteName !== currentRouteName) {
+            await analytics().logScreenView({
+              screen_name: currentScreenName,
+              screen_class: currentRouteName,
+            });
+          }
+          routeNameRef.current = currentRouteName;
+        }}
+        theme={theme}>
+        <StatusBar
+          backgroundColor={isDark ? '#000000' : '#00000000'}
+          barStyle={isDark ? 'light-content' : 'dark-content'}
+          translucent={false}
+        />
+        <Stack.Navigator>
+          <Stack.Screen name="Home" component={HomeTabNavigator} options={homeOptions} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </GestureHandlerRootView>
   );
 };
 

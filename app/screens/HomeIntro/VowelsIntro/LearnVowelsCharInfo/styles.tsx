@@ -1,3 +1,4 @@
+import Config from 'app/config';
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -54,6 +55,35 @@ const styles = StyleSheet.create({
     fontSize: 40,
     fontWeight: '500',
     color: 'white',
+  },
+  headerText:{
+    alignSelf: 'center',
+    fontFamily: Config.Fonts.NotoSansGujarati.SemiBold,
+    fontWeight: '400',
+    fontSize: 100,
+    marginTop: 32,
+    marginBottom: 12
+  },
+  card: {
+    borderRadius: 4,
+    shadowRadius: 2,
+    shadowOffset: {
+      width: 0,
+      height: 0,
+    },
+    elevation: 8,
+    shadowOpacity: 0.2,
+    marginBottom: 8,
+    marginHorizontal: 20,
+    paddingVertical: 8
+  },
+  contentContainer: {
+    backgroundColor: "white",
+  },
+  itemContainer: {
+    padding: 6,
+    margin: 6,
+    backgroundColor: "#eee",
   },
 });
 

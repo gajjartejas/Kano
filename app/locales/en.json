@@ -2,7 +2,17 @@
   "general": {
     "appname": "Kano",
     "close": "CLOSE",
-    "noInternet": "No Internet Connection"
+    "noInternet": "No Internet Connection",
+    "charactor": "CHARACTOR",
+    "diacritic": "DIACRITIC",
+    "englishCharactor": "ENGLISH CHARACTOR",
+    "numberOfStrokes": "NUMBER OF STROKES",
+    "compaxity": "COMPAXITY",
+    "length": "LENGTH",
+    "moreInfo": "MORE INFO",
+    "viewStrokeOrder": "VIEW STROKE ORDER",
+    "viewAnimatedDrawing": "VIEW ANIMATED DRAWING",
+    "playSound": "PLAY SOUND"
   },
   "about": {
     "sendFeedback": "Send Feedback",
@@ -192,9 +202,14 @@
       "itemSubTitle2": "10 hours, 19 lessons"
     }
   },
-  "learnVowelsChartScreen":{
+  "learnVowelsChartScreen": {
     "header": {
       "title": "Vowels Chart"
+    }
+  },
+  "learnVowelsCharInfoScreen": {
+    "header": {
+      "title": "Charactor Info"
     }
   }
 }

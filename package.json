@@ -10,6 +10,7 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
+    "@gorhom/bottom-sheet": "^4.3.1",
     "@react-native-async-storage/async-storage": "^1.16.1",
     "@react-native-firebase/analytics": "^14.5.0",
     "@react-native-firebase/app": "^14.5.0",

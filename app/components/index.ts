@@ -14,6 +14,8 @@ import BarakhadiListItem from './BarakhadiListItem';
 import VowelstListItem from './VowelstListItem';
 import NumeralListItem from './VowelstListItem';
 import VowelCharCellItem from './VowelCharCellItem';
+import AppTitleValueItemCell from './AppTitleValueItemCell';
+import StrokeOrderBottomSheet from './StrokeOrderBottomSheet';
 
 export default {
   AppNoConnection,
@@ -32,4 +34,6 @@ export default {
   VowelstListItem,
   NumeralListItem,
   VowelCharCellItem,
+  AppTitleValueItemCell,
+  StrokeOrderBottomSheet,
 };
