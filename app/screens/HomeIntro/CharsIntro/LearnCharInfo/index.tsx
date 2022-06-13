@@ -5,7 +5,7 @@ import { View, Dimensions, ScrollView, StatusBar, FlatList, useWindowDimensions 
 import { Appbar, Text, useTheme } from 'react-native-paper';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
-import DeviceInfo from 'react-native-device-info';
+import BottomSheet from '@gorhom/bottom-sheet';
 
 //App modules
 import Components from 'app/components';
@@ -13,13 +13,12 @@ import styles from './styles';
 import Utils from 'app/utils';
 import Config from 'app/config';
 import Hooks from 'app/hooks/index';
-import { IVovelCharCellItem } from 'app/components/VowelCharCellItem';
+import { ICharCellItem } from 'app/components/CharCellItem';
 import * as RouterParamTypes from 'app/config/router-params';
-import BottomSheet from '@gorhom/bottom-sheet';
 
 //Params
 type RootStackParamList = {
-  LearnVowelsCharInfo: RouterParamTypes.LearnVowelsCharInfoParams;
+  LearnVowelsCharInfo: RouterParamTypes.LearnCharInfoParams;
 };
 
 type Props = NativeStackScreenProps<RootStackParamList, 'LearnVowelsCharInfo'>;
@@ -39,11 +38,11 @@ const LearnVowelsCharInfo = ({ navigation, route }: Props) => {
 
   //States
   const [showBottomSheet, setShowBottomSheet] = useState(false);
-  const cardTapped = (item: IVovelCharCellItem, _index: number, _sectionIndex: number) => {
+  const cardTapped = (item: ICharCellItem, _index: number, _sectionIndex: number) => {
     Utils.rateApp.saveItem(item);
   };
 
-  const renderItem = ({ item, index }: { item: IVovelCharCellItem; index: number }) => {
+  const renderItem = ({ item, index }: { item: ICharCellItem; index: number }) => {
     return (
       <View style={{ width: dimension.width, height: 'auto' }}>
         <Text style={[styles.headerText, { color: colors.text }]}>{item.gu}</Text>

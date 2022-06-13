@@ -1,30 +1,27 @@
-import React from 'react';
-import { View, Dimensions, ScrollView, StatusBar } from 'react-native';
+import React, { useCallback, useEffect, useState } from 'react';
+import { View, ScrollView, StatusBar } from 'react-native';
 
 //ThirdParty
 import { Appbar, Text, useTheme } from 'react-native-paper';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
-import DeviceInfo from 'react-native-device-info';
 
 //App modules
 import Components from 'app/components';
 import styles from './styles';
-import Utils from 'app/utils';
-import Config from 'app/config';
 import Hooks from 'app/hooks/index';
-import { IVowelstListItem } from 'app/components/VowelstListItem';
+import { ICharListItem } from 'app/components/CharListItem';
 import * as RouterParamTypes from 'app/config/router-params';
 
 //Params
 type RootStackParamList = {
-  LearnVowelsList: RouterParamTypes.LearnVowelsListParams;
-  LearnVowelsChart: RouterParamTypes.LearnVowelsChartParams;
+  LearnCharsList: RouterParamTypes.LearnCharsListParams;
+  LearnCharsChart: RouterParamTypes.LearnCharsChartParams;
 };
 
-type Props = NativeStackScreenProps<RootStackParamList, 'LearnVowelsList'>;
+type Props = NativeStackScreenProps<RootStackParamList, 'LearnCharsList'>;
 
-const LearnVowelsList = ({ navigation }: Props) => {
+const LearnCharsList = ({ navigation, route }: Props) => {
   //Refs
 
   //Actions
@@ -33,13 +30,45 @@ const LearnVowelsList = ({ navigation }: Props) => {
   const { colors } = useTheme();
   const groupedEntries = Hooks.useVowelstListItems();
   const { t } = useTranslation();
+  const type = route.params.type;
 
   //States
-  const cardTapped = (item: IVowelstListItem, index: number, sectionIndex: number) => {
+  const [title, setTitle] = useState('');
+
+  const configInterface = useCallback(() => {
+    switch (type) {
+      case RouterParamTypes.LearnCharsType.Vowel:
+        setTitle(t('learnCharsListScreen.header.titleVowels'));
+        break;
+
+      case RouterParamTypes.LearnCharsType.Constant:
+        setTitle(t('learnCharsListScreen.header.titleConsonants'));
+
+        break;
+
+      case RouterParamTypes.LearnCharsType.Barakhadi:
+        setTitle(t('learnCharsListScreen.header.titleBarakhadi'));
+
+        break;
+
+      case RouterParamTypes.LearnCharsType.Number:
+        setTitle(t('learnCharsListScreen.header.titleNumerals'));
+
+        break;
+      default:
+        break;
+    }
+  }, [t, type]);
+
+  useEffect(() => {
+    configInterface();
+  }, [configInterface]);
+
+  const cardTapped = (item: ICharListItem, index: number, sectionIndex: number) => {
     if (sectionIndex === 0 && index === 0) {
-      navigation.push('LearnVowelsChart', {});
+      navigation.push('LearnCharsChart', { type });
     } else if (sectionIndex === 0 && index === 1) {
-      //navigation.push('LearnVowelsList', {});
+      //navigation.push('LearnCharsList', {});
     } else if (sectionIndex === 0 && index === 2) {
       // navigation.push('LearnConsonantsList', {});
     } else if (sectionIndex === 0 && index === 3) {
@@ -49,15 +78,7 @@ const LearnVowelsList = ({ navigation }: Props) => {
     }
   };
 
-  const renderItem = ({
-    item,
-    index,
-    sectionIndex,
-  }: {
-    item: IVowelstListItem;
-    index: number;
-    sectionIndex: number;
-  }) => {
+  const renderItem = ({ item, index, sectionIndex }: { item: ICharListItem; index: number; sectionIndex: number }) => {
     return (
       <Components.VowelstListItem
         key={item.id}
@@ -79,7 +100,7 @@ const LearnVowelsList = ({ navigation }: Props) => {
 
       <Appbar.Header style={{ backgroundColor: colors.background }}>
         <Appbar.BackAction onPress={onGoBack} />
-        <Appbar.Content title={t('learnVowelsListScreen.header.title')} subtitle="" />
+        <Appbar.Content title={title} subtitle="" />
       </Appbar.Header>
       <View style={styles.safeArea}>
         <ScrollView style={styles.scrollView}>
@@ -101,4 +122,4 @@ const LearnVowelsList = ({ navigation }: Props) => {
   );
 };
 
-export default LearnVowelsList;
+export default LearnCharsList;

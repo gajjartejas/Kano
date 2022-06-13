@@ -37,7 +37,10 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
   },
   section: { paddingHorizontal: 20 },
-  sectionItem: {},
+  sectionItem: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+  },
   listContainer: {
     paddingTop: 16,
   },

@@ -16,13 +16,10 @@ import About from 'app/screens/Settings/About';
 import SelectAppearance from 'app/screens/Settings/SelectAppearance';
 import License from 'app/screens/Settings/License';
 import Translators from 'app/screens/Settings/Translators';
-import LearnConsonantsList from 'app/screens/HomeIntro/ConsonantsIntro/LearnConsonantsList';
-import LearnBarakhadisList from 'app/screens/HomeIntro/BarakhadiIntro/LearnBarakhadiList';
-import LearnVowelsList from 'app/screens/HomeIntro/VowelsIntro/LearnVowelsList';
-import LearnNumeralsList from 'app/screens/HomeIntro/NumeralsIntro/LearnNumeralsList';
+import LearnCharsList from 'app/screens/HomeIntro/CharsIntro/LearnCharsList';
 import GujaratiScriptIntro from 'app/screens/HomeIntro/IntroductionToGujaratiScript/GujaratiScriptIntro';
-import LearnVowelsChart from 'app/screens/HomeIntro/VowelsIntro/LearnVowelsChart';
-import LearnVowelsCharInfo from 'app/screens/HomeIntro/VowelsIntro/LearnVowelsCharInfo';
+import LearnCharsChart from 'app/screens/HomeIntro/CharsIntro/LearnCharsChart';
+import LearnCharInfo from 'app/screens/HomeIntro/CharsIntro/LearnCharInfo';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -69,13 +66,10 @@ const LoggedInTabNavigator: React.FC<IProps> = () => {
       <Stack.Screen name="SelectAppearance" component={SelectAppearance} options={{ headerShown: false }} />
       <Stack.Screen name="License" component={License} options={{ headerShown: false }} />
       <Stack.Screen name="Translators" component={Translators} options={{ headerShown: false }} />
-      <Stack.Screen name="LearnConsonantsList" component={LearnConsonantsList} options={{ headerShown: false }} />
-      <Stack.Screen name="LearnBarakhadisList" component={LearnBarakhadisList} options={{ headerShown: false }} />
-      <Stack.Screen name="LearnVowelsList" component={LearnVowelsList} options={{ headerShown: false }} />
-      <Stack.Screen name="LearnNumeralsList" component={LearnNumeralsList} options={{ headerShown: false }} />
+      <Stack.Screen name="LearnCharsList" component={LearnCharsList} options={{ headerShown: false }} />
       <Stack.Screen name="GujaratiScriptIntro" component={GujaratiScriptIntro} options={{ headerShown: false }} />
-      <Stack.Screen name="LearnVowelsChart" component={LearnVowelsChart} options={{ headerShown: false }} />
-      <Stack.Screen name="LearnVowelsCharInfo" component={LearnVowelsCharInfo} options={{ headerShown: false }} />
+      <Stack.Screen name="LearnCharsChart" component={LearnCharsChart} options={{ headerShown: false }} />
+      <Stack.Screen name="LearnCharInfo" component={LearnCharInfo} options={{ headerShown: false }} />
     </LoggedInStack.Navigator>
   );
 };

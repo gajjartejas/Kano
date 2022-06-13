@@ -1,15 +1,15 @@
-import { ICharInfo } from './../models/models/char';
+import { ICharInfo } from '../models/models/char';
 
 //ThirdParty
-import { IVovelListSection, IVovelCharCellItem } from 'app/components/VowelCharCellItem';
+import { ICharCellListSection, ICharCellItem } from 'app/components/CharCellItem';
 import { useTranslation } from 'react-i18next';
 import vowels from 'app/assets/lang/vowels/vowels.json';
 
-const useVowels = (): IVovelListSection[] => {
+const useNumeralChartItems = (): ICharCellListSection[] => {
   //Constants
   const { t } = useTranslation();
 
-  const transformCharToCellVM = (charInfo: ICharInfo): IVovelCharCellItem => {
+  const transformCharToCellVM = (charInfo: ICharInfo): ICharCellItem => {
     const transformed = {
       id: charInfo.id,
       en: charInfo.en,
@@ -20,7 +20,7 @@ const useVowels = (): IVovelListSection[] => {
     return transformed;
   };
 
-  const transformCharsToSectionVM = (cellItems: IVovelCharCellItem[]): IVovelListSection => {
+  const transformCharsToSectionVM = (cellItems: ICharCellItem[]): ICharCellListSection => {
     return {
       title: t('learnVowelsListScreen.listItemSection1Title'),
       data: cellItems,
@@ -32,4 +32,4 @@ const useVowels = (): IVovelListSection[] => {
   return vowelsSectionsVMs;
 };
 
-export default useVowels;
+export default useNumeralChartItems;

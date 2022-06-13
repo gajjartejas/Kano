@@ -4,33 +4,35 @@ import { View, StyleSheet, useWindowDimensions } from 'react-native';
 
 //Third Party
 import { TouchableRipple, useTheme, Text } from 'react-native-paper';
-import CircularProgress from './CircularProgress';
 
 //Interface
-export interface IVovelCharCellItem {
+export interface ICharCellItem {
   id: number;
   en: string;
   gu: string;
   diacritic: string;
 }
 
-export interface IVovelListSection {
+export interface ICharCellListSection {
   title: string;
-  data: IVovelCharCellItem[];
+  data: ICharCellItem[];
 }
 
 //Interface
-interface IVovelCharCellItemProps {
-  item: IVovelCharCellItem;
+interface ICharCellItemProps {
+  item: ICharCellItem;
   index: number;
   sectionIndex: number;
-  onPress: (item: IVovelCharCellItem, index: number, sectionIndex: number) => void;
+  onPress: (item: ICharCellItem, index: number, sectionIndex: number) => void;
+  numberOfColumns: number;
+  cellSpacing: number;
+  containerSpacing: number;
 }
 
-const CharCellItem = (props: IVovelCharCellItemProps) => {
+const CharCellItem = (props: ICharCellItemProps) => {
   //Const
   const { colors } = useTheme();
-  const { item, index } = props;
+  const { item, index, numberOfColumns, cellSpacing, containerSpacing } = props;
   const sectionIndex = props.sectionIndex;
 
   const dim = useWindowDimensions();
@@ -41,17 +43,16 @@ const CharCellItem = (props: IVovelCharCellItemProps) => {
         styles.container,
         {
           backgroundColor: `${colors.card}`,
-          // backgroundColor: `red`,
           shadowColor: `${colors.shadow}`,
-          width: (dim.width - 40 - 18) / 3,
-          height: (dim.width - 40) / 3,
+          width: (dim.width - containerSpacing * 2 - cellSpacing * numberOfColumns * 2) / numberOfColumns,
+          height: (dim.width - containerSpacing * 2) / numberOfColumns,
         },
       ]}>
       <TouchableRipple
         rippleColor={`${colors.primary}20`}
         style={[styles.touchableButton, { backgroundColor: `${colors.card}20` }]}
         onPress={() => props.onPress(item, index, sectionIndex)}>
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <View style={styles.iconTextContainerView}>
           <View style={styles.iconTextContainer}>
             <Text numberOfLines={1} style={[styles.titleText, { color: colors.textTitle }]}>
               {item.gu}
@@ -90,8 +91,8 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontFamily: Config.Fonts.NotoSansGujarati.Regular,
   },
-
   iconTextContainer: { alignItems: 'center', justifyContent: 'center' },
+  iconTextContainerView: { flex: 1, alignItems: 'center', justifyContent: 'center' },
 });
 
 export default CharCellItem;

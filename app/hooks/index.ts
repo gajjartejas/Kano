@@ -4,7 +4,8 @@ import useConsonantListItems from './useConsonantListItems';
 import useBarakhadiListItems from './useBarakhadiListItems';
 import useVowelstListItems from './useVowelstListItems';
 import useNumeralListItems from './useNumeralListItems';
-import useVowels from './useVowels';
+import useVowelsChartItems from './useVowelsChartItems';
+import useChartItemForTypes from './useChartItemForTypes';
 
 export default {
   useSvgReader,
@@ -13,5 +14,6 @@ export default {
   useBarakhadiListItems,
   useVowelstListItems,
   useNumeralListItems,
-  useVowels,
+  useVowelsChartItems,
+  useChartItemForTypes,
 };

@@ -9,11 +9,9 @@ import AnimatedCharacter from './AnimatedCharacter';
 import HomeListItem from './HomeListItem';
 import WaveBackground from './WaveBackground';
 import CircularProgress from './CircularProgress';
-import ConsonantListItem from './ConsonantListItem';
-import BarakhadiListItem from './BarakhadiListItem';
-import VowelstListItem from './VowelstListItem';
-import NumeralListItem from './VowelstListItem';
-import VowelCharCellItem from './VowelCharCellItem';
+import VowelstListItem from './CharListItem';
+import NumeralListItem from './CharListItem';
+import CharCellItem from './CharCellItem';
 import AppTitleValueItemCell from './AppTitleValueItemCell';
 import StrokeOrderBottomSheet from './StrokeOrderBottomSheet';
 
@@ -29,11 +27,9 @@ export default {
   HomeListItem,
   WaveBackground,
   CircularProgress,
-  ConsonantListItem,
-  BarakhadiListItem,
   VowelstListItem,
   NumeralListItem,
-  VowelCharCellItem,
+  CharCellItem,
   AppTitleValueItemCell,
   StrokeOrderBottomSheet,
 };

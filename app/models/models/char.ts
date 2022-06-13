@@ -5,6 +5,13 @@ export interface AdsActivity {
   chars: ICharInfo[];
 }
 
+export interface ICharGroupInfo {
+  id: number;
+  en: string;
+  gu: string;
+  chars?: ICharInfo[];
+}
+
 export interface ICharInfo {
   id: number;
   en: string;

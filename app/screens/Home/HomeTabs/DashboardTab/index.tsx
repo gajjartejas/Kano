@@ -19,10 +19,7 @@ import * as RouterParamTypes from 'app/config/router-params';
 //Params
 type RootStackParamList = {
   DashboardTab: RouterParamTypes.DashboardTabParams;
-  LearnConsonantsList: RouterParamTypes.LearnConsonantsListParams;
-  LearnVowelsList: RouterParamTypes.LearnVowelsListParams;
-  LearnBarakhadisList: RouterParamTypes.LearnBarakhadisListParams;
-  LearnNumeralsList: RouterParamTypes.LearnNumeralsListParams;
+  LearnCharsList: RouterParamTypes.LearnCharsListParams;
   GujaratiScriptIntro: RouterParamTypes.GujaratiScriptIntroParams;
 };
 
@@ -43,13 +40,13 @@ const DashboardTab = ({ navigation }: Props) => {
     if (sectionIndex === 0 && index === 0) {
       navigation.push('GujaratiScriptIntro', {});
     } else if (sectionIndex === 0 && index === 1) {
-      navigation.push('LearnVowelsList', {});
+      navigation.push('LearnCharsList', { type: RouterParamTypes.LearnCharsType.Vowel });
     } else if (sectionIndex === 0 && index === 2) {
-      navigation.push('LearnConsonantsList', {});
+      navigation.push('LearnCharsList', { type: RouterParamTypes.LearnCharsType.Constant });
     } else if (sectionIndex === 0 && index === 3) {
-      navigation.push('LearnBarakhadisList', {});
+      navigation.push('LearnCharsList', { type: RouterParamTypes.LearnCharsType.Barakhadi });
     } else if (sectionIndex === 0 && index === 4) {
-      navigation.push('LearnNumeralsList', {});
+      navigation.push('LearnCharsList', { type: RouterParamTypes.LearnCharsType.Number });
     }
     // Utils.rateApp.saveItem(item);
   };

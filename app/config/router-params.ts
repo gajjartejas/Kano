@@ -1,12 +1,7 @@
-import { IVovelListSection } from 'app/components/VowelCharCellItem';
+import { ICharCellListSection } from 'app/components/CharCellItem';
 
 export interface DashboardTabParams {}
-export interface LearnConsonantsListParams {}
-export interface LearnVowelsListParams {}
-export interface LearnBarakhadisListParams {}
-export interface LearnNumeralsListParams {}
 export interface GujaratiScriptIntroParams {}
-export interface LearnVowelsChartParams {}
 
 export interface DeviceListsParams {}
 export interface MoreAppsParams {}
@@ -16,10 +11,22 @@ export interface AboutParams {}
 export interface SelectAppearanceParams {}
 export interface TranslatorsParams {}
 
-export interface LearnVowelsCharInfoParams {
-  index: number;
-  sectionIndex: number;
-  groupedEntries: IVovelListSection[];
+export enum LearnCharsType {
+  Vowel = 'Vowel',
+  Constant = 'Constant',
+  Barakhadi = 'Barakhadi',
+  Number = 'Number',
 }
 
-export interface LearnVowelsListParams {}
+export interface LearnCharsListParams {
+  type: LearnCharsType;
+}
+export interface LearnCharsChartParams {
+  type: LearnCharsType;
+}
+export interface LearnCharInfoParams {
+  index: number;
+  sectionIndex: number;
+  groupedEntries: ICharCellListSection[];
+  type: LearnCharsType;
+}

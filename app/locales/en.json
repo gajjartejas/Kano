@@ -118,13 +118,16 @@
       "title": "Introduction"
     }
   },
-  "learnVowelsListScreen": {
+  "learnCharsListScreen": {
     "header": {
-      "title": "Learn Vowels"
+      "titleVowels": "Learn Vowels",
+      "titleConsonants": "Learn Consonants",
+      "titleBarakhadi": "Learn Barakhadi",
+      "titleNumerals": "Learn Numerals"
     },
     "listItemSection1Title": "Learn",
     "listItemsSection1": {
-      "itemTitle1": "Vowels Chart",
+      "itemTitle1": "Charactors Chart",
       "itemSubTitle1": "10 hours, 19 lessons",
       "itemTitle2": "Learn in Sequence",
       "itemSubTitle2": "10 hours, 19 lessons",
@@ -139,75 +142,15 @@
       "itemSubTitle2": "10 hours, 19 lessons"
     }
   },
-  "learnConsonantsListScreen": {
+  "learnCharsChartScreen": {
     "header": {
-      "title": "Learn Consonants"
-    },
-    "listItemSection1Title": "Learn",
-    "listItemsSection1": {
-      "itemTitle1": "Consonants Chart",
-      "itemSubTitle1": "10 hours, 19 lessons",
-      "itemTitle2": "Learn in Sequence",
-      "itemSubTitle2": "10 hours, 19 lessons",
-      "itemTitle3": "Memorize by Random Order",
-      "itemSubTitle3": "10 hours, 19 lessons"
-    },
-    "listItemSection2Title": "Practice",
-    "listItemsSection2": {
-      "itemTitle1": "Practice by Order",
-      "itemSubTitle1": "10 hours, 19 lessons",
-      "itemTitle2": "Practice by Random Order",
-      "itemSubTitle2": "10 hours, 19 lessons"
+      "titleVowels": "Vowels Chart",
+      "titleConsonants": "Consonants Chart",
+      "titleBarakhadi": "Barakhadi Chart",
+      "titleNumerals": "Numerals Chart"
     }
   },
-  "learnBarakhadiListScreen": {
-    "header": {
-      "title": "Learn Barakhadi"
-    },
-    "listItemSection1Title": "Learn",
-    "listItemsSection1": {
-      "itemTitle1": "Barakhadi Chart",
-      "itemSubTitle1": "10 hours, 19 lessons",
-      "itemTitle2": "Learn in Sequence",
-      "itemSubTitle2": "10 hours, 19 lessons",
-      "itemTitle3": "Memorize by Random Order",
-      "itemSubTitle3": "10 hours, 19 lessons"
-    },
-    "listItemSection2Title": "Practice",
-    "listItemsSection2": {
-      "itemTitle1": "Practice by Order",
-      "itemSubTitle1": "10 hours, 19 lessons",
-      "itemTitle2": "Practice by Random Order",
-      "itemSubTitle2": "10 hours, 19 lessons"
-    }
-  },
-  "learnNumeralsListScreen": {
-    "header": {
-      "title": "Learn Numerals"
-    },
-    "listItemSection1Title": "Learn",
-    "listItemsSection1": {
-      "itemTitle1": "Numerals Chart",
-      "itemSubTitle1": "10 hours, 19 lessons",
-      "itemTitle2": "Learn in Sequence",
-      "itemSubTitle2": "10 hours, 19 lessons",
-      "itemTitle3": "Memorize by Random Order",
-      "itemSubTitle3": "10 hours, 19 lessons"
-    },
-    "listItemSection2Title": "Practice",
-    "listItemsSection2": {
-      "itemTitle1": "Practice by Order",
-      "itemSubTitle1": "10 hours, 19 lessons",
-      "itemTitle2": "Practice by Random Order",
-      "itemSubTitle2": "10 hours, 19 lessons"
-    }
-  },
-  "learnVowelsChartScreen": {
-    "header": {
-      "title": "Vowels Chart"
-    }
-  },
-  "learnVowelsCharInfoScreen": {
+  "learnCharInfoScreen": {
     "header": {
       "title": "Charactor Info"
     }
