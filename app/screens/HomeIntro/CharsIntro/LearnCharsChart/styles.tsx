@@ -1,3 +1,4 @@
+import Config from 'app/config';
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -33,16 +34,12 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: 40,
     borderBottomRightRadius: 40,
     position: 'absolute',
-    backgroundColor: 'red',
     overflow: 'hidden',
   },
   section: { paddingHorizontal: 20 },
   sectionItem: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-  },
-  listContainer: {
-    paddingTop: 16,
   },
   headerDetailContainer: {
     paddingHorizontal: 16,
@@ -55,6 +52,18 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     color: 'white',
   },
+  listHeaderView: {
+    paddingVertical: 16,
+  },
+  listHeaderText: {
+    fontSize: 18,
+    fontWeight: '600',
+    fontFamily: Config.Fonts.NotoSansGujarati.Medium,
+  },
+  emptyListHeader: {
+    paddingVertical: 8,
+  },
+  listContainer: { paddingVertical: 8 },
 });
 
 export default styles;

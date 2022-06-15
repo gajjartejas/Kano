@@ -52,7 +52,7 @@
       { "id": 7, "en": "khai", "gu": "ખૈ", "diacritic": "ૈ" },
       { "id": 8, "en": "kho", "gu": "ખો", "diacritic": "ો" },
       { "id": 9, "en": "khau", "gu": "ખૌ", "diacritic": "ૌ" },
-      { "id": 10, "en": "kham / Khan", "gu": "ખં", "diacritic": "ં" },
+      { "id": 10, "en": "kham/Khan", "gu": "ખં", "diacritic": "ં" },
       { "id": 11, "en": "khah", "gu": "ખઃ", "diacritic": "ઃ" }
     ]
   },

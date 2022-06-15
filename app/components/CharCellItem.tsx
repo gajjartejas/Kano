@@ -37,6 +37,9 @@ const CharCellItem = (props: ICharCellItemProps) => {
 
   const dim = useWindowDimensions();
 
+  const titleFontSize = [30, 30, 30, 30, 30, 30, 24][numberOfColumns];
+  const subTitleFontSize = [30, 30, 30, 30, 16, 14, 12][numberOfColumns];
+
   return (
     <View
       style={[
@@ -54,11 +57,13 @@ const CharCellItem = (props: ICharCellItemProps) => {
         onPress={() => props.onPress(item, index, sectionIndex)}>
         <View style={styles.iconTextContainerView}>
           <View style={styles.iconTextContainer}>
-            <Text numberOfLines={1} style={[styles.titleText, { color: colors.textTitle }]}>
+            <Text numberOfLines={1} style={[styles.titleText, { color: colors.textTitle, fontSize: titleFontSize }]}>
               {item.gu}
             </Text>
-            <Text numberOfLines={1} style={[styles.subTitleText, { color: `${colors.textTitle}99` }]}>
-              {`${item.en}${item.diacritic ? ' / ' : ''}${item.diacritic}`}
+            <Text
+              numberOfLines={2}
+              style={[styles.subTitleText, { color: `${colors.textTitle}99`, fontSize: subTitleFontSize }]}>
+              {`${item.en}${item.diacritic ? `/${item.diacritic}` : ''}`}
             </Text>
           </View>
         </View>

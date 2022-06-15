@@ -21,7 +21,6 @@ type RootStackParamList = {
 
 type Props = NativeStackScreenProps<RootStackParamList, 'LearnCharsChart'>;
 
-const NUMBER_OF_COLUMNS = 6;
 const CELL_SPACING = 3;
 const CONTAINER_SPACING = 20;
 
@@ -38,25 +37,30 @@ const LearnCharsChart = ({ navigation, route }: Props) => {
 
   //States
   const [title, setTitle] = useState('');
+  const [numberOfColumns, setNumberOfColumns] = useState<number | null>(null);
 
   const configInterface = useCallback(() => {
     switch (type) {
       case RouterParamTypes.LearnCharsType.Vowel:
         setTitle(t('learnCharsChartScreen.header.titleVowels'));
+        setNumberOfColumns(3);
         break;
 
       case RouterParamTypes.LearnCharsType.Constant:
         setTitle(t('learnCharsChartScreen.header.titleConsonants'));
+        setNumberOfColumns(5);
 
         break;
 
       case RouterParamTypes.LearnCharsType.Barakhadi:
         setTitle(t('learnCharsChartScreen.header.titleBarakhadi'));
+        setNumberOfColumns(4);
 
         break;
 
       case RouterParamTypes.LearnCharsType.Number:
         setTitle(t('learnCharsChartScreen.header.titleNumerals'));
+        setNumberOfColumns(6);
 
         break;
       default:
@@ -78,7 +82,7 @@ const LearnCharsChart = ({ navigation, route }: Props) => {
         key={item.id.toString()}
         containerSpacing={CONTAINER_SPACING}
         cellSpacing={CELL_SPACING}
-        numberOfColumns={NUMBER_OF_COLUMNS}
+        numberOfColumns={numberOfColumns!}
         item={item}
         index={index}
         sectionIndex={sectionIndex}
@@ -105,8 +109,19 @@ const LearnCharsChart = ({ navigation, route }: Props) => {
   };
 
   const renderSectionHeader = (info: { section: { title: string } }) => {
-    return <Text>{info.section.title}</Text>;
+    if (groupedEntries.length < 2) {
+      return <View style={styles.emptyListHeader} />;
+    }
+    return (
+      <View style={[styles.listHeaderView, { backgroundColor: colors.background }]}>
+        <Text style={[styles.listHeaderText, { color: colors.textTitle }]}>{info.section.title}</Text>
+      </View>
+    );
   };
+
+  if (!numberOfColumns) {
+    return <View />;
+  }
 
   return (
     <View style={[styles.container, { backgroundColor: colors.background }]}>
@@ -126,6 +141,9 @@ const LearnCharsChart = ({ navigation, route }: Props) => {
           keyExtractor={item => item.id.toString()}
           style={{ paddingHorizontal: CONTAINER_SPACING }}
           renderSectionHeader={renderSectionHeader}
+          contentContainerStyle={styles.listContainer}
+          stickySectionHeadersEnabled={false}
+          stickyHeaderHiddenOnScroll={true}
         />
       </View>
     </View>

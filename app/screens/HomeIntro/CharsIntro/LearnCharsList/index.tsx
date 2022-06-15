@@ -24,7 +24,7 @@ type Props = NativeStackScreenProps<RootStackParamList, 'LearnCharsList'>;
 const LearnCharsList = ({ navigation, route }: Props) => {
   //Refs
 
-  //Actions
+  //Actions unnecessary
 
   //Constants
   const { colors } = useTheme();

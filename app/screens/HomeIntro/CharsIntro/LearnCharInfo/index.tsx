@@ -47,40 +47,47 @@ const LearnVowelsCharInfo = ({ navigation, route }: Props) => {
       <View style={{ width: dimension.width, height: 'auto' }}>
         <Text style={[styles.headerText, { color: colors.text }]}>{item.gu}</Text>
         <View style={[styles.card, { backgroundColor: `${colors.card}`, shadowColor: `${colors.shadow}` }]}>
-          <Components.AppTitleValueItemCell touchDisabled title={t('general.charactor')} value={item.gu} />
-          <Components.AppTitleValueItemCell touchDisabled title={t('general.diacritic')} value="test" />
-          <Components.AppTitleValueItemCell touchDisabled title={t('general.englishCharactor')} value={item.en} />
-          <Components.AppTitleValueItemCell touchDisabled title={t('general.numberOfStrokes')} value={item.en} />
-          <Components.AppTitleValueItemCell touchDisabled title={t('general.compaxity')} value={item.en} />
-          <Components.AppTitleValueItemCell touchDisabled title={t('general.length')} value={item.en} />
+          <Components.AppTitleValueItemCell touchDisabled title={t('learnCharInfoScreen.charactor')} value={item.gu} />
+          <Components.AppTitleValueItemCell touchDisabled title={t('learnCharInfoScreen.diacritic')} value="test" />
+          <Components.AppTitleValueItemCell
+            touchDisabled
+            title={t('learnCharInfoScreen.englishCharactor')}
+            value={item.en}
+          />
+          <Components.AppTitleValueItemCell
+            touchDisabled
+            title={t('learnCharInfoScreen.numberOfStrokes')}
+            value={item.en}
+          />
+          <Components.AppTitleValueItemCell touchDisabled title={t('learnCharInfoScreen.compaxity')} value={item.en} />
+          <Components.AppTitleValueItemCell touchDisabled title={t('learnCharInfoScreen.length')} value={item.en} />
         </View>
         <View style={[styles.card, { backgroundColor: `${colors.card}`, shadowColor: `${colors.shadow}` }]}>
-          <Components.AppTitleValueItemCell bold touchDisabled title={t('general.moreInfo')} />
+          <Components.AppTitleValueItemCell bold touchDisabled title={t('learnCharInfoScreen.moreInfo')} />
           <Components.AppTitleValueItemCell
             iconName="chevron-right"
             iconFamily="font-awesome"
             onPress={() => {}}
-            title={t('general.viewStrokeOrder')}
+            title={t('learnCharInfoScreen.viewStrokeOrder')}
           />
           <Components.AppTitleValueItemCell
             iconName="chevron-right"
             iconFamily="font-awesome"
             onPress={() => {
-              //
               if (!showBottomSheet) {
                 setShowBottomSheet(true);
               } else if (bottomSheetRef.current) {
                 bottomSheetRef.current.snapToIndex(1);
               }
             }}
-            title={t('general.viewAnimatedDrawing')}
+            title={t('learnCharInfoScreen.viewAnimatedDrawing')}
           />
           <Components.AppTitleValueItemCell
             iconName="play-circle"
             iconFamily="font-awesome"
             leftIconSize={20}
             onPress={() => {}}
-            title={t('general.playSound')}
+            title={t('learnCharInfoScreen.playSound')}
           />
         </View>
       </View>

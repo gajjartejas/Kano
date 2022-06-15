@@ -2,13 +2,9 @@ import { ICharInfo } from '../models/models/char';
 
 //ThirdParty
 import { ICharCellListSection, ICharCellItem } from 'app/components/CharCellItem';
-import { useTranslation } from 'react-i18next';
-import vowels from 'app/assets/lang/vowels/vowels.json';
+import numerals from 'app/assets/lang/numerals/numerals.json';
 
-const useNumeralChartItems = (): ICharCellListSection[] => {
-  //Constants
-  const { t } = useTranslation();
-
+const useVowelsChartItems = (): ICharCellListSection[] => {
   const transformCharToCellVM = (charInfo: ICharInfo): ICharCellItem => {
     const transformed = {
       id: charInfo.id,
@@ -20,16 +16,8 @@ const useNumeralChartItems = (): ICharCellListSection[] => {
     return transformed;
   };
 
-  const transformCharsToSectionVM = (cellItems: ICharCellItem[]): ICharCellListSection => {
-    return {
-      title: t('learnVowelsListScreen.listItemSection1Title'),
-      data: cellItems,
-    };
-  };
-
-  let vowelsCellVMs = vowels.map((v: ICharInfo) => transformCharToCellVM(v));
-  let vowelsSectionsVMs = [transformCharsToSectionVM(vowelsCellVMs)];
-  return vowelsSectionsVMs;
+  let cellVMs = numerals.map((v: ICharInfo) => transformCharToCellVM(v));
+  return [{ title: '', data: cellVMs }];
 };
 
-export default useNumeralChartItems;
+export default useVowelsChartItems;

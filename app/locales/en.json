@@ -2,17 +2,7 @@
   "general": {
     "appname": "Kano",
     "close": "CLOSE",
-    "noInternet": "No Internet Connection",
-    "charactor": "CHARACTOR",
-    "diacritic": "DIACRITIC",
-    "englishCharactor": "ENGLISH CHARACTOR",
-    "numberOfStrokes": "NUMBER OF STROKES",
-    "compaxity": "COMPAXITY",
-    "length": "LENGTH",
-    "moreInfo": "MORE INFO",
-    "viewStrokeOrder": "VIEW STROKE ORDER",
-    "viewAnimatedDrawing": "VIEW ANIMATED DRAWING",
-    "playSound": "PLAY SOUND"
+    "noInternet": "No Internet Connection"
   },
   "about": {
     "sendFeedback": "Send Feedback",
@@ -127,7 +117,7 @@
     },
     "listItemSection1Title": "Learn",
     "listItemsSection1": {
-      "itemTitle1": "Charactors Chart",
+      "itemTitle1": "Characters Chart",
       "itemSubTitle1": "10 hours, 19 lessons",
       "itemTitle2": "Learn in Sequence",
       "itemSubTitle2": "10 hours, 19 lessons",
@@ -152,7 +142,18 @@
   },
   "learnCharInfoScreen": {
     "header": {
-      "title": "Charactor Info"
-    }
+      "title": "Character Info"
+    },  
+    "charactor": "CHARACTER",
+    "diacritic": "DIACRITIC",
+    "englishCharactor": "ENGLISH CHARACTER",
+    "numberOfStrokes": "NUMBER OF STROKES",
+    "compaxity": "COMPLEXITY",
+    "length": "LENGTH",
+    "moreInfo": "MORE INFO",
+    "viewStrokeOrder": "VIEW STROKE ORDER",
+    "viewAnimatedDrawing": "VIEW ANIMATED DRAWING",
+    "playSound": "PLAY SOUND",
+    "cellHeader": "Vowel: {{en}}/{{gu}}"
   }
 }

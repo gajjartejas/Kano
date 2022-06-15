@@ -17,7 +17,7 @@ const useVowelsChartItems = (): ICharCellListSection[] => {
   };
 
   let cellVMs = vowels.map((v: ICharInfo) => transformCharToCellVM(v));
-  return [{ title: 'testtt', data: cellVMs }];
+  return [{ title: '', data: cellVMs }];
 };
 
 export default useVowelsChartItems;
