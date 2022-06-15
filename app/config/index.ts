@@ -1,9 +1,13 @@
 import Images from './images';
-import svgIconForName from './svgs';
 import Constants from './app-constant';
+import Fonts from './fonts';
+import * as RouterParamTypes from 'app/config/router-params';
 
-export default {
+const Config = {
   Images,
   Constants,
-  svgIconForName,
+  Fonts,
+  RouterParamTypes
 };
+
+export default Config;

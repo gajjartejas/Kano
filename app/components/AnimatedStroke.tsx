@@ -40,6 +40,7 @@ const AnimatedStroke = (props: AnimatedStrokeProps) => {
     <AnimatedPath
       {...props}
       animatedProps={animatedProps}
+      //@ts-ignore
       onLayout={() => {
         setLength(ref.current!.getTotalLength());
         onLength(ref.current!.getTotalLength());

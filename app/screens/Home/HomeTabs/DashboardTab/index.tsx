@@ -14,10 +14,13 @@ import Utils from 'app/utils';
 import Config from 'app/config';
 import Hooks from 'app/hooks/index';
 import { IHomeListItem } from 'app/components/HomeListItem';
+import * as RouterParamTypes from 'app/config/router-params';
 
 //Params
 type RootStackParamList = {
-  DashboardTab: { userId: string };
+  DashboardTab: RouterParamTypes.DashboardTabParams;
+  LearnCharsList: RouterParamTypes.LearnCharsListParams;
+  GujaratiScriptIntro: RouterParamTypes.GujaratiScriptIntroParams;
 };
 
 type Props = NativeStackScreenProps<RootStackParamList, 'DashboardTab'>;
@@ -33,8 +36,19 @@ const DashboardTab = ({ navigation }: Props) => {
   const { t } = useTranslation();
 
   //States
-  const cardTapped = (item: IHomeListItem, _index: number, _sectionIndex: number) => {
-    Utils.rateApp.saveItem(item);
+  const cardTapped = (item: IHomeListItem, index: number, sectionIndex: number) => {
+    if (sectionIndex === 0 && index === 0) {
+      navigation.push('GujaratiScriptIntro', {});
+    } else if (sectionIndex === 0 && index === 1) {
+      navigation.push('LearnCharsList', { type: RouterParamTypes.LearnCharsType.Vowel });
+    } else if (sectionIndex === 0 && index === 2) {
+      navigation.push('LearnCharsList', { type: RouterParamTypes.LearnCharsType.Constant });
+    } else if (sectionIndex === 0 && index === 3) {
+      navigation.push('LearnCharsList', { type: RouterParamTypes.LearnCharsType.Barakhadi });
+    } else if (sectionIndex === 0 && index === 4) {
+      navigation.push('LearnCharsList', { type: RouterParamTypes.LearnCharsType.Number });
+    }
+    // Utils.rateApp.saveItem(item);
   };
 
   const renderItem = ({ item, index, sectionIndex }: { item: IHomeListItem; index: number; sectionIndex: number }) => {
@@ -60,7 +74,7 @@ const DashboardTab = ({ navigation }: Props) => {
 
         <View style={styles.headerDetailContainer}>
           <View>
-            <Text style={styles.headerDetailText}>{'Welcome back\nTejas'}</Text>
+            <Text style={styles.headerDetailText}>{t('homeScreen.header.title', { name: 'Tejas' })}</Text>
           </View>
         </View>
 

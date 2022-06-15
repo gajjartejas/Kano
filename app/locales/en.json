@@ -1,80 +1,159 @@
 {
-  "APPNAME": "Kano",
-  "CLOSE": "CLOSE",
-  "SAVE": "SAVE",
-  "NO_INTERNET": "No Internet Connection",
-  "OPEN": "Open",
+  "general": {
+    "appname": "Kano",
+    "close": "CLOSE",
+    "noInternet": "No Internet Connection"
+  },
+  "about": {
+    "sendFeedback": "Send Feedback",
+    "rateApp": "Rate App",
+    "moreApps": "More Apps",
+    "github": "Contribute on Github",
+    "setting": "Settings",
+    "app": "About Kano",
+    "sendFeedbackDetail": "You can send your valuable feedback to Telegram channel or send mail directly."
+  },
+  "moreApps": {
+    "appsTitle": "More Apps",
+    "apps1Title": "Kano - An interactive way to learn Gujarati",
+    "apps1Desc": "An interactive way to learn Gujarati",
+    "apps2Title": "MIUI - Ads helper",
+    "apps2Desc": "This application allows you to enable/disable ads or recommendations for various apps in Xiaomi (MIUI) devices.",
+    "apps3Title": "OHM-Client",
+    "apps3Desc": "`OHM-Client` is an unofficial open hardware monitor client app for android and iOS written in react-native. Using this app you can monitor open hardware monitor web server.",
+    "appsGithub": "Github",
+    "appsPlayStore": "Play Store"
+  },
+  "settings": {
+    "title": "Settings",
+    "commonHeader": "Common Settings",
+    "appearanceTitle": "Appearance",
+    "appearanceSubTitle": "Customization of appearance",
 
- 
-  "MORE_APP_GITHUB": "Github",
-  "MORE_APP_PLAY_STORE": "Play Store",
-  "ABOUT_CHANGE_LANGUAGE": "Change Language",
-  "ABOUT_RATE_APP": "Rate App",
-  "ABOUT_MORE_APPS": "More Apps",
-  "ABOUT_TERMS_SERVICE": "Terms of service",
-  "ABOUT_PRIVACY_POLICY": "Privacy Policy",
-  "ABOUT_CREDITS": "Credits",
-  "ABOUT_COPY_RIGHT_NAME": "Gajjar Tejas",
-  "ABOUT_COPY_RIGHT": "Copyright 2021-2022",
-  "ABOUT_GITHUB": "Contribute on Github",
-  "ABOUT_SETTING": "Settings",
-  "ABOUT_APP": "About Kano",
-  "ABOUT_SEND_FEEDBACK": "Send Feedback",
-  "ABOUT_SEND_FEEDBACK_DETAIL": "You can send your valuable feedback to Telegram channel or send mail directly.",
-  "MORE_APPS_TITLE": "More Apps",
-  "MORE_APPS_1_TITLE": "Kano - An interactive way to learn Gujarati",
-  "MORE_APPS_1_DESC": "An interactive way to learn Gujarati",
-  "MORE_APPS_2_TITLE": "MIUI - Ads helper",
-  "MORE_APPS_2_DESC": "This application allows you to enable/disable ads or recommendations for various apps in Xiaomi (MIUI) devices.",
-  "MORE_APPS_3_TITLE": "OHM-Client",
-  "MORE_APPS_3_DESC": "`OHM-Client` is an unofficial open hardware monitor client app for android and iOS written in react-native. Using this app you can monitor open hardware monitor web server.",
-  "SETTINGS_TITLE": "Settings",
-  "SETTINGS_COMMON_HEADER": "Common Settings",
-  "SETTINGS_APPEARANCE_TITLE": "Appearance",
-  "SETTINGS_APPEARANCE_SUB_TITLE": "Customization of appearance",
-  "SETTINGS_GENERAL_TITLE": "General",
-  "SETTINGS_GENERAL_SUB_TITLE": "Functional settings of the app",
-  "SETTINGS_INFO_HEADER": "Information",
-  "SETTINGS_CHANGELOG_TITLE": "Changelog",
-  "SETTINGS_CHANGELOG_SUB_TITLE": "List of changes made in the all updates",
-  "SETTINGS_LIBRARIES_TITLE": "Libraries",
-  "SETTINGS_LIBRARIES_SUB_TITLE": "List of open source libraries used in this project",
-  "SETTINGS_FAQ_TITLE": "FAQ & help",
-  "SETTINGS_FAQ_SUB_TITLE": "Answer to frequently asked questions",
-  "SETTINGS_TRANSLATE_TITLE": "Translate this app",
-  "SETTINGS_TRANSLATE_SUB_TITLE": "Translate this app in your language",
-  "SETTINGS_TRANSLATORS_TITLE": "Translators",
-  "SETTINGS_TRANSLATORS_SUB_TITLE": "People who helped localize this app",
-  "SETTINGS_PRIVACY_TITLE": "Privacy policy",
-  "SETTINGS_PRIVACY_SUB_TITLE": "Information and permissions usage policy",
-  "SETTINGS_INTERFACE_HEADER": "Interface",
-  "SETTINGS_THEME_TITLE": "Theme",
-  "SETTINGS_THEME_SUB_TITLE": "Main theme of the app",
-  "SETTINGS_ACCENT_COLOR_TITLE": "Accent color",
-  "SETTINGS_ACCENT_COLOR_SUB_TITLE": "Color used to tint UI elements",
-  "SETTINGS_OTHER_HEADER": "Other",
-  "SETTINGS_OTHER_TITLE": "Restore default theme",
-  "SETTINGS_OTHER_SUB_TITLE": "Restore default theme settings",
-  "SETTINGS_THEME_OPTION": "Theme",
-  "SETTINGS_THEME_OPTION_1": "Light",
-  "SETTINGS_THEME_OPTION_2": "Dark",
-  "SETTINGS_THEME_OPTION_3": "System default",
-  "SETTINGS_ACCENT_COLOR_OPTION": "Accent color",
-  "LIBRARIES_TITLE": "Libraries",
-  "TRANSLATORS_TITLE": "Translators",
-  "ABOUT_INFO_TITLE": "About Kano",
-  "ABOUT_INFO_HEADER": "Information",
-  "ABOUT_INFO_DESC_TITLE": "This application allows you to enable/disable ads or recommendations for various apps in Xiaomi (MIUI) devices.",
-  "ABOUT_INFO_AUTHOR_NAME_TITLE": "Tejas Gajjar",
-  "ABOUT_DEVELOPER_TITLE": "Developer",
-  "ABOUT_PORTFOLIO_TITLE": "Portfolio",
-  "ABOUT_PORTFOLIO_SUB_TITLE": "All information about the developer",
-  "ABOUT_INSTAGRAM_TITLE": "Instagram",
-  "ABOUT_INSTAGRAM_SUB_TITLE": "My hobby and my gadgets",
-  "ABOUT_TELEGRAM_TITLE": "Join Telegram",
-  "ABOUT_TELEGRAM_SUB_TITLE": "Discussion about bugs, improvements, feature request and development news",
-  "ABOUT_GITHUB_TITLE": "Github",
-  "ABOUT_GITHUB_SUB_TITLE": "Developer profile and list of open sourced projects",
-  "ABOUT_TWITTER_TITLE": "Twitter",
-  "ABOUT_TWITTER_SUB_TITLE": "Personal micro-blog"
+    "infoHeader": "Information",
+    "changelogTitle": "Changelog",
+    "changelogSubTitle": "List of changes made in the all updates",
+    "librariesTitle": "Libraries",
+    "librariesSubTitle": "List of open source libraries used in this project",
+    "faqTitle": "FAQ & help",
+    "faqSubTitle": "Answer to frequently asked questions",
+    "translateTitle": "Translate this app",
+    "translateSubTitle": "Translate this app in your language",
+    "translatorsTitle": "Translators",
+    "translatorsSubTitle": "People who helped localize this app",
+    "privacyTitle": "Privacy policy",
+    "privacySubTitle": "Information and permissions usage policy"
+  },
+  "appearanceSettings": {
+    "title": "Appearance",
+
+    "interfaceHeader": "Interface",
+    "themeTitle": "Theme",
+    "themeSubTitle": "Main theme of the app",
+    "accentColorTitle": "Accent color",
+    "accentColorSubTitle": "Color used to tint UI elements",
+
+    "otherHeader": "Other",
+    "otherTitle": "Restore default theme",
+    "otherSubTitle": "Restore default theme settings",
+
+    "themeOption": "Theme",
+    "themeOption1": "Light",
+    "themeOption2": "Dark",
+    "themeOption3": "System default"
+  },
+  "librariesScreen": {
+    "title": "Libraries"
+  },
+  "translatorsScreen": {
+    "title": "Translators"
+  },
+  "aboutScreen": {
+    "title": "About Kano",
+    "infoHeader": "Information",
+    "infoDescTitle": "This application allows you to enable/disable ads or recommendations for various apps in Xiaomi (MIUI) devices.",
+    "infoAuthorNameTitle": "Tejas Gajjar",
+    "developerTitle": "Developer",
+    "portfolioTitle": "Portfolio",
+    "portfolioSubTitle": "All information about the developer",
+    "instagramTitle": "Instagram",
+    "instagramSubTitle": "My hobby and my gadgets",
+    "telegramTitle": "Join Telegram",
+    "telegramSubTitle": "Discussion about bugs, improvements, feature request and development news",
+    "githubTitle": "Github",
+    "githubSubTitle": "Developer profile and list of open sourced projects",
+    "twitterTitle": "Twitter",
+    "twitterSubTitle": "Personal micro-blog"
+  },
+  "homeScreen": {
+    "header": {
+      "title": "Welcome back\n{{name}}"
+    },
+    "listItemSection1Title": "Introduction",
+    "listItemsSection1": {
+      "itemTitle1": "Introduction to\nGujarati Script",
+      "itemSubTitle1": "10 hours, 19 lessons",
+      "itemTitle2": "Introduction to\nVowels(svara)",
+      "itemSubTitle2": "10 hours, 19 lessons",
+      "itemTitle3": "Introduction to\nConsonants(vyañjana)",
+      "itemSubTitle3": "10 hours, 19 lessons",
+      "itemTitle4": "Introduction to Barakhadi \n(consonants & vowels)",
+      "itemSubTitle4": "10 hours, 19 lessons",
+      "itemTitle5": "Introduction to\nGujarati numerals",
+      "itemSubTitle5": "10 hours, 19 lessons"
+    }
+  },
+  "learnIntroScreen": {
+    "header": {
+      "title": "Introduction"
+    }
+  },
+  "learnCharsListScreen": {
+    "header": {
+      "titleVowels": "Learn Vowels",
+      "titleConsonants": "Learn Consonants",
+      "titleBarakhadi": "Learn Barakhadi",
+      "titleNumerals": "Learn Numerals"
+    },
+    "listItemSection1Title": "Learn",
+    "listItemsSection1": {
+      "itemTitle1": "Characters Chart",
+      "itemSubTitle1": "10 hours, 19 lessons",
+      "itemTitle2": "Learn in Sequence",
+      "itemSubTitle2": "10 hours, 19 lessons",
+      "itemTitle3": "Memorize by Random Order",
+      "itemSubTitle3": "10 hours, 19 lessons"
+    },
+    "listItemSection2Title": "Practice",
+    "listItemsSection2": {
+      "itemTitle1": "Practice by Order",
+      "itemSubTitle1": "10 hours, 19 lessons",
+      "itemTitle2": "Practice by Random Order",
+      "itemSubTitle2": "10 hours, 19 lessons"
+    }
+  },
+  "learnCharsChartScreen": {
+    "header": {
+      "titleVowels": "Vowels Chart",
+      "titleConsonants": "Consonants Chart",
+      "titleBarakhadi": "Barakhadi Chart",
+      "titleNumerals": "Numerals Chart"
+    }
+  },
+  "learnCharInfoScreen": {
+    "header": {
+      "title": "Character Info"
+    },  
+    "charactor": "CHARACTER",
+    "diacritic": "DIACRITIC",
+    "englishCharactor": "ENGLISH CHARACTER",
+    "numberOfStrokes": "NUMBER OF STROKES",
+    "compaxity": "COMPLEXITY",
+    "length": "LENGTH",
+    "moreInfo": "MORE INFO",
+    "viewStrokeOrder": "VIEW STROKE ORDER",
+    "viewAnimatedDrawing": "VIEW ANIMATED DRAWING",
+    "playSound": "PLAY SOUND",
+    "cellHeader": "Vowel: {{en}}/{{gu}}"
+  }
 }

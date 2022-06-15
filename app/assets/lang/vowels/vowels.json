@@ -1,0 +1,74 @@
+[
+  {
+    "id": 0,
+    "gu": "અ",
+    "en": "a",
+    "diacritic": ""
+  },
+  {
+    "id": 1,
+    "gu": "આ",
+    "en": "ā",
+    "diacritic": "ા"
+  },
+  {
+    "id": 2,
+    "gu": "ઇ",
+    "en": "i",
+    "diacritic": "િ"
+  },
+  {
+    "id": 3,
+    "gu": "ઈ",
+    "en": "ī",
+    "diacritic": "ી"
+  },
+  {
+    "id": 4,
+    "gu": "ઉ",
+    "en": "u",
+    "diacritic": "ુ"
+  },
+  {
+    "id": 5,
+    "gu": "ઊ",
+    "en": "ū",
+    "diacritic": "ૂ"
+  },
+  {
+    "id": 6,
+    "gu": "એ",
+    "en": "e",
+    "diacritic": "ે"
+  },
+  {
+    "id": 7,
+    "gu": "ઐ",
+    "en": "ai",
+    "diacritic": "ૈ"
+  },
+  {
+    "id": 8,
+    "gu": "ઓ",
+    "en": "o",
+    "diacritic": "ો"
+  },
+  {
+    "id": 9,
+    "gu": "ઔ",
+    "en": "au",
+    "diacritic": "ૌ"
+  },
+  {
+    "id": 10,
+    "gu": "અં",
+    "en": "ṁ",
+    "diacritic": "ં"
+  },
+  {
+    "id": 11,
+    "gu": "અઃ",
+    "en": "ḥ",
+    "diacritic": "ઃ"
+  }
+]

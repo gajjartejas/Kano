@@ -17,6 +17,7 @@ import Utils from 'app/utils';
 import Config from 'app/config';
 import Components from 'app/components';
 import styles from './styles';
+import * as RouterParamTypes from 'app/config/router-params';
 
 //Interfaces
 interface IMoreItem {
@@ -28,10 +29,10 @@ interface IMoreItem {
 
 //Params
 type RootStackParamList = {
-  DeviceLists: {};
-  MoreApps: {};
-  Settings: {};
-  About: {};
+  DeviceLists: RouterParamTypes.DeviceListsParams;
+  MoreApps: RouterParamTypes.MoreAppsParams;
+  Settings: RouterParamTypes.SettingsParams;
+  About: RouterParamTypes.AboutParams;
 };
 type Props = NativeStackScreenProps<RootStackParamList, 'DeviceLists'>;
 
@@ -52,37 +53,37 @@ const MoreTab = ({ navigation }: Props) => {
       id: 0,
       iconName: 'feedback',
       iconType: 'material',
-      title: t('ABOUT_SEND_FEEDBACK'),
+      title: t('about.sendFeedback'),
     },
     {
       id: 1,
       iconName: 'star',
       iconType: 'font-awesome',
-      title: t('ABOUT_RATE_APP'),
+      title: t('about.rateApp'),
     },
     {
       id: 2,
       iconName: 'apps',
       iconType: 'material-community',
-      title: t('ABOUT_MORE_APPS'),
+      title: t('about.moreApps'),
     },
     {
       id: 3,
       iconName: 'github',
       iconType: 'entypo',
-      title: t('ABOUT_GITHUB'),
+      title: t('about.github'),
     },
     {
       id: 4,
       iconName: 'gear',
       iconType: 'font-awesome',
-      title: t('ABOUT_SETTING'),
+      title: t('about.setting'),
     },
     {
       id: 5,
       iconName: 'info-circle',
       iconType: 'font-awesome',
-      title: t('ABOUT_APP'),
+      title: t('about.app'),
     },
   ]);
 
@@ -137,7 +138,7 @@ const MoreTab = ({ navigation }: Props) => {
   };
   const onPressEmail = async () => {
     const email = Config.Constants.ABOUT_SUPPORT_EMAIL;
-    const subject = `${t('APPNAME')} feedback`;
+    const subject = `${t('general.appname')} feedback`;
     const osType = Platform.OS;
     const systemVersion = DeviceInfo.getSystemVersion();
     const brand = DeviceInfo.getBrand();
@@ -154,7 +155,7 @@ const MoreTab = ({ navigation }: Props) => {
           <ImageBackground source={Config.Images.icons.about_bg} style={styles.imageBackground}>
             <View style={[styles.imageBackgroundCover, { backgroundColor: `${colors.background}88` }]} />
             <Image source={Config.Images.icons.app_icon} resizeMode="contain" style={styles.appIcon} />
-            <Text style={[styles.appNameText, { color: colors.text }]}>{t('APPNAME')}</Text>
+            <Text style={[styles.appNameText, { color: colors.text }]}>{t('general.appname')}</Text>
             <Text style={[styles.appVersion, { color: colors.text }]}>v{DeviceInfo.getVersion()}</Text>
           </ImageBackground>
 

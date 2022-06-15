@@ -5,7 +5,8 @@ import { View, StyleSheet } from 'react-native';
 //Third Party
 import { TouchableRipple, useTheme, Text } from 'react-native-paper';
 import CircularProgress from './CircularProgress';
-import SVGIcon from './SVGIcon';
+import Icon from 'react-native-easy-icon';
+import { IconType } from 'react-native-easy-icon/src/Icon';
 
 //Interface
 export interface IHomeListItem {
@@ -13,6 +14,7 @@ export interface IHomeListItem {
   title: string;
   subTitle: string;
   iconName: string;
+  iconFamily: IconType;
 }
 
 export interface IHomeListSection {
@@ -43,7 +45,15 @@ const HomeListItem = (props: IHomeListItemProps) => {
         onPress={() => props.onPress(item, index, sectionIndex)}>
         <View style={styles.iconTextContainer}>
           <View style={styles.iconTextContainer1}>
-            <SVGIcon iconName={iconName} style={styles.leftIcon} width={44} height={44} />
+            <View style={styles.iconContainer}>
+              <Icon
+                style={styles.leftIcon}
+                type={item.iconFamily}
+                name={item.iconName}
+                color={colors.textTitle}
+                size={44}
+              />
+            </View>
             <View style={styles.textContainer}>
               <Text numberOfLines={2} style={[styles.titleText, { color: colors.textTitle }]}>
                 {item.title}
@@ -113,7 +123,8 @@ const styles = StyleSheet.create({
   },
   iconTextContainer: { flex: 1, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
   iconTextContainer1: { flex: 1, flexDirection: 'row', alignItems: 'center' },
-  leftIcon: { marginHorizontal: 20 },
+  leftIcon: { alignSelf: 'center' },
+  iconContainer: { marginHorizontal: 20, width: 44 },
   textContainer: { marginRight: 8, flex: 1 },
 });
 

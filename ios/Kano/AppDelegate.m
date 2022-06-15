@@ -51,6 +51,14 @@ static void InitializeFlipper(UIApplication *application) {
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
   [RNBootSplash initWithStoryboard:@"BootSplash" rootView:rootView];
+  
+  for (NSString *familyName in [UIFont familyNames]){
+      NSLog(@"Family name: %@", familyName);
+      for (NSString *fontName in [UIFont fontNamesForFamilyName:familyName]) {
+          NSLog(@"--Font name: %@", fontName);
+      }
+  }
+  
   return YES;
 }
 

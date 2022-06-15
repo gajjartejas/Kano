@@ -8,6 +8,7 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
 //App modules
 import Utils from 'app/utils';
+import * as RouterParamTypes from 'app/config/router-params';
 
 //Modals
 import styles from './styles';
@@ -28,9 +29,9 @@ interface IFinalLicense {
 
 //Params
 type RootStackParamList = {
-  DeviceLists: {};
+  License: RouterParamTypes.LicenseTypes;
 };
-type Props = NativeStackScreenProps<RootStackParamList, 'DeviceLists'>;
+type Props = NativeStackScreenProps<RootStackParamList, 'License'>;
 
 const License = ({ navigation }: Props) => {
   //Constants
@@ -85,7 +86,7 @@ const License = ({ navigation }: Props) => {
 
       <Appbar.Header style={{ backgroundColor: colors.background }}>
         <Appbar.BackAction onPress={onGoBack} />
-        <Appbar.Content title={t('LIBRARIES_TITLE')} subtitle="" />
+        <Appbar.Content title={t('librariesScreen.title')} subtitle="" />
       </Appbar.Header>
       <View style={styles.subView}>
         <FlatList

@@ -4,13 +4,16 @@ import MoreAppCard from 'app/components/MoreAppCard';
 import AboutFeedbackDialog from './AboutFeedbackDialog';
 import SelectThemeDialog from './SelectThemeDialog';
 import SelectAccentDialog from './SelectAccentColorDialog';
-import DashboardItem from './DashboardItem';
 import AnimatedStroke from './AnimatedStroke';
 import AnimatedCharacter from './AnimatedCharacter';
 import HomeListItem from './HomeListItem';
 import WaveBackground from './WaveBackground';
 import CircularProgress from './CircularProgress';
-import SvgIcon from './SVGIcon';
+import VowelstListItem from './CharListItem';
+import NumeralListItem from './CharListItem';
+import CharCellItem from './CharCellItem';
+import AppTitleValueItemCell from './AppTitleValueItemCell';
+import StrokeOrderBottomSheet from './StrokeOrderBottomSheet';
 
 export default {
   AppNoConnection,
@@ -19,11 +22,14 @@ export default {
   AboutFeedbackDialog,
   SelectThemeDialog,
   SelectAccentDialog,
-  DashboardItem,
   AnimatedStroke,
   AnimatedCharacter,
   HomeListItem,
   WaveBackground,
   CircularProgress,
-  SvgIcon,
+  VowelstListItem,
+  NumeralListItem,
+  CharCellItem,
+  AppTitleValueItemCell,
+  StrokeOrderBottomSheet,
 };

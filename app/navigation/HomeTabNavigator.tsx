@@ -16,6 +16,10 @@ import About from 'app/screens/Settings/About';
 import SelectAppearance from 'app/screens/Settings/SelectAppearance';
 import License from 'app/screens/Settings/License';
 import Translators from 'app/screens/Settings/Translators';
+import LearnCharsList from 'app/screens/HomeIntro/CharsIntro/LearnCharsList';
+import GujaratiScriptIntro from 'app/screens/HomeIntro/IntroductionToGujaratiScript/GujaratiScriptIntro';
+import LearnCharsChart from 'app/screens/HomeIntro/CharsIntro/LearnCharsChart';
+import LearnCharInfo from 'app/screens/HomeIntro/CharsIntro/LearnCharInfo';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -62,6 +66,10 @@ const LoggedInTabNavigator: React.FC<IProps> = () => {
       <Stack.Screen name="SelectAppearance" component={SelectAppearance} options={{ headerShown: false }} />
       <Stack.Screen name="License" component={License} options={{ headerShown: false }} />
       <Stack.Screen name="Translators" component={Translators} options={{ headerShown: false }} />
+      <Stack.Screen name="LearnCharsList" component={LearnCharsList} options={{ headerShown: false }} />
+      <Stack.Screen name="GujaratiScriptIntro" component={GujaratiScriptIntro} options={{ headerShown: false }} />
+      <Stack.Screen name="LearnCharsChart" component={LearnCharsChart} options={{ headerShown: false }} />
+      <Stack.Screen name="LearnCharInfo" component={LearnCharInfo} options={{ headerShown: false }} />
     </LoggedInStack.Navigator>
   );
 };

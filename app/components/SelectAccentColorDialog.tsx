@@ -24,7 +24,7 @@ function SelectAccentDialog(props: ISelectAccentDialogProps) {
 
   return (
     <Dialog visible={props.visible} onDismiss={props.onPressHideDialog}>
-      <Dialog.Title style={{ color: colors.onSurface }}>{t('SETTINGS_THEME_OPTION')}</Dialog.Title>
+      <Dialog.Title style={{ color: colors.onSurface }}>{t('appearanceSettings.themeOption')}</Dialog.Title>
       <Dialog.Content>
         <View style={styles.dialogContainer}>
           {props.accentColorOptions.map((item, index) => {
@@ -43,7 +43,7 @@ function SelectAccentDialog(props: ISelectAccentDialogProps) {
         </View>
       </Dialog.Content>
       <Dialog.Actions>
-        <Button onPress={props.onPressHideDialog}>{t('CLOSE')}</Button>
+        <Button onPress={props.onPressHideDialog}>{t('general.close')}</Button>
       </Dialog.Actions>
     </Dialog>
   );

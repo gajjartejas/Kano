@@ -1,6 +1,5 @@
 import InAppReview from 'react-native-in-app-review';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { IAdsActivity } from 'app/components/DashboardItem';
 
 const rateApp = async () => {
   let lastDateAppReviewed = await AsyncStorage.getItem('APP_LAST_REVIEW_DATE');
@@ -26,7 +25,7 @@ const rateAppIfNeeded = async () => {
   }
 };
 
-const saveItem = async (item: IAdsActivity) => {
+const saveItem = async (item: any) => {
   let rawAppItemsViews = await AsyncStorage.getItem('APP_ITEM_VIEWS');
   let appItemsViews = [item.id];
   if (rawAppItemsViews) {
