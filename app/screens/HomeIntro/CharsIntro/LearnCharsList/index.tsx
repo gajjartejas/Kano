@@ -96,8 +96,6 @@ const LearnCharsList = ({ navigation, route }: Props) => {
 
   return (
     <View style={[styles.container, { backgroundColor: colors.background }]}>
-      <StatusBar translucent={false} backgroundColor={colors.background} />
-
       <Appbar.Header style={{ backgroundColor: colors.background }}>
         <Appbar.BackAction onPress={onGoBack} />
         <Appbar.Content title={title} subtitle="" />

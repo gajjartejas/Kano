@@ -31,7 +31,7 @@ const LearnCharsChart = ({ navigation, route }: Props) => {
 
   //Constants
   const { colors } = useTheme();
-  const type = route.params.type;
+  const { type } = route.params;
   const groupedEntries = Hooks.useChartItemForTypes(type);
   const { t } = useTranslation();
 
@@ -119,10 +119,6 @@ const LearnCharsChart = ({ navigation, route }: Props) => {
     );
   };
 
-  if (!numberOfColumns) {
-    return <View />;
-  }
-
   return (
     <View style={[styles.container, { backgroundColor: colors.background }]}>
       <Appbar.Header style={{ backgroundColor: colors.background }}>
@@ -130,21 +126,19 @@ const LearnCharsChart = ({ navigation, route }: Props) => {
         <Appbar.Content title={title} subtitle="" />
       </Appbar.Header>
       <View style={styles.safeArea}>
-        <SectionList
-          removeClippedSubviews
-          maxToRenderPerBatch={10}
-          initialNumToRender={5}
-          windowSize={21}
-          legacyImplementation={false}
-          sections={groupedEntries}
-          renderItem={renderSection}
-          keyExtractor={item => item.id.toString()}
-          style={{ paddingHorizontal: CONTAINER_SPACING }}
-          renderSectionHeader={renderSectionHeader}
-          contentContainerStyle={styles.listContainer}
-          stickySectionHeadersEnabled={false}
-          stickyHeaderHiddenOnScroll={true}
-        />
+        {!!numberOfColumns && (
+          <SectionList
+            legacyImplementation={false}
+            sections={groupedEntries}
+            renderItem={renderSection}
+            keyExtractor={item => item.id.toString()}
+            style={{ paddingHorizontal: CONTAINER_SPACING }}
+            renderSectionHeader={renderSectionHeader}
+            contentContainerStyle={styles.listContainer}
+            stickySectionHeadersEnabled={false}
+            stickyHeaderHiddenOnScroll={true}
+          />
+        )}
       </View>
     </View>
   );
