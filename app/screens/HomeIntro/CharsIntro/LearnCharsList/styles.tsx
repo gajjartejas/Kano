@@ -1,3 +1,4 @@
+import Config from 'app/config';
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -20,9 +21,10 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   sectionHeader: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    marginVertical: 10,
+    paddingVertical: 16,
+    fontSize: 18,
+    fontWeight: '600',
+    fontFamily: Config.Fonts.NotoSansGujarati.Medium,
   },
   whiteSectionHeader: {
     color: 'white',

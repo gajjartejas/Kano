@@ -65,8 +65,6 @@ const DashboardTab = ({ navigation }: Props) => {
 
   return (
     <View style={[styles.container, { backgroundColor: colors.background }]}>
-      <StatusBar translucent={true} backgroundColor={'transparent'} />
-
       <ScrollView style={styles.carouselContainer}>
         <View style={styles.headerImage}>
           <Components.WaveBackground />

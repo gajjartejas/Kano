@@ -25,6 +25,7 @@ type Props = NativeStackScreenProps<RootStackParamList, 'LearnVowelsCharInfo'>;
 
 const LearnVowelsCharInfo = ({ navigation, route }: Props) => {
   //Refs
+  const refFlatList = useRef<FlatList>(null);
 
   //Actions
 
@@ -32,12 +33,13 @@ const LearnVowelsCharInfo = ({ navigation, route }: Props) => {
   const { colors } = useTheme();
   const { t } = useTranslation();
   const dimension = useWindowDimensions();
-  const groupedEntries = route.params.groupedEntries;
-  const sectionIndex = route.params.sectionIndex;
+  const { index, sectionIndex, groupedEntries, type } = route.params;
   const bottomSheetRef = useRef<BottomSheet>(null);
 
+  console.log('index', index);
   //States
   const [showBottomSheet, setShowBottomSheet] = useState(false);
+
   const cardTapped = (item: ICharCellItem, _index: number, _sectionIndex: number) => {
     Utils.rateApp.saveItem(item);
   };
@@ -105,14 +107,13 @@ const LearnVowelsCharInfo = ({ navigation, route }: Props) => {
 
   return (
     <View style={[styles.container, { backgroundColor: colors.background }]}>
-      <StatusBar translucent={false} backgroundColor={colors.background} />
-
       <Appbar.Header style={{ backgroundColor: colors.background }}>
         <Appbar.BackAction onPress={onGoBack} />
-        <Appbar.Content title={t('learnVowelsCharInfoScreen.header.title')} subtitle="" />
+        <Appbar.Content title={t('learnCharInfoScreen.header.title')} subtitle="" />
       </Appbar.Header>
       <View style={styles.safeArea}>
         <FlatList
+          ref={refFlatList}
           removeClippedSubviews
           maxToRenderPerBatch={1}
           initialNumToRender={1}
@@ -125,6 +126,8 @@ const LearnVowelsCharInfo = ({ navigation, route }: Props) => {
           renderItem={renderItem}
           keyExtractor={photo => photo.id.toString()}
           style={{ width: dimension.width }}
+          initialScrollIndex={index}
+          onScrollToIndexFailed={info => {}}
         />
       </View>
       {showBottomSheet && <Components.StrokeOrderBottomSheet ref={bottomSheetRef} onChange={handleSheetChange} />}
