@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { useTheme, Text } from 'react-native-paper';
 
 const AppNoInternetConnection = () => {
-  //Consts
+  //Const
   const { t } = useTranslation();
   const { colors } = useTheme();
 

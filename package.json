@@ -38,6 +38,8 @@
     "react-native-svg": "^12.3.0",
     "react-native-vector-icons": "^9.1.0",
     "react-redux": "^7.2.6",
+    "react-spring": "^8.0.27",
+    "react-tinder-card": "^1.4.5",
     "readable-stream": "^1.0.33",
     "redux": "^4.1.2",
     "redux-persist": "^6.0.0",

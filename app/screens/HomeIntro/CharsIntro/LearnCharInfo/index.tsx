@@ -1,20 +1,18 @@
-import React, { useCallback, useMemo, useRef, useState } from 'react';
-import { View, Dimensions, ScrollView, StatusBar, FlatList, useWindowDimensions } from 'react-native';
+import React, { useCallback, useRef, useState } from 'react';
+import { FlatList, useWindowDimensions, View } from 'react-native';
 
 //ThirdParty
-import { Appbar, Text, useTheme } from 'react-native-paper';
+import BottomSheet from '@gorhom/bottom-sheet';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
-import BottomSheet from '@gorhom/bottom-sheet';
+import { Appbar, Text, useTheme } from 'react-native-paper';
 
 //App modules
 import Components from 'app/components';
-import styles from './styles';
-import Utils from 'app/utils';
-import Config from 'app/config';
-import Hooks from 'app/hooks/index';
 import { ICharCellItem } from 'app/components/CharCellItem';
 import * as RouterParamTypes from 'app/config/router-params';
+import Utils from 'app/utils';
+import styles from './styles';
 
 //Params
 type RootStackParamList = {
@@ -50,7 +48,11 @@ const LearnVowelsCharInfo = ({ navigation, route }: Props) => {
         <Text style={[styles.headerText, { color: colors.text }]}>{item.gu}</Text>
         <View style={[styles.card, { backgroundColor: `${colors.card}`, shadowColor: `${colors.shadow}` }]}>
           <Components.AppTitleValueItemCell touchDisabled title={t('learnCharInfoScreen.charactor')} value={item.gu} />
-          <Components.AppTitleValueItemCell touchDisabled title={t('learnCharInfoScreen.diacritic')} value="test" />
+          <Components.AppTitleValueItemCell
+            touchDisabled
+            title={t('learnCharInfoScreen.diacritic')}
+            value={item.diacritic}
+          />
           <Components.AppTitleValueItemCell
             touchDisabled
             title={t('learnCharInfoScreen.englishCharactor')}
@@ -101,8 +103,8 @@ const LearnVowelsCharInfo = ({ navigation, route }: Props) => {
   };
 
   // callbacks
-  const handleSheetChange = useCallback(index => {
-    console.log('handleSheetChange', index);
+  const handleSheetChange = useCallback((idx: number) => {
+    console.log('handleSheetChange', idx);
   }, []);
 
   return (
@@ -127,7 +129,6 @@ const LearnVowelsCharInfo = ({ navigation, route }: Props) => {
           keyExtractor={photo => photo.id.toString()}
           style={{ width: dimension.width }}
           initialScrollIndex={index}
-          onScrollToIndexFailed={info => {}}
         />
       </View>
       {showBottomSheet && <Components.StrokeOrderBottomSheet ref={bottomSheetRef} onChange={handleSheetChange} />}

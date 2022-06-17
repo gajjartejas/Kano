@@ -143,7 +143,7 @@
   "learnCharInfoScreen": {
     "header": {
       "title": "Character Info"
-    },  
+    },
     "charactor": "CHARACTER",
     "diacritic": "DIACRITIC",
     "englishCharactor": "ENGLISH CHARACTER",
@@ -155,5 +155,13 @@
     "viewAnimatedDrawing": "VIEW ANIMATED DRAWING",
     "playSound": "PLAY SOUND",
     "cellHeader": "Vowel: {{en}}/{{gu}}"
+  },
+  "LearnCharsSequenceScreen": {
+    "header": {
+      "titleVowels": "Learn Vowels (Sequence)",
+      "titleConsonants": "Learn Consonants (Sequence)",
+      "titleBarakhadi": "Learn Barakhadi (Sequence)",
+      "titleNumerals": "Learn Numerals (Sequence)"
+    }
   }
 }
