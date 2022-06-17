@@ -30,3 +30,6 @@ export interface LearnCharInfoParams {
   groupedEntries: ICharCellListSection[];
   type: LearnCharsType;
 }
+export interface LearnCharsSequenceParams {
+  type: LearnCharsType;
+}

@@ -17,6 +17,7 @@ import * as RouterParamTypes from 'app/config/router-params';
 type RootStackParamList = {
   LearnCharsList: RouterParamTypes.LearnCharsListParams;
   LearnCharsChart: RouterParamTypes.LearnCharsChartParams;
+  LearnCharsSequence: RouterParamTypes.LearnCharsSequenceParams;
 };
 
 type Props = NativeStackScreenProps<RootStackParamList, 'LearnCharsList'>;
@@ -30,7 +31,7 @@ const LearnCharsList = ({ navigation, route }: Props) => {
   const { colors } = useTheme();
   const groupedEntries = Hooks.useVowelstListItems();
   const { t } = useTranslation();
-  const type = route.params.type;
+  const { type } = route.params;
 
   //States
   const [title, setTitle] = useState('');
@@ -68,7 +69,7 @@ const LearnCharsList = ({ navigation, route }: Props) => {
     if (sectionIndex === 0 && index === 0) {
       navigation.push('LearnCharsChart', { type });
     } else if (sectionIndex === 0 && index === 1) {
-      //navigation.push('LearnCharsList', {});
+      navigation.push('LearnCharsSequence', { type });
     } else if (sectionIndex === 0 && index === 2) {
       // navigation.push('LearnConsonantsList', {});
     } else if (sectionIndex === 0 && index === 3) {

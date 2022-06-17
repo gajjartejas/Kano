@@ -20,6 +20,7 @@ import LearnCharsList from 'app/screens/HomeIntro/CharsIntro/LearnCharsList';
 import GujaratiScriptIntro from 'app/screens/HomeIntro/IntroductionToGujaratiScript/GujaratiScriptIntro';
 import LearnCharsChart from 'app/screens/HomeIntro/CharsIntro/LearnCharsChart';
 import LearnCharInfo from 'app/screens/HomeIntro/CharsIntro/LearnCharInfo';
+import LearnCharsSequence from 'app/screens/HomeIntro/LearnCharsSequence';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -70,6 +71,7 @@ const LoggedInTabNavigator: React.FC<IProps> = () => {
       <Stack.Screen name="GujaratiScriptIntro" component={GujaratiScriptIntro} options={{ headerShown: false }} />
       <Stack.Screen name="LearnCharsChart" component={LearnCharsChart} options={{ headerShown: false }} />
       <Stack.Screen name="LearnCharInfo" component={LearnCharInfo} options={{ headerShown: false }} />
+      <Stack.Screen name="LearnCharsSequence" component={LearnCharsSequence} options={{ headerShown: false }} />
     </LoggedInStack.Navigator>
   );
 };
