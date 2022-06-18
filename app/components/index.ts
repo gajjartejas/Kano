@@ -14,6 +14,7 @@ import NumeralListItem from './CharListItem';
 import CharCellItem from './CharCellItem';
 import AppTitleValueItemCell from './AppTitleValueItemCell';
 import StrokeOrderBottomSheet from './StrokeOrderBottomSheet';
+import LearnCharInfoItemCell from './LearnCharInfoItemCell';
 
 export default {
   AppNoConnection,
@@ -32,4 +33,5 @@ export default {
   CharCellItem,
   AppTitleValueItemCell,
   StrokeOrderBottomSheet,
+  LearnCharInfoItemCell,
 };

@@ -1,8 +1,11 @@
-import { Platform } from 'react-native';
-import { DOMParser } from '@xmldom/xmldom';
 import { useCallback, useState } from 'react';
+import { Platform } from 'react-native';
+
+//Third Party
+import { DOMParser } from '@xmldom/xmldom';
 var RNFS = require('react-native-fs');
 
+//Interface
 interface IParsedSVG {
   id: string;
   d: string;
@@ -14,6 +17,7 @@ interface IParsedSVGPaths {
 }
 
 const useSvgReader = () => {
+  //State
   const [parsedSvgPaths, setParsedSvgPaths] = useState<IParsedSVGPaths>();
   const [error, setError] = useState<Error | null>();
 

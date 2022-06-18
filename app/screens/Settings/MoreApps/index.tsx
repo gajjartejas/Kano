@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
-import { ScrollView, View, StatusBar } from 'react-native';
+import { ScrollView, View } from 'react-native';
 
 //ThirdParty
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
 import { Appbar, useTheme } from 'react-native-paper';
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
 //App modules
 import Config from 'app/config';
-import Utils from 'app/utils';
 import * as RouterParamTypes from 'app/config/router-params';
+import Utils from 'app/utils';
 
 //Modals
-import styles from './styles';
 import Components from 'app/components';
+import styles from './styles';
 
 //Interfaces
 interface IMoreAppItem {

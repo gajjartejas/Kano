@@ -7,7 +7,7 @@ const Config = {
   Images,
   Constants,
   Fonts,
-  RouterParamTypes
+  RouterParamTypes,
 };
 
 export default Config;

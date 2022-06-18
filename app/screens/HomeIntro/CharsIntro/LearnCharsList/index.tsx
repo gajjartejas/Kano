@@ -1,17 +1,17 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { View, ScrollView, StatusBar } from 'react-native';
+import { ScrollView, View } from 'react-native';
 
 //ThirdParty
-import { Appbar, Text, useTheme } from 'react-native-paper';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
+import { Appbar, Text, useTheme } from 'react-native-paper';
 
 //App modules
 import Components from 'app/components';
-import styles from './styles';
-import Hooks from 'app/hooks/index';
 import { ICharListItem } from 'app/components/CharListItem';
 import * as RouterParamTypes from 'app/config/router-params';
+import Hooks from 'app/hooks/index';
+import styles from './styles';
 
 //Params
 type RootStackParamList = {

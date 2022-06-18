@@ -1,8 +1,10 @@
 import { ICharInfo } from '../models/models/char';
 
 //ThirdParty
-import { ICharCellListSection, ICharCellItem } from 'app/components/CharCellItem';
 import { useTranslation } from 'react-i18next';
+
+//App Modules
+import { ICharCellListSection, ICharCellItem } from 'app/components/CharCellItem';
 import consonants from 'app/assets/lang/consonants/consonants.json';
 
 const useConsonantsChartItems = (): ICharCellListSection[] => {

@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
-import { Image, ScrollView, View, StatusBar } from 'react-native';
+import { Image, ScrollView, View } from 'react-native';
 
 //ThirdParty
-import { useTranslation } from 'react-i18next';
-import { Appbar, Divider, List, Text, useTheme } from 'react-native-paper';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { useTranslation } from 'react-i18next';
 import DeviceInfo from 'react-native-device-info';
-import Utils from 'app/utils';
+import { Appbar, Divider, List, Text, useTheme } from 'react-native-paper';
 
 //App modules
 import Config from 'app/config';
+import Utils from 'app/utils';
 
 //Modals
-import Icon from 'react-native-easy-icon';
-import { ISettingItem, ISettingSection } from 'app/models/viewModels/settingItem';
-import styles from './styles';
 import * as RouterParamTypes from 'app/config/router-params';
+import { ISettingItem, ISettingSection } from 'app/models/viewModels/settingItem';
+import Icon from 'react-native-easy-icon';
+import styles from './styles';
 
 //Params
 type RootStackParamList = {
