@@ -1,10 +1,9 @@
-import React, { ForwardedRef, useCallback, useMemo } from 'react';
-import { View, StyleSheet } from 'react-native';
+import React, { useCallback, useMemo } from 'react';
+import { StyleSheet, View } from 'react-native';
 
 //Third Party
 import BottomSheet, {
   BottomSheetBackdropProps,
-  BottomSheetProps,
   BottomSheetScrollView,
   useBottomSheetDynamicSnapPoints,
 } from '@gorhom/bottom-sheet';
@@ -28,7 +27,7 @@ const StrokeOrderBottomSheet = React.forwardRef<BottomSheet, any>((props, ref) =
   const renderItem = useCallback(
     item => (
       <View key={item} style={styles.itemContainer}>
-        <Text style={{ fontSize: 100, alignSelf: 'center' }}>{item}</Text>
+        <Text style={styles.titleText}>{item}</Text>
       </View>
     ),
     [],
@@ -37,15 +36,7 @@ const StrokeOrderBottomSheet = React.forwardRef<BottomSheet, any>((props, ref) =
   return (
     <BottomSheet
       backdropComponent={CustomBackdrop}
-      style={{
-        shadowRadius: 8,
-        shadowOffset: {
-          width: 0,
-          height: 0,
-        },
-        elevation: 8,
-        shadowOpacity: 0.2,
-      }}
+      style={styles.bottomSheet}
       enablePanDownToClose
       animateOnMount
       ref={ref}
@@ -69,12 +60,21 @@ const CustomBackdrop = ({ animatedIndex, style }: BottomSheetBackdropProps) => {
   }));
   const containerStyle = useMemo(
     () => [style, { backgroundColor: colors.backdrop }, containerAnimatedStyle],
-    [style, containerAnimatedStyle],
+    [style, colors.backdrop, containerAnimatedStyle],
   );
   return <Animated.View pointerEvents={'none'} style={containerStyle} />;
 };
 
 const styles = StyleSheet.create({
+  bottomSheet: {
+    shadowRadius: 8,
+    shadowOffset: {
+      width: 0,
+      height: 0,
+    },
+    elevation: 8,
+    shadowOpacity: 0.2,
+  },
   contentContainer: {
     backgroundColor: 'white',
   },
@@ -82,6 +82,10 @@ const styles = StyleSheet.create({
     padding: 6,
     margin: 6,
     backgroundColor: '#eee',
+  },
+  titleText: {
+    fontSize: 100,
+    alignSelf: 'center',
   },
 });
 

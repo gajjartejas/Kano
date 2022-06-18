@@ -5,6 +5,7 @@ import RNBootSplash, { Config } from 'react-native-bootsplash';
 
 //Redux
 import { useDispatch } from 'react-redux';
+
 //App Modules
 import Navigator from 'app/navigation';
 import Utils from 'app/utils';

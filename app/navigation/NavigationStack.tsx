@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StatusBar } from 'react-native';
+import { StatusBar, StyleSheet } from 'react-native';
 
 //Third Party
 import { DefaultTheme as NavigationDefaultTheme, DarkTheme as NavigationDarkTheme } from '@react-navigation/native';
@@ -68,7 +68,7 @@ const Navigator: React.FC<IProps> = (props: IProps) => {
   const isDark = useSelector((state: IState) => state.themeReducer.isDark);
 
   return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
+    <GestureHandlerRootView style={styles.container}>
       <NavigationContainer
         ref={navigationRef}
         onReady={() => {
@@ -173,5 +173,11 @@ const RootNavigation: React.FC = () => {
     </PaperProvider>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});
 
 export default RootNavigation;

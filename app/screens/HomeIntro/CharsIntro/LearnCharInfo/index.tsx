@@ -5,23 +5,22 @@ import { FlatList, useWindowDimensions, View } from 'react-native';
 import BottomSheet from '@gorhom/bottom-sheet';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
-import { Appbar, Text, useTheme } from 'react-native-paper';
+import { Appbar, useTheme } from 'react-native-paper';
 
 //App modules
 import Components from 'app/components';
 import { ICharCellItem } from 'app/components/CharCellItem';
 import * as RouterParamTypes from 'app/config/router-params';
-import Utils from 'app/utils';
 import styles from './styles';
 
 //Params
 type RootStackParamList = {
-  LearnVowelsCharInfo: RouterParamTypes.LearnCharInfoParams;
+  LearnCharInfo: RouterParamTypes.LearnCharInfoParams;
 };
 
-type Props = NativeStackScreenProps<RootStackParamList, 'LearnVowelsCharInfo'>;
+type Props = NativeStackScreenProps<RootStackParamList, 'LearnCharInfo'>;
 
-const LearnVowelsCharInfo = ({ navigation, route }: Props) => {
+const LearnCharInfo = ({ navigation, route }: Props) => {
   //Refs
   const refFlatList = useRef<FlatList>(null);
 
@@ -31,71 +30,28 @@ const LearnVowelsCharInfo = ({ navigation, route }: Props) => {
   const { colors } = useTheme();
   const { t } = useTranslation();
   const dimension = useWindowDimensions();
-  const { index, sectionIndex, groupedEntries, type } = route.params;
+  const { index, sectionIndex, groupedEntries } = route.params;
   const bottomSheetRef = useRef<BottomSheet>(null);
 
-  console.log('index', index);
   //States
   const [showBottomSheet, setShowBottomSheet] = useState(false);
 
-  const cardTapped = (item: ICharCellItem, _index: number, _sectionIndex: number) => {
-    Utils.rateApp.saveItem(item);
-  };
-
   const renderItem = ({ item, index }: { item: ICharCellItem; index: number }) => {
     return (
-      <View style={{ width: dimension.width, height: 'auto' }}>
-        <Text style={[styles.headerText, { color: colors.text }]}>{item.gu}</Text>
-        <View style={[styles.card, { backgroundColor: `${colors.card}`, shadowColor: `${colors.shadow}` }]}>
-          <Components.AppTitleValueItemCell touchDisabled title={t('learnCharInfoScreen.charactor')} value={item.gu} />
-          <Components.AppTitleValueItemCell
-            touchDisabled
-            title={t('learnCharInfoScreen.diacritic')}
-            value={item.diacritic}
-          />
-          <Components.AppTitleValueItemCell
-            touchDisabled
-            title={t('learnCharInfoScreen.englishCharactor')}
-            value={item.en}
-          />
-          <Components.AppTitleValueItemCell
-            touchDisabled
-            title={t('learnCharInfoScreen.numberOfStrokes')}
-            value={item.en}
-          />
-          <Components.AppTitleValueItemCell touchDisabled title={t('learnCharInfoScreen.compaxity')} value={item.en} />
-          <Components.AppTitleValueItemCell touchDisabled title={t('learnCharInfoScreen.length')} value={item.en} />
-        </View>
-        <View style={[styles.card, { backgroundColor: `${colors.card}`, shadowColor: `${colors.shadow}` }]}>
-          <Components.AppTitleValueItemCell bold touchDisabled title={t('learnCharInfoScreen.moreInfo')} />
-          <Components.AppTitleValueItemCell
-            iconName="chevron-right"
-            iconFamily="font-awesome"
-            onPress={() => {}}
-            title={t('learnCharInfoScreen.viewStrokeOrder')}
-          />
-          <Components.AppTitleValueItemCell
-            iconName="chevron-right"
-            iconFamily="font-awesome"
-            onPress={() => {
-              if (!showBottomSheet) {
-                setShowBottomSheet(true);
-              } else if (bottomSheetRef.current) {
-                bottomSheetRef.current.snapToIndex(1);
-              }
-            }}
-            title={t('learnCharInfoScreen.viewAnimatedDrawing')}
-          />
-          <Components.AppTitleValueItemCell
-            iconName="play-circle"
-            iconFamily="font-awesome"
-            leftIconSize={20}
-            onPress={() => {}}
-            title={t('learnCharInfoScreen.playSound')}
-          />
-        </View>
-      </View>
+      <Components.LearnCharInfoItemCell
+        item={item}
+        index={index}
+        onPressViewAnimatedDrawing={onPressViewAnimatedDrawing}
+      />
     );
+  };
+
+  const onPressViewAnimatedDrawing = (item: ICharCellItem, index: number) => {
+    if (!showBottomSheet) {
+      setShowBottomSheet(true);
+    } else if (bottomSheetRef.current) {
+      bottomSheetRef.current.snapToIndex(1);
+    }
   };
 
   const onGoBack = () => {
@@ -129,6 +85,7 @@ const LearnVowelsCharInfo = ({ navigation, route }: Props) => {
           keyExtractor={photo => photo.id.toString()}
           style={{ width: dimension.width }}
           initialScrollIndex={index}
+          onScrollToIndexFailed={() => {}}
         />
       </View>
       {showBottomSheet && <Components.StrokeOrderBottomSheet ref={bottomSheetRef} onChange={handleSheetChange} />}
@@ -136,4 +93,4 @@ const LearnVowelsCharInfo = ({ navigation, route }: Props) => {
   );
 };
 
-export default LearnVowelsCharInfo;
+export default LearnCharInfo;

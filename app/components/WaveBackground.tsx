@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Svg, { SvgProps, G, Rect, Path, Defs, Mask, LinearGradient, Stop } from 'react-native-svg';
+import Svg, { Defs, G, LinearGradient, Path, Rect, Stop, SvgProps } from 'react-native-svg';
 
 const SVGComponent = (props: SvgProps) => (
   <Svg height="100%" preserveAspectRatio="xMinYMin slice" width="100%" viewBox="0 0 900 675" {...props}>

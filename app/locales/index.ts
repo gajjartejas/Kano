@@ -12,17 +12,15 @@ const resources = {
   },
 };
 
-i18n
-  .use(initReactI18next)
-  .init({
-    resources,
-    lng: RNLocalize.getLocales()[0].languageCode,
-    fallbackLng: 'en',
-    keySeparator: ".",
-    interpolation: {
-      escapeValue: false,
-    },
-    compatibilityJSON: 'v3',
-  });
+i18n.use(initReactI18next).init({
+  resources,
+  lng: RNLocalize.getLocales()[0].languageCode,
+  fallbackLng: 'en',
+  keySeparator: '.',
+  interpolation: {
+    escapeValue: false,
+  },
+  compatibilityJSON: 'v3',
+});
 
 export default i18n;

@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
-import { ScrollView, View, StatusBar } from 'react-native';
+import { ScrollView, View } from 'react-native';
 
 //ThirdParty
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
 import { Appbar, Divider, List, useTheme } from 'react-native-paper';
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
 //App modules
 import Config from 'app/config';
-import styles from './styles';
-import Utils from 'app/utils';
 import * as RouterParamTypes from 'app/config/router-params';
+import Utils from 'app/utils';
+import styles from './styles';
 
 //Modals
-import Icon from 'react-native-easy-icon';
 import { ISettingItem, ISettingSection } from 'app/models/viewModels/settingItem';
+import Icon from 'react-native-easy-icon';
 
 //Params
 type RootStackParamList = {

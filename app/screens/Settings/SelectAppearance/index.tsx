@@ -1,22 +1,22 @@
 import React, { useState } from 'react';
-import { ScrollView, View, StatusBar } from 'react-native';
+import { ScrollView, View } from 'react-native';
 
 //ThirdParty
-import { useTranslation } from 'react-i18next';
-import { Appbar, Divider, List, useTheme } from 'react-native-paper';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { useDispatch, useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 import Icon from 'react-native-easy-icon';
+import { Appbar, Divider, List, useTheme } from 'react-native-paper';
+import { useDispatch, useSelector } from 'react-redux';
 
 //App modules
-import styles from './styles';
 import Components from 'app/components';
 import * as RouterParamTypes from 'app/config/router-params';
+import styles from './styles';
 
 //Modals
-import { ISettingItem, ISettingSection, ISettingThemeOptions } from 'app/models/viewModels/settingItem';
-import { IAppearanceType } from 'app/models/reducers/theme';
 import IState from 'app/models/models/appState';
+import { IAppearanceType } from 'app/models/reducers/theme';
+import { ISettingItem, ISettingSection, ISettingThemeOptions } from 'app/models/viewModels/settingItem';
 
 //Redux
 import * as themeActions from 'app/store/actions/themeActions';

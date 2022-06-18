@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { FlatList, InteractionManager, View, StatusBar } from 'react-native';
+import { FlatList, InteractionManager, View } from 'react-native';
 
 //ThirdParty
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
 import { Appbar, List, useTheme } from 'react-native-paper';
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
 //App modules
-import Utils from 'app/utils';
 import * as RouterParamTypes from 'app/config/router-params';
+import Utils from 'app/utils';
 
 //Modals
 import styles from './styles';

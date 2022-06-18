@@ -1,12 +1,11 @@
 import Config from 'app/config';
 import React from 'react';
-import { View, StyleSheet, useWindowDimensions } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
 //Third Party
-import { TouchableRipple, useTheme, Text } from 'react-native-paper';
-import CircularProgress from './CircularProgress';
-import { IconType } from 'react-native-easy-icon/src/Icon';
 import Icon from 'react-native-easy-icon';
+import { IconType } from 'react-native-easy-icon/src/Icon';
+import { Text, TouchableRipple, useTheme } from 'react-native-paper';
 
 //Interface
 

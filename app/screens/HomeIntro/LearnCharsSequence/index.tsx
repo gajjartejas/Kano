@@ -6,7 +6,8 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
 import { Appbar, Text, useTheme } from 'react-native-paper';
 import TinderCard from 'react-tinder-card';
-import Animated, { Easing, FadeIn, FadeInDown, FadeOutLeft, Layout } from 'react-native-reanimated';
+import Animated, { Easing, FadeInDown, Layout } from 'react-native-reanimated';
+
 //App modules
 import * as RouterParamTypes from 'app/config/router-params';
 import Hooks from 'app/hooks/index';

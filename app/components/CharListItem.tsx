@@ -1,12 +1,13 @@
 import React from 'react';
-
 import { View, StyleSheet } from 'react-native';
 
 //Third Party
 import { TouchableRipple, useTheme, Text } from 'react-native-paper';
-import CircularProgress from './CircularProgress';
 import Icon from 'react-native-easy-icon';
 import { IconType } from 'react-native-easy-icon/src/Icon';
+
+//App Modules
+import CircularProgress from './CircularProgress';
 
 //Interface
 export interface ICharListItem {
@@ -35,7 +36,6 @@ const CharListItem = (props: ICharListItemProps) => {
   const { colors } = useTheme();
   const { item, index } = props;
   const sectionIndex = props.sectionIndex;
-  const iconName = props.item.iconName;
 
   return (
     <View style={[styles.container, { backgroundColor: `${colors.card}`, shadowColor: `${colors.shadow}` }]}>

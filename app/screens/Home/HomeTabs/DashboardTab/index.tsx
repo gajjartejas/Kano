@@ -1,20 +1,17 @@
 import React from 'react';
-import { View, Dimensions, ScrollView, StatusBar } from 'react-native';
+import { ScrollView, View } from 'react-native';
 
 //ThirdParty
-import { Text, useTheme } from 'react-native-paper';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
-import DeviceInfo from 'react-native-device-info';
+import { Text, useTheme } from 'react-native-paper';
 
 //App modules
 import Components from 'app/components';
-import styles from './styles';
-import Utils from 'app/utils';
-import Config from 'app/config';
-import Hooks from 'app/hooks/index';
 import { IHomeListItem } from 'app/components/HomeListItem';
 import * as RouterParamTypes from 'app/config/router-params';
+import Hooks from 'app/hooks/index';
+import styles from './styles';
 
 //Params
 type RootStackParamList = {

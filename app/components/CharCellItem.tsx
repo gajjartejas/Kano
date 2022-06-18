@@ -1,8 +1,8 @@
 import React from 'react';
-
-
-import Config from 'app/config';
 import { View, StyleSheet, useWindowDimensions } from 'react-native';
+
+//App Modules
+import Config from 'app/config';
 
 //Third Party
 import { TouchableRipple, useTheme, Text } from 'react-native-paper';
