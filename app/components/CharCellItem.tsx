@@ -1,5 +1,7 @@
-import Config from 'app/config';
 import React from 'react';
+
+
+import Config from 'app/config';
 import { View, StyleSheet, useWindowDimensions } from 'react-native';
 
 //Third Party
