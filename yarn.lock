@@ -6862,6 +6862,15 @@
   "resolved" "https://registry.npmjs.org/react-native-device-info/-/react-native-device-info-8.4.9.tgz"
   "version" "8.4.9"
 
+"react-native-drax@^0.10.2":
+  "integrity" "sha512-1i4ZBCeSyDqytAmTeRFDwsa3IFf9VOmy+GhpVDydjJeCT3VzG1eClBYaTNIyOF8qDkSKIa4pjj6Y6yhU+wmSTw=="
+  "resolved" "https://registry.npmjs.org/react-native-drax/-/react-native-drax-0.10.2.tgz"
+  "version" "0.10.2"
+  dependencies:
+    "lodash.isequal" "^4.5.0"
+    "lodash.throttle" "^4.1.1"
+    "typesafe-actions" "^5.1.0"
+
 "react-native-easy-icon@^1.0.7":
   "integrity" "sha512-a/KW8b7c53gNiOnFKtiJkC9Uh6oA+/0/ppsZ0AQCZhXuWCHTZqcEGEwqC+tmUHrQEtEjhVWkDMPxLA+q9hFDTg=="
   "resolved" "https://registry.npmjs.org/react-native-easy-icon/-/react-native-easy-icon-1.0.7.tgz"
@@ -6875,7 +6884,7 @@
     "base-64" "^0.1.0"
     "utf8" "^3.0.0"
 
-"react-native-gesture-handler@*", "react-native-gesture-handler@^2.4.1", "react-native-gesture-handler@>=1.10.1":
+"react-native-gesture-handler@*", "react-native-gesture-handler@^2.4.1", "react-native-gesture-handler@>=1.10.1", "react-native-gesture-handler@>=1.8.0":
   "integrity" "sha512-qJHkZAWyuvZvEm8jV6TsYKeTgkYmoNsKrO/CEx0YaisAcHSiaiMx2Dy/0/QQ7oZr3t5aL4rJqWtOEZCADNbfeQ=="
   "resolved" "https://registry.npmjs.org/react-native-gesture-handler/-/react-native-gesture-handler-2.4.1.tgz"
   "version" "2.4.1"
@@ -8236,6 +8245,11 @@
   "version" "3.1.5"
   dependencies:
     "is-typedarray" "^1.0.0"
+
+"typesafe-actions@^5.1.0":
+  "integrity" "sha512-bna6Yi1pRznoo6Bz1cE6btB/Yy8Xywytyfrzu/wc+NFW3ZF0I+2iCGImhBsoYYCOWuICtRO4yHcnDlzgo1AdNg=="
+  "resolved" "https://registry.npmjs.org/typesafe-actions/-/typesafe-actions-5.1.0.tgz"
+  "version" "5.1.0"
 
 "typescript-compare@^0.0.2":
   "integrity" "sha512-8ja4j7pMHkfLJQO2/8tut7ub+J3Lw2S3061eJLFQcvs3tsmJKp8KG5NtpLn7KcY2w08edF74BSVN7qJS0U6oHA=="
