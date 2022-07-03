@@ -32,7 +32,6 @@ const LearnCharsSequence = ({ navigation, route }: Props) => {
   //Refs
   const refGroupedEntries = useRef<ICharCellListSection[]>([]);
   const refProgressIndex = useRef<number>(0);
-  const refProgressSection = useRef<number>(0);
 
   //Actions
 
@@ -51,35 +50,59 @@ const LearnCharsSequence = ({ navigation, route }: Props) => {
   const [cardPerGroup, setCardPerGroup] = useState<ICharCellItem[]>([]);
 
   const [practiceMode, setPracticeMode] = useState(false);
-  const [practiceCardPerGroup, setPracticeCardPerGroup] = useState<ICharCellItem[]>([]);
+  const [practiceLeftCardPerGroup, setPracticeLeftCardPerGroup] = useState<ICharCellItem[]>([]);
+  const [practiceRightCardPerGroup, setPracticeRightCardPerGroup] = useState<ICharCellItem[]>([]);
   const [incorrectAnswerIds, setIncorrectAnswerIds] = useState<{ left: number; right: number }[]>([]);
   const [correctAnswerIds, setCorrectAnswerIds] = useState<{ left: number; right: number }[]>([]);
+
+  const [finishButtonTitle, setFinishButtonTitle] = useState('');
+  const [finishButtonDisabled, setFinishButtonDisabled] = useState(false);
 
   useEffect(() => {
     refGroupedEntries.current = groupedEntries;
   }, [groupedEntries]);
 
   useEffect(() => {
-    console.log('progressIndex', progressIndex);
     if (progressIndex % GROUP_COUNT === 1) {
       return;
     }
+    
     let progressSectionsToShow = refGroupedEntries.current[progressSection];
     let calculatedCharsToShow = progressSectionsToShow.data.slice(progressIndex, GROUP_COUNT + progressIndex).reverse();
     setCardPerGroup([...calculatedCharsToShow]);
 
     if (progressIndex % PRACTICE_GROUP_COUNT_1 === 0) {
-      let calculatedPracticeCardPerGroup = progressSectionsToShow.data
-        .slice(progressIndex - PRACTICE_GROUP_COUNT_1, progressIndex)
-        .reverse();
-      setPracticeCardPerGroup([...calculatedPracticeCardPerGroup]);
-      console.log('calculatedPracticeCardPerGroup', JSON.stringify(calculatedPracticeCardPerGroup));
+      let calculatedPracticeCardPerGroup = progressSectionsToShow.data.slice(
+        progressIndex - PRACTICE_GROUP_COUNT_1,
+        progressIndex,
+      );
+
+      //No change in right cards
+      setPracticeLeftCardPerGroup([...calculatedPracticeCardPerGroup]);
+
+      //Randomize the right/answer cards
+      setPracticeRightCardPerGroup([
+        ...calculatedPracticeCardPerGroup
+          .map(value => ({ value, sort: Math.random() }))
+          .sort((a, b) => a.sort - b.sort)
+          .map(({ value }) => value),
+      ]);
     } else if (progressIndex % PRACTICE_GROUP_COUNT_0 === 0) {
-      let calculatedPracticeCardPerGroup = progressSectionsToShow.data
-        .slice(progressIndex - PRACTICE_GROUP_COUNT_0, progressIndex)
-        .reverse();
-      setPracticeCardPerGroup([...calculatedPracticeCardPerGroup]);
-      console.log('calculatedPracticeCardPerGroup', JSON.stringify(calculatedPracticeCardPerGroup));
+      let calculatedPracticeCardPerGroup = progressSectionsToShow.data.slice(
+        progressIndex - PRACTICE_GROUP_COUNT_0,
+        progressIndex,
+      );
+
+      //No change in right cards
+      setPracticeLeftCardPerGroup([...calculatedPracticeCardPerGroup]);
+
+      //Randomize the right/answer cards
+      setPracticeRightCardPerGroup([
+        ...calculatedPracticeCardPerGroup
+          .map(value => ({ value, sort: Math.random() }))
+          .sort((a, b) => a.sort - b.sort)
+          .map(({ value }) => value),
+      ]);
     }
   }, [progressIndex, progressSection]);
 
@@ -103,6 +126,22 @@ const LearnCharsSequence = ({ navigation, route }: Props) => {
   }, [t, type]);
 
   useEffect(() => {
+    // Enable/Disable finish button according to progress.
+    setFinishButtonDisabled(!(practiceMode && correctAnswerIds.length === practiceLeftCardPerGroup.length));
+    setFinishButtonTitle(
+      progressIndex === groupedEntries[progressSection].data.length ? t('general.finish') : t('general.next'),
+    );
+  }, [
+    correctAnswerIds.length,
+    groupedEntries,
+    practiceLeftCardPerGroup.length,
+    practiceMode,
+    progressIndex,
+    progressSection,
+    t,
+  ]);
+
+  useEffect(() => {
     configInterface();
   }, [configInterface]);
 
@@ -121,7 +160,35 @@ const LearnCharsSequence = ({ navigation, route }: Props) => {
     }, 200);
   };
 
-  const onCardLeftScreen = (myIdentifier: any) => {};
+  const onReceiveDragDrop = (payload: any, item: ICharCellItem, index: number) => {
+    //Answer is already correct
+    //Remaining  card -> Already Correct Answer
+    if (correctAnswerIds.map(l => l.right).includes(item.id)) {
+      return;
+    }
+
+    //Answer is correct
+    //Remaining  card -> Correct Answer
+    if (payload === item.id && !correctAnswerIds.map(l => l.right).includes(item.id)) {
+      let newIds = [...correctAnswerIds, { left: payload, right: item.id }];
+      setTimeout(() => {
+        setCorrectAnswerIds(newIds);
+      }, 500);
+    }
+
+    //Answer is incorrect
+    //Remaining  card -> Incorrect Answer
+    if (payload !== item.id && !incorrectAnswerIds.map(l => l.right).includes(item.id)) {
+      let newIds = [...incorrectAnswerIds, { left: payload, right: item.id }];
+      setIncorrectAnswerIds(newIds);
+    }
+  };
+
+  const onPressNext = () => {
+    setIncorrectAnswerIds([]);
+    setCorrectAnswerIds([]);
+    setPracticeMode(false);
+  };
 
   return (
     <DraxProvider>
@@ -142,7 +209,6 @@ const LearnCharsSequence = ({ navigation, route }: Props) => {
                   <TinderCard
                     key={item.id.toString()}
                     onSwipe={onSwipe}
-                    onCardLeftScreen={onCardLeftScreen}
                     swipeRequirementType={'position'}
                     swipeThreshold={100}
                     preventSwipe={[]}>
@@ -178,7 +244,7 @@ const LearnCharsSequence = ({ navigation, route }: Props) => {
                 entering={FadeInDown.duration(600).easing(Easing.bezierFn(1, 0, 0.17, 0.98))}
                 style={styles.practiceCardsContainer}>
                 <View style={styles.practiceCardContainer}>
-                  {practiceCardPerGroup.map(v => {
+                  {practiceLeftCardPerGroup.map(v => {
                     return (
                       <DraxView
                         key={v.id.toString()}
@@ -191,9 +257,6 @@ const LearnCharsSequence = ({ navigation, route }: Props) => {
                           incorrectAnswerIds.map(l => l.left).includes(v.id) && { backgroundColor: colors.error },
                           correctAnswerIds.map(l => l.left).includes(v.id) && { backgroundColor: colors.primary },
                         ]}
-                        onDragStart={() => {
-                          console.log('start drag');
-                        }}
                         payload={v.id}>
                         <Text style={styles.practiceCardText}>{v.gu}</Text>
                       </DraxView>
@@ -202,58 +265,31 @@ const LearnCharsSequence = ({ navigation, route }: Props) => {
                 </View>
 
                 <View style={styles.practiceCardContainer}>
-                  {practiceCardPerGroup.map(v => {
+                  {practiceRightCardPerGroup.map((item: ICharCellItem, index: number) => {
                     return (
                       <DraxView
                         style={[
                           styles.receiver,
                           { backgroundColor: colors.card },
-                          incorrectAnswerIds.map(l => l.right).includes(v.id) && { backgroundColor: colors.error },
-                          correctAnswerIds.map(l => l.right).includes(v.id) && { backgroundColor: colors.primary },
+                          incorrectAnswerIds.map(l => l.right).includes(item.id) && { backgroundColor: colors.error },
+                          correctAnswerIds.map(l => l.right).includes(item.id) && { backgroundColor: colors.primary },
                         ]}
                         draggingStyle={styles.dragging}
                         dragReleasedStyle={styles.dragging}
                         receivingStyle={[styles.receiving, { borderColor: colors.primary }]}
-                        onReceiveDragEnter={({ dragged: { payload } }) => {
-                          console.log(`hello ${payload}`);
-                        }}
-                        onReceiveDragExit={({ dragged: { payload } }) => {
-                          console.log(`goodbye ${payload}`);
-                        }}
-                        onReceiveDragDrop={({ dragged: { payload } }) => {
-                          console.log(`received ${payload}`);
-                          if (correctAnswerIds.map(l => l.right).includes(v.id)) {
-                            console.log(`answer already corrected ${payload}`);
-                            return;
-                          }
-
-                          if (payload === v.id && !correctAnswerIds.map(l => l.right).includes(v.id)) {
-                            let newIds = [...correctAnswerIds, { left: payload, right: v.id }];
-                            setCorrectAnswerIds(newIds);
-                            return;
-                          }
-
-                          if (payload !== v.id && !incorrectAnswerIds.map(l => l.right).includes(v.id)) {
-                            let newIds = [...incorrectAnswerIds, { left: payload, right: v.id }];
-                            setIncorrectAnswerIds(newIds);
-                          }
-                        }}>
-                        <Text style={styles.practiceCardText}>{v.en}</Text>
+                        onReceiveDragDrop={({ dragged: { payload } }) => onReceiveDragDrop(payload, item, index)}>
+                        <Text style={styles.practiceCardText}>{item.en}</Text>
                       </DraxView>
                     );
                   })}
                 </View>
               </Animated.View>
               <Button
-                disabled={!(practiceMode && correctAnswerIds.length === practiceCardPerGroup.length)}
+                disabled={finishButtonDisabled}
                 style={styles.nextButtonStyle}
                 mode="contained"
-                onPress={() => {
-                  setIncorrectAnswerIds([]);
-                  setCorrectAnswerIds([]);
-                  setPracticeMode(false);
-                }}>
-                {'NEXT'}
+                onPress={onPressNext}>
+                {finishButtonTitle}
               </Button>
             </>
           )}

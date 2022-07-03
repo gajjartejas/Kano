@@ -2,7 +2,9 @@
   "general": {
     "appname": "Kano",
     "close": "CLOSE",
-    "noInternet": "No Internet Connection"
+    "noInternet": "No Internet Connection",
+    "finish": "FINISH",
+    "next": "NEXT"
   },
   "about": {
     "sendFeedback": "Send Feedback",
@@ -29,7 +31,6 @@
     "commonHeader": "Common Settings",
     "appearanceTitle": "Appearance",
     "appearanceSubTitle": "Customization of appearance",
-
     "infoHeader": "Information",
     "changelogTitle": "Changelog",
     "changelogSubTitle": "List of changes made in the all updates",
@@ -46,17 +47,14 @@
   },
   "appearanceSettings": {
     "title": "Appearance",
-
     "interfaceHeader": "Interface",
     "themeTitle": "Theme",
     "themeSubTitle": "Main theme of the app",
     "accentColorTitle": "Accent color",
     "accentColorSubTitle": "Color used to tint UI elements",
-
     "otherHeader": "Other",
     "otherTitle": "Restore default theme",
     "otherSubTitle": "Restore default theme settings",
-
     "themeOption": "Theme",
     "themeOption1": "Light",
     "themeOption2": "Dark",
