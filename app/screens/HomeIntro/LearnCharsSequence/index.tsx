@@ -8,13 +8,14 @@ import { DraxProvider, DraxView } from 'react-native-drax';
 import { Appbar, Button, Text, useTheme } from 'react-native-paper';
 import Animated, { Easing, FadeInDown, Layout } from 'react-native-reanimated';
 import TinderCard from 'react-tinder-card';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 //App modules
 import { ICharCellItem, ICharCellListSection } from 'app/components/CharCellItem';
 import * as RouterParamTypes from 'app/config/router-params';
 import Hooks from 'app/hooks/index';
 import styles from './styles';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import Components from 'app/components';
 
 //Params
 type RootStackParamList = {
@@ -58,6 +59,8 @@ const LearnCharsSequence = ({ navigation, route }: Props) => {
   const [finishButtonTitle, setFinishButtonTitle] = useState('');
   const [finishButtonDisabled, setFinishButtonDisabled] = useState(false);
 
+  const [finishLevelVisible, setFinishLevelVisible] = React.useState(true);
+
   useEffect(() => {
     refGroupedEntries.current = groupedEntries;
   }, [groupedEntries]);
@@ -66,7 +69,7 @@ const LearnCharsSequence = ({ navigation, route }: Props) => {
     if (progressIndex % GROUP_COUNT === 1) {
       return;
     }
-    
+
     let progressSectionsToShow = refGroupedEntries.current[progressSection];
     let calculatedCharsToShow = progressSectionsToShow.data.slice(progressIndex, GROUP_COUNT + progressIndex).reverse();
     setCardPerGroup([...calculatedCharsToShow]);
@@ -185,10 +188,22 @@ const LearnCharsSequence = ({ navigation, route }: Props) => {
   };
 
   const onPressNext = () => {
-    setIncorrectAnswerIds([]);
-    setCorrectAnswerIds([]);
-    setPracticeMode(false);
+    if (progressIndex === groupedEntries[progressSection].data.length) {
+      refProgressIndex.current = 0;
+
+      setIncorrectAnswerIds([]);
+      setCorrectAnswerIds([]);
+      setPracticeMode(false);
+      setProgressSection(progressSection + 1);
+      setProgressIndex(0);
+    } else {
+      setIncorrectAnswerIds([]);
+      setCorrectAnswerIds([]);
+      setPracticeMode(false);
+    }
   };
+
+  const onPressHideDialog = () => setFinishLevelVisible(false);
 
   return (
     <DraxProvider>
@@ -295,6 +310,14 @@ const LearnCharsSequence = ({ navigation, route }: Props) => {
           )}
         </View>
       </SafeAreaView>
+
+      <Components.AppLevelFinishDialog
+        title="WONDERFUL"
+        description="Finally you finished this level."
+        buttonTitle="CONTINUE"
+        visible={finishLevelVisible}
+        onPressHideDialog={onPressHideDialog}
+      />
     </DraxProvider>
   );
 };
