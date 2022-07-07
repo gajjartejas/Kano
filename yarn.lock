@@ -3282,6 +3282,11 @@
   "resolved" "https://registry.npmjs.org/decode-uri-component/-/decode-uri-component-0.2.0.tgz"
   "version" "0.2.0"
 
+"dedent@^0.6.0":
+  "integrity" "sha512-cSfRWjXJtZQeRuZGVvDrJroCR5V2UvBNUMHsPCdNYzuAG8b9V8aAy3KUcdQrGQPXs17Y+ojbPh1aOCplg9YR9g=="
+  "resolved" "https://registry.npmjs.org/dedent/-/dedent-0.6.0.tgz"
+  "version" "0.6.0"
+
 "deep-equal@^1.0.0":
   "integrity" "sha512-yd9c5AdiqVcR+JjcwUQb9DkhJc8ngNr0MahEBGvDiJw8puWab2yZlh+nkasOnZP+EGTAP6rRp2JzJhJZzvNF8g=="
   "resolved" "https://registry.npmjs.org/deep-equal/-/deep-equal-1.1.1.tgz"
@@ -4540,7 +4545,7 @@
     "has" "^1.0.3"
     "side-channel" "^1.0.4"
 
-"invariant@^2.2.4":
+"invariant@^2.2.2", "invariant@^2.2.4":
   "integrity" "sha512-phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA=="
   "resolved" "https://registry.npmjs.org/invariant/-/invariant-2.2.4.tgz"
   "version" "2.2.4"
@@ -5632,6 +5637,19 @@
   "version" "1.4.0"
   dependencies:
     "js-tokens" "^3.0.0 || ^4.0.0"
+
+"lottie-ios@^3.2.3":
+  "integrity" "sha512-mubYMN6+1HXa8z3EJKBvNBkl4UoVM4McjESeB2PgvRMSngmJtC5yUMRdhbbrIAn5Liu3hFGao/14s5hQIgtkRQ=="
+  "resolved" "https://registry.npmjs.org/lottie-ios/-/lottie-ios-3.2.3.tgz"
+  "version" "3.2.3"
+
+"lottie-react-native@^5.1.3":
+  "integrity" "sha512-Ho+oM+D3if85I2EBn8c17tcg7pc880Sp/DOeNW5aWiNtlCJKX/kmlhoM19NLqjzkHEm96fTkTcTy82ZwYU3Kbg=="
+  "resolved" "https://registry.npmjs.org/lottie-react-native/-/lottie-react-native-5.1.3.tgz"
+  "version" "5.1.3"
+  dependencies:
+    "invariant" "^2.2.2"
+    "react-native-safe-modules" "^1.0.3"
 
 "lru-cache@^6.0.0":
   "integrity" "sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA=="
@@ -6961,6 +6979,13 @@
   "resolved" "https://registry.npmjs.org/react-native-safe-area-context/-/react-native-safe-area-context-3.4.1.tgz"
   "version" "3.4.1"
 
+"react-native-safe-modules@^1.0.3":
+  "integrity" "sha512-DUxti4Z+AgJ/ZsO5U7p3uSCUBko8JT8GvFlCeOXk9bMd+4qjpoDvMYpfbixXKgL88M+HwmU/KI1YFN6gsQZyBA=="
+  "resolved" "https://registry.npmjs.org/react-native-safe-modules/-/react-native-safe-modules-1.0.3.tgz"
+  "version" "1.0.3"
+  dependencies:
+    "dedent" "^0.6.0"
+
 "react-native-screens@^3.12.0", "react-native-screens@>= 3.0.0":
   "integrity" "sha512-EB1H5GrYtCTG8gC4v8OeJLL1MHlWQBeh6oEu6kH02QllVEy5QI9p8YKtTp4l8w+FMXOXxEvNxKANc75RMtwriw=="
   "resolved" "https://registry.npmjs.org/react-native-screens/-/react-native-screens-3.12.0.tgz"
@@ -6995,7 +7020,7 @@
     "prop-types" "^15.7.2"
     "yargs" "^16.1.1"
 
-"react-native@*", "react-native@^0.0.0-0 || 0.60 - 0.67 || 1000.0.0", "react-native@>=0.42.0", "react-native@>=0.50.0", "react-native@>=0.56", "react-native@>=0.59.0", "react-native@>=0.60.0", "react-native@>=0.65.0", "react-native@0.67.2":
+"react-native@*", "react-native@^0.0.0-0 || 0.60 - 0.67 || 1000.0.0", "react-native@>=0.42.0", "react-native@>=0.46", "react-native@>=0.50.0", "react-native@>=0.56", "react-native@>=0.59.0", "react-native@>=0.60.0", "react-native@>=0.65.0", "react-native@0.67.2":
   "integrity" "sha512-grEtpOLLvtSg8Bivg0ffVRCjTkresqMt7Jdog/geF6VAYhb4RnLaaUCWvyrfyB9buf135FKnqg5BIuve/XQNXA=="
   "resolved" "https://registry.npmjs.org/react-native/-/react-native-0.67.2.tgz"
   "version" "0.67.2"
