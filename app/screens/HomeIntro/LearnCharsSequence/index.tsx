@@ -8,7 +8,6 @@ import { DraxProvider, DraxView } from 'react-native-drax';
 import { Appbar, Button, Text, useTheme } from 'react-native-paper';
 import Animated, { Easing, FadeInDown, Layout } from 'react-native-reanimated';
 import TinderCard from 'react-tinder-card';
-import { SafeAreaView } from 'react-native-safe-area-context';
 
 //App modules
 import { ICharCellItem, ICharCellListSection } from 'app/components/CharCellItem';
@@ -16,6 +15,7 @@ import * as RouterParamTypes from 'app/config/router-params';
 import Hooks from 'app/hooks/index';
 import styles from './styles';
 import Components from 'app/components';
+import { LearnCharsMode } from 'app/config/router-params';
 
 //Params
 type RootStackParamList = {
@@ -39,31 +39,45 @@ const LearnCharsSequence = ({ navigation, route }: Props) => {
   //Constants
   const { colors } = useTheme();
   const { t } = useTranslation();
-  const { type } = route.params;
-  const groupedEntries = Hooks.useChartItemForTypes(type);
+  const { type, learnMode } = route.params;
+  const isRandomMode = learnMode === LearnCharsMode.LearnInRandom || learnMode === LearnCharsMode.PracticeInRandom;
+
+  const groupedEntries = Hooks.ChartItemForTypes.useChartSectionsForTypes(type, isRandomMode);
+  const isLearningMode = learnMode === LearnCharsMode.LearnInSequence || learnMode === LearnCharsMode.LearnInRandom;
 
   //States
-  const [title, setTitle] = useState('');
-  const [width, setWidth] = useState(0);
-
   const [progressSection, setProgressSection] = useState(0);
   const [progressIndex, setProgressIndex] = useState(0);
   const [cardPerGroup, setCardPerGroup] = useState<ICharCellItem[]>([]);
 
+  //For practice mode
   const [practiceMode, setPracticeMode] = useState(false);
   const [practiceLeftCardPerGroup, setPracticeLeftCardPerGroup] = useState<ICharCellItem[]>([]);
   const [practiceRightCardPerGroup, setPracticeRightCardPerGroup] = useState<ICharCellItem[]>([]);
   const [incorrectAnswerIds, setIncorrectAnswerIds] = useState<{ left: number; right: number }[]>([]);
   const [correctAnswerIds, setCorrectAnswerIds] = useState<{ left: number; right: number }[]>([]);
 
+  //UI Elements
+  const [title, setTitle] = useState('');
+  const [width, setWidth] = useState(0);
+
   const [finishButtonTitle, setFinishButtonTitle] = useState('');
   const [finishButtonDisabled, setFinishButtonDisabled] = useState(false);
-
-  const [finishLevelVisible, setFinishLevelVisible] = React.useState(true);
+  const [finishLevelVisible, setFinishLevelVisible] = React.useState(false);
 
   useEffect(() => {
-    refGroupedEntries.current = groupedEntries;
-  }, [groupedEntries]);
+    if (refGroupedEntries.current.length > 0) {
+      return;
+    }
+    refGroupedEntries.current = isRandomMode
+      ? [
+          ...groupedEntries
+            .map(value => ({ value, sort: Math.random() }))
+            .sort((a, b) => a.sort - b.sort)
+            .map(({ value }) => value),
+        ]
+      : groupedEntries;
+  }, [groupedEntries, isRandomMode]);
 
   useEffect(() => {
     if (progressIndex % GROUP_COUNT === 1) {
@@ -132,17 +146,11 @@ const LearnCharsSequence = ({ navigation, route }: Props) => {
     // Enable/Disable finish button according to progress.
     setFinishButtonDisabled(!(practiceMode && correctAnswerIds.length === practiceLeftCardPerGroup.length));
     setFinishButtonTitle(
-      progressIndex === groupedEntries[progressSection].data.length ? t('general.finish') : t('general.next'),
+      progressIndex === refGroupedEntries.current[progressSection].data.length
+        ? t('general.finish')
+        : t('general.next'),
     );
-  }, [
-    correctAnswerIds.length,
-    groupedEntries,
-    practiceLeftCardPerGroup.length,
-    practiceMode,
-    progressIndex,
-    progressSection,
-    t,
-  ]);
+  }, [correctAnswerIds.length, practiceLeftCardPerGroup.length, practiceMode, progressIndex, progressSection, t]);
 
   useEffect(() => {
     configInterface();
@@ -152,7 +160,25 @@ const LearnCharsSequence = ({ navigation, route }: Props) => {
     navigation.pop();
   };
 
-  const onSwipe = (direction: any) => {
+  const onSwipe = (_direction: any) => {
+    //Check learn mode or practice mode
+
+    //For learning mode skip the practice mode section
+    if (isLearningMode) {
+      //Increase progress index
+      refProgressIndex.current = refProgressIndex.current + 1;
+      setProgressIndex(refProgressIndex.current);
+
+      if (refProgressIndex.current === refGroupedEntries.current[progressSection].data.length) {
+        //Show finish level modal
+        setTimeout(() => {
+          setFinishLevelVisible(true);
+        }, 300);
+      }
+      return;
+    }
+
+    //Enable practice mode
     setTimeout(() => {
       refProgressIndex.current = refProgressIndex.current + 1;
       setProgressIndex(refProgressIndex.current);
@@ -163,7 +189,7 @@ const LearnCharsSequence = ({ navigation, route }: Props) => {
     }, 200);
   };
 
-  const onReceiveDragDrop = (payload: any, item: ICharCellItem, index: number) => {
+  const onReceiveDragDrop = (payload: any, item: ICharCellItem, _index: number) => {
     //Answer is already correct
     //Remaining  card -> Already Correct Answer
     if (correctAnswerIds.map(l => l.right).includes(item.id)) {
@@ -188,30 +214,43 @@ const LearnCharsSequence = ({ navigation, route }: Props) => {
   };
 
   const onPressNext = () => {
-    if (progressIndex === groupedEntries[progressSection].data.length) {
-      refProgressIndex.current = 0;
-
-      setIncorrectAnswerIds([]);
-      setCorrectAnswerIds([]);
-      setPracticeMode(false);
-      setProgressSection(progressSection + 1);
-      setProgressIndex(0);
+    if (progressIndex === refGroupedEntries.current[progressSection].data.length) {
+      //Show finish level modal
+      setFinishLevelVisible(true);
     } else {
+      //Go to card mode
+      //Disable practice mode
       setIncorrectAnswerIds([]);
       setCorrectAnswerIds([]);
       setPracticeMode(false);
     }
   };
 
-  const onPressHideDialog = () => setFinishLevelVisible(false);
+  const onPressHideDialog = () => {
+    setFinishLevelVisible(false);
+
+    console.log('progressSection', progressSection);
+    console.log('groupedEntries.length', refGroupedEntries.current.length);
+    if (progressSection === refGroupedEntries.current.length - 1) {
+      navigation.pop();
+    }
+
+    //Go to next level
+    refProgressIndex.current = 0;
+    setIncorrectAnswerIds([]);
+    setCorrectAnswerIds([]);
+    setPracticeMode(false);
+    setProgressSection(progressSection + 1);
+    setProgressIndex(0);
+  };
 
   return (
-    <DraxProvider>
-      <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]}>
-        <Appbar.Header style={{ backgroundColor: colors.background }}>
-          <Appbar.BackAction onPress={onGoBack} />
-          <Appbar.Content title={title} subtitle="" />
-        </Appbar.Header>
+    <View style={[styles.container, { backgroundColor: colors.background }]}>
+      <Appbar.Header style={{ backgroundColor: colors.background }}>
+        <Appbar.BackAction onPress={onGoBack} />
+        <Appbar.Content title={title} subtitle="" />
+      </Appbar.Header>
+      <DraxProvider>
         <View style={styles.safeArea}>
           {!practiceMode && (
             <View
@@ -283,6 +322,7 @@ const LearnCharsSequence = ({ navigation, route }: Props) => {
                   {practiceRightCardPerGroup.map((item: ICharCellItem, index: number) => {
                     return (
                       <DraxView
+                        key={item.id.toString()}
                         style={[
                           styles.receiver,
                           { backgroundColor: colors.card },
@@ -309,16 +349,15 @@ const LearnCharsSequence = ({ navigation, route }: Props) => {
             </>
           )}
         </View>
-      </SafeAreaView>
-
+      </DraxProvider>
       <Components.AppLevelFinishDialog
-        title="WONDERFUL"
-        description="Finally you finished this level."
-        buttonTitle="CONTINUE"
+        title={t('LearnCharsSequenceScreen.completeDialog.title', { section: progressSection + 1 })}
+        description={t('LearnCharsSequenceScreen.completeDialog.description', { section: progressSection + 1 })}
+        buttonTitle={t('general.continue')}
         visible={finishLevelVisible}
         onPressHideDialog={onPressHideDialog}
       />
-    </DraxProvider>
+    </View>
   );
 };
 

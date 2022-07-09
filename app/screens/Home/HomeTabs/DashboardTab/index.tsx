@@ -76,7 +76,7 @@ const DashboardTab = ({ navigation }: Props) => {
         <View style={styles.listContainer}>
           {groupedEntries.map((section, sectionIndex) => {
             return (
-              <View style={styles.section} key={section.title}>
+              <View style={styles.section} key={sectionIndex.toString()}>
                 <Text style={[styles.sectionHeader, sectionIndex === 0 ? styles.whiteSectionHeader : null]}>
                   {t(section.title)}
                 </Text>

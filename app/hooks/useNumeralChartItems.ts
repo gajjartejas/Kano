@@ -5,7 +5,7 @@ import { ICharInfo } from '../models/models/char';
 import { ICharCellListSection, ICharCellItem } from 'app/components/CharCellItem';
 import numerals from 'app/assets/lang/numerals/numerals.json';
 
-const useVowelsChartItems = (): ICharCellListSection[] => {
+const useNumeralChartItems = (): ICharCellListSection[] => {
   const transformCharToCellVM = (charInfo: ICharInfo): ICharCellItem => {
     const transformed = {
       id: charInfo.id,
@@ -21,4 +21,4 @@ const useVowelsChartItems = (): ICharCellListSection[] => {
   return [{ title: '', data: cellVMs }];
 };
 
-export default useVowelsChartItems;
+export default useNumeralChartItems;

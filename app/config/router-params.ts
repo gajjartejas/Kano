@@ -32,4 +32,12 @@ export interface LearnCharInfoParams {
 }
 export interface LearnCharsSequenceParams {
   type: LearnCharsType;
+  learnMode: LearnCharsMode;
+}
+
+export enum LearnCharsMode {
+  LearnInSequence = 'LearnInSequence',
+  LearnInRandom = 'LearnInRandom',
+  PracticeInSequence = 'PracticeInSequence',
+  PracticeInRandom = 'PracticeInRandom',
 }

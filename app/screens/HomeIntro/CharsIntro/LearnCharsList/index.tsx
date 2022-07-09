@@ -12,6 +12,7 @@ import { ICharListItem } from 'app/components/CharListItem';
 import * as RouterParamTypes from 'app/config/router-params';
 import Hooks from 'app/hooks/index';
 import styles from './styles';
+import { LearnCharsMode } from 'app/config/router-params';
 
 //Params
 type RootStackParamList = {
@@ -69,13 +70,13 @@ const LearnCharsList = ({ navigation, route }: Props) => {
     if (sectionIndex === 0 && index === 0) {
       navigation.push('LearnCharsChart', { type });
     } else if (sectionIndex === 0 && index === 1) {
-      navigation.push('LearnCharsSequence', { type });
+      navigation.push('LearnCharsSequence', { type, learnMode: LearnCharsMode.LearnInSequence });
     } else if (sectionIndex === 0 && index === 2) {
-      // navigation.push('LearnConsonantsList', {});
-    } else if (sectionIndex === 0 && index === 3) {
-      //navigation.push('LearnBarakhadisList', {});
-    } else if (sectionIndex === 0 && index === 4) {
-      //navigation.push('LearnNumeralsList', {});
+      navigation.push('LearnCharsSequence', { type, learnMode: LearnCharsMode.LearnInRandom });
+    } else if (sectionIndex === 1 && index === 0) {
+      navigation.push('LearnCharsSequence', { type, learnMode: LearnCharsMode.PracticeInSequence });
+    } else if (sectionIndex === 1 && index === 1) {
+      navigation.push('LearnCharsSequence', { type, learnMode: LearnCharsMode.PracticeInRandom });
     }
   };
 
@@ -105,7 +106,7 @@ const LearnCharsList = ({ navigation, route }: Props) => {
         <ScrollView style={styles.scrollView}>
           {groupedEntries.map((section, sectionIndex) => {
             return (
-              <View style={styles.section} key={section.title}>
+              <View style={styles.section} key={sectionIndex.toString()}>
                 <Text style={styles.sectionHeader}>{t(section.title)}</Text>
                 <View style={styles.sectionItem}>
                   {section.data.map((item, index) => {

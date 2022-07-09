@@ -149,7 +149,7 @@ const MoreTab = ({ navigation }: Props) => {
   };
 
   return (
-    <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]}>
+    <View style={[styles.container, { backgroundColor: colors.background }]}>
       <ScrollView style={styles.container}>
         <View style={styles.container}>
           <ImageBackground source={Config.Images.icons.about_bg} style={styles.imageBackground}>
@@ -193,7 +193,7 @@ const MoreTab = ({ navigation }: Props) => {
         onPressEmail={onPressEmail}
         onPressHideDialog={onPressHideDialog}
       />
-    </SafeAreaView>
+    </View>
   );
 };
 
