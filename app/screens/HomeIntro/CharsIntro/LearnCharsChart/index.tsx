@@ -32,7 +32,7 @@ const LearnCharsChart = ({ navigation, route }: Props) => {
   //Constants
   const { colors } = useTheme();
   const { type } = route.params;
-  const groupedEntries = Hooks.useChartItemForTypes(type);
+  const groupedEntries = Hooks.ChartItemForTypes.useChartItemForTypes(type);
   const { t } = useTranslation();
 
   //States

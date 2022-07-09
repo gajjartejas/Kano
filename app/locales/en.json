@@ -4,7 +4,8 @@
     "close": "CLOSE",
     "noInternet": "No Internet Connection",
     "finish": "FINISH",
-    "next": "NEXT"
+    "next": "NEXT",
+    "continue": "CONTINUE"
   },
   "about": {
     "sendFeedback": "Send Feedback",
@@ -160,6 +161,10 @@
       "titleConsonants": "Learn Consonants (Sequence)",
       "titleBarakhadi": "Learn Barakhadi (Sequence)",
       "titleNumerals": "Learn Numerals (Sequence)"
+    },
+    "completeDialog": {
+      "title": "SECTION {{section}} COMPLETED!",
+      "description": "Congratulation you finished {{section}} section."
     }
   }
 }

@@ -26,4 +26,25 @@ const useChartItemForTypes = (type: RouterParamTypes.LearnCharsType): ICharCellL
   }
 };
 
-export default useChartItemForTypes;
+const useChartSectionsForTypes = (type: RouterParamTypes.LearnCharsType, random: boolean): ICharCellListSection[] => {
+  const chars = useChartItemForTypes(type);
+  if (!random) {
+    return chars;
+  }
+  return [
+    ...chars
+      .map(value => ({ value, sort: Math.random() }))
+      .sort((a, b) => a.sort - b.sort)
+      .map(({ value }) => {
+        return {
+          ...value,
+          data: value.data
+            .map(item => ({ item, sort: Math.random() }))
+            .sort((a, b) => a.sort - b.sort)
+            .map(({ item }) => item),
+        };
+      }),
+  ];
+};
+
+export { useChartItemForTypes, useChartSectionsForTypes };
