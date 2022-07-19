@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
   subView: {
     marginHorizontal: 32,
   },
-  moreCard: { marginTop: 16, marginHorizontal: 24 },
+  moreCard: { marginTop: 16, marginHorizontal: 20 },
 });
 
 export default styles;
