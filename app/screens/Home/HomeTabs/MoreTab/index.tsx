@@ -5,7 +5,6 @@ import { Image, ImageBackground, Linking, Platform, ScrollView, View } from 'rea
 import { useTranslation } from 'react-i18next';
 import { Divider, List, Text, useTheme } from 'react-native-paper';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { IconType } from 'react-native-easy-icon/src/Icon';
 import DeviceInfo from 'react-native-device-info';
 import Icon from 'react-native-easy-icon';
@@ -18,6 +17,7 @@ import Config from 'app/config';
 import Components from 'app/components';
 import styles from './styles';
 import * as RouterParamTypes from 'app/config/router-params';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 //Interfaces
 interface IMoreItem {
@@ -44,6 +44,7 @@ const MoreTab = ({ navigation }: Props) => {
   //Constants
   const { t } = useTranslation();
   const { colors } = useTheme();
+  const insets = useSafeAreaInsets();
 
   //State
   const [visible, setVisible] = React.useState(false);
@@ -149,7 +150,7 @@ const MoreTab = ({ navigation }: Props) => {
   };
 
   return (
-    <View style={[styles.container, { backgroundColor: colors.background }]}>
+    <View style={[styles.container, { backgroundColor: colors.background, marginTop: insets.top }]}>
       <ScrollView style={styles.container}>
         <View style={styles.container}>
           <ImageBackground source={Config.Images.icons.about_bg} style={styles.imageBackground}>

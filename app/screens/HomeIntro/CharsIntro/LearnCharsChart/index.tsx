@@ -128,6 +128,8 @@ const LearnCharsChart = ({ navigation, route }: Props) => {
       <View style={styles.safeArea}>
         {!!numberOfColumns && (
           <SectionList
+            initialNumToRender={3}
+            windowSize={3}
             legacyImplementation={false}
             sections={groupedEntries}
             renderItem={renderSection}
