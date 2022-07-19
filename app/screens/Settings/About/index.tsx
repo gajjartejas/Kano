@@ -37,14 +37,14 @@ const Settings = ({ navigation }: Props) => {
       items: [
         {
           id: 0,
-          iconName: 'wb-sunny',
-          iconType: 'material',
+          iconName: 'information',
+          iconType: 'material-community',
           title: t('aboutScreen.infoDescTitle'),
         },
         {
           id: 1,
-          iconName: 'app-settings-alt',
-          iconType: 'material',
+          iconName: 'face-man',
+          iconType: 'material-community',
           title: t('aboutScreen.infoAuthorNameTitle'),
         },
       ],
@@ -55,36 +55,36 @@ const Settings = ({ navigation }: Props) => {
       items: [
         {
           id: 0,
-          iconName: 'notes',
-          iconType: 'material',
+          iconName: 'briefcase',
+          iconType: 'material-community',
           title: t('aboutScreen.portfolioTitle'),
           description: t('aboutScreen.portfolioSubTitle'),
         },
         {
           id: 1,
-          iconName: 'library-shelves',
+          iconName: 'instagram',
           iconType: 'material-community',
           title: t('aboutScreen.instagramTitle'),
           description: t('aboutScreen.instagramSubTitle'),
         },
         {
           id: 3,
-          iconName: 'frequently-asked-questions',
-          iconType: 'material-community',
+          iconName: 'telegram-plane',
+          iconType: 'font-awesome5',
           title: t('aboutScreen.telegramTitle'),
           description: t('aboutScreen.telegramSubTitle'),
         },
         {
           id: 4,
-          iconName: 'language',
-          iconType: 'ionicon',
+          iconName: 'github',
+          iconType: 'material-community',
           title: t('aboutScreen.githubTitle'),
           description: t('aboutScreen.githubSubTitle'),
         },
         {
           id: 5,
-          iconName: 'people',
-          iconType: 'ionicon',
+          iconName: 'twitter',
+          iconType: 'material-community',
           title: t('aboutScreen.twitterTitle'),
           description: t('aboutScreen.twitterSubTitle'),
         },
@@ -132,7 +132,9 @@ const Settings = ({ navigation }: Props) => {
 
         {apps.map((item, index) => {
           return (
-            <View style={[styles.listContainer, { backgroundColor: colors.surface }]} key={item.id.toString()}>
+            <View
+              style={[styles.listContainer, { backgroundColor: `${colors.card}`, shadowColor: `${colors.shadow}` }]}
+              key={item.id.toString()}>
               <List.Subheader style={[styles.listSubHeader, { color: colors.primary }]}>{item.title}</List.Subheader>
               {item.items.map((subItem, subIndex) => {
                 return (

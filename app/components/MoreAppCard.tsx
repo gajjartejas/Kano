@@ -22,7 +22,8 @@ function MoreAppCard(props: IMoreAppCard) {
   const { colors } = useTheme();
 
   return (
-    <View style={[styles.container, { backgroundColor: `${colors.surface}` }, props.style]}>
+    <View
+      style={[styles.container, { backgroundColor: `${colors.card}`, shadowColor: `${colors.shadow}` }, props.style]}>
       <Image source={props.icon} style={styles.icon} />
       <Text style={[styles.titleText, { color: colors.onSurface }]}>{props.title}</Text>
       <Text style={[styles.descriptionText, { color: colors.onSurface }]}>{props.description}</Text>
@@ -44,6 +45,13 @@ const styles = StyleSheet.create({
   container: {
     padding: 20,
     borderRadius: 8,
+    shadowRadius: 4,
+    shadowOffset: {
+      width: 0,
+      height: 0,
+    },
+    elevation: 8,
+    shadowOpacity: 0.2,
   },
   icon: { alignSelf: 'center', width: 80, height: 80, borderRadius: 40 },
   titleText: {
