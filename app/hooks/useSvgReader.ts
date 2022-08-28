@@ -52,6 +52,7 @@ const useSvgReader = () => {
           setParsedSvgPaths(paths);
         })
         .catch((e: Error) => {
+          console.log("readSvg",e);
           setError(e);
         });
     },
@@ -70,7 +71,7 @@ const useSvgReader = () => {
       let isPath = false;
       for (let j = 0; j < attributes.length; j++) {
         const attribute = attributes[j];
-        if (attribute.nodeName === 'id') {
+        if (attribute.nodeName === 'inkscape:label') {
           isPath = !!attribute.nodeValue?.includes('p');
           pathDicts[attribute.nodeName] = attribute.nodeValue;
         } else if (attribute.nodeName === 'd') {

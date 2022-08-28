@@ -1,10 +1,12 @@
-import React from 'react';
-import { ScrollView, View } from 'react-native';
+import React, { useState } from 'react';
+import { View } from 'react-native';
 
 //ThirdParty
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
-import { Appbar, Text, useTheme } from 'react-native-paper';
+import { Appbar, useTheme, Button } from 'react-native-paper';
+import AnimatedCharacter from 'app/components/AnimatedCharacter';
+import Animated, { Easing, FadeIn, Layout } from 'react-native-reanimated';
 
 //App modules
 import * as RouterParamTypes from 'app/config/router-params';
@@ -27,6 +29,7 @@ const GujaratiScriptIntro = ({ navigation }: Props) => {
   const { t } = useTranslation();
 
   //States
+  const [show, setShow] = useState(false);
 
   const onGoBack = () => {
     navigation.pop();
@@ -39,9 +42,31 @@ const GujaratiScriptIntro = ({ navigation }: Props) => {
         <Appbar.Content title={t('learnIntroScreen.header.title')} subtitle="" />
       </Appbar.Header>
       <View style={styles.safeArea}>
-        <ScrollView style={styles.scrollView}>
+        {/* <ScrollView style={styles.scrollView}>
           <Text>{'\n\n    WIP: Work In Progress...'}</Text>
-        </ScrollView>
+        </ScrollView> */}
+        <Button
+          onPress={() => {
+            setShow(!show);
+          }}>
+          {'Animate'}
+        </Button>
+
+        {show && (
+          <Animated.View
+            entering={FadeIn.duration(1200).easing(Easing.bezierFn(1, 0, 0.17, 0.98))}
+            layout={Layout.springify()}
+            style={{ flex: 1 }}>
+            <AnimatedCharacter
+              emptyStroke="#00000020"
+              stroke="black"
+              strokeWidth={6}
+              initialDelay={0}
+              path={'assets/svgs/barakhdi/0_aa'}
+              name={'0_aa.svg'}
+            />
+          </Animated.View>
+        )}
       </View>
     </View>
   );
