@@ -62,8 +62,8 @@ const GujaratiScriptIntro = ({ navigation }: Props) => {
               stroke="black"
               strokeWidth={6}
               initialDelay={0}
-              path={'assets/svgs/barakhdi/0_aa'}
-              name={'0_aa.svg'}
+              path={'svgs/barakhdi/34_gy'}
+              name={'0_gy.svg'}
             />
           </Animated.View>
         )}
