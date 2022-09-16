@@ -15,5 +15,5 @@ var assetsToCopy = ['assets/barakhdi'];
 var iOSAssetDir = 'ios/assets/svgs';
 var androidAssetDir = 'android/app/src/main/assets/svgs';
 
-gentlyCopy(assetsToCopy, iOSAssetDir);
-gentlyCopy(assetsToCopy, androidAssetDir);
+gentlyCopy(assetsToCopy, iOSAssetDir, { overwrite: true });
+gentlyCopy(assetsToCopy, androidAssetDir, { overwrite: true });
