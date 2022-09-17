@@ -8,12 +8,36 @@
 
 'use strict';
 
-var gentlyCopy = require('gently-copy');
+var copy = require('recursive-copy');
 
-var assetsToCopy = ['assets/barakhdi'];
+var assetsToCopy = './assets/barakhdi';
+var iOSAssetDir = './ios/assets/svgs';
+var androidAssetDir = './android/app/src/main/assets/svgs';
 
-var iOSAssetDir = 'ios/assets/svgs';
-var androidAssetDir = 'android/app/src/main/assets/svgs';
+copy(
+  assetsToCopy,
+  iOSAssetDir,
+  {
+    overwrite: true,
+    expand: true,
+    dot: true,
+    junk: true,
+  },
+  error => {
+    console.log(error);
+  },
+);
 
-gentlyCopy(assetsToCopy, iOSAssetDir, { overwrite: true });
-gentlyCopy(assetsToCopy, androidAssetDir, { overwrite: true });
+copy(
+  assetsToCopy,
+  androidAssetDir,
+  {
+    overwrite: true,
+    expand: true,
+    dot: true,
+    junk: true,
+  },
+  error => {
+    console.log(error);
+  },
+);
