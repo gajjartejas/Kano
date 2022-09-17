@@ -89,7 +89,7 @@ const GujaratiScriptIntro = ({ navigation }: Props) => {
               stroke="black"
               strokeWidth={6}
               initialDelay={0}
-              path={'assets/svgs/barakhdi/29_sh'}
+              path={'svgs/29_sh'}
               name={'0_sh.svg'}
             />
           </Animated.View>
