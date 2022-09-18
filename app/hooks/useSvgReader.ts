@@ -16,15 +16,21 @@ interface IParsedSVGPaths {
   svgClipPaths: IParsedSVG[];
 }
 
+interface ISVGAttributes {
+  width?: string | null;
+  height?: string | null;
+}
+
 const useSvgReader = () => {
   //State
   const [parsedSvgPaths, setParsedSvgPaths] = useState<IParsedSVGPaths>();
   const [error, setError] = useState<Error | null>();
+  const [svgAttributes, setSVGattributes] = useState<ISVGAttributes>();
 
-  const readSvgSilently = useCallback((name: string, path: string): Promise<IParsedSVGPaths> => {
+  const readSvgSilently = useCallback((path: string): Promise<IParsedSVGPaths> => {
     return new Promise((resolve, reject) => {
       if (Platform.OS === 'ios') {
-        RNFS.readFile(`${RNFS.MainBundlePath}/${path}/${name}`)
+        RNFS.readFile(`${RNFS.MainBundlePath}/${path}`)
           .then((res: string) => {
             let parsedSVGText = parseSvgText(res);
             resolve(parsedSVGText);
@@ -33,7 +39,7 @@ const useSvgReader = () => {
             reject(e);
           });
       } else if (Platform.OS === 'android') {
-        RNFS.readFileAssets(`${path}/${name}`)
+        RNFS.readFileAssets(`${path}`)
           .then((res: string) => {
             let parsedSVGText = parseSvgText(res);
             resolve(parsedSVGText);
@@ -46,13 +52,13 @@ const useSvgReader = () => {
   }, []);
 
   const readSvg = useCallback(
-    (name: string, path: string) => {
-      readSvgSilently(name, path)
+    (path: string) => {
+      readSvgSilently(path)
         .then(paths => {
           setParsedSvgPaths(paths);
         })
         .catch((e: Error) => {
-          console.log("readSvg",e);
+          console.log('readSvg', e);
           setError(e);
         });
     },
@@ -62,6 +68,14 @@ const useSvgReader = () => {
   const parseSvgText = (text: string): IParsedSVGPaths => {
     const doc = new DOMParser().parseFromString(text, 'text/xml');
     let paths = doc.getElementsByTagName('path');
+    let svgProps = doc.getElementsByTagName('svg');
+
+    let _svgAttributes = {
+      width: svgProps[0].getAttribute('width'),
+      height: svgProps[0].getAttribute('height'),
+    };
+    setSVGattributes(_svgAttributes);
+
     let svgPaths: IParsedSVG[] = [];
     let svgClipPaths: IParsedSVG[] = [];
     for (let i = 0; i < paths.length; i++) {
@@ -92,7 +106,7 @@ const useSvgReader = () => {
     };
   };
 
-  return { parsedSvgPaths, error, readSvg, readSvgSilently };
+  return { parsedSvgPaths, error, readSvg, readSvgSilently, svgAttributes };
 };
 
 export default useSvgReader;

@@ -5,13 +5,13 @@ import { View } from 'react-native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
 import { Appbar, useTheme, Button } from 'react-native-paper';
-import AnimatedCharacter from 'app/components/AnimatedCharacter';
 import Animated, { Easing, FadeIn, Layout } from 'react-native-reanimated';
 var RNFS = require('react-native-fs');
 
 //App modules
 import * as RouterParamTypes from 'app/config/router-params';
 import styles from './styles';
+import AnimatedCharacter from 'app/components/AnimatedCharacter';
 
 //Params
 type RootStackParamList = {
@@ -28,7 +28,7 @@ const GujaratiScriptIntro = ({ navigation }: Props) => {
   //Constants
   const { colors } = useTheme();
   const { t } = useTranslation();
-
+ 
   //States
   const [show, setShow] = useState(false);
 
@@ -89,8 +89,8 @@ const GujaratiScriptIntro = ({ navigation }: Props) => {
               stroke="black"
               strokeWidth={6}
               initialDelay={0}
-              path={'svgs/29_sh'}
-              name={'0_sh.svg'}
+              path={'svgs/0_aa'}
+              name={'0_aa.svg'}
             />
           </Animated.View>
         )}

@@ -11,18 +11,16 @@ import AnimatedStroke from './AnimatedStroke';
 interface IAnimatedCharacter extends PathProps {
   initialDelay: number;
   path: string;
-  name: string;
   emptyStroke: string;
 }
 
 const AnimatedCharacter = (props: IAnimatedCharacter) => {
-  const { parsedSvgPaths, readSvg } = useSvgReader();
+  const { parsedSvgPaths, readSvg, svgAttributes } = useSvgReader();
   const [strokeDelays, setStrokeDelays] = useState<any[]>(Array(parsedSvgPaths?.svgClipPaths.length).fill(null));
   const [durations, setDurations] = useState<any[]>(Array(parsedSvgPaths?.svgClipPaths.length).fill(null));
 
   const strokeLengths = useRef<number[]>([]);
   const initialDelay = props.initialDelay;
-  const name = props.name;
   const path = props.path;
   const emptyStroke = props.emptyStroke;
 
@@ -42,15 +40,19 @@ const AnimatedCharacter = (props: IAnimatedCharacter) => {
   );
 
   useEffect(() => {
-    readSvg(name, path);
-  }, [name, path, readSvg]);
+    readSvg(path);
+  }, [path, readSvg]);
 
   if (!parsedSvgPaths) {
     return null;
   }
 
   return (
-    <Svg height="100%" preserveAspectRatio="xMinYMin slice" width="100%" viewBox="0 0 200 200">
+    <Svg
+      height="100%"
+      preserveAspectRatio="xMidYMid"
+      width="100%"
+      viewBox={`0 0 ${svgAttributes?.width} ${svgAttributes?.height}`}>
       <Defs>
         <ClipPath id="path-clip">
           {parsedSvgPaths.svgPaths.map(p => {
