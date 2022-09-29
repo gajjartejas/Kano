@@ -87,10 +87,10 @@ const useSvgReader = () => {
         const attribute = attributes[j];
         if (attribute.nodeName === 'inkscape:label') {
           isPath = !!attribute.nodeValue?.includes('p');
-          pathDicts[attribute.nodeName] = attribute.nodeValue;
+          pathDicts.id = attribute.nodeValue;
         } else if (attribute.nodeName === 'd') {
-          pathDicts[attribute.nodeName] = attribute.nodeValue;
-          pathDicts[attribute.nodeName] = attribute.nodeValue;
+          pathDicts.d = attribute.nodeValue;
+          pathDicts.d = attribute.nodeValue;
         }
       }
       if (isPath) {
