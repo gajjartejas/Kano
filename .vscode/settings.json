@@ -14,5 +14,5 @@
     ],
     "i18n-ally.keystyle": "nested",
     "i18n-ally.extract.autoDetect": true,
-    "svg.preview.background": "white"
+    "svg.preview.background": "transparent"
 }
