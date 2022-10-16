@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { View } from 'react-native';
 
 //ThirdParty
@@ -6,7 +6,6 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
 import { Appbar, useTheme, Button } from 'react-native-paper';
 import Animated, { Easing, FadeIn, Layout } from 'react-native-reanimated';
-var RNFS = require('react-native-fs');
 
 //App modules
 import * as RouterParamTypes from 'app/config/router-params';
@@ -28,39 +27,13 @@ const GujaratiScriptIntro = ({ navigation }: Props) => {
   //Constants
   const { colors } = useTheme();
   const { t } = useTranslation();
- 
+
   //States
   const [show, setShow] = useState(false);
 
   const onGoBack = () => {
     navigation.pop();
   };
-
-  useEffect(() => {
-    // get a list of files and directories in the main bundle
-    RNFS.readDir(RNFS.DocumentDirectoryPath) // On Android, use "RNFS.DocumentDirectoryPath" (MainBundlePath is not defined)
-      .then(result => {
-        console.log('GOT RESULT', result);
-
-        // stat the first file
-        return Promise.all([RNFS.stat(result[0].path), result[0].path]);
-      })
-      .then(statResult => {
-        if (statResult[0].isFile()) {
-          // if we have a file, read it
-          return RNFS.readFile(statResult[1], 'utf8');
-        }
-
-        return 'no file';
-      })
-      .then(contents => {
-        // log the file contents
-        console.log(contents);
-      })
-      .catch(err => {
-        console.log(err.message, err.code);
-      });
-  }, []);
 
   return (
     <View style={[styles.container, { backgroundColor: colors.background }]}>
@@ -88,9 +61,9 @@ const GujaratiScriptIntro = ({ navigation }: Props) => {
               emptyStroke="#00000020"
               stroke="black"
               strokeWidth={6}
+              play
               initialDelay={0}
-              path={'svgs/0_aa'}
-              name={'0_aa.svg'}
+              path={'svgs/33_x/1_xa.svg'}
             />
           </Animated.View>
         )}

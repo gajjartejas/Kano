@@ -8,26 +8,36 @@ var RNFS = require('react-native-fs');
 //Interface
 interface IParsedSVG {
   id: string;
+  width?: string | null;
+  height?: string | null;
+  groups: IParsedSVGGroup[];
+}
+
+interface IParsedSVGPath {
+  id: string;
   d: string;
 }
 
-interface IParsedSVGPaths {
-  svgPaths: IParsedSVG[];
-  svgClipPaths: IParsedSVG[];
+interface IParsedSVGGroup {
+  id: string;
+  transform: string | null | undefined;
+  svgPaths: IParsedSVGPath[];
+  svgClipPaths: IParsedSVGPath[];
 }
 
-interface ISVGAttributes {
-  width?: string | null;
-  height?: string | null;
+interface IParsedSVGGroup {
+  id: string;
+  transform: string | null | undefined;
+  svgPaths: IParsedSVGPath[];
+  svgClipPaths: IParsedSVGPath[];
 }
 
 const useSvgReader = () => {
   //State
-  const [parsedSvgPaths, setParsedSvgPaths] = useState<IParsedSVGPaths>();
+  const [parsedSvg, setParsedSvg] = useState<IParsedSVG>();
   const [error, setError] = useState<Error | null>();
-  const [svgAttributes, setSVGattributes] = useState<ISVGAttributes>();
 
-  const readSvgSilently = useCallback((path: string): Promise<IParsedSVGPaths> => {
+  const readSvgSilently = useCallback((path: string): Promise<IParsedSVG> => {
     return new Promise((resolve, reject) => {
       if (Platform.OS === 'ios') {
         RNFS.readFile(`${RNFS.MainBundlePath}/${path}`)
@@ -54,8 +64,8 @@ const useSvgReader = () => {
   const readSvg = useCallback(
     (path: string) => {
       readSvgSilently(path)
-        .then(paths => {
-          setParsedSvgPaths(paths);
+        .then(svg => {
+          setParsedSvg(svg);
         })
         .catch((e: Error) => {
           console.log('readSvg', e);
@@ -65,48 +75,62 @@ const useSvgReader = () => {
     [readSvgSilently],
   );
 
-  const parseSvgText = (text: string): IParsedSVGPaths => {
+  const parseSvgText = (text: string): IParsedSVG => {
     const doc = new DOMParser().parseFromString(text, 'text/xml');
-    let paths = doc.getElementsByTagName('path');
-    let svgProps = doc.getElementsByTagName('svg');
+    const groups = doc.getElementsByTagName('g');
 
-    let _svgAttributes = {
-      width: svgProps[0].getAttribute('width'),
-      height: svgProps[0].getAttribute('height'),
-    };
-    setSVGattributes(_svgAttributes);
+    const svgProps = doc.getElementsByTagName('svg');
 
-    let svgPaths: IParsedSVG[] = [];
-    let svgClipPaths: IParsedSVG[] = [];
-    for (let i = 0; i < paths.length; i++) {
-      const path = paths[i];
-      const attributes = path.attributes;
-      let pathDicts: any = {};
-      let isPath = false;
-      for (let j = 0; j < attributes.length; j++) {
-        const attribute = attributes[j];
-        if (attribute.nodeName === 'inkscape:label') {
-          isPath = !!attribute.nodeValue?.includes('p');
-          pathDicts.id = attribute.nodeValue;
-        } else if (attribute.nodeName === 'd') {
-          pathDicts.d = attribute.nodeValue;
-          pathDicts.d = attribute.nodeValue;
+    let svgGroups: IParsedSVGGroup[] = [];
+
+    for (let i = 0; i < groups.length; i++) {
+      const group = groups[i];
+
+      let svgPaths: IParsedSVGPath[] = [];
+      let svgClipPaths: IParsedSVGPath[] = [];
+
+      const paths = group.getElementsByTagName('path');
+
+      for (let j = 0; j < paths.length; j++) {
+        const path = paths[j];
+        const attributes = path.attributes;
+        let pathDicts: any = {};
+        let isPath = false;
+        for (let k = 0; k < attributes.length; k++) {
+          const attribute = attributes[k];
+          if (attribute.nodeName === 'inkscape:label') {
+            isPath = !!attribute.nodeValue?.includes('p');
+            pathDicts.id = attribute.nodeValue;
+          } else if (attribute.nodeName === 'd') {
+            pathDicts.d = attribute.nodeValue;
+            pathDicts.d = attribute.nodeValue;
+          }
+        }
+        if (isPath) {
+          svgPaths.push(pathDicts);
+        } else {
+          svgClipPaths.push(pathDicts);
         }
       }
-      if (isPath) {
-        svgPaths.push(pathDicts);
-      } else {
-        svgClipPaths.push(pathDicts);
-      }
+      let svgGroup: IParsedSVGGroup = {
+        id: group.getAttribute('id')!,
+        transform: group.getAttribute('transform'),
+        svgPaths: svgPaths,
+        svgClipPaths: svgClipPaths,
+      };
+      svgGroups.push(svgGroup);
     }
 
-    return {
-      svgPaths,
-      svgClipPaths,
+    let parsedSVG = {
+      id: svgProps[0].getAttribute('id')!,
+      width: svgProps[0].getAttribute('width'),
+      height: svgProps[0].getAttribute('height'),
+      groups: svgGroups,
     };
-  };
 
-  return { parsedSvgPaths, error, readSvg, readSvgSilently, svgAttributes };
+    return parsedSVG;
+  };
+  return { parsedSvg, error, readSvg, readSvgSilently };
 };
 
 export default useSvgReader;

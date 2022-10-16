@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { TouchableOpacity, View } from 'react-native';
+import { View } from 'react-native';
 
 //ThirdParty
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
@@ -302,6 +302,7 @@ const LearnCharsSequence = ({ navigation, route }: Props) => {
                             strokeWidth={6}
                             initialDelay={0}
                             path={`svgs/${item.svg}`}
+                            duration={1000}
                           />
                         </Animated.View>
                         <Text style={[styles.subtitleText, { color: colors.text }]}>{item.en}</Text>
