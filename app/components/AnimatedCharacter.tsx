@@ -1,81 +1,119 @@
-import React, { useState, useRef, useCallback, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 //App Modules
 import useSvgReader from 'app/hooks/useSvgReader';
 
 //ThirdParty
 import { ClipPath, Defs, G, Path, PathProps, Svg } from 'react-native-svg';
+import { svgPathProperties } from 'svg-path-properties';
 import AnimatedStroke from './AnimatedStroke';
 
 //Interface
 interface IAnimatedCharacter extends PathProps {
   initialDelay: number;
+  duration: number;
   path: string;
-  name: string;
   emptyStroke: string;
+  play: boolean;
+}
+
+interface IAnimatedCharacterStrokeTiming {
+  delay: number;
+  duration: number;
+  length: number;
+}
+
+interface IAnimatedCharacterStrokeGroupTiming {
+  timings: IAnimatedCharacterStrokeTiming[];
 }
 
 const AnimatedCharacter = (props: IAnimatedCharacter) => {
-  const { parsedSvgPaths, readSvg } = useSvgReader();
-  const [strokeDelays, setStrokeDelays] = useState<any[]>(Array(parsedSvgPaths?.svgClipPaths.length).fill(null));
-  const [durations, setDurations] = useState<any[]>(Array(parsedSvgPaths?.svgClipPaths.length).fill(null));
+  const { parsedSvg, readSvg } = useSvgReader();
+  const [strokeTiming, setStrokeTiming] = useState<IAnimatedCharacterStrokeGroupTiming[]>([]);
 
-  const strokeLengths = useRef<number[]>([]);
   const initialDelay = props.initialDelay;
-  const name = props.name;
   const path = props.path;
   const emptyStroke = props.emptyStroke;
-
-  const onLength = useCallback(
-    (l: number, index: number) => {
-      strokeLengths.current[index] = l * 20 + initialDelay;
-
-      let newDelay = [...strokeDelays];
-      newDelay[index] = strokeLengths.current.slice(0, index).reduce((ps, a) => ps + a, 0);
-      setStrokeDelays(newDelay);
-
-      let newDurations = [...durations];
-      newDurations[index] = strokeLengths.current[index];
-      setDurations(newDurations);
-    },
-    [initialDelay, strokeDelays, durations],
-  );
+  const play = props.play;
+  const duration = props.duration;
 
   useEffect(() => {
-    readSvg(name, path);
-  }, [name, path, readSvg]);
+    if (!parsedSvg) {
+      return;
+    }
+    let durations: number[] = [];
+    let counter = 0;
+    let timings = parsedSvg.groups.map(g => {
+      let res = g.svgClipPaths.map(p => {
+        const properties = new svgPathProperties(p.d);
+        const l = properties.getTotalLength();
+        const _duration = duration + initialDelay;
+        const delay = durations.slice(0, counter).reduce((ps, a) => ps + a, 0);
+        durations[counter] = _duration;
+        counter += 1;
+        return {
+          duration: _duration,
+          delay: delay,
+          length: l,
+        };
+      });
+      return { timings: res };
+    });
 
-  if (!parsedSvgPaths) {
+    setStrokeTiming(timings);
+  }, [initialDelay, parsedSvg, duration]);
+
+  useEffect(() => {
+    readSvg(path);
+  }, [path, readSvg]);
+
+  if (!parsedSvg || strokeTiming.length < 1) {
     return null;
   }
 
+  console.log('parsedSvg', JSON.stringify(parsedSvg));
   return (
-    <Svg height="100%" preserveAspectRatio="xMinYMin slice" width="100%" viewBox="0 0 200 200">
+    <Svg
+      height="100%"
+      preserveAspectRatio="xMidYMid"
+      width="100%"
+      viewBox={`0 0 ${parsedSvg?.width} ${parsedSvg?.height}`}>
       <Defs>
-        <ClipPath id="path-clip">
-          {parsedSvgPaths.svgPaths.map(p => {
-            return <Path key={p.id} d={p.d} />;
-          })}
-        </ClipPath>
-      </Defs>
-      <G>
-        {parsedSvgPaths.svgPaths.map(p => {
-          return <Path key={p.id} fill={emptyStroke} d={p.d} />;
-        })}
-        {parsedSvgPaths.svgClipPaths.map((p, index) => {
+        {parsedSvg?.groups.map(g => {
           return (
-            <AnimatedStroke
-              {...props}
-              key={p.id}
-              d={p.d}
-              clipPath="url(#path-clip)"
-              onLength={(len: number) => onLength(len, index)}
-              delay={strokeDelays[index]}
-              velocity={durations[index]}
-            />
+            <ClipPath key={g.id} id={`path-clip${g.id}`}>
+              {g.svgPaths.map(p => {
+                return <Path key={p.id} d={p.d} />;
+              })}
+            </ClipPath>
           );
         })}
-      </G>
+      </Defs>
+
+      {parsedSvg?.groups.map((g, groupIndex) => {
+        let otherSVGProps = g.transform ? { transform: g.transform } : null;
+        return (
+          <G key={g.id} id={g.id} {...otherSVGProps}>
+            {g.svgPaths.map(p => {
+              return <Path key={p.id} fill={emptyStroke} d={p.d} />;
+            })}
+            {play &&
+              g.svgClipPaths.map((p, index) => {
+                return (
+                  <AnimatedStroke
+                    {...props}
+                    key={p.id}
+                    d={p.d}
+                    clipPath={`url(#path-clip${g.id})`}
+                    delay={strokeTiming[groupIndex].timings[index].delay}
+                    duration={strokeTiming[groupIndex].timings[index].duration}
+                    length={strokeTiming[groupIndex].timings[index].length}
+                  />
+                );
+              })}
+          </G>
+        );
+      })}
     </Svg>
   );
 };

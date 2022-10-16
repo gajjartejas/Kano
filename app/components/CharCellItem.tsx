@@ -13,6 +13,7 @@ export interface ICharCellItem {
   en: string;
   gu: string;
   diacritic: string;
+  svg: string;
 }
 
 export interface ICharCellListSection {

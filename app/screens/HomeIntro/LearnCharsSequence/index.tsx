@@ -5,8 +5,8 @@ import { View } from 'react-native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
 import { DraxProvider, DraxView } from 'react-native-drax';
-import { Appbar, Button, Text, useTheme } from 'react-native-paper';
-import Animated, { Easing, FadeInDown, Layout } from 'react-native-reanimated';
+import { Appbar, Button, Text, useTheme, TouchableRipple } from 'react-native-paper';
+import Animated, { Easing, FadeIn, FadeInDown, Layout } from 'react-native-reanimated';
 import TinderCard from 'react-tinder-card';
 
 //App modules
@@ -16,6 +16,7 @@ import Hooks from 'app/hooks/index';
 import styles from './styles';
 import Components from 'app/components';
 import { LearnCharsMode } from 'app/config/router-params';
+import AnimatedCharacter from 'app/components/AnimatedCharacter';
 
 //Params
 type RootStackParamList = {
@@ -24,7 +25,7 @@ type RootStackParamList = {
 
 type Props = NativeStackScreenProps<RootStackParamList, 'LearnCharsSequence'>;
 
-const GROUP_COUNT = 2;
+const GROUP_COUNT = 1;
 
 const PRACTICE_GROUP_COUNT_0 = 2;
 const PRACTICE_GROUP_COUNT_1 = 4;
@@ -46,6 +47,7 @@ const LearnCharsSequence = ({ navigation, route }: Props) => {
   const isLearningMode = learnMode === LearnCharsMode.LearnInSequence || learnMode === LearnCharsMode.LearnInRandom;
 
   //States
+  const [playing, setPlaying] = useState(true);
   const [progressSection, setProgressSection] = useState(0);
   const [progressIndex, setProgressIndex] = useState(0);
   const [cardPerGroup, setCardPerGroup] = useState<ICharCellItem[]>([]);
@@ -183,7 +185,7 @@ const LearnCharsSequence = ({ navigation, route }: Props) => {
       refProgressIndex.current = refProgressIndex.current + 1;
       setProgressIndex(refProgressIndex.current);
 
-      if (refProgressIndex.current % GROUP_COUNT === 0 && !practiceMode && refProgressIndex.current > 0) {
+      if (refProgressIndex.current % PRACTICE_GROUP_COUNT_0 === 0 && !practiceMode && refProgressIndex.current > 0) {
         setPracticeMode(true);
       }
     }, 200);
@@ -244,6 +246,13 @@ const LearnCharsSequence = ({ navigation, route }: Props) => {
     setProgressIndex(0);
   };
 
+  const onPressCard = (item: ICharCellItem, index: number) => {
+    setPlaying(false);
+    setTimeout(() => {
+      setPlaying(true);
+    }, 100);
+  };
+
   return (
     <View style={[styles.container, { backgroundColor: colors.background }]}>
       <Appbar.Header style={{ backgroundColor: colors.background }}>
@@ -266,26 +275,39 @@ const LearnCharsSequence = ({ navigation, route }: Props) => {
                     swipeRequirementType={'position'}
                     swipeThreshold={100}
                     preventSwipe={[]}>
-                    <Animated.View
-                      entering={FadeInDown.duration(index % GROUP_COUNT === 1 ? 0 : 1000).easing(
-                        Easing.bezierFn(1, 0, 0.17, 0.98),
-                      )}
-                      layout={Layout.springify()}
-                      style={[
-                        styles.card,
-                        {
-                          backgroundColor: colors.card,
-                          width: width * 0.7,
-                          height: width * 0.7,
-                          top: (-width * 0.7) / 2 - 50,
-                          left: (-width * 0.7) / 2,
-                        },
-                      ]}>
-                      <Text maxFontSizeMultiplier={1} style={[styles.titleText, { color: colors.text }]}>
-                        {item.gu}
-                      </Text>
-                      <Text style={[styles.subtitleText, { color: colors.text }]}>{item.en}</Text>
-                    </Animated.View>
+                    <TouchableRipple rippleColor={`${colors.primary}20`} onPress={() => onPressCard(item, index)}>
+                      <Animated.View
+                        entering={FadeInDown.duration(index % GROUP_COUNT === 1 ? 0 : 1000).easing(
+                          Easing.bezierFn(1, 0, 0.17, 0.98),
+                        )}
+                        layout={Layout.springify()}
+                        style={[
+                          styles.card,
+                          {
+                            backgroundColor: colors.card,
+                            width: width * 0.7,
+                            height: width * 0.7,
+                            top: (-width * 0.7) / 2 - 50,
+                            left: (-width * 0.7) / 2,
+                          },
+                        ]}>
+                        <Animated.View
+                          entering={FadeIn.duration(1200).easing(Easing.bezierFn(1, 0, 0.17, 0.98))}
+                          layout={Layout.springify()}
+                          style={styles.animatedView}>
+                          <AnimatedCharacter
+                            play={playing}
+                            emptyStroke={`${colors.onBackground}20`}
+                            stroke={colors.onBackground}
+                            strokeWidth={6}
+                            initialDelay={0}
+                            path={`svgs/${item.svg}`}
+                            duration={1000}
+                          />
+                        </Animated.View>
+                        <Text style={[styles.subtitleText, { color: colors.text }]}>{item.en}</Text>
+                      </Animated.View>
+                    </TouchableRipple>
                   </TinderCard>
                 );
               })}

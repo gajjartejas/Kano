@@ -19,4 +19,5 @@ export interface ICharInfo {
   name_gu?: string;
   name_en?: string;
   diacritic?: string;
+  svg: string;
 }

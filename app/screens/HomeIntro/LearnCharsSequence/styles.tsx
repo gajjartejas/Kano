@@ -65,6 +65,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingVertical: 16,
+    flex: 1,
   },
   titleText: {
     fontFamily: Config.Fonts.NotoSansGujarati.Regular,
@@ -126,6 +127,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
     paddingVertical: 6,
   },
+  animatedView: { width: '80%', flex: 1 },
 });
 
 export default styles;

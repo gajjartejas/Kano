@@ -1,74 +1,86 @@
 [
   {
     "id": 0,
+    "en": "Aa",
     "gu": "અ",
-    "en": "a",
-    "diacritic": ""
+    "diacritic": " ",
+    "svg": "0_aa/0_aa.svg"
   },
   {
     "id": 1,
+    "en": "Aa",
     "gu": "આ",
-    "en": "ā",
-    "diacritic": "ા"
+    "diacritic": "ા",
+    "svg": "0_aa/1_aa.svg"
   },
   {
     "id": 2,
+    "en": "I",
     "gu": "ઇ",
-    "en": "i",
-    "diacritic": "િ"
+    "diacritic": "િ",
+    "svg": "0_aa/2_i.svg"
   },
   {
     "id": 3,
+    "en": "ee",
     "gu": "ઈ",
-    "en": "ī",
-    "diacritic": "ી"
+    "diacritic": "ી",
+    "svg": "0_aa/3_ee.svg"
   },
   {
     "id": 4,
-    "gu": "ઉ",
     "en": "u",
-    "diacritic": "ુ"
+    "gu": "ઉ",
+    "diacritic": "ુ",
+    "svg": "0_aa/4_u.svg"
   },
   {
     "id": 5,
+    "en": "oo",
     "gu": "ઊ",
-    "en": "ū",
-    "diacritic": "ૂ"
+    "diacritic": "ૂ",
+    "svg": "0_aa/5_oo.svg"
   },
   {
     "id": 6,
-    "gu": "એ",
     "en": "e",
-    "diacritic": "ે"
+    "gu": "એ",
+    "diacritic": "ે",
+    "svg": "0_aa/6_e.svg"
   },
   {
     "id": 7,
-    "gu": "ઐ",
     "en": "ai",
-    "diacritic": "ૈ"
+    "gu": "ઐ",
+    "diacritic": "ૈ",
+    "svg": "0_aa/7_ai.svg"
   },
   {
     "id": 8,
-    "gu": "ઓ",
     "en": "o",
-    "diacritic": "ો"
+    "gu": "ઓ",
+    "diacritic": "ો",
+    "svg": "0_aa/8_o.svg"
   },
   {
     "id": 9,
-    "gu": "ઔ",
     "en": "au",
-    "diacritic": "ૌ"
+    "gu": "ઔ",
+    "diacritic": "ૌ",
+    "svg": "0_aa/9_au.svg"
   },
   {
     "id": 10,
+    "en": "am / an",
     "gu": "અં",
-    "en": "ṁ",
-    "diacritic": "ં"
+    "diacritic": "ં",
+    "svg": "0_aa/10_am_or_an.svg"
   },
   {
     "id": 11,
+    "en": "Ah",
     "gu": "અઃ",
-    "en": "ḥ",
-    "diacritic": "ઃ"
+    "diacritic": "ઃ",
+    "svg": "0_aa/11_ah.svg"
   }
 ]

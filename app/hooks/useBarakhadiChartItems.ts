@@ -15,6 +15,7 @@ const useBarakhadiChartItems = (): ICharCellListSection[] => {
       en: charInfo.en,
       gu: charInfo.gu,
       diacritic: charInfo.diacritic!,
+      svg: charInfo.svg,
     };
 
     return transformed;

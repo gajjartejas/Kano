@@ -13,5 +13,6 @@
         "ios/Pods/Headers/Public/RCT-Folly/folly/lang"
     ],
     "i18n-ally.keystyle": "nested",
-    "i18n-ally.extract.autoDetect": true
+    "i18n-ally.extract.autoDetect": true,
+    "svg.preview.background": "transparent"
 }
