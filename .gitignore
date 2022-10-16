@@ -95,3 +95,5 @@ ios/assets/svgs/
 android/app/src/main/assets/svgs/
 android/app/src/main/assets/fonts/
 android/app/src/main/assets/custom/
+
+.eslintcache

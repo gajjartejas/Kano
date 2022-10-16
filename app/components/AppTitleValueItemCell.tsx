@@ -34,13 +34,7 @@ const AppTitleValueItemCell = (props: IVovelCharCellItemProps) => {
         style={[styles.touchableButton, { backgroundColor: `${colors.card}20` }]}
         onPress={onPress}>
         <View style={styles.textContainer}>
-          <Text
-            numberOfLines={2}
-            style={[
-              styles.titleText,
-              { color: colors.text },
-              bold && { fontWeight: '600', fontFamily: Config.Fonts.NotoSansGujarati.Bold },
-            ]}>
+          <Text numberOfLines={2} style={[styles.titleText, { color: colors.text }, bold && styles.boldText]}>
             {title}
           </Text>
           {!!value && (
@@ -77,6 +71,7 @@ const styles = StyleSheet.create({
     fontFamily: Config.Fonts.NotoSansGujarati.Medium,
   },
   leftIcon: { alignSelf: 'center' },
+  boldText: { fontWeight: '600', fontFamily: Config.Fonts.NotoSansGujarati.Bold },
 });
 
 export default AppTitleValueItemCell;

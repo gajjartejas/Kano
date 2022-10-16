@@ -52,6 +52,7 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     color: 'white',
   },
+  animatedChar: { flex: 1 },
 });
 
 export default styles;

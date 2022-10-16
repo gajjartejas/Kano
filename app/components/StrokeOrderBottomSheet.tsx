@@ -10,7 +10,11 @@ import BottomSheet, {
 import { Text, useTheme } from 'react-native-paper';
 import Animated, { Extrapolate, interpolate, useAnimatedStyle } from 'react-native-reanimated';
 
-const StrokeOrderBottomSheet = React.forwardRef<BottomSheet, any>((props, ref) => {
+interface IStrokeOrderBottomSheetProps {
+  onChange: (index: number) => void;
+}
+
+const StrokeOrderBottomSheet = React.forwardRef<BottomSheet, IStrokeOrderBottomSheetProps>((props, ref) => {
   //Const
   const data = useMemo(
     () =>
@@ -88,5 +92,6 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
 });
+StrokeOrderBottomSheet.displayName = 'StrokeOrderBottomSheet';
 
 export default StrokeOrderBottomSheet;
