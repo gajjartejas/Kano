@@ -36,7 +36,7 @@ const LearnCharInfo = ({ navigation, route }: Props) => {
   //States
   const [showBottomSheet, setShowBottomSheet] = useState(false);
 
-  const renderItem = ({ item, index }: { item: ICharCellItem; index: number }) => {
+  const renderItem = ({ item }: { item: ICharCellItem; index: number }) => {
     return (
       <Components.LearnCharInfoItemCell
         item={item}
@@ -46,7 +46,7 @@ const LearnCharInfo = ({ navigation, route }: Props) => {
     );
   };
 
-  const onPressViewAnimatedDrawing = (item: ICharCellItem, index: number) => {
+  const onPressViewAnimatedDrawing = (_item: ICharCellItem, _index: number) => {
     if (!showBottomSheet) {
       setShowBottomSheet(true);
     } else if (bottomSheetRef.current) {

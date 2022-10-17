@@ -51,12 +51,11 @@ const GujaratiScriptIntro = ({ navigation }: Props) => {
           }}>
           {'Animate'}
         </Button>
-
         {show && (
           <Animated.View
             entering={FadeIn.duration(1200).easing(Easing.bezierFn(1, 0, 0.17, 0.98))}
             layout={Layout.springify()}
-            style={{ flex: 1 }}>
+            style={styles.animatedChar}>
             <AnimatedCharacter
               emptyStroke="#00000020"
               stroke="black"
@@ -64,6 +63,7 @@ const GujaratiScriptIntro = ({ navigation }: Props) => {
               play
               initialDelay={0}
               path={'svgs/33_x/1_xa.svg'}
+              duration={1000}
             />
           </Animated.View>
         )}

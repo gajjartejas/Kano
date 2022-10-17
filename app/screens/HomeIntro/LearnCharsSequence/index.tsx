@@ -246,7 +246,7 @@ const LearnCharsSequence = ({ navigation, route }: Props) => {
     setProgressIndex(0);
   };
 
-  const onPressCard = (item: ICharCellItem, index: number) => {
+  const onPressCard = (_item: ICharCellItem, _index: number) => {
     setPlaying(false);
     setTimeout(() => {
       setPlaying(true);
