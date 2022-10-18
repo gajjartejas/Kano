@@ -302,7 +302,7 @@ const LearnCharsSequence = ({ navigation, route }: Props) => {
                             strokeWidth={6}
                             initialDelay={0}
                             path={`svgs/${item.svg}`}
-                            duration={1000}
+                            duration={10000}
                           />
                         </Animated.View>
                         <Text style={[styles.subtitleText, { color: colors.text }]}>{item.en}</Text>

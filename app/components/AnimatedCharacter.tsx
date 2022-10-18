@@ -10,11 +10,29 @@ import AnimatedStroke from './AnimatedStroke';
 
 //Interface
 interface IAnimatedCharacter extends PathProps {
+  /**
+   * Initial delay in ms
+   */
   initialDelay: number;
+  /**
+   * Delay in ms
+   */
   duration: number;
   path: string;
   emptyStroke: string;
   play: boolean;
+  /**
+   * Callback function
+   *
+   * progress range will be 0 to 1
+   */
+  onProgress?: (progress: number) => void;
+  /**
+   * Callback function
+   *
+   * Called when animation finished
+   */
+  onFinish?: () => void;
 }
 
 interface IAnimatedCharacterStrokeTiming {
@@ -43,12 +61,27 @@ const AnimatedCharacter = (props: IAnimatedCharacter) => {
     }
     let durations: number[] = [];
     let counter = 0;
+
+    let totalLength = parsedSvg.groups
+      .map(g => {
+        let length = g.svgClipPaths
+          .map(p => {
+            const properties = new svgPathProperties(p.d);
+            const l = properties.getTotalLength();
+            return l;
+          })
+          .reduce((ps, a) => ps + a, 0);
+
+        return length;
+      })
+      .reduce((ps, a) => ps + a, 0);
+
     let timings = parsedSvg.groups.map(g => {
       let res = g.svgClipPaths.map(p => {
         const properties = new svgPathProperties(p.d);
         const l = properties.getTotalLength();
-        const _duration = duration + initialDelay;
-        const delay = durations.slice(0, counter).reduce((ps, a) => ps + a, 0);
+        const _duration = (l * duration) / totalLength;
+        const delay = durations.slice(0, counter).reduce((ps, a) => ps + a, 0) + initialDelay;
         durations[counter] = _duration;
         counter += 1;
         return {
@@ -57,9 +90,10 @@ const AnimatedCharacter = (props: IAnimatedCharacter) => {
           length: l,
         };
       });
+
       return { timings: res };
     });
-
+    console.log(JSON.stringify(timings));
     setStrokeTiming(timings);
   }, [initialDelay, parsedSvg, duration]);
 
@@ -71,7 +105,15 @@ const AnimatedCharacter = (props: IAnimatedCharacter) => {
     return null;
   }
 
-  console.log('parsedSvg', JSON.stringify(parsedSvg));
+  const onFinish = (index: number, length: number) => {
+    if (props.onProgress && typeof props.onProgress === 'function') {
+      props.onProgress(index / length);
+    }
+    if (props.onFinish && typeof props.onFinish === 'function' && index === length) {
+      props.onFinish();
+    }
+  };
+
   return (
     <Svg
       height="100%"
@@ -103,6 +145,9 @@ const AnimatedCharacter = (props: IAnimatedCharacter) => {
                   <AnimatedStroke
                     {...props}
                     key={p.id}
+                    onFinish={() => {
+                      onFinish(index, g.svgClipPaths.length);
+                    }}
                     d={p.d}
                     clipPath={`url(#path-clip${g.id})`}
                     delay={strokeTiming[groupIndex].timings[index].delay}
