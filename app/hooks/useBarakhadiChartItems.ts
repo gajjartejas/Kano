@@ -2,7 +2,7 @@ import { ICharGroupInfo, ICharInfo } from '../models/models/char';
 
 //ThirdParty
 import { ICharCellListSection, ICharCellItem } from 'app/components/CharCellItem';
-import barakhdi from 'app/assets/lang/barakhdi/barakhdi.json';
+import barakhadi from 'app/assets/lang/barakhadi/barakhadi.json';
 import { useTranslation } from 'react-i18next';
 
 const useBarakhadiChartItems = (): ICharCellListSection[] => {
@@ -24,11 +24,11 @@ const useBarakhadiChartItems = (): ICharCellListSection[] => {
   const transformCharsToSectionVM = (group: ICharGroupInfo): ICharCellListSection => {
     return {
       title: t('learnCharInfoScreen.cellHeader', { en: group.en, gu: group.gu }),
-      data: group.chars?.map((v: ICharGroupInfo) => transformCharToCellVM(v)) || [],
+      data: group.chars?.map((v: ICharInfo) => transformCharToCellVM(v)) || [],
     };
   };
 
-  let sectionsVMs = barakhdi.map((v: ICharGroupInfo) => transformCharsToSectionVM(v));
+  let sectionsVMs = barakhadi.map((v: ICharGroupInfo) => transformCharsToSectionVM(v));
   return sectionsVMs;
 };
 
