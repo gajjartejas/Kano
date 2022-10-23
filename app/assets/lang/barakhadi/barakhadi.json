@@ -1,0 +1,667 @@
+[
+  {
+    "id": 0,
+    "en": "Aa",
+    "gu": "અ",
+    "chars": [
+      { "id": 0, "en": "Aa", "gu": "અ", "diacritic": " ", "svg": "barakhadi/0_aa/0_aa.svg" },
+      { "id": 1, "en": "Aa", "gu": "આ", "diacritic": "ા", "svg": "barakhadi/0_aa/1_aa.svg" },
+      { "id": 2, "en": "I", "gu": "ઇ", "diacritic": "િ", "svg": "barakhadi/0_aa/2_i.svg" },
+      { "id": 3, "en": "ee", "gu": "ઈ", "diacritic": "ી", "svg": "barakhadi/0_aa/3_ee.svg" },
+      { "id": 4, "en": "u", "gu": "ઉ", "diacritic": "ુ", "svg": "barakhadi/0_aa/4_u.svg" },
+      { "id": 5, "en": "oo", "gu": "ઊ", "diacritic": "ૂ", "svg": "barakhadi/0_aa/5_oo.svg" },
+      { "id": 6, "en": "e", "gu": "એ", "diacritic": "ે", "svg": "barakhadi/0_aa/6_e.svg" },
+      { "id": 7, "en": "ai", "gu": "ઐ", "diacritic": "ૈ", "svg": "barakhadi/0_aa/7_ai.svg" },
+      { "id": 8, "en": "o", "gu": "ઓ", "diacritic": "ો", "svg": "barakhadi/0_aa/8_o.svg" },
+      { "id": 9, "en": "au", "gu": "ઔ", "diacritic": "ૌ", "svg": "barakhadi/0_aa/9_au.svg" },
+      { "id": 10, "en": "am / an", "gu": "અં", "diacritic": "ં", "svg": "barakhadi/0_aa/10_am_or_an.svg" },
+      { "id": 11, "en": "Ah", "gu": "અઃ", "diacritic": "ઃ", "svg": "barakhadi/0_aa/11_ah.svg" }
+    ]
+  },
+  {
+    "id": 1,
+    "en": "K",
+    "gu": "ક",
+    "chars": [
+      { "id": 0, "en": "K", "gu": "ક", "diacritic": " ", "svg": "barakhadi/1_k/0_k.svg" },
+      { "id": 1, "en": "Ka", "gu": "કા", "diacritic": "ા", "svg": "barakhadi/1_k/1_ka.svg" },
+      { "id": 2, "en": "Ki", "gu": "કિ", "diacritic": "િ", "svg": "barakhadi/1_k/2_ki.svg" },
+      { "id": 3, "en": "Kee", "gu": "કી", "diacritic": "ી", "svg": "barakhadi/1_k/3_kee.svg" },
+      { "id": 4, "en": "Ku", "gu": "કુ", "diacritic": "ુ", "svg": "barakhadi/1_k/4_ku.svg" },
+      { "id": 5, "en": "Koo", "gu": "કૂ", "diacritic": "ૂ", "svg": "barakhadi/1_k/5_koo.svg" },
+      { "id": 6, "en": "Ke", "gu": "કે", "diacritic": "ે", "svg": "barakhadi/1_k/6_ke.svg" },
+      { "id": 7, "en": "Kai", "gu": "કૈ", "diacritic": "ૈ", "svg": "barakhadi/1_k/7_kai.svg" },
+      { "id": 8, "en": "Ko", "gu": "કો", "diacritic": "ો", "svg": "barakhadi/1_k/8_ko.svg" },
+      { "id": 9, "en": "Kau", "gu": "કૌ", "diacritic": "ૌ", "svg": "barakhadi/1_k/9_kau.svg" },
+      { "id": 10, "en": "Kam", "gu": "કં", "diacritic": "ં", "svg": "barakhadi/1_k/10_kam.svg" },
+      { "id": 11, "en": "Kah", "gu": "કઃ", "diacritic": "ઃ", "svg": "barakhadi/1_k/11_kah.svg" }
+    ]
+  },
+  {
+    "id": 2,
+    "en": "kh",
+    "gu": "ખ",
+    "chars": [
+      { "id": 0, "en": "kh", "gu": "ખ", "diacritic": " ", "svg": "barakhadi/2_kh/0_kh.svg" },
+      { "id": 1, "en": "kha", "gu": "ખા", "diacritic": "ા", "svg": "barakhadi/2_kh/1_kha.svg" },
+      { "id": 2, "en": "khi", "gu": "ખિ", "diacritic": "િ", "svg": "barakhadi/2_kh/2_khi.svg" },
+      { "id": 3, "en": "khee", "gu": "ખી", "diacritic": "ી", "svg": "barakhadi/2_kh/3_khee.svg" },
+      { "id": 4, "en": "khu", "gu": "ખુ", "diacritic": "ુ", "svg": "barakhadi/2_kh/4_khu.svg" },
+      { "id": 5, "en": "khoo", "gu": "ખૂ", "diacritic": "ૂ", "svg": "barakhadi/2_kh/5_khoo.svg" },
+      { "id": 6, "en": "khe", "gu": "ખે", "diacritic": "ે", "svg": "barakhadi/2_kh/6_khe.svg" },
+      { "id": 7, "en": "khai", "gu": "ખૈ", "diacritic": "ૈ", "svg": "barakhadi/2_kh/7_khai.svg" },
+      { "id": 8, "en": "kho", "gu": "ખો", "diacritic": "ો", "svg": "barakhadi/2_kh/8_kho.svg" },
+      { "id": 9, "en": "khau", "gu": "ખૌ", "diacritic": "ૌ", "svg": "barakhadi/2_kh/9_khau.svg" },
+      { "id": 10, "en": "kham/Khan", "gu": "ખં", "diacritic": "ં", "svg": "barakhadi/2_kh/10_kham_or_khan.svg" },
+      { "id": 11, "en": "khah", "gu": "ખઃ", "diacritic": "ઃ", "svg": "barakhadi/2_kh/11_khah.svg" }
+    ]
+  },
+  {
+    "id": 3,
+    "en": "G",
+    "gu": "ગ",
+    "chars": [
+      { "id": 0, "en": "G", "gu": "ગ", "diacritic": " ", "svg": "barakhadi/3_g/0_g.svg" },
+      { "id": 1, "en": "Ga", "gu": "ગા", "diacritic": "ા", "svg": "barakhadi/3_g/1_ga.svg" },
+      { "id": 2, "en": "Gi", "gu": "ગિ", "diacritic": "િ", "svg": "barakhadi/3_g/2_gi.svg" },
+      { "id": 3, "en": "Gee", "gu": "ગી", "diacritic": "ી", "svg": "barakhadi/3_g/3_gee.svg" },
+      { "id": 4, "en": "Gu", "gu": "ગુ", "diacritic": "ુ", "svg": "barakhadi/3_g/4_gu.svg" },
+      { "id": 5, "en": "Goo", "gu": "ગૂ", "diacritic": "ૂ", "svg": "barakhadi/3_g/5_goo.svg" },
+      { "id": 6, "en": "Ge", "gu": "ગે", "diacritic": "ે", "svg": "barakhadi/3_g/6_ge.svg" },
+      { "id": 7, "en": "Gai", "gu": "ગૈ", "diacritic": "ૈ", "svg": "barakhadi/3_g/7_gai.svg" },
+      { "id": 8, "en": "Go", "gu": "ગો", "diacritic": "ો", "svg": "barakhadi/3_g/8_go.svg" },
+      { "id": 9, "en": "Gau", "gu": "ગૌ", "diacritic": "ૌ", "svg": "barakhadi/3_g/9_gau.svg" },
+      { "id": 10, "en": "Gam", "gu": "ગં", "diacritic": "ં", "svg": "barakhadi/3_g/10_gam.svg" },
+      { "id": 11, "en": "Gah", "gu": "ગઃ", "diacritic": "ઃ", "svg": "barakhadi/3_g/11_gah.svg" }
+    ]
+  },
+  {
+    "id": 4,
+    "en": "Gh",
+    "gu": "ઘ",
+    "chars": [
+      { "id": 0, "en": "Gh", "gu": "ઘ", "diacritic": " ", "svg": "barakhadi/4_gh/0_gh.svg" },
+      { "id": 1, "en": "Gha", "gu": "ઘા", "diacritic": "ા", "svg": "barakhadi/4_gh/1_gha.svg" },
+      { "id": 2, "en": "Ghi", "gu": "ઘિ", "diacritic": "િ", "svg": "barakhadi/4_gh/2_ghi.svg" },
+      { "id": 3, "en": "Ghee", "gu": "ઘી", "diacritic": "ી", "svg": "barakhadi/4_gh/3_ghee.svg" },
+      { "id": 4, "en": "Ghu", "gu": "ઘુ", "diacritic": "ુ", "svg": "barakhadi/4_gh/4_ghu.svg" },
+      { "id": 5, "en": "Ghoo", "gu": "ઘૂ", "diacritic": "ૂ", "svg": "barakhadi/4_gh/5_ghoo.svg" },
+      { "id": 6, "en": "Ghe", "gu": "ઘે", "diacritic": "ે", "svg": "barakhadi/4_gh/6_ghe.svg" },
+      { "id": 7, "en": "Ghai", "gu": "ઘૈ", "diacritic": "ૈ", "svg": "barakhadi/4_gh/7_ghai.svg" },
+      { "id": 8, "en": "Gho", "gu": "ઘો", "diacritic": "ો", "svg": "barakhadi/4_gh/8_gho.svg" },
+      { "id": 9, "en": "Ghau", "gu": "ઘૌ", "diacritic": "ૌ", "svg": "barakhadi/4_gh/9_ghau.svg" },
+      { "id": 10, "en": "Gham", "gu": "ઘં", "diacritic": "ં", "svg": "barakhadi/4_gh/10_gham.svg" },
+      { "id": 11, "en": "Ghah", "gu": "ઘઃ", "diacritic": "ઃ", "svg": "barakhadi/4_gh/11_ghah.svg" }
+    ]
+  },
+  {
+    "id": 5,
+    "en": "Ch",
+    "gu": "ચ",
+    "chars": [
+      { "id": 0, "en": "Ch", "gu": "ચ", "diacritic": " ", "svg": "barakhadi/5_ch/0_ch.svg" },
+      { "id": 1, "en": "Cha", "gu": "ચા", "diacritic": "ા", "svg": "barakhadi/5_ch/1_cha.svg" },
+      { "id": 2, "en": "Chi", "gu": "ચિ", "diacritic": "િ", "svg": "barakhadi/5_ch/2_chi.svg" },
+      { "id": 3, "en": "Chee", "gu": "ચી", "diacritic": "ી", "svg": "barakhadi/5_ch/3_chee.svg" },
+      { "id": 4, "en": "Chu", "gu": "ચુ", "diacritic": "ુ", "svg": "barakhadi/5_ch/4_chu.svg" },
+      { "id": 5, "en": "Choo", "gu": "ચૂ", "diacritic": "ૂ", "svg": "barakhadi/5_ch/5_choo.svg" },
+      { "id": 6, "en": "Che", "gu": "ચે", "diacritic": "ે", "svg": "barakhadi/5_ch/6_che.svg" },
+      { "id": 7, "en": "Chei", "gu": "ચૈ", "diacritic": "ૈ", "svg": "barakhadi/5_ch/7_chei.svg" },
+      { "id": 8, "en": "Cho", "gu": "ચો", "diacritic": "ો", "svg": "barakhadi/5_ch/8_cho.svg" },
+      { "id": 9, "en": "Chau", "gu": "ચૌ", "diacritic": "ૌ", "svg": "barakhadi/5_ch/9_chau.svg" },
+      { "id": 10, "en": "Cham", "gu": "ચં", "diacritic": "ં", "svg": "barakhadi/5_ch/10_cham.svg" },
+      { "id": 11, "en": "Chah", "gu": "ચઃ", "diacritic": "ઃ", "svg": "barakhadi/5_ch/11_chah.svg" }
+    ]
+  },
+  {
+    "id": 6,
+    "en": "Chha",
+    "gu": "છ",
+    "chars": [
+      { "id": 0, "en": "Chha", "gu": "છ", "diacritic": " ", "svg": "barakhadi/6_chha/0_chha.svg" },
+      { "id": 1, "en": "Chha", "gu": "છા", "diacritic": "ા", "svg": "barakhadi/6_chha/1_chha.svg" },
+      { "id": 2, "en": "Chhi", "gu": "છિ", "diacritic": "િ", "svg": "barakhadi/6_chha/2_chhi.svg" },
+      { "id": 3, "en": "Chhee", "gu": "છી", "diacritic": "ી", "svg": "barakhadi/6_chha/3_chhee.svg" },
+      { "id": 4, "en": "Chhu", "gu": "છુ", "diacritic": "ુ", "svg": "barakhadi/6_chha/4_chhu.svg" },
+      { "id": 5, "en": "Chhoo", "gu": "છૂ", "diacritic": "ૂ", "svg": "barakhadi/6_chha/5_chhoo.svg" },
+      { "id": 6, "en": "Chhe", "gu": "છે", "diacritic": "ે", "svg": "barakhadi/6_chha/6_chhe.svg" },
+      { "id": 7, "en": "Chhai", "gu": "છૈ", "diacritic": "ૈ", "svg": "barakhadi/6_chha/7_chhai.svg" },
+      { "id": 8, "en": "Chho", "gu": "છો", "diacritic": "ો", "svg": "barakhadi/6_chha/8_chho.svg" },
+      { "id": 9, "en": "Chhau", "gu": "છૌ", "diacritic": "ૌ", "svg": "barakhadi/6_chha/9_chhau.svg" },
+      { "id": 10, "en": "Chham", "gu": "છં", "diacritic": "ં", "svg": "barakhadi/6_chha/10_chham.svg" },
+      { "id": 11, "en": "Chhah", "gu": "છઃ", "diacritic": "ઃ", "svg": "barakhadi/6_chha/11_chhah.svg" }
+    ]
+  },
+  {
+    "id": 7,
+    "en": "J",
+    "gu": "જ",
+    "chars": [
+      { "id": 0, "en": "J", "gu": "જ", "diacritic": " ", "svg": "barakhadi/7_j/0_j.svg" },
+      { "id": 1, "en": "Ja", "gu": "જા", "diacritic": "ા", "svg": "barakhadi/7_j/1_ja.svg" },
+      { "id": 2, "en": "Ji", "gu": "જિ", "diacritic": "િ", "svg": "barakhadi/7_j/2_ji.svg" },
+      { "id": 3, "en": "Jee", "gu": "જી", "diacritic": "ી", "svg": "barakhadi/7_j/3_jee.svg" },
+      { "id": 4, "en": "Ju", "gu": "જુ", "diacritic": "ુ", "svg": "barakhadi/7_j/4_ju.svg" },
+      { "id": 5, "en": "Joo", "gu": "જૂ", "diacritic": "ૂ", "svg": "barakhadi/7_j/5_joo.svg" },
+      { "id": 6, "en": "Je", "gu": "જે", "diacritic": "ે", "svg": "barakhadi/7_j/6_je.svg" },
+      { "id": 7, "en": "Jai", "gu": "જૈ", "diacritic": "ૈ", "svg": "barakhadi/7_j/7_jai.svg" },
+      { "id": 8, "en": "Jo", "gu": "જો", "diacritic": "ો", "svg": "barakhadi/7_j/8_jo.svg" },
+      { "id": 9, "en": "Jau", "gu": "જૌ", "diacritic": "ૌ", "svg": "barakhadi/7_j/9_jau.svg" },
+      { "id": 10, "en": "Jam", "gu": "જં", "diacritic": "ં", "svg": "barakhadi/7_j/10_jam.svg" },
+      { "id": 11, "en": "Jah", "gu": "જઃ", "diacritic": "ઃ", "svg": "barakhadi/7_j/11_jah.svg" }
+    ]
+  },
+  {
+    "id": 8,
+    "en": "Jh",
+    "gu": "ઝ",
+    "chars": [
+      { "id": 0, "en": "Jh", "gu": "ઝ", "diacritic": " ", "svg": "barakhadi/8_jh/0_jh.svg" },
+      { "id": 1, "en": "Jha", "gu": "ઝા", "diacritic": "ા", "svg": "barakhadi/8_jh/1_jha.svg" },
+      { "id": 2, "en": "Jhi", "gu": "ઝિ", "diacritic": "િ", "svg": "barakhadi/8_jh/2_jhi.svg" },
+      { "id": 3, "en": "Jhee", "gu": "ઝી", "diacritic": "ી", "svg": "barakhadi/8_jh/3_jhee.svg" },
+      { "id": 4, "en": "Jhu", "gu": "ઝુ", "diacritic": "ુ", "svg": "barakhadi/8_jh/4_jhu.svg" },
+      { "id": 5, "en": "Jhoo", "gu": "ઝૂ", "diacritic": "ૂ", "svg": "barakhadi/8_jh/5_jhoo.svg" },
+      { "id": 6, "en": "Jhe", "gu": "ઝે", "diacritic": "ે", "svg": "barakhadi/8_jh/6_jhe.svg" },
+      { "id": 7, "en": "Jhai", "gu": "ઝૈ", "diacritic": "ૈ", "svg": "barakhadi/8_jh/7_jhai.svg" },
+      { "id": 8, "en": "Jho", "gu": "ઝો", "diacritic": "ો", "svg": "barakhadi/8_jh/8_jho.svg" },
+      { "id": 9, "en": "Jhau", "gu": "ઝૌ", "diacritic": "ૌ", "svg": "barakhadi/8_jh/9_jhau.svg" },
+      { "id": 10, "en": "Jham", "gu": "ઝં", "diacritic": "ં", "svg": "barakhadi/8_jh/10_jham.svg" },
+      { "id": 11, "en": "Jhah", "gu": "ઝઃ", "diacritic": "ઃ", "svg": "barakhadi/8_jh/11_jhah.svg" }
+    ]
+  },
+  {
+    "id": 9,
+    "en": "T",
+    "gu": "ટ",
+    "chars": [
+      { "id": 0, "en": "T", "gu": "ટ", "diacritic": " ", "svg": "barakhadi/9_t/0_t.svg" },
+      { "id": 1, "en": "Ta", "gu": "ટા", "diacritic": "ા", "svg": "barakhadi/9_t/1_ta.svg" },
+      { "id": 2, "en": "Ti", "gu": "ટિ", "diacritic": "િ", "svg": "barakhadi/9_t/2_ti.svg" },
+      { "id": 3, "en": "Tee", "gu": "ટી", "diacritic": "ી", "svg": "barakhadi/9_t/3_tee.svg" },
+      { "id": 4, "en": "Tu", "gu": "ટુ", "diacritic": "ુ", "svg": "barakhadi/9_t/4_tu.svg" },
+      { "id": 5, "en": "Too", "gu": "ટૂ", "diacritic": "ૂ", "svg": "barakhadi/9_t/5_too.svg" },
+      { "id": 6, "en": "Te", "gu": "ટે", "diacritic": "ે", "svg": "barakhadi/9_t/6_te.svg" },
+      { "id": 7, "en": "Tai", "gu": "ટૈ", "diacritic": "ૈ", "svg": "barakhadi/9_t/7_tai.svg" },
+      { "id": 8, "en": "To", "gu": "ટો", "diacritic": "ો", "svg": "barakhadi/9_t/8_to.svg" },
+      { "id": 9, "en": "Tau", "gu": "ટૌ", "diacritic": "ૌ", "svg": "barakhadi/9_t/9_tau.svg" },
+      { "id": 10, "en": "Tam", "gu": "ટં", "diacritic": "ં", "svg": "barakhadi/9_t/10_tam.svg" },
+      { "id": 11, "en": "Tah", "gu": "ટ", "diacritic": "ઃ", "svg": "barakhadi/9_t/11_tah.svg" }
+    ]
+  },
+  {
+    "id": 10,
+    "en": "Th",
+    "gu": "ઠ",
+    "chars": [
+      { "id": 0, "en": "Th", "gu": "ઠ", "diacritic": " ", "svg": "barakhadi/10_th/0_th.svg" },
+      { "id": 1, "en": "Tha", "gu": "ઠા", "diacritic": "ા", "svg": "barakhadi/10_th/1_tha.svg" },
+      { "id": 2, "en": "Thi", "gu": "ઠિ", "diacritic": "િ", "svg": "barakhadi/10_th/2_thi.svg" },
+      { "id": 3, "en": "Thee", "gu": "ઠી", "diacritic": "ી", "svg": "barakhadi/10_th/3_thee.svg" },
+      { "id": 4, "en": "Thu", "gu": "ઠુ", "diacritic": "ુ", "svg": "barakhadi/10_th/4_thu.svg" },
+      { "id": 5, "en": "Thoo", "gu": "ઠૂ", "diacritic": "ૂ", "svg": "barakhadi/10_th/5_thoo.svg" },
+      { "id": 6, "en": "The", "gu": "ઠે", "diacritic": "ે", "svg": "barakhadi/10_th/6_the.svg" },
+      { "id": 7, "en": "Thai", "gu": "થૈ", "diacritic": "ૈ", "svg": "barakhadi/10_th/7_thai.svg" },
+      { "id": 8, "en": "Tho", "gu": "ઠો", "diacritic": "ો", "svg": "barakhadi/10_th/8_tho.svg" },
+      { "id": 9, "en": "Thau", "gu": "ઠૌ", "diacritic": "ૌ", "svg": "barakhadi/10_th/9_thau.svg" },
+      { "id": 10, "en": "Tham", "gu": "ઠં", "diacritic": "ં", "svg": "barakhadi/10_th/10_tham.svg" },
+      { "id": 11, "en": "Thah", "gu": "ઠ", "diacritic": "ઃ", "svg": "barakhadi/10_th/11_thah.svg" }
+    ]
+  },
+  {
+    "id": 11,
+    "en": "D",
+    "gu": "ડ",
+    "chars": [
+      { "id": 0, "en": "D", "gu": "ડ", "diacritic": " ", "svg": "barakhadi/11_d/0_d.svg" },
+      { "id": 1, "en": "Da", "gu": "ડા", "diacritic": "ા", "svg": "barakhadi/11_d/1_da.svg" },
+      { "id": 2, "en": "Di", "gu": "ડિ", "diacritic": "િ", "svg": "barakhadi/11_d/2_di.svg" },
+      { "id": 3, "en": "Dee", "gu": "ડી", "diacritic": "ી", "svg": "barakhadi/11_d/3_dee.svg" },
+      { "id": 4, "en": "Du", "gu": "ડુ", "diacritic": "ુ", "svg": "barakhadi/11_d/4_du.svg" },
+      { "id": 5, "en": "Doo", "gu": "ડૂ", "diacritic": "ૂ", "svg": "barakhadi/11_d/5_doo.svg" },
+      { "id": 6, "en": "De", "gu": "ડે", "diacritic": "ે", "svg": "barakhadi/11_d/6_de.svg" },
+      { "id": 7, "en": "Dai", "gu": "ડૈ", "diacritic": "ૈ", "svg": "barakhadi/11_d/7_dai.svg" },
+      { "id": 8, "en": "Do", "gu": "ડો", "diacritic": "ો", "svg": "barakhadi/11_d/8_do.svg" },
+      { "id": 9, "en": "Dau", "gu": "ડૌ", "diacritic": "ૌ", "svg": "barakhadi/11_d/9_dau.svg" },
+      { "id": 10, "en": "Dam", "gu": "ડં", "diacritic": "ં", "svg": "barakhadi/11_d/10_dam.svg" },
+      { "id": 11, "en": "Dah", "gu": "ડ", "diacritic": "ઃ", "svg": "barakhadi/11_d/11_dah.svg" }
+    ]
+  },
+  {
+    "id": 12,
+    "en": "Dh",
+    "gu": "ઢ",
+    "chars": [
+      { "id": 0, "en": "Dh", "gu": "ઢ", "diacritic": " ", "svg": "barakhadi/12_dh/0_dh.svg" },
+      { "id": 1, "en": "Dha", "gu": "ઢા", "diacritic": "ા", "svg": "barakhadi/12_dh/1_dha.svg" },
+      { "id": 2, "en": "Dhai", "gu": "ઢિ", "diacritic": "િ", "svg": "barakhadi/12_dh/2_dhai.svg" },
+      { "id": 3, "en": "Dhee", "gu": "ઢી", "diacritic": "ી", "svg": "barakhadi/12_dh/3_dhee.svg" },
+      { "id": 4, "en": "Dhu", "gu": "ઢુ", "diacritic": "ુ", "svg": "barakhadi/12_dh/4_dhu.svg" },
+      { "id": 5, "en": "Dhoo", "gu": "ઢૂ", "diacritic": "ૂ", "svg": "barakhadi/12_dh/5_dhoo.svg" },
+      { "id": 6, "en": "Dhe", "gu": "ઢે", "diacritic": "ે", "svg": "barakhadi/12_dh/6_dhe.svg" },
+      { "id": 7, "en": "Dhai", "gu": "ઢૈ", "diacritic": "ૈ", "svg": "barakhadi/12_dh/7_dhai.svg" },
+      { "id": 8, "en": "Dho", "gu": "ઢો", "diacritic": "ો", "svg": "barakhadi/12_dh/8_dho.svg" },
+      { "id": 9, "en": "Dhau", "gu": "ઢૌ", "diacritic": "ૌ", "svg": "barakhadi/12_dh/9_dhau.svg" },
+      { "id": 10, "en": "Dham", "gu": "ઢં", "diacritic": "ં", "svg": "barakhadi/12_dh/10_dham.svg" },
+      { "id": 11, "en": "Dhah", "gu": "ઢ", "diacritic": "ઃ", "svg": "barakhadi/12_dh/11_dhah.svg" }
+    ]
+  },
+  {
+    "id": 13,
+    "en": "N",
+    "gu": "ણ",
+    "chars": [
+      { "id": 0, "en": "N", "gu": "ણ", "diacritic": " ", "svg": "barakhadi/13_n/0_n.svg" },
+      { "id": 1, "en": "Na", "gu": "ણા", "diacritic": "ા", "svg": "barakhadi/13_n/1_na.svg" },
+      { "id": 2, "en": "Ni", "gu": "ણિ", "diacritic": "િ", "svg": "barakhadi/13_n/2_ni.svg" },
+      { "id": 3, "en": "Nee", "gu": "ણી", "diacritic": "ી", "svg": "barakhadi/13_n/3_nee.svg" },
+      { "id": 4, "en": "Nu", "gu": "ણુ", "diacritic": "ુ", "svg": "barakhadi/13_n/4_nu.svg" },
+      { "id": 5, "en": "Noo", "gu": "ણૂ", "diacritic": "ૂ", "svg": "barakhadi/13_n/5_noo.svg" },
+      { "id": 6, "en": "Ne", "gu": "ણે", "diacritic": "ે", "svg": "barakhadi/13_n/6_ne.svg" },
+      { "id": 7, "en": "Nai", "gu": "ણૈ", "diacritic": "ૈ", "svg": "barakhadi/13_n/7_nai.svg" },
+      { "id": 8, "en": "No", "gu": "ણૉ", "diacritic": "ો", "svg": "barakhadi/13_n/8_no.svg" },
+      { "id": 9, "en": "Nau", "gu": "ણૌ", "diacritic": "ૌ", "svg": "barakhadi/13_n/9_nau.svg" },
+      { "id": 10, "en": "Nam", "gu": "ણં", "diacritic": "ં", "svg": "barakhadi/13_n/10_nam.svg" },
+      { "id": 11, "en": "Nah", "gu": "ણઃ", "diacritic": "ઃ", "svg": "barakhadi/13_n/11_nah.svg" }
+    ]
+  },
+  {
+    "id": 14,
+    "en": "T",
+    "gu": "ત",
+    "chars": [
+      { "id": 0, "en": "T", "gu": "ત", "diacritic": " ", "svg": "barakhadi/14_t/0_t.svg" },
+      { "id": 1, "en": "Ta", "gu": "તા", "diacritic": "ા", "svg": "barakhadi/14_t/1_ta.svg" },
+      { "id": 2, "en": "Ti", "gu": "તિ", "diacritic": "િ", "svg": "barakhadi/14_t/2_ti.svg" },
+      { "id": 3, "en": "Tee", "gu": "તી", "diacritic": "ી", "svg": "barakhadi/14_t/3_tee.svg" },
+      { "id": 4, "en": "Tu", "gu": "તુ", "diacritic": "ુ", "svg": "barakhadi/14_t/4_tu.svg" },
+      { "id": 5, "en": "Too", "gu": "તૂ", "diacritic": "ૂ", "svg": "barakhadi/14_t/5_too.svg" },
+      { "id": 6, "en": "Te", "gu": "તે", "diacritic": "ે", "svg": "barakhadi/14_t/6_te.svg" },
+      { "id": 7, "en": "Tai", "gu": "તૈ", "diacritic": "ૈ", "svg": "barakhadi/14_t/7_tai.svg" },
+      { "id": 8, "en": "To", "gu": "તો", "diacritic": "ો", "svg": "barakhadi/14_t/8_to.svg" },
+      { "id": 9, "en": "Tau", "gu": "તૌ", "diacritic": "ૌ", "svg": "barakhadi/14_t/9_tau.svg" },
+      { "id": 10, "en": "Tam", "gu": "તં", "diacritic": "ં", "svg": "barakhadi/14_t/10_tam.svg" },
+      { "id": 11, "en": "Tah", "gu": "તઃ", "diacritic": "ઃ", "svg": "barakhadi/14_t/11_tah.svg" }
+    ]
+  },
+  {
+    "id": 15,
+    "en": "Th",
+    "gu": "થ",
+    "chars": [
+      { "id": 0, "en": "Th", "gu": "થ", "diacritic": " ", "svg": "barakhadi/15_th/0_th.svg" },
+      { "id": 1, "en": "Tha", "gu": "થા", "diacritic": "ા", "svg": "barakhadi/15_th/1_tha.svg" },
+      { "id": 2, "en": "Thi", "gu": "થિ", "diacritic": "િ", "svg": "barakhadi/15_th/2_thi.svg" },
+      { "id": 3, "en": "Thee", "gu": "થી", "diacritic": "ી", "svg": "barakhadi/15_th/3_thee.svg" },
+      { "id": 4, "en": "Thu", "gu": "થુ", "diacritic": "ુ", "svg": "barakhadi/15_th/4_thu.svg" },
+      { "id": 5, "en": "Thoo", "gu": "થૂ", "diacritic": "ૂ", "svg": "barakhadi/15_th/5_thoo.svg" },
+      { "id": 6, "en": "The", "gu": "થે", "diacritic": "ે", "svg": "barakhadi/15_th/6_the.svg" },
+      { "id": 7, "en": "Thai", "gu": "થૈ", "diacritic": "ૈ", "svg": "barakhadi/15_th/7_thai.svg" },
+      { "id": 8, "en": "Tho", "gu": "થો", "diacritic": "ો", "svg": "barakhadi/15_th/8_tho.svg" },
+      { "id": 9, "en": "Thau", "gu": "થૌ", "diacritic": "ૌ", "svg": "barakhadi/15_th/9_thau.svg" },
+      { "id": 10, "en": "Tham", "gu": "થં", "diacritic": "ં", "svg": "barakhadi/15_th/10_tham.svg" },
+      { "id": 11, "en": "Thah", "gu": "થઃ", "diacritic": "ઃ", "svg": "barakhadi/15_th/11_thah.svg" }
+    ]
+  },
+  {
+    "id": 16,
+    "en": "D",
+    "gu": "દ",
+    "chars": [
+      { "id": 0, "en": "D", "gu": "દ", "diacritic": " ", "svg": "barakhadi/16_d/0_d.svg" },
+      { "id": 1, "en": "Da", "gu": "દા", "diacritic": "ા", "svg": "barakhadi/16_d/1_da.svg" },
+      { "id": 2, "en": "Di", "gu": "દિ", "diacritic": "િ", "svg": "barakhadi/16_d/2_di.svg" },
+      { "id": 3, "en": "Dee", "gu": "દી", "diacritic": "ી", "svg": "barakhadi/16_d/3_dee.svg" },
+      { "id": 4, "en": "Du", "gu": "દુ", "diacritic": "ુ", "svg": "barakhadi/16_d/4_du.svg" },
+      { "id": 5, "en": "Doo", "gu": "દૂ", "diacritic": "ૂ", "svg": "barakhadi/16_d/5_doo.svg" },
+      { "id": 6, "en": "De", "gu": "દે", "diacritic": "ે", "svg": "barakhadi/16_d/6_de.svg" },
+      { "id": 7, "en": "Dai", "gu": "દૈ", "diacritic": "ૈ", "svg": "barakhadi/16_d/7_dai.svg" },
+      { "id": 8, "en": "Do", "gu": "દો", "diacritic": "ો", "svg": "barakhadi/16_d/8_do.svg" },
+      { "id": 9, "en": "Dau", "gu": "દૌ", "diacritic": "ૌ", "svg": "barakhadi/16_d/9_dau.svg" },
+      { "id": 10, "en": "Dam", "gu": "દં", "diacritic": "ં", "svg": "barakhadi/16_d/10_dam.svg" },
+      { "id": 11, "en": "Dah", "gu": "દઃ", "diacritic": "ઃ", "svg": "barakhadi/16_d/11_dah.svg" }
+    ]
+  },
+  {
+    "id": 17,
+    "en": "Dh",
+    "gu": "ધ",
+    "chars": [
+      { "id": 0, "en": "Dh", "gu": "ધ", "diacritic": " ", "svg": "barakhadi/17_dh/0_dh.svg" },
+      { "id": 1, "en": "Dha", "gu": "ધા", "diacritic": "ા", "svg": "barakhadi/17_dh/1_dha.svg" },
+      { "id": 2, "en": "Dhi", "gu": "ધિ", "diacritic": "િ", "svg": "barakhadi/17_dh/2_dhi.svg" },
+      { "id": 3, "en": "Dhee", "gu": "ધી", "diacritic": "ી", "svg": "barakhadi/17_dh/3_dhee.svg" },
+      { "id": 4, "en": "Dhu", "gu": "ધુ", "diacritic": "ુ", "svg": "barakhadi/17_dh/4_dhu.svg" },
+      { "id": 5, "en": "Dhoo", "gu": "ધૂ", "diacritic": "ૂ", "svg": "barakhadi/17_dh/5_dhoo.svg" },
+      { "id": 6, "en": "Dhe", "gu": "ધે", "diacritic": "ે", "svg": "barakhadi/17_dh/6_dhe.svg" },
+      { "id": 7, "en": "Dhai", "gu": "ધૈ", "diacritic": "ૈ", "svg": "barakhadi/17_dh/7_dhai.svg" },
+      { "id": 8, "en": "Dho", "gu": "ધો", "diacritic": "ો", "svg": "barakhadi/17_dh/8_dho.svg" },
+      { "id": 9, "en": "Dhau", "gu": "ધૌ", "diacritic": "ૌ", "svg": "barakhadi/17_dh/9_dhau.svg" },
+      { "id": 10, "en": "Dham", "gu": "ધં", "diacritic": "ં", "svg": "barakhadi/17_dh/10_dham.svg" },
+      { "id": 11, "en": "Dhah", "gu": "ધઃ", "diacritic": "ઃ", "svg": "barakhadi/17_dh/11_dhah.svg" }
+    ]
+  },
+  {
+    "id": 18,
+    "en": "N",
+    "gu": "ન",
+    "chars": [
+      { "id": 0, "en": "N", "gu": "ન", "diacritic": " ", "svg": "barakhadi/18_n/0_n.svg" },
+      { "id": 1, "en": "Na", "gu": "ના", "diacritic": "ા", "svg": "barakhadi/18_n/1_na.svg" },
+      { "id": 2, "en": "Ni", "gu": "નિ", "diacritic": "િ", "svg": "barakhadi/18_n/2_ni.svg" },
+      { "id": 3, "en": "Nee", "gu": "ની", "diacritic": "ી", "svg": "barakhadi/18_n/3_nee.svg" },
+      { "id": 4, "en": "Nu", "gu": "નુ", "diacritic": "ુ", "svg": "barakhadi/18_n/4_nu.svg" },
+      { "id": 5, "en": "Noo", "gu": "નૂ", "diacritic": "ૂ", "svg": "barakhadi/18_n/5_noo.svg" },
+      { "id": 6, "en": "Ne", "gu": "ને", "diacritic": "ે", "svg": "barakhadi/18_n/6_ne.svg" },
+      { "id": 7, "en": "Nai", "gu": "નૈ", "diacritic": "ૈ", "svg": "barakhadi/18_n/7_nai.svg" },
+      { "id": 8, "en": "No", "gu": "નો", "diacritic": "ો", "svg": "barakhadi/18_n/8_no.svg" },
+      { "id": 9, "en": "Nau", "gu": "નૌ", "diacritic": "ૌ", "svg": "barakhadi/18_n/9_nau.svg" },
+      { "id": 10, "en": "Nan", "gu": "નં", "diacritic": "ં", "svg": "barakhadi/18_n/10_nan.svg" },
+      { "id": 11, "en": "Nah", "gu": "નઃ", "diacritic": "ઃ", "svg": "barakhadi/18_n/11_nah.svg" }
+    ]
+  },
+  {
+    "id": 19,
+    "en": "P",
+    "gu": "પ",
+    "chars": [
+      { "id": 0, "en": "P", "gu": "પ", "diacritic": " ", "svg": "barakhadi/19_p/0_p.svg" },
+      { "id": 1, "en": "Pa", "gu": "પા", "diacritic": "ા", "svg": "barakhadi/19_p/1_pa.svg" },
+      { "id": 2, "en": "Pi", "gu": "પિ", "diacritic": "િ", "svg": "barakhadi/19_p/2_pi.svg" },
+      { "id": 3, "en": "Pee", "gu": "પી", "diacritic": "ી", "svg": "barakhadi/19_p/3_pee.svg" },
+      { "id": 4, "en": "Pu", "gu": "પુ", "diacritic": "ુ", "svg": "barakhadi/19_p/4_pu.svg" },
+      { "id": 5, "en": "Poo", "gu": "પૂ", "diacritic": "ૂ", "svg": "barakhadi/19_p/5_poo.svg" },
+      { "id": 6, "en": "Pe", "gu": "પે", "diacritic": "ે", "svg": "barakhadi/19_p/6_pe.svg" },
+      { "id": 7, "en": "Pai", "gu": "પૈ", "diacritic": "ૈ", "svg": "barakhadi/19_p/7_pai.svg" },
+      { "id": 8, "en": "Po", "gu": "પો", "diacritic": "ો", "svg": "barakhadi/19_p/8_po.svg" },
+      { "id": 9, "en": "Pau", "gu": "પૌ", "diacritic": "ૌ", "svg": "barakhadi/19_p/9_pau.svg" },
+      { "id": 10, "en": "Pam", "gu": "પં", "diacritic": "ં", "svg": "barakhadi/19_p/10_pam.svg" },
+      { "id": 11, "en": "Pah", "gu": "પઃ", "diacritic": "ઃ", "svg": "barakhadi/19_p/11_pah.svg" }
+    ]
+  },
+  {
+    "id": 20,
+    "en": "F",
+    "gu": "ફ",
+    "chars": [
+      { "id": 0, "en": "F", "gu": "ફ", "diacritic": " ", "svg": "barakhadi/20_f/0_f.svg" },
+      { "id": 1, "en": "Fa", "gu": "ફા", "diacritic": "ા", "svg": "barakhadi/20_f/1_fa.svg" },
+      { "id": 2, "en": "Fi", "gu": "ફિ", "diacritic": "િ", "svg": "barakhadi/20_f/2_fi.svg" },
+      { "id": 3, "en": "Fee", "gu": "ફી", "diacritic": "ી", "svg": "barakhadi/20_f/3_fee.svg" },
+      { "id": 4, "en": "Fu", "gu": "ફુ", "diacritic": "ુ", "svg": "barakhadi/20_f/4_fu.svg" },
+      { "id": 5, "en": "Foo", "gu": "ફૂ", "diacritic": "ૂ", "svg": "barakhadi/20_f/5_foo.svg" },
+      { "id": 6, "en": "Fe", "gu": "ફે", "diacritic": "ે", "svg": "barakhadi/20_f/6_fe.svg" },
+      { "id": 7, "en": "Fai", "gu": "ફૈ", "diacritic": "ૈ", "svg": "barakhadi/20_f/7_fai.svg" },
+      { "id": 8, "en": "Fo", "gu": "ફો", "diacritic": "ો", "svg": "barakhadi/20_f/8_fo.svg" },
+      { "id": 9, "en": "Fau", "gu": "ફૌ", "diacritic": "ૌ", "svg": "barakhadi/20_f/9_fau.svg" },
+      { "id": 10, "en": "Fam", "gu": "ફં", "diacritic": "ં", "svg": "barakhadi/20_f/10_fam.svg" },
+      { "id": 11, "en": "Fah", "gu": "ફઃ", "diacritic": "ઃ", "svg": "barakhadi/20_f/11_fah.svg" }
+    ]
+  },
+  {
+    "id": 21,
+    "en": "B",
+    "gu": "બ",
+    "chars": [
+      { "id": 0, "en": "B", "gu": "બ", "diacritic": " ", "svg": "barakhadi/21_b/0_b.svg" },
+      { "id": 1, "en": "Ba", "gu": "બા", "diacritic": "ા", "svg": "barakhadi/21_b/1_ba.svg" },
+      { "id": 2, "en": "Bi", "gu": "બિ", "diacritic": "િ", "svg": "barakhadi/21_b/2_bi.svg" },
+      { "id": 3, "en": "Bee", "gu": "બી", "diacritic": "ી", "svg": "barakhadi/21_b/3_bee.svg" },
+      { "id": 4, "en": "Bu", "gu": "બુ", "diacritic": "ુ", "svg": "barakhadi/21_b/4_bu.svg" },
+      { "id": 5, "en": "Boo", "gu": "બૂ", "diacritic": "ૂ", "svg": "barakhadi/21_b/5_boo.svg" },
+      { "id": 6, "en": "Be", "gu": "બે", "diacritic": "ે", "svg": "barakhadi/21_b/6_be.svg" },
+      { "id": 7, "en": "Bai", "gu": "બૈ", "diacritic": "ૈ", "svg": "barakhadi/21_b/7_bai.svg" },
+      { "id": 8, "en": "Bo", "gu": "બો", "diacritic": "ો", "svg": "barakhadi/21_b/8_bo.svg" },
+      { "id": 9, "en": "Bau", "gu": "બૌ", "diacritic": "ૌ", "svg": "barakhadi/21_b/9_bau.svg" },
+      { "id": 10, "en": "Bam", "gu": "બં", "diacritic": "ં", "svg": "barakhadi/21_b/10_bam.svg" },
+      { "id": 11, "en": "Bah", "gu": "બઃ", "diacritic": "ઃ", "svg": "barakhadi/21_b/11_bah.svg" }
+    ]
+  },
+  {
+    "id": 22,
+    "en": "Bh",
+    "gu": "ભ",
+    "chars": [
+      { "id": 0, "en": "Bh", "gu": "ભ", "diacritic": " ", "svg": "barakhadi/22_bh/0_bh.svg" },
+      { "id": 1, "en": "Bha", "gu": "ભા", "diacritic": "ા", "svg": "barakhadi/22_bh/1_bha.svg" },
+      { "id": 2, "en": "Bhi", "gu": "ભિ", "diacritic": "િ", "svg": "barakhadi/22_bh/2_bhi.svg" },
+      { "id": 3, "en": "Bhee", "gu": "ભી", "diacritic": "ી", "svg": "barakhadi/22_bh/3_bhee.svg" },
+      { "id": 4, "en": "Bhu", "gu": "ભુ", "diacritic": "ુ", "svg": "barakhadi/22_bh/4_bhu.svg" },
+      { "id": 5, "en": "Bhoo", "gu": "ભૂ", "diacritic": "ૂ", "svg": "barakhadi/22_bh/5_bhoo.svg" },
+      { "id": 6, "en": "Bhe", "gu": "ભે", "diacritic": "ે", "svg": "barakhadi/22_bh/6_bhe.svg" },
+      { "id": 7, "en": "Bhai", "gu": "ભૈ", "diacritic": "ૈ", "svg": "barakhadi/22_bh/7_bhai.svg" },
+      { "id": 8, "en": "Bho", "gu": "ભો", "diacritic": "ો", "svg": "barakhadi/22_bh/8_bho.svg" },
+      { "id": 9, "en": "Bhau", "gu": "ભૌ", "diacritic": "ૌ", "svg": "barakhadi/22_bh/9_bhau.svg" },
+      { "id": 10, "en": "Bham", "gu": "ભં", "diacritic": "ં", "svg": "barakhadi/22_bh/10_bham.svg" },
+      { "id": 11, "en": "Bhah", "gu": "ભઃ", "diacritic": "ઃ", "svg": "barakhadi/22_bh/11_bhah.svg" }
+    ]
+  },
+  {
+    "id": 23,
+    "en": "M",
+    "gu": "મ",
+    "chars": [
+      { "id": 0, "en": "M", "gu": "મ", "diacritic": " ", "svg": "barakhadi/23_m/0_m.svg" },
+      { "id": 1, "en": "Ma", "gu": "મા", "diacritic": "ા", "svg": "barakhadi/23_m/1_ma.svg" },
+      { "id": 2, "en": "Mi", "gu": "મિ", "diacritic": "િ", "svg": "barakhadi/23_m/2_mi.svg" },
+      { "id": 3, "en": "Mee", "gu": "મી", "diacritic": "ી", "svg": "barakhadi/23_m/3_mee.svg" },
+      { "id": 4, "en": "Mu", "gu": "મુ", "diacritic": "ુ", "svg": "barakhadi/23_m/4_mu.svg" },
+      { "id": 5, "en": "Moo", "gu": "મૂ", "diacritic": "ૂ", "svg": "barakhadi/23_m/5_moo.svg" },
+      { "id": 6, "en": "Me", "gu": "મે", "diacritic": "ે", "svg": "barakhadi/23_m/6_me.svg" },
+      { "id": 7, "en": "Mai", "gu": "મૈ", "diacritic": "ૈ", "svg": "barakhadi/23_m/7_mai.svg" },
+      { "id": 8, "en": "Mo", "gu": "મો", "diacritic": "ો", "svg": "barakhadi/23_m/8_mo.svg" },
+      { "id": 9, "en": "Mau", "gu": "મૌ", "diacritic": "ૌ", "svg": "barakhadi/23_m/9_mau.svg" },
+      { "id": 10, "en": "Mam", "gu": "મં", "diacritic": "ં", "svg": "barakhadi/23_m/10_mam.svg" },
+      { "id": 11, "en": "Mah", "gu": "મઃ", "diacritic": "ઃ", "svg": "barakhadi/23_m/11_mah.svg" }
+    ]
+  },
+  {
+    "id": 24,
+    "en": "Y",
+    "gu": "ય",
+    "chars": [
+      { "id": 0, "en": "Y", "gu": "ય", "diacritic": " ", "svg": "barakhadi/24_y/0_y.svg" },
+      { "id": 1, "en": "Ya", "gu": "યા", "diacritic": "ા", "svg": "barakhadi/24_y/1_ya.svg" },
+      { "id": 2, "en": "Yi", "gu": "યિ", "diacritic": "િ", "svg": "barakhadi/24_y/2_yi.svg" },
+      { "id": 3, "en": "Yee", "gu": "યી", "diacritic": "ી", "svg": "barakhadi/24_y/3_yee.svg" },
+      { "id": 4, "en": "Yu", "gu": "યુ", "diacritic": "ુ", "svg": "barakhadi/24_y/4_yu.svg" },
+      { "id": 5, "en": "Yoo", "gu": "યૂ", "diacritic": "ૂ", "svg": "barakhadi/24_y/5_yoo.svg" },
+      { "id": 6, "en": "Ye", "gu": "યે", "diacritic": "ે", "svg": "barakhadi/24_y/6_ye.svg" },
+      { "id": 7, "en": "Yai", "gu": "યૈ", "diacritic": "ૈ", "svg": "barakhadi/24_y/7_yai.svg" },
+      { "id": 8, "en": "Yo", "gu": "યો", "diacritic": "ો", "svg": "barakhadi/24_y/8_yo.svg" },
+      { "id": 9, "en": "Yau", "gu": "યૌ", "diacritic": "ૌ", "svg": "barakhadi/24_y/9_yau.svg" },
+      { "id": 10, "en": "Yam", "gu": "યં", "diacritic": "ં", "svg": "barakhadi/24_y/10_yam.svg" },
+      { "id": 11, "en": "Yah", "gu": "યઃ", "diacritic": "ઃ", "svg": "barakhadi/24_y/11_yah.svg" }
+    ]
+  },
+  {
+    "id": 25,
+    "en": "R",
+    "gu": "ર",
+    "chars": [
+      { "id": 0, "en": "R", "gu": "ર", "diacritic": " ", "svg": "barakhadi/25_r/0_r.svg" },
+      { "id": 1, "en": "Ra", "gu": "રા", "diacritic": "ા", "svg": "barakhadi/25_r/1_ra.svg" },
+      { "id": 2, "en": "Ri", "gu": "રિ", "diacritic": "િ", "svg": "barakhadi/25_r/2_ri.svg" },
+      { "id": 3, "en": "Ree", "gu": "રી", "diacritic": "ી", "svg": "barakhadi/25_r/3_ree.svg" },
+      { "id": 4, "en": "Ru", "gu": "રુ", "diacritic": "ુ", "svg": "barakhadi/25_r/4_ru.svg" },
+      { "id": 5, "en": "Roo", "gu": "રૂ", "diacritic": "ૂ", "svg": "barakhadi/25_r/5_roo.svg" },
+      { "id": 6, "en": "Re", "gu": "રે", "diacritic": "ે", "svg": "barakhadi/25_r/6_re.svg" },
+      { "id": 7, "en": "Rai", "gu": "રૈ", "diacritic": "ૈ", "svg": "barakhadi/25_r/7_rai.svg" },
+      { "id": 8, "en": "Ro", "gu": "રો", "diacritic": "ો", "svg": "barakhadi/25_r/8_ro.svg" },
+      { "id": 9, "en": "Rau", "gu": "રૌ", "diacritic": "ૌ", "svg": "barakhadi/25_r/9_rau.svg" },
+      { "id": 10, "en": "Ram", "gu": "રં", "diacritic": "ં", "svg": "barakhadi/25_r/10_ram.svg" },
+      { "id": 11, "en": "Rah", "gu": "રઃ", "diacritic": "ઃ", "svg": "barakhadi/25_r/11_rah.svg" }
+    ]
+  },
+  {
+    "id": 26,
+    "en": "L",
+    "gu": "લ",
+    "chars": [
+      { "id": 0, "en": "L", "gu": "લ", "diacritic": " ", "svg": "barakhadi/26_l/0_l.svg" },
+      { "id": 1, "en": "La", "gu": "લા", "diacritic": "ા", "svg": "barakhadi/26_l/1_la.svg" },
+      { "id": 2, "en": "Li", "gu": "લિ", "diacritic": "િ", "svg": "barakhadi/26_l/2_li.svg" },
+      { "id": 3, "en": "Le", "gu": "લી", "diacritic": "ી", "svg": "barakhadi/26_l/3_le.svg" },
+      { "id": 4, "en": "Lu", "gu": "લુ", "diacritic": "ુ", "svg": "barakhadi/26_l/4_lu.svg" },
+      { "id": 5, "en": "Loo", "gu": "લૂ", "diacritic": "ૂ", "svg": "barakhadi/26_l/5_loo.svg" },
+      { "id": 6, "en": "Le", "gu": "લે", "diacritic": "ે", "svg": "barakhadi/26_l/6_le.svg" },
+      { "id": 7, "en": "Lai", "gu": "લૈ", "diacritic": "ૈ", "svg": "barakhadi/26_l/7_lai.svg" },
+      { "id": 8, "en": "Lo", "gu": "લો", "diacritic": "ો", "svg": "barakhadi/26_l/8_lo.svg" },
+      { "id": 9, "en": "Lau", "gu": "લૌ", "diacritic": "ૌ", "svg": "barakhadi/26_l/9_lau.svg" },
+      { "id": 10, "en": "Lam", "gu": "લં", "diacritic": "ં", "svg": "barakhadi/26_l/10_lam.svg" },
+      { "id": 11, "en": "Lah", "gu": "લઃ", "diacritic": "ઃ", "svg": "barakhadi/26_l/11_lah.svg" }
+    ]
+  },
+  {
+    "id": 27,
+    "en": "V",
+    "gu": "વ",
+    "chars": [
+      { "id": 0, "en": "V", "gu": "વ", "diacritic": " ", "svg": "barakhadi/27_v/0_v.svg" },
+      { "id": 1, "en": "Va", "gu": "વા", "diacritic": "ા", "svg": "barakhadi/27_v/1_va.svg" },
+      { "id": 2, "en": "Vi", "gu": "વિ", "diacritic": "િ", "svg": "barakhadi/27_v/2_vi.svg" },
+      { "id": 3, "en": "Vee", "gu": "વી", "diacritic": "ી", "svg": "barakhadi/27_v/3_vee.svg" },
+      { "id": 4, "en": "Vu", "gu": "વુ", "diacritic": "ુ", "svg": "barakhadi/27_v/4_vu.svg" },
+      { "id": 5, "en": "Voo", "gu": "વૂ", "diacritic": "ૂ", "svg": "barakhadi/27_v/5_voo.svg" },
+      { "id": 6, "en": "Ve", "gu": "વે", "diacritic": "ે", "svg": "barakhadi/27_v/6_ve.svg" },
+      { "id": 7, "en": "Vai", "gu": "વૈ", "diacritic": "ૈ", "svg": "barakhadi/27_v/7_vai.svg" },
+      { "id": 8, "en": "Vo", "gu": "વો", "diacritic": "ો", "svg": "barakhadi/27_v/8_vo.svg" },
+      { "id": 9, "en": "Vau", "gu": "વૌ", "diacritic": "ૌ", "svg": "barakhadi/27_v/9_vau.svg" },
+      { "id": 10, "en": "Vam", "gu": "વં", "diacritic": "ં", "svg": "barakhadi/27_v/10_vam.svg" },
+      { "id": 11, "en": "Vah", "gu": "વઃ", "diacritic": "ઃ", "svg": "barakhadi/27_v/11_vah.svg" }
+    ]
+  },
+  {
+    "id": 28,
+    "en": "Sh",
+    "gu": "શ",
+    "chars": [
+      { "id": 0, "en": "Sh", "gu": "શ", "diacritic": " ", "svg": "barakhadi/28_sh/0_sh.svg" },
+      { "id": 1, "en": "Sha", "gu": "શા", "diacritic": "ા", "svg": "barakhadi/28_sh/1_sha.svg" },
+      { "id": 2, "en": "Shi", "gu": "શિ", "diacritic": "િ", "svg": "barakhadi/28_sh/2_shi.svg" },
+      { "id": 3, "en": "Shee", "gu": "શી", "diacritic": "ી", "svg": "barakhadi/28_sh/3_shee.svg" },
+      { "id": 4, "en": "Shu", "gu": "શુ", "diacritic": "ુ", "svg": "barakhadi/28_sh/4_shu.svg" },
+      { "id": 5, "en": "Shoo", "gu": "શૂ", "diacritic": "ૂ", "svg": "barakhadi/28_sh/5_shoo.svg" },
+      { "id": 6, "en": "She", "gu": "શે", "diacritic": "ે", "svg": "barakhadi/28_sh/6_she.svg" },
+      { "id": 7, "en": "Shai", "gu": "શૈ", "diacritic": "ૈ", "svg": "barakhadi/28_sh/7_shai.svg" },
+      { "id": 8, "en": "Sho", "gu": "શો", "diacritic": "ો", "svg": "barakhadi/28_sh/8_sho.svg" },
+      { "id": 9, "en": "Shau", "gu": "શૌ", "diacritic": "ૌ", "svg": "barakhadi/28_sh/9_shau.svg" },
+      { "id": 10, "en": "Sham", "gu": "શં", "diacritic": "ં", "svg": "barakhadi/28_sh/10_sham.svg" },
+      { "id": 11, "en": "Shah", "gu": "શઃ", "diacritic": "ઃ", "svg": "barakhadi/28_sh/11_shah.svg" }
+    ]
+  },
+  {
+    "id": 29,
+    "en": "Sh",
+    "gu": "ષ",
+    "chars": [
+      { "id": 0, "en": "Sh", "gu": "ષ", "diacritic": " ", "svg": "barakhadi/29_sh/0_sh.svg" },
+      { "id": 1, "en": "Sha", "gu": "ષા", "diacritic": "ા", "svg": "barakhadi/29_sh/1_sha.svg" },
+      { "id": 2, "en": "Shi", "gu": "ષિ", "diacritic": "િ", "svg": "barakhadi/29_sh/2_shi.svg" },
+      { "id": 3, "en": "Shee", "gu": "ષી", "diacritic": "ી", "svg": "barakhadi/29_sh/3_shee.svg" },
+      { "id": 4, "en": "Shu", "gu": "ષુ", "diacritic": "ુ", "svg": "barakhadi/29_sh/4_shu.svg" },
+      { "id": 5, "en": "Shoo", "gu": "ષૂ", "diacritic": "ૂ", "svg": "barakhadi/29_sh/5_shoo.svg" },
+      { "id": 6, "en": "She", "gu": "ષૅ", "diacritic": "ે", "svg": "barakhadi/29_sh/6_she.svg" },
+      { "id": 7, "en": "Shai", "gu": "ષૈ", "diacritic": "ૈ", "svg": "barakhadi/29_sh/7_shai.svg" },
+      { "id": 8, "en": "Sho", "gu": "ષૉ", "diacritic": "ો", "svg": "barakhadi/29_sh/8_sho.svg" },
+      { "id": 9, "en": "Shau", "gu": "ષૌ", "diacritic": "ૌ", "svg": "barakhadi/29_sh/9_shau.svg" },
+      { "id": 10, "en": "Sham", "gu": "ષં", "diacritic": "ં", "svg": "barakhadi/29_sh/10_sham.svg" },
+      { "id": 11, "en": "Shah", "gu": "ષઃ", "diacritic": "ઃ", "svg": "barakhadi/29_sh/11_shah.svg" }
+    ]
+  },
+  {
+    "id": 30,
+    "en": "S",
+    "gu": "સ",
+    "chars": [
+      { "id": 0, "en": "S", "gu": "સ", "diacritic": " ", "svg": "barakhadi/30_s/0_s.svg" },
+      { "id": 1, "en": "Sa", "gu": "સા", "diacritic": "ા", "svg": "barakhadi/30_s/1_sa.svg" },
+      { "id": 2, "en": "Si", "gu": "સિ", "diacritic": "િ", "svg": "barakhadi/30_s/2_si.svg" },
+      { "id": 3, "en": "See", "gu": "સી", "diacritic": "ી", "svg": "barakhadi/30_s/3_see.svg" },
+      { "id": 4, "en": "Su", "gu": "સુ", "diacritic": "ુ", "svg": "barakhadi/30_s/4_su.svg" },
+      { "id": 5, "en": "Soo", "gu": "સૂ", "diacritic": "ૂ", "svg": "barakhadi/30_s/5_soo.svg" },
+      { "id": 6, "en": "Se", "gu": "સે", "diacritic": "ે", "svg": "barakhadi/30_s/6_se.svg" },
+      { "id": 7, "en": "Sai", "gu": "સૈ", "diacritic": "ૈ", "svg": "barakhadi/30_s/7_sai.svg" },
+      { "id": 8, "en": "So", "gu": "સો", "diacritic": "ો", "svg": "barakhadi/30_s/8_so.svg" },
+      { "id": 9, "en": "Sau", "gu": "સૌ", "diacritic": "ૌ", "svg": "barakhadi/30_s/9_sau.svg" },
+      { "id": 10, "en": "Sam", "gu": "સં", "diacritic": "ં", "svg": "barakhadi/30_s/10_sam.svg" },
+      { "id": 11, "en": "Sah", "gu": "સઃ", "diacritic": "ઃ", "svg": "barakhadi/30_s/11_sah.svg" }
+    ]
+  },
+  {
+    "id": 31,
+    "en": "H",
+    "gu": "હ",
+    "chars": [
+      { "id": 0, "en": "H", "gu": "હ", "diacritic": " ", "svg": "barakhadi/31_h/0_h.svg" },
+      { "id": 1, "en": "Ha", "gu": "હા", "diacritic": "ા", "svg": "barakhadi/31_h/1_ha.svg" },
+      { "id": 2, "en": "Hi", "gu": "હિ", "diacritic": "િ", "svg": "barakhadi/31_h/2_hi.svg" },
+      { "id": 3, "en": "Hee", "gu": "હી", "diacritic": "ી", "svg": "barakhadi/31_h/3_hee.svg" },
+      { "id": 4, "en": "Hu", "gu": "હુ", "diacritic": "ુ", "svg": "barakhadi/31_h/4_hu.svg" },
+      { "id": 5, "en": "Hoo", "gu": "હૂ", "diacritic": "ૂ", "svg": "barakhadi/31_h/5_hoo.svg" },
+      { "id": 6, "en": "He", "gu": "હે", "diacritic": "ે", "svg": "barakhadi/31_h/6_he.svg" },
+      { "id": 7, "en": "Hai", "gu": "હૈ", "diacritic": "ૈ", "svg": "barakhadi/31_h/7_hai.svg" },
+      { "id": 8, "en": "Ho", "gu": "હો", "diacritic": "ો", "svg": "barakhadi/31_h/8_ho.svg" },
+      { "id": 9, "en": "Hau", "gu": "હૌ", "diacritic": "ૌ", "svg": "barakhadi/31_h/9_hau.svg" },
+      { "id": 10, "en": "Ham", "gu": "હં", "diacritic": "ં", "svg": "barakhadi/31_h/10_ham.svg" },
+      { "id": 11, "en": "Hah", "gu": "હઃ", "diacritic": "ઃ", "svg": "barakhadi/31_h/11_hah.svg" }
+    ]
+  },
+  {
+    "id": 32,
+    "en": "L",
+    "gu": "ળ",
+    "chars": [
+      { "id": 0, "en": "L", "gu": "ળ", "diacritic": " ", "svg": "barakhadi/32_l/0_l.svg" },
+      { "id": 1, "en": "La", "gu": "ળા", "diacritic": "ા", "svg": "barakhadi/32_l/1_la.svg" },
+      { "id": 2, "en": "Li", "gu": "ળિ", "diacritic": "િ", "svg": "barakhadi/32_l/2_li.svg" },
+      { "id": 3, "en": "Lee", "gu": "ળી", "diacritic": "ી", "svg": "barakhadi/32_l/3_lee.svg" },
+      { "id": 4, "en": "Lu", "gu": "ળુ", "diacritic": "ુ", "svg": "barakhadi/32_l/4_lu.svg" },
+      { "id": 5, "en": "Loo", "gu": "ળૂ", "diacritic": "ૂ", "svg": "barakhadi/32_l/5_loo.svg" },
+      { "id": 6, "en": "Le", "gu": "ળૅ", "diacritic": "ે", "svg": "barakhadi/32_l/6_le.svg" },
+      { "id": 7, "en": "Lai", "gu": "ળૈ", "diacritic": "ૈ", "svg": "barakhadi/32_l/7_lai.svg" },
+      { "id": 8, "en": "Lo", "gu": "ળૉ", "diacritic": "ો", "svg": "barakhadi/32_l/8_lo.svg" },
+      { "id": 9, "en": "Lau", "gu": "ળૌ", "diacritic": "ૌ", "svg": "barakhadi/32_l/9_lau.svg" },
+      { "id": 10, "en": "Lam", "gu": "ળં", "diacritic": "ં", "svg": "barakhadi/32_l/10_lam.svg" },
+      { "id": 11, "en": "lah", "gu": "ળઃ", "diacritic": "ઃ", "svg": "barakhadi/32_l/11_lah.svg" }
+    ]
+  },
+  {
+    "id": 33,
+    "en": "X",
+    "gu": "ક્ષ",
+    "chars": [
+      { "id": 0, "en": "X", "gu": "ક્ષ", "diacritic": " ", "svg": "barakhadi/33_x/0_x.svg" },
+      { "id": 1, "en": "Xa", "gu": "ક્ષા", "diacritic": "ા", "svg": "barakhadi/33_x/1_xa.svg" },
+      { "id": 2, "en": "Xi", "gu": "ક્ષિ", "diacritic": "િ", "svg": "barakhadi/33_x/2_xi.svg" },
+      { "id": 3, "en": "Xee", "gu": "ક્ષી", "diacritic": "ી", "svg": "barakhadi/33_x/3_xee.svg" },
+      { "id": 4, "en": "Xu", "gu": "ક્ષુ", "diacritic": "ુ", "svg": "barakhadi/33_x/4_xu.svg" },
+      { "id": 5, "en": "Xoo", "gu": "ક્ષૂ", "diacritic": "ૂ", "svg": "barakhadi/33_x/5_xoo.svg" },
+      { "id": 6, "en": "Xe", "gu": "ક્ષૅ", "diacritic": "ે", "svg": "barakhadi/33_x/6_xe.svg" },
+      { "id": 7, "en": "Xai", "gu": "ક્ષૈ", "diacritic": "ૈ", "svg": "barakhadi/33_x/7_xai.svg" },
+      { "id": 8, "en": "Xo", "gu": "ક્ષૉ", "diacritic": "ો", "svg": "barakhadi/33_x/8_xo.svg" },
+      { "id": 9, "en": "Xau", "gu": "ક્ષૌ", "diacritic": "ૌ", "svg": "barakhadi/33_x/9_xau.svg" },
+      { "id": 10, "en": "Xam", "gu": "ક્ષં", "diacritic": "ં", "svg": "barakhadi/33_x/10_xam.svg" },
+      { "id": 11, "en": "kshah", "gu": "ક્ષઃ", "diacritic": "ઃ", "svg": "barakhadi/33_x/11_kshah.svg" }
+    ]
+  },
+  {
+    "id": 34,
+    "en": "Gy",
+    "gu": "જ્ઞ",
+    "chars": [
+      { "id": 0, "en": "Gy", "gu": "જ્ઞ", "diacritic": " ", "svg": "barakhadi/34_gy/0_gy.svg" },
+      { "id": 1, "en": "Gya", "gu": "જ્ઞા", "diacritic": "ા", "svg": "barakhadi/34_gy/1_gya.svg" },
+      { "id": 2, "en": "Gyi", "gu": "જ્ઞિ", "diacritic": "િ", "svg": "barakhadi/34_gy/2_gyi.svg" },
+      { "id": 3, "en": "Gyee", "gu": "જ્ઞી", "diacritic": "ી", "svg": "barakhadi/34_gy/3_gyee.svg" },
+      { "id": 4, "en": "Gyu", "gu": "જ્ઞુ", "diacritic": "ુ", "svg": "barakhadi/34_gy/4_gyu.svg" },
+      { "id": 5, "en": "Gyoo", "gu": "જ્ઞૂ", "diacritic": "ૂ", "svg": "barakhadi/34_gy/5_gyoo.svg" },
+      { "id": 6, "en": "Gye", "gu": "જ્ઞૅ", "diacritic": "ે", "svg": "barakhadi/34_gy/6_gye.svg" },
+      { "id": 7, "en": "Gyai", "gu": "જ્ઞૈ", "diacritic": "ૈ", "svg": "barakhadi/34_gy/7_gyai.svg" },
+      { "id": 8, "en": "Gyo", "gu": "જ્ઞૉ", "diacritic": "ો", "svg": "barakhadi/34_gy/8_gyo.svg" },
+      { "id": 9, "en": "Gyau", "gu": "જ્ઞૌ", "diacritic": "ૌ", "svg": "barakhadi/34_gy/9_gyau.svg" },
+      { "id": 10, "en": "Gyam", "gu": "જ્ઞં", "diacritic": "ં", "svg": "barakhadi/34_gy/10_gyam.svg" },
+      { "id": 11, "en": "gyah", "gu": "જ્ઞઃ", "diacritic": "ઃ", "svg": "barakhadi/34_gy/11_gyah.svg" }
+    ]
+  }
+]

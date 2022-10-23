@@ -10,41 +10,36 @@
 
 var copy = require('recursive-copy');
 
-var assetsToCopy = './assets/barakhdi';
-var iOSAssetDir = './ios/assets/svgs';
-var androidAssetDir = './android/app/src/main/assets/svgs';
+var sourceAssets = ['./assets/barakhadi', './assets/numbers', './assets/barakhadi', './assets/numbers'];
+let destAssets = [
+  './ios/assets/svgs/barakhadi',
+  './ios/assets/svgs/numbers',
+  './android/app/src/main/assets/svgs/barakhadi',
+  './android/app/src/main/assets/svgs/numbers',
+];
 
-copy(
-  assetsToCopy,
-  iOSAssetDir,
-  {
-    overwrite: true,
-    expand: true,
-    dot: true,
-    junk: true,
-  },
-  error => {
-    console.log(error);
-  },
-);
+for (let i = 0; i < sourceAssets.length; i++) {
+  const sourceAsset = sourceAssets[i];
+  const destAsset = destAssets[i];
+  copy(
+    sourceAsset,
+    destAsset,
+    {
+      overwrite: true,
+      expand: true,
+      dot: true,
+      junk: true,
+      debug: true,
+    },
+    error => {
+      console.log(error);
+    },
+  );
+}
 
-copy(
-  assetsToCopy,
-  androidAssetDir,
-  {
-    overwrite: true,
-    expand: true,
-    dot: true,
-    junk: true,
-  },
-  error => {
-    console.log(error);
-  },
-);
-
-/* FOR FUTURE USE
-const barakhdiFolder = './assets/barakhdi';
-const destFolder = './assets/barakhdi1';
+/*// FOR FUTURE USE
+const barakhadiFolder = './assets/test';
+const destFolder = './assets/numbers';
 const fs = require('fs');
 const { XMLParser, XMLBuilder } = require('fast-xml-parser');
 const path = require('path');
@@ -99,7 +94,7 @@ function getFiles(dir) {
   for (var i in dirs) {
     var current_dir = dir + '/' + dirs[i];
     var currentDirName = path.basename(current_dir);
-    var files = fs.readdirSync(current_dir);
+    var files = fs.readdirSync(current_dir).filter(v => !v.includes('.DS_Store'));
 
     for (let j = 0; j < files.length; j++) {
       const fileName = files[j];
@@ -108,10 +103,10 @@ function getFiles(dir) {
       if (!fs.existsSync(destFolder + '/' + currentDirName)) {
         fs.mkdirSync(destFolder + '/' + currentDirName);
       }
-      fs.writeFileSync(destFolder + '/' + currentDirName + '/' + fileName, newSVGString);
+      fs.writeFileSync(destFolder + '/' + fileName, newSVGString);
     }
   }
 }
 
-// getFiles(barakhdiFolder);
+getFiles(barakhadiFolder);
 */
