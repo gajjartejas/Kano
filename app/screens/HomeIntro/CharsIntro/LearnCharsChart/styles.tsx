@@ -63,7 +63,8 @@ const styles = StyleSheet.create({
   emptyListHeader: {
     paddingVertical: 8,
   },
-  listContainer: { paddingVertical: 8 },
+  listContentContainer: { paddingVertical: 8 },
+  listContainer: { flex: 1 },
 });
 
 export default styles;

@@ -1,16 +1,17 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import { View, SectionList, SectionListRenderItemInfo } from 'react-native';
+import { View, useWindowDimensions } from 'react-native';
 
 //ThirdParty
 import { Appbar, Text, useTheme } from 'react-native-paper';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
+import { FlashList } from '@shopify/flash-list';
 
 //App modules
 import Components from 'app/components';
 import styles from './styles';
 import Hooks from 'app/hooks/index';
-import { ICharCellItem, ICharCellListSection } from 'app/components/CharCellItem';
+import { ICharCellItem } from 'app/components/CharCellItem';
 import * as RouterParamTypes from 'app/config/router-params';
 
 //Params
@@ -34,6 +35,8 @@ const LearnCharsChart = ({ navigation, route }: Props) => {
   const { type } = route.params;
   const groupedEntries = Hooks.ChartItemForTypes.useChartItemForTypes(type);
   const { t } = useTranslation();
+  const mappedGroupedEntries = groupedEntries.map(v => [v.title, v.data]).flat(1);
+  const dim = useWindowDimensions();
 
   //States
   const [title, setTitle] = useState('');
@@ -91,30 +94,35 @@ const LearnCharsChart = ({ navigation, route }: Props) => {
     );
   };
 
-  const renderSection = (info: SectionListRenderItemInfo<ICharCellItem, ICharCellListSection>) => {
-    if (info.index !== 0) {
-      return null;
+  const renderSection = ({ item }: { item: string | ICharCellItem[] }) => {
+    if (typeof item === 'string') {
+      return renderSectionHeader(item);
+    } else {
+      return (
+        <View style={styles.sectionItem}>
+          {item.map((v, index) => {
+            return renderItem(
+              v,
+              index,
+              groupedEntries.findIndex(p => p.data === item),
+            );
+          })}
+        </View>
+      );
     }
-    return (
-      <View style={styles.sectionItem}>
-        {info.section.data.map((item, index) => {
-          return renderItem(item, index, groupedEntries.indexOf(info.section));
-        })}
-      </View>
-    );
   };
 
   const onGoBack = () => {
     navigation.pop();
   };
 
-  const renderSectionHeader = (info: { section: { title: string } }) => {
-    if (groupedEntries.length < 2) {
-      return <View style={styles.emptyListHeader} />;
+  const renderSectionHeader = (titleText: string) => {
+    if (!titleText || titleText.length < 1) {
+      return null;
     }
     return (
       <View style={[styles.listHeaderView, { backgroundColor: colors.background }]}>
-        <Text style={[styles.listHeaderText, { color: colors.textTitle }]}>{info.section.title}</Text>
+        <Text style={[styles.listHeaderText, { color: colors.textTitle }]}>{titleText}</Text>
       </View>
     );
   };
@@ -127,17 +135,18 @@ const LearnCharsChart = ({ navigation, route }: Props) => {
       </Appbar.Header>
       <View style={styles.safeArea}>
         {!!numberOfColumns && (
-          <SectionList
-            legacyImplementation={false}
-            sections={groupedEntries}
-            renderItem={renderSection}
-            keyExtractor={item => item.id.toString()}
-            style={{ paddingHorizontal: CONTAINER_SPACING }}
-            renderSectionHeader={renderSectionHeader}
-            contentContainerStyle={styles.listContainer}
-            stickySectionHeadersEnabled={false}
-            stickyHeaderHiddenOnScroll={true}
-          />
+          <View style={[styles.listContainer, { paddingHorizontal: CONTAINER_SPACING - 1 }]}>
+            <FlashList
+              data={mappedGroupedEntries}
+              renderItem={renderSection}
+              getItemType={item => {
+                return typeof item === 'string' ? 'sectionHeader' : 'row';
+              }}
+              contentContainerStyle={styles.listContentContainer}
+              stickyHeaderHiddenOnScroll={true}
+              estimatedItemSize={dim.width - CONTAINER_SPACING * 2}
+            />
+          </View>
         )}
       </View>
     </View>
