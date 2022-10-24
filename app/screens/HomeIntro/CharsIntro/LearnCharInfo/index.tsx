@@ -30,13 +30,13 @@ const LearnCharInfo = ({ navigation, route }: Props) => {
   const { colors } = useTheme();
   const { t } = useTranslation();
   const dimension = useWindowDimensions();
-  const { index, sectionIndex, groupedEntries } = route.params;
+  const { index: currentIndex, sectionIndex, groupedEntries } = route.params;
   const bottomSheetRef = useRef<BottomSheet>(null);
 
   //States
   const [showBottomSheet, setShowBottomSheet] = useState(false);
 
-  const renderItem = ({ item }: { item: ICharCellItem; index: number }) => {
+  const renderItem = ({ item, index }: { item: ICharCellItem; index: number }) => {
     return (
       <Components.LearnCharInfoItemCell
         item={item}
@@ -63,6 +63,12 @@ const LearnCharInfo = ({ navigation, route }: Props) => {
     console.log('handleSheetChange', idx);
   }, []);
 
+  const getItemLayout = (data: ICharCellItem[] | null | undefined, index: number) => ({
+    length: dimension.width,
+    offset: dimension.width * index,
+    index,
+  });
+
   return (
     <View style={[styles.container, { backgroundColor: colors.background }]}>
       <Appbar.Header style={{ backgroundColor: colors.background }}>
@@ -84,8 +90,9 @@ const LearnCharInfo = ({ navigation, route }: Props) => {
           renderItem={renderItem}
           keyExtractor={photo => photo.id.toString()}
           style={{ width: dimension.width }}
-          initialScrollIndex={index}
+          initialScrollIndex={currentIndex}
           onScrollToIndexFailed={() => {}}
+          getItemLayout={getItemLayout}
         />
       </View>
       {showBottomSheet && <Components.StrokeOrderBottomSheet ref={bottomSheetRef} onChange={handleSheetChange} />}
