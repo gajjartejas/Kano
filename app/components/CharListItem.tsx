@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { View, StyleSheet } from 'react-native';
 
 //Third Party
@@ -128,4 +128,4 @@ const styles = StyleSheet.create({
   textContainer: { marginRight: 8, flex: 1 },
 });
 
-export default CharListItem;
+export default memo(CharListItem, () => false);

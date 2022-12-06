@@ -117,18 +117,25 @@
     "listItemSection1Title": "Learn",
     "listItemsSection1": {
       "itemTitle1": "Characters Chart",
+      "itemTitleNum1": "Numbers Chart",
       "itemSubTitle1": "10 hours, 19 lessons",
       "itemTitle2": "Learn in Sequence",
       "itemSubTitle2": "10 hours, 19 lessons",
       "itemTitle3": "Memorize by Random Order",
-      "itemSubTitle3": "10 hours, 19 lessons"
+      "itemSubTitle3": "10 hours, 19 lessons",
+      "itemTitle4": "Learn by Selected Characters",
+      "itemTitleNum4": "Learn by Selected Numbers",
+      "itemSubTitle4": "10 hours, 19 lessons"
     },
     "listItemSection2Title": "Practice",
     "listItemsSection2": {
       "itemTitle1": "Practice by Order",
       "itemSubTitle1": "10 hours, 19 lessons",
       "itemTitle2": "Practice by Random Order",
-      "itemSubTitle2": "10 hours, 19 lessons"
+      "itemSubTitle2": "10 hours, 19 lessons",
+      "itemTitle3": "Practice by Selected Characters",
+      "itemTitleNum3": "Practice by Selected Numbers",
+      "itemSubTitle3": "10 hours, 19 lessons"
     }
   },
   "learnCharsChartScreen": {
@@ -155,7 +162,7 @@
     "playSound": "PLAY SOUND",
     "cellHeader": "Vowel: {{en}}/{{gu}}"
   },
-  "LearnCharsSequenceScreen": {
+  "learnCharsSequenceScreen": {
     "header": {
       "titleVowels": "Learn Vowels (Sequence)",
       "titleConsonants": "Learn Consonants (Sequence)",
@@ -166,5 +173,11 @@
       "title": "SECTION {{section}} COMPLETED!",
       "description": "Congratulation you finished {{section}} section."
     }
+  },
+  "learnBySelectedChar": {
+    "header": {
+      "title": "Select Characters"
+    },
+    "section": "Select at least one character."
   }
 }

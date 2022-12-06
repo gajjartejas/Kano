@@ -8,47 +8,46 @@ import Config from 'app/config';
 import { TouchableRipple, useTheme, Text } from 'react-native-paper';
 
 //Interface
-export interface ICharCellItem {
+export interface ISelectCharCellItem {
   id: number;
-  en: string;
-  gu: string;
-  diacritic: string;
-  svg: string;
+  title: string;
+  subTitle: string;
+  selected: boolean;
 }
 
-export interface ICharCellListSection {
+export interface ISelectCharCellListSection {
   title: string;
-  data: ICharCellItem[];
+  data: ISelectCharCellItem[];
 }
 
 //Interface
 interface ICharCellItemProps {
-  item: ICharCellItem;
+  item: ISelectCharCellItem;
   index: number;
   sectionIndex: number;
-  onPress: (item: ICharCellItem, index: number, sectionIndex: number) => void;
+  onPress: (item: ISelectCharCellItem, index: number, sectionIndex: number) => void;
   numberOfColumns: number;
   cellSpacing: number;
   containerSpacing: number;
+  selected?: boolean;
 }
 
 const CharCellItem = (props: ICharCellItemProps) => {
   //Const
   const { colors } = useTheme();
-  const { item, index, numberOfColumns, cellSpacing, containerSpacing } = props;
-  const sectionIndex = props.sectionIndex;
+  const { item, index, sectionIndex, numberOfColumns, cellSpacing, containerSpacing, selected } = props;
 
   const dim = useWindowDimensions();
 
-  const titleFontSize = [30, 30, 30, 30, 30, 30, 24][numberOfColumns];
+  const titleFontSize = [20, 30, 30, 30, 30, 30, 24][numberOfColumns];
   const subTitleFontSize = [30, 30, 30, 30, 16, 14, 12][numberOfColumns];
-
+  const rnd = sectionIndex + '-' + index;
   return (
     <View
       style={[
         styles.container,
         {
-          backgroundColor: `${colors.card}`,
+          backgroundColor: selected ? `${colors.primary}` : `${colors.card}`,
           shadowColor: `${colors.shadow}`,
           width: (dim.width - containerSpacing * 2 - cellSpacing * numberOfColumns * 2) / numberOfColumns,
           height: (dim.width - containerSpacing * 2) / numberOfColumns,
@@ -61,12 +60,12 @@ const CharCellItem = (props: ICharCellItemProps) => {
         <View style={styles.iconTextContainerView}>
           <View style={styles.iconTextContainer}>
             <Text numberOfLines={1} style={[styles.titleText, { color: colors.textTitle, fontSize: titleFontSize }]}>
-              {item.gu}
+              {rnd}
             </Text>
             <Text
               numberOfLines={2}
               style={[styles.subTitleText, { color: `${colors.textTitle}99`, fontSize: subTitleFontSize }]}>
-              {`${item.en}${item.diacritic ? `/${item.diacritic}` : ''}`}
+              {item.subTitle}
             </Text>
           </View>
         </View>
@@ -83,7 +82,7 @@ const styles = StyleSheet.create({
       width: 0,
       height: 0,
     },
-    elevation: 8,
+    elevation: 4,
     shadowOpacity: 0.2,
     marginBottom: 6,
     marginHorizontal: 3,
@@ -103,4 +102,6 @@ const styles = StyleSheet.create({
   iconTextContainerView: { flex: 1, alignItems: 'center', justifyContent: 'center' },
 });
 
-export default memo(CharCellItem, () => false);
+export default memo(CharCellItem, (p, n) => {
+  return p.selected === n.selected && p.index === n.index && p.sectionIndex === n.sectionIndex;
+});

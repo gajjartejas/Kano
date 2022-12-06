@@ -1,7 +1,6 @@
-import { ICharInfo } from '../models/models/char';
+import { ICharInfo } from 'app/models/models/char';
 
 //ThirdParty
-import { useTranslation } from 'react-i18next';
 
 //App Modules
 import { ICharCellListSection, ICharCellItem } from 'app/components/CharCellItem';
@@ -9,7 +8,6 @@ import consonants from 'app/assets/lang/consonants/consonants.json';
 
 const useConsonantsChartItems = (): ICharCellListSection[] => {
   //Constants
-  const { t } = useTranslation();
 
   const transformCharToCellVM = (charInfo: ICharInfo): ICharCellItem => {
     const transformed = {
@@ -25,7 +23,7 @@ const useConsonantsChartItems = (): ICharCellListSection[] => {
 
   const transformCharsToSectionVM = (cellItems: ICharCellItem[]): ICharCellListSection => {
     return {
-      title: t('learnVowelsListScreen.listItemSection1Title'),
+      title: '',
       data: cellItems,
     };
   };

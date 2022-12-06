@@ -1,5 +1,5 @@
 //App Modules
-import { ICharInfo } from '../models/models/char';
+import { ICharInfo } from 'app/models/models/char';
 
 //ThirdParty
 import { ICharCellListSection, ICharCellItem } from 'app/components/CharCellItem';

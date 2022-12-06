@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { View, StyleSheet, useWindowDimensions } from 'react-native';
 
 //Third Party
@@ -90,4 +90,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default LearnCharInfoItemCell;
+export default memo(LearnCharInfoItemCell, () => false);
