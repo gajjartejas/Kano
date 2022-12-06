@@ -35,6 +35,11 @@ export interface LearnCharsSequenceParams {
   learnMode: LearnCharsMode;
 }
 
+export interface LearnBySelectedCharParams {
+  type: LearnCharsType;
+  learnMode: LearnCharsMode;
+}
+
 export enum LearnCharsMode {
   LearnInSequence = 'LearnInSequence',
   LearnInRandom = 'LearnInRandom',

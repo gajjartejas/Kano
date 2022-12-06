@@ -2,7 +2,7 @@
 import { ICharListSection } from 'app/components/CharListItem';
 import { useTranslation } from 'react-i18next';
 
-const useNumeralListItems = (): ICharListSection[] => {
+const useConsonantListItems = (): ICharListSection[] => {
   //Constants
   const { t } = useTranslation();
 
@@ -31,6 +31,13 @@ const useNumeralListItems = (): ICharListSection[] => {
           iconName: 'random',
           iconFamily: 'font-awesome5',
         },
+        {
+          id: 3,
+          title: t('learnCharsListScreen.listItemsSection1.itemTitle4'),
+          subTitle: t('learnCharsListScreen.listItemsSection1.itemSubTitle4'),
+          iconName: 'random',
+          iconFamily: 'font-awesome5',
+        },
       ],
     },
     {
@@ -50,6 +57,13 @@ const useNumeralListItems = (): ICharListSection[] => {
           iconName: 'random',
           iconFamily: 'font-awesome5',
         },
+        {
+          id: 2,
+          title: t('learnCharsListScreen.listItemsSection2.itemTitle3'),
+          subTitle: t('learnCharsListScreen.listItemsSection2.itemSubTitle3'),
+          iconName: 'tasks',
+          iconFamily: 'font-awesome5',
+        },
       ],
     },
   ];
@@ -57,4 +71,4 @@ const useNumeralListItems = (): ICharListSection[] => {
   return sections;
 };
 
-export default useNumeralListItems;
+export default useConsonantListItems;

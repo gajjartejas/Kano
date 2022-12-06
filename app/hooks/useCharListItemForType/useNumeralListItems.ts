@@ -2,7 +2,7 @@
 import { ICharListSection } from 'app/components/CharListItem';
 import { useTranslation } from 'react-i18next';
 
-const useVowelstListItems = (): ICharListSection[] => {
+const useNumeralListItems = (): ICharListSection[] => {
   //Constants
   const { t } = useTranslation();
 
@@ -12,7 +12,7 @@ const useVowelstListItems = (): ICharListSection[] => {
       data: [
         {
           id: 0,
-          title: t('learnCharsListScreen.listItemsSection1.itemTitle1'),
+          title: t('learnCharsListScreen.listItemsSection1.itemTitleNum1'),
           subTitle: t('learnCharsListScreen.listItemsSection1.itemSubTitle1'),
           iconName: 'table',
           iconFamily: 'font-awesome5',
@@ -21,13 +21,20 @@ const useVowelstListItems = (): ICharListSection[] => {
           id: 1,
           title: t('learnCharsListScreen.listItemsSection1.itemTitle2'),
           subTitle: t('learnCharsListScreen.listItemsSection1.itemSubTitle2'),
-          iconName: 'sort-alpha-down',
+          iconName: 'sort-numeric-down',
           iconFamily: 'font-awesome5',
         },
         {
           id: 2,
           title: t('learnCharsListScreen.listItemsSection1.itemTitle3'),
           subTitle: t('learnCharsListScreen.listItemsSection1.itemSubTitle3'),
+          iconName: 'random',
+          iconFamily: 'font-awesome5',
+        },
+        {
+          id: 3,
+          title: t('learnCharsListScreen.listItemsSection1.itemTitleNum4'),
+          subTitle: t('learnCharsListScreen.listItemsSection1.itemSubTitle4'),
           iconName: 'random',
           iconFamily: 'font-awesome5',
         },
@@ -40,7 +47,7 @@ const useVowelstListItems = (): ICharListSection[] => {
           id: 0,
           title: t('learnCharsListScreen.listItemsSection2.itemTitle1'),
           subTitle: t('learnCharsListScreen.listItemsSection2.itemSubTitle1'),
-          iconName: 'sort-alpha-down',
+          iconName: 'sort-numeric-down',
           iconFamily: 'font-awesome5',
         },
         {
@@ -50,6 +57,13 @@ const useVowelstListItems = (): ICharListSection[] => {
           iconName: 'random',
           iconFamily: 'font-awesome5',
         },
+        {
+          id: 2,
+          title: t('learnCharsListScreen.listItemsSection2.itemTitle3'),
+          subTitle: t('learnCharsListScreen.listItemsSection2.itemSubTitle3'),
+          iconName: 'tasks',
+          iconFamily: 'font-awesome5',
+        },
       ],
     },
   ];
@@ -57,4 +71,4 @@ const useVowelstListItems = (): ICharListSection[] => {
   return sections;
 };
 
-export default useVowelstListItems;
+export default useNumeralListItems;

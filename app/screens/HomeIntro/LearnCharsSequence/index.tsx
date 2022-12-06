@@ -43,7 +43,7 @@ const LearnCharsSequence = ({ navigation, route }: Props) => {
   const { type, learnMode } = route.params;
   const isRandomMode = learnMode === LearnCharsMode.LearnInRandom || learnMode === LearnCharsMode.PracticeInRandom;
 
-  const groupedEntries = Hooks.ChartItemForTypes.useChartSectionsForTypes(type, isRandomMode);
+  const groupedEntries = Hooks.ChartItemForTypes.useChartSectionsForTypes(type, isRandomMode, null);
   const isLearningMode = learnMode === LearnCharsMode.LearnInSequence || learnMode === LearnCharsMode.LearnInRandom;
 
   //States
@@ -128,16 +128,16 @@ const LearnCharsSequence = ({ navigation, route }: Props) => {
   const configInterface = useCallback(() => {
     switch (type) {
       case RouterParamTypes.LearnCharsType.Vowel:
-        setTitle(t('LearnCharsSequenceScreen.header.titleVowels'));
+        setTitle(t('learnCharsSequenceScreen.header.titleVowels'));
         break;
       case RouterParamTypes.LearnCharsType.Constant:
-        setTitle(t('LearnCharsSequenceScreen.header.titleConsonants'));
+        setTitle(t('learnCharsSequenceScreen.header.titleConsonants'));
         break;
       case RouterParamTypes.LearnCharsType.Barakhadi:
-        setTitle(t('LearnCharsSequenceScreen.header.titleBarakhadi'));
+        setTitle(t('learnCharsSequenceScreen.header.titleBarakhadi'));
         break;
       case RouterParamTypes.LearnCharsType.Number:
-        setTitle(t('LearnCharsSequenceScreen.header.titleNumerals'));
+        setTitle(t('learnCharsSequenceScreen.header.titleNumerals'));
         break;
       default:
         break;
@@ -373,8 +373,8 @@ const LearnCharsSequence = ({ navigation, route }: Props) => {
         </View>
       </DraxProvider>
       <Components.AppLevelFinishDialog
-        title={t('LearnCharsSequenceScreen.completeDialog.title', { section: progressSection + 1 })}
-        description={t('LearnCharsSequenceScreen.completeDialog.description', { section: progressSection + 1 })}
+        title={t('learnCharsSequenceScreen.completeDialog.title', { section: progressSection + 1 })}
+        description={t('learnCharsSequenceScreen.completeDialog.description', { section: progressSection + 1 })}
         buttonTitle={t('general.continue')}
         visible={finishLevelVisible}
         onPressHideDialog={onPressHideDialog}

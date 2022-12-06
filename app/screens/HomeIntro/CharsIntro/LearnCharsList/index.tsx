@@ -19,6 +19,7 @@ type RootStackParamList = {
   LearnCharsList: RouterParamTypes.LearnCharsListParams;
   LearnCharsChart: RouterParamTypes.LearnCharsChartParams;
   LearnCharsSequence: RouterParamTypes.LearnCharsSequenceParams;
+  LearnBySelectedChar: RouterParamTypes.LearnBySelectedCharParams;
 };
 
 type Props = NativeStackScreenProps<RootStackParamList, 'LearnCharsList'>;
@@ -30,9 +31,9 @@ const LearnCharsList = ({ navigation, route }: Props) => {
 
   //Constants
   const { colors } = useTheme();
-  const groupedEntries = Hooks.useVowelstListItems();
-  const { t } = useTranslation();
   const { type } = route.params;
+  const groupedEntries = Hooks.useCharListItemForType(type);
+  const { t } = useTranslation();
 
   //States
   const [title, setTitle] = useState('');
@@ -73,10 +74,14 @@ const LearnCharsList = ({ navigation, route }: Props) => {
       navigation.push('LearnCharsSequence', { type, learnMode: LearnCharsMode.LearnInSequence });
     } else if (sectionIndex === 0 && index === 2) {
       navigation.push('LearnCharsSequence', { type, learnMode: LearnCharsMode.LearnInRandom });
+    } else if (sectionIndex === 0 && index === 3) {
+      navigation.push('LearnBySelectedChar', { type, learnMode: LearnCharsMode.LearnInSequence });
     } else if (sectionIndex === 1 && index === 0) {
       navigation.push('LearnCharsSequence', { type, learnMode: LearnCharsMode.PracticeInSequence });
     } else if (sectionIndex === 1 && index === 1) {
       navigation.push('LearnCharsSequence', { type, learnMode: LearnCharsMode.PracticeInRandom });
+    } else if (sectionIndex === 1 && index === 2) {
+      navigation.push('LearnBySelectedChar', { type, learnMode: LearnCharsMode.PracticeInSequence });
     }
   };
 
