@@ -9,9 +9,9 @@ import { ISelectCharCellListSection } from 'app/components/CharSelectCellItem';
 
 const useChartItemForTypes = (
   type: RouterParamTypes.LearnCharsType,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   onlyInclude: Set<string> | null,
 ): ICharCellListSection[] => {
-  console.log(onlyInclude);
   const vowels = useVowels();
   const barakhadi = useBarakhadis();
   const consonants = useConsonants();
