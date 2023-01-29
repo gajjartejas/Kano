@@ -30,19 +30,20 @@ export interface LearnCharInfoParams {
   groupedEntries: ICharCellListSection[];
   type: LearnCharsType;
 }
-export interface LearnCharsSequenceParams {
+export interface LearnCharsCardParams {
   type: LearnCharsType;
   learnMode: LearnCharsMode;
+  isRandomMode: boolean;
+  onlyInclude?: Set<string>;
 }
 
 export interface LearnBySelectedCharParams {
   type: LearnCharsType;
   learnMode: LearnCharsMode;
+  isRandomMode: boolean;
 }
 
 export enum LearnCharsMode {
-  LearnInSequence = 'LearnInSequence',
-  LearnInRandom = 'LearnInRandom',
-  PracticeInSequence = 'PracticeInSequence',
-  PracticeInRandom = 'PracticeInRandom',
+  Learn = 'Learn',
+  Practice = 'Practice',
 }

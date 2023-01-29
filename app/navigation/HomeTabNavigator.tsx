@@ -20,7 +20,7 @@ import LearnCharsList from 'app/screens/HomeIntro/CharsIntro/LearnCharsList';
 import GujaratiScriptIntro from 'app/screens/HomeIntro/IntroductionToGujaratiScript/GujaratiScriptIntro';
 import LearnCharsChart from 'app/screens/HomeIntro/CharsIntro/LearnCharsChart';
 import LearnCharInfo from 'app/screens/HomeIntro/CharsIntro/LearnCharInfo';
-import LearnCharsSequence from 'app/screens/HomeIntro/LearnCharsSequence';
+import LearnCharsCard from 'app/screens/HomeIntro/LearnCharsCard';
 import LearnBySelectedChar from 'app/screens/HomeIntro/CharsIntro/LearnBySelectedChar';
 
 const Tab = createMaterialBottomTabNavigator();
@@ -72,8 +72,10 @@ const LoggedInTabNavigator: React.FC<IProps> = () => {
       <Stack.Screen name="GujaratiScriptIntro" component={GujaratiScriptIntro} options={{ headerShown: false }} />
       <Stack.Screen name="LearnCharsChart" component={LearnCharsChart} options={{ headerShown: false }} />
       <Stack.Screen name="LearnCharInfo" component={LearnCharInfo} options={{ headerShown: false }} />
-      <Stack.Screen name="LearnCharsSequence" component={LearnCharsSequence} options={{ headerShown: false }} />
-      <Stack.Screen name="LearnBySelectedChar" component={LearnBySelectedChar} options={{ headerShown: false }} />
+      <Stack.Screen name="LearnCharsCard" component={LearnCharsCard} options={{ headerShown: false }} />
+      <Stack.Group screenOptions={{ presentation: 'modal' }}>
+        <Stack.Screen name="LearnBySelectedChar" component={LearnBySelectedChar} options={{ headerShown: false }} />
+      </Stack.Group>
     </LoggedInStack.Navigator>
   );
 };

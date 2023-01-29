@@ -43,7 +43,6 @@ function AboutFeedbackDialog(props: IAboutFeedbackDialogProps) {
           <Icon type="ionicon" name="mail" color={`${colors.onBackground}88`} size={24} />
         </TouchableRipple>
       </View>
-
       <Dialog.Actions>
         <Button onPress={props.onPressHideDialog}>{t('general.close')}</Button>
       </Dialog.Actions>

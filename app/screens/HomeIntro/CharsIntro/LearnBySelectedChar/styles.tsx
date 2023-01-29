@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     color: 'white',
   },
   listHeaderView: {
-    paddingVertical: 16,
+    paddingTop: 16,
     flexDirection: 'row',
     justifyContent: 'space-between',
   },

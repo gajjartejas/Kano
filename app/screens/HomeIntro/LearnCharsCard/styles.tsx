@@ -128,6 +128,7 @@ const styles = StyleSheet.create({
     paddingVertical: 6,
   },
   animatedView: { width: '80%', flex: 1 },
+  randomOrderButton: { fontSize: 10, alignSelf: 'center' },
 });
 
 export default styles;

@@ -1,36 +1,34 @@
 import { ICharInfo } from 'app/models/models/char';
 
 //ThirdParty
-
 //App Modules
-import { ICharCellListSection, ICharCellItem } from 'app/components/CharCellItem';
+import { ICharCellItem, ICharCellListSection } from 'app/components/CharCellItem';
 import consonants from 'app/assets/lang/consonants/consonants.json';
+import { useTranslation } from 'react-i18next';
 
 const useConsonantsChartItems = (): ICharCellListSection[] => {
   //Constants
+  const { t } = useTranslation();
 
   const transformCharToCellVM = (charInfo: ICharInfo): ICharCellItem => {
-    const transformed = {
+    return {
       id: charInfo.id,
       en: charInfo.en,
       gu: charInfo.gu,
       diacritic: charInfo.diacritic!,
       svg: charInfo.svg,
     };
-
-    return transformed;
   };
 
   const transformCharsToSectionVM = (cellItems: ICharCellItem[]): ICharCellListSection => {
     return {
-      title: '',
+      title: t('learnCharsChartScreen.header.consonants'),
       data: cellItems,
     };
   };
 
-  let cellVMs = consonants.map((v: ICharInfo) => transformCharToCellVM(v));
-  let sectionsVMs = [transformCharsToSectionVM(cellVMs)];
-  return sectionsVMs;
+  const cellVMs = consonants.map((v: ICharInfo) => transformCharToCellVM(v));
+  return [transformCharsToSectionVM(cellVMs)];
 };
 
 export default useConsonantsChartItems;

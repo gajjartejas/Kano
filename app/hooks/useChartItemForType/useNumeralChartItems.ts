@@ -2,24 +2,26 @@
 import { ICharInfo } from 'app/models/models/char';
 
 //ThirdParty
-import { ICharCellListSection, ICharCellItem } from 'app/components/CharCellItem';
+import { ICharCellItem, ICharCellListSection } from 'app/components/CharCellItem';
 import numerals from 'app/assets/lang/numerals/numerals.json';
+import { useTranslation } from 'react-i18next';
 
 const useNumeralChartItems = (): ICharCellListSection[] => {
+  //Constants
+  const { t } = useTranslation();
+
   const transformCharToCellVM = (charInfo: ICharInfo): ICharCellItem => {
-    const transformed = {
+    return {
       id: charInfo.id,
       en: charInfo.en,
       gu: charInfo.gu,
       diacritic: charInfo.diacritic!,
       svg: charInfo.svg,
     };
-
-    return transformed;
   };
 
-  let cellVMs = numerals.map((v: ICharInfo) => transformCharToCellVM(v));
-  return [{ title: '', data: cellVMs }];
+  const cellVMs = numerals.map((v: ICharInfo) => transformCharToCellVM(v));
+  return [{ title: t('learnCharsChartScreen.header.numerals'), data: cellVMs }];
 };
 
 export default useNumeralChartItems;

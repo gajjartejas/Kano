@@ -17,6 +17,7 @@ import StrokeOrderBottomSheet from './StrokeOrderBottomSheet';
 import LearnCharInfoItemCell from './LearnCharInfoItemCell';
 import AppLevelFinishDialog from './AppLevelFinishDialog';
 import CharSelectCellItem from './CharSelectCellItem';
+import AppActionDialog from 'app/components/AppActionDialog';
 
 export default {
   AppNoConnection,
@@ -38,4 +39,5 @@ export default {
   LearnCharInfoItemCell,
   AppLevelFinishDialog,
   CharSelectCellItem,
+  AppActionDialog,
 };

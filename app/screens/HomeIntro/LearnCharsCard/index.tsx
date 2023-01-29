@@ -17,20 +17,21 @@ import styles from './styles';
 import Components from 'app/components';
 import { LearnCharsMode } from 'app/config/router-params';
 import AnimatedCharacter from 'app/components/AnimatedCharacter';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 //Params
 type RootStackParamList = {
-  LearnCharsSequence: RouterParamTypes.LearnCharsSequenceParams;
+  LearnCharsCard: RouterParamTypes.LearnCharsCardParams;
 };
 
-type Props = NativeStackScreenProps<RootStackParamList, 'LearnCharsSequence'>;
+type Props = NativeStackScreenProps<RootStackParamList, 'LearnCharsCard'>;
 
 const GROUP_COUNT = 1;
 
 const PRACTICE_GROUP_COUNT_0 = 2;
 const PRACTICE_GROUP_COUNT_1 = 4;
 
-const LearnCharsSequence = ({ navigation, route }: Props) => {
+const LearnCharsCard = ({ navigation, route }: Props) => {
   //Refs
   const refGroupedEntries = useRef<ICharCellListSection[]>([]);
   const refProgressIndex = useRef<number>(0);
@@ -40,11 +41,9 @@ const LearnCharsSequence = ({ navigation, route }: Props) => {
   //Constants
   const { colors } = useTheme();
   const { t } = useTranslation();
-  const { type, learnMode } = route.params;
-  const isRandomMode = learnMode === LearnCharsMode.LearnInRandom || learnMode === LearnCharsMode.PracticeInRandom;
-
-  const groupedEntries = Hooks.ChartItemForTypes.useChartSectionsForTypes(type, isRandomMode, null);
-  const isLearningMode = learnMode === LearnCharsMode.LearnInSequence || learnMode === LearnCharsMode.LearnInRandom;
+  const { type, learnMode, onlyInclude, isRandomMode } = route.params;
+  const groupedEntries = Hooks.ChartItemForTypes.useChartSectionsForTypes(type, isRandomMode, onlyInclude);
+  const isLearningMode = learnMode === LearnCharsMode.Learn;
 
   //States
   const [playing, setPlaying] = useState(true);
@@ -62,6 +61,9 @@ const LearnCharsSequence = ({ navigation, route }: Props) => {
   //UI Elements
   const [title, setTitle] = useState('');
   const [width, setWidth] = useState(0);
+
+  //Alerts
+  const [switchToRandomModeAlertVisible, setSwitchToRandomModeAlertVisible] = useState(false);
 
   const [finishButtonTitle, setFinishButtonTitle] = useState('');
   const [finishButtonDisabled, setFinishButtonDisabled] = useState(false);
@@ -128,16 +130,16 @@ const LearnCharsSequence = ({ navigation, route }: Props) => {
   const configInterface = useCallback(() => {
     switch (type) {
       case RouterParamTypes.LearnCharsType.Vowel:
-        setTitle(t('learnCharsSequenceScreen.header.titleVowels'));
+        setTitle(t('learnCharsCardScreen.header.titleVowels'));
         break;
       case RouterParamTypes.LearnCharsType.Constant:
-        setTitle(t('learnCharsSequenceScreen.header.titleConsonants'));
+        setTitle(t('learnCharsCardScreen.header.titleConsonants'));
         break;
       case RouterParamTypes.LearnCharsType.Barakhadi:
-        setTitle(t('learnCharsSequenceScreen.header.titleBarakhadi'));
+        setTitle(t('learnCharsCardScreen.header.titleBarakhadi'));
         break;
       case RouterParamTypes.LearnCharsType.Number:
-        setTitle(t('learnCharsSequenceScreen.header.titleNumerals'));
+        setTitle(t('learnCharsCardScreen.header.titleNumerals'));
         break;
       default:
         break;
@@ -231,8 +233,6 @@ const LearnCharsSequence = ({ navigation, route }: Props) => {
   const onPressHideDialog = () => {
     setFinishLevelVisible(false);
 
-    console.log('progressSection', progressSection);
-    console.log('groupedEntries.length', refGroupedEntries.current.length);
     if (progressSection === refGroupedEntries.current.length - 1) {
       navigation.pop();
     }
@@ -253,8 +253,25 @@ const LearnCharsSequence = ({ navigation, route }: Props) => {
     }, 100);
   };
 
+  const onSwitchToRandom = () => {
+    setSwitchToRandomModeAlertVisible(true);
+  };
+
+  const switchToRandom = () => {
+    navigation.replace('LearnCharsCard', {
+      type,
+      learnMode: learnMode === LearnCharsMode.Learn ? LearnCharsMode.Practice : LearnCharsMode.Learn,
+      isRandomMode: !isRandomMode,
+      onlyInclude: onlyInclude,
+    });
+  };
+
+  const onCloseRandomDialog = () => {
+    setSwitchToRandomModeAlertVisible(false);
+  };
+
   return (
-    <View style={[styles.container, { backgroundColor: colors.background }]}>
+    <SafeAreaView edges={['bottom']} style={[styles.container, { backgroundColor: colors.background }]}>
       <Appbar.Header style={{ backgroundColor: colors.background }}>
         <Appbar.BackAction onPress={onGoBack} />
         <Appbar.Content title={title} subtitle="" />
@@ -370,17 +387,40 @@ const LearnCharsSequence = ({ navigation, route }: Props) => {
               </Button>
             </>
           )}
+
+          <Button mode="text" labelStyle={styles.randomOrderButton} onPress={onSwitchToRandom}>
+            {isRandomMode ? t('learnCharsCardScreen.switchToSequence') : t('learnCharsCardScreen.switchToRandom')}
+          </Button>
         </View>
       </DraxProvider>
       <Components.AppLevelFinishDialog
-        title={t('learnCharsSequenceScreen.completeDialog.title', { section: progressSection + 1 })}
-        description={t('learnCharsSequenceScreen.completeDialog.description', { section: progressSection + 1 })}
+        title={t('learnCharsCardScreen.completeDialog.title', { section: progressSection + 1 })}
+        description={t('learnCharsCardScreen.completeDialog.description', { section: progressSection + 1 })}
         buttonTitle={t('general.continue')}
         visible={finishLevelVisible}
         onPressHideDialog={onPressHideDialog}
       />
-    </View>
+      <Components.AppActionDialog
+        title={t('learnCharsCardScreen.switchRandomAlert.title')}
+        description={
+          isRandomMode
+            ? t('learnCharsCardScreen.switchRandomAlert.descSeq')
+            : t('learnCharsCardScreen.switchRandomAlert.descRandom')
+        }
+        visible={switchToRandomModeAlertVisible}
+        cancelText={t('general.cancel')}
+        confirmText={t('general.ok')}
+        onPressConfirm={() => {
+          setSwitchToRandomModeAlertVisible(false);
+
+          setTimeout(() => {
+            switchToRandom();
+          }, 500);
+        }}
+        onPressCancel={onCloseRandomDialog}
+      />
+    </SafeAreaView>
   );
 };
 
-export default LearnCharsSequence;
+export default LearnCharsCard;
