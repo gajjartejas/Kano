@@ -13,13 +13,13 @@ import styles from './styles';
 import Hooks from 'app/hooks/index';
 import { ISelectCharCellItem } from 'app/components/CharSelectCellItem';
 import * as RouterParamTypes from 'app/config/router-params';
-import { LearnCharsMode } from 'app/config/router-params';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 //Params
 type RootStackParamList = {
   LearnBySelectedChar: RouterParamTypes.LearnBySelectedCharParams;
   LearnCharInfo: RouterParamTypes.LearnCharInfoParams;
-  LearnCharsSequence: RouterParamTypes.LearnCharsSequenceParams;
+  LearnCharsCard: RouterParamTypes.LearnCharsCardParams;
 };
 
 type Props = NativeStackScreenProps<RootStackParamList, 'LearnBySelectedChar'>;
@@ -34,7 +34,7 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
 
   //Constants
   const { colors } = useTheme();
-  const { type } = route.params;
+  const { type, learnMode, isRandomMode } = route.params;
   const { t } = useTranslation();
   const dim = useWindowDimensions();
   const groupedEntries = Hooks.ChartItemForTypes.useSelectedChartItemForTypes(type);
@@ -78,7 +78,7 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
   }, [selectedIds]);
 
   const cardTapped = (item: ISelectCharCellItem, index: number, sectionIndex: number) => {
-    var newSelectedIds = new Set(refSelectedIds.current);
+    const newSelectedIds = new Set(refSelectedIds.current);
     if (newSelectedIds.has(`${index}-${sectionIndex}`)) {
       newSelectedIds.delete(`${index}-${sectionIndex}`);
     } else {
@@ -150,7 +150,15 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
   };
 
   const onPressContinue = () => {
-    navigation.push('LearnCharsSequence', { type, learnMode: LearnCharsMode.LearnInSequence });
+    navigation.pop();
+    setTimeout(() => {
+      navigation.navigate('LearnCharsCard', {
+        type,
+        learnMode: learnMode,
+        onlyInclude: selectedIds,
+        isRandomMode: isRandomMode,
+      });
+    }, 500);
   };
 
   const onSelectCheckbox = (index: number) => {
@@ -176,7 +184,7 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
   };
 
   return (
-    <View style={[styles.container, { backgroundColor: colors.background }]}>
+    <SafeAreaView edges={['bottom']} style={[styles.container, { backgroundColor: colors.background }]}>
       <Appbar.Header style={{ backgroundColor: colors.background }}>
         <Appbar.BackAction onPress={onGoBack} />
         <Appbar.Content title={t('learnBySelectedChar.header.title')} subtitle="" />
@@ -198,17 +206,17 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
                 if (typeof item === 'string') {
                   return item;
                 } else {
-                  return JSON.stringify(item);
+                  return item.map(v => v.title).join('');
                 }
               }}
             />
           </View>
         )}
       </View>
-      <Button mode="contained" onPress={onPressContinue}>
+      <Button disabled={selectedIds.size === 0} mode="contained" onPress={onPressContinue}>
         {t('general.continue')}
       </Button>
-    </View>
+    </SafeAreaView>
   );
 };
 

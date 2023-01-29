@@ -40,8 +40,8 @@ const CharCellItem = (props: ICharCellItemProps) => {
   const dim = useWindowDimensions();
 
   const titleFontSize = [20, 30, 30, 30, 30, 30, 24][numberOfColumns];
-  const subTitleFontSize = [30, 30, 30, 30, 16, 14, 12][numberOfColumns];
-  const rnd = sectionIndex + '-' + index;
+  const subTitleFontSize = [30, 30, 30, 26, 16, 14, 12][numberOfColumns];
+
   return (
     <View
       style={[
@@ -60,7 +60,7 @@ const CharCellItem = (props: ICharCellItemProps) => {
         <View style={styles.iconTextContainerView}>
           <View style={styles.iconTextContainer}>
             <Text numberOfLines={1} style={[styles.titleText, { color: colors.textTitle, fontSize: titleFontSize }]}>
-              {rnd}
+              {item.title}
             </Text>
             <Text
               numberOfLines={2}

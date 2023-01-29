@@ -18,7 +18,7 @@ import { LearnCharsMode } from 'app/config/router-params';
 type RootStackParamList = {
   LearnCharsList: RouterParamTypes.LearnCharsListParams;
   LearnCharsChart: RouterParamTypes.LearnCharsChartParams;
-  LearnCharsSequence: RouterParamTypes.LearnCharsSequenceParams;
+  LearnCharsCard: RouterParamTypes.LearnCharsCardParams;
   LearnBySelectedChar: RouterParamTypes.LearnBySelectedCharParams;
 };
 
@@ -71,17 +71,13 @@ const LearnCharsList = ({ navigation, route }: Props) => {
     if (sectionIndex === 0 && index === 0) {
       navigation.push('LearnCharsChart', { type });
     } else if (sectionIndex === 0 && index === 1) {
-      navigation.push('LearnCharsSequence', { type, learnMode: LearnCharsMode.LearnInSequence });
+      navigation.push('LearnCharsCard', { type, learnMode: LearnCharsMode.Learn, isRandomMode: false });
     } else if (sectionIndex === 0 && index === 2) {
-      navigation.push('LearnCharsSequence', { type, learnMode: LearnCharsMode.LearnInRandom });
-    } else if (sectionIndex === 0 && index === 3) {
-      navigation.push('LearnBySelectedChar', { type, learnMode: LearnCharsMode.LearnInSequence });
+      navigation.push('LearnBySelectedChar', { type, learnMode: LearnCharsMode.Learn, isRandomMode: false });
     } else if (sectionIndex === 1 && index === 0) {
-      navigation.push('LearnCharsSequence', { type, learnMode: LearnCharsMode.PracticeInSequence });
+      navigation.push('LearnCharsCard', { type, learnMode: LearnCharsMode.Practice, isRandomMode: false });
     } else if (sectionIndex === 1 && index === 1) {
-      navigation.push('LearnCharsSequence', { type, learnMode: LearnCharsMode.PracticeInRandom });
-    } else if (sectionIndex === 1 && index === 2) {
-      navigation.push('LearnBySelectedChar', { type, learnMode: LearnCharsMode.PracticeInSequence });
+      navigation.push('LearnBySelectedChar', { type, learnMode: LearnCharsMode.Practice, isRandomMode: false });
     }
   };
 

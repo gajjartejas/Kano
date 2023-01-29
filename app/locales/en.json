@@ -5,7 +5,9 @@
     "noInternet": "No Internet Connection",
     "finish": "FINISH",
     "next": "NEXT",
-    "continue": "CONTINUE"
+    "continue": "CONTINUE",
+    "ok": "OK",
+    "cancel": "CANCEL"
   },
   "about": {
     "sendFeedback": "Send Feedback",
@@ -143,7 +145,11 @@
       "titleVowels": "Vowels Chart",
       "titleConsonants": "Consonants Chart",
       "titleBarakhadi": "Barakhadi Chart",
-      "titleNumerals": "Numerals Chart"
+      "titleNumerals": "Numerals Chart",
+      "vowels": "Vowels",
+      "consonants": "Consonants",
+      "barakhadi": "Barakhadi: {{en}}/{{gu}}",
+      "numerals": "Numerals"
     }
   },
   "learnCharInfoScreen": {
@@ -159,10 +165,9 @@
     "moreInfo": "MORE INFO",
     "viewStrokeOrder": "VIEW STROKE ORDER",
     "viewAnimatedDrawing": "VIEW ANIMATED DRAWING",
-    "playSound": "PLAY SOUND",
-    "cellHeader": "Vowel: {{en}}/{{gu}}"
+    "playSound": "PLAY SOUND"
   },
-  "learnCharsSequenceScreen": {
+  "learnCharsCardScreen": {
     "header": {
       "titleVowels": "Learn Vowels (Sequence)",
       "titleConsonants": "Learn Consonants (Sequence)",
@@ -172,6 +177,13 @@
     "completeDialog": {
       "title": "SECTION {{section}} COMPLETED!",
       "description": "Congratulation you finished {{section}} section."
+    },
+    "switchToRandom": "SWITCH TO RANDOM ORDER",
+    "switchToSequence": "SWITCH TO SEQUENCE ORDER",
+    "switchRandomAlert": {
+      "title": "Change Mode",
+      "descRandom": "Are you sure you want to switch to random mode?",
+      "descSeq": "Are you sure you want to switch to sequence mode?"
     }
   },
   "learnBySelectedChar": {

@@ -6,7 +6,7 @@ const useConsonantListItems = (): ICharListSection[] => {
   //Constants
   const { t } = useTranslation();
 
-  let sections: ICharListSection[] = [
+  return [
     {
       title: t('learnCharsListScreen.listItemSection1Title'),
       data: [
@@ -26,16 +26,9 @@ const useConsonantListItems = (): ICharListSection[] => {
         },
         {
           id: 2,
-          title: t('learnCharsListScreen.listItemsSection1.itemTitle3'),
-          subTitle: t('learnCharsListScreen.listItemsSection1.itemSubTitle3'),
-          iconName: 'random',
-          iconFamily: 'font-awesome5',
-        },
-        {
-          id: 3,
           title: t('learnCharsListScreen.listItemsSection1.itemTitle4'),
           subTitle: t('learnCharsListScreen.listItemsSection1.itemSubTitle4'),
-          iconName: 'random',
+          iconName: 'tasks',
           iconFamily: 'font-awesome5',
         },
       ],
@@ -52,13 +45,6 @@ const useConsonantListItems = (): ICharListSection[] => {
         },
         {
           id: 1,
-          title: t('learnCharsListScreen.listItemsSection2.itemTitle2'),
-          subTitle: t('learnCharsListScreen.listItemsSection2.itemSubTitle2'),
-          iconName: 'random',
-          iconFamily: 'font-awesome5',
-        },
-        {
-          id: 2,
           title: t('learnCharsListScreen.listItemsSection2.itemTitle3'),
           subTitle: t('learnCharsListScreen.listItemsSection2.itemSubTitle3'),
           iconName: 'tasks',
@@ -67,8 +53,6 @@ const useConsonantListItems = (): ICharListSection[] => {
       ],
     },
   ];
-
-  return sections;
 };
 
 export default useConsonantListItems;

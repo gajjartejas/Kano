@@ -52,20 +52,18 @@ const LearnCharsChart = ({ navigation, route }: Props) => {
       case RouterParamTypes.LearnCharsType.Constant:
         setTitle(t('learnCharsChartScreen.header.titleConsonants'));
         setNumberOfColumns(5);
-
         break;
 
       case RouterParamTypes.LearnCharsType.Barakhadi:
         setTitle(t('learnCharsChartScreen.header.titleBarakhadi'));
         setNumberOfColumns(4);
-
         break;
 
       case RouterParamTypes.LearnCharsType.Number:
         setTitle(t('learnCharsChartScreen.header.titleNumerals'));
         setNumberOfColumns(6);
-
         break;
+
       default:
         break;
     }

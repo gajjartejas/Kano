@@ -7,11 +7,7 @@ import useConsonants from './useConsonantsChartItems';
 import useNumerals from './useNumeralChartItems';
 import { ISelectCharCellListSection } from 'app/components/CharSelectCellItem';
 
-const useChartItemForTypes = (
-  type: RouterParamTypes.LearnCharsType,
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  onlyInclude: Set<string> | null,
-): ICharCellListSection[] => {
+const useChartItemForTypes = (type: RouterParamTypes.LearnCharsType): ICharCellListSection[] => {
   const vowels = useVowels();
   const barakhadi = useBarakhadis();
   const consonants = useConsonants();
@@ -34,14 +30,32 @@ const useChartItemForTypes = (
 const useChartSectionsForTypes = (
   type: RouterParamTypes.LearnCharsType,
   random: boolean,
-  onlyInclude: Set<string> | null,
+  onlyInclude?: Set<string>,
 ): ICharCellListSection[] => {
-  const chars = useChartItemForTypes(type, onlyInclude);
+  const chars = useChartItemForTypes(type);
   if (!random) {
-    return chars;
+    return chars
+      .map((value, sectionIndex) => {
+        return {
+          ...value,
+          data: value.data.filter((char, i) => {
+            return onlyInclude !== undefined ? onlyInclude?.has(`${i}-${sectionIndex}`) : true;
+          }),
+        };
+      })
+      .filter(value => value.data.length > 0);
   }
   return [
     ...chars
+      .map((value, sectionIndex) => {
+        return {
+          ...value,
+          data: value.data.filter((char, i) => {
+            return onlyInclude !== undefined ? onlyInclude?.has(`${i}-${sectionIndex}`) : true;
+          }),
+        };
+      })
+      .filter(value => value.data.length > 0)
       .map(value => ({ value, sort: Math.random() }))
       .sort((a, b) => a.sort - b.sort)
       .map(({ value }) => {
@@ -77,7 +91,7 @@ const useSelectedChartItemForTypes = (type: RouterParamTypes.LearnCharsType): IS
 };
 
 const mapForOtherSelection = (sections: ICharCellListSection[]): ISelectCharCellListSection[] => {
-  let mapped = sections.map(s => {
+  return sections.map(s => {
     return {
       ...s,
       title: s.title,
@@ -91,8 +105,6 @@ const mapForOtherSelection = (sections: ICharCellListSection[]): ISelectCharCell
       }),
     };
   });
-
-  return mapped;
 };
 
 export { useChartItemForTypes, useChartSectionsForTypes, useSelectedChartItemForTypes };
