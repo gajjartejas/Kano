@@ -11,6 +11,7 @@ import Animated, { Easing, FadeIn, Layout } from 'react-native-reanimated';
 import * as RouterParamTypes from 'app/config/router-params';
 import styles from './styles';
 import AnimatedCharacter from 'app/components/AnimatedCharacter';
+import Components from 'app/components';
 
 //Params
 type RootStackParamList = {
@@ -41,10 +42,7 @@ const GujaratiScriptIntro = ({ navigation }: Props) => {
         <Appbar.BackAction onPress={onGoBack} />
         <Appbar.Content title={t('learnIntroScreen.header.title')} subtitle="" />
       </Appbar.Header>
-      <View style={styles.safeArea}>
-        {/* <ScrollView style={styles.scrollView}>
-          <Text>{'\n\n    WIP: Work In Progress...'}</Text>
-        </ScrollView> */}
+      <Components.AppBaseView edges={['bottom', 'left', 'right']} style={styles.safeArea}>
         <Button
           onPress={() => {
             setShow(!show);
@@ -67,7 +65,7 @@ const GujaratiScriptIntro = ({ navigation }: Props) => {
             />
           </Animated.View>
         )}
-      </View>
+      </Components.AppBaseView>
     </View>
   );
 };

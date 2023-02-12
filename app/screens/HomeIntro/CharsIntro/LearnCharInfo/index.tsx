@@ -12,6 +12,7 @@ import Components from 'app/components';
 import { ICharCellItem } from 'app/components/CharCellItem';
 import * as RouterParamTypes from 'app/config/router-params';
 import styles from './styles';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 //Params
 type RootStackParamList = {
@@ -30,8 +31,9 @@ const LearnCharInfo = ({ navigation, route }: Props) => {
   const { colors } = useTheme();
   const { t } = useTranslation();
   const dimension = useWindowDimensions();
-  const { index: currentIndex, sectionIndex, groupedEntries } = route.params;
+  const { index: currentIndex, sectionIndex, groupedEntries, color } = route.params;
   const bottomSheetRef = useRef<BottomSheet>(null);
+  const insets = useSafeAreaInsets();
 
   //States
   const [showBottomSheet, setShowBottomSheet] = useState(false);
@@ -64,18 +66,18 @@ const LearnCharInfo = ({ navigation, route }: Props) => {
   }, []);
 
   const getItemLayout = (data: ICharCellItem[] | null | undefined, index: number) => ({
-    length: dimension.width,
-    offset: dimension.width * index,
+    length: dimension.width - insets.right - insets.left,
+    offset: (dimension.width - insets.right - insets.left) * index,
     index,
   });
 
   return (
-    <View style={[styles.container, { backgroundColor: colors.background }]}>
+    <View style={[styles.container, { backgroundColor: `${color}15` }]}>
       <Appbar.Header style={{ backgroundColor: colors.background }}>
         <Appbar.BackAction onPress={onGoBack} />
         <Appbar.Content title={t('learnCharInfoScreen.header.title')} subtitle="" />
       </Appbar.Header>
-      <View style={styles.safeArea}>
+      <Components.AppBaseView scroll edges={['bottom', 'left', 'right']} style={styles.safeArea}>
         <FlatList
           ref={refFlatList}
           removeClippedSubviews
@@ -89,12 +91,12 @@ const LearnCharInfo = ({ navigation, route }: Props) => {
           data={groupedEntries[sectionIndex].data}
           renderItem={renderItem}
           keyExtractor={photo => photo.id.toString()}
-          style={{ width: dimension.width }}
+          style={{ width: dimension.width - insets.right - insets.left }}
           initialScrollIndex={currentIndex}
           onScrollToIndexFailed={() => {}}
           getItemLayout={getItemLayout}
         />
-      </View>
+      </Components.AppBaseView>
       {showBottomSheet && <Components.StrokeOrderBottomSheet ref={bottomSheetRef} onChange={handleSheetChange} />}
     </View>
   );

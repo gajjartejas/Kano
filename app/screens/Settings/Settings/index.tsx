@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ScrollView, View } from 'react-native';
+import { View } from 'react-native';
 
 //ThirdParty
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
@@ -15,6 +15,7 @@ import styles from './styles';
 //Modals
 import { ISettingItem, ISettingSection } from 'app/models/viewModels/settingItem';
 import Icon from 'react-native-easy-icon';
+import Components from 'app/components';
 
 //Params
 type RootStackParamList = {
@@ -133,39 +134,37 @@ const Settings = ({ navigation }: Props) => {
         <Appbar.BackAction onPress={onGoBack} />
         <Appbar.Content title={t('settings.title')} subtitle="" />
       </Appbar.Header>
-      <View style={styles.safeArea}>
-        <ScrollView>
-          {apps.map(item => {
-            return (
-              <View key={item.id.toString()}>
-                <List.Subheader style={[styles.listSubHeader, { color: colors.primary }]}>{item.title}</List.Subheader>
-                {item.items.map((subItem, subIndex) => {
-                  return (
-                    <List.Item
-                      titleStyle={{ color: colors.onSurface }}
-                      descriptionStyle={{ color: `${colors.onSurface}88` }}
-                      key={subItem.id.toString()}
-                      onPress={() => onPress(subItem, subIndex)}
-                      title={subItem.title}
-                      description={subItem.description}
-                      left={() => (
-                        <Icon
-                          style={styles.listItemIcon}
-                          type={subItem.iconType}
-                          name={subItem.iconName}
-                          color={`${colors.onSurface}88`}
-                          size={24}
-                        />
-                      )}
-                    />
-                  );
-                })}
-                <Divider />
-              </View>
-            );
-          })}
-        </ScrollView>
-      </View>
+      <Components.AppBaseView scroll edges={['bottom', 'left', 'right']} style={styles.safeArea}>
+        {apps.map(item => {
+          return (
+            <View key={item.id.toString()}>
+              <List.Subheader style={[styles.listSubHeader, { color: colors.primary }]}>{item.title}</List.Subheader>
+              {item.items.map((subItem, subIndex) => {
+                return (
+                  <List.Item
+                    titleStyle={{ color: colors.onSurface }}
+                    descriptionStyle={{ color: `${colors.onSurface}88` }}
+                    key={subItem.id.toString()}
+                    onPress={() => onPress(subItem, subIndex)}
+                    title={subItem.title}
+                    description={subItem.description}
+                    left={() => (
+                      <Icon
+                        style={styles.listItemIcon}
+                        type={subItem.iconType}
+                        name={subItem.iconName}
+                        color={`${colors.onSurface}88`}
+                        size={24}
+                      />
+                    )}
+                  />
+                );
+              })}
+              <Divider />
+            </View>
+          );
+        })}
+      </Components.AppBaseView>
     </View>
   );
 };

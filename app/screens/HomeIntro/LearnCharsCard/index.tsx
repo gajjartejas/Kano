@@ -41,7 +41,7 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
   //Constants
   const { colors } = useTheme();
   const { t } = useTranslation();
-  const { type, learnMode, onlyInclude, isRandomMode } = route.params;
+  const { type, learnMode, onlyInclude, isRandomMode, color } = route.params;
   const groupedEntries = Hooks.ChartItemForTypes.useChartSectionsForTypes(type, isRandomMode, onlyInclude);
   const isLearningMode = learnMode === LearnCharsMode.Learn;
 
@@ -263,6 +263,7 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
       learnMode: learnMode === LearnCharsMode.Learn ? LearnCharsMode.Practice : LearnCharsMode.Learn,
       isRandomMode: !isRandomMode,
       onlyInclude: onlyInclude,
+      color: color,
     });
   };
 
@@ -271,13 +272,13 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
   };
 
   return (
-    <SafeAreaView edges={['bottom']} style={[styles.container, { backgroundColor: colors.background }]}>
+    <SafeAreaView edges={['bottom']} style={[styles.container, { backgroundColor: `${color}15` }]}>
       <Appbar.Header style={{ backgroundColor: colors.background }}>
         <Appbar.BackAction onPress={onGoBack} />
         <Appbar.Content title={title} subtitle="" />
       </Appbar.Header>
       <DraxProvider>
-        <View style={styles.safeArea}>
+        <Components.AppBaseView edges={['bottom', 'left', 'right']} style={styles.safeArea}>
           {!practiceMode && (
             <View
               onLayout={e => {
@@ -391,7 +392,7 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
           <Button mode="text" labelStyle={styles.randomOrderButton} onPress={onSwitchToRandom}>
             {isRandomMode ? t('learnCharsCardScreen.switchToSequence') : t('learnCharsCardScreen.switchToRandom')}
           </Button>
-        </View>
+        </Components.AppBaseView>
       </DraxProvider>
       <Components.AppLevelFinishDialog
         title={t('learnCharsCardScreen.completeDialog.title', { section: progressSection + 1 })}

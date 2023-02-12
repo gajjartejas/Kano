@@ -10,6 +10,7 @@ import { Appbar, List, useTheme } from 'react-native-paper';
 import Config from 'app/config';
 import * as RouterParamTypes from 'app/config/router-params';
 import styles from './styles';
+import Components from 'app/components';
 
 //Interfaces
 interface ITranslator {
@@ -101,7 +102,7 @@ const Translators = ({ navigation }: Props) => {
         <Appbar.BackAction onPress={onGoBack} />
         <Appbar.Content title={t('translatorsScreen.title')} subtitle="" />
       </Appbar.Header>
-      <View style={styles.subView}>
+      <Components.AppBaseView edges={['bottom', 'left', 'right']} style={styles.safeArea}>
         <FlatList
           style={styles.flatlist}
           keyboardShouldPersistTaps={'handled'}
@@ -109,7 +110,7 @@ const Translators = ({ navigation }: Props) => {
           renderItem={renderItem}
           keyExtractor={(item, _index) => item.id.toString()}
         />
-      </View>
+      </Components.AppBaseView>
     </View>
   );
 };

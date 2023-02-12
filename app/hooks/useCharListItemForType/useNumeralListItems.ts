@@ -16,6 +16,7 @@ const useNumeralListItems = (): ICharListSection[] => {
           subTitle: t('learnCharsListScreen.listItemsSection1.itemSubTitle1'),
           iconName: 'table',
           iconFamily: 'font-awesome5',
+          color: '#004ba0',
         },
         {
           id: 1,
@@ -23,6 +24,7 @@ const useNumeralListItems = (): ICharListSection[] => {
           subTitle: t('learnCharsListScreen.listItemsSection1.itemSubTitle2'),
           iconName: 'sort-numeric-down',
           iconFamily: 'font-awesome5',
+          color: '#00675b',
         },
         {
           id: 2,
@@ -30,6 +32,7 @@ const useNumeralListItems = (): ICharListSection[] => {
           subTitle: t('learnCharsListScreen.listItemsSection1.itemSubTitle4'),
           iconName: 'tasks',
           iconFamily: 'font-awesome5',
+          color: '#c66900',
         },
       ],
     },
@@ -42,6 +45,7 @@ const useNumeralListItems = (): ICharListSection[] => {
           subTitle: t('learnCharsListScreen.listItemsSection2.itemSubTitle1'),
           iconName: 'sort-numeric-down',
           iconFamily: 'font-awesome5',
+          color: '#087f23',
         },
         {
           id: 2,
@@ -49,6 +53,7 @@ const useNumeralListItems = (): ICharListSection[] => {
           subTitle: t('learnCharsListScreen.listItemsSection2.itemSubTitle3'),
           iconName: 'tasks',
           iconFamily: 'font-awesome5',
+          color: '#c41c00',
         },
       ],
     },

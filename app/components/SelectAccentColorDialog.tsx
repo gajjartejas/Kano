@@ -7,13 +7,14 @@ import { Dialog, TouchableRipple, useTheme, Button } from 'react-native-paper';
 
 //App Modules
 import { IAppearanceType } from 'app/models/reducers/theme';
+import { IAppearanceColor } from 'app/screens/Settings/SelectAppearance';
 
 //Interface
 interface ISelectAccentDialogProps {
   visible: boolean;
   appearance: IAppearanceType;
-  accentColorOptions: string[];
-  onSelect: (item: string, index: number) => void;
+  accentColorOptions: IAppearanceColor[];
+  onSelect: (item: IAppearanceColor, index: number) => void;
   onPressHideDialog: () => void;
 }
 
@@ -30,8 +31,8 @@ function SelectAccentDialog(props: ISelectAccentDialogProps) {
           {props.accentColorOptions.map((item, index) => {
             return (
               <TouchableRipple
-                key={item.toString()}
-                style={[styles.itemButton, { backgroundColor: item }]}
+                key={item.primary.toString()}
+                style={[styles.itemButton, { backgroundColor: item.primary }]}
                 borderless={true}
                 onPress={() => props.onSelect(item, index)}
                 centered={true}

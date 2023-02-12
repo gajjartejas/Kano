@@ -17,7 +17,6 @@ import Config from 'app/config';
 import Components from 'app/components';
 import styles from './styles';
 import * as RouterParamTypes from 'app/config/router-params';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 //Interfaces
 interface IMoreItem {
@@ -44,7 +43,6 @@ const MoreTab = ({ navigation }: Props) => {
   //Constants
   const { t } = useTranslation();
   const { colors } = useTheme();
-  const insets = useSafeAreaInsets();
 
   //State
   const [visible, setVisible] = React.useState(false);
@@ -150,9 +148,11 @@ const MoreTab = ({ navigation }: Props) => {
   };
 
   return (
-    <View style={[styles.container, { backgroundColor: colors.background, marginTop: insets.top }]}>
-      <ScrollView style={styles.container}>
-        <View style={styles.container}>
+    <Components.AppBaseView
+      edges={['bottom', 'left', 'right', 'top']}
+      style={[styles.container, { backgroundColor: colors.background }]}>
+      <ScrollView style={styles.scrollView}>
+        <View style={styles.subView}>
           <ImageBackground source={Config.Images.icons.about_bg} style={styles.imageBackground}>
             <View style={[styles.imageBackgroundCover, { backgroundColor: `${colors.background}88` }]} />
             <Image source={Config.Images.icons.app_icon} resizeMode="contain" style={styles.appIcon} />
@@ -194,7 +194,7 @@ const MoreTab = ({ navigation }: Props) => {
         onPressEmail={onPressEmail}
         onPressHideDialog={onPressHideDialog}
       />
-    </View>
+    </Components.AppBaseView>
   );
 };
 

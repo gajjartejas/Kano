@@ -31,7 +31,7 @@ const LearnCharsList = ({ navigation, route }: Props) => {
 
   //Constants
   const { colors } = useTheme();
-  const { type } = route.params;
+  const { type, color } = route.params;
   const groupedEntries = Hooks.useCharListItemForType(type);
   const { t } = useTranslation();
 
@@ -69,15 +69,35 @@ const LearnCharsList = ({ navigation, route }: Props) => {
 
   const cardTapped = (item: ICharListItem, index: number, sectionIndex: number) => {
     if (sectionIndex === 0 && index === 0) {
-      navigation.push('LearnCharsChart', { type });
+      navigation.push('LearnCharsChart', { type, color: item.color });
     } else if (sectionIndex === 0 && index === 1) {
-      navigation.push('LearnCharsCard', { type, learnMode: LearnCharsMode.Learn, isRandomMode: false });
+      navigation.push('LearnCharsCard', {
+        type,
+        learnMode: LearnCharsMode.Learn,
+        isRandomMode: false,
+        color: item.color,
+      });
     } else if (sectionIndex === 0 && index === 2) {
-      navigation.push('LearnBySelectedChar', { type, learnMode: LearnCharsMode.Learn, isRandomMode: false });
+      navigation.push('LearnBySelectedChar', {
+        type,
+        learnMode: LearnCharsMode.Learn,
+        isRandomMode: false,
+        color: item.color,
+      });
     } else if (sectionIndex === 1 && index === 0) {
-      navigation.push('LearnCharsCard', { type, learnMode: LearnCharsMode.Practice, isRandomMode: false });
+      navigation.push('LearnCharsCard', {
+        type,
+        learnMode: LearnCharsMode.Practice,
+        isRandomMode: false,
+        color: item.color,
+      });
     } else if (sectionIndex === 1 && index === 1) {
-      navigation.push('LearnBySelectedChar', { type, learnMode: LearnCharsMode.Practice, isRandomMode: false });
+      navigation.push('LearnBySelectedChar', {
+        type,
+        learnMode: LearnCharsMode.Practice,
+        isRandomMode: false,
+        color: item.color,
+      });
     }
   };
 
@@ -98,12 +118,12 @@ const LearnCharsList = ({ navigation, route }: Props) => {
   };
 
   return (
-    <View style={[styles.container, { backgroundColor: colors.background }]}>
+    <View style={[styles.container, { backgroundColor: `${color}15` }]}>
       <Appbar.Header style={{ backgroundColor: colors.background }}>
         <Appbar.BackAction onPress={onGoBack} />
         <Appbar.Content title={title} subtitle="" />
       </Appbar.Header>
-      <View style={styles.safeArea}>
+      <Components.AppBaseView edges={['bottom', 'left', 'right']} style={styles.safeArea}>
         <ScrollView style={styles.scrollView}>
           {groupedEntries.map((section, sectionIndex) => {
             return (
@@ -118,7 +138,7 @@ const LearnCharsList = ({ navigation, route }: Props) => {
             );
           })}
         </ScrollView>
-      </View>
+      </Components.AppBaseView>
     </View>
   );
 };

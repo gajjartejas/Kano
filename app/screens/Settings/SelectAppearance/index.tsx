@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ScrollView, View } from 'react-native';
+import { View } from 'react-native';
 
 //ThirdParty
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
@@ -26,6 +26,11 @@ type RootStackParamList = {
   SelectAppearance: RouterParamTypes.SelectAppearanceParams;
 };
 type Props = NativeStackScreenProps<RootStackParamList, 'SelectAppearance'>;
+
+export interface IAppearanceColor {
+  primary: string;
+  onPrimary: string;
+}
 
 const SelectAppearance = ({ navigation }: Props) => {
   //Constants
@@ -99,36 +104,36 @@ const SelectAppearance = ({ navigation }: Props) => {
   //
   const [accentColorDialogVisible, setAccentColorDialogVisible] = React.useState(false);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [accentColorOptions, setAccentColorOptions] = React.useState<string[]>([
-    '#008b00',
-    '#61d800',
-    '#90ee02',
-    '#c6f68d',
-    '#defabb',
+  const [accentColorOptions, setAccentColorOptions] = React.useState<IAppearanceColor[]>([
+    { primary: '#008b00', onPrimary: '#ffffff' },
+    { primary: '#61d800', onPrimary: '#ffffff' },
+    { primary: '#90ee02', onPrimary: '#000000' },
+    { primary: '#c6f68d', onPrimary: '#000000' },
+    { primary: '#defabb', onPrimary: '#000000' },
 
-    '#880061',
-    '#dd0074',
-    '#ee0290',
-    '#f186c0',
-    '#f5b6da',
+    { primary: '#880061', onPrimary: '#ffffff' },
+    { primary: '#dd0074', onPrimary: '#ffffff' },
+    { primary: '#ee0290', onPrimary: '#000000' },
+    { primary: '#f186c0', onPrimary: '#000000' },
+    { primary: '#f5b6da', onPrimary: '#000000' },
 
-    '#e44304',
-    '#ee6002',
-    '#ff9e22',
-    '#ffc77d',
-    '#ffddb0',
+    { primary: '#e44304', onPrimary: '#ffffff' },
+    { primary: '#ee6002', onPrimary: '#ffffff' },
+    { primary: '#ff9e22', onPrimary: '#000000' },
+    { primary: '#ffc77d', onPrimary: '#000000' },
+    { primary: '#ffddb0', onPrimary: '#000000' },
 
-    '#0000d6',
-    '#5300e8',
-    '#7e3ff2',
-    '#9965f4',
-    '#b794f6',
+    { primary: '#0000d6', onPrimary: '#ffffff' },
+    { primary: '#5300e8', onPrimary: '#ffffff' },
+    { primary: '#7e3ff2', onPrimary: '#000000' },
+    { primary: '#9965f4', onPrimary: '#000000' },
+    { primary: '#b794f6', onPrimary: '#000000' },
 
-    '#5c00d2',
-    '#8b00dc',
-    '#a100e0',
-    '#ba00e5',
-    '#cc00e9',
+    { primary: '#5c00d2', onPrimary: '#ffffff' },
+    { primary: '#8b00dc', onPrimary: '#ffffff' },
+    { primary: '#a100e0', onPrimary: '#000000' },
+    { primary: '#ba00e5', onPrimary: '#000000' },
+    { primary: '#cc00e9', onPrimary: '#000000' },
   ]);
 
   const onGoBack = () => {
@@ -167,10 +172,10 @@ const SelectAppearance = ({ navigation }: Props) => {
   const onPressShowAccentColorDialog = () => setAccentColorDialogVisible(true);
   const onPressHideAccentColorDialog = () => setAccentColorDialogVisible(false);
 
-  const onPressPrimaryColor = (item: string, _index: number) => {
+  const onPressPrimaryColor = (item: IAppearanceColor, _index: number) => {
     onPressHideAccentColorDialog();
     setTimeout(() => {
-      dispatch(themeActions.setPrimaryColor(item));
+      dispatch(themeActions.setPrimaryColor(item.primary, item.onPrimary));
     }, 100);
   };
 
@@ -185,39 +190,37 @@ const SelectAppearance = ({ navigation }: Props) => {
         <Appbar.BackAction onPress={onGoBack} />
         <Appbar.Content title={t('appearanceSettings.title')} subtitle="" />
       </Appbar.Header>
-      <View style={styles.safeArea}>
-        <ScrollView>
-          {apps.map((item, index) => {
-            return (
-              <View key={item.id.toString()}>
-                <List.Subheader style={[styles.listSubHeader, { color: colors.primary }]}>{item.title}</List.Subheader>
-                {item.items.map((subItem, subIndex) => {
-                  return (
-                    <List.Item
-                      key={subItem.id.toString()}
-                      titleStyle={{ color: colors.onSurface }}
-                      descriptionStyle={{ color: `${colors.onSurface}88` }}
-                      onPress={() => onPressAppearanceOption(item, index, subItem, subIndex)}
-                      title={subItem.title}
-                      description={subItem.description}
-                      left={() => (
-                        <Icon
-                          style={styles.listItemIcon}
-                          type={subItem.iconType}
-                          name={subItem.iconName}
-                          color={`${colors.onSurface}88`}
-                          size={24}
-                        />
-                      )}
-                    />
-                  );
-                })}
-                <Divider />
-              </View>
-            );
-          })}
-        </ScrollView>
-      </View>
+      <Components.AppBaseView scroll edges={['bottom', 'left', 'right']} style={styles.safeArea}>
+        {apps.map((item, index) => {
+          return (
+            <View key={item.id.toString()}>
+              <List.Subheader style={[styles.listSubHeader, { color: colors.primary }]}>{item.title}</List.Subheader>
+              {item.items.map((subItem, subIndex) => {
+                return (
+                  <List.Item
+                    key={subItem.id.toString()}
+                    titleStyle={{ color: colors.onSurface }}
+                    descriptionStyle={{ color: `${colors.onSurface}88` }}
+                    onPress={() => onPressAppearanceOption(item, index, subItem, subIndex)}
+                    title={subItem.title}
+                    description={subItem.description}
+                    left={() => (
+                      <Icon
+                        style={styles.listItemIcon}
+                        type={subItem.iconType}
+                        name={subItem.iconName}
+                        color={`${colors.onSurface}88`}
+                        size={24}
+                      />
+                    )}
+                  />
+                );
+              })}
+              <Divider />
+            </View>
+          );
+        })}
+      </Components.AppBaseView>
 
       <Components.SelectThemeDialog
         visible={themeDialogVisible}

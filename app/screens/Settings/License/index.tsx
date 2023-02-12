@@ -12,6 +12,7 @@ import Utils from 'app/utils';
 
 //Modals
 import styles from './styles';
+import Components from 'app/components';
 
 //Interfaces
 export interface ILicense {
@@ -86,15 +87,9 @@ const License = ({ navigation }: Props) => {
         <Appbar.BackAction onPress={onGoBack} />
         <Appbar.Content title={t('librariesScreen.title')} subtitle="" />
       </Appbar.Header>
-      <View style={styles.subView}>
-        <FlatList
-          keyboardShouldPersistTaps={'handled'}
-          data={finalLicense}
-          contentContainerStyle={{}}
-          renderItem={renderItem}
-          keyExtractor={item => item.name}
-        />
-      </View>
+      <Components.AppBaseView edges={['bottom', 'left', 'right']} style={styles.subView}>
+        <FlatList data={finalLicense} renderItem={renderItem} keyExtractor={item => item.name} />
+      </Components.AppBaseView>
     </View>
   );
 };

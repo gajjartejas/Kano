@@ -7,6 +7,7 @@ const Images = {
     ic_more_app_ohmclient: require('app/assets/images/ic_more_app_ohmclient.png'),
     ic_more_app_miuiadshelper: require('app/assets/images/ic_more_app_miuiadshelper.png'),
     home_header: require('app/assets/images/home_header.jpg'),
+    avatar: require('app/assets/images/avatar.png'),
 
     flag_ar: require('app/assets/images/flags/ar.png'),
     flag_cs: require('app/assets/images/flags/cs.png'),

@@ -88,20 +88,27 @@
   },
   "homeScreen": {
     "header": {
-      "title": "Welcome back\n{{name}}"
+      "title": "Hi, {{name}} \uD83D\uDC4B",
+      "subTitle": "Welcome back!"
     },
     "listItemSection1Title": "Introduction",
     "listItemsSection1": {
       "itemTitle1": "Introduction to\nGujarati Script",
+      "itemSubTitle1": "10 hours, 19 lessons"
+    },
+    "listItemSection2Title": "Alphabets",
+    "listItemsSection2": {
+      "itemTitle1": "Introduction to\nVowels(svara)",
       "itemSubTitle1": "10 hours, 19 lessons",
-      "itemTitle2": "Introduction to\nVowels(svara)",
+      "itemTitle2": "Introduction to\nConsonants(vyañjana)",
       "itemSubTitle2": "10 hours, 19 lessons",
-      "itemTitle3": "Introduction to\nConsonants(vyañjana)",
-      "itemSubTitle3": "10 hours, 19 lessons",
-      "itemTitle4": "Introduction to Barakhadi \n(consonants & vowels)",
-      "itemSubTitle4": "10 hours, 19 lessons",
-      "itemTitle5": "Introduction to\nGujarati numerals",
-      "itemSubTitle5": "10 hours, 19 lessons"
+      "itemTitle3": "Introduction to Barakhadi \n(consonants & vowels)",
+      "itemSubTitle3": "10 hours, 19 lessons"
+    },
+    "listItemSection3Title": "Numbers",
+    "listItemsSection3": {
+      "itemTitle1": "Introduction to\nGujarati numerals",
+      "itemSubTitle1": "10 hours, 19 lessons"
     }
   },
   "learnIntroScreen": {
@@ -190,6 +197,8 @@
     "header": {
       "title": "Select Characters"
     },
-    "section": "Select at least one character."
+    "section": "Select at least one character.",
+    "selectAll": "Select All",
+    "unselectAll": "Unselect All"
   }
 }
