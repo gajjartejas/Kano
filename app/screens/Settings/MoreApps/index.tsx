@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ScrollView, View } from 'react-native';
+import { View } from 'react-native';
 
 //ThirdParty
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
@@ -104,8 +104,8 @@ const MoreApps = ({ navigation }: Props) => {
         <Appbar.BackAction onPress={onGoBack} />
         <Appbar.Content title={t('moreApps.appsTitle')} subtitle="" />
       </Appbar.Header>
-      <View style={styles.safeArea}>
-        <ScrollView style={styles.scrollView}>
+      <Components.AppBaseView scroll edges={['bottom', 'left', 'right']} style={styles.safeArea}>
+        <View style={styles.listContainer}>
           {apps.map((item, index) => {
             return (
               <Components.MoreAppCard
@@ -120,8 +120,8 @@ const MoreApps = ({ navigation }: Props) => {
               />
             );
           })}
-        </ScrollView>
-      </View>
+        </View>
+      </Components.AppBaseView>
     </View>
   );
 };

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Image, ScrollView, View } from 'react-native';
+import { Image, View } from 'react-native';
 
 //ThirdParty
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
@@ -16,6 +16,7 @@ import * as RouterParamTypes from 'app/config/router-params';
 import { ISettingItem, ISettingSection } from 'app/models/viewModels/settingItem';
 import Icon from 'react-native-easy-icon';
 import styles from './styles';
+import Components from 'app/components';
 
 //Params
 type RootStackParamList = {
@@ -125,45 +126,47 @@ const Settings = ({ navigation }: Props) => {
         <Appbar.Content title={t('aboutScreen.title')} subtitle="" />
       </Appbar.Header>
 
-      <ScrollView contentContainerStyle={styles.scrollView}>
+      <Components.AppBaseView scroll edges={['bottom', 'left', 'right']} style={styles.safeArea}>
         <Image source={Config.Images.icons.app_icon} resizeMode="contain" style={styles.appicon} />
         <Text style={[styles.appNameText, { color: colors.onBackground }]}>{DeviceInfo.getApplicationName()}</Text>
         <Text style={[styles.appVersionText, { color: `${colors.onBackground}88` }]}>v{DeviceInfo.getVersion()}</Text>
 
-        {apps.map((item, index) => {
-          return (
-            <View
-              style={[styles.listContainer, { backgroundColor: `${colors.card}`, shadowColor: `${colors.shadow}` }]}
-              key={item.id.toString()}>
-              <List.Subheader style={[styles.listSubHeader, { color: colors.primary }]}>{item.title}</List.Subheader>
-              {item.items.map((subItem, subIndex) => {
-                return (
-                  <View key={subItem.id.toString()}>
-                    <List.Item
-                      titleStyle={{ color: colors.onSurface }}
-                      descriptionStyle={{ color: `${colors.onSurface}88` }}
-                      titleNumberOfLines={0}
-                      onPress={() => onPressAboutOption(item, index, subItem, subIndex)}
-                      title={subItem.title}
-                      description={subItem.description}
-                      left={() => (
-                        <Icon
-                          style={styles.listIcon}
-                          type={subItem.iconType}
-                          name={subItem.iconName}
-                          color={`${colors.onSurface}88`}
-                          size={24}
-                        />
-                      )}
-                    />
-                    <Divider />
-                  </View>
-                );
-              })}
-            </View>
-          );
-        })}
-      </ScrollView>
+        <View style={styles.listContainer}>
+          {apps.map((item, index) => {
+            return (
+              <View
+                style={[styles.listItem, { backgroundColor: `${colors.card}`, shadowColor: `${colors.shadow}` }]}
+                key={item.id.toString()}>
+                <List.Subheader style={[styles.listSubHeader, { color: colors.primary }]}>{item.title}</List.Subheader>
+                {item.items.map((subItem, subIndex) => {
+                  return (
+                    <View key={subItem.id.toString()}>
+                      <List.Item
+                        titleStyle={{ color: colors.onSurface }}
+                        descriptionStyle={{ color: `${colors.onSurface}88` }}
+                        titleNumberOfLines={0}
+                        onPress={() => onPressAboutOption(item, index, subItem, subIndex)}
+                        title={subItem.title}
+                        description={subItem.description}
+                        left={() => (
+                          <Icon
+                            style={styles.listIcon}
+                            type={subItem.iconType}
+                            name={subItem.iconName}
+                            color={`${colors.onSurface}88`}
+                            size={24}
+                          />
+                        )}
+                      />
+                      <Divider />
+                    </View>
+                  );
+                })}
+              </View>
+            );
+          })}
+        </View>
+      </Components.AppBaseView>
     </View>
   );
 };

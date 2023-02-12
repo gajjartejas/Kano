@@ -32,7 +32,7 @@ const LearnCharsChart = ({ navigation, route }: Props) => {
 
   //Constants
   const { colors } = useTheme();
-  const { type } = route.params;
+  const { type, color } = route.params;
   const groupedEntries = Hooks.ChartItemForTypes.useChartItemForTypes(type);
   const { t } = useTranslation();
   const mappedGroupedEntries = groupedEntries.map(v => [v.title, v.data]).flat(1);
@@ -74,7 +74,7 @@ const LearnCharsChart = ({ navigation, route }: Props) => {
   }, [configInterface]);
 
   const cardTapped = (item: ICharCellItem, index: number, sectionIndex: number) => {
-    navigation.push('LearnCharInfo', { index, sectionIndex, groupedEntries, type });
+    navigation.push('LearnCharInfo', { index, sectionIndex, groupedEntries, type, color: color });
   };
 
   const renderItem = (item: ICharCellItem, index: number, sectionIndex: number) => {
@@ -119,19 +119,19 @@ const LearnCharsChart = ({ navigation, route }: Props) => {
       return null;
     }
     return (
-      <View style={[styles.listHeaderView, { backgroundColor: colors.background }]}>
+      <View style={styles.listHeaderView}>
         <Text style={[styles.listHeaderText, { color: colors.textTitle }]}>{titleText}</Text>
       </View>
     );
   };
 
   return (
-    <View style={[styles.container, { backgroundColor: colors.background }]}>
+    <View style={[styles.container, { backgroundColor: `${color}15` }]}>
       <Appbar.Header style={{ backgroundColor: colors.background }}>
         <Appbar.BackAction onPress={onGoBack} />
         <Appbar.Content title={title} subtitle="" />
       </Appbar.Header>
-      <View style={styles.safeArea}>
+      <Components.AppBaseView edges={['bottom', 'left', 'right']} style={styles.safeArea}>
         {!!numberOfColumns && (
           <View style={[styles.listContainer, { paddingHorizontal: CONTAINER_SPACING - 1 }]}>
             <FlashList
@@ -146,7 +146,7 @@ const LearnCharsChart = ({ navigation, route }: Props) => {
             />
           </View>
         )}
-      </View>
+      </Components.AppBaseView>
     </View>
   );
 };

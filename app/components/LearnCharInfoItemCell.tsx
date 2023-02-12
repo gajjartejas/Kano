@@ -9,6 +9,7 @@ import { useTranslation } from 'react-i18next';
 import Config from 'app/config';
 import { ICharCellItem } from './CharCellItem';
 import AppTitleValueItemCell from './AppTitleValueItemCell';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 //Interface
 interface ILearnCharInfoItemCellProps {
@@ -21,12 +22,12 @@ const LearnCharInfoItemCell = (props: ILearnCharInfoItemCellProps) => {
   //Const
   const { colors } = useTheme();
   const dim = useWindowDimensions();
+  const insets = useSafeAreaInsets();
   const { t } = useTranslation();
-
   const { item, index } = props;
 
   return (
-    <View style={[styles.container, { width: dim.width }]}>
+    <View style={[styles.container, { width: dim.width - insets.right - insets.left }]}>
       <Text style={[styles.headerText, { color: colors.text }]}>{item.gu}</Text>
       <View style={[styles.card, { backgroundColor: `${colors.card}`, shadowColor: `${colors.shadow}` }]}>
         <AppTitleValueItemCell touchDisabled title={t('learnCharInfoScreen.charactor')} value={item.gu} />
@@ -66,7 +67,6 @@ const styles = StyleSheet.create({
   container: {
     height: 'auto',
   },
-
   headerText: {
     alignSelf: 'center',
     fontFamily: Config.Fonts.NotoSansGujarati.SemiBold,

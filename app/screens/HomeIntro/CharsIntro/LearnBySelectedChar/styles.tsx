@@ -54,19 +54,23 @@ const styles = StyleSheet.create({
   },
   listHeaderView: {
     paddingTop: 16,
+    paddingBottom: 4,
     flexDirection: 'row',
     justifyContent: 'space-between',
+    alignItems: 'center',
   },
   listHeaderText: {
     fontSize: 18,
     fontWeight: '600',
     fontFamily: Config.Fonts.NotoSansGujarati.Medium,
   },
+  chipText: { fontSize: 12 },
   emptyListHeader: {
     paddingVertical: 8,
   },
   listContentContainer: { paddingVertical: 8 },
   listContainer: { flex: 1 },
+  continueButton: { height: 44 },
 });
 
 export default styles;

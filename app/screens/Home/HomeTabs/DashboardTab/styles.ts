@@ -12,11 +12,8 @@ const styles = StyleSheet.create({
   },
   sectionHeader: {
     fontSize: 20,
-    fontWeight: 'bold',
-    marginVertical: 10,
-  },
-  whiteSectionHeader: {
-    color: 'white',
+    fontWeight: '600',
+    marginVertical: 20,
   },
   headerImage: {
     width: '100%',
@@ -24,7 +21,6 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: 40,
     borderBottomRightRadius: 40,
     position: 'absolute',
-    backgroundColor: 'red',
     overflow: 'hidden',
   },
   section: { paddingHorizontal: 20 },
@@ -32,16 +28,29 @@ const styles = StyleSheet.create({
   listContainer: {
     paddingTop: 16,
   },
-  headerDetailContainer: {
+  headerContainer: {
     paddingHorizontal: 16,
     paddingTop: 80,
     flexDirection: 'row',
     justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  headerDetailContainer: {
+    justifyContent: 'space-between',
   },
   headerDetailText: {
-    fontSize: 40,
+    fontSize: 30,
     fontWeight: '500',
-    color: 'white',
+  },
+  headerSubDetailText: {
+    fontSize: 20,
+    fontWeight: '400',
+  },
+  avatar: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    overflow: 'hidden',
   },
 });
 

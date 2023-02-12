@@ -16,6 +16,7 @@ export interface ICharListItem {
   subTitle: string;
   iconName: string;
   iconFamily: IconType;
+  color: string;
 }
 
 export interface ICharListSection {
@@ -38,7 +39,7 @@ const CharListItem = (props: ICharListItemProps) => {
   const sectionIndex = props.sectionIndex;
 
   return (
-    <View style={[styles.container, { backgroundColor: `${colors.card}`, shadowColor: `${colors.shadow}` }]}>
+    <View style={[styles.container, { backgroundColor: `${item.color}`, shadowColor: `${colors.shadow}` }]}>
       <TouchableRipple
         rippleColor={`${colors.primary}20`}
         style={[styles.touchableButton, { backgroundColor: `${colors.card}20` }]}
@@ -50,15 +51,15 @@ const CharListItem = (props: ICharListItemProps) => {
                 style={styles.leftIcon}
                 type={item.iconFamily}
                 name={item.iconName}
-                color={colors.textTitle}
+                color={colors.white}
                 size={44}
               />
             </View>
             <View style={styles.textContainer}>
-              <Text numberOfLines={2} style={[styles.titleText, { color: colors.textTitle }]}>
+              <Text numberOfLines={2} style={[styles.titleText, { color: colors.white }]}>
                 {item.title}
               </Text>
-              <Text numberOfLines={2} style={[styles.subtitleText, { color: `${colors.primary}${colors.opacity}` }]}>
+              <Text numberOfLines={2} style={[styles.subtitleText, { color: `${colors.white}${colors.opacity}` }]}>
                 {item.subTitle}
               </Text>
             </View>

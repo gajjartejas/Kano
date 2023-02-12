@@ -17,9 +17,10 @@ import StrokeOrderBottomSheet from './StrokeOrderBottomSheet';
 import LearnCharInfoItemCell from './LearnCharInfoItemCell';
 import AppLevelFinishDialog from './AppLevelFinishDialog';
 import CharSelectCellItem from './CharSelectCellItem';
-import AppActionDialog from 'app/components/AppActionDialog';
+import AppActionDialog from './AppActionDialog';
+import AppBaseView from './AppBaseView';
 
-export default {
+const Components = {
   AppNoConnection,
   AppLoadingPlaceHolder,
   MoreAppCard,
@@ -40,4 +41,7 @@ export default {
   AppLevelFinishDialog,
   CharSelectCellItem,
   AppActionDialog,
+  AppBaseView,
 };
+
+export default Components;

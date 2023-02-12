@@ -59,12 +59,20 @@ const CharCellItem = (props: ICharCellItemProps) => {
         onPress={() => props.onPress(item, index, sectionIndex)}>
         <View style={styles.iconTextContainerView}>
           <View style={styles.iconTextContainer}>
-            <Text numberOfLines={1} style={[styles.titleText, { color: colors.textTitle, fontSize: titleFontSize }]}>
+            <Text
+              numberOfLines={1}
+              style={[
+                styles.titleText,
+                { color: selected ? colors.onPrimary : colors.textTitle, fontSize: titleFontSize },
+              ]}>
               {item.title}
             </Text>
             <Text
               numberOfLines={2}
-              style={[styles.subTitleText, { color: `${colors.textTitle}99`, fontSize: subTitleFontSize }]}>
+              style={[
+                styles.subTitleText,
+                { color: selected ? `${colors.onPrimary}` : `${colors.textTitle}99`, fontSize: subTitleFontSize },
+              ]}>
               {item.subTitle}
             </Text>
           </View>

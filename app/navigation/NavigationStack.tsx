@@ -40,6 +40,9 @@ declare global {
       textTitle: string;
       card: string;
       opacity: string;
+
+      white: string;
+      black: string;
     }
 
     interface Theme {}
@@ -104,13 +107,14 @@ const Navigator: React.FC<IProps> = (props: IProps) => {
 
 const RootNavigation: React.FC = () => {
   const primary = useSelector((state: IState) => state.themeReducer.primary);
+  const onPrimary = useSelector((state: IState) => state.themeReducer.onPrimary);
 
   const PaperThemeDefault = {
     ...PaperDefaultTheme,
     colors: {
       ...PaperDefaultTheme.colors,
       primary: primary,
-      onPrimary: '#FFFFFF',
+      onPrimary: onPrimary,
 
       background: '#F9F9F9',
       onBackground: '#000000',
@@ -123,7 +127,10 @@ const RootNavigation: React.FC = () => {
 
       textTitle: '#535b6b',
       card: '#FFFFFF',
-      opacity: '55',
+      opacity: '80',
+
+      white: '#ffffff',
+      black: '#000000',
     },
   };
 
@@ -132,7 +139,7 @@ const RootNavigation: React.FC = () => {
     colors: {
       ...PaperDarkTheme.colors,
       primary: primary,
-      onPrimary: '#000000',
+      onPrimary: onPrimary,
 
       background: '#000000',
       onBackground: '#FFFFFF',
@@ -145,7 +152,10 @@ const RootNavigation: React.FC = () => {
 
       textTitle: '#FFFFFF',
       card: '#1E1E1E',
-      opacity: 'FF',
+      opacity: '99',
+
+      white: '#ffffff',
+      black: '#000000',
     },
   };
 

@@ -2,7 +2,7 @@ import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { View, useWindowDimensions } from 'react-native';
 
 //ThirdParty
-import { Appbar, Button, RadioButton, Text, useTheme } from 'react-native-paper';
+import { Appbar, Button, Chip, Text, useTheme } from 'react-native-paper';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
 import { FlashList } from '@shopify/flash-list';
@@ -34,7 +34,7 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
 
   //Constants
   const { colors } = useTheme();
-  const { type, learnMode, isRandomMode } = route.params;
+  const { type, learnMode, isRandomMode, color } = route.params;
   const { t } = useTranslation();
   const dim = useWindowDimensions();
   const groupedEntries = Hooks.ChartItemForTypes.useSelectedChartItemForTypes(type);
@@ -138,13 +138,16 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
       }
     }
     return (
-      <View style={[styles.listHeaderView, { backgroundColor: colors.background }]}>
+      <View style={styles.listHeaderView}>
         <Text style={[styles.listHeaderText, { color: colors.textTitle }]}>{titleText}</Text>
-        <RadioButton
-          value="first"
-          status={allSelected ? 'checked' : 'unchecked'}
-          onPress={() => onSelectCheckbox(index)}
-        />
+        <Chip
+          selectedColor={allSelected ? colors.white : colors.primary}
+          style={{ backgroundColor: allSelected ? colors.primary : colors.white }}
+          textStyle={[styles.chipText, { color: allSelected ? colors.white : colors.primary }]}
+          icon={allSelected ? 'check-circle' : 'check-circle-outline'}
+          onPress={() => onSelectCheckbox(index)}>
+          {allSelected ? t('learnBySelectedChar.unselectAll') : t('learnBySelectedChar.selectAll')}
+        </Chip>
       </View>
     );
   };
@@ -157,6 +160,7 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
         learnMode: learnMode,
         onlyInclude: selectedIds,
         isRandomMode: isRandomMode,
+        color: color,
       });
     }, 500);
   };
@@ -184,12 +188,12 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
   };
 
   return (
-    <SafeAreaView edges={['bottom']} style={[styles.container, { backgroundColor: colors.background }]}>
+    <SafeAreaView edges={['bottom']} style={[styles.container, { backgroundColor: `${color}15` }]}>
       <Appbar.Header style={{ backgroundColor: colors.background }}>
         <Appbar.BackAction onPress={onGoBack} />
         <Appbar.Content title={t('learnBySelectedChar.header.title')} subtitle="" />
       </Appbar.Header>
-      <View style={styles.safeArea}>
+      <Components.AppBaseView edges={['bottom', 'left', 'right']} style={styles.safeArea}>
         {!!numberOfColumns && (
           <View style={[styles.listContainer, { paddingHorizontal: CONTAINER_SPACING - 1 }]}>
             <FlashList
@@ -212,8 +216,12 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
             />
           </View>
         )}
-      </View>
-      <Button disabled={selectedIds.size === 0} mode="contained" onPress={onPressContinue}>
+      </Components.AppBaseView>
+      <Button
+        contentStyle={styles.continueButton}
+        disabled={selectedIds.size === 0}
+        mode="contained"
+        onPress={onPressContinue}>
         {t('general.continue')}
       </Button>
     </SafeAreaView>

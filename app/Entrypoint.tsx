@@ -11,6 +11,7 @@ import { enableScreens } from 'react-native-screens';
 import './locales';
 import LoadingScreen from 'app/screens/Auth/Loading';
 import AppManager from 'app/components/AppManager';
+import { initialWindowMetrics, SafeAreaProvider } from 'react-native-safe-area-context';
 const { persistor, store } = configureStore();
 
 /**
@@ -22,9 +23,11 @@ const Entrypoint: React.FC = () => {
   return (
     <Provider store={store}>
       <PersistGate loading={<ActivityIndicator />} persistor={persistor}>
-        <AppManager>
-          <LoadingScreen />
-        </AppManager>
+        <SafeAreaProvider initialMetrics={initialWindowMetrics}>
+          <AppManager>
+            <LoadingScreen />
+          </AppManager>
+        </SafeAreaProvider>
       </PersistGate>
     </Provider>
   );

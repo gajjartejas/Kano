@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView, View } from 'react-native';
+import { Image, ScrollView, View } from 'react-native';
 
 //ThirdParty
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
@@ -12,6 +12,7 @@ import { IHomeListItem } from 'app/components/HomeListItem';
 import * as RouterParamTypes from 'app/config/router-params';
 import Hooks from 'app/hooks/index';
 import styles from './styles';
+import Config from 'app/config';
 
 //Params
 type RootStackParamList = {
@@ -36,14 +37,14 @@ const DashboardTab = ({ navigation }: Props) => {
   const cardTapped = (item: IHomeListItem, index: number, sectionIndex: number) => {
     if (sectionIndex === 0 && index === 0) {
       navigation.push('GujaratiScriptIntro', {});
-    } else if (sectionIndex === 0 && index === 1) {
-      navigation.push('LearnCharsList', { type: RouterParamTypes.LearnCharsType.Vowel });
-    } else if (sectionIndex === 0 && index === 2) {
-      navigation.push('LearnCharsList', { type: RouterParamTypes.LearnCharsType.Constant });
-    } else if (sectionIndex === 0 && index === 3) {
-      navigation.push('LearnCharsList', { type: RouterParamTypes.LearnCharsType.Barakhadi });
-    } else if (sectionIndex === 0 && index === 4) {
-      navigation.push('LearnCharsList', { type: RouterParamTypes.LearnCharsType.Number });
+    } else if (sectionIndex === 1 && index === 0) {
+      navigation.push('LearnCharsList', { type: RouterParamTypes.LearnCharsType.Vowel, color: item.color });
+    } else if (sectionIndex === 1 && index === 1) {
+      navigation.push('LearnCharsList', { type: RouterParamTypes.LearnCharsType.Constant, color: item.color });
+    } else if (sectionIndex === 1 && index === 2) {
+      navigation.push('LearnCharsList', { type: RouterParamTypes.LearnCharsType.Barakhadi, color: item.color });
+    } else if (sectionIndex === 2 && index === 0) {
+      navigation.push('LearnCharsList', { type: RouterParamTypes.LearnCharsType.Number, color: item.color });
     }
     // Utils.rateApp.saveItem(item);
   };
@@ -61,15 +62,26 @@ const DashboardTab = ({ navigation }: Props) => {
   };
 
   return (
-    <View style={[styles.container, { backgroundColor: colors.background }]}>
+    <Components.AppBaseView
+      edges={['bottom', 'left', 'right']}
+      style={[styles.container, { backgroundColor: colors.background }]}>
       <ScrollView style={styles.carouselContainer}>
-        <View style={styles.headerImage}>
-          <Components.WaveBackground />
-        </View>
-
-        <View style={styles.headerDetailContainer}>
-          <View>
-            <Text style={styles.headerDetailText}>{t('homeScreen.header.title', { name: 'Tejas' })}</Text>
+        <View style={styles.headerContainer}>
+          <View style={styles.headerDetailContainer}>
+            <Text style={[styles.headerDetailText, { color: colors.text }]}>
+              {t('homeScreen.header.title', { name: 'Tejas' })}
+            </Text>
+            <Text style={[styles.headerSubDetailText, { color: colors.textTitle }]}>
+              {t('homeScreen.header.subTitle')}
+            </Text>
+          </View>
+          <View style={[styles.avatar]}>
+            <Image
+              style={[styles.avatar, { backgroundColor: `${colors.primary}80` }]}
+              resizeMode={'contain'}
+              borderRadius={25}
+              source={Config.Images.icons.avatar}
+            />
           </View>
         </View>
 
@@ -77,9 +89,7 @@ const DashboardTab = ({ navigation }: Props) => {
           {groupedEntries.map((section, sectionIndex) => {
             return (
               <View style={styles.section} key={sectionIndex.toString()}>
-                <Text style={[styles.sectionHeader, sectionIndex === 0 ? styles.whiteSectionHeader : null]}>
-                  {t(section.title)}
-                </Text>
+                <Text style={[styles.sectionHeader, { color: colors.text }]}>{t(section.title)}</Text>
                 <View style={styles.sectionItem}>
                   {section.data.map((item, index) => {
                     return renderItem({ item, index, sectionIndex });
@@ -90,7 +100,7 @@ const DashboardTab = ({ navigation }: Props) => {
           })}
         </View>
       </ScrollView>
-    </View>
+    </Components.AppBaseView>
   );
 };
 

@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
   },
   listIcon: { alignSelf: 'center', marginHorizontal: 8 },
   listSubHeader: { marginLeft: 36 },
-  listContainer: {
+  listItem: {
     marginHorizontal: 20,
     borderRadius: 8,
     marginTop: 16,
@@ -34,6 +34,7 @@ const styles = StyleSheet.create({
     elevation: 8,
     shadowOpacity: 0.2,
   },
+  listContainer: { paddingTop: 16, paddingBottom: 8 },
 });
 
 export default styles;
