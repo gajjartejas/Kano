@@ -8,14 +8,27 @@
 
 'use strict';
 
-var copy = require('recursive-copy');
+const copy = require('recursive-copy');
 
-var sourceAssets = ['./assets/barakhadi', './assets/numbers', './assets/barakhadi', './assets/numbers'];
-let destAssets = [
+const sourceAssets = [
+  './assets/svg/barakhadi',
+  './assets/svg/numbers',
+  './assets/svg/barakhadi',
+  './assets/svg/numbers',
+  './assets/audio/barakhadi',
+  './assets/audio/numbers',
+  './assets/audio/barakhadi',
+  './assets/audio/numbers',
+];
+const destAssets = [
   './ios/assets/svgs/barakhadi',
   './ios/assets/svgs/numbers',
   './android/app/src/main/assets/svgs/barakhadi',
   './android/app/src/main/assets/svgs/numbers',
+  './ios/assets/audio/barakhadi',
+  './ios/assets/audio/numbers',
+  './android/app/src/main/assets/audio/barakhadi',
+  './android/app/src/main/assets/audio/numbers',
 ];
 
 for (let i = 0; i < sourceAssets.length; i++) {

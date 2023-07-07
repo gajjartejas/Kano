@@ -22,6 +22,7 @@
 		85CAC48B2A104BA8A1C412E2 /* NotoSansGujarati-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47A6CB8F83CC4CC09C29C69B /* NotoSansGujarati-Thin.ttf */; };
 		9629FAE627C114A2007B4BBF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9629FAE527C114A2007B4BBF /* GoogleService-Info.plist */; };
 		9629FB4C27C13A6E007B4BBF /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9629FB4B27C13A6E007B4BBF /* BootSplash.storyboard */; };
+		96BEC0442A57348F00B7F18F /* audio in Resources */ = {isa = PBXBuildFile; fileRef = 96BEC0432A57348F00B7F18F /* audio */; };
 		96F521C128D4EAB600F64D98 /* svgs in Resources */ = {isa = PBXBuildFile; fileRef = 96F521C028D4EAB600F64D98 /* svgs */; };
 		A5F3EA0A06254412B2D2C73B /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 67412B6B54BF43A09D62C217 /* OFL.txt */; };
 		B80B78DACF8A48E5845682CF /* NotoSansGujarati-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37DA2DEA14C54F5D9994428C /* NotoSansGujarati-ExtraBold.ttf */; };
@@ -80,6 +81,7 @@
 		9629FB5B27C13C18007B4BBF /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EvilIcons.ttf; sourceTree = "<group>"; };
 		9629FB5C27C13C18007B4BBF /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleLineIcons.ttf; sourceTree = "<group>"; };
 		9629FB5D27C13C18007B4BBF /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialIcons.ttf; sourceTree = "<group>"; };
+		96BEC0432A57348F00B7F18F /* audio */ = {isa = PBXFileReference; lastKnownFileType = folder; name = audio; path = assets/audio; sourceTree = "<group>"; };
 		96F521C028D4EAB600F64D98 /* svgs */ = {isa = PBXFileReference; lastKnownFileType = folder; name = svgs; path = assets/svgs; sourceTree = "<group>"; };
 		98B87C342F7B4B3D847B369F /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
 		A27D54CA7E8245B7A43C6E9F /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 		13B07FAE1A68108700A75B9A /* Kano */ = {
 			isa = PBXGroup;
 			children = (
+				96BEC0432A57348F00B7F18F /* audio */,
 				96F521C028D4EAB600F64D98 /* svgs */,
 				9629FB4D27C13C18007B4BBF /* Fonts */,
 				9629FAE527C114A2007B4BBF /* GoogleService-Info.plist */,
@@ -372,6 +375,7 @@
 				6BDA82B31C7B4C17B0E35276 /* NotoSansGujarati-Regular.ttf in Resources */,
 				0FB1552CDE07405DAB8D6832 /* NotoSansGujarati-SemiBold.ttf in Resources */,
 				96F521C128D4EAB600F64D98 /* svgs in Resources */,
+				96BEC0442A57348F00B7F18F /* audio in Resources */,
 				85CAC48B2A104BA8A1C412E2 /* NotoSansGujarati-Thin.ttf in Resources */,
 				A5F3EA0A06254412B2D2C73B /* OFL.txt in Resources */,
 			);

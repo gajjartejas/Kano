@@ -17,6 +17,7 @@ const useConsonantsChartItems = (): ICharCellListSection[] => {
       gu: charInfo.gu,
       diacritic: charInfo.diacritic!,
       svg: charInfo.svg,
+      audio: charInfo.audio,
     };
   };
 

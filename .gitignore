@@ -4,7 +4,7 @@
 
 # Xcode
 #
-build/
+ios/build/
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -84,9 +84,7 @@ amplify/.config/local-*
 amplify/mock-data
 amplify/backend/amplify-meta.json
 amplify/backend/awscloudformation
-build/
 dist/
-node_modules/
 aws-exports.js
 awsconfiguration.json
 
@@ -95,5 +93,9 @@ ios/assets/svgs/
 android/app/src/main/assets/svgs/
 android/app/src/main/assets/fonts/
 android/app/src/main/assets/custom/
+ios/assets/audio/
+android/app/src/main/assets/audio/
 
 .eslintcache
+
+vendor

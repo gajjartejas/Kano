@@ -16,7 +16,8 @@ const useVowelsChartItems = (): ICharCellListSection[] => {
       en: charInfo.en,
       gu: charInfo.gu,
       diacritic: charInfo.diacritic!,
-      svg: charInfo.svg!,
+      svg: charInfo.svg,
+      audio: charInfo.audio,
     };
   };
 

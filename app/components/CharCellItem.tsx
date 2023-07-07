@@ -14,6 +14,7 @@ export interface ICharCellItem {
   gu: string;
   diacritic: string;
   svg: string;
+  audio: string;
 }
 
 export interface ICharCellListSection {
