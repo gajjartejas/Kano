@@ -18,6 +18,7 @@ import Components from 'app/components';
 import { LearnCharsMode } from 'app/config/router-params';
 import AnimatedCharacter from 'app/components/AnimatedCharacter';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import useSoundPlayer from 'app/hooks/useAudioPlayer';
 
 //Params
 type RootStackParamList = {
@@ -41,6 +42,7 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
   //Constants
   const { colors } = useTheme();
   const { t } = useTranslation();
+  const player = useSoundPlayer();
   const { type, learnMode, onlyInclude, isRandomMode, color } = route.params;
   const groupedEntries = Hooks.ChartItemForTypes.useChartSectionsForTypes(type, isRandomMode, onlyInclude);
   const isLearningMode = learnMode === LearnCharsMode.Learn;
@@ -247,6 +249,7 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
   };
 
   const onPressCard = (_item: ICharCellItem, _index: number) => {
+    player.play(_item.audio);
     setPlaying(false);
     setTimeout(() => {
       setPlaying(true);
@@ -319,7 +322,7 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
                             stroke={colors.onBackground}
                             strokeWidth={6}
                             initialDelay={0}
-                            path={`svgs/${item.svg}`}
+                            path={item.svg}
                             duration={10000}
                           />
                         </Animated.View>

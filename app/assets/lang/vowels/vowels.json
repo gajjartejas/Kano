@@ -4,83 +4,95 @@
     "en": "Aa",
     "gu": "અ",
     "diacritic": " ",
-    "svg": "barakhadi/0_aa/0_aa.svg"
+    "svg": "svgs/barakhadi/0_aa/0_aa.svg",
+    "audio": "audio/barakhadi/0_aa/0_aa.mp3"
   },
   {
     "id": 1,
     "en": "Aa",
     "gu": "આ",
     "diacritic": "ા",
-    "svg": "barakhadi/0_aa/1_aa.svg"
+    "svg": "svgs/barakhadi/0_aa/1_aa.svg",
+    "audio": "audio/barakhadi/0_aa/1_aa.mp3"
   },
   {
     "id": 2,
     "en": "I",
     "gu": "ઇ",
     "diacritic": "િ",
-    "svg": "barakhadi/0_aa/2_i.svg"
+    "svg": "svgs/barakhadi/0_aa/2_i.svg",
+    "audio": "audio/barakhadi/0_aa/2_i.mp3"
   },
   {
     "id": 3,
     "en": "ee",
     "gu": "ઈ",
     "diacritic": "ી",
-    "svg": "barakhadi/0_aa/3_ee.svg"
+    "svg": "svgs/barakhadi/0_aa/3_ee.svg",
+    "audio": "audio/barakhadi/0_aa/3_ee.mp3"
   },
   {
     "id": 4,
     "en": "u",
     "gu": "ઉ",
     "diacritic": "ુ",
-    "svg": "barakhadi/0_aa/4_u.svg"
+    "svg": "svgs/barakhadi/0_aa/4_u.svg",
+    "audio": "audio/barakhadi/0_aa/4_u.mp3"
   },
   {
     "id": 5,
     "en": "oo",
     "gu": "ઊ",
     "diacritic": "ૂ",
-    "svg": "barakhadi/0_aa/5_oo.svg"
+    "svg": "svgs/barakhadi/0_aa/5_oo.svg",
+    "audio": "audio/barakhadi/0_aa/5_oo.mp3"
   },
   {
     "id": 6,
     "en": "e",
     "gu": "એ",
     "diacritic": "ે",
-    "svg": "barakhadi/0_aa/6_e.svg"
+    "svg": "svgs/barakhadi/0_aa/6_e.svg",
+    "audio": "audio/barakhadi/0_aa/6_e.mp3"
   },
   {
     "id": 7,
     "en": "ai",
     "gu": "ઐ",
     "diacritic": "ૈ",
-    "svg": "barakhadi/0_aa/7_ai.svg"
+    "svg": "svgs/barakhadi/0_aa/7_ai.svg",
+    "audio": "audio/barakhadi/0_aa/7_ai.mp3"
   },
   {
     "id": 8,
     "en": "o",
     "gu": "ઓ",
     "diacritic": "ો",
-    "svg": "barakhadi/0_aa/8_o.svg"
+    "svg": "svgs/barakhadi/0_aa/8_o.svg",
+    "audio": "audio/barakhadi/0_aa/8_o.mp3"
   },
   {
     "id": 9,
     "en": "au",
     "gu": "ઔ",
     "diacritic": "ૌ",
-    "svg": "barakhadi/0_aa/9_au.svg"
+    "svg": "svgs/barakhadi/0_aa/9_au.svg",
+    "audio": "audio/barakhadi/0_aa/9_au.mp3"
   },
   {
     "id": 10,
     "en": "am / an",
     "gu": "અં",
     "diacritic": "ં",
-    "svg": "barakhadi/0_aa/10_am_or_an.svg"
+    "svg": "svgs/barakhadi/0_aa/10_am_or_an.svg",
+    "audio": "audio/barakhadi/0_aa/10_am_or_an.mp3"
   },
   {
     "id": 11,
     "en": "Ah",
     "gu": "અઃ",
     "diacritic": "ઃ",
-    "svg": "barakhadi/0_aa/11_ah.svg"
+    "svg": "svgs/barakhadi/0_aa/11_ah.svg",
+    "audio": "audio/barakhadi/0_aa/11_ah.mp3"
   }
 ]

@@ -141,7 +141,7 @@ const MoreTab = ({ navigation }: Props) => {
     const osType = Platform.OS;
     const systemVersion = DeviceInfo.getSystemVersion();
     const brand = DeviceInfo.getBrand();
-    const model = await DeviceInfo.getModel();
+    const model = DeviceInfo.getModel();
     const readableVersion = DeviceInfo.getReadableVersion();
     const body = `OS: ${osType} (${systemVersion})\nBrand: ${brand} (${model})\nApp Version: ${readableVersion}`;
     Linking.openURL(`mailto:${email}?subject=${subject}&body=${body}`);

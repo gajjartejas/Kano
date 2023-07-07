@@ -5,7 +5,8 @@
     "gu": "૦",
     "name_gu": "શૂન્ય",
     "name_en": "śūnya",
-    "svg": "numbers/0_num.svg"
+    "svg": "svgs/numbers/0_num.svg",
+    "audio": "audio/numbers/0_num.mp3"
   },
   {
     "id": 1,
@@ -13,7 +14,8 @@
     "gu": "૧",
     "name_gu": "એક",
     "name_en": "ek",
-    "svg": "numbers/1_num.svg"
+    "svg": "svgs/numbers/1_num.svg",
+    "audio": "audio/numbers/1_num.mp3"
   },
   {
     "id": 2,
@@ -21,7 +23,8 @@
     "gu": "૨",
     "name_gu": "બે",
     "name_en": "be",
-    "svg": "numbers/2_num.svg"
+    "svg": "svgs/numbers/2_num.svg",
+    "audio": "audio/numbers/2_num.mp3"
   },
   {
     "id": 3,
@@ -29,7 +32,8 @@
     "gu": "૩",
     "name_gu": "ત્રણ",
     "name_en": "tra",
-    "svg": "numbers/3_num.svg"
+    "svg": "svgs/numbers/3_num.svg",
+    "audio": "audio/numbers/3_num.mp3"
   },
   {
     "id": 4,
@@ -37,7 +41,8 @@
     "gu": "૪",
     "name_gu": "ચાર",
     "name_en": "chār",
-    "svg": "numbers/4_num.svg"
+    "svg": "svgs/numbers/4_num.svg",
+    "audio": "audio/numbers/4_num.mp3"
   },
   {
     "id": 5,
@@ -45,7 +50,8 @@
     "gu": "૫",
     "name_gu": "પાંચ",
     "name_en": "pāṅch",
-    "svg": "numbers/5_num.svg"
+    "svg": "svgs/numbers/5_num.svg",
+    "audio": "audio/numbers/5_num.mp3"
   },
   {
     "id": 6,
@@ -53,7 +59,8 @@
     "gu": "૬",
     "name_gu": "છ",
     "name_en": "chha",
-    "svg": "numbers/6_num.svg"
+    "svg": "svgs/numbers/6_num.svg",
+    "audio": "audio/numbers/6_num.mp3"
   },
   {
     "id": 7,
@@ -61,7 +68,8 @@
     "gu": "૭",
     "name_gu": "સાત",
     "name_en": "sāt",
-    "svg": "numbers/7_num.svg"
+    "svg": "svgs/numbers/7_num.svg",
+    "audio": "audio/numbers/7_num.mp3"
   },
   {
     "id": 8,
@@ -69,7 +77,8 @@
     "gu": "૮",
     "name_gu": "આઠ",
     "name_en": "āṭh",
-    "svg": "numbers/8_num.svg"
+    "svg": "svgs/numbers/8_num.svg",
+    "audio": "audio/numbers/8_num.mp3"
   },
   {
     "id": 9,
@@ -77,7 +86,8 @@
     "gu": "૯",
     "name_gu": "નવ",
     "name_en": "nav",
-    "svg": "numbers/9_num.svg"
+    "svg": "svgs/numbers/9_num.svg",
+    "audio": "audio/numbers/9_num.mp3"
   },
   {
     "id": 10,
@@ -85,7 +95,8 @@
     "gu": "૧૦",
     "name_gu": "દસ",
     "name_en": "das",
-    "svg": "numbers/10_num.svg"
+    "svg": "svgs/numbers/10_num.svg",
+    "audio": "audio/numbers/10_num.mp3"
   },
   {
     "id": 11,
@@ -93,7 +104,8 @@
     "gu": "૧૧",
     "name_gu": "અગિયાર",
     "name_en": "agiyār",
-    "svg": "numbers/11_num.svg"
+    "svg": "svgs/numbers/11_num.svg",
+    "audio": "audio/numbers/11_num.mp3"
   },
   {
     "id": 12,
@@ -101,7 +113,8 @@
     "gu": "૧૨",
     "name_gu": "બાર",
     "name_en": "bār",
-    "svg": "numbers/12_num.svg"
+    "svg": "svgs/numbers/12_num.svg",
+    "audio": "audio/numbers/12_num.mp3"
   },
   {
     "id": 13,
@@ -109,7 +122,8 @@
     "gu": "૧૩",
     "name_gu": "તેર",
     "name_en": "tēr",
-    "svg": "numbers/13_num.svg"
+    "svg": "svgs/numbers/13_num.svg",
+    "audio": "audio/numbers/13_num.mp3"
   },
   {
     "id": 14,
@@ -117,7 +131,8 @@
     "gu": "૧૪",
     "name_gu": "ચૌદ",
     "name_en": "chaud",
-    "svg": "numbers/14_num.svg"
+    "svg": "svgs/numbers/14_num.svg",
+    "audio": "audio/numbers/14_num.mp3"
   },
   {
     "id": 15,
@@ -125,7 +140,8 @@
     "gu": "૧૫",
     "name_gu": "પંદર",
     "name_en": "paṃdar",
-    "svg": "numbers/15_num.svg"
+    "svg": "svgs/numbers/15_num.svg",
+    "audio": "audio/numbers/15_num.mp3"
   },
   {
     "id": 16,
@@ -133,7 +149,8 @@
     "gu": "૧૬",
     "name_gu": "સોળ",
     "name_en": "soļ",
-    "svg": "numbers/16_num.svg"
+    "svg": "svgs/numbers/16_num.svg",
+    "audio": "audio/numbers/16_num.mp3"
   },
   {
     "id": 17,
@@ -141,7 +158,8 @@
     "gu": "૧૭",
     "name_gu": "સત્તર",
     "name_en": "sattar",
-    "svg": "numbers/17_num.svg"
+    "svg": "svgs/numbers/17_num.svg",
+    "audio": "audio/numbers/17_num.mp3"
   },
   {
     "id": 18,
@@ -149,7 +167,8 @@
     "gu": "૧૮",
     "name_gu": "અઢાર",
     "name_en": "aḑhār",
-    "svg": "numbers/18_num.svg"
+    "svg": "svgs/numbers/18_num.svg",
+    "audio": "audio/numbers/18_num.mp3"
   },
   {
     "id": 19,
@@ -157,7 +176,8 @@
     "gu": "૧૯",
     "name_gu": "ઓગણિસ",
     "name_en": "ogaņis",
-    "svg": "numbers/19_num.svg"
+    "svg": "svgs/numbers/19_num.svg",
+    "audio": "audio/numbers/19_num.mp3"
   },
   {
     "id": 20,
@@ -165,7 +185,8 @@
     "gu": "૨૦",
     "name_gu": "વીસ",
     "name_en": "vīs",
-    "svg": "numbers/20_num.svg"
+    "svg": "svgs/numbers/20_num.svg",
+    "audio": "audio/numbers/20_num.mp3"
   },
   {
     "id": 21,
@@ -173,7 +194,8 @@
     "gu": "૨૧",
     "name_gu": "એકવીસ",
     "name_en": "ēkavīs",
-    "svg": "numbers/21_num.svg"
+    "svg": "svgs/numbers/21_num.svg",
+    "audio": "audio/numbers/21_num.mp3"
   },
   {
     "id": 22,
@@ -181,7 +203,8 @@
     "gu": "૨૨",
     "name_gu": "બાવીસ",
     "name_en": "bāvīs",
-    "svg": "numbers/22_num.svg"
+    "svg": "svgs/numbers/22_num.svg",
+    "audio": "audio/numbers/22_num.mp3"
   },
   {
     "id": 23,
@@ -189,7 +212,8 @@
     "gu": "૨૩",
     "name_gu": "તેવીસ",
     "name_en": "tēvīs",
-    "svg": "numbers/23_num.svg"
+    "svg": "svgs/numbers/23_num.svg",
+    "audio": "audio/numbers/23_num.mp3"
   },
   {
     "id": 24,
@@ -197,7 +221,8 @@
     "gu": "૨૪",
     "name_gu": "ચોવીસ",
     "name_en": "chōvīs",
-    "svg": "numbers/24_num.svg"
+    "svg": "svgs/numbers/24_num.svg",
+    "audio": "audio/numbers/24_num.mp3"
   },
   {
     "id": 25,
@@ -205,7 +230,8 @@
     "gu": "૨૫",
     "name_gu": "પચ્ચીસ",
     "name_en": "pachchīs",
-    "svg": "numbers/25_num.svg"
+    "svg": "svgs/numbers/25_num.svg",
+    "audio": "audio/numbers/25_num.mp3"
   },
   {
     "id": 26,
@@ -213,7 +239,8 @@
     "gu": "૨૬",
     "name_gu": "છવીસ",
     "name_en": "chhavīs",
-    "svg": "numbers/26_num.svg"
+    "svg": "svgs/numbers/26_num.svg",
+    "audio": "audio/numbers/26_num.mp3"
   },
   {
     "id": 27,
@@ -221,7 +248,8 @@
     "gu": "૨૭",
     "name_gu": "સત્તાવીસ",
     "name_en": "sattāvīs",
-    "svg": "numbers/27_num.svg"
+    "svg": "svgs/numbers/27_num.svg",
+    "audio": "audio/numbers/27_num.mp3"
   },
   {
     "id": 28,
@@ -229,7 +257,8 @@
     "gu": "૨૮",
     "name_gu": "અઠ્ઠાવીસ",
     "name_en": "aṭhṭhāvīs",
-    "svg": "numbers/28_num.svg"
+    "svg": "svgs/numbers/28_num.svg",
+    "audio": "audio/numbers/28_num.mp3"
   },
   {
     "id": 29,
@@ -237,7 +266,8 @@
     "gu": "૨૯",
     "name_gu": "ઓગણત્રીસ",
     "name_en": "ōgaṇatrīs",
-    "svg": "numbers/29_num.svg"
+    "svg": "svgs/numbers/29_num.svg",
+    "audio": "audio/numbers/29_num.mp3"
   },
   {
     "id": 30,
@@ -245,7 +275,8 @@
     "gu": "૩૦",
     "name_gu": "ત્રીસ",
     "name_en": "trīs",
-    "svg": "numbers/30_num.svg"
+    "svg": "svgs/numbers/30_num.svg",
+    "audio": "audio/numbers/30_num.mp3"
   },
   {
     "id": 31,
@@ -253,7 +284,8 @@
     "gu": "૩૧",
     "name_gu": "એકત્રીસ",
     "name_en": "ēkatrīs",
-    "svg": "numbers/31_num.svg"
+    "svg": "svgs/numbers/31_num.svg",
+    "audio": "audio/numbers/31_num.mp3"
   },
   {
     "id": 32,
@@ -261,7 +293,8 @@
     "gu": "૩૨",
     "name_gu": "બત્રીસ",
     "name_en": "batrīs",
-    "svg": "numbers/32_num.svg"
+    "svg": "svgs/numbers/32_num.svg",
+    "audio": "audio/numbers/32_num.mp3"
   },
   {
     "id": 33,
@@ -269,7 +302,8 @@
     "gu": "૩૩",
     "name_gu": "તેત્રીસ",
     "name_en": "tētrīs",
-    "svg": "numbers/33_num.svg"
+    "svg": "svgs/numbers/33_num.svg",
+    "audio": "audio/numbers/33_num.mp3"
   },
   {
     "id": 34,
@@ -277,7 +311,8 @@
     "gu": "૩૪",
     "name_gu": "ચોત્રીસ",
     "name_en": "chōtrīs",
-    "svg": "numbers/34_num.svg"
+    "svg": "svgs/numbers/34_num.svg",
+    "audio": "audio/numbers/34_num.mp3"
   },
   {
     "id": 35,
@@ -285,7 +320,8 @@
     "gu": "૩૫",
     "name_gu": "પાંત્રીસ",
     "name_en": "pāntrīs",
-    "svg": "numbers/35_num.svg"
+    "svg": "svgs/numbers/35_num.svg",
+    "audio": "audio/numbers/35_num.mp3"
   },
   {
     "id": 36,
@@ -293,7 +329,8 @@
     "gu": "૩૬",
     "name_gu": "છત્રીસ",
     "name_en": "chhatrīs",
-    "svg": "numbers/36_num.svg"
+    "svg": "svgs/numbers/36_num.svg",
+    "audio": "audio/numbers/36_num.mp3"
   },
   {
     "id": 37,
@@ -301,7 +338,8 @@
     "gu": "૩૭",
     "name_gu": "સડત્રીસ",
     "name_en": "saḍatrīs",
-    "svg": "numbers/37_num.svg"
+    "svg": "svgs/numbers/37_num.svg",
+    "audio": "audio/numbers/37_num.mp3"
   },
   {
     "id": 38,
@@ -309,7 +347,8 @@
     "gu": "૩૮",
     "name_gu": "અડત્રીસ",
     "name_en": "aḍatrīs",
-    "svg": "numbers/38_num.svg"
+    "svg": "svgs/numbers/38_num.svg",
+    "audio": "audio/numbers/38_num.mp3"
   },
   {
     "id": 39,
@@ -317,7 +356,8 @@
     "gu": "૩૯",
     "name_gu": "ઓગણચાલીસ",
     "name_en": "ōgaṇachālīs",
-    "svg": "numbers/39_num.svg"
+    "svg": "svgs/numbers/39_num.svg",
+    "audio": "audio/numbers/39_num.mp3"
   },
   {
     "id": 40,
@@ -325,7 +365,8 @@
     "gu": "૪૦",
     "name_gu": "ચાલીસ",
     "name_en": "chālīs",
-    "svg": "numbers/40_num.svg"
+    "svg": "svgs/numbers/40_num.svg",
+    "audio": "audio/numbers/40_num.mp3"
   },
   {
     "id": 41,
@@ -333,7 +374,8 @@
     "gu": "૪૧",
     "name_gu": "એકતાલીસ",
     "name_en": "ēkatālīs",
-    "svg": "numbers/41_num.svg"
+    "svg": "svgs/numbers/41_num.svg",
+    "audio": "audio/numbers/41_num.mp3"
   },
   {
     "id": 42,
@@ -341,7 +383,8 @@
     "gu": "૪૨",
     "name_gu": "બેતાલીસ",
     "name_en": "betālīs",
-    "svg": "numbers/42_num.svg"
+    "svg": "svgs/numbers/42_num.svg",
+    "audio": "audio/numbers/42_num.mp3"
   },
   {
     "id": 43,
@@ -349,7 +392,8 @@
     "gu": "૪૩",
     "name_gu": "ત્રેતાલીસ",
     "name_en": "tretālīs",
-    "svg": "numbers/43_num.svg"
+    "svg": "svgs/numbers/43_num.svg",
+    "audio": "audio/numbers/43_num.mp3"
   },
   {
     "id": 44,
@@ -357,7 +401,8 @@
     "gu": "૪૪",
     "name_gu": "ચુંમાલીસ",
     "name_en": "chun̄mālīs",
-    "svg": "numbers/44_num.svg"
+    "svg": "svgs/numbers/44_num.svg",
+    "audio": "audio/numbers/44_num.mp3"
   },
   {
     "id": 45,
@@ -365,7 +410,8 @@
     "gu": "૪૫",
     "name_gu": "પિસ્તાલીસ",
     "name_en": "pistālīs",
-    "svg": "numbers/45_num.svg"
+    "svg": "svgs/numbers/45_num.svg",
+    "audio": "audio/numbers/45_num.mp3"
   },
   {
     "id": 46,
@@ -373,7 +419,8 @@
     "gu": "૪૬",
     "name_gu": "છેતાલીસ",
     "name_en": "chhetālīs",
-    "svg": "numbers/46_num.svg"
+    "svg": "svgs/numbers/46_num.svg",
+    "audio": "audio/numbers/46_num.mp3"
   },
   {
     "id": 47,
@@ -381,7 +428,8 @@
     "gu": "૪૭",
     "name_gu": "સુડતાલીસ",
     "name_en": "suḍatālīs",
-    "svg": "numbers/47_num.svg"
+    "svg": "svgs/numbers/47_num.svg",
+    "audio": "audio/numbers/47_num.mp3"
   },
   {
     "id": 48,
@@ -389,7 +437,8 @@
     "gu": "૪૮",
     "name_gu": "અડતાલીસ",
     "name_en": "aḍatālīs",
-    "svg": "numbers/48_num.svg"
+    "svg": "svgs/numbers/48_num.svg",
+    "audio": "audio/numbers/48_num.mp3"
   },
   {
     "id": 49,
@@ -397,7 +446,8 @@
     "gu": "૪૯",
     "name_gu": "ઓગણપચાસ",
     "name_en": "ogaṇapachās",
-    "svg": "numbers/49_num.svg"
+    "svg": "svgs/numbers/49_num.svg",
+    "audio": "audio/numbers/49_num.mp3"
   },
   {
     "id": 50,
@@ -405,7 +455,8 @@
     "gu": "૫૦",
     "name_gu": "પચાસ",
     "name_en": "pachās",
-    "svg": "numbers/50_num.svg"
+    "svg": "svgs/numbers/50_num.svg",
+    "audio": "audio/numbers/50_num.mp3"
   },
   {
     "id": 51,
@@ -413,7 +464,8 @@
     "gu": "૫૧",
     "name_gu": "એકાવન",
     "name_en": "ekāvan",
-    "svg": "numbers/51_num.svg"
+    "svg": "svgs/numbers/51_num.svg",
+    "audio": "audio/numbers/51_num.mp3"
   },
   {
     "id": 52,
@@ -421,7 +473,8 @@
     "gu": "૫૨",
     "name_gu": "બાવન",
     "name_en": "bāvan",
-    "svg": "numbers/52_num.svg"
+    "svg": "svgs/numbers/52_num.svg",
+    "audio": "audio/numbers/52_num.mp3"
   },
   {
     "id": 53,
@@ -429,7 +482,8 @@
     "gu": "૫૩",
     "name_gu": "ત્રેપન",
     "name_en": "trepan",
-    "svg": "numbers/53_num.svg"
+    "svg": "svgs/numbers/53_num.svg",
+    "audio": "audio/numbers/53_num.mp3"
   },
   {
     "id": 54,
@@ -437,7 +491,8 @@
     "gu": "૫૪",
     "name_gu": "ચોપન",
     "name_en": "chopan",
-    "svg": "numbers/54_num.svg"
+    "svg": "svgs/numbers/54_num.svg",
+    "audio": "audio/numbers/54_num.mp3"
   },
   {
     "id": 55,
@@ -445,7 +500,8 @@
     "gu": "૫૫",
     "name_gu": "પંચાવન",
     "name_en": "pan̄chāvan",
-    "svg": "numbers/55_num.svg"
+    "svg": "svgs/numbers/55_num.svg",
+    "audio": "audio/numbers/55_num.mp3"
   },
   {
     "id": 56,
@@ -453,7 +509,8 @@
     "gu": "૫૬",
     "name_gu": "છપ્પન",
     "name_en": "chhappan",
-    "svg": "numbers/56_num.svg"
+    "svg": "svgs/numbers/56_num.svg",
+    "audio": "audio/numbers/56_num.mp3"
   },
   {
     "id": 57,
@@ -461,7 +518,8 @@
     "gu": "૫૭",
     "name_gu": "સત્તાવન",
     "name_en": "sattāvan",
-    "svg": "numbers/57_num.svg"
+    "svg": "svgs/numbers/57_num.svg",
+    "audio": "audio/numbers/57_num.mp3"
   },
   {
     "id": 58,
@@ -469,7 +527,8 @@
     "gu": "૫૮",
     "name_gu": "અઠ્ઠાવન",
     "name_en": "aṭhṭhāvan",
-    "svg": "numbers/58_num.svg"
+    "svg": "svgs/numbers/58_num.svg",
+    "audio": "audio/numbers/58_num.mp3"
   },
   {
     "id": 59,
@@ -477,7 +536,8 @@
     "gu": "૫૯",
     "name_gu": "ઓગણસાઠ",
     "name_en": "ogaṇasāṭh",
-    "svg": "numbers/59_num.svg"
+    "svg": "svgs/numbers/59_num.svg",
+    "audio": "audio/numbers/59_num.mp3"
   },
   {
     "id": 60,
@@ -485,7 +545,8 @@
     "gu": "૬૦",
     "name_gu": "સાઈઠ",
     "name_en": "sāīṭh",
-    "svg": "numbers/60_num.svg"
+    "svg": "svgs/numbers/60_num.svg",
+    "audio": "audio/numbers/60_num.mp3"
   },
   {
     "id": 61,
@@ -493,7 +554,8 @@
     "gu": "૬૧",
     "name_gu": "એકસઠ",
     "name_en": "ekasaṭh",
-    "svg": "numbers/61_num.svg"
+    "svg": "svgs/numbers/61_num.svg",
+    "audio": "audio/numbers/61_num.mp3"
   },
   {
     "id": 62,
@@ -501,7 +563,8 @@
     "gu": "૬૨",
     "name_gu": "બાસઠ",
     "name_en": "bāsaṭh",
-    "svg": "numbers/62_num.svg"
+    "svg": "svgs/numbers/62_num.svg",
+    "audio": "audio/numbers/62_num.mp3"
   },
   {
     "id": 63,
@@ -509,7 +572,8 @@
     "gu": "૬૩",
     "name_gu": "ત્રેસઠ",
     "name_en": "tresaṭh",
-    "svg": "numbers/63_num.svg"
+    "svg": "svgs/numbers/63_num.svg",
+    "audio": "audio/numbers/63_num.mp3"
   },
   {
     "id": 64,
@@ -517,7 +581,8 @@
     "gu": "૬૪",
     "name_gu": "ચોસઠ",
     "name_en": "chosaṭh",
-    "svg": "numbers/64_num.svg"
+    "svg": "svgs/numbers/64_num.svg",
+    "audio": "audio/numbers/64_num.mp3"
   },
   {
     "id": 65,
@@ -525,7 +590,8 @@
     "gu": "૬૫",
     "name_gu": "પાંસઠ",
     "name_en": "pān̄saṭh",
-    "svg": "numbers/65_num.svg"
+    "svg": "svgs/numbers/65_num.svg",
+    "audio": "audio/numbers/65_num.mp3"
   },
   {
     "id": 66,
@@ -533,7 +599,8 @@
     "gu": "૬૬",
     "name_gu": "છાસઠ",
     "name_en": "chhāsaṭh",
-    "svg": "numbers/66_num.svg"
+    "svg": "svgs/numbers/66_num.svg",
+    "audio": "audio/numbers/66_num.mp3"
   },
   {
     "id": 67,
@@ -541,7 +608,8 @@
     "gu": "૬૭",
     "name_gu": "સડસઠ",
     "name_en": "saḍasaṭh",
-    "svg": "numbers/67_num.svg"
+    "svg": "svgs/numbers/67_num.svg",
+    "audio": "audio/numbers/67_num.mp3"
   },
   {
     "id": 68,
@@ -549,7 +617,8 @@
     "gu": "૬૮",
     "name_gu": "અડસઠ",
     "name_en": "aḍasaṭh",
-    "svg": "numbers/68_num.svg"
+    "svg": "svgs/numbers/68_num.svg",
+    "audio": "audio/numbers/68_num.mp3"
   },
   {
     "id": 69,
@@ -557,7 +626,8 @@
     "gu": "૬૯",
     "name_gu": "અગણોસિત્તેર",
     "name_en": "agaṇositter",
-    "svg": "numbers/69_num.svg"
+    "svg": "svgs/numbers/69_num.svg",
+    "audio": "audio/numbers/69_num.mp3"
   },
   {
     "id": 70,
@@ -565,7 +635,8 @@
     "gu": "૭૦",
     "name_gu": "સિત્તેર",
     "name_en": "sitter",
-    "svg": "numbers/70_num.svg"
+    "svg": "svgs/numbers/70_num.svg",
+    "audio": "audio/numbers/70_num.mp3"
   },
   {
     "id": 71,
@@ -573,7 +644,8 @@
     "gu": "૭૧",
     "name_gu": "એકોતેર",
     "name_en": "ekoter",
-    "svg": "numbers/71_num.svg"
+    "svg": "svgs/numbers/71_num.svg",
+    "audio": "audio/numbers/71_num.mp3"
   },
   {
     "id": 72,
@@ -581,7 +653,8 @@
     "gu": "૭૨",
     "name_gu": "બોતેર",
     "name_en": "boter",
-    "svg": "numbers/72_num.svg"
+    "svg": "svgs/numbers/72_num.svg",
+    "audio": "audio/numbers/72_num.mp3"
   },
   {
     "id": 73,
@@ -589,7 +662,8 @@
     "gu": "૭૩",
     "name_gu": "તોતેર",
     "name_en": "toter",
-    "svg": "numbers/73_num.svg"
+    "svg": "svgs/numbers/73_num.svg",
+    "audio": "audio/numbers/73_num.mp3"
   },
   {
     "id": 74,
@@ -597,7 +671,8 @@
     "gu": "૭૪",
     "name_gu": "ચુમોતેર",
     "name_en": "chumoter",
-    "svg": "numbers/74_num.svg"
+    "svg": "svgs/numbers/74_num.svg",
+    "audio": "audio/numbers/74_num.mp3"
   },
   {
     "id": 75,
@@ -605,7 +680,8 @@
     "gu": "૭૫",
     "name_gu": "પંચોતેર",
     "name_en": "pan̄choter",
-    "svg": "numbers/75_num.svg"
+    "svg": "svgs/numbers/75_num.svg",
+    "audio": "audio/numbers/75_num.mp3"
   },
   {
     "id": 76,
@@ -613,7 +689,8 @@
     "gu": "૭૬",
     "name_gu": "છોતેર",
     "name_en": "chhoter",
-    "svg": "numbers/76_num.svg"
+    "svg": "svgs/numbers/76_num.svg",
+    "audio": "audio/numbers/76_num.mp3"
   },
   {
     "id": 77,
@@ -621,7 +698,8 @@
     "gu": "૭૭",
     "name_gu": "સિત્યોતેર",
     "name_en": "sityoter",
-    "svg": "numbers/77_num.svg"
+    "svg": "svgs/numbers/77_num.svg",
+    "audio": "audio/numbers/77_num.mp3"
   },
   {
     "id": 78,
@@ -629,7 +707,8 @@
     "gu": "૭૮",
     "name_gu": "ઇઠ્યોતેર",
     "name_en": "iṭhyoter",
-    "svg": "numbers/78_num.svg"
+    "svg": "svgs/numbers/78_num.svg",
+    "audio": "audio/numbers/78_num.mp3"
   },
   {
     "id": 79,
@@ -637,7 +716,8 @@
     "gu": "૭૯",
     "name_gu": "ઓગણાએંસી",
     "name_en": "ogaṇāen̄sī",
-    "svg": "numbers/79_num.svg"
+    "svg": "svgs/numbers/79_num.svg",
+    "audio": "audio/numbers/79_num.mp3"
   },
   {
     "id": 80,
@@ -645,7 +725,8 @@
     "gu": "૮૦",
     "name_gu": "એંસી",
     "name_en": "en̄sī",
-    "svg": "numbers/80_num.svg"
+    "svg": "svgs/numbers/80_num.svg",
+    "audio": "audio/numbers/80_num.mp3"
   },
   {
     "id": 81,
@@ -653,7 +734,8 @@
     "gu": "૮૧",
     "name_gu": "એક્યાસી",
     "name_en": "ekyāsī",
-    "svg": "numbers/81_num.svg"
+    "svg": "svgs/numbers/81_num.svg",
+    "audio": "audio/numbers/81_num.mp3"
   },
   {
     "id": 82,
@@ -661,7 +743,8 @@
     "gu": "૮૨",
     "name_gu": "બ્યાસી",
     "name_en": "byāsī",
-    "svg": "numbers/82_num.svg"
+    "svg": "svgs/numbers/82_num.svg",
+    "audio": "audio/numbers/82_num.mp3"
   },
   {
     "id": 83,
@@ -669,7 +752,8 @@
     "gu": "૮૩",
     "name_gu": "ત્યાસી",
     "name_en": "tyāsī",
-    "svg": "numbers/83_num.svg"
+    "svg": "svgs/numbers/83_num.svg",
+    "audio": "audio/numbers/83_num.mp3"
   },
   {
     "id": 84,
@@ -677,7 +761,8 @@
     "gu": "૮૪",
     "name_gu": "ચોર્યાસી",
     "name_en": "choryāsī",
-    "svg": "numbers/84_num.svg"
+    "svg": "svgs/numbers/84_num.svg",
+    "audio": "audio/numbers/84_num.mp3"
   },
   {
     "id": 85,
@@ -685,7 +770,8 @@
     "gu": "૮૫",
     "name_gu": "પંચાસી",
     "name_en": "pn̄chāsī",
-    "svg": "numbers/85_num.svg"
+    "svg": "svgs/numbers/85_num.svg",
+    "audio": "audio/numbers/85_num.mp3"
   },
   {
     "id": 86,
@@ -693,7 +779,8 @@
     "gu": "૮૬",
     "name_gu": "છ્યાસી",
     "name_en": "chhyāsī",
-    "svg": "numbers/86_num.svg"
+    "svg": "svgs/numbers/86_num.svg",
+    "audio": "audio/numbers/86_num.mp3"
   },
   {
     "id": 87,
@@ -701,7 +788,8 @@
     "gu": "૮૭",
     "name_gu": "સિત્યાસી",
     "name_en": "sityāsī",
-    "svg": "numbers/87_num.svg"
+    "svg": "svgs/numbers/87_num.svg",
+    "audio": "audio/numbers/87_num.mp3"
   },
   {
     "id": 88,
@@ -709,7 +797,8 @@
     "gu": "૮૮",
     "name_gu": "ઈઠ્યાસી",
     "name_en": "īṭhyāsī",
-    "svg": "numbers/88_num.svg"
+    "svg": "svgs/numbers/88_num.svg",
+    "audio": "audio/numbers/88_num.mp3"
   },
   {
     "id": 89,
@@ -717,7 +806,8 @@
     "gu": "૮૯",
     "name_gu": "નેવ્યાસી",
     "name_en": "nevyāsī",
-    "svg": "numbers/89_num.svg"
+    "svg": "svgs/numbers/89_num.svg",
+    "audio": "audio/numbers/89_num.mp3"
   },
   {
     "id": 90,
@@ -725,7 +815,8 @@
     "gu": "૯૦",
     "name_gu": "નેવું",
     "name_en": "nevun̄",
-    "svg": "numbers/90_num.svg"
+    "svg": "svgs/numbers/90_num.svg",
+    "audio": "audio/numbers/90_num.mp3"
   },
   {
     "id": 91,
@@ -733,7 +824,8 @@
     "gu": "૯૧",
     "name_gu": "એકાણું",
     "name_en": "ekāṇun̄",
-    "svg": "numbers/91_num.svg"
+    "svg": "svgs/numbers/91_num.svg",
+    "audio": "audio/numbers/91_num.mp3"
   },
   {
     "id": 92,
@@ -741,7 +833,8 @@
     "gu": "૯૨",
     "name_gu": "બાણું",
     "name_en": "bāṇun̄",
-    "svg": "numbers/92_num.svg"
+    "svg": "svgs/numbers/92_num.svg",
+    "audio": "audio/numbers/92_num.mp3"
   },
   {
     "id": 93,
@@ -749,7 +842,8 @@
     "gu": "૯૩",
     "name_gu": "ત્રાણું",
     "name_en": "trāṇun̄",
-    "svg": "numbers/93_num.svg"
+    "svg": "svgs/numbers/93_num.svg",
+    "audio": "audio/numbers/93_num.mp3"
   },
   {
     "id": 94,
@@ -757,7 +851,8 @@
     "gu": "૯૪",
     "name_gu": "ચોરાણું",
     "name_en": "chorāṇun̄",
-    "svg": "numbers/94_num.svg"
+    "svg": "svgs/numbers/94_num.svg",
+    "audio": "audio/numbers/94_num.mp3"
   },
   {
     "id": 95,
@@ -765,7 +860,8 @@
     "gu": "૯૫",
     "name_gu": "પંચાણું",
     "name_en": "pan̄chāṇun̄",
-    "svg": "numbers/95_num.svg"
+    "svg": "svgs/numbers/95_num.svg",
+    "audio": "audio/numbers/95_num.mp3"
   },
   {
     "id": 96,
@@ -773,7 +869,8 @@
     "gu": "૯૬",
     "name_gu": "છન્નું",
     "name_en": "chhannun̄",
-    "svg": "numbers/96_num.svg"
+    "svg": "svgs/numbers/96_num.svg",
+    "audio": "audio/numbers/96_num.mp3"
   },
   {
     "id": 97,
@@ -781,7 +878,8 @@
     "gu": "૯૭",
     "name_gu": "સત્તાણું",
     "name_en": "sattāṇun̄",
-    "svg": "numbers/97_num.svg"
+    "svg": "svgs/numbers/97_num.svg",
+    "audio": "audio/numbers/97_num.mp3"
   },
   {
     "id": 98,
@@ -789,7 +887,8 @@
     "gu": "૯૮",
     "name_gu": "અઠ્ઠાણું",
     "name_en": "aṭhṭhāṇun̄",
-    "svg": "numbers/98_num.svg"
+    "svg": "svgs/numbers/98_num.svg",
+    "audio": "audio/numbers/98_num.mp3"
   },
   {
     "id": 99,
@@ -797,7 +896,8 @@
     "gu": "૯૯",
     "name_gu": "નવ્વાણું",
     "name_en": "navvāṇun̄",
-    "svg": "numbers/99_num.svg"
+    "svg": "svgs/numbers/99_num.svg",
+    "audio": "audio/numbers/99_num.mp3"
   },
   {
     "id": 100,
@@ -805,6 +905,7 @@
     "gu": "૧૦૦",
     "name_gu": "સો",
     "name_en": "sō",
-    "svg": "numbers/100_num.svg"
+    "svg": "svgs/numbers/100_num.svg",
+    "audio": "audio/numbers/100_num.mp3"
   }
 ]

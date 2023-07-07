@@ -20,11 +20,11 @@ import Components from 'app/components';
 
 //Params
 type RootStackParamList = {
-  Settings: RouterParamTypes.SettingsParams;
+  About: RouterParamTypes.AboutParams;
 };
-type Props = NativeStackScreenProps<RootStackParamList, 'Settings'>;
+type Props = NativeStackScreenProps<RootStackParamList, 'About'>;
 
-const Settings = ({ navigation }: Props) => {
+const About = ({ navigation }: Props) => {
   //Constants
   const { t } = useTranslation();
   const { colors } = useTheme();
@@ -171,4 +171,4 @@ const Settings = ({ navigation }: Props) => {
   );
 };
 
-export default Settings;
+export default About;
