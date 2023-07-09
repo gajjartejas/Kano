@@ -3,7 +3,7 @@ import { Platform } from 'react-native';
 
 //Third Party
 import { DOMParser } from '@xmldom/xmldom';
-var RNFS = require('react-native-fs');
+const RNFS = require('react-native-fs');
 
 //Interface
 interface IParsedSVG {

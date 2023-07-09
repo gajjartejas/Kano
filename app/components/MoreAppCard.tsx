@@ -4,6 +4,7 @@ import { StyleSheet, View, ViewStyle, Image } from 'react-native';
 //ThirdParty
 import { Button, Text, useTheme } from 'react-native-paper';
 import { useTranslation } from 'react-i18next';
+import { AppTheme } from 'app/models/theme';
 
 //Interface
 interface IMoreAppCard {
@@ -19,7 +20,7 @@ interface IMoreAppCard {
 function MoreAppCard(props: IMoreAppCard) {
   //Constants
   const { t } = useTranslation();
-  const { colors } = useTheme();
+  const { colors } = useTheme<AppTheme>();
 
   return (
     <View

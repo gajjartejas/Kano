@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View } from 'react-native';
+import { Linking, View } from 'react-native';
 
 //ThirdParty
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
@@ -8,12 +8,12 @@ import { Appbar, useTheme } from 'react-native-paper';
 
 //App modules
 import Config from 'app/config';
-import * as RouterParamTypes from 'app/config/router-params';
 import Utils from 'app/utils';
 
 //Modals
 import Components from 'app/components';
 import styles from './styles';
+import { LoggedInTabNavigatorParams } from 'app/navigation/types';
 
 //Interfaces
 interface IMoreAppItem {
@@ -27,11 +27,7 @@ interface IMoreAppItem {
 }
 
 //Params
-type RootStackParamList = {
-  MoreApps: RouterParamTypes.MoreAppsParams;
-};
-
-type Props = NativeStackScreenProps<RootStackParamList, 'MoreApps'>;
+type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'MoreApps'>;
 
 const MoreApps = ({ navigation }: Props) => {
   //Constants
@@ -39,8 +35,7 @@ const MoreApps = ({ navigation }: Props) => {
   const { colors } = useTheme();
 
   //States
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [apps, setApps] = useState<IMoreAppItem[]>([
+  const [apps] = useState<IMoreAppItem[]>([
     {
       id: 0,
       icon: Config.Images.icons.app_icon,
@@ -56,15 +51,6 @@ const MoreApps = ({ navigation }: Props) => {
       showLinks: true,
       github: Config.Constants.MORE_APPS_MIUI_ADS_HELPER_GITHUB,
       playStore: Config.Constants.MORE_APPS_MIUI_ADS_HELPER_PLAY_STORE,
-    },
-    {
-      id: 2,
-      icon: Config.Images.icons.ic_more_app_ohmclient,
-      title: t('moreApps.apps3Title'),
-      description: t('moreApps.apps3Desc'),
-      showLinks: true,
-      github: Config.Constants.MORE_APPS_OHMCLIENT_GITHUB,
-      playStore: Config.Constants.MORE_APPS_OHMCLIENT_PLAY_STORE,
     },
   ]);
 
@@ -91,7 +77,7 @@ const MoreApps = ({ navigation }: Props) => {
       case 1:
         if (item.github != null) {
           if (item.playStore != null) {
-            Utils.openInAppBrowser(item.playStore);
+            Linking.openURL(item.playStore);
           }
         }
         break;
@@ -102,7 +88,7 @@ const MoreApps = ({ navigation }: Props) => {
     <View style={[styles.container, { backgroundColor: colors.background }]}>
       <Appbar.Header style={{ backgroundColor: colors.background }}>
         <Appbar.BackAction onPress={onGoBack} />
-        <Appbar.Content title={t('moreApps.appsTitle')} subtitle="" />
+        <Appbar.Content title={t('moreApps.appsTitle')} />
       </Appbar.Header>
       <Components.AppBaseView scroll edges={['bottom', 'left', 'right']} style={styles.safeArea}>
         <View style={styles.listContainer}>

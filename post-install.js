@@ -11,10 +11,10 @@
 const copy = require('recursive-copy');
 
 const sourceAssets = [
-  './assets/svg/barakhadi',
-  './assets/svg/numbers',
-  './assets/svg/barakhadi',
-  './assets/svg/numbers',
+  './assets/svgs/barakhadi',
+  './assets/svgs/numbers',
+  './assets/svgs/barakhadi',
+  './assets/svgs/numbers',
   './assets/audio/barakhadi',
   './assets/audio/numbers',
   './assets/audio/barakhadi',

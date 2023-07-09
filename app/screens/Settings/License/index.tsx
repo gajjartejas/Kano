@@ -7,12 +7,12 @@ import { useTranslation } from 'react-i18next';
 import { Appbar, List, useTheme } from 'react-native-paper';
 
 //App modules
-import * as RouterParamTypes from 'app/config/router-params';
 import Utils from 'app/utils';
 
 //Modals
 import styles from './styles';
 import Components from 'app/components';
+import { LoggedInTabNavigatorParams } from 'app/navigation/types';
 
 //Interfaces
 export interface ILicense {
@@ -28,11 +28,7 @@ interface IFinalLicense {
   licenseSpecs: ILicense;
 }
 
-//Params
-type RootStackParamList = {
-  License: RouterParamTypes.LicenseTypes;
-};
-type Props = NativeStackScreenProps<RootStackParamList, 'License'>;
+type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'License'>;
 
 const License = ({ navigation }: Props) => {
   //Constants
@@ -85,7 +81,7 @@ const License = ({ navigation }: Props) => {
     <View style={[styles.container, { backgroundColor: colors.background }]}>
       <Appbar.Header style={{ backgroundColor: colors.background }}>
         <Appbar.BackAction onPress={onGoBack} />
-        <Appbar.Content title={t('librariesScreen.title')} subtitle="" />
+        <Appbar.Content title={t('librariesScreen.title')} />
       </Appbar.Header>
       <Components.AppBaseView edges={['bottom', 'left', 'right']} style={styles.subView}>
         <FlatList data={finalLicense} renderItem={renderItem} keyExtractor={item => item.name} />

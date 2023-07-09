@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     fontWeight: '400',
   },
-  listIcon: { alignSelf: 'center', marginHorizontal: 8 },
+  listIcon: { alignSelf: 'center', marginHorizontal: 16 },
   listSubHeader: { marginLeft: 36 },
   listItem: {
     marginHorizontal: 20,

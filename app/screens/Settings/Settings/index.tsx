@@ -8,7 +8,6 @@ import { Appbar, Divider, List, useTheme } from 'react-native-paper';
 
 //App modules
 import Config from 'app/config';
-import * as RouterParamTypes from 'app/config/router-params';
 import Utils from 'app/utils';
 import styles from './styles';
 
@@ -16,12 +15,10 @@ import styles from './styles';
 import { ISettingItem, ISettingSection } from 'app/models/viewModels/settingItem';
 import Icon from 'react-native-easy-icon';
 import Components from 'app/components';
+import { LoggedInTabNavigatorParams } from 'app/navigation/types';
 
 //Params
-type RootStackParamList = {
-  Settings: RouterParamTypes.SettingsParams;
-};
-type Props = NativeStackScreenProps<RootStackParamList, 'Settings'>;
+type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'Settings'>;
 
 const Settings = ({ navigation }: Props) => {
   //Constants
@@ -29,8 +26,7 @@ const Settings = ({ navigation }: Props) => {
   const { colors } = useTheme();
 
   //States
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [apps, setApps] = useState<ISettingSection[]>([
+  const [apps] = useState<ISettingSection[]>([
     {
       id: 0,
       title: t('settings.commonHeader'),
@@ -40,7 +36,7 @@ const Settings = ({ navigation }: Props) => {
           iconName: 'wb-sunny',
           iconType: 'material',
           title: t('settings.appearanceTitle'),
-          description: t('settings.appearanceSubTitle'),
+          description: t('settings.appearanceSubTitle')!,
           route: 'SelectAppearance',
         },
       ],
@@ -54,7 +50,7 @@ const Settings = ({ navigation }: Props) => {
           iconName: 'notes',
           iconType: 'material',
           title: t('settings.changelogTitle'),
-          description: t('settings.changelogSubTitle'),
+          description: t('settings.changelogSubTitle')!,
           route: 'Changelog',
         },
         {
@@ -62,7 +58,7 @@ const Settings = ({ navigation }: Props) => {
           iconName: 'library-shelves',
           iconType: 'material-community',
           title: t('settings.librariesTitle'),
-          description: t('settings.librariesSubTitle'),
+          description: t('settings.librariesSubTitle')!,
           route: 'License',
         },
         {
@@ -70,7 +66,7 @@ const Settings = ({ navigation }: Props) => {
           iconName: 'frequently-asked-questions',
           iconType: 'material-community',
           title: t('settings.faqTitle'),
-          description: t('settings.faqSubTitle'),
+          description: t('settings.faqSubTitle')!,
           route: 'FAQ',
         },
         {
@@ -78,7 +74,7 @@ const Settings = ({ navigation }: Props) => {
           iconName: 'language',
           iconType: 'ionicon',
           title: t('settings.translateTitle'),
-          description: t('settings.translateSubTitle'),
+          description: t('settings.translateSubTitle')!,
           route: 'Translate',
         },
         {
@@ -86,7 +82,7 @@ const Settings = ({ navigation }: Props) => {
           iconName: 'people',
           iconType: 'ionicon',
           title: t('settings.translatorsTitle'),
-          description: t('settings.translatorsSubTitle'),
+          description: t('settings.translatorsSubTitle')!,
           route: 'Translators',
         },
         {
@@ -94,7 +90,7 @@ const Settings = ({ navigation }: Props) => {
           iconName: 'privacy-tip',
           iconType: 'material',
           title: t('settings.privacyTitle'),
-          description: t('settings.privacySubTitle'),
+          description: t('settings.privacySubTitle')!,
           route: 'PrivacyPolicy',
         },
       ],
@@ -124,6 +120,7 @@ const Settings = ({ navigation }: Props) => {
         break;
 
       default:
+        // @ts-ignore
         navigation.push(item.route, {});
     }
   };
@@ -132,7 +129,7 @@ const Settings = ({ navigation }: Props) => {
     <View style={[styles.container, { backgroundColor: colors.background }]}>
       <Appbar.Header style={{ backgroundColor: colors.background }}>
         <Appbar.BackAction onPress={onGoBack} />
-        <Appbar.Content title={t('settings.title')} subtitle="" />
+        <Appbar.Content title={t('settings.title')} />
       </Appbar.Header>
       <Components.AppBaseView scroll edges={['bottom', 'left', 'right']} style={styles.safeArea}>
         {apps.map(item => {

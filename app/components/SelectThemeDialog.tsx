@@ -8,6 +8,7 @@ import { Dialog, TouchableRipple, useTheme, Button, RadioButton, Text } from 're
 //App modules
 import { ISettingThemeOptions } from 'app/models/viewModels/settingItem';
 import { IAppearanceType } from 'app/models/reducers/theme';
+import { AppTheme } from 'app/models/theme';
 
 //Interface
 interface ISelectThemeDialogProps {
@@ -21,7 +22,7 @@ interface ISelectThemeDialogProps {
 function SelectThemeDialog(props: ISelectThemeDialogProps) {
   //Constants
   const { t } = useTranslation();
-  const theme = useTheme();
+  const theme = useTheme<AppTheme>();
 
   return (
     <Dialog

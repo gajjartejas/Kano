@@ -10,6 +10,7 @@ import Config from 'app/config';
 import { ICharCellItem } from './CharCellItem';
 import AppTitleValueItemCell from './AppTitleValueItemCell';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { AppTheme } from 'app/models/theme';
 
 //Interface
 interface ILearnCharInfoItemCellProps {
@@ -20,7 +21,7 @@ interface ILearnCharInfoItemCellProps {
 
 const LearnCharInfoItemCell = (props: ILearnCharInfoItemCellProps) => {
   //Const
-  const { colors } = useTheme();
+  const { colors } = useTheme<AppTheme>();
   const dim = useWindowDimensions();
   const insets = useSafeAreaInsets();
   const { t } = useTranslation();

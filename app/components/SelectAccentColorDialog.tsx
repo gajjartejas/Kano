@@ -8,6 +8,7 @@ import { Dialog, TouchableRipple, useTheme, Button } from 'react-native-paper';
 //App Modules
 import { IAppearanceType } from 'app/models/reducers/theme';
 import { IAppearanceColor } from 'app/screens/Settings/SelectAppearance';
+import { AppTheme } from 'app/models/theme';
 
 //Interface
 interface ISelectAccentDialogProps {
@@ -21,7 +22,7 @@ interface ISelectAccentDialogProps {
 function SelectAccentDialog(props: ISelectAccentDialogProps) {
   //Constants
   const { t } = useTranslation();
-  const { colors } = useTheme();
+  const { colors } = useTheme<AppTheme>();
 
   return (
     <Dialog visible={props.visible} onDismiss={props.onPressHideDialog}>

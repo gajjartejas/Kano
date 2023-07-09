@@ -10,7 +10,6 @@ import { useDispatch, useSelector } from 'react-redux';
 
 //App modules
 import Components from 'app/components';
-import * as RouterParamTypes from 'app/config/router-params';
 import styles from './styles';
 
 //Modals
@@ -20,12 +19,10 @@ import { ISettingItem, ISettingSection, ISettingThemeOptions } from 'app/models/
 
 //Redux
 import * as themeActions from 'app/store/actions/themeActions';
+import { LoggedInTabNavigatorParams } from 'app/navigation/types';
 
 //Params
-type RootStackParamList = {
-  SelectAppearance: RouterParamTypes.SelectAppearanceParams;
-};
-type Props = NativeStackScreenProps<RootStackParamList, 'SelectAppearance'>;
+type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'SelectAppearance'>;
 
 export interface IAppearanceColor {
   primary: string;
@@ -40,8 +37,7 @@ const SelectAppearance = ({ navigation }: Props) => {
   const appearance = useSelector((state: IState) => state.themeReducer.appearance);
 
   //States
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [apps, setApps] = useState<ISettingSection[]>([
+  const [apps] = useState<ISettingSection[]>([
     {
       id: 0,
       title: t('appearanceSettings.interfaceHeader'),
@@ -51,7 +47,7 @@ const SelectAppearance = ({ navigation }: Props) => {
           iconName: 'wb-sunny',
           iconType: 'material',
           title: t('appearanceSettings.themeTitle'),
-          description: t('appearanceSettings.themeSubTitle'),
+          description: t('appearanceSettings.themeSubTitle')!,
           route: 'SelectAppearance',
         },
         {
@@ -59,7 +55,7 @@ const SelectAppearance = ({ navigation }: Props) => {
           iconName: 'app-settings-alt',
           iconType: 'material',
           title: t('appearanceSettings.accentColorTitle'),
-          description: t('appearanceSettings.accentColorSubTitle'),
+          description: t('appearanceSettings.accentColorSubTitle')!,
           route: '',
         },
       ],
@@ -73,7 +69,7 @@ const SelectAppearance = ({ navigation }: Props) => {
           iconName: 'backup-restore',
           iconType: 'material-community',
           title: t('appearanceSettings.otherTitle'),
-          description: t('appearanceSettings.otherSubTitle'),
+          description: t('appearanceSettings.otherSubTitle')!,
           route: 'SelectAppearance',
         },
       ],
@@ -82,8 +78,7 @@ const SelectAppearance = ({ navigation }: Props) => {
 
   //
   const [themeDialogVisible, setThemeDialogVisible] = React.useState(false);
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [themeOptions, setThemeOptions] = React.useState<ISettingThemeOptions[]>([
+  const [themeOptions] = React.useState<ISettingThemeOptions[]>([
     {
       id: 0,
       title: t('appearanceSettings.themeOption1'),
@@ -103,8 +98,7 @@ const SelectAppearance = ({ navigation }: Props) => {
 
   //
   const [accentColorDialogVisible, setAccentColorDialogVisible] = React.useState(false);
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [accentColorOptions, setAccentColorOptions] = React.useState<IAppearanceColor[]>([
+  const [accentColorOptions] = React.useState<IAppearanceColor[]>([
     { primary: '#008b00', onPrimary: '#ffffff' },
     { primary: '#61d800', onPrimary: '#ffffff' },
     { primary: '#90ee02', onPrimary: '#000000' },
@@ -188,7 +182,7 @@ const SelectAppearance = ({ navigation }: Props) => {
     <View style={[styles.container, { backgroundColor: colors.background }]}>
       <Appbar.Header style={{ backgroundColor: colors.background }}>
         <Appbar.BackAction onPress={onGoBack} />
-        <Appbar.Content title={t('appearanceSettings.title')} subtitle="" />
+        <Appbar.Content title={t('appearanceSettings.title')} />
       </Appbar.Header>
       <Components.AppBaseView scroll edges={['bottom', 'left', 'right']} style={styles.safeArea}>
         {apps.map((item, index) => {

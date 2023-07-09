@@ -8,9 +8,9 @@ import { Appbar, List, useTheme } from 'react-native-paper';
 
 //App modules
 import Config from 'app/config';
-import * as RouterParamTypes from 'app/config/router-params';
 import styles from './styles';
 import Components from 'app/components';
+import { LoggedInTabNavigatorParams } from 'app/navigation/types';
 
 //Interfaces
 interface ITranslator {
@@ -21,10 +21,7 @@ interface ITranslator {
 }
 
 //Params
-type RootStackParamList = {
-  Translators: RouterParamTypes.TranslatorsParams;
-};
-type Props = NativeStackScreenProps<RootStackParamList, 'Translators'>;
+type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'Translators'>;
 
 const Translators = ({ navigation }: Props) => {
   //Constants
@@ -100,7 +97,7 @@ const Translators = ({ navigation }: Props) => {
     <View style={[styles.container, { backgroundColor: colors.background }]}>
       <Appbar.Header style={{ backgroundColor: colors.background }}>
         <Appbar.BackAction onPress={onGoBack} />
-        <Appbar.Content title={t('translatorsScreen.title')} subtitle="" />
+        <Appbar.Content title={t('translatorsScreen.title')} />
       </Appbar.Header>
       <Components.AppBaseView edges={['bottom', 'left', 'right']} style={styles.safeArea}>
         <FlatList

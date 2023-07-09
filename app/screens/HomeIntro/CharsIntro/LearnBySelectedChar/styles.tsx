@@ -70,7 +70,8 @@ const styles = StyleSheet.create({
   },
   listContentContainer: { paddingVertical: 8 },
   listContainer: { flex: 1 },
-  continueButton: { height: 44 },
+  continueButtonContainer: {},
+  continueButton: { height: 44, marginHorizontal: 20 },
 });
 
 export default styles;

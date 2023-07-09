@@ -10,16 +10,12 @@ import { Appbar, useTheme } from 'react-native-paper';
 //App modules
 import Components from 'app/components';
 import { ICharCellItem } from 'app/components/CharCellItem';
-import * as RouterParamTypes from 'app/config/router-params';
 import styles from './styles';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { LoggedInTabNavigatorParams } from 'app/navigation/types';
 
 //Params
-type RootStackParamList = {
-  LearnCharInfo: RouterParamTypes.LearnCharInfoParams;
-};
-
-type Props = NativeStackScreenProps<RootStackParamList, 'LearnCharInfo'>;
+type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'LearnCharInfo'>;
 
 const LearnCharInfo = ({ navigation, route }: Props) => {
   //Refs
@@ -65,7 +61,7 @@ const LearnCharInfo = ({ navigation, route }: Props) => {
     console.log('handleSheetChange', idx);
   }, []);
 
-  const getItemLayout = (data: ICharCellItem[] | null | undefined, index: number) => ({
+  const getItemLayout = (data: ArrayLike<ICharCellItem> | null | undefined, index: number) => ({
     length: dimension.width - insets.right - insets.left,
     offset: (dimension.width - insets.right - insets.left) * index,
     index,

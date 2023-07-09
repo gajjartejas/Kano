@@ -12,15 +12,11 @@ import Components from 'app/components';
 import styles from './styles';
 import Hooks from 'app/hooks/index';
 import { ICharCellItem } from 'app/components/CharCellItem';
-import * as RouterParamTypes from 'app/config/router-params';
+import { LearnCharsType, LoggedInTabNavigatorParams } from 'app/navigation/types';
+import { AppTheme } from 'app/models/theme';
 
 //Params
-type RootStackParamList = {
-  LearnCharsChart: RouterParamTypes.LearnCharsChartParams;
-  LearnCharInfo: RouterParamTypes.LearnCharInfoParams;
-};
-
-type Props = NativeStackScreenProps<RootStackParamList, 'LearnCharsChart'>;
+type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'LearnCharsChart'>;
 
 const CELL_SPACING = 3;
 const CONTAINER_SPACING = 20;
@@ -31,7 +27,7 @@ const LearnCharsChart = ({ navigation, route }: Props) => {
   //Actions
 
   //Constants
-  const { colors } = useTheme();
+  const { colors } = useTheme<AppTheme>();
   const { type, color } = route.params;
   const groupedEntries = Hooks.ChartItemForTypes.useChartItemForTypes(type);
   const { t } = useTranslation();
@@ -44,22 +40,22 @@ const LearnCharsChart = ({ navigation, route }: Props) => {
 
   const configInterface = useCallback(() => {
     switch (type) {
-      case RouterParamTypes.LearnCharsType.Vowel:
+      case LearnCharsType.Vowel:
         setTitle(t('learnCharsChartScreen.header.titleVowels'));
         setNumberOfColumns(3);
         break;
 
-      case RouterParamTypes.LearnCharsType.Constant:
+      case LearnCharsType.Constant:
         setTitle(t('learnCharsChartScreen.header.titleConsonants'));
         setNumberOfColumns(5);
         break;
 
-      case RouterParamTypes.LearnCharsType.Barakhadi:
+      case LearnCharsType.Barakhadi:
         setTitle(t('learnCharsChartScreen.header.titleBarakhadi'));
         setNumberOfColumns(4);
         break;
 
-      case RouterParamTypes.LearnCharsType.Number:
+      case LearnCharsType.Number:
         setTitle(t('learnCharsChartScreen.header.titleNumerals'));
         setNumberOfColumns(6);
         break;

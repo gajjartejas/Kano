@@ -89,6 +89,7 @@ aws-exports.js
 awsconfiguration.json
 
 #Project Specific
+ios/Kano/GoogleService-Info.plist
 ios/assets/svgs/
 android/app/src/main/assets/svgs/
 android/app/src/main/assets/fonts/
