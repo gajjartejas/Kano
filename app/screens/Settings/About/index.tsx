@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Image, View } from 'react-native';
+import { Image, Linking, View } from 'react-native';
 
 //ThirdParty
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
@@ -12,26 +12,22 @@ import Config from 'app/config';
 import Utils from 'app/utils';
 
 //Modals
-import * as RouterParamTypes from 'app/config/router-params';
 import { ISettingItem, ISettingSection } from 'app/models/viewModels/settingItem';
 import Icon from 'react-native-easy-icon';
 import styles from './styles';
 import Components from 'app/components';
+import { AppTheme } from 'app/models/theme';
+import { LoggedInTabNavigatorParams } from 'app/navigation/types';
 
-//Params
-type RootStackParamList = {
-  About: RouterParamTypes.AboutParams;
-};
-type Props = NativeStackScreenProps<RootStackParamList, 'About'>;
+type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'About'>;
 
 const About = ({ navigation }: Props) => {
   //Constants
   const { t } = useTranslation();
-  const { colors } = useTheme();
+  const { colors } = useTheme<AppTheme>();
 
   //States
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [apps, setApps] = useState<ISettingSection[]>([
+  const [apps] = useState<ISettingSection[]>([
     {
       id: 0,
       title: t('aboutScreen.infoHeader'),
@@ -41,12 +37,16 @@ const About = ({ navigation }: Props) => {
           iconName: 'information',
           iconType: 'material-community',
           title: t('aboutScreen.infoDescTitle'),
+          description: '',
+          route: '',
         },
         {
           id: 1,
           iconName: 'face-man',
           iconType: 'material-community',
           title: t('aboutScreen.infoAuthorNameTitle'),
+          description: '',
+          route: '',
         },
       ],
     },
@@ -59,35 +59,40 @@ const About = ({ navigation }: Props) => {
           iconName: 'briefcase',
           iconType: 'material-community',
           title: t('aboutScreen.portfolioTitle'),
-          description: t('aboutScreen.portfolioSubTitle'),
+          description: t('aboutScreen.portfolioSubTitle')!,
+          route: '',
         },
         {
           id: 1,
           iconName: 'instagram',
           iconType: 'material-community',
           title: t('aboutScreen.instagramTitle'),
-          description: t('aboutScreen.instagramSubTitle'),
+          description: t('aboutScreen.instagramSubTitle')!,
+          route: '',
         },
         {
           id: 3,
           iconName: 'telegram-plane',
           iconType: 'font-awesome5',
           title: t('aboutScreen.telegramTitle'),
-          description: t('aboutScreen.telegramSubTitle'),
+          description: t('aboutScreen.telegramSubTitle')!,
+          route: '',
         },
         {
           id: 4,
           iconName: 'github',
           iconType: 'material-community',
           title: t('aboutScreen.githubTitle'),
-          description: t('aboutScreen.githubSubTitle'),
+          description: t('aboutScreen.githubSubTitle')!,
+          route: '',
         },
         {
           id: 5,
           iconName: 'twitter',
           iconType: 'material-community',
           title: t('aboutScreen.twitterTitle'),
-          description: t('aboutScreen.twitterSubTitle'),
+          description: t('aboutScreen.twitterSubTitle')!,
+          route: '',
         },
       ],
     },
@@ -104,16 +109,16 @@ const About = ({ navigation }: Props) => {
         Utils.openInAppBrowser(Config.Constants.ABOUT_PORTFOLIO);
         break;
       case index === 1 && subIndex === 1:
-        Utils.openInAppBrowser(Config.Constants.ABOUT_INSTAGRAM);
+        Linking.openURL(Config.Constants.ABOUT_INSTAGRAM);
         break;
       case index === 1 && subIndex === 2:
-        Utils.openInAppBrowser(Config.Constants.ABOUT_TELEGRAM_LINK);
+        Linking.openURL(Config.Constants.ABOUT_TELEGRAM_LINK);
         break;
       case index === 1 && subIndex === 3:
         Utils.openInAppBrowser(Config.Constants.ABOUT_GITHUB);
         break;
       case index === 1 && subIndex === 4:
-        Utils.openInAppBrowser(Config.Constants.ABOUT_TWITTER);
+        Linking.openURL(Config.Constants.ABOUT_TWITTER);
         break;
       default:
     }
@@ -123,13 +128,15 @@ const About = ({ navigation }: Props) => {
     <View style={[styles.container, { backgroundColor: colors.background }]}>
       <Appbar.Header style={{ backgroundColor: colors.background }}>
         <Appbar.BackAction onPress={onGoBack} />
-        <Appbar.Content title={t('aboutScreen.title')} subtitle="" />
+        <Appbar.Content title={t('aboutScreen.title')} />
       </Appbar.Header>
 
       <Components.AppBaseView scroll edges={['bottom', 'left', 'right']} style={styles.safeArea}>
         <Image source={Config.Images.icons.app_icon} resizeMode="contain" style={styles.appicon} />
         <Text style={[styles.appNameText, { color: colors.onBackground }]}>{DeviceInfo.getApplicationName()}</Text>
-        <Text style={[styles.appVersionText, { color: `${colors.onBackground}88` }]}>v{DeviceInfo.getVersion()}</Text>
+        <Text style={[styles.appVersionText, { color: `${colors.onBackground}88` }]}>
+          {`v${DeviceInfo.getVersion()}`}
+        </Text>
 
         <View style={styles.listContainer}>
           {apps.map((item, index) => {
@@ -158,7 +165,7 @@ const About = ({ navigation }: Props) => {
                           />
                         )}
                       />
-                      <Divider />
+                      {subIndex <= item.items.length - 2 && <Divider />}
                     </View>
                   );
                 })}

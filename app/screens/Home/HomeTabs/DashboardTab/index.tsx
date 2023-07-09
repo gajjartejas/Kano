@@ -9,19 +9,14 @@ import { Text, useTheme } from 'react-native-paper';
 //App modules
 import Components from 'app/components';
 import { IHomeListItem } from 'app/components/HomeListItem';
-import * as RouterParamTypes from 'app/config/router-params';
 import Hooks from 'app/hooks/index';
 import styles from './styles';
 import Config from 'app/config';
+import { LearnCharsType, LoggedInTabNavigatorParams } from 'app/navigation/types';
+import { AppTheme } from 'app/models/theme';
 
 //Params
-type RootStackParamList = {
-  DashboardTab: RouterParamTypes.DashboardTabParams;
-  LearnCharsList: RouterParamTypes.LearnCharsListParams;
-  GujaratiScriptIntro: RouterParamTypes.GujaratiScriptIntroParams;
-};
-
-type Props = NativeStackScreenProps<RootStackParamList, 'DashboardTab'>;
+type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'DashboardTab'>;
 
 const DashboardTab = ({ navigation }: Props) => {
   //Refs
@@ -29,7 +24,7 @@ const DashboardTab = ({ navigation }: Props) => {
   //Actions
 
   //Constants
-  const { colors } = useTheme();
+  const { colors } = useTheme<AppTheme>();
   const groupedEntries = Hooks.useHomeListItems();
   const { t } = useTranslation();
 
@@ -38,15 +33,14 @@ const DashboardTab = ({ navigation }: Props) => {
     if (sectionIndex === 0 && index === 0) {
       navigation.push('GujaratiScriptIntro', {});
     } else if (sectionIndex === 1 && index === 0) {
-      navigation.push('LearnCharsList', { type: RouterParamTypes.LearnCharsType.Vowel, color: item.color });
+      navigation.push('LearnCharsList', { type: LearnCharsType.Vowel, color: item.color });
     } else if (sectionIndex === 1 && index === 1) {
-      navigation.push('LearnCharsList', { type: RouterParamTypes.LearnCharsType.Constant, color: item.color });
+      navigation.push('LearnCharsList', { type: LearnCharsType.Constant, color: item.color });
     } else if (sectionIndex === 1 && index === 2) {
-      navigation.push('LearnCharsList', { type: RouterParamTypes.LearnCharsType.Barakhadi, color: item.color });
+      navigation.push('LearnCharsList', { type: LearnCharsType.Barakhadi, color: item.color });
     } else if (sectionIndex === 2 && index === 0) {
-      navigation.push('LearnCharsList', { type: RouterParamTypes.LearnCharsType.Number, color: item.color });
+      navigation.push('LearnCharsList', { type: LearnCharsType.Number, color: item.color });
     }
-    // Utils.rateApp.saveItem(item);
   };
 
   const renderItem = ({ item, index, sectionIndex }: { item: IHomeListItem; index: number; sectionIndex: number }) => {

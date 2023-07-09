@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 //ThirdParty
 import RNBootSplash, { Config } from 'react-native-bootsplash';
@@ -7,24 +7,23 @@ import RNBootSplash, { Config } from 'react-native-bootsplash';
 import { useDispatch } from 'react-redux';
 
 //App Modules
-import Navigator from 'app/navigation';
-import Utils from 'app/utils';
+import { LoggedInTabNavigatorParams } from 'app/navigation/types';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
-const Loading: React.FC = () => {
+//Params
+type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'Loading'>;
+
+const Loading = ({ navigation }: Props) => {
   //Constants
   const dispatch = useDispatch();
-  const [loading, setLoading] = useState(true);
 
   React.useEffect(() => {
-    RNBootSplash.hide({ duration: 250 } as Config).then(() => {
-      setLoading(false);
-      Utils.rateApp.rateAppIfNeeded().then(() => {
-        console.log('Rate app opens');
-      });
-    });
-  }, [dispatch]);
+    navigation.replace('HomeTabs', {});
 
-  return loading ? null : <Navigator />;
+    RNBootSplash.hide({ duration: 500, fade: true } as Config).then(() => {});
+  }, [dispatch, navigation]);
+
+  return null;
 };
 
 export default Loading;

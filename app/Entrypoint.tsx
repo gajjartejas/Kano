@@ -4,15 +4,15 @@
  */
 import React from 'react';
 import { Provider } from 'react-redux';
-import { ActivityIndicator } from 'react-native';
+import { ActivityIndicator, StyleSheet } from 'react-native';
 import { PersistGate } from 'redux-persist/es/integration/react';
 import configureStore from 'app/store';
 import { enableScreens } from 'react-native-screens';
 import './locales';
-import LoadingScreen from 'app/screens/Auth/Loading';
 import AppManager from 'app/components/AppManager';
-import { initialWindowMetrics, SafeAreaProvider } from 'react-native-safe-area-context';
 const { persistor, store } = configureStore();
+import Navigator from 'app/navigation';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 /**
  * Optimize memory usage and performance: https://reactnavigation.org/docs/react-native-screens/
@@ -23,14 +23,18 @@ const Entrypoint: React.FC = () => {
   return (
     <Provider store={store}>
       <PersistGate loading={<ActivityIndicator />} persistor={persistor}>
-        <SafeAreaProvider initialMetrics={initialWindowMetrics}>
+        <GestureHandlerRootView style={styles.container}>
           <AppManager>
-            <LoadingScreen />
+            <Navigator />
           </AppManager>
-        </SafeAreaProvider>
+        </GestureHandlerRootView>
       </PersistGate>
     </Provider>
   );
 };
+
+const styles = StyleSheet.create({
+  container: { flex: 1 },
+});
 
 export default Entrypoint;

@@ -6,6 +6,7 @@ import Config from 'app/config';
 
 //Third Party
 import { TouchableRipple, useTheme, Text } from 'react-native-paper';
+import { AppTheme } from 'app/models/theme';
 
 //Interface
 export interface ISelectCharCellItem {
@@ -34,7 +35,7 @@ interface ICharCellItemProps {
 
 const CharCellItem = (props: ICharCellItemProps) => {
   //Const
-  const { colors } = useTheme();
+  const { colors } = useTheme<AppTheme>();
   const { item, index, sectionIndex, numberOfColumns, cellSpacing, containerSpacing, selected } = props;
 
   const dim = useWindowDimensions();

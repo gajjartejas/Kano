@@ -8,17 +8,13 @@ import { Appbar, useTheme, Button } from 'react-native-paper';
 import Animated, { Easing, FadeIn, Layout } from 'react-native-reanimated';
 
 //App modules
-import * as RouterParamTypes from 'app/config/router-params';
 import styles from './styles';
 import AnimatedCharacter from 'app/components/AnimatedCharacter';
 import Components from 'app/components';
+import { LoggedInTabNavigatorParams } from 'app/navigation/types';
 
 //Params
-type RootStackParamList = {
-  GujaratiScriptIntro: RouterParamTypes.GujaratiScriptIntroParams;
-};
-
-type Props = NativeStackScreenProps<RootStackParamList, 'GujaratiScriptIntro'>;
+type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'GujaratiScriptIntro'>;
 
 const GujaratiScriptIntro = ({ navigation }: Props) => {
   //Refs

@@ -12,17 +12,12 @@ import Components from 'app/components';
 import styles from './styles';
 import Hooks from 'app/hooks/index';
 import { ISelectCharCellItem } from 'app/components/CharSelectCellItem';
-import * as RouterParamTypes from 'app/config/router-params';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { LearnCharsType, LoggedInTabNavigatorParams } from 'app/navigation/types';
+import { AppTheme } from 'app/models/theme';
 
 //Params
-type RootStackParamList = {
-  LearnBySelectedChar: RouterParamTypes.LearnBySelectedCharParams;
-  LearnCharInfo: RouterParamTypes.LearnCharInfoParams;
-  LearnCharsCard: RouterParamTypes.LearnCharsCardParams;
-};
-
-type Props = NativeStackScreenProps<RootStackParamList, 'LearnBySelectedChar'>;
+type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'LearnBySelectedChar'>;
 
 const CELL_SPACING = 3;
 const CONTAINER_SPACING = 20;
@@ -33,7 +28,7 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
   //Actions
 
   //Constants
-  const { colors } = useTheme();
+  const { colors } = useTheme<AppTheme>();
   const { type, learnMode, isRandomMode, color } = route.params;
   const { t } = useTranslation();
   const dim = useWindowDimensions();
@@ -46,21 +41,21 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
 
   const configInterface = useCallback(() => {
     switch (type) {
-      case RouterParamTypes.LearnCharsType.Vowel:
+      case LearnCharsType.Vowel:
         setNumberOfColumns(3);
         break;
 
-      case RouterParamTypes.LearnCharsType.Constant:
+      case LearnCharsType.Constant:
         setNumberOfColumns(5);
 
         break;
 
-      case RouterParamTypes.LearnCharsType.Barakhadi:
+      case LearnCharsType.Barakhadi:
         setNumberOfColumns(6);
 
         break;
 
-      case RouterParamTypes.LearnCharsType.Number:
+      case LearnCharsType.Number:
         setNumberOfColumns(6);
 
         break;
@@ -218,7 +213,8 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
         )}
       </Components.AppBaseView>
       <Button
-        contentStyle={styles.continueButton}
+        style={styles.continueButton}
+        contentStyle={styles.continueButtonContainer}
         disabled={selectedIds.size === 0}
         mode="contained"
         onPress={onPressContinue}>

@@ -1,26 +1,26 @@
 //App Modules
-import * as RouterParamTypes from 'app/config/router-params';
 import { ICharCellListSection } from 'app/components/CharCellItem';
 import useVowels from './useVowelsChartItems';
 import useBarakhadis from './useBarakhadiChartItems';
 import useConsonants from './useConsonantsChartItems';
 import useNumerals from './useNumeralChartItems';
 import { ISelectCharCellListSection } from 'app/components/CharSelectCellItem';
+import { LearnCharsType } from 'app/navigation/types';
 
-const useChartItemForTypes = (type: RouterParamTypes.LearnCharsType): ICharCellListSection[] => {
+const useChartItemForTypes = (type: LearnCharsType): ICharCellListSection[] => {
   const vowels = useVowels();
   const barakhadi = useBarakhadis();
   const consonants = useConsonants();
   const numerals = useNumerals();
 
   switch (type) {
-    case RouterParamTypes.LearnCharsType.Vowel:
+    case LearnCharsType.Vowel:
       return vowels;
-    case RouterParamTypes.LearnCharsType.Constant:
+    case LearnCharsType.Constant:
       return consonants;
-    case RouterParamTypes.LearnCharsType.Barakhadi:
+    case LearnCharsType.Barakhadi:
       return barakhadi;
-    case RouterParamTypes.LearnCharsType.Number:
+    case LearnCharsType.Number:
       return numerals;
     default:
       return [];
@@ -28,7 +28,7 @@ const useChartItemForTypes = (type: RouterParamTypes.LearnCharsType): ICharCellL
 };
 
 const useChartSectionsForTypes = (
-  type: RouterParamTypes.LearnCharsType,
+  type: LearnCharsType,
   random: boolean,
   onlyInclude?: Set<string>,
 ): ICharCellListSection[] => {
@@ -70,20 +70,20 @@ const useChartSectionsForTypes = (
   ];
 };
 
-const useSelectedChartItemForTypes = (type: RouterParamTypes.LearnCharsType): ISelectCharCellListSection[] => {
+const useSelectedChartItemForTypes = (type: LearnCharsType): ISelectCharCellListSection[] => {
   const vowels = useVowels();
   const barakhadi = useBarakhadis();
   const consonants = useConsonants();
   const numerals = useNumerals();
 
   switch (type) {
-    case RouterParamTypes.LearnCharsType.Vowel:
+    case LearnCharsType.Vowel:
       return mapForOtherSelection(vowels);
-    case RouterParamTypes.LearnCharsType.Constant:
+    case LearnCharsType.Constant:
       return mapForOtherSelection(consonants);
-    case RouterParamTypes.LearnCharsType.Barakhadi:
+    case LearnCharsType.Barakhadi:
       return mapForOtherSelection(barakhadi);
-    case RouterParamTypes.LearnCharsType.Number:
+    case LearnCharsType.Number:
       return mapForOtherSelection(numerals);
     default:
       return [];

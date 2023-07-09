@@ -29,7 +29,7 @@ const StrokeOrderBottomSheet = React.forwardRef<BottomSheet, IStrokeOrderBottomS
   const { onChange } = props;
 
   const renderItem = useCallback(
-    item => (
+    (item: string) => (
       <View key={item} style={styles.itemContainer}>
         <Text style={styles.titleText}>{item}</Text>
       </View>

@@ -6,6 +6,7 @@ import { StyleSheet, View } from 'react-native';
 import Icon from 'react-native-easy-icon';
 import { IconType } from 'react-native-easy-icon/src/Icon';
 import { Text, TouchableRipple, useTheme } from 'react-native-paper';
+import { AppTheme } from 'app/models/theme';
 
 //Interface
 
@@ -23,7 +24,7 @@ interface IVovelCharCellItemProps {
 
 const AppTitleValueItemCell = (props: IVovelCharCellItemProps) => {
   //Const
-  const { colors } = useTheme();
+  const { colors } = useTheme<AppTheme>();
   const { title, value, bold, iconFamily, iconName, touchDisabled, leftIconSize, onPress } = props;
 
   return (

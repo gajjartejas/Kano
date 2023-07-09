@@ -9,20 +9,12 @@ import { Appbar, Text, useTheme } from 'react-native-paper';
 //App modules
 import Components from 'app/components';
 import { ICharListItem } from 'app/components/CharListItem';
-import * as RouterParamTypes from 'app/config/router-params';
 import Hooks from 'app/hooks/index';
 import styles from './styles';
-import { LearnCharsMode } from 'app/config/router-params';
+import { LearnCharsMode, LearnCharsType, LoggedInTabNavigatorParams } from 'app/navigation/types';
 
 //Params
-type RootStackParamList = {
-  LearnCharsList: RouterParamTypes.LearnCharsListParams;
-  LearnCharsChart: RouterParamTypes.LearnCharsChartParams;
-  LearnCharsCard: RouterParamTypes.LearnCharsCardParams;
-  LearnBySelectedChar: RouterParamTypes.LearnBySelectedCharParams;
-};
-
-type Props = NativeStackScreenProps<RootStackParamList, 'LearnCharsList'>;
+type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'LearnCharsList'>;
 
 const LearnCharsList = ({ navigation, route }: Props) => {
   //Refs
@@ -40,21 +32,21 @@ const LearnCharsList = ({ navigation, route }: Props) => {
 
   const configInterface = useCallback(() => {
     switch (type) {
-      case RouterParamTypes.LearnCharsType.Vowel:
+      case LearnCharsType.Vowel:
         setTitle(t('learnCharsListScreen.header.titleVowels'));
         break;
 
-      case RouterParamTypes.LearnCharsType.Constant:
+      case LearnCharsType.Constant:
         setTitle(t('learnCharsListScreen.header.titleConsonants'));
 
         break;
 
-      case RouterParamTypes.LearnCharsType.Barakhadi:
+      case LearnCharsType.Barakhadi:
         setTitle(t('learnCharsListScreen.header.titleBarakhadi'));
 
         break;
 
-      case RouterParamTypes.LearnCharsType.Number:
+      case LearnCharsType.Number:
         setTitle(t('learnCharsListScreen.header.titleNumerals'));
 
         break;

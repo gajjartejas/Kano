@@ -11,21 +11,17 @@ import TinderCard from 'react-tinder-card';
 
 //App modules
 import { ICharCellItem, ICharCellListSection } from 'app/components/CharCellItem';
-import * as RouterParamTypes from 'app/config/router-params';
 import Hooks from 'app/hooks/index';
 import styles from './styles';
 import Components from 'app/components';
-import { LearnCharsMode } from 'app/config/router-params';
 import AnimatedCharacter from 'app/components/AnimatedCharacter';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import useSoundPlayer from 'app/hooks/useAudioPlayer';
+import { LearnCharsMode, LearnCharsType, LoggedInTabNavigatorParams } from 'app/navigation/types';
+import { AppTheme } from 'app/models/theme';
 
 //Params
-type RootStackParamList = {
-  LearnCharsCard: RouterParamTypes.LearnCharsCardParams;
-};
-
-type Props = NativeStackScreenProps<RootStackParamList, 'LearnCharsCard'>;
+type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'LearnCharsCard'>;
 
 const GROUP_COUNT = 1;
 
@@ -40,7 +36,7 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
   //Actions
 
   //Constants
-  const { colors } = useTheme();
+  const { colors } = useTheme<AppTheme>();
   const { t } = useTranslation();
   const player = useSoundPlayer();
   const { type, learnMode, onlyInclude, isRandomMode, color } = route.params;
@@ -131,16 +127,16 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
 
   const configInterface = useCallback(() => {
     switch (type) {
-      case RouterParamTypes.LearnCharsType.Vowel:
+      case LearnCharsType.Vowel:
         setTitle(t('learnCharsCardScreen.header.titleVowels'));
         break;
-      case RouterParamTypes.LearnCharsType.Constant:
+      case LearnCharsType.Constant:
         setTitle(t('learnCharsCardScreen.header.titleConsonants'));
         break;
-      case RouterParamTypes.LearnCharsType.Barakhadi:
+      case LearnCharsType.Barakhadi:
         setTitle(t('learnCharsCardScreen.header.titleBarakhadi'));
         break;
-      case RouterParamTypes.LearnCharsType.Number:
+      case LearnCharsType.Number:
         setTitle(t('learnCharsCardScreen.header.titleNumerals'));
         break;
       default:

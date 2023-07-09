@@ -8,6 +8,7 @@ import { IconType } from 'react-native-easy-icon/src/Icon';
 
 //App Modules
 import CircularProgress from './CircularProgress';
+import { AppTheme } from 'app/models/theme';
 
 //Interface
 export interface ICharListItem {
@@ -34,7 +35,7 @@ interface ICharListItemProps {
 
 const CharListItem = (props: ICharListItemProps) => {
   //Const
-  const { colors } = useTheme();
+  const { colors } = useTheme<AppTheme>();
   const { item, index } = props;
   const sectionIndex = props.sectionIndex;
 

@@ -16,7 +16,8 @@ import Utils from 'app/utils';
 import Config from 'app/config';
 import Components from 'app/components';
 import styles from './styles';
-import * as RouterParamTypes from 'app/config/router-params';
+import { LoggedInTabNavigatorParams } from 'app/navigation/types';
+import { AppTheme } from 'app/models/theme';
 
 //Interfaces
 interface IMoreItem {
@@ -27,13 +28,7 @@ interface IMoreItem {
 }
 
 //Params
-type RootStackParamList = {
-  DeviceLists: RouterParamTypes.DeviceListsParams;
-  MoreApps: RouterParamTypes.MoreAppsParams;
-  Settings: RouterParamTypes.SettingsParams;
-  About: RouterParamTypes.AboutParams;
-};
-type Props = NativeStackScreenProps<RootStackParamList, 'DeviceLists'>;
+type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'MoreTab'>;
 
 const MoreTab = ({ navigation }: Props) => {
   //Refs
@@ -42,7 +37,7 @@ const MoreTab = ({ navigation }: Props) => {
 
   //Constants
   const { t } = useTranslation();
-  const { colors } = useTheme();
+  const { colors } = useTheme<AppTheme>();
 
   //State
   const [visible, setVisible] = React.useState(false);

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 //App Modules
 import useSvgReader from 'app/hooks/useSvgReader';
@@ -64,15 +64,12 @@ const AnimatedCharacter = (props: IAnimatedCharacter) => {
 
     let totalLength = parsedSvg.groups
       .map(g => {
-        let length = g.svgClipPaths
+        return g.svgClipPaths
           .map(p => {
             const properties = new svgPathProperties(p.d);
-            const l = properties.getTotalLength();
-            return l;
+            return properties.getTotalLength();
           })
           .reduce((ps, a) => ps + a, 0);
-
-        return length;
       })
       .reduce((ps, a) => ps + a, 0);
 
@@ -153,6 +150,7 @@ const AnimatedCharacter = (props: IAnimatedCharacter) => {
                     delay={strokeTiming[groupIndex].timings[index].delay}
                     duration={strokeTiming[groupIndex].timings[index].duration}
                     length={strokeTiming[groupIndex].timings[index].length}
+                    fill={'transparent'}
                   />
                 );
               })}
