@@ -1,9 +1,12 @@
-import { ICharGroupInfo, ICharInfo } from 'app/models/models/char';
+import { Platform } from 'react-native';
 
 //ThirdParty
-import { ICharCellItem, ICharCellListSection } from 'app/components/CharCellItem';
-import barakhadi from 'app/assets/lang/barakhadi/barakhadi.json';
 import { useTranslation } from 'react-i18next';
+
+//App Modules
+import barakhadi from 'app/assets/lang/barakhadi/barakhadi.json';
+import { ICharCellItem, ICharCellListSection } from 'app/components/CharCellItem';
+import { ICharGroupInfo, ICharInfo } from 'app/models/models/char';
 
 const useBarakhadiChartItems = (): ICharCellListSection[] => {
   //Constants
@@ -16,7 +19,7 @@ const useBarakhadiChartItems = (): ICharCellListSection[] => {
       gu: charInfo.gu,
       diacritic: charInfo.diacritic!,
       svg: charInfo.svg,
-      audio: charInfo.audio,
+      audio: Platform.OS === 'ios' ? charInfo.audio_ios : charInfo.audio_android,
     };
   };
 

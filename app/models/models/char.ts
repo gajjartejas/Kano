@@ -20,5 +20,6 @@ export interface ICharInfo {
   name_en?: string;
   diacritic?: string;
   svg: string;
-  audio: string;
+  audio_ios: string;
+  audio_android: string;
 }

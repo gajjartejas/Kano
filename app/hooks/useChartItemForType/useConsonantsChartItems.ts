@@ -1,10 +1,12 @@
-import { ICharInfo } from 'app/models/models/char';
+import { Platform } from 'react-native';
 
 //ThirdParty
-//App Modules
-import { ICharCellItem, ICharCellListSection } from 'app/components/CharCellItem';
-import consonants from 'app/assets/lang/consonants/consonants.json';
 import { useTranslation } from 'react-i18next';
+
+//App Modules
+import consonants from 'app/assets/lang/consonants/consonants.json';
+import { ICharCellItem, ICharCellListSection } from 'app/components/CharCellItem';
+import { ICharInfo } from 'app/models/models/char';
 
 const useConsonantsChartItems = (): ICharCellListSection[] => {
   //Constants
@@ -17,7 +19,7 @@ const useConsonantsChartItems = (): ICharCellListSection[] => {
       gu: charInfo.gu,
       diacritic: charInfo.diacritic!,
       svg: charInfo.svg,
-      audio: charInfo.audio,
+      audio: Platform.OS === 'ios' ? charInfo.audio_ios : charInfo.audio_android,
     };
   };
 
