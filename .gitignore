@@ -100,3 +100,4 @@ android/app/src/main/assets/audio/
 .eslintcache
 
 vendor
+android/app/src/main/res/raw/*.mp3

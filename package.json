@@ -8,7 +8,8 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "start": "react-native start",
     "test": "jest",
-    "postinstall": "node ./post-install.js"
+    "postinstall": "node ./post-install.js",
+    "license-crawler": "npx npm-license-crawler -onlyDirectDependencies -json licenses.json"
   },
   "dependencies": {
     "@gorhom/bottom-sheet": "^4.4.7",
@@ -58,6 +59,7 @@
     "@react-native/eslint-config": "^0.72.2",
     "@react-native/metro-config": "^0.72.7",
     "@tsconfig/react-native": "^3.0.0",
+    "@types/jest": "^29.5.2",
     "@types/metro-config": "^0.76.3",
     "@types/react": "^18.0.24",
     "@types/react-test-renderer": "^18.0.0",

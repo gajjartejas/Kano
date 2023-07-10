@@ -6,99 +6,111 @@
     "chars": [
       {
         "id": 0,
-        "en": "Aa",
         "gu": "અ",
+        "en": "Aa",
         "diacritic": " ",
         "svg": "svgs/barakhadi/0_aa/0_aa.svg",
-        "audio": "audio/barakhadi/0_aa/0_aa.mp3"
+        "audio_ios": "audio/barakhadi/0_aa/0_aa.mp3",
+        "audio_android": "audio_0_aa_0_aa.mp3"
       },
       {
         "id": 1,
-        "en": "Aa",
         "gu": "આ",
+        "en": "Aa",
         "diacritic": "ા",
         "svg": "svgs/barakhadi/0_aa/1_aa.svg",
-        "audio": "audio/barakhadi/0_aa/1_aa.mp3"
+        "audio_ios": "audio/barakhadi/0_aa/1_aa.mp3",
+        "audio_android": "audio_0_aa_1_aa.mp3"
       },
       {
         "id": 2,
-        "en": "I",
         "gu": "ઇ",
+        "en": "I",
         "diacritic": "િ",
         "svg": "svgs/barakhadi/0_aa/2_i.svg",
-        "audio": "audio/barakhadi/0_aa/2_i.mp3"
+        "audio_ios": "audio/barakhadi/0_aa/2_i.mp3",
+        "audio_android": "audio_0_aa_2_i.mp3"
       },
       {
         "id": 3,
-        "en": "ee",
         "gu": "ઈ",
+        "en": "ee",
         "diacritic": "ી",
         "svg": "svgs/barakhadi/0_aa/3_ee.svg",
-        "audio": "audio/barakhadi/0_aa/3_ee.mp3"
+        "audio_ios": "audio/barakhadi/0_aa/3_ee.mp3",
+        "audio_android": "audio_0_aa_3_ee.mp3"
       },
       {
         "id": 4,
-        "en": "u",
         "gu": "ઉ",
+        "en": "u",
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/0_aa/4_u.svg",
-        "audio": "audio/barakhadi/0_aa/4_u.mp3"
+        "audio_ios": "audio/barakhadi/0_aa/4_u.mp3",
+        "audio_android": "audio_0_aa_4_u.mp3"
       },
       {
         "id": 5,
-        "en": "oo",
         "gu": "ઊ",
+        "en": "oo",
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/0_aa/5_oo.svg",
-        "audio": "audio/barakhadi/0_aa/5_oo.mp3"
+        "audio_ios": "audio/barakhadi/0_aa/5_oo.mp3",
+        "audio_android": "audio_0_aa_5_oo.mp3"
       },
       {
         "id": 6,
-        "en": "e",
         "gu": "એ",
+        "en": "e",
         "diacritic": "ે",
         "svg": "svgs/barakhadi/0_aa/6_e.svg",
-        "audio": "audio/barakhadi/0_aa/6_e.mp3"
+        "audio_ios": "audio/barakhadi/0_aa/6_e.mp3",
+        "audio_android": "audio_0_aa_6_e.mp3"
       },
       {
         "id": 7,
-        "en": "ai",
         "gu": "ઐ",
+        "en": "ai",
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/0_aa/7_ai.svg",
-        "audio": "audio/barakhadi/0_aa/7_ai.mp3"
+        "audio_ios": "audio/barakhadi/0_aa/7_ai.mp3",
+        "audio_android": "audio_0_aa_7_ai.mp3"
       },
       {
         "id": 8,
-        "en": "o",
         "gu": "ઓ",
+        "en": "o",
         "diacritic": "ો",
         "svg": "svgs/barakhadi/0_aa/8_o.svg",
-        "audio": "audio/barakhadi/0_aa/8_o.mp3"
+        "audio_ios": "audio/barakhadi/0_aa/8_o.mp3",
+        "audio_android": "audio_0_aa_8_o.mp3"
       },
       {
         "id": 9,
-        "en": "au",
         "gu": "ઔ",
+        "en": "au",
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/0_aa/9_au.svg",
-        "audio": "audio/barakhadi/0_aa/9_au.mp3"
+        "audio_ios": "audio/barakhadi/0_aa/9_au.mp3",
+        "audio_android": "audio_0_aa_9_au.mp3"
       },
       {
         "id": 10,
-        "en": "am / an",
         "gu": "અં",
+        "en": "am / an",
         "diacritic": "ં",
         "svg": "svgs/barakhadi/0_aa/10_am_or_an.svg",
-        "audio": "audio/barakhadi/0_aa/10_am_or_an.mp3"
+        "audio_ios": "audio/barakhadi/0_aa/10_am_or_an.mp3",
+        "audio_android": "audio_0_aa_10_am_or_an.mp3"
       },
       {
         "id": 11,
-        "en": "Ah",
         "gu": "અઃ",
+        "en": "Ah",
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/0_aa/11_ah.svg",
-        "audio": "audio/barakhadi/0_aa/11_ah.mp3"
+        "audio_ios": "audio/barakhadi/0_aa/11_ah.mp3",
+        "audio_android": "audio_0_aa_11_ah.mp3"
       }
     ]
   },
@@ -109,99 +121,111 @@
     "chars": [
       {
         "id": 0,
-        "en": "K",
         "gu": "ક",
+        "en": "K",
         "diacritic": " ",
         "svg": "svgs/barakhadi/1_k/0_k.svg",
-        "audio": "audio/barakhadi/1_k/0_k.mp3"
+        "audio_ios": "audio/barakhadi/1_k/0_k.mp3",
+        "audio_android": "audio_1_k_0_k.mp3"
       },
       {
         "id": 1,
-        "en": "Ka",
         "gu": "કા",
+        "en": "Ka",
         "diacritic": "ા",
         "svg": "svgs/barakhadi/1_k/1_ka.svg",
-        "audio": "audio/barakhadi/1_k/1_ka.mp3"
+        "audio_ios": "audio/barakhadi/1_k/1_ka.mp3",
+        "audio_android": "audio_1_k_1_ka.mp3"
       },
       {
         "id": 2,
-        "en": "Ki",
         "gu": "કિ",
+        "en": "Ki",
         "diacritic": "િ",
         "svg": "svgs/barakhadi/1_k/2_ki.svg",
-        "audio": "audio/barakhadi/1_k/2_ki.mp3"
+        "audio_ios": "audio/barakhadi/1_k/2_ki.mp3",
+        "audio_android": "audio_1_k_2_ki.mp3"
       },
       {
         "id": 3,
-        "en": "Kee",
         "gu": "કી",
+        "en": "Kee",
         "diacritic": "ી",
         "svg": "svgs/barakhadi/1_k/3_kee.svg",
-        "audio": "audio/barakhadi/1_k/3_kee.mp3"
+        "audio_ios": "audio/barakhadi/1_k/3_kee.mp3",
+        "audio_android": "audio_1_k_3_kee.mp3"
       },
       {
         "id": 4,
-        "en": "Ku",
         "gu": "કુ",
+        "en": "Ku",
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/1_k/4_ku.svg",
-        "audio": "audio/barakhadi/1_k/4_ku.mp3"
+        "audio_ios": "audio/barakhadi/1_k/4_ku.mp3",
+        "audio_android": "audio_1_k_4_ku.mp3"
       },
       {
         "id": 5,
-        "en": "Koo",
         "gu": "કૂ",
+        "en": "Koo",
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/1_k/5_koo.svg",
-        "audio": "audio/barakhadi/1_k/5_koo.mp3"
+        "audio_ios": "audio/barakhadi/1_k/5_koo.mp3",
+        "audio_android": "audio_1_k_5_koo.mp3"
       },
       {
         "id": 6,
-        "en": "Ke",
         "gu": "કે",
+        "en": "Ke",
         "diacritic": "ે",
         "svg": "svgs/barakhadi/1_k/6_ke.svg",
-        "audio": "audio/barakhadi/1_k/6_ke.mp3"
+        "audio_ios": "audio/barakhadi/1_k/6_ke.mp3",
+        "audio_android": "audio_1_k_6_ke.mp3"
       },
       {
         "id": 7,
-        "en": "Kai",
         "gu": "કૈ",
+        "en": "Kai",
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/1_k/7_kai.svg",
-        "audio": "audio/barakhadi/1_k/7_kai.mp3"
+        "audio_ios": "audio/barakhadi/1_k/7_kai.mp3",
+        "audio_android": "audio_1_k_7_kai.mp3"
       },
       {
         "id": 8,
-        "en": "Ko",
         "gu": "કો",
+        "en": "Ko",
         "diacritic": "ો",
         "svg": "svgs/barakhadi/1_k/8_ko.svg",
-        "audio": "audio/barakhadi/1_k/8_ko.mp3"
+        "audio_ios": "audio/barakhadi/1_k/8_ko.mp3",
+        "audio_android": "audio_1_k_8_ko.mp3"
       },
       {
         "id": 9,
-        "en": "Kau",
         "gu": "કૌ",
+        "en": "Kau",
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/1_k/9_kau.svg",
-        "audio": "audio/barakhadi/1_k/9_kau.mp3"
+        "audio_ios": "audio/barakhadi/1_k/9_kau.mp3",
+        "audio_android": "audio_1_k_9_kau.mp3"
       },
       {
         "id": 10,
-        "en": "Kam",
         "gu": "કં",
+        "en": "Kam",
         "diacritic": "ં",
         "svg": "svgs/barakhadi/1_k/10_kam.svg",
-        "audio": "audio/barakhadi/1_k/10_kam.mp3"
+        "audio_ios": "audio/barakhadi/1_k/10_kam.mp3",
+        "audio_android": "audio_1_k_10_kam.mp3"
       },
       {
         "id": 11,
-        "en": "Kah",
         "gu": "કઃ",
+        "en": "Kah",
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/1_k/11_kah.svg",
-        "audio": "audio/barakhadi/1_k/11_kah.mp3"
+        "audio_ios": "audio/barakhadi/1_k/11_kah.mp3",
+        "audio_android": "audio_1_k_11_kah.mp3"
       }
     ]
   },
@@ -212,99 +236,111 @@
     "chars": [
       {
         "id": 0,
-        "en": "kh",
         "gu": "ખ",
+        "en": "kh",
         "diacritic": " ",
         "svg": "svgs/barakhadi/2_kh/0_kh.svg",
-        "audio": "audio/barakhadi/2_kh/0_kh.mp3"
+        "audio_ios": "audio/barakhadi/2_kh/0_kh.mp3",
+        "audio_android": "audio_2_kh_0_kh.mp3"
       },
       {
         "id": 1,
-        "en": "kha",
         "gu": "ખા",
+        "en": "kha",
         "diacritic": "ા",
         "svg": "svgs/barakhadi/2_kh/1_kha.svg",
-        "audio": "audio/barakhadi/2_kh/1_kha.mp3"
+        "audio_ios": "audio/barakhadi/2_kh/1_kha.mp3",
+        "audio_android": "audio_2_kh_1_kha.mp3"
       },
       {
         "id": 2,
-        "en": "khi",
         "gu": "ખિ",
+        "en": "khi",
         "diacritic": "િ",
         "svg": "svgs/barakhadi/2_kh/2_khi.svg",
-        "audio": "audio/barakhadi/2_kh/2_khi.mp3"
+        "audio_ios": "audio/barakhadi/2_kh/2_khi.mp3",
+        "audio_android": "audio_2_kh_2_khi.mp3"
       },
       {
         "id": 3,
-        "en": "khee",
         "gu": "ખી",
+        "en": "khee",
         "diacritic": "ી",
         "svg": "svgs/barakhadi/2_kh/3_khee.svg",
-        "audio": "audio/barakhadi/2_kh/3_khee.mp3"
+        "audio_ios": "audio/barakhadi/2_kh/3_khee.mp3",
+        "audio_android": "audio_2_kh_3_khee.mp3"
       },
       {
         "id": 4,
-        "en": "khu",
         "gu": "ખુ",
+        "en": "khu",
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/2_kh/4_khu.svg",
-        "audio": "audio/barakhadi/2_kh/4_khu.mp3"
+        "audio_ios": "audio/barakhadi/2_kh/4_khu.mp3",
+        "audio_android": "audio_2_kh_4_khu.mp3"
       },
       {
         "id": 5,
-        "en": "khoo",
         "gu": "ખૂ",
+        "en": "khoo",
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/2_kh/5_khoo.svg",
-        "audio": "audio/barakhadi/2_kh/5_khoo.mp3"
+        "audio_ios": "audio/barakhadi/2_kh/5_khoo.mp3",
+        "audio_android": "audio_2_kh_5_khoo.mp3"
       },
       {
         "id": 6,
-        "en": "khe",
         "gu": "ખે",
+        "en": "khe",
         "diacritic": "ે",
         "svg": "svgs/barakhadi/2_kh/6_khe.svg",
-        "audio": "audio/barakhadi/2_kh/6_khe.mp3"
+        "audio_ios": "audio/barakhadi/2_kh/6_khe.mp3",
+        "audio_android": "audio_2_kh_6_khe.mp3"
       },
       {
         "id": 7,
-        "en": "khai",
         "gu": "ખૈ",
+        "en": "khai",
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/2_kh/7_khai.svg",
-        "audio": "audio/barakhadi/2_kh/7_khai.mp3"
+        "audio_ios": "audio/barakhadi/2_kh/7_khai.mp3",
+        "audio_android": "audio_2_kh_7_khai.mp3"
       },
       {
         "id": 8,
-        "en": "kho",
         "gu": "ખો",
+        "en": "kho",
         "diacritic": "ો",
         "svg": "svgs/barakhadi/2_kh/8_kho.svg",
-        "audio": "audio/barakhadi/2_kh/8_kho.mp3"
+        "audio_ios": "audio/barakhadi/2_kh/8_kho.mp3",
+        "audio_android": "audio_2_kh_8_kho.mp3"
       },
       {
         "id": 9,
-        "en": "khau",
         "gu": "ખૌ",
+        "en": "khau",
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/2_kh/9_khau.svg",
-        "audio": "audio/barakhadi/2_kh/9_khau.mp3"
+        "audio_ios": "audio/barakhadi/2_kh/9_khau.mp3",
+        "audio_android": "audio_2_kh_9_khau.mp3"
       },
       {
         "id": 10,
-        "en": "kham/Khan",
         "gu": "ખં",
+        "en": "kham/Khan",
         "diacritic": "ં",
         "svg": "svgs/barakhadi/2_kh/10_kham_or_khan.svg",
-        "audio": "audio/barakhadi/2_kh/10_kham_or_khan.mp3"
+        "audio_ios": "audio/barakhadi/2_kh/10_kham_or_khan.mp3",
+        "audio_android": "audio_2_kh_10_kham_or_khan.mp3"
       },
       {
         "id": 11,
-        "en": "khah",
         "gu": "ખઃ",
+        "en": "khah",
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/2_kh/11_khah.svg",
-        "audio": "audio/barakhadi/2_kh/11_khah.mp3"
+        "audio_ios": "audio/barakhadi/2_kh/11_khah.mp3",
+        "audio_android": "audio_2_kh_11_khah.mp3"
       }
     ]
   },
@@ -315,99 +351,111 @@
     "chars": [
       {
         "id": 0,
-        "en": "G",
         "gu": "ગ",
+        "en": "G",
         "diacritic": " ",
         "svg": "svgs/barakhadi/3_g/0_g.svg",
-        "audio": "audio/barakhadi/3_g/0_g.mp3"
+        "audio_ios": "audio/barakhadi/3_g/0_g.mp3",
+        "audio_android": "audio_3_g_0_g.mp3"
       },
       {
         "id": 1,
-        "en": "Ga",
         "gu": "ગા",
+        "en": "Ga",
         "diacritic": "ા",
         "svg": "svgs/barakhadi/3_g/1_ga.svg",
-        "audio": "audio/barakhadi/3_g/1_ga.mp3"
+        "audio_ios": "audio/barakhadi/3_g/1_ga.mp3",
+        "audio_android": "audio_3_g_1_ga.mp3"
       },
       {
         "id": 2,
-        "en": "Gi",
         "gu": "ગિ",
+        "en": "Gi",
         "diacritic": "િ",
         "svg": "svgs/barakhadi/3_g/2_gi.svg",
-        "audio": "audio/barakhadi/3_g/2_gi.mp3"
+        "audio_ios": "audio/barakhadi/3_g/2_gi.mp3",
+        "audio_android": "audio_3_g_2_gi.mp3"
       },
       {
         "id": 3,
-        "en": "Gee",
         "gu": "ગી",
+        "en": "Gee",
         "diacritic": "ી",
         "svg": "svgs/barakhadi/3_g/3_gee.svg",
-        "audio": "audio/barakhadi/3_g/3_gee.mp3"
+        "audio_ios": "audio/barakhadi/3_g/3_gee.mp3",
+        "audio_android": "audio_3_g_3_gee.mp3"
       },
       {
         "id": 4,
-        "en": "Gu",
         "gu": "ગુ",
+        "en": "Gu",
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/3_g/4_gu.svg",
-        "audio": "audio/barakhadi/3_g/4_gu.mp3"
+        "audio_ios": "audio/barakhadi/3_g/4_gu.mp3",
+        "audio_android": "audio_3_g_4_gu.mp3"
       },
       {
         "id": 5,
-        "en": "Goo",
         "gu": "ગૂ",
+        "en": "Goo",
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/3_g/5_goo.svg",
-        "audio": "audio/barakhadi/3_g/5_goo.mp3"
+        "audio_ios": "audio/barakhadi/3_g/5_goo.mp3",
+        "audio_android": "audio_3_g_5_goo.mp3"
       },
       {
         "id": 6,
-        "en": "Ge",
         "gu": "ગે",
+        "en": "Ge",
         "diacritic": "ે",
         "svg": "svgs/barakhadi/3_g/6_ge.svg",
-        "audio": "audio/barakhadi/3_g/6_ge.mp3"
+        "audio_ios": "audio/barakhadi/3_g/6_ge.mp3",
+        "audio_android": "audio_3_g_6_ge.mp3"
       },
       {
         "id": 7,
-        "en": "Gai",
         "gu": "ગૈ",
+        "en": "Gai",
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/3_g/7_gai.svg",
-        "audio": "audio/barakhadi/3_g/7_gai.mp3"
+        "audio_ios": "audio/barakhadi/3_g/7_gai.mp3",
+        "audio_android": "audio_3_g_7_gai.mp3"
       },
       {
         "id": 8,
-        "en": "Go",
         "gu": "ગો",
+        "en": "Go",
         "diacritic": "ો",
         "svg": "svgs/barakhadi/3_g/8_go.svg",
-        "audio": "audio/barakhadi/3_g/8_go.mp3"
+        "audio_ios": "audio/barakhadi/3_g/8_go.mp3",
+        "audio_android": "audio_3_g_8_go.mp3"
       },
       {
         "id": 9,
-        "en": "Gau",
         "gu": "ગૌ",
+        "en": "Gau",
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/3_g/9_gau.svg",
-        "audio": "audio/barakhadi/3_g/9_gau.mp3"
+        "audio_ios": "audio/barakhadi/3_g/9_gau.mp3",
+        "audio_android": "audio_3_g_9_gau.mp3"
       },
       {
         "id": 10,
-        "en": "Gam",
         "gu": "ગં",
+        "en": "Gam",
         "diacritic": "ં",
         "svg": "svgs/barakhadi/3_g/10_gam.svg",
-        "audio": "audio/barakhadi/3_g/10_gam.mp3"
+        "audio_ios": "audio/barakhadi/3_g/10_gam.mp3",
+        "audio_android": "audio_3_g_10_gam.mp3"
       },
       {
         "id": 11,
-        "en": "Gah",
         "gu": "ગઃ",
+        "en": "Gah",
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/3_g/11_gah.svg",
-        "audio": "audio/barakhadi/3_g/11_gah.mp3"
+        "audio_ios": "audio/barakhadi/3_g/11_gah.mp3",
+        "audio_android": "audio_3_g_11_gah.mp3"
       }
     ]
   },
@@ -418,99 +466,111 @@
     "chars": [
       {
         "id": 0,
-        "en": "Gh",
         "gu": "ઘ",
+        "en": "Gh",
         "diacritic": " ",
         "svg": "svgs/barakhadi/4_gh/0_gh.svg",
-        "audio": "audio/barakhadi/4_gh/0_gh.mp3"
+        "audio_ios": "audio/barakhadi/4_gh/0_gh.mp3",
+        "audio_android": "audio_4_gh_0_gh.mp3"
       },
       {
         "id": 1,
-        "en": "Gha",
         "gu": "ઘા",
+        "en": "Gha",
         "diacritic": "ા",
         "svg": "svgs/barakhadi/4_gh/1_gha.svg",
-        "audio": "audio/barakhadi/4_gh/1_gha.mp3"
+        "audio_ios": "audio/barakhadi/4_gh/1_gha.mp3",
+        "audio_android": "audio_4_gh_1_gha.mp3"
       },
       {
         "id": 2,
-        "en": "Ghi",
         "gu": "ઘિ",
+        "en": "Ghi",
         "diacritic": "િ",
         "svg": "svgs/barakhadi/4_gh/2_ghi.svg",
-        "audio": "audio/barakhadi/4_gh/2_ghi.mp3"
+        "audio_ios": "audio/barakhadi/4_gh/2_ghi.mp3",
+        "audio_android": "audio_4_gh_2_ghi.mp3"
       },
       {
         "id": 3,
-        "en": "Ghee",
         "gu": "ઘી",
+        "en": "Ghee",
         "diacritic": "ી",
         "svg": "svgs/barakhadi/4_gh/3_ghee.svg",
-        "audio": "audio/barakhadi/4_gh/3_ghee.mp3"
+        "audio_ios": "audio/barakhadi/4_gh/3_ghee.mp3",
+        "audio_android": "audio_4_gh_3_ghee.mp3"
       },
       {
         "id": 4,
-        "en": "Ghu",
         "gu": "ઘુ",
+        "en": "Ghu",
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/4_gh/4_ghu.svg",
-        "audio": "audio/barakhadi/4_gh/4_ghu.mp3"
+        "audio_ios": "audio/barakhadi/4_gh/4_ghu.mp3",
+        "audio_android": "audio_4_gh_4_ghu.mp3"
       },
       {
         "id": 5,
-        "en": "Ghoo",
         "gu": "ઘૂ",
+        "en": "Ghoo",
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/4_gh/5_ghoo.svg",
-        "audio": "audio/barakhadi/4_gh/5_ghoo.mp3"
+        "audio_ios": "audio/barakhadi/4_gh/5_ghoo.mp3",
+        "audio_android": "audio_4_gh_5_ghoo.mp3"
       },
       {
         "id": 6,
-        "en": "Ghe",
         "gu": "ઘે",
+        "en": "Ghe",
         "diacritic": "ે",
         "svg": "svgs/barakhadi/4_gh/6_ghe.svg",
-        "audio": "audio/barakhadi/4_gh/6_ghe.mp3"
+        "audio_ios": "audio/barakhadi/4_gh/6_ghe.mp3",
+        "audio_android": "audio_4_gh_6_ghe.mp3"
       },
       {
         "id": 7,
-        "en": "Ghai",
         "gu": "ઘૈ",
+        "en": "Ghai",
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/4_gh/7_ghai.svg",
-        "audio": "audio/barakhadi/4_gh/7_ghai.mp3"
+        "audio_ios": "audio/barakhadi/4_gh/7_ghai.mp3",
+        "audio_android": "audio_4_gh_7_ghai.mp3"
       },
       {
         "id": 8,
-        "en": "Gho",
         "gu": "ઘો",
+        "en": "Gho",
         "diacritic": "ો",
         "svg": "svgs/barakhadi/4_gh/8_gho.svg",
-        "audio": "audio/barakhadi/4_gh/8_gho.mp3"
+        "audio_ios": "audio/barakhadi/4_gh/8_gho.mp3",
+        "audio_android": "audio_4_gh_8_gho.mp3"
       },
       {
         "id": 9,
-        "en": "Ghau",
         "gu": "ઘૌ",
+        "en": "Ghau",
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/4_gh/9_ghau.svg",
-        "audio": "audio/barakhadi/4_gh/9_ghau.mp3"
+        "audio_ios": "audio/barakhadi/4_gh/9_ghau.mp3",
+        "audio_android": "audio_4_gh_9_ghau.mp3"
       },
       {
         "id": 10,
-        "en": "Gham",
         "gu": "ઘં",
+        "en": "Gham",
         "diacritic": "ં",
         "svg": "svgs/barakhadi/4_gh/10_gham.svg",
-        "audio": "audio/barakhadi/4_gh/10_gham.mp3"
+        "audio_ios": "audio/barakhadi/4_gh/10_gham.mp3",
+        "audio_android": "audio_4_gh_10_gham.mp3"
       },
       {
         "id": 11,
-        "en": "Ghah",
         "gu": "ઘઃ",
+        "en": "Ghah",
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/4_gh/11_ghah.svg",
-        "audio": "audio/barakhadi/4_gh/11_ghah.mp3"
+        "audio_ios": "audio/barakhadi/4_gh/11_ghah.mp3",
+        "audio_android": "audio_4_gh_11_ghah.mp3"
       }
     ]
   },
@@ -521,99 +581,111 @@
     "chars": [
       {
         "id": 0,
-        "en": "Ch",
         "gu": "ચ",
+        "en": "Ch",
         "diacritic": " ",
         "svg": "svgs/barakhadi/5_ch/0_ch.svg",
-        "audio": "audio/barakhadi/5_ch/0_ch.mp3"
+        "audio_ios": "audio/barakhadi/5_ch/0_ch.mp3",
+        "audio_android": "audio_5_ch_0_ch.mp3"
       },
       {
         "id": 1,
-        "en": "Cha",
         "gu": "ચા",
+        "en": "Cha",
         "diacritic": "ા",
         "svg": "svgs/barakhadi/5_ch/1_cha.svg",
-        "audio": "audio/barakhadi/5_ch/1_cha.mp3"
+        "audio_ios": "audio/barakhadi/5_ch/1_cha.mp3",
+        "audio_android": "audio_5_ch_1_cha.mp3"
       },
       {
         "id": 2,
-        "en": "Chi",
         "gu": "ચિ",
+        "en": "Chi",
         "diacritic": "િ",
         "svg": "svgs/barakhadi/5_ch/2_chi.svg",
-        "audio": "audio/barakhadi/5_ch/2_chi.mp3"
+        "audio_ios": "audio/barakhadi/5_ch/2_chi.mp3",
+        "audio_android": "audio_5_ch_2_chi.mp3"
       },
       {
         "id": 3,
-        "en": "Chee",
         "gu": "ચી",
+        "en": "Chee",
         "diacritic": "ી",
         "svg": "svgs/barakhadi/5_ch/3_chee.svg",
-        "audio": "audio/barakhadi/5_ch/3_chee.mp3"
+        "audio_ios": "audio/barakhadi/5_ch/3_chee.mp3",
+        "audio_android": "audio_5_ch_3_chee.mp3"
       },
       {
         "id": 4,
-        "en": "Chu",
         "gu": "ચુ",
+        "en": "Chu",
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/5_ch/4_chu.svg",
-        "audio": "audio/barakhadi/5_ch/4_chu.mp3"
+        "audio_ios": "audio/barakhadi/5_ch/4_chu.mp3",
+        "audio_android": "audio_5_ch_4_chu.mp3"
       },
       {
         "id": 5,
-        "en": "Choo",
         "gu": "ચૂ",
+        "en": "Choo",
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/5_ch/5_choo.svg",
-        "audio": "audio/barakhadi/5_ch/5_choo.mp3"
+        "audio_ios": "audio/barakhadi/5_ch/5_choo.mp3",
+        "audio_android": "audio_5_ch_5_choo.mp3"
       },
       {
         "id": 6,
-        "en": "Che",
         "gu": "ચે",
+        "en": "Che",
         "diacritic": "ે",
         "svg": "svgs/barakhadi/5_ch/6_che.svg",
-        "audio": "audio/barakhadi/5_ch/6_che.mp3"
+        "audio_ios": "audio/barakhadi/5_ch/6_che.mp3",
+        "audio_android": "audio_5_ch_6_che.mp3"
       },
       {
         "id": 7,
-        "en": "Chei",
         "gu": "ચૈ",
+        "en": "Chei",
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/5_ch/7_chei.svg",
-        "audio": "audio/barakhadi/5_ch/7_chei.mp3"
+        "audio_ios": "audio/barakhadi/5_ch/7_chei.mp3",
+        "audio_android": "audio_5_ch_7_chei.mp3"
       },
       {
         "id": 8,
-        "en": "Cho",
         "gu": "ચો",
+        "en": "Cho",
         "diacritic": "ો",
         "svg": "svgs/barakhadi/5_ch/8_cho.svg",
-        "audio": "audio/barakhadi/5_ch/8_cho.mp3"
+        "audio_ios": "audio/barakhadi/5_ch/8_cho.mp3",
+        "audio_android": "audio_5_ch_8_cho.mp3"
       },
       {
         "id": 9,
-        "en": "Chau",
         "gu": "ચૌ",
+        "en": "Chau",
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/5_ch/9_chau.svg",
-        "audio": "audio/barakhadi/5_ch/9_chau.mp3"
+        "audio_ios": "audio/barakhadi/5_ch/9_chau.mp3",
+        "audio_android": "audio_5_ch_9_chau.mp3"
       },
       {
         "id": 10,
-        "en": "Cham",
         "gu": "ચં",
+        "en": "Cham",
         "diacritic": "ં",
         "svg": "svgs/barakhadi/5_ch/10_cham.svg",
-        "audio": "audio/barakhadi/5_ch/10_cham.mp3"
+        "audio_ios": "audio/barakhadi/5_ch/10_cham.mp3",
+        "audio_android": "audio_5_ch_10_cham.mp3"
       },
       {
         "id": 11,
-        "en": "Chah",
         "gu": "ચઃ",
+        "en": "Chah",
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/5_ch/11_chah.svg",
-        "audio": "audio/barakhadi/5_ch/11_chah.mp3"
+        "audio_ios": "audio/barakhadi/5_ch/11_chah.mp3",
+        "audio_android": "audio_5_ch_11_chah.mp3"
       }
     ]
   },
@@ -624,99 +696,111 @@
     "chars": [
       {
         "id": 0,
-        "en": "Chha",
         "gu": "છ",
+        "en": "Chha",
         "diacritic": " ",
         "svg": "svgs/barakhadi/6_chha/0_chha.svg",
-        "audio": "audio/barakhadi/6_chha/0_chha.mp3"
+        "audio_ios": "audio/barakhadi/6_chha/0_chha.mp3",
+        "audio_android": "audio_6_chha_0_chha.mp3"
       },
       {
         "id": 1,
-        "en": "Chha",
         "gu": "છા",
+        "en": "Chha",
         "diacritic": "ા",
         "svg": "svgs/barakhadi/6_chha/1_chha.svg",
-        "audio": "audio/barakhadi/6_chha/1_chha.mp3"
+        "audio_ios": "audio/barakhadi/6_chha/1_chha.mp3",
+        "audio_android": "audio_6_chha_1_chha.mp3"
       },
       {
         "id": 2,
-        "en": "Chhi",
         "gu": "છિ",
+        "en": "Chhi",
         "diacritic": "િ",
         "svg": "svgs/barakhadi/6_chha/2_chhi.svg",
-        "audio": "audio/barakhadi/6_chha/2_chhi.mp3"
+        "audio_ios": "audio/barakhadi/6_chha/2_chhi.mp3",
+        "audio_android": "audio_6_chha_2_chhi.mp3"
       },
       {
         "id": 3,
-        "en": "Chhee",
         "gu": "છી",
+        "en": "Chhee",
         "diacritic": "ી",
         "svg": "svgs/barakhadi/6_chha/3_chhee.svg",
-        "audio": "audio/barakhadi/6_chha/3_chhee.mp3"
+        "audio_ios": "audio/barakhadi/6_chha/3_chhee.mp3",
+        "audio_android": "audio_6_chha_3_chhee.mp3"
       },
       {
         "id": 4,
-        "en": "Chhu",
         "gu": "છુ",
+        "en": "Chhu",
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/6_chha/4_chhu.svg",
-        "audio": "audio/barakhadi/6_chha/4_chhu.mp3"
+        "audio_ios": "audio/barakhadi/6_chha/4_chhu.mp3",
+        "audio_android": "audio_6_chha_4_chhu.mp3"
       },
       {
         "id": 5,
-        "en": "Chhoo",
         "gu": "છૂ",
+        "en": "Chhoo",
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/6_chha/5_chhoo.svg",
-        "audio": "audio/barakhadi/6_chha/5_chhoo.mp3"
+        "audio_ios": "audio/barakhadi/6_chha/5_chhoo.mp3",
+        "audio_android": "audio_6_chha_5_chhoo.mp3"
       },
       {
         "id": 6,
-        "en": "Chhe",
         "gu": "છે",
+        "en": "Chhe",
         "diacritic": "ે",
         "svg": "svgs/barakhadi/6_chha/6_chhe.svg",
-        "audio": "audio/barakhadi/6_chha/6_chhe.mp3"
+        "audio_ios": "audio/barakhadi/6_chha/6_chhe.mp3",
+        "audio_android": "audio_6_chha_6_chhe.mp3"
       },
       {
         "id": 7,
-        "en": "Chhai",
         "gu": "છૈ",
+        "en": "Chhai",
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/6_chha/7_chhai.svg",
-        "audio": "audio/barakhadi/6_chha/7_chhai.mp3"
+        "audio_ios": "audio/barakhadi/6_chha/7_chhai.mp3",
+        "audio_android": "audio_6_chha_7_chhai.mp3"
       },
       {
         "id": 8,
-        "en": "Chho",
         "gu": "છો",
+        "en": "Chho",
         "diacritic": "ો",
         "svg": "svgs/barakhadi/6_chha/8_chho.svg",
-        "audio": "audio/barakhadi/6_chha/8_chho.mp3"
+        "audio_ios": "audio/barakhadi/6_chha/8_chho.mp3",
+        "audio_android": "audio_6_chha_8_chho.mp3"
       },
       {
         "id": 9,
-        "en": "Chhau",
         "gu": "છૌ",
+        "en": "Chhau",
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/6_chha/9_chhau.svg",
-        "audio": "audio/barakhadi/6_chha/9_chhau.mp3"
+        "audio_ios": "audio/barakhadi/6_chha/9_chhau.mp3",
+        "audio_android": "audio_6_chha_9_chhau.mp3"
       },
       {
         "id": 10,
-        "en": "Chham",
         "gu": "છં",
+        "en": "Chham",
         "diacritic": "ં",
         "svg": "svgs/barakhadi/6_chha/10_chham.svg",
-        "audio": "audio/barakhadi/6_chha/10_chham.mp3"
+        "audio_ios": "audio/barakhadi/6_chha/10_chham.mp3",
+        "audio_android": "audio_6_chha_10_chham.mp3"
       },
       {
         "id": 11,
-        "en": "Chhah",
         "gu": "છઃ",
+        "en": "Chhah",
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/6_chha/11_chhah.svg",
-        "audio": "audio/barakhadi/6_chha/11_chhah.mp3"
+        "audio_ios": "audio/barakhadi/6_chha/11_chhah.mp3",
+        "audio_android": "audio_6_chha_11_chhah.mp3"
       }
     ]
   },
@@ -727,99 +811,111 @@
     "chars": [
       {
         "id": 0,
-        "en": "J",
         "gu": "જ",
+        "en": "J",
         "diacritic": " ",
         "svg": "svgs/barakhadi/7_j/0_j.svg",
-        "audio": "audio/barakhadi/7_j/0_j.mp3"
+        "audio_ios": "audio/barakhadi/7_j/0_j.mp3",
+        "audio_android": "audio_7_j_0_j.mp3"
       },
       {
         "id": 1,
-        "en": "Ja",
         "gu": "જા",
+        "en": "Ja",
         "diacritic": "ા",
         "svg": "svgs/barakhadi/7_j/1_ja.svg",
-        "audio": "audio/barakhadi/7_j/1_ja.mp3"
+        "audio_ios": "audio/barakhadi/7_j/1_ja.mp3",
+        "audio_android": "audio_7_j_1_ja.mp3"
       },
       {
         "id": 2,
-        "en": "Ji",
         "gu": "જિ",
+        "en": "Ji",
         "diacritic": "િ",
         "svg": "svgs/barakhadi/7_j/2_ji.svg",
-        "audio": "audio/barakhadi/7_j/2_ji.mp3"
+        "audio_ios": "audio/barakhadi/7_j/2_ji.mp3",
+        "audio_android": "audio_7_j_2_ji.mp3"
       },
       {
         "id": 3,
-        "en": "Jee",
         "gu": "જી",
+        "en": "Jee",
         "diacritic": "ી",
         "svg": "svgs/barakhadi/7_j/3_jee.svg",
-        "audio": "audio/barakhadi/7_j/3_jee.mp3"
+        "audio_ios": "audio/barakhadi/7_j/3_jee.mp3",
+        "audio_android": "audio_7_j_3_jee.mp3"
       },
       {
         "id": 4,
-        "en": "Ju",
         "gu": "જુ",
+        "en": "Ju",
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/7_j/4_ju.svg",
-        "audio": "audio/barakhadi/7_j/4_ju.mp3"
+        "audio_ios": "audio/barakhadi/7_j/4_ju.mp3",
+        "audio_android": "audio_7_j_4_ju.mp3"
       },
       {
         "id": 5,
-        "en": "Joo",
         "gu": "જૂ",
+        "en": "Joo",
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/7_j/5_joo.svg",
-        "audio": "audio/barakhadi/7_j/5_joo.mp3"
+        "audio_ios": "audio/barakhadi/7_j/5_joo.mp3",
+        "audio_android": "audio_7_j_5_joo.mp3"
       },
       {
         "id": 6,
-        "en": "Je",
         "gu": "જે",
+        "en": "Je",
         "diacritic": "ે",
         "svg": "svgs/barakhadi/7_j/6_je.svg",
-        "audio": "audio/barakhadi/7_j/6_je.mp3"
+        "audio_ios": "audio/barakhadi/7_j/6_je.mp3",
+        "audio_android": "audio_7_j_6_je.mp3"
       },
       {
         "id": 7,
-        "en": "Jai",
         "gu": "જૈ",
+        "en": "Jai",
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/7_j/7_jai.svg",
-        "audio": "audio/barakhadi/7_j/7_jai.mp3"
+        "audio_ios": "audio/barakhadi/7_j/7_jai.mp3",
+        "audio_android": "audio_7_j_7_jai.mp3"
       },
       {
         "id": 8,
-        "en": "Jo",
         "gu": "જો",
+        "en": "Jo",
         "diacritic": "ો",
         "svg": "svgs/barakhadi/7_j/8_jo.svg",
-        "audio": "audio/barakhadi/7_j/8_jo.mp3"
+        "audio_ios": "audio/barakhadi/7_j/8_jo.mp3",
+        "audio_android": "audio_7_j_8_jo.mp3"
       },
       {
         "id": 9,
-        "en": "Jau",
         "gu": "જૌ",
+        "en": "Jau",
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/7_j/9_jau.svg",
-        "audio": "audio/barakhadi/7_j/9_jau.mp3"
+        "audio_ios": "audio/barakhadi/7_j/9_jau.mp3",
+        "audio_android": "audio_7_j_9_jau.mp3"
       },
       {
         "id": 10,
-        "en": "Jam",
         "gu": "જં",
+        "en": "Jam",
         "diacritic": "ં",
         "svg": "svgs/barakhadi/7_j/10_jam.svg",
-        "audio": "audio/barakhadi/7_j/10_jam.mp3"
+        "audio_ios": "audio/barakhadi/7_j/10_jam.mp3",
+        "audio_android": "audio_7_j_10_jam.mp3"
       },
       {
         "id": 11,
-        "en": "Jah",
         "gu": "જઃ",
+        "en": "Jah",
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/7_j/11_jah.svg",
-        "audio": "audio/barakhadi/7_j/11_jah.mp3"
+        "audio_ios": "audio/barakhadi/7_j/11_jah.mp3",
+        "audio_android": "audio_7_j_11_jah.mp3"
       }
     ]
   },
@@ -830,99 +926,111 @@
     "chars": [
       {
         "id": 0,
-        "en": "Jh",
         "gu": "ઝ",
+        "en": "Jh",
         "diacritic": " ",
         "svg": "svgs/barakhadi/8_jh/0_jh.svg",
-        "audio": "audio/barakhadi/8_jh/0_jh.mp3"
+        "audio_ios": "audio/barakhadi/8_jh/0_jh.mp3",
+        "audio_android": "audio_8_jh_0_jh.mp3"
       },
       {
         "id": 1,
-        "en": "Jha",
         "gu": "ઝા",
+        "en": "Jha",
         "diacritic": "ા",
         "svg": "svgs/barakhadi/8_jh/1_jha.svg",
-        "audio": "audio/barakhadi/8_jh/1_jha.mp3"
+        "audio_ios": "audio/barakhadi/8_jh/1_jha.mp3",
+        "audio_android": "audio_8_jh_1_jha.mp3"
       },
       {
         "id": 2,
-        "en": "Jhi",
         "gu": "ઝિ",
+        "en": "Jhi",
         "diacritic": "િ",
         "svg": "svgs/barakhadi/8_jh/2_jhi.svg",
-        "audio": "audio/barakhadi/8_jh/2_jhi.mp3"
+        "audio_ios": "audio/barakhadi/8_jh/2_jhi.mp3",
+        "audio_android": "audio_8_jh_2_jhi.mp3"
       },
       {
         "id": 3,
-        "en": "Jhee",
         "gu": "ઝી",
+        "en": "Jhee",
         "diacritic": "ી",
         "svg": "svgs/barakhadi/8_jh/3_jhee.svg",
-        "audio": "audio/barakhadi/8_jh/3_jhee.mp3"
+        "audio_ios": "audio/barakhadi/8_jh/3_jhee.mp3",
+        "audio_android": "audio_8_jh_3_jhee.mp3"
       },
       {
         "id": 4,
-        "en": "Jhu",
         "gu": "ઝુ",
+        "en": "Jhu",
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/8_jh/4_jhu.svg",
-        "audio": "audio/barakhadi/8_jh/4_jhu.mp3"
+        "audio_ios": "audio/barakhadi/8_jh/4_jhu.mp3",
+        "audio_android": "audio_8_jh_4_jhu.mp3"
       },
       {
         "id": 5,
-        "en": "Jhoo",
         "gu": "ઝૂ",
+        "en": "Jhoo",
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/8_jh/5_jhoo.svg",
-        "audio": "audio/barakhadi/8_jh/5_jhoo.mp3"
+        "audio_ios": "audio/barakhadi/8_jh/5_jhoo.mp3",
+        "audio_android": "audio_8_jh_5_jhoo.mp3"
       },
       {
         "id": 6,
-        "en": "Jhe",
         "gu": "ઝે",
+        "en": "Jhe",
         "diacritic": "ે",
         "svg": "svgs/barakhadi/8_jh/6_jhe.svg",
-        "audio": "audio/barakhadi/8_jh/6_jhe.mp3"
+        "audio_ios": "audio/barakhadi/8_jh/6_jhe.mp3",
+        "audio_android": "audio_8_jh_6_jhe.mp3"
       },
       {
         "id": 7,
-        "en": "Jhai",
         "gu": "ઝૈ",
+        "en": "Jhai",
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/8_jh/7_jhai.svg",
-        "audio": "audio/barakhadi/8_jh/7_jhai.mp3"
+        "audio_ios": "audio/barakhadi/8_jh/7_jhai.mp3",
+        "audio_android": "audio_8_jh_7_jhai.mp3"
       },
       {
         "id": 8,
-        "en": "Jho",
         "gu": "ઝો",
+        "en": "Jho",
         "diacritic": "ો",
         "svg": "svgs/barakhadi/8_jh/8_jho.svg",
-        "audio": "audio/barakhadi/8_jh/8_jho.mp3"
+        "audio_ios": "audio/barakhadi/8_jh/8_jho.mp3",
+        "audio_android": "audio_8_jh_8_jho.mp3"
       },
       {
         "id": 9,
-        "en": "Jhau",
         "gu": "ઝૌ",
+        "en": "Jhau",
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/8_jh/9_jhau.svg",
-        "audio": "audio/barakhadi/8_jh/9_jhau.mp3"
+        "audio_ios": "audio/barakhadi/8_jh/9_jhau.mp3",
+        "audio_android": "audio_8_jh_9_jhau.mp3"
       },
       {
         "id": 10,
-        "en": "Jham",
         "gu": "ઝં",
+        "en": "Jham",
         "diacritic": "ં",
         "svg": "svgs/barakhadi/8_jh/10_jham.svg",
-        "audio": "audio/barakhadi/8_jh/10_jham.mp3"
+        "audio_ios": "audio/barakhadi/8_jh/10_jham.mp3",
+        "audio_android": "audio_8_jh_10_jham.mp3"
       },
       {
         "id": 11,
-        "en": "Jhah",
         "gu": "ઝઃ",
+        "en": "Jhah",
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/8_jh/11_jhah.svg",
-        "audio": "audio/barakhadi/8_jh/11_jhah.mp3"
+        "audio_ios": "audio/barakhadi/8_jh/11_jhah.mp3",
+        "audio_android": "audio_8_jh_11_jhah.mp3"
       }
     ]
   },
@@ -933,99 +1041,111 @@
     "chars": [
       {
         "id": 0,
-        "en": "T",
         "gu": "ટ",
+        "en": "T",
         "diacritic": " ",
         "svg": "svgs/barakhadi/9_t/0_t.svg",
-        "audio": "audio/barakhadi/9_t/0_t.mp3"
+        "audio_ios": "audio/barakhadi/9_t/0_t.mp3",
+        "audio_android": "audio_9_t_0_t.mp3"
       },
       {
         "id": 1,
-        "en": "Ta",
         "gu": "ટા",
+        "en": "Ta",
         "diacritic": "ા",
         "svg": "svgs/barakhadi/9_t/1_ta.svg",
-        "audio": "audio/barakhadi/9_t/1_ta.mp3"
+        "audio_ios": "audio/barakhadi/9_t/1_ta.mp3",
+        "audio_android": "audio_9_t_1_ta.mp3"
       },
       {
         "id": 2,
-        "en": "Ti",
         "gu": "ટિ",
+        "en": "Ti",
         "diacritic": "િ",
         "svg": "svgs/barakhadi/9_t/2_ti.svg",
-        "audio": "audio/barakhadi/9_t/2_ti.mp3"
+        "audio_ios": "audio/barakhadi/9_t/2_ti.mp3",
+        "audio_android": "audio_9_t_2_ti.mp3"
       },
       {
         "id": 3,
-        "en": "Tee",
         "gu": "ટી",
+        "en": "Tee",
         "diacritic": "ી",
         "svg": "svgs/barakhadi/9_t/3_tee.svg",
-        "audio": "audio/barakhadi/9_t/3_tee.mp3"
+        "audio_ios": "audio/barakhadi/9_t/3_tee.mp3",
+        "audio_android": "audio_9_t_3_tee.mp3"
       },
       {
         "id": 4,
-        "en": "Tu",
         "gu": "ટુ",
+        "en": "Tu",
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/9_t/4_tu.svg",
-        "audio": "audio/barakhadi/9_t/4_tu.mp3"
+        "audio_ios": "audio/barakhadi/9_t/4_tu.mp3",
+        "audio_android": "audio_9_t_4_tu.mp3"
       },
       {
         "id": 5,
-        "en": "Too",
         "gu": "ટૂ",
+        "en": "Too",
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/9_t/5_too.svg",
-        "audio": "audio/barakhadi/9_t/5_too.mp3"
+        "audio_ios": "audio/barakhadi/9_t/5_too.mp3",
+        "audio_android": "audio_9_t_5_too.mp3"
       },
       {
         "id": 6,
-        "en": "Te",
         "gu": "ટે",
+        "en": "Te",
         "diacritic": "ે",
         "svg": "svgs/barakhadi/9_t/6_te.svg",
-        "audio": "audio/barakhadi/9_t/6_te.mp3"
+        "audio_ios": "audio/barakhadi/9_t/6_te.mp3",
+        "audio_android": "audio_9_t_6_te.mp3"
       },
       {
         "id": 7,
-        "en": "Tai",
         "gu": "ટૈ",
+        "en": "Tai",
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/9_t/7_tai.svg",
-        "audio": "audio/barakhadi/9_t/7_tai.mp3"
+        "audio_ios": "audio/barakhadi/9_t/7_tai.mp3",
+        "audio_android": "audio_9_t_7_tai.mp3"
       },
       {
         "id": 8,
-        "en": "To",
         "gu": "ટો",
+        "en": "To",
         "diacritic": "ો",
         "svg": "svgs/barakhadi/9_t/8_to.svg",
-        "audio": "audio/barakhadi/9_t/8_to.mp3"
+        "audio_ios": "audio/barakhadi/9_t/8_to.mp3",
+        "audio_android": "audio_9_t_8_to.mp3"
       },
       {
         "id": 9,
-        "en": "Tau",
         "gu": "ટૌ",
+        "en": "Tau",
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/9_t/9_tau.svg",
-        "audio": "audio/barakhadi/9_t/9_tau.mp3"
+        "audio_ios": "audio/barakhadi/9_t/9_tau.mp3",
+        "audio_android": "audio_9_t_9_tau.mp3"
       },
       {
         "id": 10,
-        "en": "Tam",
         "gu": "ટં",
+        "en": "Tam",
         "diacritic": "ં",
         "svg": "svgs/barakhadi/9_t/10_tam.svg",
-        "audio": "audio/barakhadi/9_t/10_tam.mp3"
+        "audio_ios": "audio/barakhadi/9_t/10_tam.mp3",
+        "audio_android": "audio_9_t_10_tam.mp3"
       },
       {
         "id": 11,
-        "en": "Tah",
         "gu": "ટ",
+        "en": "Tah",
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/9_t/11_tah.svg",
-        "audio": "audio/barakhadi/9_t/11_tah.mp3"
+        "audio_ios": "audio/barakhadi/9_t/11_tah.mp3",
+        "audio_android": "audio_9_t_11_tah.mp3"
       }
     ]
   },
@@ -1036,99 +1156,111 @@
     "chars": [
       {
         "id": 0,
-        "en": "Th",
         "gu": "ઠ",
+        "en": "Th",
         "diacritic": " ",
         "svg": "svgs/barakhadi/10_th/0_th.svg",
-        "audio": "audio/barakhadi/10_th/0_th.mp3"
+        "audio_ios": "audio/barakhadi/10_th/0_th.mp3",
+        "audio_android": "audio_10_th_0_th.mp3"
       },
       {
         "id": 1,
-        "en": "Tha",
         "gu": "ઠા",
+        "en": "Tha",
         "diacritic": "ા",
         "svg": "svgs/barakhadi/10_th/1_tha.svg",
-        "audio": "audio/barakhadi/10_th/1_tha.mp3"
+        "audio_ios": "audio/barakhadi/10_th/1_tha.mp3",
+        "audio_android": "audio_10_th_1_tha.mp3"
       },
       {
         "id": 2,
-        "en": "Thi",
         "gu": "ઠિ",
+        "en": "Thi",
         "diacritic": "િ",
         "svg": "svgs/barakhadi/10_th/2_thi.svg",
-        "audio": "audio/barakhadi/10_th/2_thi.mp3"
+        "audio_ios": "audio/barakhadi/10_th/2_thi.mp3",
+        "audio_android": "audio_10_th_2_thi.mp3"
       },
       {
         "id": 3,
-        "en": "Thee",
         "gu": "ઠી",
+        "en": "Thee",
         "diacritic": "ી",
         "svg": "svgs/barakhadi/10_th/3_thee.svg",
-        "audio": "audio/barakhadi/10_th/3_thee.mp3"
+        "audio_ios": "audio/barakhadi/10_th/3_thee.mp3",
+        "audio_android": "audio_10_th_3_thee.mp3"
       },
       {
         "id": 4,
-        "en": "Thu",
         "gu": "ઠુ",
+        "en": "Thu",
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/10_th/4_thu.svg",
-        "audio": "audio/barakhadi/10_th/4_thu.mp3"
+        "audio_ios": "audio/barakhadi/10_th/4_thu.mp3",
+        "audio_android": "audio_10_th_4_thu.mp3"
       },
       {
         "id": 5,
-        "en": "Thoo",
         "gu": "ઠૂ",
+        "en": "Thoo",
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/10_th/5_thoo.svg",
-        "audio": "audio/barakhadi/10_th/5_thoo.mp3"
+        "audio_ios": "audio/barakhadi/10_th/5_thoo.mp3",
+        "audio_android": "audio_10_th_5_thoo.mp3"
       },
       {
         "id": 6,
-        "en": "The",
         "gu": "ઠે",
+        "en": "The",
         "diacritic": "ે",
         "svg": "svgs/barakhadi/10_th/6_the.svg",
-        "audio": "audio/barakhadi/10_th/6_the.mp3"
+        "audio_ios": "audio/barakhadi/10_th/6_the.mp3",
+        "audio_android": "audio_10_th_6_the.mp3"
       },
       {
         "id": 7,
-        "en": "Thai",
         "gu": "થૈ",
+        "en": "Thai",
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/10_th/7_thai.svg",
-        "audio": "audio/barakhadi/10_th/7_thai.mp3"
+        "audio_ios": "audio/barakhadi/10_th/7_thai.mp3",
+        "audio_android": "audio_10_th_7_thai.mp3"
       },
       {
         "id": 8,
-        "en": "Tho",
         "gu": "ઠો",
+        "en": "Tho",
         "diacritic": "ો",
         "svg": "svgs/barakhadi/10_th/8_tho.svg",
-        "audio": "audio/barakhadi/10_th/8_tho.mp3"
+        "audio_ios": "audio/barakhadi/10_th/8_tho.mp3",
+        "audio_android": "audio_10_th_8_tho.mp3"
       },
       {
         "id": 9,
-        "en": "Thau",
         "gu": "ઠૌ",
+        "en": "Thau",
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/10_th/9_thau.svg",
-        "audio": "audio/barakhadi/10_th/9_thau.mp3"
+        "audio_ios": "audio/barakhadi/10_th/9_thau.mp3",
+        "audio_android": "audio_10_th_9_thau.mp3"
       },
       {
         "id": 10,
-        "en": "Tham",
         "gu": "ઠં",
+        "en": "Tham",
         "diacritic": "ં",
         "svg": "svgs/barakhadi/10_th/10_tham.svg",
-        "audio": "audio/barakhadi/10_th/10_tham.mp3"
+        "audio_ios": "audio/barakhadi/10_th/10_tham.mp3",
+        "audio_android": "audio_10_th_10_tham.mp3"
       },
       {
         "id": 11,
-        "en": "Thah",
         "gu": "ઠ",
+        "en": "Thah",
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/10_th/11_thah.svg",
-        "audio": "audio/barakhadi/10_th/11_thah.mp3"
+        "audio_ios": "audio/barakhadi/10_th/11_thah.mp3",
+        "audio_android": "audio_10_th_11_thah.mp3"
       }
     ]
   },
@@ -1139,99 +1271,111 @@
     "chars": [
       {
         "id": 0,
-        "en": "D",
         "gu": "ડ",
+        "en": "D",
         "diacritic": " ",
         "svg": "svgs/barakhadi/11_d/0_d.svg",
-        "audio": "audio/barakhadi/11_d/0_d.mp3"
+        "audio_ios": "audio/barakhadi/11_d/0_d.mp3",
+        "audio_android": "audio_11_d_0_d.mp3"
       },
       {
         "id": 1,
-        "en": "Da",
         "gu": "ડા",
+        "en": "Da",
         "diacritic": "ા",
         "svg": "svgs/barakhadi/11_d/1_da.svg",
-        "audio": "audio/barakhadi/11_d/1_da.mp3"
+        "audio_ios": "audio/barakhadi/11_d/1_da.mp3",
+        "audio_android": "audio_11_d_1_da.mp3"
       },
       {
         "id": 2,
-        "en": "Di",
         "gu": "ડિ",
+        "en": "Di",
         "diacritic": "િ",
         "svg": "svgs/barakhadi/11_d/2_di.svg",
-        "audio": "audio/barakhadi/11_d/2_di.mp3"
+        "audio_ios": "audio/barakhadi/11_d/2_di.mp3",
+        "audio_android": "audio_11_d_2_di.mp3"
       },
       {
         "id": 3,
-        "en": "Dee",
         "gu": "ડી",
+        "en": "Dee",
         "diacritic": "ી",
         "svg": "svgs/barakhadi/11_d/3_dee.svg",
-        "audio": "audio/barakhadi/11_d/3_dee.mp3"
+        "audio_ios": "audio/barakhadi/11_d/3_dee.mp3",
+        "audio_android": "audio_11_d_3_dee.mp3"
       },
       {
         "id": 4,
-        "en": "Du",
         "gu": "ડુ",
+        "en": "Du",
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/11_d/4_du.svg",
-        "audio": "audio/barakhadi/11_d/4_du.mp3"
+        "audio_ios": "audio/barakhadi/11_d/4_du.mp3",
+        "audio_android": "audio_11_d_4_du.mp3"
       },
       {
         "id": 5,
-        "en": "Doo",
         "gu": "ડૂ",
+        "en": "Doo",
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/11_d/5_doo.svg",
-        "audio": "audio/barakhadi/11_d/5_doo.mp3"
+        "audio_ios": "audio/barakhadi/11_d/5_doo.mp3",
+        "audio_android": "audio_11_d_5_doo.mp3"
       },
       {
         "id": 6,
-        "en": "De",
         "gu": "ડે",
+        "en": "De",
         "diacritic": "ે",
         "svg": "svgs/barakhadi/11_d/6_de.svg",
-        "audio": "audio/barakhadi/11_d/6_de.mp3"
+        "audio_ios": "audio/barakhadi/11_d/6_de.mp3",
+        "audio_android": "audio_11_d_6_de.mp3"
       },
       {
         "id": 7,
-        "en": "Dai",
         "gu": "ડૈ",
+        "en": "Dai",
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/11_d/7_dai.svg",
-        "audio": "audio/barakhadi/11_d/7_dai.mp3"
+        "audio_ios": "audio/barakhadi/11_d/7_dai.mp3",
+        "audio_android": "audio_11_d_7_dai.mp3"
       },
       {
         "id": 8,
-        "en": "Do",
         "gu": "ડો",
+        "en": "Do",
         "diacritic": "ો",
         "svg": "svgs/barakhadi/11_d/8_do.svg",
-        "audio": "audio/barakhadi/11_d/8_do.mp3"
+        "audio_ios": "audio/barakhadi/11_d/8_do.mp3",
+        "audio_android": "audio_11_d_8_do.mp3"
       },
       {
         "id": 9,
-        "en": "Dau",
         "gu": "ડૌ",
+        "en": "Dau",
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/11_d/9_dau.svg",
-        "audio": "audio/barakhadi/11_d/9_dau.mp3"
+        "audio_ios": "audio/barakhadi/11_d/9_dau.mp3",
+        "audio_android": "audio_11_d_9_dau.mp3"
       },
       {
         "id": 10,
-        "en": "Dam",
         "gu": "ડં",
+        "en": "Dam",
         "diacritic": "ં",
         "svg": "svgs/barakhadi/11_d/10_dam.svg",
-        "audio": "audio/barakhadi/11_d/10_dam.mp3"
+        "audio_ios": "audio/barakhadi/11_d/10_dam.mp3",
+        "audio_android": "audio_11_d_10_dam.mp3"
       },
       {
         "id": 11,
-        "en": "Dah",
         "gu": "ડ",
+        "en": "Dah",
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/11_d/11_dah.svg",
-        "audio": "audio/barakhadi/11_d/11_dah.mp3"
+        "audio_ios": "audio/barakhadi/11_d/11_dah.mp3",
+        "audio_android": "audio_11_d_11_dah.mp3"
       }
     ]
   },
@@ -1242,99 +1386,111 @@
     "chars": [
       {
         "id": 0,
-        "en": "Dh",
         "gu": "ઢ",
+        "en": "Dh",
         "diacritic": " ",
         "svg": "svgs/barakhadi/12_dh/0_dh.svg",
-        "audio": "audio/barakhadi/12_dh/0_dh.mp3"
+        "audio_ios": "audio/barakhadi/12_dh/0_dh.mp3",
+        "audio_android": "audio_12_dh_0_dh.mp3"
       },
       {
         "id": 1,
-        "en": "Dha",
         "gu": "ઢા",
+        "en": "Dha",
         "diacritic": "ા",
         "svg": "svgs/barakhadi/12_dh/1_dha.svg",
-        "audio": "audio/barakhadi/12_dh/1_dha.mp3"
+        "audio_ios": "audio/barakhadi/12_dh/1_dha.mp3",
+        "audio_android": "audio_12_dh_1_dha.mp3"
       },
       {
         "id": 2,
-        "en": "Dhai",
         "gu": "ઢિ",
+        "en": "Dhai",
         "diacritic": "િ",
         "svg": "svgs/barakhadi/12_dh/2_dhai.svg",
-        "audio": "audio/barakhadi/12_dh/2_dhai.mp3"
+        "audio_ios": "audio/barakhadi/12_dh/2_dhai.mp3",
+        "audio_android": "audio_12_dh_2_dhai.mp3"
       },
       {
         "id": 3,
-        "en": "Dhee",
         "gu": "ઢી",
+        "en": "Dhee",
         "diacritic": "ી",
         "svg": "svgs/barakhadi/12_dh/3_dhee.svg",
-        "audio": "audio/barakhadi/12_dh/3_dhee.mp3"
+        "audio_ios": "audio/barakhadi/12_dh/3_dhee.mp3",
+        "audio_android": "audio_12_dh_3_dhee.mp3"
       },
       {
         "id": 4,
-        "en": "Dhu",
         "gu": "ઢુ",
+        "en": "Dhu",
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/12_dh/4_dhu.svg",
-        "audio": "audio/barakhadi/12_dh/4_dhu.mp3"
+        "audio_ios": "audio/barakhadi/12_dh/4_dhu.mp3",
+        "audio_android": "audio_12_dh_4_dhu.mp3"
       },
       {
         "id": 5,
-        "en": "Dhoo",
         "gu": "ઢૂ",
+        "en": "Dhoo",
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/12_dh/5_dhoo.svg",
-        "audio": "audio/barakhadi/12_dh/5_dhoo.mp3"
+        "audio_ios": "audio/barakhadi/12_dh/5_dhoo.mp3",
+        "audio_android": "audio_12_dh_5_dhoo.mp3"
       },
       {
         "id": 6,
-        "en": "Dhe",
         "gu": "ઢે",
+        "en": "Dhe",
         "diacritic": "ે",
         "svg": "svgs/barakhadi/12_dh/6_dhe.svg",
-        "audio": "audio/barakhadi/12_dh/6_dhe.mp3"
+        "audio_ios": "audio/barakhadi/12_dh/6_dhe.mp3",
+        "audio_android": "audio_12_dh_6_dhe.mp3"
       },
       {
         "id": 7,
-        "en": "Dhai",
         "gu": "ઢૈ",
+        "en": "Dhai",
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/12_dh/7_dhai.svg",
-        "audio": "audio/barakhadi/12_dh/7_dhai.mp3"
+        "audio_ios": "audio/barakhadi/12_dh/7_dhai.mp3",
+        "audio_android": "audio_12_dh_7_dhai.mp3"
       },
       {
         "id": 8,
-        "en": "Dho",
         "gu": "ઢો",
+        "en": "Dho",
         "diacritic": "ો",
         "svg": "svgs/barakhadi/12_dh/8_dho.svg",
-        "audio": "audio/barakhadi/12_dh/8_dho.mp3"
+        "audio_ios": "audio/barakhadi/12_dh/8_dho.mp3",
+        "audio_android": "audio_12_dh_8_dho.mp3"
       },
       {
         "id": 9,
-        "en": "Dhau",
         "gu": "ઢૌ",
+        "en": "Dhau",
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/12_dh/9_dhau.svg",
-        "audio": "audio/barakhadi/12_dh/9_dhau.mp3"
+        "audio_ios": "audio/barakhadi/12_dh/9_dhau.mp3",
+        "audio_android": "audio_12_dh_9_dhau.mp3"
       },
       {
         "id": 10,
-        "en": "Dham",
         "gu": "ઢં",
+        "en": "Dham",
         "diacritic": "ં",
         "svg": "svgs/barakhadi/12_dh/10_dham.svg",
-        "audio": "audio/barakhadi/12_dh/10_dham.mp3"
+        "audio_ios": "audio/barakhadi/12_dh/10_dham.mp3",
+        "audio_android": "audio_12_dh_10_dham.mp3"
       },
       {
         "id": 11,
-        "en": "Dhah",
         "gu": "ઢ",
+        "en": "Dhah",
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/12_dh/11_dhah.svg",
-        "audio": "audio/barakhadi/12_dh/11_dhah.mp3"
+        "audio_ios": "audio/barakhadi/12_dh/11_dhah.mp3",
+        "audio_android": "audio_12_dh_11_dhah.mp3"
       }
     ]
   },
@@ -1345,99 +1501,111 @@
     "chars": [
       {
         "id": 0,
-        "en": "N",
         "gu": "ણ",
+        "en": "N",
         "diacritic": " ",
         "svg": "svgs/barakhadi/13_n/0_n.svg",
-        "audio": "audio/barakhadi/13_n/0_n.mp3"
+        "audio_ios": "audio/barakhadi/13_n/0_n.mp3",
+        "audio_android": "audio_13_n_0_n.mp3"
       },
       {
         "id": 1,
-        "en": "Na",
         "gu": "ણા",
+        "en": "Na",
         "diacritic": "ા",
         "svg": "svgs/barakhadi/13_n/1_na.svg",
-        "audio": "audio/barakhadi/13_n/1_na.mp3"
+        "audio_ios": "audio/barakhadi/13_n/1_na.mp3",
+        "audio_android": "audio_13_n_1_na.mp3"
       },
       {
         "id": 2,
-        "en": "Ni",
         "gu": "ણિ",
+        "en": "Ni",
         "diacritic": "િ",
         "svg": "svgs/barakhadi/13_n/2_ni.svg",
-        "audio": "audio/barakhadi/13_n/2_ni.mp3"
+        "audio_ios": "audio/barakhadi/13_n/2_ni.mp3",
+        "audio_android": "audio_13_n_2_ni.mp3"
       },
       {
         "id": 3,
-        "en": "Nee",
         "gu": "ણી",
+        "en": "Nee",
         "diacritic": "ી",
         "svg": "svgs/barakhadi/13_n/3_nee.svg",
-        "audio": "audio/barakhadi/13_n/3_nee.mp3"
+        "audio_ios": "audio/barakhadi/13_n/3_nee.mp3",
+        "audio_android": "audio_13_n_3_nee.mp3"
       },
       {
         "id": 4,
-        "en": "Nu",
         "gu": "ણુ",
+        "en": "Nu",
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/13_n/4_nu.svg",
-        "audio": "audio/barakhadi/13_n/4_nu.mp3"
+        "audio_ios": "audio/barakhadi/13_n/4_nu.mp3",
+        "audio_android": "audio_13_n_4_nu.mp3"
       },
       {
         "id": 5,
-        "en": "Noo",
         "gu": "ણૂ",
+        "en": "Noo",
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/13_n/5_noo.svg",
-        "audio": "audio/barakhadi/13_n/5_noo.mp3"
+        "audio_ios": "audio/barakhadi/13_n/5_noo.mp3",
+        "audio_android": "audio_13_n_5_noo.mp3"
       },
       {
         "id": 6,
-        "en": "Ne",
         "gu": "ણે",
+        "en": "Ne",
         "diacritic": "ે",
         "svg": "svgs/barakhadi/13_n/6_ne.svg",
-        "audio": "audio/barakhadi/13_n/6_ne.mp3"
+        "audio_ios": "audio/barakhadi/13_n/6_ne.mp3",
+        "audio_android": "audio_13_n_6_ne.mp3"
       },
       {
         "id": 7,
-        "en": "Nai",
         "gu": "ણૈ",
+        "en": "Nai",
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/13_n/7_nai.svg",
-        "audio": "audio/barakhadi/13_n/7_nai.mp3"
+        "audio_ios": "audio/barakhadi/13_n/7_nai.mp3",
+        "audio_android": "audio_13_n_7_nai.mp3"
       },
       {
         "id": 8,
-        "en": "No",
         "gu": "ણૉ",
+        "en": "No",
         "diacritic": "ો",
         "svg": "svgs/barakhadi/13_n/8_no.svg",
-        "audio": "audio/barakhadi/13_n/8_no.mp3"
+        "audio_ios": "audio/barakhadi/13_n/8_no.mp3",
+        "audio_android": "audio_13_n_8_no.mp3"
       },
       {
         "id": 9,
-        "en": "Nau",
         "gu": "ણૌ",
+        "en": "Nau",
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/13_n/9_nau.svg",
-        "audio": "audio/barakhadi/13_n/9_nau.mp3"
+        "audio_ios": "audio/barakhadi/13_n/9_nau.mp3",
+        "audio_android": "audio_13_n_9_nau.mp3"
       },
       {
         "id": 10,
-        "en": "Nam",
         "gu": "ણં",
+        "en": "Nam",
         "diacritic": "ં",
         "svg": "svgs/barakhadi/13_n/10_nam.svg",
-        "audio": "audio/barakhadi/13_n/10_nam.mp3"
+        "audio_ios": "audio/barakhadi/13_n/10_nam.mp3",
+        "audio_android": "audio_13_n_10_nam.mp3"
       },
       {
         "id": 11,
-        "en": "Nah",
         "gu": "ણઃ",
+        "en": "Nah",
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/13_n/11_nah.svg",
-        "audio": "audio/barakhadi/13_n/11_nah.mp3"
+        "audio_ios": "audio/barakhadi/13_n/11_nah.mp3",
+        "audio_android": "audio_13_n_11_nah.mp3"
       }
     ]
   },
@@ -1448,99 +1616,111 @@
     "chars": [
       {
         "id": 0,
-        "en": "T",
         "gu": "ત",
+        "en": "T",
         "diacritic": " ",
         "svg": "svgs/barakhadi/14_t/0_t.svg",
-        "audio": "audio/barakhadi/14_t/0_t.mp3"
+        "audio_ios": "audio/barakhadi/14_t/0_t.mp3",
+        "audio_android": "audio_14_t_0_t.mp3"
       },
       {
         "id": 1,
-        "en": "Ta",
         "gu": "તા",
+        "en": "Ta",
         "diacritic": "ા",
         "svg": "svgs/barakhadi/14_t/1_ta.svg",
-        "audio": "audio/barakhadi/14_t/1_ta.mp3"
+        "audio_ios": "audio/barakhadi/14_t/1_ta.mp3",
+        "audio_android": "audio_14_t_1_ta.mp3"
       },
       {
         "id": 2,
-        "en": "Ti",
         "gu": "તિ",
+        "en": "Ti",
         "diacritic": "િ",
         "svg": "svgs/barakhadi/14_t/2_ti.svg",
-        "audio": "audio/barakhadi/14_t/2_ti.mp3"
+        "audio_ios": "audio/barakhadi/14_t/2_ti.mp3",
+        "audio_android": "audio_14_t_2_ti.mp3"
       },
       {
         "id": 3,
-        "en": "Tee",
         "gu": "તી",
+        "en": "Tee",
         "diacritic": "ી",
         "svg": "svgs/barakhadi/14_t/3_tee.svg",
-        "audio": "audio/barakhadi/14_t/3_tee.mp3"
+        "audio_ios": "audio/barakhadi/14_t/3_tee.mp3",
+        "audio_android": "audio_14_t_3_tee.mp3"
       },
       {
         "id": 4,
-        "en": "Tu",
         "gu": "તુ",
+        "en": "Tu",
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/14_t/4_tu.svg",
-        "audio": "audio/barakhadi/14_t/4_tu.mp3"
+        "audio_ios": "audio/barakhadi/14_t/4_tu.mp3",
+        "audio_android": "audio_14_t_4_tu.mp3"
       },
       {
         "id": 5,
-        "en": "Too",
         "gu": "તૂ",
+        "en": "Too",
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/14_t/5_too.svg",
-        "audio": "audio/barakhadi/14_t/5_too.mp3"
+        "audio_ios": "audio/barakhadi/14_t/5_too.mp3",
+        "audio_android": "audio_14_t_5_too.mp3"
       },
       {
         "id": 6,
-        "en": "Te",
         "gu": "તે",
+        "en": "Te",
         "diacritic": "ે",
         "svg": "svgs/barakhadi/14_t/6_te.svg",
-        "audio": "audio/barakhadi/14_t/6_te.mp3"
+        "audio_ios": "audio/barakhadi/14_t/6_te.mp3",
+        "audio_android": "audio_14_t_6_te.mp3"
       },
       {
         "id": 7,
-        "en": "Tai",
         "gu": "તૈ",
+        "en": "Tai",
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/14_t/7_tai.svg",
-        "audio": "audio/barakhadi/14_t/7_tai.mp3"
+        "audio_ios": "audio/barakhadi/14_t/7_tai.mp3",
+        "audio_android": "audio_14_t_7_tai.mp3"
       },
       {
         "id": 8,
-        "en": "To",
         "gu": "તો",
+        "en": "To",
         "diacritic": "ો",
         "svg": "svgs/barakhadi/14_t/8_to.svg",
-        "audio": "audio/barakhadi/14_t/8_to.mp3"
+        "audio_ios": "audio/barakhadi/14_t/8_to.mp3",
+        "audio_android": "audio_14_t_8_to.mp3"
       },
       {
         "id": 9,
-        "en": "Tau",
         "gu": "તૌ",
+        "en": "Tau",
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/14_t/9_tau.svg",
-        "audio": "audio/barakhadi/14_t/9_tau.mp3"
+        "audio_ios": "audio/barakhadi/14_t/9_tau.mp3",
+        "audio_android": "audio_14_t_9_tau.mp3"
       },
       {
         "id": 10,
-        "en": "Tam",
         "gu": "તં",
+        "en": "Tam",
         "diacritic": "ં",
         "svg": "svgs/barakhadi/14_t/10_tam.svg",
-        "audio": "audio/barakhadi/14_t/10_tam.mp3"
+        "audio_ios": "audio/barakhadi/14_t/10_tam.mp3",
+        "audio_android": "audio_14_t_10_tam.mp3"
       },
       {
         "id": 11,
-        "en": "Tah",
         "gu": "તઃ",
+        "en": "Tah",
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/14_t/11_tah.svg",
-        "audio": "audio/barakhadi/14_t/11_tah.mp3"
+        "audio_ios": "audio/barakhadi/14_t/11_tah.mp3",
+        "audio_android": "audio_14_t_11_tah.mp3"
       }
     ]
   },
@@ -1551,99 +1731,111 @@
     "chars": [
       {
         "id": 0,
-        "en": "Th",
         "gu": "થ",
+        "en": "Th",
         "diacritic": " ",
         "svg": "svgs/barakhadi/15_th/0_th.svg",
-        "audio": "audio/barakhadi/15_th/0_th.mp3"
+        "audio_ios": "audio/barakhadi/15_th/0_th.mp3",
+        "audio_android": "audio_15_th_0_th.mp3"
       },
       {
         "id": 1,
-        "en": "Tha",
         "gu": "થા",
+        "en": "Tha",
         "diacritic": "ા",
         "svg": "svgs/barakhadi/15_th/1_tha.svg",
-        "audio": "audio/barakhadi/15_th/1_tha.mp3"
+        "audio_ios": "audio/barakhadi/15_th/1_tha.mp3",
+        "audio_android": "audio_15_th_1_tha.mp3"
       },
       {
         "id": 2,
-        "en": "Thi",
         "gu": "થિ",
+        "en": "Thi",
         "diacritic": "િ",
         "svg": "svgs/barakhadi/15_th/2_thi.svg",
-        "audio": "audio/barakhadi/15_th/2_thi.mp3"
+        "audio_ios": "audio/barakhadi/15_th/2_thi.mp3",
+        "audio_android": "audio_15_th_2_thi.mp3"
       },
       {
         "id": 3,
-        "en": "Thee",
         "gu": "થી",
+        "en": "Thee",
         "diacritic": "ી",
         "svg": "svgs/barakhadi/15_th/3_thee.svg",
-        "audio": "audio/barakhadi/15_th/3_thee.mp3"
+        "audio_ios": "audio/barakhadi/15_th/3_thee.mp3",
+        "audio_android": "audio_15_th_3_thee.mp3"
       },
       {
         "id": 4,
-        "en": "Thu",
         "gu": "થુ",
+        "en": "Thu",
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/15_th/4_thu.svg",
-        "audio": "audio/barakhadi/15_th/4_thu.mp3"
+        "audio_ios": "audio/barakhadi/15_th/4_thu.mp3",
+        "audio_android": "audio_15_th_4_thu.mp3"
       },
       {
         "id": 5,
-        "en": "Thoo",
         "gu": "થૂ",
+        "en": "Thoo",
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/15_th/5_thoo.svg",
-        "audio": "audio/barakhadi/15_th/5_thoo.mp3"
+        "audio_ios": "audio/barakhadi/15_th/5_thoo.mp3",
+        "audio_android": "audio_15_th_5_thoo.mp3"
       },
       {
         "id": 6,
-        "en": "The",
         "gu": "થે",
+        "en": "The",
         "diacritic": "ે",
         "svg": "svgs/barakhadi/15_th/6_the.svg",
-        "audio": "audio/barakhadi/15_th/6_the.mp3"
+        "audio_ios": "audio/barakhadi/15_th/6_the.mp3",
+        "audio_android": "audio_15_th_6_the.mp3"
       },
       {
         "id": 7,
-        "en": "Thai",
         "gu": "થૈ",
+        "en": "Thai",
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/15_th/7_thai.svg",
-        "audio": "audio/barakhadi/15_th/7_thai.mp3"
+        "audio_ios": "audio/barakhadi/15_th/7_thai.mp3",
+        "audio_android": "audio_15_th_7_thai.mp3"
       },
       {
         "id": 8,
-        "en": "Tho",
         "gu": "થો",
+        "en": "Tho",
         "diacritic": "ો",
         "svg": "svgs/barakhadi/15_th/8_tho.svg",
-        "audio": "audio/barakhadi/15_th/8_tho.mp3"
+        "audio_ios": "audio/barakhadi/15_th/8_tho.mp3",
+        "audio_android": "audio_15_th_8_tho.mp3"
       },
       {
         "id": 9,
-        "en": "Thau",
         "gu": "થૌ",
+        "en": "Thau",
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/15_th/9_thau.svg",
-        "audio": "audio/barakhadi/15_th/9_thau.mp3"
+        "audio_ios": "audio/barakhadi/15_th/9_thau.mp3",
+        "audio_android": "audio_15_th_9_thau.mp3"
       },
       {
         "id": 10,
-        "en": "Tham",
         "gu": "થં",
+        "en": "Tham",
         "diacritic": "ં",
         "svg": "svgs/barakhadi/15_th/10_tham.svg",
-        "audio": "audio/barakhadi/15_th/10_tham.mp3"
+        "audio_ios": "audio/barakhadi/15_th/10_tham.mp3",
+        "audio_android": "audio_15_th_10_tham.mp3"
       },
       {
         "id": 11,
-        "en": "Thah",
         "gu": "થઃ",
+        "en": "Thah",
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/15_th/11_thah.svg",
-        "audio": "audio/barakhadi/15_th/11_thah.mp3"
+        "audio_ios": "audio/barakhadi/15_th/11_thah.mp3",
+        "audio_android": "audio_15_th_11_thah.mp3"
       }
     ]
   },
@@ -1654,99 +1846,111 @@
     "chars": [
       {
         "id": 0,
-        "en": "D",
         "gu": "દ",
+        "en": "D",
         "diacritic": " ",
         "svg": "svgs/barakhadi/16_d/0_d.svg",
-        "audio": "audio/barakhadi/16_d/0_d.mp3"
+        "audio_ios": "audio/barakhadi/16_d/0_d.mp3",
+        "audio_android": "audio_16_d_0_d.mp3"
       },
       {
         "id": 1,
-        "en": "Da",
         "gu": "દા",
+        "en": "Da",
         "diacritic": "ા",
         "svg": "svgs/barakhadi/16_d/1_da.svg",
-        "audio": "audio/barakhadi/16_d/1_da.mp3"
+        "audio_ios": "audio/barakhadi/16_d/1_da.mp3",
+        "audio_android": "audio_16_d_1_da.mp3"
       },
       {
         "id": 2,
-        "en": "Di",
         "gu": "દિ",
+        "en": "Di",
         "diacritic": "િ",
         "svg": "svgs/barakhadi/16_d/2_di.svg",
-        "audio": "audio/barakhadi/16_d/2_di.mp3"
+        "audio_ios": "audio/barakhadi/16_d/2_di.mp3",
+        "audio_android": "audio_16_d_2_di.mp3"
       },
       {
         "id": 3,
-        "en": "Dee",
         "gu": "દી",
+        "en": "Dee",
         "diacritic": "ી",
         "svg": "svgs/barakhadi/16_d/3_dee.svg",
-        "audio": "audio/barakhadi/16_d/3_dee.mp3"
+        "audio_ios": "audio/barakhadi/16_d/3_dee.mp3",
+        "audio_android": "audio_16_d_3_dee.mp3"
       },
       {
         "id": 4,
-        "en": "Du",
         "gu": "દુ",
+        "en": "Du",
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/16_d/4_du.svg",
-        "audio": "audio/barakhadi/16_d/4_du.mp3"
+        "audio_ios": "audio/barakhadi/16_d/4_du.mp3",
+        "audio_android": "audio_16_d_4_du.mp3"
       },
       {
         "id": 5,
-        "en": "Doo",
         "gu": "દૂ",
+        "en": "Doo",
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/16_d/5_doo.svg",
-        "audio": "audio/barakhadi/16_d/5_doo.mp3"
+        "audio_ios": "audio/barakhadi/16_d/5_doo.mp3",
+        "audio_android": "audio_16_d_5_doo.mp3"
       },
       {
         "id": 6,
-        "en": "De",
         "gu": "દે",
+        "en": "De",
         "diacritic": "ે",
         "svg": "svgs/barakhadi/16_d/6_de.svg",
-        "audio": "audio/barakhadi/16_d/6_de.mp3"
+        "audio_ios": "audio/barakhadi/16_d/6_de.mp3",
+        "audio_android": "audio_16_d_6_de.mp3"
       },
       {
         "id": 7,
-        "en": "Dai",
         "gu": "દૈ",
+        "en": "Dai",
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/16_d/7_dai.svg",
-        "audio": "audio/barakhadi/16_d/7_dai.mp3"
+        "audio_ios": "audio/barakhadi/16_d/7_dai.mp3",
+        "audio_android": "audio_16_d_7_dai.mp3"
       },
       {
         "id": 8,
-        "en": "Do",
         "gu": "દો",
+        "en": "Do",
         "diacritic": "ો",
         "svg": "svgs/barakhadi/16_d/8_do.svg",
-        "audio": "audio/barakhadi/16_d/8_do.mp3"
+        "audio_ios": "audio/barakhadi/16_d/8_do.mp3",
+        "audio_android": "audio_16_d_8_do.mp3"
       },
       {
         "id": 9,
-        "en": "Dau",
         "gu": "દૌ",
+        "en": "Dau",
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/16_d/9_dau.svg",
-        "audio": "audio/barakhadi/16_d/9_dau.mp3"
+        "audio_ios": "audio/barakhadi/16_d/9_dau.mp3",
+        "audio_android": "audio_16_d_9_dau.mp3"
       },
       {
         "id": 10,
-        "en": "Dam",
         "gu": "દં",
+        "en": "Dam",
         "diacritic": "ં",
         "svg": "svgs/barakhadi/16_d/10_dam.svg",
-        "audio": "audio/barakhadi/16_d/10_dam.mp3"
+        "audio_ios": "audio/barakhadi/16_d/10_dam.mp3",
+        "audio_android": "audio_16_d_10_dam.mp3"
       },
       {
         "id": 11,
-        "en": "Dah",
         "gu": "દઃ",
+        "en": "Dah",
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/16_d/11_dah.svg",
-        "audio": "audio/barakhadi/16_d/11_dah.mp3"
+        "audio_ios": "audio/barakhadi/16_d/11_dah.mp3",
+        "audio_android": "audio_16_d_11_dah.mp3"
       }
     ]
   },
@@ -1757,99 +1961,111 @@
     "chars": [
       {
         "id": 0,
-        "en": "Dh",
         "gu": "ધ",
+        "en": "Dh",
         "diacritic": " ",
         "svg": "svgs/barakhadi/17_dh/0_dh.svg",
-        "audio": "audio/barakhadi/17_dh/0_dh.mp3"
+        "audio_ios": "audio/barakhadi/17_dh/0_dh.mp3",
+        "audio_android": "audio_17_dh_0_dh.mp3"
       },
       {
         "id": 1,
-        "en": "Dha",
         "gu": "ધા",
+        "en": "Dha",
         "diacritic": "ા",
         "svg": "svgs/barakhadi/17_dh/1_dha.svg",
-        "audio": "audio/barakhadi/17_dh/1_dha.mp3"
+        "audio_ios": "audio/barakhadi/17_dh/1_dha.mp3",
+        "audio_android": "audio_17_dh_1_dha.mp3"
       },
       {
         "id": 2,
-        "en": "Dhi",
         "gu": "ધિ",
+        "en": "Dhi",
         "diacritic": "િ",
         "svg": "svgs/barakhadi/17_dh/2_dhi.svg",
-        "audio": "audio/barakhadi/17_dh/2_dhi.mp3"
+        "audio_ios": "audio/barakhadi/17_dh/2_dhi.mp3",
+        "audio_android": "audio_17_dh_2_dhi.mp3"
       },
       {
         "id": 3,
-        "en": "Dhee",
         "gu": "ધી",
+        "en": "Dhee",
         "diacritic": "ી",
         "svg": "svgs/barakhadi/17_dh/3_dhee.svg",
-        "audio": "audio/barakhadi/17_dh/3_dhee.mp3"
+        "audio_ios": "audio/barakhadi/17_dh/3_dhee.mp3",
+        "audio_android": "audio_17_dh_3_dhee.mp3"
       },
       {
         "id": 4,
-        "en": "Dhu",
         "gu": "ધુ",
+        "en": "Dhu",
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/17_dh/4_dhu.svg",
-        "audio": "audio/barakhadi/17_dh/4_dhu.mp3"
+        "audio_ios": "audio/barakhadi/17_dh/4_dhu.mp3",
+        "audio_android": "audio_17_dh_4_dhu.mp3"
       },
       {
         "id": 5,
-        "en": "Dhoo",
         "gu": "ધૂ",
+        "en": "Dhoo",
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/17_dh/5_dhoo.svg",
-        "audio": "audio/barakhadi/17_dh/5_dhoo.mp3"
+        "audio_ios": "audio/barakhadi/17_dh/5_dhoo.mp3",
+        "audio_android": "audio_17_dh_5_dhoo.mp3"
       },
       {
         "id": 6,
-        "en": "Dhe",
         "gu": "ધે",
+        "en": "Dhe",
         "diacritic": "ે",
         "svg": "svgs/barakhadi/17_dh/6_dhe.svg",
-        "audio": "audio/barakhadi/17_dh/6_dhe.mp3"
+        "audio_ios": "audio/barakhadi/17_dh/6_dhe.mp3",
+        "audio_android": "audio_17_dh_6_dhe.mp3"
       },
       {
         "id": 7,
-        "en": "Dhai",
         "gu": "ધૈ",
+        "en": "Dhai",
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/17_dh/7_dhai.svg",
-        "audio": "audio/barakhadi/17_dh/7_dhai.mp3"
+        "audio_ios": "audio/barakhadi/17_dh/7_dhai.mp3",
+        "audio_android": "audio_17_dh_7_dhai.mp3"
       },
       {
         "id": 8,
-        "en": "Dho",
         "gu": "ધો",
+        "en": "Dho",
         "diacritic": "ો",
         "svg": "svgs/barakhadi/17_dh/8_dho.svg",
-        "audio": "audio/barakhadi/17_dh/8_dho.mp3"
+        "audio_ios": "audio/barakhadi/17_dh/8_dho.mp3",
+        "audio_android": "audio_17_dh_8_dho.mp3"
       },
       {
         "id": 9,
-        "en": "Dhau",
         "gu": "ધૌ",
+        "en": "Dhau",
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/17_dh/9_dhau.svg",
-        "audio": "audio/barakhadi/17_dh/9_dhau.mp3"
+        "audio_ios": "audio/barakhadi/17_dh/9_dhau.mp3",
+        "audio_android": "audio_17_dh_9_dhau.mp3"
       },
       {
         "id": 10,
-        "en": "Dham",
         "gu": "ધં",
+        "en": "Dham",
         "diacritic": "ં",
         "svg": "svgs/barakhadi/17_dh/10_dham.svg",
-        "audio": "audio/barakhadi/17_dh/10_dham.mp3"
+        "audio_ios": "audio/barakhadi/17_dh/10_dham.mp3",
+        "audio_android": "audio_17_dh_10_dham.mp3"
       },
       {
         "id": 11,
-        "en": "Dhah",
         "gu": "ધઃ",
+        "en": "Dhah",
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/17_dh/11_dhah.svg",
-        "audio": "audio/barakhadi/17_dh/11_dhah.mp3"
+        "audio_ios": "audio/barakhadi/17_dh/11_dhah.mp3",
+        "audio_android": "audio_17_dh_11_dhah.mp3"
       }
     ]
   },
@@ -1860,99 +2076,111 @@
     "chars": [
       {
         "id": 0,
-        "en": "N",
         "gu": "ન",
+        "en": "N",
         "diacritic": " ",
         "svg": "svgs/barakhadi/18_n/0_n.svg",
-        "audio": "audio/barakhadi/18_n/0_n.mp3"
+        "audio_ios": "audio/barakhadi/18_n/0_n.mp3",
+        "audio_android": "audio_18_n_0_n.mp3"
       },
       {
         "id": 1,
-        "en": "Na",
         "gu": "ના",
+        "en": "Na",
         "diacritic": "ા",
         "svg": "svgs/barakhadi/18_n/1_na.svg",
-        "audio": "audio/barakhadi/18_n/1_na.mp3"
+        "audio_ios": "audio/barakhadi/18_n/1_na.mp3",
+        "audio_android": "audio_18_n_1_na.mp3"
       },
       {
         "id": 2,
-        "en": "Ni",
         "gu": "નિ",
+        "en": "Ni",
         "diacritic": "િ",
         "svg": "svgs/barakhadi/18_n/2_ni.svg",
-        "audio": "audio/barakhadi/18_n/2_ni.mp3"
+        "audio_ios": "audio/barakhadi/18_n/2_ni.mp3",
+        "audio_android": "audio_18_n_2_ni.mp3"
       },
       {
         "id": 3,
-        "en": "Nee",
         "gu": "ની",
+        "en": "Nee",
         "diacritic": "ી",
         "svg": "svgs/barakhadi/18_n/3_nee.svg",
-        "audio": "audio/barakhadi/18_n/3_nee.mp3"
+        "audio_ios": "audio/barakhadi/18_n/3_nee.mp3",
+        "audio_android": "audio_18_n_3_nee.mp3"
       },
       {
         "id": 4,
-        "en": "Nu",
         "gu": "નુ",
+        "en": "Nu",
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/18_n/4_nu.svg",
-        "audio": "audio/barakhadi/18_n/4_nu.mp3"
+        "audio_ios": "audio/barakhadi/18_n/4_nu.mp3",
+        "audio_android": "audio_18_n_4_nu.mp3"
       },
       {
         "id": 5,
-        "en": "Noo",
         "gu": "નૂ",
+        "en": "Noo",
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/18_n/5_noo.svg",
-        "audio": "audio/barakhadi/18_n/5_noo.mp3"
+        "audio_ios": "audio/barakhadi/18_n/5_noo.mp3",
+        "audio_android": "audio_18_n_5_noo.mp3"
       },
       {
         "id": 6,
-        "en": "Ne",
         "gu": "ને",
+        "en": "Ne",
         "diacritic": "ે",
         "svg": "svgs/barakhadi/18_n/6_ne.svg",
-        "audio": "audio/barakhadi/18_n/6_ne.mp3"
+        "audio_ios": "audio/barakhadi/18_n/6_ne.mp3",
+        "audio_android": "audio_18_n_6_ne.mp3"
       },
       {
         "id": 7,
-        "en": "Nai",
         "gu": "નૈ",
+        "en": "Nai",
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/18_n/7_nai.svg",
-        "audio": "audio/barakhadi/18_n/7_nai.mp3"
+        "audio_ios": "audio/barakhadi/18_n/7_nai.mp3",
+        "audio_android": "audio_18_n_7_nai.mp3"
       },
       {
         "id": 8,
-        "en": "No",
         "gu": "નો",
+        "en": "No",
         "diacritic": "ો",
         "svg": "svgs/barakhadi/18_n/8_no.svg",
-        "audio": "audio/barakhadi/18_n/8_no.mp3"
+        "audio_ios": "audio/barakhadi/18_n/8_no.mp3",
+        "audio_android": "audio_18_n_8_no.mp3"
       },
       {
         "id": 9,
-        "en": "Nau",
         "gu": "નૌ",
+        "en": "Nau",
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/18_n/9_nau.svg",
-        "audio": "audio/barakhadi/18_n/9_nau.mp3"
+        "audio_ios": "audio/barakhadi/18_n/9_nau.mp3",
+        "audio_android": "audio_18_n_9_nau.mp3"
       },
       {
         "id": 10,
-        "en": "Nan",
         "gu": "નં",
+        "en": "Nan",
         "diacritic": "ં",
         "svg": "svgs/barakhadi/18_n/10_nan.svg",
-        "audio": "audio/barakhadi/18_n/10_nan.mp3"
+        "audio_ios": "audio/barakhadi/18_n/10_nan.mp3",
+        "audio_android": "audio_18_n_10_nan.mp3"
       },
       {
         "id": 11,
-        "en": "Nah",
         "gu": "નઃ",
+        "en": "Nah",
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/18_n/11_nah.svg",
-        "audio": "audio/barakhadi/18_n/11_nah.mp3"
+        "audio_ios": "audio/barakhadi/18_n/11_nah.mp3",
+        "audio_android": "audio_18_n_11_nah.mp3"
       }
     ]
   },
@@ -1963,99 +2191,111 @@
     "chars": [
       {
         "id": 0,
-        "en": "P",
         "gu": "પ",
+        "en": "P",
         "diacritic": " ",
         "svg": "svgs/barakhadi/19_p/0_p.svg",
-        "audio": "audio/barakhadi/19_p/0_p.mp3"
+        "audio_ios": "audio/barakhadi/19_p/0_p.mp3",
+        "audio_android": "audio_19_p_0_p.mp3"
       },
       {
         "id": 1,
-        "en": "Pa",
         "gu": "પા",
+        "en": "Pa",
         "diacritic": "ા",
         "svg": "svgs/barakhadi/19_p/1_pa.svg",
-        "audio": "audio/barakhadi/19_p/1_pa.mp3"
+        "audio_ios": "audio/barakhadi/19_p/1_pa.mp3",
+        "audio_android": "audio_19_p_1_pa.mp3"
       },
       {
         "id": 2,
-        "en": "Pi",
         "gu": "પિ",
+        "en": "Pi",
         "diacritic": "િ",
         "svg": "svgs/barakhadi/19_p/2_pi.svg",
-        "audio": "audio/barakhadi/19_p/2_pi.mp3"
+        "audio_ios": "audio/barakhadi/19_p/2_pi.mp3",
+        "audio_android": "audio_19_p_2_pi.mp3"
       },
       {
         "id": 3,
-        "en": "Pee",
         "gu": "પી",
+        "en": "Pee",
         "diacritic": "ી",
         "svg": "svgs/barakhadi/19_p/3_pee.svg",
-        "audio": "audio/barakhadi/19_p/3_pee.mp3"
+        "audio_ios": "audio/barakhadi/19_p/3_pee.mp3",
+        "audio_android": "audio_19_p_3_pee.mp3"
       },
       {
         "id": 4,
-        "en": "Pu",
         "gu": "પુ",
+        "en": "Pu",
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/19_p/4_pu.svg",
-        "audio": "audio/barakhadi/19_p/4_pu.mp3"
+        "audio_ios": "audio/barakhadi/19_p/4_pu.mp3",
+        "audio_android": "audio_19_p_4_pu.mp3"
       },
       {
         "id": 5,
-        "en": "Poo",
         "gu": "પૂ",
+        "en": "Poo",
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/19_p/5_poo.svg",
-        "audio": "audio/barakhadi/19_p/5_poo.mp3"
+        "audio_ios": "audio/barakhadi/19_p/5_poo.mp3",
+        "audio_android": "audio_19_p_5_poo.mp3"
       },
       {
         "id": 6,
-        "en": "Pe",
         "gu": "પે",
+        "en": "Pe",
         "diacritic": "ે",
         "svg": "svgs/barakhadi/19_p/6_pe.svg",
-        "audio": "audio/barakhadi/19_p/6_pe.mp3"
+        "audio_ios": "audio/barakhadi/19_p/6_pe.mp3",
+        "audio_android": "audio_19_p_6_pe.mp3"
       },
       {
         "id": 7,
-        "en": "Pai",
         "gu": "પૈ",
+        "en": "Pai",
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/19_p/7_pai.svg",
-        "audio": "audio/barakhadi/19_p/7_pai.mp3"
+        "audio_ios": "audio/barakhadi/19_p/7_pai.mp3",
+        "audio_android": "audio_19_p_7_pai.mp3"
       },
       {
         "id": 8,
-        "en": "Po",
         "gu": "પો",
+        "en": "Po",
         "diacritic": "ો",
         "svg": "svgs/barakhadi/19_p/8_po.svg",
-        "audio": "audio/barakhadi/19_p/8_po.mp3"
+        "audio_ios": "audio/barakhadi/19_p/8_po.mp3",
+        "audio_android": "audio_19_p_8_po.mp3"
       },
       {
         "id": 9,
-        "en": "Pau",
         "gu": "પૌ",
+        "en": "Pau",
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/19_p/9_pau.svg",
-        "audio": "audio/barakhadi/19_p/9_pau.mp3"
+        "audio_ios": "audio/barakhadi/19_p/9_pau.mp3",
+        "audio_android": "audio_19_p_9_pau.mp3"
       },
       {
         "id": 10,
-        "en": "Pam",
         "gu": "પં",
+        "en": "Pam",
         "diacritic": "ં",
         "svg": "svgs/barakhadi/19_p/10_pam.svg",
-        "audio": "audio/barakhadi/19_p/10_pam.mp3"
+        "audio_ios": "audio/barakhadi/19_p/10_pam.mp3",
+        "audio_android": "audio_19_p_10_pam.mp3"
       },
       {
         "id": 11,
-        "en": "Pah",
         "gu": "પઃ",
+        "en": "Pah",
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/19_p/11_pah.svg",
-        "audio": "audio/barakhadi/19_p/11_pah.mp3"
+        "audio_ios": "audio/barakhadi/19_p/11_pah.mp3",
+        "audio_android": "audio_19_p_11_pah.mp3"
       }
     ]
   },
@@ -2066,99 +2306,111 @@
     "chars": [
       {
         "id": 0,
-        "en": "F",
         "gu": "ફ",
+        "en": "F",
         "diacritic": " ",
         "svg": "svgs/barakhadi/20_f/0_f.svg",
-        "audio": "audio/barakhadi/20_f/0_f.mp3"
+        "audio_ios": "audio/barakhadi/20_f/0_f.mp3",
+        "audio_android": "audio_20_f_0_f.mp3"
       },
       {
         "id": 1,
-        "en": "Fa",
         "gu": "ફા",
+        "en": "Fa",
         "diacritic": "ા",
         "svg": "svgs/barakhadi/20_f/1_fa.svg",
-        "audio": "audio/barakhadi/20_f/1_fa.mp3"
+        "audio_ios": "audio/barakhadi/20_f/1_fa.mp3",
+        "audio_android": "audio_20_f_1_fa.mp3"
       },
       {
         "id": 2,
-        "en": "Fi",
         "gu": "ફિ",
+        "en": "Fi",
         "diacritic": "િ",
         "svg": "svgs/barakhadi/20_f/2_fi.svg",
-        "audio": "audio/barakhadi/20_f/2_fi.mp3"
+        "audio_ios": "audio/barakhadi/20_f/2_fi.mp3",
+        "audio_android": "audio_20_f_2_fi.mp3"
       },
       {
         "id": 3,
-        "en": "Fee",
         "gu": "ફી",
+        "en": "Fee",
         "diacritic": "ી",
         "svg": "svgs/barakhadi/20_f/3_fee.svg",
-        "audio": "audio/barakhadi/20_f/3_fee.mp3"
+        "audio_ios": "audio/barakhadi/20_f/3_fee.mp3",
+        "audio_android": "audio_20_f_3_fee.mp3"
       },
       {
         "id": 4,
-        "en": "Fu",
         "gu": "ફુ",
+        "en": "Fu",
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/20_f/4_fu.svg",
-        "audio": "audio/barakhadi/20_f/4_fu.mp3"
+        "audio_ios": "audio/barakhadi/20_f/4_fu.mp3",
+        "audio_android": "audio_20_f_4_fu.mp3"
       },
       {
         "id": 5,
-        "en": "Foo",
         "gu": "ફૂ",
+        "en": "Foo",
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/20_f/5_foo.svg",
-        "audio": "audio/barakhadi/20_f/5_foo.mp3"
+        "audio_ios": "audio/barakhadi/20_f/5_foo.mp3",
+        "audio_android": "audio_20_f_5_foo.mp3"
       },
       {
         "id": 6,
-        "en": "Fe",
         "gu": "ફે",
+        "en": "Fe",
         "diacritic": "ે",
         "svg": "svgs/barakhadi/20_f/6_fe.svg",
-        "audio": "audio/barakhadi/20_f/6_fe.mp3"
+        "audio_ios": "audio/barakhadi/20_f/6_fe.mp3",
+        "audio_android": "audio_20_f_6_fe.mp3"
       },
       {
         "id": 7,
-        "en": "Fai",
         "gu": "ફૈ",
+        "en": "Fai",
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/20_f/7_fai.svg",
-        "audio": "audio/barakhadi/20_f/7_fai.mp3"
+        "audio_ios": "audio/barakhadi/20_f/7_fai.mp3",
+        "audio_android": "audio_20_f_7_fai.mp3"
       },
       {
         "id": 8,
-        "en": "Fo",
         "gu": "ફો",
+        "en": "Fo",
         "diacritic": "ો",
         "svg": "svgs/barakhadi/20_f/8_fo.svg",
-        "audio": "audio/barakhadi/20_f/8_fo.mp3"
+        "audio_ios": "audio/barakhadi/20_f/8_fo.mp3",
+        "audio_android": "audio_20_f_8_fo.mp3"
       },
       {
         "id": 9,
-        "en": "Fau",
         "gu": "ફૌ",
+        "en": "Fau",
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/20_f/9_fau.svg",
-        "audio": "audio/barakhadi/20_f/9_fau.mp3"
+        "audio_ios": "audio/barakhadi/20_f/9_fau.mp3",
+        "audio_android": "audio_20_f_9_fau.mp3"
       },
       {
         "id": 10,
-        "en": "Fam",
         "gu": "ફં",
+        "en": "Fam",
         "diacritic": "ં",
         "svg": "svgs/barakhadi/20_f/10_fam.svg",
-        "audio": "audio/barakhadi/20_f/10_fam.mp3"
+        "audio_ios": "audio/barakhadi/20_f/10_fam.mp3",
+        "audio_android": "audio_20_f_10_fam.mp3"
       },
       {
         "id": 11,
-        "en": "Fah",
         "gu": "ફઃ",
+        "en": "Fah",
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/20_f/11_fah.svg",
-        "audio": "audio/barakhadi/20_f/11_fah.mp3"
+        "audio_ios": "audio/barakhadi/20_f/11_fah.mp3",
+        "audio_android": "audio_20_f_11_fah.mp3"
       }
     ]
   },
@@ -2169,99 +2421,111 @@
     "chars": [
       {
         "id": 0,
-        "en": "B",
         "gu": "બ",
+        "en": "B",
         "diacritic": " ",
         "svg": "svgs/barakhadi/21_b/0_b.svg",
-        "audio": "audio/barakhadi/21_b/0_b.mp3"
+        "audio_ios": "audio/barakhadi/21_b/0_b.mp3",
+        "audio_android": "audio_21_b_0_b.mp3"
       },
       {
         "id": 1,
-        "en": "Ba",
         "gu": "બા",
+        "en": "Ba",
         "diacritic": "ા",
         "svg": "svgs/barakhadi/21_b/1_ba.svg",
-        "audio": "audio/barakhadi/21_b/1_ba.mp3"
+        "audio_ios": "audio/barakhadi/21_b/1_ba.mp3",
+        "audio_android": "audio_21_b_1_ba.mp3"
       },
       {
         "id": 2,
-        "en": "Bi",
         "gu": "બિ",
+        "en": "Bi",
         "diacritic": "િ",
         "svg": "svgs/barakhadi/21_b/2_bi.svg",
-        "audio": "audio/barakhadi/21_b/2_bi.mp3"
+        "audio_ios": "audio/barakhadi/21_b/2_bi.mp3",
+        "audio_android": "audio_21_b_2_bi.mp3"
       },
       {
         "id": 3,
-        "en": "Bee",
         "gu": "બી",
+        "en": "Bee",
         "diacritic": "ી",
         "svg": "svgs/barakhadi/21_b/3_bee.svg",
-        "audio": "audio/barakhadi/21_b/3_bee.mp3"
+        "audio_ios": "audio/barakhadi/21_b/3_bee.mp3",
+        "audio_android": "audio_21_b_3_bee.mp3"
       },
       {
         "id": 4,
-        "en": "Bu",
         "gu": "બુ",
+        "en": "Bu",
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/21_b/4_bu.svg",
-        "audio": "audio/barakhadi/21_b/4_bu.mp3"
+        "audio_ios": "audio/barakhadi/21_b/4_bu.mp3",
+        "audio_android": "audio_21_b_4_bu.mp3"
       },
       {
         "id": 5,
-        "en": "Boo",
         "gu": "બૂ",
+        "en": "Boo",
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/21_b/5_boo.svg",
-        "audio": "audio/barakhadi/21_b/5_boo.mp3"
+        "audio_ios": "audio/barakhadi/21_b/5_boo.mp3",
+        "audio_android": "audio_21_b_5_boo.mp3"
       },
       {
         "id": 6,
-        "en": "Be",
         "gu": "બે",
+        "en": "Be",
         "diacritic": "ે",
         "svg": "svgs/barakhadi/21_b/6_be.svg",
-        "audio": "audio/barakhadi/21_b/6_be.mp3"
+        "audio_ios": "audio/barakhadi/21_b/6_be.mp3",
+        "audio_android": "audio_21_b_6_be.mp3"
       },
       {
         "id": 7,
-        "en": "Bai",
         "gu": "બૈ",
+        "en": "Bai",
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/21_b/7_bai.svg",
-        "audio": "audio/barakhadi/21_b/7_bai.mp3"
+        "audio_ios": "audio/barakhadi/21_b/7_bai.mp3",
+        "audio_android": "audio_21_b_7_bai.mp3"
       },
       {
         "id": 8,
-        "en": "Bo",
         "gu": "બો",
+        "en": "Bo",
         "diacritic": "ો",
         "svg": "svgs/barakhadi/21_b/8_bo.svg",
-        "audio": "audio/barakhadi/21_b/8_bo.mp3"
+        "audio_ios": "audio/barakhadi/21_b/8_bo.mp3",
+        "audio_android": "audio_21_b_8_bo.mp3"
       },
       {
         "id": 9,
-        "en": "Bau",
         "gu": "બૌ",
+        "en": "Bau",
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/21_b/9_bau.svg",
-        "audio": "audio/barakhadi/21_b/9_bau.mp3"
+        "audio_ios": "audio/barakhadi/21_b/9_bau.mp3",
+        "audio_android": "audio_21_b_9_bau.mp3"
       },
       {
         "id": 10,
-        "en": "Bam",
         "gu": "બં",
+        "en": "Bam",
         "diacritic": "ં",
         "svg": "svgs/barakhadi/21_b/10_bam.svg",
-        "audio": "audio/barakhadi/21_b/10_bam.mp3"
+        "audio_ios": "audio/barakhadi/21_b/10_bam.mp3",
+        "audio_android": "audio_21_b_10_bam.mp3"
       },
       {
         "id": 11,
-        "en": "Bah",
         "gu": "બઃ",
+        "en": "Bah",
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/21_b/11_bah.svg",
-        "audio": "audio/barakhadi/21_b/11_bah.mp3"
+        "audio_ios": "audio/barakhadi/21_b/11_bah.mp3",
+        "audio_android": "audio_21_b_11_bah.mp3"
       }
     ]
   },
@@ -2272,99 +2536,111 @@
     "chars": [
       {
         "id": 0,
-        "en": "Bh",
         "gu": "ભ",
+        "en": "Bh",
         "diacritic": " ",
         "svg": "svgs/barakhadi/22_bh/0_bh.svg",
-        "audio": "audio/barakhadi/22_bh/0_bh.mp3"
+        "audio_ios": "audio/barakhadi/22_bh/0_bh.mp3",
+        "audio_android": "audio_22_bh_0_bh.mp3"
       },
       {
         "id": 1,
-        "en": "Bha",
         "gu": "ભા",
+        "en": "Bha",
         "diacritic": "ા",
         "svg": "svgs/barakhadi/22_bh/1_bha.svg",
-        "audio": "audio/barakhadi/22_bh/1_bha.mp3"
+        "audio_ios": "audio/barakhadi/22_bh/1_bha.mp3",
+        "audio_android": "audio_22_bh_1_bha.mp3"
       },
       {
         "id": 2,
-        "en": "Bhi",
         "gu": "ભિ",
+        "en": "Bhi",
         "diacritic": "િ",
         "svg": "svgs/barakhadi/22_bh/2_bhi.svg",
-        "audio": "audio/barakhadi/22_bh/2_bhi.mp3"
+        "audio_ios": "audio/barakhadi/22_bh/2_bhi.mp3",
+        "audio_android": "audio_22_bh_2_bhi.mp3"
       },
       {
         "id": 3,
-        "en": "Bhee",
         "gu": "ભી",
+        "en": "Bhee",
         "diacritic": "ી",
         "svg": "svgs/barakhadi/22_bh/3_bhee.svg",
-        "audio": "audio/barakhadi/22_bh/3_bhee.mp3"
+        "audio_ios": "audio/barakhadi/22_bh/3_bhee.mp3",
+        "audio_android": "audio_22_bh_3_bhee.mp3"
       },
       {
         "id": 4,
-        "en": "Bhu",
         "gu": "ભુ",
+        "en": "Bhu",
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/22_bh/4_bhu.svg",
-        "audio": "audio/barakhadi/22_bh/4_bhu.mp3"
+        "audio_ios": "audio/barakhadi/22_bh/4_bhu.mp3",
+        "audio_android": "audio_22_bh_4_bhu.mp3"
       },
       {
         "id": 5,
-        "en": "Bhoo",
         "gu": "ભૂ",
+        "en": "Bhoo",
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/22_bh/5_bhoo.svg",
-        "audio": "audio/barakhadi/22_bh/5_bhoo.mp3"
+        "audio_ios": "audio/barakhadi/22_bh/5_bhoo.mp3",
+        "audio_android": "audio_22_bh_5_bhoo.mp3"
       },
       {
         "id": 6,
-        "en": "Bhe",
         "gu": "ભે",
+        "en": "Bhe",
         "diacritic": "ે",
         "svg": "svgs/barakhadi/22_bh/6_bhe.svg",
-        "audio": "audio/barakhadi/22_bh/6_bhe.mp3"
+        "audio_ios": "audio/barakhadi/22_bh/6_bhe.mp3",
+        "audio_android": "audio_22_bh_6_bhe.mp3"
       },
       {
         "id": 7,
-        "en": "Bhai",
         "gu": "ભૈ",
+        "en": "Bhai",
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/22_bh/7_bhai.svg",
-        "audio": "audio/barakhadi/22_bh/7_bhai.mp3"
+        "audio_ios": "audio/barakhadi/22_bh/7_bhai.mp3",
+        "audio_android": "audio_22_bh_7_bhai.mp3"
       },
       {
         "id": 8,
-        "en": "Bho",
         "gu": "ભો",
+        "en": "Bho",
         "diacritic": "ો",
         "svg": "svgs/barakhadi/22_bh/8_bho.svg",
-        "audio": "audio/barakhadi/22_bh/8_bho.mp3"
+        "audio_ios": "audio/barakhadi/22_bh/8_bho.mp3",
+        "audio_android": "audio_22_bh_8_bho.mp3"
       },
       {
         "id": 9,
-        "en": "Bhau",
         "gu": "ભૌ",
+        "en": "Bhau",
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/22_bh/9_bhau.svg",
-        "audio": "audio/barakhadi/22_bh/9_bhau.mp3"
+        "audio_ios": "audio/barakhadi/22_bh/9_bhau.mp3",
+        "audio_android": "audio_22_bh_9_bhau.mp3"
       },
       {
         "id": 10,
-        "en": "Bham",
         "gu": "ભં",
+        "en": "Bham",
         "diacritic": "ં",
         "svg": "svgs/barakhadi/22_bh/10_bham.svg",
-        "audio": "audio/barakhadi/22_bh/10_bham.mp3"
+        "audio_ios": "audio/barakhadi/22_bh/10_bham.mp3",
+        "audio_android": "audio_22_bh_10_bham.mp3"
       },
       {
         "id": 11,
-        "en": "Bhah",
         "gu": "ભઃ",
+        "en": "Bhah",
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/22_bh/11_bhah.svg",
-        "audio": "audio/barakhadi/22_bh/11_bhah.mp3"
+        "audio_ios": "audio/barakhadi/22_bh/11_bhah.mp3",
+        "audio_android": "audio_22_bh_11_bhah.mp3"
       }
     ]
   },
@@ -2375,99 +2651,111 @@
     "chars": [
       {
         "id": 0,
-        "en": "M",
         "gu": "મ",
+        "en": "M",
         "diacritic": " ",
         "svg": "svgs/barakhadi/23_m/0_m.svg",
-        "audio": "audio/barakhadi/23_m/0_m.mp3"
+        "audio_ios": "audio/barakhadi/23_m/0_m.mp3",
+        "audio_android": "audio_23_m_0_m.mp3"
       },
       {
         "id": 1,
-        "en": "Ma",
         "gu": "મા",
+        "en": "Ma",
         "diacritic": "ા",
         "svg": "svgs/barakhadi/23_m/1_ma.svg",
-        "audio": "audio/barakhadi/23_m/1_ma.mp3"
+        "audio_ios": "audio/barakhadi/23_m/1_ma.mp3",
+        "audio_android": "audio_23_m_1_ma.mp3"
       },
       {
         "id": 2,
-        "en": "Mi",
         "gu": "મિ",
+        "en": "Mi",
         "diacritic": "િ",
         "svg": "svgs/barakhadi/23_m/2_mi.svg",
-        "audio": "audio/barakhadi/23_m/2_mi.mp3"
+        "audio_ios": "audio/barakhadi/23_m/2_mi.mp3",
+        "audio_android": "audio_23_m_2_mi.mp3"
       },
       {
         "id": 3,
-        "en": "Mee",
         "gu": "મી",
+        "en": "Mee",
         "diacritic": "ી",
         "svg": "svgs/barakhadi/23_m/3_mee.svg",
-        "audio": "audio/barakhadi/23_m/3_mee.mp3"
+        "audio_ios": "audio/barakhadi/23_m/3_mee.mp3",
+        "audio_android": "audio_23_m_3_mee.mp3"
       },
       {
         "id": 4,
-        "en": "Mu",
         "gu": "મુ",
+        "en": "Mu",
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/23_m/4_mu.svg",
-        "audio": "audio/barakhadi/23_m/4_mu.mp3"
+        "audio_ios": "audio/barakhadi/23_m/4_mu.mp3",
+        "audio_android": "audio_23_m_4_mu.mp3"
       },
       {
         "id": 5,
-        "en": "Moo",
         "gu": "મૂ",
+        "en": "Moo",
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/23_m/5_moo.svg",
-        "audio": "audio/barakhadi/23_m/5_moo.mp3"
+        "audio_ios": "audio/barakhadi/23_m/5_moo.mp3",
+        "audio_android": "audio_23_m_5_moo.mp3"
       },
       {
         "id": 6,
-        "en": "Me",
         "gu": "મે",
+        "en": "Me",
         "diacritic": "ે",
         "svg": "svgs/barakhadi/23_m/6_me.svg",
-        "audio": "audio/barakhadi/23_m/6_me.mp3"
+        "audio_ios": "audio/barakhadi/23_m/6_me.mp3",
+        "audio_android": "audio_23_m_6_me.mp3"
       },
       {
         "id": 7,
-        "en": "Mai",
         "gu": "મૈ",
+        "en": "Mai",
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/23_m/7_mai.svg",
-        "audio": "audio/barakhadi/23_m/7_mai.mp3"
+        "audio_ios": "audio/barakhadi/23_m/7_mai.mp3",
+        "audio_android": "audio_23_m_7_mai.mp3"
       },
       {
         "id": 8,
-        "en": "Mo",
         "gu": "મો",
+        "en": "Mo",
         "diacritic": "ો",
         "svg": "svgs/barakhadi/23_m/8_mo.svg",
-        "audio": "audio/barakhadi/23_m/8_mo.mp3"
+        "audio_ios": "audio/barakhadi/23_m/8_mo.mp3",
+        "audio_android": "audio_23_m_8_mo.mp3"
       },
       {
         "id": 9,
-        "en": "Mau",
         "gu": "મૌ",
+        "en": "Mau",
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/23_m/9_mau.svg",
-        "audio": "audio/barakhadi/23_m/9_mau.mp3"
+        "audio_ios": "audio/barakhadi/23_m/9_mau.mp3",
+        "audio_android": "audio_23_m_9_mau.mp3"
       },
       {
         "id": 10,
-        "en": "Mam",
         "gu": "મં",
+        "en": "Mam",
         "diacritic": "ં",
         "svg": "svgs/barakhadi/23_m/10_mam.svg",
-        "audio": "audio/barakhadi/23_m/10_mam.mp3"
+        "audio_ios": "audio/barakhadi/23_m/10_mam.mp3",
+        "audio_android": "audio_23_m_10_mam.mp3"
       },
       {
         "id": 11,
-        "en": "Mah",
         "gu": "મઃ",
+        "en": "Mah",
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/23_m/11_mah.svg",
-        "audio": "audio/barakhadi/23_m/11_mah.mp3"
+        "audio_ios": "audio/barakhadi/23_m/11_mah.mp3",
+        "audio_android": "audio_23_m_11_mah.mp3"
       }
     ]
   },
@@ -2478,99 +2766,111 @@
     "chars": [
       {
         "id": 0,
-        "en": "Y",
         "gu": "ય",
+        "en": "Y",
         "diacritic": " ",
         "svg": "svgs/barakhadi/24_y/0_y.svg",
-        "audio": "audio/barakhadi/24_y/0_y.mp3"
+        "audio_ios": "audio/barakhadi/24_y/0_y.mp3",
+        "audio_android": "audio_24_y_0_y.mp3"
       },
       {
         "id": 1,
-        "en": "Ya",
         "gu": "યા",
+        "en": "Ya",
         "diacritic": "ા",
         "svg": "svgs/barakhadi/24_y/1_ya.svg",
-        "audio": "audio/barakhadi/24_y/1_ya.mp3"
+        "audio_ios": "audio/barakhadi/24_y/1_ya.mp3",
+        "audio_android": "audio_24_y_1_ya.mp3"
       },
       {
         "id": 2,
-        "en": "Yi",
         "gu": "યિ",
+        "en": "Yi",
         "diacritic": "િ",
         "svg": "svgs/barakhadi/24_y/2_yi.svg",
-        "audio": "audio/barakhadi/24_y/2_yi.mp3"
+        "audio_ios": "audio/barakhadi/24_y/2_yi.mp3",
+        "audio_android": "audio_24_y_2_yi.mp3"
       },
       {
         "id": 3,
-        "en": "Yee",
         "gu": "યી",
+        "en": "Yee",
         "diacritic": "ી",
         "svg": "svgs/barakhadi/24_y/3_yee.svg",
-        "audio": "audio/barakhadi/24_y/3_yee.mp3"
+        "audio_ios": "audio/barakhadi/24_y/3_yee.mp3",
+        "audio_android": "audio_24_y_3_yee.mp3"
       },
       {
         "id": 4,
-        "en": "Yu",
         "gu": "યુ",
+        "en": "Yu",
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/24_y/4_yu.svg",
-        "audio": "audio/barakhadi/24_y/4_yu.mp3"
+        "audio_ios": "audio/barakhadi/24_y/4_yu.mp3",
+        "audio_android": "audio_24_y_4_yu.mp3"
       },
       {
         "id": 5,
-        "en": "Yoo",
         "gu": "યૂ",
+        "en": "Yoo",
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/24_y/5_yoo.svg",
-        "audio": "audio/barakhadi/24_y/5_yoo.mp3"
+        "audio_ios": "audio/barakhadi/24_y/5_yoo.mp3",
+        "audio_android": "audio_24_y_5_yoo.mp3"
       },
       {
         "id": 6,
-        "en": "Ye",
         "gu": "યે",
+        "en": "Ye",
         "diacritic": "ે",
         "svg": "svgs/barakhadi/24_y/6_ye.svg",
-        "audio": "audio/barakhadi/24_y/6_ye.mp3"
+        "audio_ios": "audio/barakhadi/24_y/6_ye.mp3",
+        "audio_android": "audio_24_y_6_ye.mp3"
       },
       {
         "id": 7,
-        "en": "Yai",
         "gu": "યૈ",
+        "en": "Yai",
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/24_y/7_yai.svg",
-        "audio": "audio/barakhadi/24_y/7_yai.mp3"
+        "audio_ios": "audio/barakhadi/24_y/7_yai.mp3",
+        "audio_android": "audio_24_y_7_yai.mp3"
       },
       {
         "id": 8,
-        "en": "Yo",
         "gu": "યો",
+        "en": "Yo",
         "diacritic": "ો",
         "svg": "svgs/barakhadi/24_y/8_yo.svg",
-        "audio": "audio/barakhadi/24_y/8_yo.mp3"
+        "audio_ios": "audio/barakhadi/24_y/8_yo.mp3",
+        "audio_android": "audio_24_y_8_yo.mp3"
       },
       {
         "id": 9,
-        "en": "Yau",
         "gu": "યૌ",
+        "en": "Yau",
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/24_y/9_yau.svg",
-        "audio": "audio/barakhadi/24_y/9_yau.mp3"
+        "audio_ios": "audio/barakhadi/24_y/9_yau.mp3",
+        "audio_android": "audio_24_y_9_yau.mp3"
       },
       {
         "id": 10,
-        "en": "Yam",
         "gu": "યં",
+        "en": "Yam",
         "diacritic": "ં",
         "svg": "svgs/barakhadi/24_y/10_yam.svg",
-        "audio": "audio/barakhadi/24_y/10_yam.mp3"
+        "audio_ios": "audio/barakhadi/24_y/10_yam.mp3",
+        "audio_android": "audio_24_y_10_yam.mp3"
       },
       {
         "id": 11,
-        "en": "Yah",
         "gu": "યઃ",
+        "en": "Yah",
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/24_y/11_yah.svg",
-        "audio": "audio/barakhadi/24_y/11_yah.mp3"
+        "audio_ios": "audio/barakhadi/24_y/11_yah.mp3",
+        "audio_android": "audio_24_y_11_yah.mp3"
       }
     ]
   },
@@ -2581,99 +2881,111 @@
     "chars": [
       {
         "id": 0,
-        "en": "R",
         "gu": "ર",
+        "en": "R",
         "diacritic": " ",
         "svg": "svgs/barakhadi/25_r/0_r.svg",
-        "audio": "audio/barakhadi/25_r/0_r.mp3"
+        "audio_ios": "audio/barakhadi/25_r/0_r.mp3",
+        "audio_android": "audio_25_r_0_r.mp3"
       },
       {
         "id": 1,
-        "en": "Ra",
         "gu": "રા",
+        "en": "Ra",
         "diacritic": "ા",
         "svg": "svgs/barakhadi/25_r/1_ra.svg",
-        "audio": "audio/barakhadi/25_r/1_ra.mp3"
+        "audio_ios": "audio/barakhadi/25_r/1_ra.mp3",
+        "audio_android": "audio_25_r_1_ra.mp3"
       },
       {
         "id": 2,
-        "en": "Ri",
         "gu": "રિ",
+        "en": "Ri",
         "diacritic": "િ",
         "svg": "svgs/barakhadi/25_r/2_ri.svg",
-        "audio": "audio/barakhadi/25_r/2_ri.mp3"
+        "audio_ios": "audio/barakhadi/25_r/2_ri.mp3",
+        "audio_android": "audio_25_r_2_ri.mp3"
       },
       {
         "id": 3,
-        "en": "Ree",
         "gu": "રી",
+        "en": "Ree",
         "diacritic": "ી",
         "svg": "svgs/barakhadi/25_r/3_ree.svg",
-        "audio": "audio/barakhadi/25_r/3_ree.mp3"
+        "audio_ios": "audio/barakhadi/25_r/3_ree.mp3",
+        "audio_android": "audio_25_r_3_ree.mp3"
       },
       {
         "id": 4,
-        "en": "Ru",
         "gu": "રુ",
+        "en": "Ru",
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/25_r/4_ru.svg",
-        "audio": "audio/barakhadi/25_r/4_ru.mp3"
+        "audio_ios": "audio/barakhadi/25_r/4_ru.mp3",
+        "audio_android": "audio_25_r_4_ru.mp3"
       },
       {
         "id": 5,
-        "en": "Roo",
         "gu": "રૂ",
+        "en": "Roo",
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/25_r/5_roo.svg",
-        "audio": "audio/barakhadi/25_r/5_roo.mp3"
+        "audio_ios": "audio/barakhadi/25_r/5_roo.mp3",
+        "audio_android": "audio_25_r_5_roo.mp3"
       },
       {
         "id": 6,
-        "en": "Re",
         "gu": "રે",
+        "en": "Re",
         "diacritic": "ે",
         "svg": "svgs/barakhadi/25_r/6_re.svg",
-        "audio": "audio/barakhadi/25_r/6_re.mp3"
+        "audio_ios": "audio/barakhadi/25_r/6_re.mp3",
+        "audio_android": "audio_25_r_6_re.mp3"
       },
       {
         "id": 7,
-        "en": "Rai",
         "gu": "રૈ",
+        "en": "Rai",
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/25_r/7_rai.svg",
-        "audio": "audio/barakhadi/25_r/7_rai.mp3"
+        "audio_ios": "audio/barakhadi/25_r/7_rai.mp3",
+        "audio_android": "audio_25_r_7_rai.mp3"
       },
       {
         "id": 8,
-        "en": "Ro",
         "gu": "રો",
+        "en": "Ro",
         "diacritic": "ો",
         "svg": "svgs/barakhadi/25_r/8_ro.svg",
-        "audio": "audio/barakhadi/25_r/8_ro.mp3"
+        "audio_ios": "audio/barakhadi/25_r/8_ro.mp3",
+        "audio_android": "audio_25_r_8_ro.mp3"
       },
       {
         "id": 9,
-        "en": "Rau",
         "gu": "રૌ",
+        "en": "Rau",
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/25_r/9_rau.svg",
-        "audio": "audio/barakhadi/25_r/9_rau.mp3"
+        "audio_ios": "audio/barakhadi/25_r/9_rau.mp3",
+        "audio_android": "audio_25_r_9_rau.mp3"
       },
       {
         "id": 10,
-        "en": "Ram",
         "gu": "રં",
+        "en": "Ram",
         "diacritic": "ં",
         "svg": "svgs/barakhadi/25_r/10_ram.svg",
-        "audio": "audio/barakhadi/25_r/10_ram.mp3"
+        "audio_ios": "audio/barakhadi/25_r/10_ram.mp3",
+        "audio_android": "audio_25_r_10_ram.mp3"
       },
       {
         "id": 11,
-        "en": "Rah",
         "gu": "રઃ",
+        "en": "Rah",
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/25_r/11_rah.svg",
-        "audio": "audio/barakhadi/25_r/11_rah.mp3"
+        "audio_ios": "audio/barakhadi/25_r/11_rah.mp3",
+        "audio_android": "audio_25_r_11_rah.mp3"
       }
     ]
   },
@@ -2684,99 +2996,111 @@
     "chars": [
       {
         "id": 0,
-        "en": "L",
         "gu": "લ",
+        "en": "L",
         "diacritic": " ",
         "svg": "svgs/barakhadi/26_l/0_l.svg",
-        "audio": "audio/barakhadi/26_l/0_l.mp3"
+        "audio_ios": "audio/barakhadi/26_l/0_l.mp3",
+        "audio_android": "audio_26_l_0_l.mp3"
       },
       {
         "id": 1,
-        "en": "La",
         "gu": "લા",
+        "en": "La",
         "diacritic": "ા",
         "svg": "svgs/barakhadi/26_l/1_la.svg",
-        "audio": "audio/barakhadi/26_l/1_la.mp3"
+        "audio_ios": "audio/barakhadi/26_l/1_la.mp3",
+        "audio_android": "audio_26_l_1_la.mp3"
       },
       {
         "id": 2,
-        "en": "Li",
         "gu": "લિ",
+        "en": "Li",
         "diacritic": "િ",
         "svg": "svgs/barakhadi/26_l/2_li.svg",
-        "audio": "audio/barakhadi/26_l/2_li.mp3"
+        "audio_ios": "audio/barakhadi/26_l/2_li.mp3",
+        "audio_android": "audio_26_l_2_li.mp3"
       },
       {
         "id": 3,
-        "en": "Le",
         "gu": "લી",
+        "en": "Le",
         "diacritic": "ી",
         "svg": "svgs/barakhadi/26_l/3_le.svg",
-        "audio": "audio/barakhadi/26_l/3_le.mp3"
+        "audio_ios": "audio/barakhadi/26_l/3_le.mp3",
+        "audio_android": "audio_26_l_3_le.mp3"
       },
       {
         "id": 4,
-        "en": "Lu",
         "gu": "લુ",
+        "en": "Lu",
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/26_l/4_lu.svg",
-        "audio": "audio/barakhadi/26_l/4_lu.mp3"
+        "audio_ios": "audio/barakhadi/26_l/4_lu.mp3",
+        "audio_android": "audio_26_l_4_lu.mp3"
       },
       {
         "id": 5,
-        "en": "Loo",
         "gu": "લૂ",
+        "en": "Loo",
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/26_l/5_loo.svg",
-        "audio": "audio/barakhadi/26_l/5_loo.mp3"
+        "audio_ios": "audio/barakhadi/26_l/5_loo.mp3",
+        "audio_android": "audio_26_l_5_loo.mp3"
       },
       {
         "id": 6,
-        "en": "Le",
         "gu": "લે",
+        "en": "Le",
         "diacritic": "ે",
         "svg": "svgs/barakhadi/26_l/6_le.svg",
-        "audio": "audio/barakhadi/26_l/6_le.mp3"
+        "audio_ios": "audio/barakhadi/26_l/6_le.mp3",
+        "audio_android": "audio_26_l_6_le.mp3"
       },
       {
         "id": 7,
-        "en": "Lai",
         "gu": "લૈ",
+        "en": "Lai",
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/26_l/7_lai.svg",
-        "audio": "audio/barakhadi/26_l/7_lai.mp3"
+        "audio_ios": "audio/barakhadi/26_l/7_lai.mp3",
+        "audio_android": "audio_26_l_7_lai.mp3"
       },
       {
         "id": 8,
-        "en": "Lo",
         "gu": "લો",
+        "en": "Lo",
         "diacritic": "ો",
         "svg": "svgs/barakhadi/26_l/8_lo.svg",
-        "audio": "audio/barakhadi/26_l/8_lo.mp3"
+        "audio_ios": "audio/barakhadi/26_l/8_lo.mp3",
+        "audio_android": "audio_26_l_8_lo.mp3"
       },
       {
         "id": 9,
-        "en": "Lau",
         "gu": "લૌ",
+        "en": "Lau",
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/26_l/9_lau.svg",
-        "audio": "audio/barakhadi/26_l/9_lau.mp3"
+        "audio_ios": "audio/barakhadi/26_l/9_lau.mp3",
+        "audio_android": "audio_26_l_9_lau.mp3"
       },
       {
         "id": 10,
-        "en": "Lam",
         "gu": "લં",
+        "en": "Lam",
         "diacritic": "ં",
         "svg": "svgs/barakhadi/26_l/10_lam.svg",
-        "audio": "audio/barakhadi/26_l/10_lam.mp3"
+        "audio_ios": "audio/barakhadi/26_l/10_lam.mp3",
+        "audio_android": "audio_26_l_10_lam.mp3"
       },
       {
         "id": 11,
-        "en": "Lah",
         "gu": "લઃ",
+        "en": "Lah",
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/26_l/11_lah.svg",
-        "audio": "audio/barakhadi/26_l/11_lah.mp3"
+        "audio_ios": "audio/barakhadi/26_l/11_lah.mp3",
+        "audio_android": "audio_26_l_11_lah.mp3"
       }
     ]
   },
@@ -2787,99 +3111,111 @@
     "chars": [
       {
         "id": 0,
-        "en": "V",
         "gu": "વ",
+        "en": "V",
         "diacritic": " ",
         "svg": "svgs/barakhadi/27_v/0_v.svg",
-        "audio": "audio/barakhadi/27_v/0_v.mp3"
+        "audio_ios": "audio/barakhadi/27_v/0_v.mp3",
+        "audio_android": "audio_27_v_0_v.mp3"
       },
       {
         "id": 1,
-        "en": "Va",
         "gu": "વા",
+        "en": "Va",
         "diacritic": "ા",
         "svg": "svgs/barakhadi/27_v/1_va.svg",
-        "audio": "audio/barakhadi/27_v/1_va.mp3"
+        "audio_ios": "audio/barakhadi/27_v/1_va.mp3",
+        "audio_android": "audio_27_v_1_va.mp3"
       },
       {
         "id": 2,
-        "en": "Vi",
         "gu": "વિ",
+        "en": "Vi",
         "diacritic": "િ",
         "svg": "svgs/barakhadi/27_v/2_vi.svg",
-        "audio": "audio/barakhadi/27_v/2_vi.mp3"
+        "audio_ios": "audio/barakhadi/27_v/2_vi.mp3",
+        "audio_android": "audio_27_v_2_vi.mp3"
       },
       {
         "id": 3,
-        "en": "Vee",
         "gu": "વી",
+        "en": "Vee",
         "diacritic": "ી",
         "svg": "svgs/barakhadi/27_v/3_vee.svg",
-        "audio": "audio/barakhadi/27_v/3_vee.mp3"
+        "audio_ios": "audio/barakhadi/27_v/3_vee.mp3",
+        "audio_android": "audio_27_v_3_vee.mp3"
       },
       {
         "id": 4,
-        "en": "Vu",
         "gu": "વુ",
+        "en": "Vu",
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/27_v/4_vu.svg",
-        "audio": "audio/barakhadi/27_v/4_vu.mp3"
+        "audio_ios": "audio/barakhadi/27_v/4_vu.mp3",
+        "audio_android": "audio_27_v_4_vu.mp3"
       },
       {
         "id": 5,
-        "en": "Voo",
         "gu": "વૂ",
+        "en": "Voo",
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/27_v/5_voo.svg",
-        "audio": "audio/barakhadi/27_v/5_voo.mp3"
+        "audio_ios": "audio/barakhadi/27_v/5_voo.mp3",
+        "audio_android": "audio_27_v_5_voo.mp3"
       },
       {
         "id": 6,
-        "en": "Ve",
         "gu": "વે",
+        "en": "Ve",
         "diacritic": "ે",
         "svg": "svgs/barakhadi/27_v/6_ve.svg",
-        "audio": "audio/barakhadi/27_v/6_ve.mp3"
+        "audio_ios": "audio/barakhadi/27_v/6_ve.mp3",
+        "audio_android": "audio_27_v_6_ve.mp3"
       },
       {
         "id": 7,
-        "en": "Vai",
         "gu": "વૈ",
+        "en": "Vai",
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/27_v/7_vai.svg",
-        "audio": "audio/barakhadi/27_v/7_vai.mp3"
+        "audio_ios": "audio/barakhadi/27_v/7_vai.mp3",
+        "audio_android": "audio_27_v_7_vai.mp3"
       },
       {
         "id": 8,
-        "en": "Vo",
         "gu": "વો",
+        "en": "Vo",
         "diacritic": "ો",
         "svg": "svgs/barakhadi/27_v/8_vo.svg",
-        "audio": "audio/barakhadi/27_v/8_vo.mp3"
+        "audio_ios": "audio/barakhadi/27_v/8_vo.mp3",
+        "audio_android": "audio_27_v_8_vo.mp3"
       },
       {
         "id": 9,
-        "en": "Vau",
         "gu": "વૌ",
+        "en": "Vau",
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/27_v/9_vau.svg",
-        "audio": "audio/barakhadi/27_v/9_vau.mp3"
+        "audio_ios": "audio/barakhadi/27_v/9_vau.mp3",
+        "audio_android": "audio_27_v_9_vau.mp3"
       },
       {
         "id": 10,
-        "en": "Vam",
         "gu": "વં",
+        "en": "Vam",
         "diacritic": "ં",
         "svg": "svgs/barakhadi/27_v/10_vam.svg",
-        "audio": "audio/barakhadi/27_v/10_vam.mp3"
+        "audio_ios": "audio/barakhadi/27_v/10_vam.mp3",
+        "audio_android": "audio_27_v_10_vam.mp3"
       },
       {
         "id": 11,
-        "en": "Vah",
         "gu": "વઃ",
+        "en": "Vah",
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/27_v/11_vah.svg",
-        "audio": "audio/barakhadi/27_v/11_vah.mp3"
+        "audio_ios": "audio/barakhadi/27_v/11_vah.mp3",
+        "audio_android": "audio_27_v_11_vah.mp3"
       }
     ]
   },
@@ -2890,99 +3226,111 @@
     "chars": [
       {
         "id": 0,
-        "en": "Sh",
         "gu": "શ",
+        "en": "Sh",
         "diacritic": " ",
         "svg": "svgs/barakhadi/28_sh/0_sh.svg",
-        "audio": "audio/barakhadi/28_sh/0_sh.mp3"
+        "audio_ios": "audio/barakhadi/28_sh/0_sh.mp3",
+        "audio_android": "audio_28_sh_0_sh.mp3"
       },
       {
         "id": 1,
-        "en": "Sha",
         "gu": "શા",
+        "en": "Sha",
         "diacritic": "ા",
         "svg": "svgs/barakhadi/28_sh/1_sha.svg",
-        "audio": "audio/barakhadi/28_sh/1_sha.mp3"
+        "audio_ios": "audio/barakhadi/28_sh/1_sha.mp3",
+        "audio_android": "audio_28_sh_1_sha.mp3"
       },
       {
         "id": 2,
-        "en": "Shi",
         "gu": "શિ",
+        "en": "Shi",
         "diacritic": "િ",
         "svg": "svgs/barakhadi/28_sh/2_shi.svg",
-        "audio": "audio/barakhadi/28_sh/2_shi.mp3"
+        "audio_ios": "audio/barakhadi/28_sh/2_shi.mp3",
+        "audio_android": "audio_28_sh_2_shi.mp3"
       },
       {
         "id": 3,
-        "en": "Shee",
         "gu": "શી",
+        "en": "Shee",
         "diacritic": "ી",
         "svg": "svgs/barakhadi/28_sh/3_shee.svg",
-        "audio": "audio/barakhadi/28_sh/3_shee.mp3"
+        "audio_ios": "audio/barakhadi/28_sh/3_shee.mp3",
+        "audio_android": "audio_28_sh_3_shee.mp3"
       },
       {
         "id": 4,
-        "en": "Shu",
         "gu": "શુ",
+        "en": "Shu",
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/28_sh/4_shu.svg",
-        "audio": "audio/barakhadi/28_sh/4_shu.mp3"
+        "audio_ios": "audio/barakhadi/28_sh/4_shu.mp3",
+        "audio_android": "audio_28_sh_4_shu.mp3"
       },
       {
         "id": 5,
-        "en": "Shoo",
         "gu": "શૂ",
+        "en": "Shoo",
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/28_sh/5_shoo.svg",
-        "audio": "audio/barakhadi/28_sh/5_shoo.mp3"
+        "audio_ios": "audio/barakhadi/28_sh/5_shoo.mp3",
+        "audio_android": "audio_28_sh_5_shoo.mp3"
       },
       {
         "id": 6,
-        "en": "She",
         "gu": "શે",
+        "en": "She",
         "diacritic": "ે",
         "svg": "svgs/barakhadi/28_sh/6_she.svg",
-        "audio": "audio/barakhadi/28_sh/6_she.mp3"
+        "audio_ios": "audio/barakhadi/28_sh/6_she.mp3",
+        "audio_android": "audio_28_sh_6_she.mp3"
       },
       {
         "id": 7,
-        "en": "Shai",
         "gu": "શૈ",
+        "en": "Shai",
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/28_sh/7_shai.svg",
-        "audio": "audio/barakhadi/28_sh/7_shai.mp3"
+        "audio_ios": "audio/barakhadi/28_sh/7_shai.mp3",
+        "audio_android": "audio_28_sh_7_shai.mp3"
       },
       {
         "id": 8,
-        "en": "Sho",
         "gu": "શો",
+        "en": "Sho",
         "diacritic": "ો",
         "svg": "svgs/barakhadi/28_sh/8_sho.svg",
-        "audio": "audio/barakhadi/28_sh/8_sho.mp3"
+        "audio_ios": "audio/barakhadi/28_sh/8_sho.mp3",
+        "audio_android": "audio_28_sh_8_sho.mp3"
       },
       {
         "id": 9,
-        "en": "Shau",
         "gu": "શૌ",
+        "en": "Shau",
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/28_sh/9_shau.svg",
-        "audio": "audio/barakhadi/28_sh/9_shau.mp3"
+        "audio_ios": "audio/barakhadi/28_sh/9_shau.mp3",
+        "audio_android": "audio_28_sh_9_shau.mp3"
       },
       {
         "id": 10,
-        "en": "Sham",
         "gu": "શં",
+        "en": "Sham",
         "diacritic": "ં",
         "svg": "svgs/barakhadi/28_sh/10_sham.svg",
-        "audio": "audio/barakhadi/28_sh/10_sham.mp3"
+        "audio_ios": "audio/barakhadi/28_sh/10_sham.mp3",
+        "audio_android": "audio_28_sh_10_sham.mp3"
       },
       {
         "id": 11,
-        "en": "Shah",
         "gu": "શઃ",
+        "en": "Shah",
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/28_sh/11_shah.svg",
-        "audio": "audio/barakhadi/28_sh/11_shah.mp3"
+        "audio_ios": "audio/barakhadi/28_sh/11_shah.mp3",
+        "audio_android": "audio_28_sh_11_shah.mp3"
       }
     ]
   },
@@ -2993,99 +3341,111 @@
     "chars": [
       {
         "id": 0,
-        "en": "Sh",
         "gu": "ષ",
+        "en": "Sh",
         "diacritic": " ",
         "svg": "svgs/barakhadi/29_sh/0_sh.svg",
-        "audio": "audio/barakhadi/29_sh/0_sh.mp3"
+        "audio_ios": "audio/barakhadi/29_sh/0_sh.mp3",
+        "audio_android": "audio_29_sh_0_sh.mp3"
       },
       {
         "id": 1,
-        "en": "Sha",
         "gu": "ષા",
+        "en": "Sha",
         "diacritic": "ા",
         "svg": "svgs/barakhadi/29_sh/1_sha.svg",
-        "audio": "audio/barakhadi/29_sh/1_sha.mp3"
+        "audio_ios": "audio/barakhadi/29_sh/1_sha.mp3",
+        "audio_android": "audio_29_sh_1_sha.mp3"
       },
       {
         "id": 2,
-        "en": "Shi",
         "gu": "ષિ",
+        "en": "Shi",
         "diacritic": "િ",
         "svg": "svgs/barakhadi/29_sh/2_shi.svg",
-        "audio": "audio/barakhadi/29_sh/2_shi.mp3"
+        "audio_ios": "audio/barakhadi/29_sh/2_shi.mp3",
+        "audio_android": "audio_29_sh_2_shi.mp3"
       },
       {
         "id": 3,
-        "en": "Shee",
         "gu": "ષી",
+        "en": "Shee",
         "diacritic": "ી",
         "svg": "svgs/barakhadi/29_sh/3_shee.svg",
-        "audio": "audio/barakhadi/29_sh/3_shee.mp3"
+        "audio_ios": "audio/barakhadi/29_sh/3_shee.mp3",
+        "audio_android": "audio_29_sh_3_shee.mp3"
       },
       {
         "id": 4,
-        "en": "Shu",
         "gu": "ષુ",
+        "en": "Shu",
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/29_sh/4_shu.svg",
-        "audio": "audio/barakhadi/29_sh/4_shu.mp3"
+        "audio_ios": "audio/barakhadi/29_sh/4_shu.mp3",
+        "audio_android": "audio_29_sh_4_shu.mp3"
       },
       {
         "id": 5,
-        "en": "Shoo",
         "gu": "ષૂ",
+        "en": "Shoo",
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/29_sh/5_shoo.svg",
-        "audio": "audio/barakhadi/29_sh/5_shoo.mp3"
+        "audio_ios": "audio/barakhadi/29_sh/5_shoo.mp3",
+        "audio_android": "audio_29_sh_5_shoo.mp3"
       },
       {
         "id": 6,
-        "en": "She",
         "gu": "ષૅ",
+        "en": "She",
         "diacritic": "ે",
         "svg": "svgs/barakhadi/29_sh/6_she.svg",
-        "audio": "audio/barakhadi/29_sh/6_she.mp3"
+        "audio_ios": "audio/barakhadi/29_sh/6_she.mp3",
+        "audio_android": "audio_29_sh_6_she.mp3"
       },
       {
         "id": 7,
-        "en": "Shai",
         "gu": "ષૈ",
+        "en": "Shai",
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/29_sh/7_shai.svg",
-        "audio": "audio/barakhadi/29_sh/7_shai.mp3"
+        "audio_ios": "audio/barakhadi/29_sh/7_shai.mp3",
+        "audio_android": "audio_29_sh_7_shai.mp3"
       },
       {
         "id": 8,
-        "en": "Sho",
         "gu": "ષૉ",
+        "en": "Sho",
         "diacritic": "ો",
         "svg": "svgs/barakhadi/29_sh/8_sho.svg",
-        "audio": "audio/barakhadi/29_sh/8_sho.mp3"
+        "audio_ios": "audio/barakhadi/29_sh/8_sho.mp3",
+        "audio_android": "audio_29_sh_8_sho.mp3"
       },
       {
         "id": 9,
-        "en": "Shau",
         "gu": "ષૌ",
+        "en": "Shau",
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/29_sh/9_shau.svg",
-        "audio": "audio/barakhadi/29_sh/9_shau.mp3"
+        "audio_ios": "audio/barakhadi/29_sh/9_shau.mp3",
+        "audio_android": "audio_29_sh_9_shau.mp3"
       },
       {
         "id": 10,
-        "en": "Sham",
         "gu": "ષં",
+        "en": "Sham",
         "diacritic": "ં",
         "svg": "svgs/barakhadi/29_sh/10_sham.svg",
-        "audio": "audio/barakhadi/29_sh/10_sham.mp3"
+        "audio_ios": "audio/barakhadi/29_sh/10_sham.mp3",
+        "audio_android": "audio_29_sh_10_sham.mp3"
       },
       {
         "id": 11,
-        "en": "Shah",
         "gu": "ષઃ",
+        "en": "Shah",
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/29_sh/11_shah.svg",
-        "audio": "audio/barakhadi/29_sh/11_shah.mp3"
+        "audio_ios": "audio/barakhadi/29_sh/11_shah.mp3",
+        "audio_android": "audio_29_sh_11_shah.mp3"
       }
     ]
   },
@@ -3096,99 +3456,111 @@
     "chars": [
       {
         "id": 0,
-        "en": "S",
         "gu": "સ",
+        "en": "S",
         "diacritic": " ",
         "svg": "svgs/barakhadi/30_s/0_s.svg",
-        "audio": "audio/barakhadi/30_s/0_s.mp3"
+        "audio_ios": "audio/barakhadi/30_s/0_s.mp3",
+        "audio_android": "audio_30_s_0_s.mp3"
       },
       {
         "id": 1,
-        "en": "Sa",
         "gu": "સા",
+        "en": "Sa",
         "diacritic": "ા",
         "svg": "svgs/barakhadi/30_s/1_sa.svg",
-        "audio": "audio/barakhadi/30_s/1_sa.mp3"
+        "audio_ios": "audio/barakhadi/30_s/1_sa.mp3",
+        "audio_android": "audio_30_s_1_sa.mp3"
       },
       {
         "id": 2,
-        "en": "Si",
         "gu": "સિ",
+        "en": "Si",
         "diacritic": "િ",
         "svg": "svgs/barakhadi/30_s/2_si.svg",
-        "audio": "audio/barakhadi/30_s/2_si.mp3"
+        "audio_ios": "audio/barakhadi/30_s/2_si.mp3",
+        "audio_android": "audio_30_s_2_si.mp3"
       },
       {
         "id": 3,
-        "en": "See",
         "gu": "સી",
+        "en": "See",
         "diacritic": "ી",
         "svg": "svgs/barakhadi/30_s/3_see.svg",
-        "audio": "audio/barakhadi/30_s/3_see.mp3"
+        "audio_ios": "audio/barakhadi/30_s/3_see.mp3",
+        "audio_android": "audio_30_s_3_see.mp3"
       },
       {
         "id": 4,
-        "en": "Su",
         "gu": "સુ",
+        "en": "Su",
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/30_s/4_su.svg",
-        "audio": "audio/barakhadi/30_s/4_su.mp3"
+        "audio_ios": "audio/barakhadi/30_s/4_su.mp3",
+        "audio_android": "audio_30_s_4_su.mp3"
       },
       {
         "id": 5,
-        "en": "Soo",
         "gu": "સૂ",
+        "en": "Soo",
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/30_s/5_soo.svg",
-        "audio": "audio/barakhadi/30_s/5_soo.mp3"
+        "audio_ios": "audio/barakhadi/30_s/5_soo.mp3",
+        "audio_android": "audio_30_s_5_soo.mp3"
       },
       {
         "id": 6,
-        "en": "Se",
         "gu": "સે",
+        "en": "Se",
         "diacritic": "ે",
         "svg": "svgs/barakhadi/30_s/6_se.svg",
-        "audio": "audio/barakhadi/30_s/6_se.mp3"
+        "audio_ios": "audio/barakhadi/30_s/6_se.mp3",
+        "audio_android": "audio_30_s_6_se.mp3"
       },
       {
         "id": 7,
-        "en": "Sai",
         "gu": "સૈ",
+        "en": "Sai",
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/30_s/7_sai.svg",
-        "audio": "audio/barakhadi/30_s/7_sai.mp3"
+        "audio_ios": "audio/barakhadi/30_s/7_sai.mp3",
+        "audio_android": "audio_30_s_7_sai.mp3"
       },
       {
         "id": 8,
-        "en": "So",
         "gu": "સો",
+        "en": "So",
         "diacritic": "ો",
         "svg": "svgs/barakhadi/30_s/8_so.svg",
-        "audio": "audio/barakhadi/30_s/8_so.mp3"
+        "audio_ios": "audio/barakhadi/30_s/8_so.mp3",
+        "audio_android": "audio_30_s_8_so.mp3"
       },
       {
         "id": 9,
-        "en": "Sau",
         "gu": "સૌ",
+        "en": "Sau",
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/30_s/9_sau.svg",
-        "audio": "audio/barakhadi/30_s/9_sau.mp3"
+        "audio_ios": "audio/barakhadi/30_s/9_sau.mp3",
+        "audio_android": "audio_30_s_9_sau.mp3"
       },
       {
         "id": 10,
-        "en": "Sam",
         "gu": "સં",
+        "en": "Sam",
         "diacritic": "ં",
         "svg": "svgs/barakhadi/30_s/10_sam.svg",
-        "audio": "audio/barakhadi/30_s/10_sam.mp3"
+        "audio_ios": "audio/barakhadi/30_s/10_sam.mp3",
+        "audio_android": "audio_30_s_10_sam.mp3"
       },
       {
         "id": 11,
-        "en": "Sah",
         "gu": "સઃ",
+        "en": "Sah",
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/30_s/11_sah.svg",
-        "audio": "audio/barakhadi/30_s/11_sah.mp3"
+        "audio_ios": "audio/barakhadi/30_s/11_sah.mp3",
+        "audio_android": "audio_30_s_11_sah.mp3"
       }
     ]
   },
@@ -3199,99 +3571,111 @@
     "chars": [
       {
         "id": 0,
-        "en": "H",
         "gu": "હ",
+        "en": "H",
         "diacritic": " ",
         "svg": "svgs/barakhadi/31_h/0_h.svg",
-        "audio": "audio/barakhadi/31_h/0_h.mp3"
+        "audio_ios": "audio/barakhadi/31_h/0_h.mp3",
+        "audio_android": "audio_31_h_0_h.mp3"
       },
       {
         "id": 1,
-        "en": "Ha",
         "gu": "હા",
+        "en": "Ha",
         "diacritic": "ા",
         "svg": "svgs/barakhadi/31_h/1_ha.svg",
-        "audio": "audio/barakhadi/31_h/1_ha.mp3"
+        "audio_ios": "audio/barakhadi/31_h/1_ha.mp3",
+        "audio_android": "audio_31_h_1_ha.mp3"
       },
       {
         "id": 2,
-        "en": "Hi",
         "gu": "હિ",
+        "en": "Hi",
         "diacritic": "િ",
         "svg": "svgs/barakhadi/31_h/2_hi.svg",
-        "audio": "audio/barakhadi/31_h/2_hi.mp3"
+        "audio_ios": "audio/barakhadi/31_h/2_hi.mp3",
+        "audio_android": "audio_31_h_2_hi.mp3"
       },
       {
         "id": 3,
-        "en": "Hee",
         "gu": "હી",
+        "en": "Hee",
         "diacritic": "ી",
         "svg": "svgs/barakhadi/31_h/3_hee.svg",
-        "audio": "audio/barakhadi/31_h/3_hee.mp3"
+        "audio_ios": "audio/barakhadi/31_h/3_hee.mp3",
+        "audio_android": "audio_31_h_3_hee.mp3"
       },
       {
         "id": 4,
-        "en": "Hu",
         "gu": "હુ",
+        "en": "Hu",
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/31_h/4_hu.svg",
-        "audio": "audio/barakhadi/31_h/4_hu.mp3"
+        "audio_ios": "audio/barakhadi/31_h/4_hu.mp3",
+        "audio_android": "audio_31_h_4_hu.mp3"
       },
       {
         "id": 5,
-        "en": "Hoo",
         "gu": "હૂ",
+        "en": "Hoo",
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/31_h/5_hoo.svg",
-        "audio": "audio/barakhadi/31_h/5_hoo.mp3"
+        "audio_ios": "audio/barakhadi/31_h/5_hoo.mp3",
+        "audio_android": "audio_31_h_5_hoo.mp3"
       },
       {
         "id": 6,
-        "en": "He",
         "gu": "હે",
+        "en": "He",
         "diacritic": "ે",
         "svg": "svgs/barakhadi/31_h/6_he.svg",
-        "audio": "audio/barakhadi/31_h/6_he.mp3"
+        "audio_ios": "audio/barakhadi/31_h/6_he.mp3",
+        "audio_android": "audio_31_h_6_he.mp3"
       },
       {
         "id": 7,
-        "en": "Hai",
         "gu": "હૈ",
+        "en": "Hai",
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/31_h/7_hai.svg",
-        "audio": "audio/barakhadi/31_h/7_hai.mp3"
+        "audio_ios": "audio/barakhadi/31_h/7_hai.mp3",
+        "audio_android": "audio_31_h_7_hai.mp3"
       },
       {
         "id": 8,
-        "en": "Ho",
         "gu": "હો",
+        "en": "Ho",
         "diacritic": "ો",
         "svg": "svgs/barakhadi/31_h/8_ho.svg",
-        "audio": "audio/barakhadi/31_h/8_ho.mp3"
+        "audio_ios": "audio/barakhadi/31_h/8_ho.mp3",
+        "audio_android": "audio_31_h_8_ho.mp3"
       },
       {
         "id": 9,
-        "en": "Hau",
         "gu": "હૌ",
+        "en": "Hau",
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/31_h/9_hau.svg",
-        "audio": "audio/barakhadi/31_h/9_hau.mp3"
+        "audio_ios": "audio/barakhadi/31_h/9_hau.mp3",
+        "audio_android": "audio_31_h_9_hau.mp3"
       },
       {
         "id": 10,
-        "en": "Ham",
         "gu": "હં",
+        "en": "Ham",
         "diacritic": "ં",
         "svg": "svgs/barakhadi/31_h/10_ham.svg",
-        "audio": "audio/barakhadi/31_h/10_ham.mp3"
+        "audio_ios": "audio/barakhadi/31_h/10_ham.mp3",
+        "audio_android": "audio_31_h_10_ham.mp3"
       },
       {
         "id": 11,
-        "en": "Hah",
         "gu": "હઃ",
+        "en": "Hah",
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/31_h/11_hah.svg",
-        "audio": "audio/barakhadi/31_h/11_hah.mp3"
+        "audio_ios": "audio/barakhadi/31_h/11_hah.mp3",
+        "audio_android": "audio_31_h_11_hah.mp3"
       }
     ]
   },
@@ -3302,99 +3686,111 @@
     "chars": [
       {
         "id": 0,
-        "en": "L",
         "gu": "ળ",
+        "en": "L",
         "diacritic": " ",
         "svg": "svgs/barakhadi/32_l/0_l.svg",
-        "audio": "audio/barakhadi/32_l/0_l.mp3"
+        "audio_ios": "audio/barakhadi/32_l/0_l.mp3",
+        "audio_android": "audio_32_l_0_l.mp3"
       },
       {
         "id": 1,
-        "en": "La",
         "gu": "ળા",
+        "en": "La",
         "diacritic": "ા",
         "svg": "svgs/barakhadi/32_l/1_la.svg",
-        "audio": "audio/barakhadi/32_l/1_la.mp3"
+        "audio_ios": "audio/barakhadi/32_l/1_la.mp3",
+        "audio_android": "audio_32_l_1_la.mp3"
       },
       {
         "id": 2,
-        "en": "Li",
         "gu": "ળિ",
+        "en": "Li",
         "diacritic": "િ",
         "svg": "svgs/barakhadi/32_l/2_li.svg",
-        "audio": "audio/barakhadi/32_l/2_li.mp3"
+        "audio_ios": "audio/barakhadi/32_l/2_li.mp3",
+        "audio_android": "audio_32_l_2_li.mp3"
       },
       {
         "id": 3,
-        "en": "Lee",
         "gu": "ળી",
+        "en": "Lee",
         "diacritic": "ી",
         "svg": "svgs/barakhadi/32_l/3_lee.svg",
-        "audio": "audio/barakhadi/32_l/3_lee.mp3"
+        "audio_ios": "audio/barakhadi/32_l/3_lee.mp3",
+        "audio_android": "audio_32_l_3_lee.mp3"
       },
       {
         "id": 4,
-        "en": "Lu",
         "gu": "ળુ",
+        "en": "Lu",
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/32_l/4_lu.svg",
-        "audio": "audio/barakhadi/32_l/4_lu.mp3"
+        "audio_ios": "audio/barakhadi/32_l/4_lu.mp3",
+        "audio_android": "audio_32_l_4_lu.mp3"
       },
       {
         "id": 5,
-        "en": "Loo",
         "gu": "ળૂ",
+        "en": "Loo",
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/32_l/5_loo.svg",
-        "audio": "audio/barakhadi/32_l/5_loo.mp3"
+        "audio_ios": "audio/barakhadi/32_l/5_loo.mp3",
+        "audio_android": "audio_32_l_5_loo.mp3"
       },
       {
         "id": 6,
-        "en": "Le",
         "gu": "ળૅ",
+        "en": "Le",
         "diacritic": "ે",
         "svg": "svgs/barakhadi/32_l/6_le.svg",
-        "audio": "audio/barakhadi/32_l/6_le.mp3"
+        "audio_ios": "audio/barakhadi/32_l/6_le.mp3",
+        "audio_android": "audio_32_l_6_le.mp3"
       },
       {
         "id": 7,
-        "en": "Lai",
         "gu": "ળૈ",
+        "en": "Lai",
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/32_l/7_lai.svg",
-        "audio": "audio/barakhadi/32_l/7_lai.mp3"
+        "audio_ios": "audio/barakhadi/32_l/7_lai.mp3",
+        "audio_android": "audio_32_l_7_lai.mp3"
       },
       {
         "id": 8,
-        "en": "Lo",
         "gu": "ળૉ",
+        "en": "Lo",
         "diacritic": "ો",
         "svg": "svgs/barakhadi/32_l/8_lo.svg",
-        "audio": "audio/barakhadi/32_l/8_lo.mp3"
+        "audio_ios": "audio/barakhadi/32_l/8_lo.mp3",
+        "audio_android": "audio_32_l_8_lo.mp3"
       },
       {
         "id": 9,
-        "en": "Lau",
         "gu": "ળૌ",
+        "en": "Lau",
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/32_l/9_lau.svg",
-        "audio": "audio/barakhadi/32_l/9_lau.mp3"
+        "audio_ios": "audio/barakhadi/32_l/9_lau.mp3",
+        "audio_android": "audio_32_l_9_lau.mp3"
       },
       {
         "id": 10,
-        "en": "Lam",
         "gu": "ળં",
+        "en": "Lam",
         "diacritic": "ં",
         "svg": "svgs/barakhadi/32_l/10_lam.svg",
-        "audio": "audio/barakhadi/32_l/10_lam.mp3"
+        "audio_ios": "audio/barakhadi/32_l/10_lam.mp3",
+        "audio_android": "audio_32_l_10_lam.mp3"
       },
       {
         "id": 11,
-        "en": "lah",
         "gu": "ળઃ",
+        "en": "lah",
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/32_l/11_lah.svg",
-        "audio": "audio/barakhadi/32_l/11_lah.mp3"
+        "audio_ios": "audio/barakhadi/32_l/11_lah.mp3",
+        "audio_android": "audio_32_l_11_lah.mp3"
       }
     ]
   },
@@ -3405,99 +3801,111 @@
     "chars": [
       {
         "id": 0,
-        "en": "X",
         "gu": "ક્ષ",
+        "en": "X",
         "diacritic": " ",
         "svg": "svgs/barakhadi/33_x/0_x.svg",
-        "audio": "audio/barakhadi/33_x/0_x.mp3"
+        "audio_ios": "audio/barakhadi/33_x/0_x.mp3",
+        "audio_android": "audio_33_x_0_x.mp3"
       },
       {
         "id": 1,
-        "en": "Xa",
         "gu": "ક્ષા",
+        "en": "Xa",
         "diacritic": "ા",
         "svg": "svgs/barakhadi/33_x/1_xa.svg",
-        "audio": "audio/barakhadi/33_x/1_xa.mp3"
+        "audio_ios": "audio/barakhadi/33_x/1_xa.mp3",
+        "audio_android": "audio_33_x_1_xa.mp3"
       },
       {
         "id": 2,
-        "en": "Xi",
         "gu": "ક્ષિ",
+        "en": "Xi",
         "diacritic": "િ",
         "svg": "svgs/barakhadi/33_x/2_xi.svg",
-        "audio": "audio/barakhadi/33_x/2_xi.mp3"
+        "audio_ios": "audio/barakhadi/33_x/2_xi.mp3",
+        "audio_android": "audio_33_x_2_xi.mp3"
       },
       {
         "id": 3,
-        "en": "Xee",
         "gu": "ક્ષી",
+        "en": "Xee",
         "diacritic": "ી",
         "svg": "svgs/barakhadi/33_x/3_xee.svg",
-        "audio": "audio/barakhadi/33_x/3_xee.mp3"
+        "audio_ios": "audio/barakhadi/33_x/3_xee.mp3",
+        "audio_android": "audio_33_x_3_xee.mp3"
       },
       {
         "id": 4,
-        "en": "Xu",
         "gu": "ક્ષુ",
+        "en": "Xu",
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/33_x/4_xu.svg",
-        "audio": "audio/barakhadi/33_x/4_xu.mp3"
+        "audio_ios": "audio/barakhadi/33_x/4_xu.mp3",
+        "audio_android": "audio_33_x_4_xu.mp3"
       },
       {
         "id": 5,
-        "en": "Xoo",
         "gu": "ક્ષૂ",
+        "en": "Xoo",
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/33_x/5_xoo.svg",
-        "audio": "audio/barakhadi/33_x/5_xoo.mp3"
+        "audio_ios": "audio/barakhadi/33_x/5_xoo.mp3",
+        "audio_android": "audio_33_x_5_xoo.mp3"
       },
       {
         "id": 6,
-        "en": "Xe",
         "gu": "ક્ષૅ",
+        "en": "Xe",
         "diacritic": "ે",
         "svg": "svgs/barakhadi/33_x/6_xe.svg",
-        "audio": "audio/barakhadi/33_x/6_xe.mp3"
+        "audio_ios": "audio/barakhadi/33_x/6_xe.mp3",
+        "audio_android": "audio_33_x_6_xe.mp3"
       },
       {
         "id": 7,
-        "en": "Xai",
         "gu": "ક્ષૈ",
+        "en": "Xai",
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/33_x/7_xai.svg",
-        "audio": "audio/barakhadi/33_x/7_xai.mp3"
+        "audio_ios": "audio/barakhadi/33_x/7_xai.mp3",
+        "audio_android": "audio_33_x_7_xai.mp3"
       },
       {
         "id": 8,
-        "en": "Xo",
         "gu": "ક્ષૉ",
+        "en": "Xo",
         "diacritic": "ો",
         "svg": "svgs/barakhadi/33_x/8_xo.svg",
-        "audio": "audio/barakhadi/33_x/8_xo.mp3"
+        "audio_ios": "audio/barakhadi/33_x/8_xo.mp3",
+        "audio_android": "audio_33_x_8_xo.mp3"
       },
       {
         "id": 9,
-        "en": "Xau",
         "gu": "ક્ષૌ",
+        "en": "Xau",
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/33_x/9_xau.svg",
-        "audio": "audio/barakhadi/33_x/9_xau.mp3"
+        "audio_ios": "audio/barakhadi/33_x/9_xau.mp3",
+        "audio_android": "audio_33_x_9_xau.mp3"
       },
       {
         "id": 10,
-        "en": "Xam",
         "gu": "ક્ષં",
+        "en": "Xam",
         "diacritic": "ં",
         "svg": "svgs/barakhadi/33_x/10_xam.svg",
-        "audio": "audio/barakhadi/33_x/10_xam.mp3"
+        "audio_ios": "audio/barakhadi/33_x/10_xam.mp3",
+        "audio_android": "audio_33_x_10_xam.mp3"
       },
       {
         "id": 11,
-        "en": "kshah",
         "gu": "ક્ષઃ",
+        "en": "kshah",
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/33_x/11_kshah.svg",
-        "audio": "audio/barakhadi/33_x/11_kshah.mp3"
+        "audio_ios": "audio/barakhadi/33_x/11_kshah.mp3",
+        "audio_android": "audio_33_x_11_kshah.mp3"
       }
     ]
   },
@@ -3508,99 +3916,111 @@
     "chars": [
       {
         "id": 0,
-        "en": "Gy",
         "gu": "જ્ઞ",
+        "en": "Gy",
         "diacritic": " ",
         "svg": "svgs/barakhadi/34_gy/0_gy.svg",
-        "audio": "audio/barakhadi/34_gy/0_gy.mp3"
+        "audio_ios": "audio/barakhadi/34_gy/0_gy.mp3",
+        "audio_android": "audio_34_gy_0_gy.mp3"
       },
       {
         "id": 1,
-        "en": "Gya",
         "gu": "જ્ઞા",
+        "en": "Gya",
         "diacritic": "ા",
         "svg": "svgs/barakhadi/34_gy/1_gya.svg",
-        "audio": "audio/barakhadi/34_gy/1_gya.mp3"
+        "audio_ios": "audio/barakhadi/34_gy/1_gya.mp3",
+        "audio_android": "audio_34_gy_1_gya.mp3"
       },
       {
         "id": 2,
-        "en": "Gyi",
         "gu": "જ્ઞિ",
+        "en": "Gyi",
         "diacritic": "િ",
         "svg": "svgs/barakhadi/34_gy/2_gyi.svg",
-        "audio": "audio/barakhadi/34_gy/2_gyi.mp3"
+        "audio_ios": "audio/barakhadi/34_gy/2_gyi.mp3",
+        "audio_android": "audio_34_gy_2_gyi.mp3"
       },
       {
         "id": 3,
-        "en": "Gyee",
         "gu": "જ્ઞી",
+        "en": "Gyee",
         "diacritic": "ી",
         "svg": "svgs/barakhadi/34_gy/3_gyee.svg",
-        "audio": "audio/barakhadi/34_gy/3_gyee.mp3"
+        "audio_ios": "audio/barakhadi/34_gy/3_gyee.mp3",
+        "audio_android": "audio_34_gy_3_gyee.mp3"
       },
       {
         "id": 4,
-        "en": "Gyu",
         "gu": "જ્ઞુ",
+        "en": "Gyu",
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/34_gy/4_gyu.svg",
-        "audio": "audio/barakhadi/34_gy/4_gyu.mp3"
+        "audio_ios": "audio/barakhadi/34_gy/4_gyu.mp3",
+        "audio_android": "audio_34_gy_4_gyu.mp3"
       },
       {
         "id": 5,
-        "en": "Gyoo",
         "gu": "જ્ઞૂ",
+        "en": "Gyoo",
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/34_gy/5_gyoo.svg",
-        "audio": "audio/barakhadi/34_gy/5_gyoo.mp3"
+        "audio_ios": "audio/barakhadi/34_gy/5_gyoo.mp3",
+        "audio_android": "audio_34_gy_5_gyoo.mp3"
       },
       {
         "id": 6,
-        "en": "Gye",
         "gu": "જ્ઞૅ",
+        "en": "Gye",
         "diacritic": "ે",
         "svg": "svgs/barakhadi/34_gy/6_gye.svg",
-        "audio": "audio/barakhadi/34_gy/6_gye.mp3"
+        "audio_ios": "audio/barakhadi/34_gy/6_gye.mp3",
+        "audio_android": "audio_34_gy_6_gye.mp3"
       },
       {
         "id": 7,
-        "en": "Gyai",
         "gu": "જ્ઞૈ",
+        "en": "Gyai",
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/34_gy/7_gyai.svg",
-        "audio": "audio/barakhadi/34_gy/7_gyai.mp3"
+        "audio_ios": "audio/barakhadi/34_gy/7_gyai.mp3",
+        "audio_android": "audio_34_gy_7_gyai.mp3"
       },
       {
         "id": 8,
-        "en": "Gyo",
         "gu": "જ્ઞૉ",
+        "en": "Gyo",
         "diacritic": "ો",
         "svg": "svgs/barakhadi/34_gy/8_gyo.svg",
-        "audio": "audio/barakhadi/34_gy/8_gyo.mp3"
+        "audio_ios": "audio/barakhadi/34_gy/8_gyo.mp3",
+        "audio_android": "audio_34_gy_8_gyo.mp3"
       },
       {
         "id": 9,
-        "en": "Gyau",
         "gu": "જ્ઞૌ",
+        "en": "Gyau",
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/34_gy/9_gyau.svg",
-        "audio": "audio/barakhadi/34_gy/9_gyau.mp3"
+        "audio_ios": "audio/barakhadi/34_gy/9_gyau.mp3",
+        "audio_android": "audio_34_gy_9_gyau.mp3"
       },
       {
         "id": 10,
-        "en": "Gyam",
         "gu": "જ્ઞં",
+        "en": "Gyam",
         "diacritic": "ં",
         "svg": "svgs/barakhadi/34_gy/10_gyam.svg",
-        "audio": "audio/barakhadi/34_gy/10_gyam.mp3"
+        "audio_ios": "audio/barakhadi/34_gy/10_gyam.mp3",
+        "audio_android": "audio_34_gy_10_gyam.mp3"
       },
       {
         "id": 11,
-        "en": "gyah",
         "gu": "જ્ઞઃ",
+        "en": "gyah",
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/34_gy/11_gyah.svg",
-        "audio": "audio/barakhadi/34_gy/11_gyah.mp3"
+        "audio_ios": "audio/barakhadi/34_gy/11_gyah.mp3",
+        "audio_android": "audio_34_gy_11_gyah.mp3"
       }
     ]
   }

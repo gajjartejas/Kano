@@ -6,8 +6,8 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
 import { DraxProvider, DraxView } from 'react-native-drax';
 import { Appbar, Button, Text, useTheme, TouchableRipple } from 'react-native-paper';
-import Animated, { Easing, FadeIn, FadeInDown, Layout } from 'react-native-reanimated';
 import TinderCard from 'react-tinder-card';
+import Animated, { Easing, FadeIn, FadeInDown, Layout } from 'react-native-reanimated';
 
 //App modules
 import { ICharCellItem, ICharCellListSection } from 'app/components/CharCellItem';
@@ -80,6 +80,17 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
         ]
       : groupedEntries;
   }, [groupedEntries, isRandomMode]);
+
+  useEffect(() => {
+    //Play audio after screen loads/animation completes
+    if (cardPerGroup.length < 1 || practiceMode) {
+      return;
+    }
+    let refTimeout = setTimeout(() => {
+      player.play(cardPerGroup[0].audio);
+    }, 1000);
+    return () => clearTimeout(refTimeout);
+  }, [cardPerGroup, player, practiceMode]);
 
   useEffect(() => {
     if (progressIndex % GROUP_COUNT === 1) {
@@ -211,7 +222,9 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
     //Remaining  card -> Incorrect Answer
     if (payload !== item.id && !incorrectAnswerIds.map(l => l.right).includes(item.id)) {
       let newIds = [...incorrectAnswerIds, { left: payload, right: item.id }];
-      setIncorrectAnswerIds(newIds);
+      setTimeout(() => {
+        setIncorrectAnswerIds(newIds);
+      }, 500);
     }
   };
 
@@ -341,6 +354,7 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
                     return (
                       <DraxView
                         key={v.id.toString()}
+                        animateSnapback={false}
                         draggable={!correctAnswerIds.map(l => l.left).includes(v.id)}
                         draggingStyle={styles.dragging}
                         dragReleasedStyle={styles.dragging}
@@ -361,6 +375,7 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
                   {practiceRightCardPerGroup.map((item: ICharCellItem, index: number) => {
                     return (
                       <DraxView
+                        receptive
                         key={item.id.toString()}
                         style={[
                           styles.receiver,
@@ -370,6 +385,7 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
                         ]}
                         draggingStyle={styles.dragging}
                         dragReleasedStyle={styles.dragging}
+                        longPressDelay={0}
                         receivingStyle={[styles.receiving, { borderColor: colors.primary }]}
                         onReceiveDragDrop={({ dragged: { payload } }) => onReceiveDragDrop(payload, item, index)}>
                         <Text style={styles.practiceCardText}>{item.en}</Text>

@@ -42,7 +42,7 @@ const License = ({ navigation }: Props) => {
     navigation.pop();
   };
 
-  //npm-license-crawler -onlyDirectDependencies -json licenses.json
+  //npx npm-license-crawler -onlyDirectDependencies -json licenses.json
   useEffect(() => {
     InteractionManager.runAfterInteractions(() => {
       const licenses: { [id: string]: ILicense } = require('../../../../licenses.json');

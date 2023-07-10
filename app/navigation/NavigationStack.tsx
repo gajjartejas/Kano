@@ -126,7 +126,7 @@ const RootNavigation: React.FC = () => {
         <StatusBar
           backgroundColor={isDark ? '#000000' : '#00000000'}
           barStyle={isDark ? 'light-content' : 'dark-content'}
-          translucent={false}
+          translucent={true}
         />
         <Stack.Navigator>
           <Stack.Screen name="LoggedInTabNavigator" component={LoggedInTabNavigator} options={homeOptions} />

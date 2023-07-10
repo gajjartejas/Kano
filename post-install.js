@@ -27,8 +27,8 @@ const destAssets = [
   './android/app/src/main/assets/svgs/numbers',
   './ios/assets/audio/barakhadi',
   './ios/assets/audio/numbers',
-  './android/app/src/main/assets/audio/barakhadi',
-  './android/app/src/main/assets/audio/numbers',
+  './android/app/src/main/res/raw',
+  './android/app/src/main/res/raw',
 ];
 
 for (let i = 0; i < sourceAssets.length; i++) {
@@ -43,6 +43,24 @@ for (let i = 0; i < sourceAssets.length; i++) {
       dot: true,
       junk: true,
       debug: true,
+      filter: path => {
+        if (i === 6 || i === 7) {
+          if (!path.includes('.mp3')) {
+            //Ignore Folder
+            return null;
+          }
+          return `audio_${path.replace('/', '_')}`;
+        } else {
+          return path;
+        }
+      },
+      rename: path => {
+        if (i === 6 || i === 7) {
+          return `audio_${path.replace('/', '_')}`;
+        } else {
+          return path;
+        }
+      },
     },
     error => {
       console.log(error);
