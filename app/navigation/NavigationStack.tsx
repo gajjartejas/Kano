@@ -8,6 +8,7 @@ import { adaptNavigationTheme, MD3DarkTheme, MD3LightTheme, Provider as PaperPro
 import { useSelector } from 'react-redux';
 import analytics from '@react-native-firebase/analytics';
 import { DarkTheme as NavigationDarkTheme, DefaultTheme as NavigationDefaultTheme } from '@react-navigation/native';
+import Toast from 'react-native-toast-message';
 
 const { LightTheme, DarkTheme } = adaptNavigationTheme({
   reactNavigationLight: NavigationDefaultTheme,
@@ -22,6 +23,7 @@ import IState from 'app/models/models/appState';
 
 //App Modules
 import { HomeTabNavigatorParams } from 'app/navigation/types';
+import useToastConfig from 'app/hooks/useToastConfig';
 
 const homeOptions: Object = {
   title: 'Home',
@@ -39,6 +41,7 @@ const RootNavigation: React.FC = () => {
 
   const isDark = useSelector((state: IState) => state.themeReducer.isDark);
   const Stack = createNativeStackNavigator<HomeTabNavigatorParams>();
+  const toastConfig = useToastConfig();
 
   const PaperThemeDefault = {
     ...MD3LightTheme,
@@ -131,6 +134,7 @@ const RootNavigation: React.FC = () => {
         <Stack.Navigator>
           <Stack.Screen name="LoggedInTabNavigator" component={LoggedInTabNavigator} options={homeOptions} />
         </Stack.Navigator>
+        <Toast config={toastConfig} />
       </NavigationContainer>
     </PaperProvider>
   );

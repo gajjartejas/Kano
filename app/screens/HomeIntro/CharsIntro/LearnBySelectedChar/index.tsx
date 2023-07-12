@@ -137,7 +137,7 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
         <Text style={[styles.listHeaderText, { color: colors.textTitle }]}>{titleText}</Text>
         <Chip
           selectedColor={allSelected ? colors.white : colors.primary}
-          style={{ backgroundColor: allSelected ? colors.primary : colors.white }}
+          style={[styles.chipStyle, { backgroundColor: allSelected ? colors.primary : colors.white }]}
           textStyle={[styles.chipText, { color: allSelected ? colors.white : colors.primary }]}
           icon={allSelected ? 'check-circle' : 'check-circle-outline'}
           onPress={() => onSelectCheckbox(index)}>

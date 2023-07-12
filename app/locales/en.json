@@ -9,6 +9,15 @@
     "ok": "OK",
     "cancel": "CANCEL"
   },
+  "hints": {
+    "card": {
+      "hint1": "Swipe 👈left/right👉 for next card",
+      "hint2": "👆tap on a card to repeat"
+    },
+    "chart": {
+      "hint1": "👆Tap to see character details."
+    }
+  },
   "about": {
     "sendFeedback": "Send Feedback",
     "rateApp": "Rate App",
