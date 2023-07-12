@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
   },
   listHeaderView: {
     paddingTop: 16,
-    paddingBottom: 4,
+    paddingBottom: 12,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -64,6 +64,7 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     fontFamily: Config.Fonts.NotoSansGujarati.Medium,
   },
+  chipStyle: {},
   chipText: { fontSize: 12 },
   emptyListHeader: {
     paddingVertical: 8,
@@ -71,7 +72,7 @@ const styles = StyleSheet.create({
   listContentContainer: { paddingVertical: 8 },
   listContainer: { flex: 1 },
   continueButtonContainer: {},
-  continueButton: { height: 44, marginHorizontal: 20 },
+  continueButton: { marginHorizontal: 20 },
 });
 
 export default styles;

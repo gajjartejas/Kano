@@ -19,6 +19,8 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import useSoundPlayer from 'app/hooks/useAudioPlayer';
 import { LearnCharsMode, LearnCharsType, LoggedInTabNavigatorParams } from 'app/navigation/types';
 import { AppTheme } from 'app/models/theme';
+import useToastMessages from 'app/hooks/useToastMessages';
+import useHintConfig from 'app/hooks/useHintConfig';
 
 //Params
 type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'LearnCharsCard'>;
@@ -42,6 +44,8 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
   const { type, learnMode, onlyInclude, isRandomMode, color } = route.params;
   const groupedEntries = Hooks.ChartItemForTypes.useChartSectionsForTypes(type, isRandomMode, onlyInclude);
   const isLearningMode = learnMode === LearnCharsMode.Learn;
+  const [cardHints] = useHintConfig();
+  useToastMessages(cardHints);
 
   //States
   const [playing, setPlaying] = useState(true);

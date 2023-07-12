@@ -14,6 +14,8 @@ import Hooks from 'app/hooks/index';
 import { ICharCellItem } from 'app/components/CharCellItem';
 import { LearnCharsType, LoggedInTabNavigatorParams } from 'app/navigation/types';
 import { AppTheme } from 'app/models/theme';
+import useHintConfig from 'app/hooks/useHintConfig';
+import useToastMessages from 'app/hooks/useToastMessages';
 
 //Params
 type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'LearnCharsChart'>;
@@ -33,6 +35,8 @@ const LearnCharsChart = ({ navigation, route }: Props) => {
   const { t } = useTranslation();
   const mappedGroupedEntries = groupedEntries.map(v => [v.title, v.data]).flat(1);
   const dim = useWindowDimensions();
+  const [_, chartHints] = useHintConfig();
+  useToastMessages(chartHints);
 
   //States
   const [title, setTitle] = useState('');
