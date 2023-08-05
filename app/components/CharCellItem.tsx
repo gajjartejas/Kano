@@ -16,6 +16,8 @@ export interface ICharCellItem {
   diacritic: string;
   svg: string;
   audio: string;
+  totalLength: number;
+  groups: number;
 }
 
 export interface ICharCellListSection {

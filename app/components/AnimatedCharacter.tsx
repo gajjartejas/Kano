@@ -1,26 +1,27 @@
-import React, { useEffect, useState } from 'react';
+import React, { forwardRef, useEffect, useImperativeHandle, useState } from 'react';
 
 //App Modules
 import useSvgReader from 'app/hooks/useSvgReader';
 
 //ThirdParty
-import { ClipPath, Defs, G, Path, PathProps, Svg } from 'react-native-svg';
+import { ClipPath, Defs, G, Path, PathProps, Svg, Text, TextPath } from 'react-native-svg';
 import { svgPathProperties } from 'svg-path-properties';
 import AnimatedStroke from './AnimatedStroke';
+import { ColorValue } from 'react-native';
 
 //Interface
 interface IAnimatedCharacter extends PathProps {
   /**
    * Initial delay in ms
    */
-  initialDelay: number;
+  initialDelay?: number;
   /**
    * Delay in ms
    */
-  duration: number;
+  duration?: number;
   path: string;
   emptyStroke: string;
-  play: boolean;
+  play?: boolean;
   /**
    * Callback function
    *
@@ -33,6 +34,14 @@ interface IAnimatedCharacter extends PathProps {
    * Called when animation finished
    */
   onFinish?: () => void;
+
+  showArrow?: boolean;
+
+  highlightStrokeIndex?: number;
+  highlightGroupIndex?: number;
+  highlightStroke?: ColorValue;
+  arrowFill?: ColorValue;
+  disableStrokeAnimation?: boolean;
 }
 
 interface IAnimatedCharacterStrokeTiming {
@@ -45,15 +54,36 @@ interface IAnimatedCharacterStrokeGroupTiming {
   timings: IAnimatedCharacterStrokeTiming[];
 }
 
-const AnimatedCharacter = (props: IAnimatedCharacter) => {
+export interface IAnimatedCharacterRef extends PathProps {
+  reset: () => void;
+}
+
+const AnimatedCharacter = forwardRef<IAnimatedCharacterRef, IAnimatedCharacter>((props, ref) => {
   const { parsedSvg, readSvg } = useSvgReader();
   const [strokeTiming, setStrokeTiming] = useState<IAnimatedCharacterStrokeGroupTiming[]>([]);
 
-  const initialDelay = props.initialDelay;
+  const initialDelay = props.initialDelay === undefined ? 0 : props.initialDelay;
   const path = props.path;
   const emptyStroke = props.emptyStroke;
-  const play = props.play;
-  const duration = props.duration;
+  const play = props.play === undefined ? true : props.play;
+  const duration = props.duration === undefined ? 0 : props.duration;
+  const showArrow = props.showArrow;
+  const highlightGroupIndex = props.highlightGroupIndex;
+  const highlightStrokeIndex = props.highlightStrokeIndex;
+  const stroke = props.stroke;
+  const highlightStroke = props.highlightStroke;
+  const arrowFill = props.arrowFill;
+  const disableStrokeAnimation = props.disableStrokeAnimation;
+
+  useImperativeHandle(ref, () => ({
+    reset: () => {
+      let oldTimings = [...strokeTiming];
+      setStrokeTiming([]);
+      setTimeout(() => {
+        setStrokeTiming(oldTimings);
+      }, 1);
+    },
+  }));
 
   useEffect(() => {
     if (!parsedSvg) {
@@ -90,17 +120,13 @@ const AnimatedCharacter = (props: IAnimatedCharacter) => {
 
       return { timings: res };
     });
-    console.log(JSON.stringify(timings));
+
     setStrokeTiming(timings);
   }, [initialDelay, parsedSvg, duration]);
 
   useEffect(() => {
     readSvg(path);
   }, [path, readSvg]);
-
-  if (!parsedSvg || strokeTiming.length < 1) {
-    return null;
-  }
 
   const onFinish = (index: number, length: number) => {
     if (props.onProgress && typeof props.onProgress === 'function') {
@@ -110,6 +136,10 @@ const AnimatedCharacter = (props: IAnimatedCharacter) => {
       props.onFinish();
     }
   };
+
+  if (!parsedSvg) {
+    return null;
+  }
 
   return (
     <Svg
@@ -129,36 +159,78 @@ const AnimatedCharacter = (props: IAnimatedCharacter) => {
         })}
       </Defs>
 
-      {parsedSvg?.groups.map((g, groupIndex) => {
-        let otherSVGProps = g.transform ? { transform: g.transform } : null;
-        return (
-          <G key={g.id} id={g.id} {...otherSVGProps}>
-            {g.svgPaths.map(p => {
-              return <Path key={p.id} fill={emptyStroke} d={p.d} />;
-            })}
-            {play &&
-              g.svgClipPaths.map((p, index) => {
-                return (
-                  <AnimatedStroke
-                    {...props}
-                    key={p.id}
-                    onFinish={() => {
-                      onFinish(index, g.svgClipPaths.length);
-                    }}
-                    d={p.d}
-                    clipPath={`url(#path-clip${g.id})`}
-                    delay={strokeTiming[groupIndex].timings[index].delay}
-                    duration={strokeTiming[groupIndex].timings[index].duration}
-                    length={strokeTiming[groupIndex].timings[index].length}
-                    fill={'transparent'}
-                  />
-                );
+      {strokeTiming.length > 0 &&
+        parsedSvg?.groups.map((g, groupIndex) => {
+          let otherSVGProps = g.transform ? { transform: g.transform } : null;
+          return (
+            <G key={g.id} id={g.id} {...otherSVGProps}>
+              {g.svgPaths.map(p => {
+                return <Path key={p.id} fill={emptyStroke} d={p.d} />;
               })}
-          </G>
-        );
-      })}
+              {!disableStrokeAnimation &&
+                play &&
+                g.svgClipPaths.map((p, index) => {
+                  return (
+                    <AnimatedStroke
+                      {...props}
+                      id={p.id}
+                      key={p.id}
+                      onFinish={() => {
+                        onFinish(index, g.svgClipPaths.length);
+                      }}
+                      d={p.d}
+                      clipPath={`url(#path-clip${g.id})`}
+                      delay={strokeTiming[groupIndex].timings[index].delay}
+                      duration={strokeTiming[groupIndex].timings[index].duration}
+                      length={strokeTiming[groupIndex].timings[index].length}
+                      fill={'transparent'}
+                      stroke={
+                        highlightGroupIndex === groupIndex && highlightStrokeIndex === index ? highlightStroke : stroke
+                      }
+                    />
+                  );
+                })}
+              {disableStrokeAnimation &&
+                play &&
+                g.svgClipPaths.map((p, index) => {
+                  return (
+                    <Path
+                      {...props}
+                      id={p.id}
+                      key={p.id}
+                      d={p.d}
+                      clipPath={`url(#path-clip${g.id})`}
+                      fill={'transparent'}
+                      stroke={
+                        highlightGroupIndex === groupIndex && highlightStrokeIndex === index ? highlightStroke : stroke
+                      }
+                    />
+                  );
+                })}
+              {showArrow &&
+                g.svgClipPaths.map(p => {
+                  const properties = new svgPathProperties(p.d);
+                  let tl = properties.getTotalLength() * 0.2;
+                  let tr = Math.round(tl);
+                  let end = new Array(tr).fill(0).map((_, i) => (i * 100) / tl);
+
+                  return (
+                    <Text fill={arrowFill} alignmentBaseline={'middle'} key={p.id} fontSize={6}>
+                      {end.map(v => {
+                        return (
+                          <TextPath key={v.toString()} href={`#${p.id}`} startOffset={`${v}%`}>
+                            {'➤'}
+                          </TextPath>
+                        );
+                      })}
+                    </Text>
+                  );
+                })}
+            </G>
+          );
+        })}
     </Svg>
   );
-};
-
+});
+AnimatedCharacter.displayName = 'AnimatedCharacter';
 export default AnimatedCharacter;

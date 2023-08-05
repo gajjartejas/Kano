@@ -172,12 +172,12 @@
     "header": {
       "title": "Character Info"
     },
-    "charactor": "CHARACTER",
+    "character": "CHARACTER",
     "diacritic": "DIACRITIC",
-    "englishCharactor": "ENGLISH CHARACTER",
+    "englishCharacter": "ENGLISH CHARACTER",
     "numberOfStrokes": "NUMBER OF STROKES",
-    "compaxity": "COMPLEXITY",
-    "length": "LENGTH",
+    "complexity": "COMPLEXITY",
+    "length": "STROKE LENGTH",
     "moreInfo": "MORE INFO",
     "viewStrokeOrder": "VIEW STROKE ORDER",
     "viewAnimatedDrawing": "VIEW ANIMATED DRAWING",
@@ -209,5 +209,16 @@
     "section": "Select at least one character.",
     "selectAll": "Select All",
     "unselectAll": "Unselect All"
+  },
+  "LearnCharStrokeOrder": {
+    "header": {
+      "title": "Stroke Order"
+    }
+  },
+  "LearnCharAnimatedDrawing": {
+    "header": {
+      "title": "Animated Drawing"
+    },
+    "repeat": "REPEAT"
   }
 }

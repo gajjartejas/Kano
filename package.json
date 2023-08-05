@@ -12,7 +12,6 @@
     "license-crawler": "npx npm-license-crawler -onlyDirectDependencies -json licenses.json"
   },
   "dependencies": {
-    "@gorhom/bottom-sheet": "^4.4.7",
     "@react-native-async-storage/async-storage": "^1.19.0",
     "@react-native-firebase/analytics": "^18.1.0",
     "@react-native-firebase/app": "^18.1.0",

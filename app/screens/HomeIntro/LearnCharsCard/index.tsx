@@ -291,7 +291,7 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
     <SafeAreaView edges={['bottom']} style={[styles.container, { backgroundColor: `${color}15` }]}>
       <Appbar.Header style={{ backgroundColor: colors.background }}>
         <Appbar.BackAction onPress={onGoBack} />
-        <Appbar.Content title={title} subtitle="" />
+        <Appbar.Content title={title} />
       </Appbar.Header>
       <DraxProvider>
         <Components.AppBaseView edges={['bottom', 'left', 'right']} style={styles.safeArea}>

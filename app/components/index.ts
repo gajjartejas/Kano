@@ -13,7 +13,6 @@ import VowelstListItem from './CharListItem';
 import NumeralListItem from './CharListItem';
 import CharCellItem from './CharCellItem';
 import AppTitleValueItemCell from './AppTitleValueItemCell';
-import StrokeOrderBottomSheet from './StrokeOrderBottomSheet';
 import LearnCharInfoItemCell from './LearnCharInfoItemCell';
 import AppLevelFinishDialog from './AppLevelFinishDialog';
 import CharSelectCellItem from './CharSelectCellItem';
@@ -36,7 +35,6 @@ const Components = {
   NumeralListItem,
   CharCellItem,
   AppTitleValueItemCell,
-  StrokeOrderBottomSheet,
   LearnCharInfoItemCell,
   AppLevelFinishDialog,
   CharSelectCellItem,

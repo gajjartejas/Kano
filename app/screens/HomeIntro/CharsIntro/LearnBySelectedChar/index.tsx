@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react';
-import { View, useWindowDimensions } from 'react-native';
+import { View, useWindowDimensions, Platform } from 'react-native';
 
 //ThirdParty
 import { Appbar, Button, Chip, Text, useTheme } from 'react-native-paper';
@@ -182,11 +182,12 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
     setSelectedIds(newSelectedIds);
   };
 
+  const otherProps = Platform.OS === 'ios' ? { statusBarHeight: 0 } : {};
   return (
     <SafeAreaView edges={['bottom']} style={[styles.container, { backgroundColor: `${color}15` }]}>
-      <Appbar.Header style={{ backgroundColor: colors.background }}>
-        <Appbar.BackAction onPress={onGoBack} />
-        <Appbar.Content title={t('learnBySelectedChar.header.title')} subtitle="" />
+      <Appbar.Header style={{ backgroundColor: colors.background }} {...otherProps}>
+        <Appbar.Action icon={'chevron-down'} onPress={onGoBack} />
+        <Appbar.Content title={t('learnBySelectedChar.header.title')} />
       </Appbar.Header>
       <Components.AppBaseView edges={['bottom', 'left', 'right']} style={styles.safeArea}>
         {!!numberOfColumns && (

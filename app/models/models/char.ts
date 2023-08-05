@@ -22,4 +22,6 @@ export interface ICharInfo {
   svg: string;
   audio_ios: string;
   audio_android: string;
+  total_length: number;
+  groups: number;
 }

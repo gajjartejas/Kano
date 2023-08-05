@@ -36,7 +36,7 @@ const GujaratiScriptIntro = ({ navigation }: Props) => {
     <View style={[styles.container, { backgroundColor: colors.background }]}>
       <Appbar.Header style={{ backgroundColor: colors.background }}>
         <Appbar.BackAction onPress={onGoBack} />
-        <Appbar.Content title={t('learnIntroScreen.header.title')} subtitle="" />
+        <Appbar.Content title={t('learnIntroScreen.header.title')} />
       </Appbar.Header>
       <Components.AppBaseView edges={['bottom', 'left', 'right']} style={styles.safeArea}>
         <Button
@@ -51,12 +51,13 @@ const GujaratiScriptIntro = ({ navigation }: Props) => {
             layout={Layout.springify()}
             style={styles.animatedChar}>
             <AnimatedCharacter
-              emptyStroke="#00000020"
-              stroke="black"
+              emptyStroke="#ffffff10"
+              stroke="#ff0000"
+              showArrow={true}
               strokeWidth={6}
               play
               initialDelay={0}
-              path={'svgs/33_x/1_xa.svg'}
+              path={'svgs/barakhadi/1_k/1_ka.svg'}
               duration={1000}
             />
           </Animated.View>

@@ -13,6 +13,12 @@ export interface AboutParams {}
 export interface SelectAppearanceParams {}
 export interface TranslatorsParams {}
 export interface MoreTabParams {}
+export interface LearnCharStrokeOrderParams {
+  svgPath: string;
+}
+export interface LearnCharAnimatedDrawingParams {
+  svgPath: string;
+}
 
 export enum LearnCharsType {
   Vowel = 'Vowel',
@@ -74,6 +80,8 @@ export type LoggedInTabNavigatorParams = {
   GujaratiScriptIntro: GujaratiScriptIntroParams;
   DashboardTab: DashboardTabParams;
   MoreTab: MoreTabParams;
+  LearnCharStrokeOrder: LearnCharStrokeOrderParams;
+  LearnCharAnimatedDrawing: LearnCharAnimatedDrawingParams;
 };
 
 export type HomeTabsNavigatorParams = {

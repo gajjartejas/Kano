@@ -3,6 +3,8 @@ import { Platform } from 'react-native';
 
 //Third Party
 import { DOMParser } from '@xmldom/xmldom';
+import { svgPathProperties } from 'svg-path-properties';
+
 const RNFS = require('react-native-fs');
 
 //Interface
@@ -11,6 +13,7 @@ interface IParsedSVG {
   width?: string | null;
   height?: string | null;
   groups: IParsedSVGGroup[];
+  totalLength: number;
 }
 
 interface IParsedSVGPath {
@@ -80,7 +83,7 @@ const useSvgReader = () => {
     const groups = doc.getElementsByTagName('g');
 
     const svgProps = doc.getElementsByTagName('svg');
-
+    let totalLength = 0;
     let svgGroups: IParsedSVGGroup[] = [];
 
     for (let i = 0; i < groups.length; i++) {
@@ -101,8 +104,11 @@ const useSvgReader = () => {
           if (attribute.nodeName === 'inkscape:label') {
             isPath = !!attribute.nodeValue?.includes('p');
             pathDicts.id = attribute.nodeValue;
+            if (isPath) {
+              const properties = new svgPathProperties(pathDicts.d);
+              totalLength = totalLength + properties.getTotalLength();
+            }
           } else if (attribute.nodeName === 'd') {
-            pathDicts.d = attribute.nodeValue;
             pathDicts.d = attribute.nodeValue;
           }
         }
@@ -112,7 +118,7 @@ const useSvgReader = () => {
           svgClipPaths.push(pathDicts);
         }
       }
-      let svgGroup: IParsedSVGGroup = {
+      const svgGroup: IParsedSVGGroup = {
         id: group.getAttribute('id')!,
         transform: group.getAttribute('transform'),
         svgPaths: svgPaths,
@@ -121,16 +127,15 @@ const useSvgReader = () => {
       svgGroups.push(svgGroup);
     }
 
-    let parsedSVG = {
+    return {
       id: svgProps[0].getAttribute('id')!,
       width: svgProps[0].getAttribute('width'),
       height: svgProps[0].getAttribute('height'),
       groups: svgGroups,
+      totalLength: totalLength,
     };
-
-    return parsedSVG;
   };
-  return { parsedSvg, error, readSvg, readSvgSilently };
+  return { parsedSvg, error, readSvg, readSvgSilently, parseSvgText };
 };
 
 export default useSvgReader;

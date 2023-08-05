@@ -7,7 +7,9 @@
     "name_gu": "શૂન્ય",
     "svg": "svgs/numbers/0_num.svg",
     "audio_ios": "audio/numbers/0_num.mp3",
-    "audio_android": "audio_0_num.mp3"
+    "audio_android": "audio_0_num.mp3",
+    "total_length": 222.23560090513206,
+    "groups": 1
   },
   {
     "id": 1,
@@ -17,7 +19,9 @@
     "name_gu": "એક",
     "svg": "svgs/numbers/1_num.svg",
     "audio_ios": "audio/numbers/1_num.mp3",
-    "audio_android": "audio_1_num.mp3"
+    "audio_android": "audio_1_num.mp3",
+    "total_length": 243.72843123074614,
+    "groups": 1
   },
   {
     "id": 2,
@@ -27,7 +31,9 @@
     "name_gu": "બે",
     "svg": "svgs/numbers/2_num.svg",
     "audio_ios": "audio/numbers/2_num.mp3",
-    "audio_android": "audio_2_num.mp3"
+    "audio_android": "audio_2_num.mp3",
+    "total_length": 254.61885564844175,
+    "groups": 1
   },
   {
     "id": 3,
@@ -37,7 +43,9 @@
     "name_gu": "ત્રણ",
     "svg": "svgs/numbers/3_num.svg",
     "audio_ios": "audio/numbers/3_num.mp3",
-    "audio_android": "audio_3_num.mp3"
+    "audio_android": "audio_3_num.mp3",
+    "total_length": 282.57751122198056,
+    "groups": 1
   },
   {
     "id": 4,
@@ -47,7 +55,9 @@
     "name_gu": "ચાર",
     "svg": "svgs/numbers/4_num.svg",
     "audio_ios": "audio/numbers/4_num.mp3",
-    "audio_android": "audio_4_num.mp3"
+    "audio_android": "audio_4_num.mp3",
+    "total_length": 304.25189571067574,
+    "groups": 1
   },
   {
     "id": 5,
@@ -57,7 +67,9 @@
     "name_gu": "પાંચ",
     "svg": "svgs/numbers/5_num.svg",
     "audio_ios": "audio/numbers/5_num.mp3",
-    "audio_android": "audio_5_num.mp3"
+    "audio_android": "audio_5_num.mp3",
+    "total_length": 273.63023982378974,
+    "groups": 1
   },
   {
     "id": 6,
@@ -67,7 +79,9 @@
     "name_gu": "છ",
     "svg": "svgs/numbers/6_num.svg",
     "audio_ios": "audio/numbers/6_num.mp3",
-    "audio_android": "audio_6_num.mp3"
+    "audio_android": "audio_6_num.mp3",
+    "total_length": 323.614435151036,
+    "groups": 1
   },
   {
     "id": 7,
@@ -77,7 +91,9 @@
     "name_gu": "સાત",
     "svg": "svgs/numbers/7_num.svg",
     "audio_ios": "audio/numbers/7_num.mp3",
-    "audio_android": "audio_7_num.mp3"
+    "audio_android": "audio_7_num.mp3",
+    "total_length": 348.80874672806095,
+    "groups": 1
   },
   {
     "id": 8,
@@ -87,7 +103,9 @@
     "name_gu": "આઠ",
     "svg": "svgs/numbers/8_num.svg",
     "audio_ios": "audio/numbers/8_num.mp3",
-    "audio_android": "audio_8_num.mp3"
+    "audio_android": "audio_8_num.mp3",
+    "total_length": 215.94994287032355,
+    "groups": 1
   },
   {
     "id": 9,
@@ -97,7 +115,9 @@
     "name_gu": "નવ",
     "svg": "svgs/numbers/9_num.svg",
     "audio_ios": "audio/numbers/9_num.mp3",
-    "audio_android": "audio_9_num.mp3"
+    "audio_android": "audio_9_num.mp3",
+    "total_length": 275.9634112450269,
+    "groups": 1
   },
   {
     "id": 10,
@@ -107,7 +127,9 @@
     "name_gu": "દસ",
     "svg": "svgs/numbers/10_num.svg",
     "audio_ios": "audio/numbers/10_num.mp3",
-    "audio_android": "audio_10_num.mp3"
+    "audio_android": "audio_10_num.mp3",
+    "total_length": 465.9640321358782,
+    "groups": 2
   },
   {
     "id": 11,
@@ -117,7 +139,9 @@
     "name_gu": "અગિયાર",
     "svg": "svgs/numbers/11_num.svg",
     "audio_ios": "audio/numbers/11_num.mp3",
-    "audio_android": "audio_11_num.mp3"
+    "audio_android": "audio_11_num.mp3",
+    "total_length": 487.53841908863785,
+    "groups": 2
   },
   {
     "id": 12,
@@ -127,7 +151,9 @@
     "name_gu": "બાર",
     "svg": "svgs/numbers/12_num.svg",
     "audio_ios": "audio/numbers/12_num.mp3",
-    "audio_android": "audio_12_num.mp3"
+    "audio_android": "audio_12_num.mp3",
+    "total_length": 498.3472868791879,
+    "groups": 2
   },
   {
     "id": 13,
@@ -137,7 +163,9 @@
     "name_gu": "તેર",
     "svg": "svgs/numbers/13_num.svg",
     "audio_ios": "audio/numbers/13_num.mp3",
-    "audio_android": "audio_13_num.mp3"
+    "audio_android": "audio_13_num.mp3",
+    "total_length": 526.3059424527266,
+    "groups": 2
   },
   {
     "id": 14,
@@ -147,7 +175,9 @@
     "name_gu": "ચૌદ",
     "svg": "svgs/numbers/14_num.svg",
     "audio_ios": "audio/numbers/14_num.mp3",
-    "audio_android": "audio_14_num.mp3"
+    "audio_android": "audio_14_num.mp3",
+    "total_length": 547.9803269414219,
+    "groups": 2
   },
   {
     "id": 15,
@@ -157,7 +187,9 @@
     "name_gu": "પંદર",
     "svg": "svgs/numbers/15_num.svg",
     "audio_ios": "audio/numbers/15_num.mp3",
-    "audio_android": "audio_15_num.mp3"
+    "audio_android": "audio_15_num.mp3",
+    "total_length": 517.3586710545359,
+    "groups": 2
   },
   {
     "id": 16,
@@ -167,7 +199,9 @@
     "name_gu": "સોળ",
     "svg": "svgs/numbers/16_num.svg",
     "audio_ios": "audio/numbers/16_num.mp3",
-    "audio_android": "audio_16_num.mp3"
+    "audio_android": "audio_16_num.mp3",
+    "total_length": 567.3428663817822,
+    "groups": 2
   },
   {
     "id": 17,
@@ -177,7 +211,9 @@
     "name_gu": "સત્તર",
     "svg": "svgs/numbers/17_num.svg",
     "audio_ios": "audio/numbers/17_num.mp3",
-    "audio_android": "audio_17_num.mp3"
+    "audio_android": "audio_17_num.mp3",
+    "total_length": 592.5371779588071,
+    "groups": 2
   },
   {
     "id": 18,
@@ -187,7 +223,9 @@
     "name_gu": "અઢાર",
     "svg": "svgs/numbers/18_num.svg",
     "audio_ios": "audio/numbers/18_num.mp3",
-    "audio_android": "audio_18_num.mp3"
+    "audio_android": "audio_18_num.mp3",
+    "total_length": 459.6783741010697,
+    "groups": 2
   },
   {
     "id": 19,
@@ -197,7 +235,9 @@
     "name_gu": "ઓગણિસ",
     "svg": "svgs/numbers/19_num.svg",
     "audio_ios": "audio/numbers/19_num.mp3",
-    "audio_android": "audio_19_num.mp3"
+    "audio_android": "audio_19_num.mp3",
+    "total_length": 519.691842475773,
+    "groups": 2
   },
   {
     "id": 20,
@@ -207,7 +247,9 @@
     "name_gu": "વીસ",
     "svg": "svgs/numbers/20_num.svg",
     "audio_ios": "audio/numbers/20_num.mp3",
-    "audio_android": "audio_20_num.mp3"
+    "audio_android": "audio_20_num.mp3",
+    "total_length": 476.8544565535738,
+    "groups": 2
   },
   {
     "id": 21,
@@ -217,7 +259,9 @@
     "name_gu": "એકવીસ",
     "svg": "svgs/numbers/21_num.svg",
     "audio_ios": "audio/numbers/21_num.mp3",
-    "audio_android": "audio_21_num.mp3"
+    "audio_android": "audio_21_num.mp3",
+    "total_length": 498.3472868791879,
+    "groups": 2
   },
   {
     "id": 22,
@@ -227,7 +271,9 @@
     "name_gu": "બાવીસ",
     "svg": "svgs/numbers/22_num.svg",
     "audio_ios": "audio/numbers/22_num.mp3",
-    "audio_android": "audio_22_num.mp3"
+    "audio_android": "audio_22_num.mp3",
+    "total_length": 509.2377112968835,
+    "groups": 2
   },
   {
     "id": 23,
@@ -237,7 +283,9 @@
     "name_gu": "તેવીસ",
     "svg": "svgs/numbers/23_num.svg",
     "audio_ios": "audio/numbers/23_num.mp3",
-    "audio_android": "audio_23_num.mp3"
+    "audio_android": "audio_23_num.mp3",
+    "total_length": 537.1963668704223,
+    "groups": 2
   },
   {
     "id": 24,
@@ -247,7 +295,9 @@
     "name_gu": "ચોવીસ",
     "svg": "svgs/numbers/24_num.svg",
     "audio_ios": "audio/numbers/24_num.mp3",
-    "audio_android": "audio_24_num.mp3"
+    "audio_android": "audio_24_num.mp3",
+    "total_length": 558.8707513591175,
+    "groups": 2
   },
   {
     "id": 25,
@@ -257,7 +307,9 @@
     "name_gu": "પચ્ચીસ",
     "svg": "svgs/numbers/25_num.svg",
     "audio_ios": "audio/numbers/25_num.mp3",
-    "audio_android": "audio_25_num.mp3"
+    "audio_android": "audio_25_num.mp3",
+    "total_length": 528.2490954722315,
+    "groups": 2
   },
   {
     "id": 26,
@@ -267,7 +319,9 @@
     "name_gu": "છવીસ",
     "svg": "svgs/numbers/26_num.svg",
     "audio_ios": "audio/numbers/26_num.mp3",
-    "audio_android": "audio_26_num.mp3"
+    "audio_android": "audio_26_num.mp3",
+    "total_length": 578.2332907994778,
+    "groups": 2
   },
   {
     "id": 27,
@@ -277,7 +331,9 @@
     "name_gu": "સત્તાવીસ",
     "svg": "svgs/numbers/27_num.svg",
     "audio_ios": "audio/numbers/27_num.mp3",
-    "audio_android": "audio_27_num.mp3"
+    "audio_android": "audio_27_num.mp3",
+    "total_length": 603.4276023765027,
+    "groups": 2
   },
   {
     "id": 28,
@@ -287,7 +343,9 @@
     "name_gu": "અઠ્ઠાવીસ",
     "svg": "svgs/numbers/28_num.svg",
     "audio_ios": "audio/numbers/28_num.mp3",
-    "audio_android": "audio_28_num.mp3"
+    "audio_android": "audio_28_num.mp3",
+    "total_length": 470.56879851876533,
+    "groups": 2
   },
   {
     "id": 29,
@@ -297,7 +355,9 @@
     "name_gu": "ઓગણત્રીસ",
     "svg": "svgs/numbers/29_num.svg",
     "audio_ios": "audio/numbers/29_num.mp3",
-    "audio_android": "audio_29_num.mp3"
+    "audio_android": "audio_29_num.mp3",
+    "total_length": 530.5822668934686,
+    "groups": 2
   },
   {
     "id": 30,
@@ -307,7 +367,9 @@
     "name_gu": "ત્રીસ",
     "svg": "svgs/numbers/30_num.svg",
     "audio_ios": "audio/numbers/30_num.mp3",
-    "audio_android": "audio_30_num.mp3"
+    "audio_android": "audio_30_num.mp3",
+    "total_length": 504.8131121271126,
+    "groups": 2
   },
   {
     "id": 31,
@@ -317,7 +379,9 @@
     "name_gu": "એકત્રીસ",
     "svg": "svgs/numbers/31_num.svg",
     "audio_ios": "audio/numbers/31_num.mp3",
-    "audio_android": "audio_31_num.mp3"
+    "audio_android": "audio_31_num.mp3",
+    "total_length": 526.3059424527266,
+    "groups": 2
   },
   {
     "id": 32,
@@ -327,7 +391,9 @@
     "name_gu": "બત્રીસ",
     "svg": "svgs/numbers/32_num.svg",
     "audio_ios": "audio/numbers/32_num.mp3",
-    "audio_android": "audio_32_num.mp3"
+    "audio_android": "audio_32_num.mp3",
+    "total_length": 537.1963668704223,
+    "groups": 2
   },
   {
     "id": 33,
@@ -337,7 +403,9 @@
     "name_gu": "તેત્રીસ",
     "svg": "svgs/numbers/33_num.svg",
     "audio_ios": "audio/numbers/33_num.mp3",
-    "audio_android": "audio_33_num.mp3"
+    "audio_android": "audio_33_num.mp3",
+    "total_length": 565.1550224439611,
+    "groups": 2
   },
   {
     "id": 34,
@@ -347,7 +415,9 @@
     "name_gu": "ચોત્રીસ",
     "svg": "svgs/numbers/34_num.svg",
     "audio_ios": "audio/numbers/34_num.mp3",
-    "audio_android": "audio_34_num.mp3"
+    "audio_android": "audio_34_num.mp3",
+    "total_length": 586.8294069326563,
+    "groups": 2
   },
   {
     "id": 35,
@@ -357,7 +427,9 @@
     "name_gu": "પાંત્રીસ",
     "svg": "svgs/numbers/35_num.svg",
     "audio_ios": "audio/numbers/35_num.mp3",
-    "audio_android": "audio_35_num.mp3"
+    "audio_android": "audio_35_num.mp3",
+    "total_length": 556.2077510457702,
+    "groups": 2
   },
   {
     "id": 36,
@@ -367,7 +439,9 @@
     "name_gu": "છત્રીસ",
     "svg": "svgs/numbers/36_num.svg",
     "audio_ios": "audio/numbers/36_num.mp3",
-    "audio_android": "audio_36_num.mp3"
+    "audio_android": "audio_36_num.mp3",
+    "total_length": 606.1919463730165,
+    "groups": 2
   },
   {
     "id": 37,
@@ -377,7 +451,9 @@
     "name_gu": "સડત્રીસ",
     "svg": "svgs/numbers/37_num.svg",
     "audio_ios": "audio/numbers/37_num.mp3",
-    "audio_android": "audio_37_num.mp3"
+    "audio_android": "audio_37_num.mp3",
+    "total_length": 631.3862579500415,
+    "groups": 2
   },
   {
     "id": 38,
@@ -387,7 +463,9 @@
     "name_gu": "અડત્રીસ",
     "svg": "svgs/numbers/38_num.svg",
     "audio_ios": "audio/numbers/38_num.mp3",
-    "audio_android": "audio_38_num.mp3"
+    "audio_android": "audio_38_num.mp3",
+    "total_length": 498.5274540923041,
+    "groups": 2
   },
   {
     "id": 39,
@@ -397,7 +475,9 @@
     "name_gu": "ઓગણચાલીસ",
     "svg": "svgs/numbers/39_num.svg",
     "audio_ios": "audio/numbers/39_num.mp3",
-    "audio_android": "audio_39_num.mp3"
+    "audio_android": "audio_39_num.mp3",
+    "total_length": 558.5409224670075,
+    "groups": 2
   },
   {
     "id": 40,
@@ -407,7 +487,9 @@
     "name_gu": "ચાલીસ",
     "svg": "svgs/numbers/40_num.svg",
     "audio_ios": "audio/numbers/40_num.mp3",
-    "audio_android": "audio_40_num.mp3"
+    "audio_android": "audio_40_num.mp3",
+    "total_length": 526.4874966158078,
+    "groups": 2
   },
   {
     "id": 41,
@@ -417,7 +499,9 @@
     "name_gu": "એકતાલીસ",
     "svg": "svgs/numbers/41_num.svg",
     "audio_ios": "audio/numbers/41_num.mp3",
-    "audio_android": "audio_41_num.mp3"
+    "audio_android": "audio_41_num.mp3",
+    "total_length": 547.9803269414219,
+    "groups": 2
   },
   {
     "id": 42,
@@ -427,7 +511,9 @@
     "name_gu": "બેતાલીસ",
     "svg": "svgs/numbers/42_num.svg",
     "audio_ios": "audio/numbers/42_num.mp3",
-    "audio_android": "audio_42_num.mp3"
+    "audio_android": "audio_42_num.mp3",
+    "total_length": 558.8707513591175,
+    "groups": 2
   },
   {
     "id": 43,
@@ -437,7 +523,9 @@
     "name_gu": "ત્રેતાલીસ",
     "svg": "svgs/numbers/43_num.svg",
     "audio_ios": "audio/numbers/43_num.mp3",
-    "audio_android": "audio_43_num.mp3"
+    "audio_android": "audio_43_num.mp3",
+    "total_length": 586.8294069326563,
+    "groups": 2
   },
   {
     "id": 44,
@@ -447,7 +535,9 @@
     "name_gu": "ચુંમાલીસ",
     "svg": "svgs/numbers/44_num.svg",
     "audio_ios": "audio/numbers/44_num.mp3",
-    "audio_android": "audio_44_num.mp3"
+    "audio_android": "audio_44_num.mp3",
+    "total_length": 608.5037914213515,
+    "groups": 2
   },
   {
     "id": 45,
@@ -457,7 +547,9 @@
     "name_gu": "પિસ્તાલીસ",
     "svg": "svgs/numbers/45_num.svg",
     "audio_ios": "audio/numbers/45_num.mp3",
-    "audio_android": "audio_45_num.mp3"
+    "audio_android": "audio_45_num.mp3",
+    "total_length": 577.8821355344655,
+    "groups": 2
   },
   {
     "id": 46,
@@ -467,7 +559,9 @@
     "name_gu": "છેતાલીસ",
     "svg": "svgs/numbers/46_num.svg",
     "audio_ios": "audio/numbers/46_num.mp3",
-    "audio_android": "audio_46_num.mp3"
+    "audio_android": "audio_46_num.mp3",
+    "total_length": 627.8663308617117,
+    "groups": 2
   },
   {
     "id": 47,
@@ -477,7 +571,9 @@
     "name_gu": "સુડતાલીસ",
     "svg": "svgs/numbers/47_num.svg",
     "audio_ios": "audio/numbers/47_num.mp3",
-    "audio_android": "audio_47_num.mp3"
+    "audio_android": "audio_47_num.mp3",
+    "total_length": 653.0606424387367,
+    "groups": 2
   },
   {
     "id": 48,
@@ -487,7 +583,9 @@
     "name_gu": "અડતાલીસ",
     "svg": "svgs/numbers/48_num.svg",
     "audio_ios": "audio/numbers/48_num.mp3",
-    "audio_android": "audio_48_num.mp3"
+    "audio_android": "audio_48_num.mp3",
+    "total_length": 520.2018385809993,
+    "groups": 2
   },
   {
     "id": 49,
@@ -497,7 +595,9 @@
     "name_gu": "ઓગણપચાસ",
     "svg": "svgs/numbers/49_num.svg",
     "audio_ios": "audio/numbers/49_num.mp3",
-    "audio_android": "audio_49_num.mp3"
+    "audio_android": "audio_49_num.mp3",
+    "total_length": 580.2153069557027,
+    "groups": 2
   },
   {
     "id": 50,
@@ -507,7 +607,9 @@
     "name_gu": "પચાસ",
     "svg": "svgs/numbers/50_num.svg",
     "audio_ios": "audio/numbers/50_num.mp3",
-    "audio_android": "audio_50_num.mp3"
+    "audio_android": "audio_50_num.mp3",
+    "total_length": 495.8658407289218,
+    "groups": 2
   },
   {
     "id": 51,
@@ -517,7 +619,9 @@
     "name_gu": "એકાવન",
     "svg": "svgs/numbers/51_num.svg",
     "audio_ios": "audio/numbers/51_num.mp3",
-    "audio_android": "audio_51_num.mp3"
+    "audio_android": "audio_51_num.mp3",
+    "total_length": 517.3586710545359,
+    "groups": 2
   },
   {
     "id": 52,
@@ -527,7 +631,9 @@
     "name_gu": "બાવન",
     "svg": "svgs/numbers/52_num.svg",
     "audio_ios": "audio/numbers/52_num.mp3",
-    "audio_android": "audio_52_num.mp3"
+    "audio_android": "audio_52_num.mp3",
+    "total_length": 528.2490954722315,
+    "groups": 2
   },
   {
     "id": 53,
@@ -537,7 +643,9 @@
     "name_gu": "ત્રેપન",
     "svg": "svgs/numbers/53_num.svg",
     "audio_ios": "audio/numbers/53_num.mp3",
-    "audio_android": "audio_53_num.mp3"
+    "audio_android": "audio_53_num.mp3",
+    "total_length": 556.2077510457702,
+    "groups": 2
   },
   {
     "id": 54,
@@ -547,7 +655,9 @@
     "name_gu": "ચોપન",
     "svg": "svgs/numbers/54_num.svg",
     "audio_ios": "audio/numbers/54_num.mp3",
-    "audio_android": "audio_54_num.mp3"
+    "audio_android": "audio_54_num.mp3",
+    "total_length": 577.8821355344655,
+    "groups": 2
   },
   {
     "id": 55,
@@ -557,7 +667,9 @@
     "name_gu": "પંચાવન",
     "svg": "svgs/numbers/55_num.svg",
     "audio_ios": "audio/numbers/55_num.mp3",
-    "audio_android": "audio_55_num.mp3"
+    "audio_android": "audio_55_num.mp3",
+    "total_length": 547.2604796475795,
+    "groups": 2
   },
   {
     "id": 56,
@@ -567,7 +679,9 @@
     "name_gu": "છપ્પન",
     "svg": "svgs/numbers/56_num.svg",
     "audio_ios": "audio/numbers/56_num.mp3",
-    "audio_android": "audio_56_num.mp3"
+    "audio_android": "audio_56_num.mp3",
+    "total_length": 597.2446749748258,
+    "groups": 2
   },
   {
     "id": 57,
@@ -577,7 +691,9 @@
     "name_gu": "સત્તાવન",
     "svg": "svgs/numbers/57_num.svg",
     "audio_ios": "audio/numbers/57_num.mp3",
-    "audio_android": "audio_57_num.mp3"
+    "audio_android": "audio_57_num.mp3",
+    "total_length": 622.4389865518507,
+    "groups": 2
   },
   {
     "id": 58,
@@ -587,7 +703,9 @@
     "name_gu": "અઠ્ઠાવન",
     "svg": "svgs/numbers/58_num.svg",
     "audio_ios": "audio/numbers/58_num.mp3",
-    "audio_android": "audio_58_num.mp3"
+    "audio_android": "audio_58_num.mp3",
+    "total_length": 489.5801826941133,
+    "groups": 2
   },
   {
     "id": 59,
@@ -597,7 +715,9 @@
     "name_gu": "ઓગણસાઠ",
     "svg": "svgs/numbers/59_num.svg",
     "audio_ios": "audio/numbers/59_num.mp3",
-    "audio_android": "audio_59_num.mp3"
+    "audio_android": "audio_59_num.mp3",
+    "total_length": 549.5936510688166,
+    "groups": 2
   },
   {
     "id": 60,
@@ -607,7 +727,9 @@
     "name_gu": "સાઈઠ",
     "svg": "svgs/numbers/60_num.svg",
     "audio_ios": "audio/numbers/60_num.mp3",
-    "audio_android": "audio_60_num.mp3"
+    "audio_android": "audio_60_num.mp3",
+    "total_length": 545.850036056168,
+    "groups": 2
   },
   {
     "id": 61,
@@ -617,7 +739,9 @@
     "name_gu": "એકસઠ",
     "svg": "svgs/numbers/61_num.svg",
     "audio_ios": "audio/numbers/61_num.mp3",
-    "audio_android": "audio_61_num.mp3"
+    "audio_android": "audio_61_num.mp3",
+    "total_length": 567.3428663817822,
+    "groups": 2
   },
   {
     "id": 62,
@@ -627,7 +751,9 @@
     "name_gu": "બાસઠ",
     "svg": "svgs/numbers/62_num.svg",
     "audio_ios": "audio/numbers/62_num.mp3",
-    "audio_android": "audio_62_num.mp3"
+    "audio_android": "audio_62_num.mp3",
+    "total_length": 578.2332907994778,
+    "groups": 2
   },
   {
     "id": 63,
@@ -637,7 +763,9 @@
     "name_gu": "ત્રેસઠ",
     "svg": "svgs/numbers/63_num.svg",
     "audio_ios": "audio/numbers/63_num.mp3",
-    "audio_android": "audio_63_num.mp3"
+    "audio_android": "audio_63_num.mp3",
+    "total_length": 606.1919463730165,
+    "groups": 2
   },
   {
     "id": 64,
@@ -647,7 +775,9 @@
     "name_gu": "ચોસઠ",
     "svg": "svgs/numbers/64_num.svg",
     "audio_ios": "audio/numbers/64_num.mp3",
-    "audio_android": "audio_64_num.mp3"
+    "audio_android": "audio_64_num.mp3",
+    "total_length": 627.8663308617117,
+    "groups": 2
   },
   {
     "id": 65,
@@ -657,7 +787,9 @@
     "name_gu": "પાંસઠ",
     "svg": "svgs/numbers/65_num.svg",
     "audio_ios": "audio/numbers/65_num.mp3",
-    "audio_android": "audio_65_num.mp3"
+    "audio_android": "audio_65_num.mp3",
+    "total_length": 597.2446749748258,
+    "groups": 2
   },
   {
     "id": 66,
@@ -667,7 +799,9 @@
     "name_gu": "છાસઠ",
     "svg": "svgs/numbers/66_num.svg",
     "audio_ios": "audio/numbers/66_num.mp3",
-    "audio_android": "audio_66_num.mp3"
+    "audio_android": "audio_66_num.mp3",
+    "total_length": 647.228870302072,
+    "groups": 2
   },
   {
     "id": 67,
@@ -677,7 +811,9 @@
     "name_gu": "સડસઠ",
     "svg": "svgs/numbers/67_num.svg",
     "audio_ios": "audio/numbers/67_num.mp3",
-    "audio_android": "audio_67_num.mp3"
+    "audio_android": "audio_67_num.mp3",
+    "total_length": 672.423181879097,
+    "groups": 2
   },
   {
     "id": 68,
@@ -687,7 +823,9 @@
     "name_gu": "અડસઠ",
     "svg": "svgs/numbers/68_num.svg",
     "audio_ios": "audio/numbers/68_num.mp3",
-    "audio_android": "audio_68_num.mp3"
+    "audio_android": "audio_68_num.mp3",
+    "total_length": 539.5643780213595,
+    "groups": 2
   },
   {
     "id": 69,
@@ -697,7 +835,9 @@
     "name_gu": "અગણોસિત્તેર",
     "svg": "svgs/numbers/69_num.svg",
     "audio_ios": "audio/numbers/69_num.mp3",
-    "audio_android": "audio_69_num.mp3"
+    "audio_android": "audio_69_num.mp3",
+    "total_length": 599.5778463960629,
+    "groups": 2
   },
   {
     "id": 70,
@@ -707,7 +847,9 @@
     "name_gu": "સિત્તેર",
     "svg": "svgs/numbers/70_num.svg",
     "audio_ios": "audio/numbers/70_num.mp3",
-    "audio_android": "audio_70_num.mp3"
+    "audio_android": "audio_70_num.mp3",
+    "total_length": 571.044347633193,
+    "groups": 2
   },
   {
     "id": 71,
@@ -717,7 +859,9 @@
     "name_gu": "એકોતેર",
     "svg": "svgs/numbers/71_num.svg",
     "audio_ios": "audio/numbers/71_num.mp3",
-    "audio_android": "audio_71_num.mp3"
+    "audio_android": "audio_71_num.mp3",
+    "total_length": 592.5371779588071,
+    "groups": 2
   },
   {
     "id": 72,
@@ -727,7 +871,9 @@
     "name_gu": "બોતેર",
     "svg": "svgs/numbers/72_num.svg",
     "audio_ios": "audio/numbers/72_num.mp3",
-    "audio_android": "audio_72_num.mp3"
+    "audio_android": "audio_72_num.mp3",
+    "total_length": 603.4276023765027,
+    "groups": 2
   },
   {
     "id": 73,
@@ -737,7 +883,9 @@
     "name_gu": "તોતેર",
     "svg": "svgs/numbers/73_num.svg",
     "audio_ios": "audio/numbers/73_num.mp3",
-    "audio_android": "audio_73_num.mp3"
+    "audio_android": "audio_73_num.mp3",
+    "total_length": 631.3862579500415,
+    "groups": 2
   },
   {
     "id": 74,
@@ -747,7 +895,9 @@
     "name_gu": "ચુમોતેર",
     "svg": "svgs/numbers/74_num.svg",
     "audio_ios": "audio/numbers/74_num.mp3",
-    "audio_android": "audio_74_num.mp3"
+    "audio_android": "audio_74_num.mp3",
+    "total_length": 653.0606424387367,
+    "groups": 2
   },
   {
     "id": 75,
@@ -757,7 +907,9 @@
     "name_gu": "પંચોતેર",
     "svg": "svgs/numbers/75_num.svg",
     "audio_ios": "audio/numbers/75_num.mp3",
-    "audio_android": "audio_75_num.mp3"
+    "audio_android": "audio_75_num.mp3",
+    "total_length": 622.4389865518507,
+    "groups": 2
   },
   {
     "id": 76,
@@ -767,7 +919,9 @@
     "name_gu": "છોતેર",
     "svg": "svgs/numbers/76_num.svg",
     "audio_ios": "audio/numbers/76_num.mp3",
-    "audio_android": "audio_76_num.mp3"
+    "audio_android": "audio_76_num.mp3",
+    "total_length": 672.423181879097,
+    "groups": 2
   },
   {
     "id": 77,
@@ -777,7 +931,9 @@
     "name_gu": "સિત્યોતેર",
     "svg": "svgs/numbers/77_num.svg",
     "audio_ios": "audio/numbers/77_num.mp3",
-    "audio_android": "audio_77_num.mp3"
+    "audio_android": "audio_77_num.mp3",
+    "total_length": 697.6174934561219,
+    "groups": 2
   },
   {
     "id": 78,
@@ -787,7 +943,9 @@
     "name_gu": "ઇઠ્યોતેર",
     "svg": "svgs/numbers/78_num.svg",
     "audio_ios": "audio/numbers/78_num.mp3",
-    "audio_android": "audio_78_num.mp3"
+    "audio_android": "audio_78_num.mp3",
+    "total_length": 564.7586895983845,
+    "groups": 2
   },
   {
     "id": 79,
@@ -797,7 +955,9 @@
     "name_gu": "ઓગણાએંસી",
     "svg": "svgs/numbers/79_num.svg",
     "audio_ios": "audio/numbers/79_num.mp3",
-    "audio_android": "audio_79_num.mp3"
+    "audio_android": "audio_79_num.mp3",
+    "total_length": 624.7721579730878,
+    "groups": 2
   },
   {
     "id": 80,
@@ -807,7 +967,9 @@
     "name_gu": "એંસી",
     "svg": "svgs/numbers/80_num.svg",
     "audio_ios": "audio/numbers/80_num.mp3",
-    "audio_android": "audio_80_num.mp3"
+    "audio_android": "audio_80_num.mp3",
+    "total_length": 438.1855437754556,
+    "groups": 2
   },
   {
     "id": 81,
@@ -817,7 +979,9 @@
     "name_gu": "એક્યાસી",
     "svg": "svgs/numbers/81_num.svg",
     "audio_ios": "audio/numbers/81_num.mp3",
-    "audio_android": "audio_81_num.mp3"
+    "audio_android": "audio_81_num.mp3",
+    "total_length": 459.6783741010697,
+    "groups": 2
   },
   {
     "id": 82,
@@ -827,7 +991,9 @@
     "name_gu": "બ્યાસી",
     "svg": "svgs/numbers/82_num.svg",
     "audio_ios": "audio/numbers/82_num.mp3",
-    "audio_android": "audio_82_num.mp3"
+    "audio_android": "audio_82_num.mp3",
+    "total_length": 470.56879851876533,
+    "groups": 2
   },
   {
     "id": 83,
@@ -837,7 +1003,9 @@
     "name_gu": "ત્યાસી",
     "svg": "svgs/numbers/83_num.svg",
     "audio_ios": "audio/numbers/83_num.mp3",
-    "audio_android": "audio_83_num.mp3"
+    "audio_android": "audio_83_num.mp3",
+    "total_length": 498.5274540923041,
+    "groups": 2
   },
   {
     "id": 84,
@@ -847,7 +1015,9 @@
     "name_gu": "ચોર્યાસી",
     "svg": "svgs/numbers/84_num.svg",
     "audio_ios": "audio/numbers/84_num.mp3",
-    "audio_android": "audio_84_num.mp3"
+    "audio_android": "audio_84_num.mp3",
+    "total_length": 520.2018385809993,
+    "groups": 2
   },
   {
     "id": 85,
@@ -857,7 +1027,9 @@
     "name_gu": "પંચાસી",
     "svg": "svgs/numbers/85_num.svg",
     "audio_ios": "audio/numbers/85_num.mp3",
-    "audio_android": "audio_85_num.mp3"
+    "audio_android": "audio_85_num.mp3",
+    "total_length": 489.5801826941133,
+    "groups": 2
   },
   {
     "id": 86,
@@ -867,7 +1039,9 @@
     "name_gu": "છ્યાસી",
     "svg": "svgs/numbers/86_num.svg",
     "audio_ios": "audio/numbers/86_num.mp3",
-    "audio_android": "audio_86_num.mp3"
+    "audio_android": "audio_86_num.mp3",
+    "total_length": 539.5643780213595,
+    "groups": 2
   },
   {
     "id": 87,
@@ -877,7 +1051,9 @@
     "name_gu": "સિત્યાસી",
     "svg": "svgs/numbers/87_num.svg",
     "audio_ios": "audio/numbers/87_num.mp3",
-    "audio_android": "audio_87_num.mp3"
+    "audio_android": "audio_87_num.mp3",
+    "total_length": 564.7586895983845,
+    "groups": 2
   },
   {
     "id": 88,
@@ -887,7 +1063,9 @@
     "name_gu": "ઈઠ્યાસી",
     "svg": "svgs/numbers/88_num.svg",
     "audio_ios": "audio/numbers/88_num.mp3",
-    "audio_android": "audio_88_num.mp3"
+    "audio_android": "audio_88_num.mp3",
+    "total_length": 431.8998857406471,
+    "groups": 2
   },
   {
     "id": 89,
@@ -897,7 +1075,9 @@
     "name_gu": "નેવ્યાસી",
     "svg": "svgs/numbers/89_num.svg",
     "audio_ios": "audio/numbers/89_num.mp3",
-    "audio_android": "audio_89_num.mp3"
+    "audio_android": "audio_89_num.mp3",
+    "total_length": 491.91335411535044,
+    "groups": 2
   },
   {
     "id": 90,
@@ -907,7 +1087,9 @@
     "name_gu": "નેવું",
     "svg": "svgs/numbers/90_num.svg",
     "audio_ios": "audio/numbers/90_num.mp3",
-    "audio_android": "audio_90_num.mp3"
+    "audio_android": "audio_90_num.mp3",
+    "total_length": 498.199012150159,
+    "groups": 2
   },
   {
     "id": 91,
@@ -917,7 +1099,9 @@
     "name_gu": "એકાણું",
     "svg": "svgs/numbers/91_num.svg",
     "audio_ios": "audio/numbers/91_num.mp3",
-    "audio_android": "audio_91_num.mp3"
+    "audio_android": "audio_91_num.mp3",
+    "total_length": 519.691842475773,
+    "groups": 2
   },
   {
     "id": 92,
@@ -927,7 +1111,9 @@
     "name_gu": "બાણું",
     "svg": "svgs/numbers/92_num.svg",
     "audio_ios": "audio/numbers/92_num.mp3",
-    "audio_android": "audio_92_num.mp3"
+    "audio_android": "audio_92_num.mp3",
+    "total_length": 530.5822668934686,
+    "groups": 2
   },
   {
     "id": 93,
@@ -937,7 +1123,9 @@
     "name_gu": "ત્રાણું",
     "svg": "svgs/numbers/93_num.svg",
     "audio_ios": "audio/numbers/93_num.mp3",
-    "audio_android": "audio_93_num.mp3"
+    "audio_android": "audio_93_num.mp3",
+    "total_length": 558.5409224670075,
+    "groups": 2
   },
   {
     "id": 94,
@@ -947,7 +1135,9 @@
     "name_gu": "ચોરાણું",
     "svg": "svgs/numbers/94_num.svg",
     "audio_ios": "audio/numbers/94_num.mp3",
-    "audio_android": "audio_94_num.mp3"
+    "audio_android": "audio_94_num.mp3",
+    "total_length": 580.2153069557027,
+    "groups": 2
   },
   {
     "id": 95,
@@ -957,7 +1147,9 @@
     "name_gu": "પંચાણું",
     "svg": "svgs/numbers/95_num.svg",
     "audio_ios": "audio/numbers/95_num.mp3",
-    "audio_android": "audio_95_num.mp3"
+    "audio_android": "audio_95_num.mp3",
+    "total_length": 549.5936510688166,
+    "groups": 2
   },
   {
     "id": 96,
@@ -967,7 +1159,9 @@
     "name_gu": "છન્નું",
     "svg": "svgs/numbers/96_num.svg",
     "audio_ios": "audio/numbers/96_num.mp3",
-    "audio_android": "audio_96_num.mp3"
+    "audio_android": "audio_96_num.mp3",
+    "total_length": 599.5778463960629,
+    "groups": 2
   },
   {
     "id": 97,
@@ -977,7 +1171,9 @@
     "name_gu": "સત્તાણું",
     "svg": "svgs/numbers/97_num.svg",
     "audio_ios": "audio/numbers/97_num.mp3",
-    "audio_android": "audio_97_num.mp3"
+    "audio_android": "audio_97_num.mp3",
+    "total_length": 624.7721579730878,
+    "groups": 2
   },
   {
     "id": 98,
@@ -987,7 +1183,9 @@
     "name_gu": "અઠ્ઠાણું",
     "svg": "svgs/numbers/98_num.svg",
     "audio_ios": "audio/numbers/98_num.mp3",
-    "audio_android": "audio_98_num.mp3"
+    "audio_android": "audio_98_num.mp3",
+    "total_length": 491.91335411535044,
+    "groups": 2
   },
   {
     "id": 99,
@@ -997,7 +1195,9 @@
     "name_gu": "નવ્વાણું",
     "svg": "svgs/numbers/99_num.svg",
     "audio_ios": "audio/numbers/99_num.mp3",
-    "audio_android": "audio_99_num.mp3"
+    "audio_android": "audio_99_num.mp3",
+    "total_length": 551.9268224900538,
+    "groups": 2
   },
   {
     "id": 100,
@@ -1007,6 +1207,8 @@
     "name_gu": "સો",
     "svg": "svgs/numbers/100_num.svg",
     "audio_ios": "audio/numbers/100_num.mp3",
-    "audio_android": "audio_100_num.mp3"
+    "audio_android": "audio_100_num.mp3",
+    "total_length": 688.1996330410102,
+    "groups": 3
   }
 ]
