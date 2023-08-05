@@ -20,6 +20,8 @@ const useBarakhadiChartItems = (): ICharCellListSection[] => {
       diacritic: charInfo.diacritic!,
       svg: charInfo.svg,
       audio: Platform.OS === 'ios' ? charInfo.audio_ios : charInfo.audio_android,
+      totalLength: charInfo.total_length,
+      groups: charInfo.groups,
     };
   };
 

@@ -5,6 +5,7 @@ import { useTheme } from 'react-native-paper';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Icon from 'react-native-easy-icon';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 //Screens
 import Loading from 'app/screens/Auth/Loading';
@@ -22,11 +23,12 @@ import LearnCharsChart from 'app/screens/HomeIntro/CharsIntro/LearnCharsChart';
 import LearnCharInfo from 'app/screens/HomeIntro/CharsIntro/LearnCharInfo';
 import LearnCharsCard from 'app/screens/HomeIntro/LearnCharsCard';
 import LearnBySelectedChar from 'app/screens/HomeIntro/CharsIntro/LearnBySelectedChar';
+import LearnCharStrokeOrder from 'app/screens/HomeIntro/CharsIntro/LearnCharStrokeOrder';
 
 //App Modules
 import { HomeTabsNavigatorParams, LoggedInTabNavigatorParams } from 'app/navigation/types';
 import { AppTheme } from 'app/models/theme';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import LearnCharAnimatedDrawing from 'app/screens/HomeIntro/CharsIntro/LearnCharAnimatedDrawing';
 
 const Tab = createMaterialBottomTabNavigator<HomeTabsNavigatorParams>();
 
@@ -101,7 +103,17 @@ const LoggedInTabNavigator = () => {
         <LoggedInStack.Screen
           name="LearnBySelectedChar"
           component={LearnBySelectedChar}
-          options={{ headerShown: false }}
+          options={{ headerShown: false, animation: 'slide_from_bottom' }}
+        />
+        <LoggedInStack.Screen
+          name="LearnCharStrokeOrder"
+          component={LearnCharStrokeOrder}
+          options={{ headerShown: false, animation: 'slide_from_bottom' }}
+        />
+        <LoggedInStack.Screen
+          name="LearnCharAnimatedDrawing"
+          component={LearnCharAnimatedDrawing}
+          options={{ headerShown: false, animation: 'slide_from_bottom' }}
         />
       </LoggedInStack.Group>
     </LoggedInStack.Navigator>

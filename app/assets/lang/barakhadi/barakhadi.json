@@ -11,7 +11,9 @@
         "diacritic": " ",
         "svg": "svgs/barakhadi/0_aa/0_aa.svg",
         "audio_ios": "audio/barakhadi/0_aa/0_aa.mp3",
-        "audio_android": "audio_0_aa_0_aa.mp3"
+        "audio_android": "audio_0_aa_0_aa.mp3",
+        "total_length": 448.32530449980646,
+        "groups": 1
       },
       {
         "id": 1,
@@ -20,7 +22,9 @@
         "diacritic": "ા",
         "svg": "svgs/barakhadi/0_aa/1_aa.svg",
         "audio_ios": "audio/barakhadi/0_aa/1_aa.mp3",
-        "audio_android": "audio_0_aa_1_aa.mp3"
+        "audio_android": "audio_0_aa_1_aa.mp3",
+        "total_length": 589.7238331287936,
+        "groups": 2
       },
       {
         "id": 2,
@@ -29,7 +33,9 @@
         "diacritic": "િ",
         "svg": "svgs/barakhadi/0_aa/2_i.svg",
         "audio_ios": "audio/barakhadi/0_aa/2_i.mp3",
-        "audio_android": "audio_0_aa_2_i.mp3"
+        "audio_android": "audio_0_aa_2_i.mp3",
+        "total_length": 395.4976480980421,
+        "groups": 1
       },
       {
         "id": 3,
@@ -38,7 +44,9 @@
         "diacritic": "ી",
         "svg": "svgs/barakhadi/0_aa/3_ee.svg",
         "audio_ios": "audio/barakhadi/0_aa/3_ee.mp3",
-        "audio_android": "audio_0_aa_3_ee.mp3"
+        "audio_android": "audio_0_aa_3_ee.mp3",
+        "total_length": 480.75938294252387,
+        "groups": 1
       },
       {
         "id": 4,
@@ -47,7 +55,9 @@
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/0_aa/4_u.svg",
         "audio_ios": "audio/barakhadi/0_aa/4_u.mp3",
-        "audio_android": "audio_0_aa_4_u.mp3"
+        "audio_android": "audio_0_aa_4_u.mp3",
+        "total_length": 463.7087080787597,
+        "groups": 1
       },
       {
         "id": 5,
@@ -56,7 +66,9 @@
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/0_aa/5_oo.svg",
         "audio_ios": "audio/barakhadi/0_aa/5_oo.mp3",
-        "audio_android": "audio_0_aa_5_oo.mp3"
+        "audio_android": "audio_0_aa_5_oo.mp3",
+        "total_length": 657.6385538943329,
+        "groups": 1
       },
       {
         "id": 6,
@@ -65,7 +77,9 @@
         "diacritic": "ે",
         "svg": "svgs/barakhadi/0_aa/6_e.svg",
         "audio_ios": "audio/barakhadi/0_aa/6_e.mp3",
-        "audio_android": "audio_0_aa_6_e.mp3"
+        "audio_android": "audio_0_aa_6_e.mp3",
+        "total_length": 534.5942085213246,
+        "groups": 2
       },
       {
         "id": 7,
@@ -74,7 +88,9 @@
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/0_aa/7_ai.svg",
         "audio_ios": "audio/barakhadi/0_aa/7_ai.mp3",
-        "audio_android": "audio_0_aa_7_ai.mp3"
+        "audio_android": "audio_0_aa_7_ai.mp3",
+        "total_length": 603.9764247871409,
+        "groups": 3
       },
       {
         "id": 8,
@@ -83,7 +99,9 @@
         "diacritic": "ો",
         "svg": "svgs/barakhadi/0_aa/8_o.svg",
         "audio_ios": "audio/barakhadi/0_aa/8_o.mp3",
-        "audio_android": "audio_0_aa_8_o.mp3"
+        "audio_android": "audio_0_aa_8_o.mp3",
+        "total_length": 675.9927371503118,
+        "groups": 3
       },
       {
         "id": 9,
@@ -92,7 +110,9 @@
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/0_aa/9_au.svg",
         "audio_ios": "audio/barakhadi/0_aa/9_au.mp3",
-        "audio_android": "audio_0_aa_9_au.mp3"
+        "audio_android": "audio_0_aa_9_au.mp3",
+        "total_length": 745.374953416128,
+        "groups": 4
       },
       {
         "id": 10,
@@ -101,7 +121,9 @@
         "diacritic": "ં",
         "svg": "svgs/barakhadi/0_aa/10_am_or_an.svg",
         "audio_ios": "audio/barakhadi/0_aa/10_am_or_an.mp3",
-        "audio_android": "audio_0_aa_10_am_or_an.mp3"
+        "audio_android": "audio_0_aa_10_am_or_an.mp3",
+        "total_length": 477.51038484188064,
+        "groups": 2
       },
       {
         "id": 11,
@@ -110,7 +132,9 @@
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/0_aa/11_ah.svg",
         "audio_ios": "audio/barakhadi/0_aa/11_ah.mp3",
-        "audio_android": "audio_0_aa_11_ah.mp3"
+        "audio_android": "audio_0_aa_11_ah.mp3",
+        "total_length": 510.07932613321844,
+        "groups": 3
       }
     ]
   },
@@ -126,7 +150,9 @@
         "diacritic": " ",
         "svg": "svgs/barakhadi/1_k/0_k.svg",
         "audio_ios": "audio/barakhadi/1_k/0_k.mp3",
-        "audio_android": "audio_1_k_0_k.mp3"
+        "audio_android": "audio_1_k_0_k.mp3",
+        "total_length": 325.8909403214536,
+        "groups": 1
       },
       {
         "id": 1,
@@ -135,7 +161,9 @@
         "diacritic": "ા",
         "svg": "svgs/barakhadi/1_k/1_ka.svg",
         "audio_ios": "audio/barakhadi/1_k/1_ka.mp3",
-        "audio_android": "audio_1_k_1_ka.mp3"
+        "audio_android": "audio_1_k_1_ka.mp3",
+        "total_length": 467.36930159074217,
+        "groups": 2
       },
       {
         "id": 2,
@@ -144,7 +172,9 @@
         "diacritic": "િ",
         "svg": "svgs/barakhadi/1_k/2_ki.svg",
         "audio_ios": "audio/barakhadi/1_k/2_ki.mp3",
-        "audio_android": "audio_1_k_2_ki.mp3"
+        "audio_android": "audio_1_k_2_ki.mp3",
+        "total_length": 609.8342506243196,
+        "groups": 2
       },
       {
         "id": 3,
@@ -153,7 +183,9 @@
         "diacritic": "ી",
         "svg": "svgs/barakhadi/1_k/3_kee.svg",
         "audio_ios": "audio/barakhadi/1_k/3_kee.mp3",
-        "audio_android": "audio_1_k_3_kee.mp3"
+        "audio_android": "audio_1_k_3_kee.mp3",
+        "total_length": 586.8701002431267,
+        "groups": 2
       },
       {
         "id": 4,
@@ -162,7 +194,9 @@
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/1_k/4_ku.svg",
         "audio_ios": "audio/barakhadi/1_k/4_ku.mp3",
-        "audio_android": "audio_1_k_4_ku.mp3"
+        "audio_android": "audio_1_k_4_ku.mp3",
+        "total_length": 497.86639080570166,
+        "groups": 2
       },
       {
         "id": 5,
@@ -171,7 +205,9 @@
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/1_k/5_koo.svg",
         "audio_ios": "audio/barakhadi/1_k/5_koo.mp3",
-        "audio_android": "audio_1_k_5_koo.mp3"
+        "audio_android": "audio_1_k_5_koo.mp3",
+        "total_length": 501.22924529689925,
+        "groups": 2
       },
       {
         "id": 6,
@@ -180,7 +216,9 @@
         "diacritic": "ે",
         "svg": "svgs/barakhadi/1_k/6_ke.svg",
         "audio_ios": "audio/barakhadi/1_k/6_ke.mp3",
-        "audio_android": "audio_1_k_6_ke.mp3"
+        "audio_android": "audio_1_k_6_ke.mp3",
+        "total_length": 412.15984434297184,
+        "groups": 2
       },
       {
         "id": 7,
@@ -189,7 +227,9 @@
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/1_k/7_kai.svg",
         "audio_ios": "audio/barakhadi/1_k/7_kai.mp3",
-        "audio_android": "audio_1_k_7_kai.mp3"
+        "audio_android": "audio_1_k_7_kai.mp3",
+        "total_length": 481.54206060878806,
+        "groups": 3
       },
       {
         "id": 8,
@@ -198,7 +238,9 @@
         "diacritic": "ો",
         "svg": "svgs/barakhadi/1_k/8_ko.svg",
         "audio_ios": "audio/barakhadi/1_k/8_ko.mp3",
-        "audio_android": "audio_1_k_8_ko.mp3"
+        "audio_android": "audio_1_k_8_ko.mp3",
+        "total_length": 553.6382056122603,
+        "groups": 3
       },
       {
         "id": 9,
@@ -207,7 +249,9 @@
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/1_k/9_kau.svg",
         "audio_ios": "audio/barakhadi/1_k/9_kau.mp3",
-        "audio_android": "audio_1_k_9_kau.mp3"
+        "audio_android": "audio_1_k_9_kau.mp3",
+        "total_length": 623.0204218780766,
+        "groups": 4
       },
       {
         "id": 10,
@@ -216,7 +260,9 @@
         "diacritic": "ં",
         "svg": "svgs/barakhadi/1_k/10_kam.svg",
         "audio_ios": "audio/barakhadi/1_k/10_kam.mp3",
-        "audio_android": "audio_1_k_10_kam.mp3"
+        "audio_android": "audio_1_k_10_kam.mp3",
+        "total_length": 355.07602068478315,
+        "groups": 2
       },
       {
         "id": 11,
@@ -225,7 +271,9 @@
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/1_k/11_kah.svg",
         "audio_ios": "audio/barakhadi/1_k/11_kah.mp3",
-        "audio_android": "audio_1_k_11_kah.mp3"
+        "audio_android": "audio_1_k_11_kah.mp3",
+        "total_length": 387.6449619548656,
+        "groups": 3
       }
     ]
   },
@@ -241,7 +289,9 @@
         "diacritic": " ",
         "svg": "svgs/barakhadi/2_kh/0_kh.svg",
         "audio_ios": "audio/barakhadi/2_kh/0_kh.mp3",
-        "audio_android": "audio_2_kh_0_kh.mp3"
+        "audio_android": "audio_2_kh_0_kh.mp3",
+        "total_length": 355.2332018251525,
+        "groups": 1
       },
       {
         "id": 1,
@@ -250,7 +300,9 @@
         "diacritic": "ા",
         "svg": "svgs/barakhadi/2_kh/1_kha.svg",
         "audio_ios": "audio/barakhadi/2_kh/1_kha.mp3",
-        "audio_android": "audio_2_kh_1_kha.mp3"
+        "audio_android": "audio_2_kh_1_kha.mp3",
+        "total_length": 496.71156309444103,
+        "groups": 2
       },
       {
         "id": 2,
@@ -259,7 +311,9 @@
         "diacritic": "િ",
         "svg": "svgs/barakhadi/2_kh/2_khi.svg",
         "audio_ios": "audio/barakhadi/2_kh/2_khi.mp3",
-        "audio_android": "audio_2_kh_2_khi.mp3"
+        "audio_android": "audio_2_kh_2_khi.mp3",
+        "total_length": 639.1765121280184,
+        "groups": 2
       },
       {
         "id": 3,
@@ -268,7 +322,9 @@
         "diacritic": "ી",
         "svg": "svgs/barakhadi/2_kh/3_khee.svg",
         "audio_ios": "audio/barakhadi/2_kh/3_khee.mp3",
-        "audio_android": "audio_2_kh_3_khee.mp3"
+        "audio_android": "audio_2_kh_3_khee.mp3",
+        "total_length": 616.2123617468255,
+        "groups": 2
       },
       {
         "id": 4,
@@ -277,7 +333,9 @@
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/2_kh/4_khu.svg",
         "audio_ios": "audio/barakhadi/2_kh/4_khu.mp3",
-        "audio_android": "audio_2_kh_4_khu.mp3"
+        "audio_android": "audio_2_kh_4_khu.mp3",
+        "total_length": 527.2086523094006,
+        "groups": 2
       },
       {
         "id": 5,
@@ -286,7 +344,9 @@
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/2_kh/5_khoo.svg",
         "audio_ios": "audio/barakhadi/2_kh/5_khoo.mp3",
-        "audio_android": "audio_2_kh_5_khoo.mp3"
+        "audio_android": "audio_2_kh_5_khoo.mp3",
+        "total_length": 530.5715068005982,
+        "groups": 2
       },
       {
         "id": 6,
@@ -295,7 +355,9 @@
         "diacritic": "ે",
         "svg": "svgs/barakhadi/2_kh/6_khe.svg",
         "audio_ios": "audio/barakhadi/2_kh/6_khe.mp3",
-        "audio_android": "audio_2_kh_6_khe.mp3"
+        "audio_android": "audio_2_kh_6_khe.mp3",
+        "total_length": 441.5021058466707,
+        "groups": 2
       },
       {
         "id": 7,
@@ -304,7 +366,9 @@
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/2_kh/7_khai.svg",
         "audio_ios": "audio/barakhadi/2_kh/7_khai.mp3",
-        "audio_android": "audio_2_kh_7_khai.mp3"
+        "audio_android": "audio_2_kh_7_khai.mp3",
+        "total_length": 510.8843221124869,
+        "groups": 3
       },
       {
         "id": 8,
@@ -313,7 +377,9 @@
         "diacritic": "ો",
         "svg": "svgs/barakhadi/2_kh/8_kho.svg",
         "audio_ios": "audio/barakhadi/2_kh/8_kho.mp3",
-        "audio_android": "audio_2_kh_8_kho.mp3"
+        "audio_android": "audio_2_kh_8_kho.mp3",
+        "total_length": 582.9804671159592,
+        "groups": 3
       },
       {
         "id": 9,
@@ -322,7 +388,9 @@
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/2_kh/9_khau.svg",
         "audio_ios": "audio/barakhadi/2_kh/9_khau.mp3",
-        "audio_android": "audio_2_kh_9_khau.mp3"
+        "audio_android": "audio_2_kh_9_khau.mp3",
+        "total_length": 652.3626833817755,
+        "groups": 4
       },
       {
         "id": 10,
@@ -331,7 +399,9 @@
         "diacritic": "ં",
         "svg": "svgs/barakhadi/2_kh/10_kham_or_khan.svg",
         "audio_ios": "audio/barakhadi/2_kh/10_kham_or_khan.mp3",
-        "audio_android": "audio_2_kh_10_kham_or_khan.mp3"
+        "audio_android": "audio_2_kh_10_kham_or_khan.mp3",
+        "total_length": 384.418282188482,
+        "groups": 2
       },
       {
         "id": 11,
@@ -340,7 +410,9 @@
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/2_kh/11_khah.svg",
         "audio_ios": "audio/barakhadi/2_kh/11_khah.mp3",
-        "audio_android": "audio_2_kh_11_khah.mp3"
+        "audio_android": "audio_2_kh_11_khah.mp3",
+        "total_length": 416.9872234585645,
+        "groups": 3
       }
     ]
   },
@@ -356,7 +428,9 @@
         "diacritic": " ",
         "svg": "svgs/barakhadi/3_g/0_g.svg",
         "audio_ios": "audio/barakhadi/3_g/0_g.mp3",
-        "audio_android": "audio_3_g_0_g.mp3"
+        "audio_android": "audio_3_g_0_g.mp3",
+        "total_length": 0,
+        "groups": 1
       },
       {
         "id": 1,
@@ -365,7 +439,9 @@
         "diacritic": "ા",
         "svg": "svgs/barakhadi/3_g/1_ga.svg",
         "audio_ios": "audio/barakhadi/3_g/1_ga.mp3",
-        "audio_android": "audio_3_g_1_ga.mp3"
+        "audio_android": "audio_3_g_1_ga.mp3",
+        "total_length": 141.47836126928857,
+        "groups": 2
       },
       {
         "id": 2,
@@ -374,7 +450,9 @@
         "diacritic": "િ",
         "svg": "svgs/barakhadi/3_g/2_gi.svg",
         "audio_ios": "audio/barakhadi/3_g/2_gi.mp3",
-        "audio_android": "audio_3_g_2_gi.mp3"
+        "audio_android": "audio_3_g_2_gi.mp3",
+        "total_length": 283.94331030286594,
+        "groups": 2
       },
       {
         "id": 3,
@@ -383,7 +461,9 @@
         "diacritic": "ી",
         "svg": "svgs/barakhadi/3_g/3_gee.svg",
         "audio_ios": "audio/barakhadi/3_g/3_gee.mp3",
-        "audio_android": "audio_3_g_3_gee.mp3"
+        "audio_android": "audio_3_g_3_gee.mp3",
+        "total_length": 260.97915992167304,
+        "groups": 2
       },
       {
         "id": 4,
@@ -392,7 +472,9 @@
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/3_g/4_gu.svg",
         "audio_ios": "audio/barakhadi/3_g/4_gu.mp3",
-        "audio_android": "audio_3_g_4_gu.mp3"
+        "audio_android": "audio_3_g_4_gu.mp3",
+        "total_length": 171.975450484248,
+        "groups": 2
       },
       {
         "id": 5,
@@ -401,7 +483,9 @@
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/3_g/5_goo.svg",
         "audio_ios": "audio/barakhadi/3_g/5_goo.mp3",
-        "audio_android": "audio_3_g_5_goo.mp3"
+        "audio_android": "audio_3_g_5_goo.mp3",
+        "total_length": 175.33830497544562,
+        "groups": 2
       },
       {
         "id": 6,
@@ -410,7 +494,9 @@
         "diacritic": "ે",
         "svg": "svgs/barakhadi/3_g/6_ge.svg",
         "audio_ios": "audio/barakhadi/3_g/6_ge.mp3",
-        "audio_android": "audio_3_g_6_ge.mp3"
+        "audio_android": "audio_3_g_6_ge.mp3",
+        "total_length": 86.26890402151818,
+        "groups": 2
       },
       {
         "id": 7,
@@ -419,7 +505,9 @@
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/3_g/7_gai.svg",
         "audio_ios": "audio/barakhadi/3_g/7_gai.mp3",
-        "audio_android": "audio_3_g_7_gai.mp3"
+        "audio_android": "audio_3_g_7_gai.mp3",
+        "total_length": 155.65112028733444,
+        "groups": 3
       },
       {
         "id": 8,
@@ -428,7 +516,9 @@
         "diacritic": "ો",
         "svg": "svgs/barakhadi/3_g/8_go.svg",
         "audio_ios": "audio/barakhadi/3_g/8_go.mp3",
-        "audio_android": "audio_3_g_8_go.mp3"
+        "audio_android": "audio_3_g_8_go.mp3",
+        "total_length": 227.74726529080672,
+        "groups": 3
       },
       {
         "id": 9,
@@ -437,7 +527,9 @@
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/3_g/9_gau.svg",
         "audio_ios": "audio/barakhadi/3_g/9_gau.mp3",
-        "audio_android": "audio_3_g_9_gau.mp3"
+        "audio_android": "audio_3_g_9_gau.mp3",
+        "total_length": 297.129481556623,
+        "groups": 4
       },
       {
         "id": 10,
@@ -446,7 +538,9 @@
         "diacritic": "ં",
         "svg": "svgs/barakhadi/3_g/10_gam.svg",
         "audio_ios": "audio/barakhadi/3_g/10_gam.mp3",
-        "audio_android": "audio_3_g_10_gam.mp3"
+        "audio_android": "audio_3_g_10_gam.mp3",
+        "total_length": 29.185080363329504,
+        "groups": 2
       },
       {
         "id": 11,
@@ -455,7 +549,9 @@
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/3_g/11_gah.svg",
         "audio_ios": "audio/barakhadi/3_g/11_gah.mp3",
-        "audio_android": "audio_3_g_11_gah.mp3"
+        "audio_android": "audio_3_g_11_gah.mp3",
+        "total_length": 61.754021633411995,
+        "groups": 3
       }
     ]
   },
@@ -471,7 +567,9 @@
         "diacritic": " ",
         "svg": "svgs/barakhadi/4_gh/0_gh.svg",
         "audio_ios": "audio/barakhadi/4_gh/0_gh.mp3",
-        "audio_android": "audio_4_gh_0_gh.mp3"
+        "audio_android": "audio_4_gh_0_gh.mp3",
+        "total_length": 357.47990658006756,
+        "groups": 1
       },
       {
         "id": 1,
@@ -480,7 +578,9 @@
         "diacritic": "ા",
         "svg": "svgs/barakhadi/4_gh/1_gha.svg",
         "audio_ios": "audio/barakhadi/4_gh/1_gha.mp3",
-        "audio_android": "audio_4_gh_1_gha.mp3"
+        "audio_android": "audio_4_gh_1_gha.mp3",
+        "total_length": 498.9582678493561,
+        "groups": 2
       },
       {
         "id": 2,
@@ -489,7 +589,9 @@
         "diacritic": "િ",
         "svg": "svgs/barakhadi/4_gh/2_ghi.svg",
         "audio_ios": "audio/barakhadi/4_gh/2_ghi.mp3",
-        "audio_android": "audio_4_gh_2_ghi.mp3"
+        "audio_android": "audio_4_gh_2_ghi.mp3",
+        "total_length": 641.4232168829335,
+        "groups": 2
       },
       {
         "id": 3,
@@ -498,7 +600,9 @@
         "diacritic": "ી",
         "svg": "svgs/barakhadi/4_gh/3_ghee.svg",
         "audio_ios": "audio/barakhadi/4_gh/3_ghee.mp3",
-        "audio_android": "audio_4_gh_3_ghee.mp3"
+        "audio_android": "audio_4_gh_3_ghee.mp3",
+        "total_length": 618.4590665017406,
+        "groups": 2
       },
       {
         "id": 4,
@@ -507,7 +611,9 @@
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/4_gh/4_ghu.svg",
         "audio_ios": "audio/barakhadi/4_gh/4_ghu.mp3",
-        "audio_android": "audio_4_gh_4_ghu.mp3"
+        "audio_android": "audio_4_gh_4_ghu.mp3",
+        "total_length": 529.4553570643156,
+        "groups": 2
       },
       {
         "id": 5,
@@ -516,7 +622,9 @@
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/4_gh/5_ghoo.svg",
         "audio_ios": "audio/barakhadi/4_gh/5_ghoo.mp3",
-        "audio_android": "audio_4_gh_5_ghoo.mp3"
+        "audio_android": "audio_4_gh_5_ghoo.mp3",
+        "total_length": 532.8182115555132,
+        "groups": 2
       },
       {
         "id": 6,
@@ -525,7 +633,9 @@
         "diacritic": "ે",
         "svg": "svgs/barakhadi/4_gh/6_ghe.svg",
         "audio_ios": "audio/barakhadi/4_gh/6_ghe.mp3",
-        "audio_android": "audio_4_gh_6_ghe.mp3"
+        "audio_android": "audio_4_gh_6_ghe.mp3",
+        "total_length": 443.7488106015858,
+        "groups": 2
       },
       {
         "id": 7,
@@ -534,7 +644,9 @@
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/4_gh/7_ghai.svg",
         "audio_ios": "audio/barakhadi/4_gh/7_ghai.mp3",
-        "audio_android": "audio_4_gh_7_ghai.mp3"
+        "audio_android": "audio_4_gh_7_ghai.mp3",
+        "total_length": 513.1310268674019,
+        "groups": 3
       },
       {
         "id": 8,
@@ -543,7 +655,9 @@
         "diacritic": "ો",
         "svg": "svgs/barakhadi/4_gh/8_gho.svg",
         "audio_ios": "audio/barakhadi/4_gh/8_gho.mp3",
-        "audio_android": "audio_4_gh_8_gho.mp3"
+        "audio_android": "audio_4_gh_8_gho.mp3",
+        "total_length": 585.2271718708743,
+        "groups": 3
       },
       {
         "id": 9,
@@ -552,7 +666,9 @@
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/4_gh/9_ghau.svg",
         "audio_ios": "audio/barakhadi/4_gh/9_ghau.mp3",
-        "audio_android": "audio_4_gh_9_ghau.mp3"
+        "audio_android": "audio_4_gh_9_ghau.mp3",
+        "total_length": 654.6093881366905,
+        "groups": 4
       },
       {
         "id": 10,
@@ -561,7 +677,9 @@
         "diacritic": "ં",
         "svg": "svgs/barakhadi/4_gh/10_gham.svg",
         "audio_ios": "audio/barakhadi/4_gh/10_gham.mp3",
-        "audio_android": "audio_4_gh_10_gham.mp3"
+        "audio_android": "audio_4_gh_10_gham.mp3",
+        "total_length": 386.6649869433971,
+        "groups": 2
       },
       {
         "id": 11,
@@ -570,7 +688,9 @@
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/4_gh/11_ghah.svg",
         "audio_ios": "audio/barakhadi/4_gh/11_ghah.mp3",
-        "audio_android": "audio_4_gh_11_ghah.mp3"
+        "audio_android": "audio_4_gh_11_ghah.mp3",
+        "total_length": 419.23392821347954,
+        "groups": 3
       }
     ]
   },
@@ -586,7 +706,9 @@
         "diacritic": " ",
         "svg": "svgs/barakhadi/5_ch/0_ch.svg",
         "audio_ios": "audio/barakhadi/5_ch/0_ch.mp3",
-        "audio_android": "audio_5_ch_0_ch.mp3"
+        "audio_android": "audio_5_ch_0_ch.mp3",
+        "total_length": 360.187345259573,
+        "groups": 1
       },
       {
         "id": 1,
@@ -595,7 +717,9 @@
         "diacritic": "ા",
         "svg": "svgs/barakhadi/5_ch/1_cha.svg",
         "audio_ios": "audio/barakhadi/5_ch/1_cha.mp3",
-        "audio_android": "audio_5_ch_1_cha.mp3"
+        "audio_android": "audio_5_ch_1_cha.mp3",
+        "total_length": 501.66570652886156,
+        "groups": 2
       },
       {
         "id": 2,
@@ -604,7 +728,9 @@
         "diacritic": "િ",
         "svg": "svgs/barakhadi/5_ch/2_chi.svg",
         "audio_ios": "audio/barakhadi/5_ch/2_chi.mp3",
-        "audio_android": "audio_5_ch_2_chi.mp3"
+        "audio_android": "audio_5_ch_2_chi.mp3",
+        "total_length": 644.130655562439,
+        "groups": 2
       },
       {
         "id": 3,
@@ -613,7 +739,9 @@
         "diacritic": "ી",
         "svg": "svgs/barakhadi/5_ch/3_chee.svg",
         "audio_ios": "audio/barakhadi/5_ch/3_chee.mp3",
-        "audio_android": "audio_5_ch_3_chee.mp3"
+        "audio_android": "audio_5_ch_3_chee.mp3",
+        "total_length": 621.1665051812461,
+        "groups": 2
       },
       {
         "id": 4,
@@ -622,7 +750,9 @@
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/5_ch/4_chu.svg",
         "audio_ios": "audio/barakhadi/5_ch/4_chu.mp3",
-        "audio_android": "audio_5_ch_4_chu.mp3"
+        "audio_android": "audio_5_ch_4_chu.mp3",
+        "total_length": 532.1627957438211,
+        "groups": 2
       },
       {
         "id": 5,
@@ -631,7 +761,9 @@
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/5_ch/5_choo.svg",
         "audio_ios": "audio/barakhadi/5_ch/5_choo.mp3",
-        "audio_android": "audio_5_ch_5_choo.mp3"
+        "audio_android": "audio_5_ch_5_choo.mp3",
+        "total_length": 535.5256502350187,
+        "groups": 2
       },
       {
         "id": 6,
@@ -640,7 +772,9 @@
         "diacritic": "ે",
         "svg": "svgs/barakhadi/5_ch/6_che.svg",
         "audio_ios": "audio/barakhadi/5_ch/6_che.mp3",
-        "audio_android": "audio_5_ch_6_che.mp3"
+        "audio_android": "audio_5_ch_6_che.mp3",
+        "total_length": 446.45624928109123,
+        "groups": 2
       },
       {
         "id": 7,
@@ -649,7 +783,9 @@
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/5_ch/7_chei.svg",
         "audio_ios": "audio/barakhadi/5_ch/7_chei.mp3",
-        "audio_android": "audio_5_ch_7_chei.mp3"
+        "audio_android": "audio_5_ch_7_chei.mp3",
+        "total_length": 515.8384655469074,
+        "groups": 3
       },
       {
         "id": 8,
@@ -658,7 +794,9 @@
         "diacritic": "ો",
         "svg": "svgs/barakhadi/5_ch/8_cho.svg",
         "audio_ios": "audio/barakhadi/5_ch/8_cho.mp3",
-        "audio_android": "audio_5_ch_8_cho.mp3"
+        "audio_android": "audio_5_ch_8_cho.mp3",
+        "total_length": 587.9346105503797,
+        "groups": 3
       },
       {
         "id": 9,
@@ -667,7 +805,9 @@
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/5_ch/9_chau.svg",
         "audio_ios": "audio/barakhadi/5_ch/9_chau.mp3",
-        "audio_android": "audio_5_ch_9_chau.mp3"
+        "audio_android": "audio_5_ch_9_chau.mp3",
+        "total_length": 657.316826816196,
+        "groups": 4
       },
       {
         "id": 10,
@@ -676,7 +816,9 @@
         "diacritic": "ં",
         "svg": "svgs/barakhadi/5_ch/10_cham.svg",
         "audio_ios": "audio/barakhadi/5_ch/10_cham.mp3",
-        "audio_android": "audio_5_ch_10_cham.mp3"
+        "audio_android": "audio_5_ch_10_cham.mp3",
+        "total_length": 389.37242562290254,
+        "groups": 2
       },
       {
         "id": 11,
@@ -685,7 +827,9 @@
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/5_ch/11_chah.svg",
         "audio_ios": "audio/barakhadi/5_ch/11_chah.mp3",
-        "audio_android": "audio_5_ch_11_chah.mp3"
+        "audio_android": "audio_5_ch_11_chah.mp3",
+        "total_length": 421.941366892985,
+        "groups": 3
       }
     ]
   },
@@ -701,7 +845,9 @@
         "diacritic": " ",
         "svg": "svgs/barakhadi/6_chha/0_chha.svg",
         "audio_ios": "audio/barakhadi/6_chha/0_chha.mp3",
-        "audio_android": "audio_6_chha_0_chha.mp3"
+        "audio_android": "audio_6_chha_0_chha.mp3",
+        "total_length": 472.27417532323756,
+        "groups": 1
       },
       {
         "id": 1,
@@ -710,7 +856,9 @@
         "diacritic": "ા",
         "svg": "svgs/barakhadi/6_chha/1_chha.svg",
         "audio_ios": "audio/barakhadi/6_chha/1_chha.mp3",
-        "audio_android": "audio_6_chha_1_chha.mp3"
+        "audio_android": "audio_6_chha_1_chha.mp3",
+        "total_length": 613.7525365925261,
+        "groups": 2
       },
       {
         "id": 2,
@@ -719,7 +867,9 @@
         "diacritic": "િ",
         "svg": "svgs/barakhadi/6_chha/2_chhi.svg",
         "audio_ios": "audio/barakhadi/6_chha/2_chhi.mp3",
-        "audio_android": "audio_6_chha_2_chhi.mp3"
+        "audio_android": "audio_6_chha_2_chhi.mp3",
+        "total_length": 756.2174856261036,
+        "groups": 2
       },
       {
         "id": 3,
@@ -728,7 +878,9 @@
         "diacritic": "ી",
         "svg": "svgs/barakhadi/6_chha/3_chhee.svg",
         "audio_ios": "audio/barakhadi/6_chha/3_chhee.mp3",
-        "audio_android": "audio_6_chha_3_chhee.mp3"
+        "audio_android": "audio_6_chha_3_chhee.mp3",
+        "total_length": 733.2533352449105,
+        "groups": 2
       },
       {
         "id": 4,
@@ -737,7 +889,9 @@
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/6_chha/4_chhu.svg",
         "audio_ios": "audio/barakhadi/6_chha/4_chhu.mp3",
-        "audio_android": "audio_6_chha_4_chhu.mp3"
+        "audio_android": "audio_6_chha_4_chhu.mp3",
+        "total_length": 644.2496258074856,
+        "groups": 2
       },
       {
         "id": 5,
@@ -746,7 +900,9 @@
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/6_chha/5_chhoo.svg",
         "audio_ios": "audio/barakhadi/6_chha/5_chhoo.mp3",
-        "audio_android": "audio_6_chha_5_chhoo.mp3"
+        "audio_android": "audio_6_chha_5_chhoo.mp3",
+        "total_length": 647.6124802986832,
+        "groups": 2
       },
       {
         "id": 6,
@@ -755,7 +911,9 @@
         "diacritic": "ે",
         "svg": "svgs/barakhadi/6_chha/6_chhe.svg",
         "audio_ios": "audio/barakhadi/6_chha/6_chhe.mp3",
-        "audio_android": "audio_6_chha_6_chhe.mp3"
+        "audio_android": "audio_6_chha_6_chhe.mp3",
+        "total_length": 558.5430793447557,
+        "groups": 2
       },
       {
         "id": 7,
@@ -764,7 +922,9 @@
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/6_chha/7_chhai.svg",
         "audio_ios": "audio/barakhadi/6_chha/7_chhai.mp3",
-        "audio_android": "audio_6_chha_7_chhai.mp3"
+        "audio_android": "audio_6_chha_7_chhai.mp3",
+        "total_length": 627.925295610572,
+        "groups": 3
       },
       {
         "id": 8,
@@ -773,7 +933,9 @@
         "diacritic": "ો",
         "svg": "svgs/barakhadi/6_chha/8_chho.svg",
         "audio_ios": "audio/barakhadi/6_chha/8_chho.mp3",
-        "audio_android": "audio_6_chha_8_chho.mp3"
+        "audio_android": "audio_6_chha_8_chho.mp3",
+        "total_length": 700.0214406140443,
+        "groups": 3
       },
       {
         "id": 9,
@@ -782,7 +944,9 @@
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/6_chha/9_chhau.svg",
         "audio_ios": "audio/barakhadi/6_chha/9_chhau.mp3",
-        "audio_android": "audio_6_chha_9_chhau.mp3"
+        "audio_android": "audio_6_chha_9_chhau.mp3",
+        "total_length": 769.4036568798606,
+        "groups": 4
       },
       {
         "id": 10,
@@ -791,7 +955,9 @@
         "diacritic": "ં",
         "svg": "svgs/barakhadi/6_chha/10_chham.svg",
         "audio_ios": "audio/barakhadi/6_chha/10_chham.mp3",
-        "audio_android": "audio_6_chha_10_chham.mp3"
+        "audio_android": "audio_6_chha_10_chham.mp3",
+        "total_length": 501.4592556865671,
+        "groups": 2
       },
       {
         "id": 11,
@@ -800,7 +966,9 @@
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/6_chha/11_chhah.svg",
         "audio_ios": "audio/barakhadi/6_chha/11_chhah.mp3",
-        "audio_android": "audio_6_chha_11_chhah.mp3"
+        "audio_android": "audio_6_chha_11_chhah.mp3",
+        "total_length": 534.0281969566496,
+        "groups": 3
       }
     ]
   },
@@ -816,7 +984,9 @@
         "diacritic": " ",
         "svg": "svgs/barakhadi/7_j/0_j.svg",
         "audio_ios": "audio/barakhadi/7_j/0_j.mp3",
-        "audio_android": "audio_7_j_0_j.mp3"
+        "audio_android": "audio_7_j_0_j.mp3",
+        "total_length": 476.1874324973391,
+        "groups": 1
       },
       {
         "id": 1,
@@ -825,7 +995,9 @@
         "diacritic": "ા",
         "svg": "svgs/barakhadi/7_j/1_ja.svg",
         "audio_ios": "audio/barakhadi/7_j/1_ja.mp3",
-        "audio_android": "audio_7_j_1_ja.mp3"
+        "audio_android": "audio_7_j_1_ja.mp3",
+        "total_length": 617.6657937666276,
+        "groups": 2
       },
       {
         "id": 2,
@@ -834,7 +1006,9 @@
         "diacritic": "િ",
         "svg": "svgs/barakhadi/7_j/2_ji.svg",
         "audio_ios": "audio/barakhadi/7_j/2_ji.mp3",
-        "audio_android": "audio_7_j_2_ji.mp3"
+        "audio_android": "audio_7_j_2_ji.mp3",
+        "total_length": 760.1307428002051,
+        "groups": 2
       },
       {
         "id": 3,
@@ -843,7 +1017,9 @@
         "diacritic": "ી",
         "svg": "svgs/barakhadi/7_j/3_jee.svg",
         "audio_ios": "audio/barakhadi/7_j/3_jee.mp3",
-        "audio_android": "audio_7_j_3_jee.mp3"
+        "audio_android": "audio_7_j_3_jee.mp3",
+        "total_length": 737.1665924190121,
+        "groups": 2
       },
       {
         "id": 4,
@@ -852,7 +1028,9 @@
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/7_j/4_ju.svg",
         "audio_ios": "audio/barakhadi/7_j/4_ju.mp3",
-        "audio_android": "audio_7_j_4_ju.mp3"
+        "audio_android": "audio_7_j_4_ju.mp3",
+        "total_length": 648.1628829815871,
+        "groups": 2
       },
       {
         "id": 5,
@@ -861,7 +1039,9 @@
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/7_j/5_joo.svg",
         "audio_ios": "audio/barakhadi/7_j/5_joo.mp3",
-        "audio_android": "audio_7_j_5_joo.mp3"
+        "audio_android": "audio_7_j_5_joo.mp3",
+        "total_length": 651.5257374727847,
+        "groups": 2
       },
       {
         "id": 6,
@@ -870,7 +1050,9 @@
         "diacritic": "ે",
         "svg": "svgs/barakhadi/7_j/6_je.svg",
         "audio_ios": "audio/barakhadi/7_j/6_je.mp3",
-        "audio_android": "audio_7_j_6_je.mp3"
+        "audio_android": "audio_7_j_6_je.mp3",
+        "total_length": 562.4563365188573,
+        "groups": 2
       },
       {
         "id": 7,
@@ -879,7 +1061,9 @@
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/7_j/7_jai.svg",
         "audio_ios": "audio/barakhadi/7_j/7_jai.mp3",
-        "audio_android": "audio_7_j_7_jai.mp3"
+        "audio_android": "audio_7_j_7_jai.mp3",
+        "total_length": 631.8385527846735,
+        "groups": 3
       },
       {
         "id": 8,
@@ -888,7 +1072,9 @@
         "diacritic": "ો",
         "svg": "svgs/barakhadi/7_j/8_jo.svg",
         "audio_ios": "audio/barakhadi/7_j/8_jo.mp3",
-        "audio_android": "audio_7_j_8_jo.mp3"
+        "audio_android": "audio_7_j_8_jo.mp3",
+        "total_length": 703.9346977881459,
+        "groups": 3
       },
       {
         "id": 9,
@@ -897,7 +1083,9 @@
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/7_j/9_jau.svg",
         "audio_ios": "audio/barakhadi/7_j/9_jau.mp3",
-        "audio_android": "audio_7_j_9_jau.mp3"
+        "audio_android": "audio_7_j_9_jau.mp3",
+        "total_length": 773.3169140539621,
+        "groups": 4
       },
       {
         "id": 10,
@@ -906,7 +1094,9 @@
         "diacritic": "ં",
         "svg": "svgs/barakhadi/7_j/10_jam.svg",
         "audio_ios": "audio/barakhadi/7_j/10_jam.mp3",
-        "audio_android": "audio_7_j_10_jam.mp3"
+        "audio_android": "audio_7_j_10_jam.mp3",
+        "total_length": 505.3725128606686,
+        "groups": 2
       },
       {
         "id": 11,
@@ -915,7 +1105,9 @@
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/7_j/11_jah.svg",
         "audio_ios": "audio/barakhadi/7_j/11_jah.mp3",
-        "audio_android": "audio_7_j_11_jah.mp3"
+        "audio_android": "audio_7_j_11_jah.mp3",
+        "total_length": 537.9414541307511,
+        "groups": 3
       }
     ]
   },
@@ -931,7 +1123,9 @@
         "diacritic": " ",
         "svg": "svgs/barakhadi/8_jh/0_jh.svg",
         "audio_ios": "audio/barakhadi/8_jh/0_jh.mp3",
-        "audio_android": "audio_8_jh_0_jh.mp3"
+        "audio_android": "audio_8_jh_0_jh.mp3",
+        "total_length": 365.258756090612,
+        "groups": 1
       },
       {
         "id": 1,
@@ -940,7 +1134,9 @@
         "diacritic": "ા",
         "svg": "svgs/barakhadi/8_jh/1_jha.svg",
         "audio_ios": "audio/barakhadi/8_jh/1_jha.mp3",
-        "audio_android": "audio_8_jh_1_jha.mp3"
+        "audio_android": "audio_8_jh_1_jha.mp3",
+        "total_length": 506.73711735990054,
+        "groups": 2
       },
       {
         "id": 2,
@@ -949,7 +1145,9 @@
         "diacritic": "િ",
         "svg": "svgs/barakhadi/8_jh/2_jhi.svg",
         "audio_ios": "audio/barakhadi/8_jh/2_jhi.mp3",
-        "audio_android": "audio_8_jh_2_jhi.mp3"
+        "audio_android": "audio_8_jh_2_jhi.mp3",
+        "total_length": 649.2020663934779,
+        "groups": 2
       },
       {
         "id": 3,
@@ -958,7 +1156,9 @@
         "diacritic": "ી",
         "svg": "svgs/barakhadi/8_jh/3_jhee.svg",
         "audio_ios": "audio/barakhadi/8_jh/3_jhee.mp3",
-        "audio_android": "audio_8_jh_3_jhee.mp3"
+        "audio_android": "audio_8_jh_3_jhee.mp3",
+        "total_length": 626.237916012285,
+        "groups": 2
       },
       {
         "id": 4,
@@ -967,7 +1167,9 @@
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/8_jh/4_jhu.svg",
         "audio_ios": "audio/barakhadi/8_jh/4_jhu.mp3",
-        "audio_android": "audio_8_jh_4_jhu.mp3"
+        "audio_android": "audio_8_jh_4_jhu.mp3",
+        "total_length": 537.2342065748601,
+        "groups": 2
       },
       {
         "id": 5,
@@ -976,7 +1178,9 @@
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/8_jh/5_jhoo.svg",
         "audio_ios": "audio/barakhadi/8_jh/5_jhoo.mp3",
-        "audio_android": "audio_8_jh_5_jhoo.mp3"
+        "audio_android": "audio_8_jh_5_jhoo.mp3",
+        "total_length": 540.5970610660577,
+        "groups": 2
       },
       {
         "id": 6,
@@ -985,7 +1189,9 @@
         "diacritic": "ે",
         "svg": "svgs/barakhadi/8_jh/6_jhe.svg",
         "audio_ios": "audio/barakhadi/8_jh/6_jhe.mp3",
-        "audio_android": "audio_8_jh_6_jhe.mp3"
+        "audio_android": "audio_8_jh_6_jhe.mp3",
+        "total_length": 451.5276601121302,
+        "groups": 2
       },
       {
         "id": 7,
@@ -994,7 +1200,9 @@
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/8_jh/7_jhai.svg",
         "audio_ios": "audio/barakhadi/8_jh/7_jhai.mp3",
-        "audio_android": "audio_8_jh_7_jhai.mp3"
+        "audio_android": "audio_8_jh_7_jhai.mp3",
+        "total_length": 520.9098763779464,
+        "groups": 3
       },
       {
         "id": 8,
@@ -1003,7 +1211,9 @@
         "diacritic": "ો",
         "svg": "svgs/barakhadi/8_jh/8_jho.svg",
         "audio_ios": "audio/barakhadi/8_jh/8_jho.mp3",
-        "audio_android": "audio_8_jh_8_jho.mp3"
+        "audio_android": "audio_8_jh_8_jho.mp3",
+        "total_length": 593.0060213814187,
+        "groups": 3
       },
       {
         "id": 9,
@@ -1012,7 +1222,9 @@
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/8_jh/9_jhau.svg",
         "audio_ios": "audio/barakhadi/8_jh/9_jhau.mp3",
-        "audio_android": "audio_8_jh_9_jhau.mp3"
+        "audio_android": "audio_8_jh_9_jhau.mp3",
+        "total_length": 662.388237647235,
+        "groups": 4
       },
       {
         "id": 10,
@@ -1021,7 +1233,9 @@
         "diacritic": "ં",
         "svg": "svgs/barakhadi/8_jh/10_jham.svg",
         "audio_ios": "audio/barakhadi/8_jh/10_jham.mp3",
-        "audio_android": "audio_8_jh_10_jham.mp3"
+        "audio_android": "audio_8_jh_10_jham.mp3",
+        "total_length": 394.4438364539415,
+        "groups": 2
       },
       {
         "id": 11,
@@ -1030,7 +1244,9 @@
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/8_jh/11_jhah.svg",
         "audio_ios": "audio/barakhadi/8_jh/11_jhah.mp3",
-        "audio_android": "audio_8_jh_11_jhah.mp3"
+        "audio_android": "audio_8_jh_11_jhah.mp3",
+        "total_length": 427.012777724024,
+        "groups": 3
       }
     ]
   },
@@ -1046,7 +1262,9 @@
         "diacritic": " ",
         "svg": "svgs/barakhadi/9_t/0_t.svg",
         "audio_ios": "audio/barakhadi/9_t/0_t.mp3",
-        "audio_android": "audio_9_t_0_t.mp3"
+        "audio_android": "audio_9_t_0_t.mp3",
+        "total_length": 251.7823821827207,
+        "groups": 1
       },
       {
         "id": 1,
@@ -1055,7 +1273,9 @@
         "diacritic": "ા",
         "svg": "svgs/barakhadi/9_t/1_ta.svg",
         "audio_ios": "audio/barakhadi/9_t/1_ta.mp3",
-        "audio_android": "audio_9_t_1_ta.mp3"
+        "audio_android": "audio_9_t_1_ta.mp3",
+        "total_length": 393.26074345200925,
+        "groups": 2
       },
       {
         "id": 2,
@@ -1064,7 +1284,9 @@
         "diacritic": "િ",
         "svg": "svgs/barakhadi/9_t/2_ti.svg",
         "audio_ios": "audio/barakhadi/9_t/2_ti.mp3",
-        "audio_android": "audio_9_t_2_ti.mp3"
+        "audio_android": "audio_9_t_2_ti.mp3",
+        "total_length": 535.7256924855867,
+        "groups": 2
       },
       {
         "id": 3,
@@ -1073,7 +1295,9 @@
         "diacritic": "ી",
         "svg": "svgs/barakhadi/9_t/3_tee.svg",
         "audio_ios": "audio/barakhadi/9_t/3_tee.mp3",
-        "audio_android": "audio_9_t_3_tee.mp3"
+        "audio_android": "audio_9_t_3_tee.mp3",
+        "total_length": 512.7615421043937,
+        "groups": 2
       },
       {
         "id": 4,
@@ -1082,7 +1306,9 @@
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/9_t/4_tu.svg",
         "audio_ios": "audio/barakhadi/9_t/4_tu.mp3",
-        "audio_android": "audio_9_t_4_tu.mp3"
+        "audio_android": "audio_9_t_4_tu.mp3",
+        "total_length": 423.75783266696874,
+        "groups": 2
       },
       {
         "id": 5,
@@ -1091,7 +1317,9 @@
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/9_t/5_too.svg",
         "audio_ios": "audio/barakhadi/9_t/5_too.mp3",
-        "audio_android": "audio_9_t_5_too.mp3"
+        "audio_android": "audio_9_t_5_too.mp3",
+        "total_length": 427.12068715816633,
+        "groups": 2
       },
       {
         "id": 6,
@@ -1100,7 +1328,9 @@
         "diacritic": "ે",
         "svg": "svgs/barakhadi/9_t/6_te.svg",
         "audio_ios": "audio/barakhadi/9_t/6_te.mp3",
-        "audio_android": "audio_9_t_6_te.mp3"
+        "audio_android": "audio_9_t_6_te.mp3",
+        "total_length": 338.05128620423886,
+        "groups": 2
       },
       {
         "id": 7,
@@ -1109,7 +1339,9 @@
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/9_t/7_tai.svg",
         "audio_ios": "audio/barakhadi/9_t/7_tai.mp3",
-        "audio_android": "audio_9_t_7_tai.mp3"
+        "audio_android": "audio_9_t_7_tai.mp3",
+        "total_length": 407.43350247005515,
+        "groups": 3
       },
       {
         "id": 8,
@@ -1118,7 +1350,9 @@
         "diacritic": "ો",
         "svg": "svgs/barakhadi/9_t/8_to.svg",
         "audio_ios": "audio/barakhadi/9_t/8_to.mp3",
-        "audio_android": "audio_9_t_8_to.mp3"
+        "audio_android": "audio_9_t_8_to.mp3",
+        "total_length": 479.52964747352746,
+        "groups": 3
       },
       {
         "id": 9,
@@ -1127,7 +1361,9 @@
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/9_t/9_tau.svg",
         "audio_ios": "audio/barakhadi/9_t/9_tau.mp3",
-        "audio_android": "audio_9_t_9_tau.mp3"
+        "audio_android": "audio_9_t_9_tau.mp3",
+        "total_length": 548.9118637393437,
+        "groups": 4
       },
       {
         "id": 10,
@@ -1136,7 +1372,9 @@
         "diacritic": "ં",
         "svg": "svgs/barakhadi/9_t/10_tam.svg",
         "audio_ios": "audio/barakhadi/9_t/10_tam.mp3",
-        "audio_android": "audio_9_t_10_tam.mp3"
+        "audio_android": "audio_9_t_10_tam.mp3",
+        "total_length": 280.9674625460502,
+        "groups": 2
       },
       {
         "id": 11,
@@ -1145,7 +1383,9 @@
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/9_t/11_tah.svg",
         "audio_ios": "audio/barakhadi/9_t/11_tah.mp3",
-        "audio_android": "audio_9_t_11_tah.mp3"
+        "audio_android": "audio_9_t_11_tah.mp3",
+        "total_length": 313.5364038161327,
+        "groups": 3
       }
     ]
   },
@@ -1161,7 +1401,9 @@
         "diacritic": " ",
         "svg": "svgs/barakhadi/10_th/0_th.svg",
         "audio_ios": "audio/barakhadi/10_th/0_th.mp3",
-        "audio_android": "audio_10_th_0_th.mp3"
+        "audio_android": "audio_10_th_0_th.mp3",
+        "total_length": 301.6331713669613,
+        "groups": 1
       },
       {
         "id": 1,
@@ -1170,7 +1412,9 @@
         "diacritic": "ા",
         "svg": "svgs/barakhadi/10_th/1_tha.svg",
         "audio_ios": "audio/barakhadi/10_th/1_tha.mp3",
-        "audio_android": "audio_10_th_1_tha.mp3"
+        "audio_android": "audio_10_th_1_tha.mp3",
+        "total_length": 443.1115326362498,
+        "groups": 2
       },
       {
         "id": 2,
@@ -1179,7 +1423,9 @@
         "diacritic": "િ",
         "svg": "svgs/barakhadi/10_th/2_thi.svg",
         "audio_ios": "audio/barakhadi/10_th/2_thi.mp3",
-        "audio_android": "audio_10_th_2_thi.mp3"
+        "audio_android": "audio_10_th_2_thi.mp3",
+        "total_length": 585.5764816698272,
+        "groups": 2
       },
       {
         "id": 3,
@@ -1188,7 +1434,9 @@
         "diacritic": "ી",
         "svg": "svgs/barakhadi/10_th/3_thee.svg",
         "audio_ios": "audio/barakhadi/10_th/3_thee.mp3",
-        "audio_android": "audio_10_th_3_thee.mp3"
+        "audio_android": "audio_10_th_3_thee.mp3",
+        "total_length": 562.6123312886343,
+        "groups": 2
       },
       {
         "id": 4,
@@ -1197,7 +1445,9 @@
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/10_th/4_thu.svg",
         "audio_ios": "audio/barakhadi/10_th/4_thu.mp3",
-        "audio_android": "audio_10_th_4_thu.mp3"
+        "audio_android": "audio_10_th_4_thu.mp3",
+        "total_length": 473.6086218512093,
+        "groups": 2
       },
       {
         "id": 5,
@@ -1206,7 +1456,9 @@
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/10_th/5_thoo.svg",
         "audio_ios": "audio/barakhadi/10_th/5_thoo.mp3",
-        "audio_android": "audio_10_th_5_thoo.mp3"
+        "audio_android": "audio_10_th_5_thoo.mp3",
+        "total_length": 476.9714763424069,
+        "groups": 2
       },
       {
         "id": 6,
@@ -1215,7 +1467,9 @@
         "diacritic": "ે",
         "svg": "svgs/barakhadi/10_th/6_the.svg",
         "audio_ios": "audio/barakhadi/10_th/6_the.mp3",
-        "audio_android": "audio_10_th_6_the.mp3"
+        "audio_android": "audio_10_th_6_the.mp3",
+        "total_length": 387.9020753884795,
+        "groups": 2
       },
       {
         "id": 7,
@@ -1224,7 +1478,9 @@
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/10_th/7_thai.svg",
         "audio_ios": "audio/barakhadi/10_th/7_thai.mp3",
-        "audio_android": "audio_10_th_7_thai.mp3"
+        "audio_android": "audio_10_th_7_thai.mp3",
+        "total_length": 523.2961615062495,
+        "groups": 3
       },
       {
         "id": 8,
@@ -1233,7 +1489,9 @@
         "diacritic": "ો",
         "svg": "svgs/barakhadi/10_th/8_tho.svg",
         "audio_ios": "audio/barakhadi/10_th/8_tho.mp3",
-        "audio_android": "audio_10_th_8_tho.mp3"
+        "audio_android": "audio_10_th_8_tho.mp3",
+        "total_length": 529.380436657768,
+        "groups": 3
       },
       {
         "id": 9,
@@ -1242,7 +1500,9 @@
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/10_th/9_thau.svg",
         "audio_ios": "audio/barakhadi/10_th/9_thau.mp3",
-        "audio_android": "audio_10_th_9_thau.mp3"
+        "audio_android": "audio_10_th_9_thau.mp3",
+        "total_length": 598.7626529235843,
+        "groups": 4
       },
       {
         "id": 10,
@@ -1251,7 +1511,9 @@
         "diacritic": "ં",
         "svg": "svgs/barakhadi/10_th/10_tham.svg",
         "audio_ios": "audio/barakhadi/10_th/10_tham.mp3",
-        "audio_android": "audio_10_th_10_tham.mp3"
+        "audio_android": "audio_10_th_10_tham.mp3",
+        "total_length": 330.8182517302908,
+        "groups": 2
       },
       {
         "id": 11,
@@ -1260,7 +1522,9 @@
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/10_th/11_thah.svg",
         "audio_ios": "audio/barakhadi/10_th/11_thah.mp3",
-        "audio_android": "audio_10_th_11_thah.mp3"
+        "audio_android": "audio_10_th_11_thah.mp3",
+        "total_length": 363.38719300037326,
+        "groups": 3
       }
     ]
   },
@@ -1276,7 +1540,9 @@
         "diacritic": " ",
         "svg": "svgs/barakhadi/11_d/0_d.svg",
         "audio_ios": "audio/barakhadi/11_d/0_d.mp3",
-        "audio_android": "audio_11_d_0_d.mp3"
+        "audio_android": "audio_11_d_0_d.mp3",
+        "total_length": 253.5500779852662,
+        "groups": 1
       },
       {
         "id": 1,
@@ -1285,7 +1551,9 @@
         "diacritic": "ા",
         "svg": "svgs/barakhadi/11_d/1_da.svg",
         "audio_ios": "audio/barakhadi/11_d/1_da.mp3",
-        "audio_android": "audio_11_d_1_da.mp3"
+        "audio_android": "audio_11_d_1_da.mp3",
+        "total_length": 395.02843925455477,
+        "groups": 2
       },
       {
         "id": 2,
@@ -1294,7 +1562,9 @@
         "diacritic": "િ",
         "svg": "svgs/barakhadi/11_d/2_di.svg",
         "audio_ios": "audio/barakhadi/11_d/2_di.mp3",
-        "audio_android": "audio_11_d_2_di.mp3"
+        "audio_android": "audio_11_d_2_di.mp3",
+        "total_length": 537.4933882881321,
+        "groups": 2
       },
       {
         "id": 3,
@@ -1303,7 +1573,9 @@
         "diacritic": "ી",
         "svg": "svgs/barakhadi/11_d/3_dee.svg",
         "audio_ios": "audio/barakhadi/11_d/3_dee.mp3",
-        "audio_android": "audio_11_d_3_dee.mp3"
+        "audio_android": "audio_11_d_3_dee.mp3",
+        "total_length": 514.5292379069392,
+        "groups": 2
       },
       {
         "id": 4,
@@ -1312,7 +1584,9 @@
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/11_d/4_du.svg",
         "audio_ios": "audio/barakhadi/11_d/4_du.mp3",
-        "audio_android": "audio_11_d_4_du.mp3"
+        "audio_android": "audio_11_d_4_du.mp3",
+        "total_length": 425.52552846951426,
+        "groups": 2
       },
       {
         "id": 5,
@@ -1321,7 +1595,9 @@
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/11_d/5_doo.svg",
         "audio_ios": "audio/barakhadi/11_d/5_doo.mp3",
-        "audio_android": "audio_11_d_5_doo.mp3"
+        "audio_android": "audio_11_d_5_doo.mp3",
+        "total_length": 428.88838296071185,
+        "groups": 2
       },
       {
         "id": 6,
@@ -1330,7 +1606,9 @@
         "diacritic": "ે",
         "svg": "svgs/barakhadi/11_d/6_de.svg",
         "audio_ios": "audio/barakhadi/11_d/6_de.mp3",
-        "audio_android": "audio_11_d_6_de.mp3"
+        "audio_android": "audio_11_d_6_de.mp3",
+        "total_length": 339.8189820067844,
+        "groups": 2
       },
       {
         "id": 7,
@@ -1339,7 +1617,9 @@
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/11_d/7_dai.svg",
         "audio_ios": "audio/barakhadi/11_d/7_dai.mp3",
-        "audio_android": "audio_11_d_7_dai.mp3"
+        "audio_android": "audio_11_d_7_dai.mp3",
+        "total_length": 409.20119827260066,
+        "groups": 3
       },
       {
         "id": 8,
@@ -1348,7 +1628,9 @@
         "diacritic": "ો",
         "svg": "svgs/barakhadi/11_d/8_do.svg",
         "audio_ios": "audio/barakhadi/11_d/8_do.mp3",
-        "audio_android": "audio_11_d_8_do.mp3"
+        "audio_android": "audio_11_d_8_do.mp3",
+        "total_length": 481.297343276073,
+        "groups": 3
       },
       {
         "id": 9,
@@ -1357,7 +1639,9 @@
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/11_d/9_dau.svg",
         "audio_ios": "audio/barakhadi/11_d/9_dau.mp3",
-        "audio_android": "audio_11_d_9_dau.mp3"
+        "audio_android": "audio_11_d_9_dau.mp3",
+        "total_length": 550.6795595418891,
+        "groups": 4
       },
       {
         "id": 10,
@@ -1366,7 +1650,9 @@
         "diacritic": "ં",
         "svg": "svgs/barakhadi/11_d/10_dam.svg",
         "audio_ios": "audio/barakhadi/11_d/10_dam.mp3",
-        "audio_android": "audio_11_d_10_dam.mp3"
+        "audio_android": "audio_11_d_10_dam.mp3",
+        "total_length": 282.7351583485957,
+        "groups": 2
       },
       {
         "id": 11,
@@ -1375,7 +1661,9 @@
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/11_d/11_dah.svg",
         "audio_ios": "audio/barakhadi/11_d/11_dah.mp3",
-        "audio_android": "audio_11_d_11_dah.mp3"
+        "audio_android": "audio_11_d_11_dah.mp3",
+        "total_length": 315.3040996186782,
+        "groups": 3
       }
     ]
   },
@@ -1391,7 +1679,9 @@
         "diacritic": " ",
         "svg": "svgs/barakhadi/12_dh/0_dh.svg",
         "audio_ios": "audio/barakhadi/12_dh/0_dh.mp3",
-        "audio_android": "audio_12_dh_0_dh.mp3"
+        "audio_android": "audio_12_dh_0_dh.mp3",
+        "total_length": 340.69632898980694,
+        "groups": 1
       },
       {
         "id": 1,
@@ -1400,7 +1690,9 @@
         "diacritic": "ા",
         "svg": "svgs/barakhadi/12_dh/1_dha.svg",
         "audio_ios": "audio/barakhadi/12_dh/1_dha.mp3",
-        "audio_android": "audio_12_dh_1_dha.mp3"
+        "audio_android": "audio_12_dh_1_dha.mp3",
+        "total_length": 482.1746902590955,
+        "groups": 2
       },
       {
         "id": 2,
@@ -1409,7 +1701,9 @@
         "diacritic": "િ",
         "svg": "svgs/barakhadi/12_dh/2_dhai.svg",
         "audio_ios": "audio/barakhadi/12_dh/2_dhai.mp3",
-        "audio_android": "audio_12_dh_2_dhai.mp3"
+        "audio_android": "audio_12_dh_2_dhai.mp3",
+        "total_length": 624.6396392926729,
+        "groups": 2
       },
       {
         "id": 3,
@@ -1418,7 +1712,9 @@
         "diacritic": "ી",
         "svg": "svgs/barakhadi/12_dh/3_dhee.svg",
         "audio_ios": "audio/barakhadi/12_dh/3_dhee.mp3",
-        "audio_android": "audio_12_dh_3_dhee.mp3"
+        "audio_android": "audio_12_dh_3_dhee.mp3",
+        "total_length": 601.67548891148,
+        "groups": 2
       },
       {
         "id": 4,
@@ -1427,7 +1723,9 @@
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/12_dh/4_dhu.svg",
         "audio_ios": "audio/barakhadi/12_dh/4_dhu.mp3",
-        "audio_android": "audio_12_dh_4_dhu.mp3"
+        "audio_android": "audio_12_dh_4_dhu.mp3",
+        "total_length": 512.671779474055,
+        "groups": 2
       },
       {
         "id": 5,
@@ -1436,7 +1734,9 @@
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/12_dh/5_dhoo.svg",
         "audio_ios": "audio/barakhadi/12_dh/5_dhoo.mp3",
-        "audio_android": "audio_12_dh_5_dhoo.mp3"
+        "audio_android": "audio_12_dh_5_dhoo.mp3",
+        "total_length": 516.0346339652526,
+        "groups": 2
       },
       {
         "id": 6,
@@ -1445,7 +1745,9 @@
         "diacritic": "ે",
         "svg": "svgs/barakhadi/12_dh/6_dhe.svg",
         "audio_ios": "audio/barakhadi/12_dh/6_dhe.mp3",
-        "audio_android": "audio_12_dh_6_dhe.mp3"
+        "audio_android": "audio_12_dh_6_dhe.mp3",
+        "total_length": 426.96523301132515,
+        "groups": 2
       },
       {
         "id": 7,
@@ -1454,7 +1756,9 @@
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/12_dh/7_dhai.svg",
         "audio_ios": "audio/barakhadi/12_dh/7_dhai.mp3",
-        "audio_android": "audio_12_dh_7_dhai.mp3"
+        "audio_android": "audio_12_dh_7_dhai.mp3",
+        "total_length": 496.3474492771414,
+        "groups": 3
       },
       {
         "id": 8,
@@ -1463,7 +1767,9 @@
         "diacritic": "ો",
         "svg": "svgs/barakhadi/12_dh/8_dho.svg",
         "audio_ios": "audio/barakhadi/12_dh/8_dho.mp3",
-        "audio_android": "audio_12_dh_8_dho.mp3"
+        "audio_android": "audio_12_dh_8_dho.mp3",
+        "total_length": 568.4435942806136,
+        "groups": 3
       },
       {
         "id": 9,
@@ -1472,7 +1778,9 @@
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/12_dh/9_dhau.svg",
         "audio_ios": "audio/barakhadi/12_dh/9_dhau.mp3",
-        "audio_android": "audio_12_dh_9_dhau.mp3"
+        "audio_android": "audio_12_dh_9_dhau.mp3",
+        "total_length": 637.8258105464299,
+        "groups": 4
       },
       {
         "id": 10,
@@ -1481,7 +1789,9 @@
         "diacritic": "ં",
         "svg": "svgs/barakhadi/12_dh/10_dham.svg",
         "audio_ios": "audio/barakhadi/12_dh/10_dham.mp3",
-        "audio_android": "audio_12_dh_10_dham.mp3"
+        "audio_android": "audio_12_dh_10_dham.mp3",
+        "total_length": 369.88140935313646,
+        "groups": 2
       },
       {
         "id": 11,
@@ -1490,7 +1800,9 @@
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/12_dh/11_dhah.svg",
         "audio_ios": "audio/barakhadi/12_dh/11_dhah.mp3",
-        "audio_android": "audio_12_dh_11_dhah.mp3"
+        "audio_android": "audio_12_dh_11_dhah.mp3",
+        "total_length": 402.4503506232189,
+        "groups": 3
       }
     ]
   },
@@ -1506,7 +1818,9 @@
         "diacritic": " ",
         "svg": "svgs/barakhadi/13_n/0_n.svg",
         "audio_ios": "audio/barakhadi/13_n/0_n.mp3",
-        "audio_android": "audio_13_n_0_n.mp3"
+        "audio_android": "audio_13_n_0_n.mp3",
+        "total_length": 499.8947300096013,
+        "groups": 1
       },
       {
         "id": 1,
@@ -1515,7 +1829,9 @@
         "diacritic": "ા",
         "svg": "svgs/barakhadi/13_n/1_na.svg",
         "audio_ios": "audio/barakhadi/13_n/1_na.mp3",
-        "audio_android": "audio_13_n_1_na.mp3"
+        "audio_android": "audio_13_n_1_na.mp3",
+        "total_length": 641.3730912788899,
+        "groups": 2
       },
       {
         "id": 2,
@@ -1524,7 +1840,9 @@
         "diacritic": "િ",
         "svg": "svgs/barakhadi/13_n/2_ni.svg",
         "audio_ios": "audio/barakhadi/13_n/2_ni.mp3",
-        "audio_android": "audio_13_n_2_ni.mp3"
+        "audio_android": "audio_13_n_2_ni.mp3",
+        "total_length": 783.8380403124672,
+        "groups": 2
       },
       {
         "id": 3,
@@ -1533,7 +1851,9 @@
         "diacritic": "ી",
         "svg": "svgs/barakhadi/13_n/3_nee.svg",
         "audio_ios": "audio/barakhadi/13_n/3_nee.mp3",
-        "audio_android": "audio_13_n_3_nee.mp3"
+        "audio_android": "audio_13_n_3_nee.mp3",
+        "total_length": 760.8738899312743,
+        "groups": 2
       },
       {
         "id": 4,
@@ -1542,7 +1862,9 @@
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/13_n/4_nu.svg",
         "audio_ios": "audio/barakhadi/13_n/4_nu.mp3",
-        "audio_android": "audio_13_n_4_nu.mp3"
+        "audio_android": "audio_13_n_4_nu.mp3",
+        "total_length": 671.8701804938494,
+        "groups": 2
       },
       {
         "id": 5,
@@ -1551,7 +1873,9 @@
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/13_n/5_noo.svg",
         "audio_ios": "audio/barakhadi/13_n/5_noo.mp3",
-        "audio_android": "audio_13_n_5_noo.mp3"
+        "audio_android": "audio_13_n_5_noo.mp3",
+        "total_length": 675.233034985047,
+        "groups": 2
       },
       {
         "id": 6,
@@ -1560,7 +1884,9 @@
         "diacritic": "ે",
         "svg": "svgs/barakhadi/13_n/6_ne.svg",
         "audio_ios": "audio/barakhadi/13_n/6_ne.mp3",
-        "audio_android": "audio_13_n_6_ne.mp3"
+        "audio_android": "audio_13_n_6_ne.mp3",
+        "total_length": 586.1636340311195,
+        "groups": 2
       },
       {
         "id": 7,
@@ -1569,7 +1895,9 @@
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/13_n/7_nai.svg",
         "audio_ios": "audio/barakhadi/13_n/7_nai.mp3",
-        "audio_android": "audio_13_n_7_nai.mp3"
+        "audio_android": "audio_13_n_7_nai.mp3",
+        "total_length": 655.5458502969357,
+        "groups": 3
       },
       {
         "id": 8,
@@ -1578,7 +1906,9 @@
         "diacritic": "ો",
         "svg": "svgs/barakhadi/13_n/8_no.svg",
         "audio_ios": "audio/barakhadi/13_n/8_no.mp3",
-        "audio_android": "audio_13_n_8_no.mp3"
+        "audio_android": "audio_13_n_8_no.mp3",
+        "total_length": 729.7307491501672,
+        "groups": 3
       },
       {
         "id": 9,
@@ -1587,7 +1917,9 @@
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/13_n/9_nau.svg",
         "audio_ios": "audio/barakhadi/13_n/9_nau.mp3",
-        "audio_android": "audio_13_n_9_nau.mp3"
+        "audio_android": "audio_13_n_9_nau.mp3",
+        "total_length": 797.0242115662243,
+        "groups": 4
       },
       {
         "id": 10,
@@ -1596,7 +1928,9 @@
         "diacritic": "ં",
         "svg": "svgs/barakhadi/13_n/10_nam.svg",
         "audio_ios": "audio/barakhadi/13_n/10_nam.mp3",
-        "audio_android": "audio_13_n_10_nam.mp3"
+        "audio_android": "audio_13_n_10_nam.mp3",
+        "total_length": 529.0798103729308,
+        "groups": 2
       },
       {
         "id": 11,
@@ -1605,7 +1939,9 @@
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/13_n/11_nah.svg",
         "audio_ios": "audio/barakhadi/13_n/11_nah.mp3",
-        "audio_android": "audio_13_n_11_nah.mp3"
+        "audio_android": "audio_13_n_11_nah.mp3",
+        "total_length": 561.6487516430134,
+        "groups": 3
       }
     ]
   },
@@ -1621,7 +1957,9 @@
         "diacritic": " ",
         "svg": "svgs/barakhadi/14_t/0_t.svg",
         "audio_ios": "audio/barakhadi/14_t/0_t.mp3",
-        "audio_android": "audio_14_t_0_t.mp3"
+        "audio_android": "audio_14_t_0_t.mp3",
+        "total_length": 279.6047462237022,
+        "groups": 1
       },
       {
         "id": 1,
@@ -1630,7 +1968,9 @@
         "diacritic": "ા",
         "svg": "svgs/barakhadi/14_t/1_ta.svg",
         "audio_ios": "audio/barakhadi/14_t/1_ta.mp3",
-        "audio_android": "audio_14_t_1_ta.mp3"
+        "audio_android": "audio_14_t_1_ta.mp3",
+        "total_length": 421.08310749299073,
+        "groups": 2
       },
       {
         "id": 2,
@@ -1639,7 +1979,9 @@
         "diacritic": "િ",
         "svg": "svgs/barakhadi/14_t/2_ti.svg",
         "audio_ios": "audio/barakhadi/14_t/2_ti.mp3",
-        "audio_android": "audio_14_t_2_ti.mp3"
+        "audio_android": "audio_14_t_2_ti.mp3",
+        "total_length": 563.5480565265682,
+        "groups": 2
       },
       {
         "id": 3,
@@ -1648,7 +1990,9 @@
         "diacritic": "ી",
         "svg": "svgs/barakhadi/14_t/3_tee.svg",
         "audio_ios": "audio/barakhadi/14_t/3_tee.mp3",
-        "audio_android": "audio_14_t_3_tee.mp3"
+        "audio_android": "audio_14_t_3_tee.mp3",
+        "total_length": 540.5839061453752,
+        "groups": 2
       },
       {
         "id": 4,
@@ -1657,7 +2001,9 @@
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/14_t/4_tu.svg",
         "audio_ios": "audio/barakhadi/14_t/4_tu.mp3",
-        "audio_android": "audio_14_t_4_tu.mp3"
+        "audio_android": "audio_14_t_4_tu.mp3",
+        "total_length": 451.5801967079502,
+        "groups": 2
       },
       {
         "id": 5,
@@ -1666,7 +2012,9 @@
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/14_t/5_too.svg",
         "audio_ios": "audio/barakhadi/14_t/5_too.mp3",
-        "audio_android": "audio_14_t_5_too.mp3"
+        "audio_android": "audio_14_t_5_too.mp3",
+        "total_length": 454.9430511991478,
+        "groups": 2
       },
       {
         "id": 6,
@@ -1675,7 +2023,9 @@
         "diacritic": "ે",
         "svg": "svgs/barakhadi/14_t/6_te.svg",
         "audio_ios": "audio/barakhadi/14_t/6_te.mp3",
-        "audio_android": "audio_14_t_6_te.mp3"
+        "audio_android": "audio_14_t_6_te.mp3",
+        "total_length": 365.87365024522035,
+        "groups": 2
       },
       {
         "id": 7,
@@ -1684,7 +2034,9 @@
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/14_t/7_tai.svg",
         "audio_ios": "audio/barakhadi/14_t/7_tai.mp3",
-        "audio_android": "audio_14_t_7_tai.mp3"
+        "audio_android": "audio_14_t_7_tai.mp3",
+        "total_length": 435.25586651103663,
+        "groups": 3
       },
       {
         "id": 8,
@@ -1693,7 +2045,9 @@
         "diacritic": "ો",
         "svg": "svgs/barakhadi/14_t/8_to.svg",
         "audio_ios": "audio/barakhadi/14_t/8_to.mp3",
-        "audio_android": "audio_14_t_8_to.mp3"
+        "audio_android": "audio_14_t_8_to.mp3",
+        "total_length": 507.35201151450894,
+        "groups": 3
       },
       {
         "id": 9,
@@ -1702,7 +2056,9 @@
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/14_t/9_tau.svg",
         "audio_ios": "audio/barakhadi/14_t/9_tau.mp3",
-        "audio_android": "audio_14_t_9_tau.mp3"
+        "audio_android": "audio_14_t_9_tau.mp3",
+        "total_length": 576.7342277803252,
+        "groups": 4
       },
       {
         "id": 10,
@@ -1711,7 +2067,9 @@
         "diacritic": "ં",
         "svg": "svgs/barakhadi/14_t/10_tam.svg",
         "audio_ios": "audio/barakhadi/14_t/10_tam.mp3",
-        "audio_android": "audio_14_t_10_tam.mp3"
+        "audio_android": "audio_14_t_10_tam.mp3",
+        "total_length": 308.7898265870317,
+        "groups": 2
       },
       {
         "id": 11,
@@ -1720,7 +2078,9 @@
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/14_t/11_tah.svg",
         "audio_ios": "audio/barakhadi/14_t/11_tah.mp3",
-        "audio_android": "audio_14_t_11_tah.mp3"
+        "audio_android": "audio_14_t_11_tah.mp3",
+        "total_length": 341.3587678571142,
+        "groups": 3
       }
     ]
   },
@@ -1736,7 +2096,9 @@
         "diacritic": " ",
         "svg": "svgs/barakhadi/15_th/0_th.svg",
         "audio_ios": "audio/barakhadi/15_th/0_th.mp3",
-        "audio_android": "audio_15_th_0_th.mp3"
+        "audio_android": "audio_15_th_0_th.mp3",
+        "total_length": 367.645041218915,
+        "groups": 1
       },
       {
         "id": 1,
@@ -1745,7 +2107,9 @@
         "diacritic": "ા",
         "svg": "svgs/barakhadi/15_th/1_tha.svg",
         "audio_ios": "audio/barakhadi/15_th/1_tha.mp3",
-        "audio_android": "audio_15_th_1_tha.mp3"
+        "audio_android": "audio_15_th_1_tha.mp3",
+        "total_length": 509.12340248820357,
+        "groups": 2
       },
       {
         "id": 2,
@@ -1754,7 +2118,9 @@
         "diacritic": "િ",
         "svg": "svgs/barakhadi/15_th/2_thi.svg",
         "audio_ios": "audio/barakhadi/15_th/2_thi.mp3",
-        "audio_android": "audio_15_th_2_thi.mp3"
+        "audio_android": "audio_15_th_2_thi.mp3",
+        "total_length": 651.588351521781,
+        "groups": 2
       },
       {
         "id": 3,
@@ -1763,7 +2129,9 @@
         "diacritic": "ી",
         "svg": "svgs/barakhadi/15_th/3_thee.svg",
         "audio_ios": "audio/barakhadi/15_th/3_thee.mp3",
-        "audio_android": "audio_15_th_3_thee.mp3"
+        "audio_android": "audio_15_th_3_thee.mp3",
+        "total_length": 628.624201140588,
+        "groups": 2
       },
       {
         "id": 4,
@@ -1772,7 +2140,9 @@
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/15_th/4_thu.svg",
         "audio_ios": "audio/barakhadi/15_th/4_thu.mp3",
-        "audio_android": "audio_15_th_4_thu.mp3"
+        "audio_android": "audio_15_th_4_thu.mp3",
+        "total_length": 539.620491703163,
+        "groups": 2
       },
       {
         "id": 5,
@@ -1781,7 +2151,9 @@
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/15_th/5_thoo.svg",
         "audio_ios": "audio/barakhadi/15_th/5_thoo.mp3",
-        "audio_android": "audio_15_th_5_thoo.mp3"
+        "audio_android": "audio_15_th_5_thoo.mp3",
+        "total_length": 542.9833461943606,
+        "groups": 2
       },
       {
         "id": 6,
@@ -1790,7 +2162,9 @@
         "diacritic": "ે",
         "svg": "svgs/barakhadi/15_th/6_the.svg",
         "audio_ios": "audio/barakhadi/15_th/6_the.mp3",
-        "audio_android": "audio_15_th_6_the.mp3"
+        "audio_android": "audio_15_th_6_the.mp3",
+        "total_length": 453.91394524043324,
+        "groups": 2
       },
       {
         "id": 7,
@@ -1799,7 +2173,9 @@
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/15_th/7_thai.svg",
         "audio_ios": "audio/barakhadi/15_th/7_thai.mp3",
-        "audio_android": "audio_15_th_7_thai.mp3"
+        "audio_android": "audio_15_th_7_thai.mp3",
+        "total_length": 523.2961615062495,
+        "groups": 3
       },
       {
         "id": 8,
@@ -1808,7 +2184,9 @@
         "diacritic": "ો",
         "svg": "svgs/barakhadi/15_th/8_tho.svg",
         "audio_ios": "audio/barakhadi/15_th/8_tho.mp3",
-        "audio_android": "audio_15_th_8_tho.mp3"
+        "audio_android": "audio_15_th_8_tho.mp3",
+        "total_length": 595.3923065097217,
+        "groups": 3
       },
       {
         "id": 9,
@@ -1817,7 +2195,9 @@
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/15_th/9_thau.svg",
         "audio_ios": "audio/barakhadi/15_th/9_thau.mp3",
-        "audio_android": "audio_15_th_9_thau.mp3"
+        "audio_android": "audio_15_th_9_thau.mp3",
+        "total_length": 664.774522775538,
+        "groups": 4
       },
       {
         "id": 10,
@@ -1826,7 +2206,9 @@
         "diacritic": "ં",
         "svg": "svgs/barakhadi/15_th/10_tham.svg",
         "audio_ios": "audio/barakhadi/15_th/10_tham.mp3",
-        "audio_android": "audio_15_th_10_tham.mp3"
+        "audio_android": "audio_15_th_10_tham.mp3",
+        "total_length": 396.83012158224454,
+        "groups": 2
       },
       {
         "id": 11,
@@ -1835,7 +2217,9 @@
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/15_th/11_thah.svg",
         "audio_ios": "audio/barakhadi/15_th/11_thah.mp3",
-        "audio_android": "audio_15_th_11_thah.mp3"
+        "audio_android": "audio_15_th_11_thah.mp3",
+        "total_length": 429.399062852327,
+        "groups": 3
       }
     ]
   },
@@ -1851,7 +2235,9 @@
         "diacritic": " ",
         "svg": "svgs/barakhadi/16_d/0_d.svg",
         "audio_ios": "audio/barakhadi/16_d/0_d.mp3",
-        "audio_android": "audio_16_d_0_d.mp3"
+        "audio_android": "audio_16_d_0_d.mp3",
+        "total_length": 275.28344401884823,
+        "groups": 1
       },
       {
         "id": 1,
@@ -1860,7 +2246,9 @@
         "diacritic": "ા",
         "svg": "svgs/barakhadi/16_d/1_da.svg",
         "audio_ios": "audio/barakhadi/16_d/1_da.mp3",
-        "audio_android": "audio_16_d_1_da.mp3"
+        "audio_android": "audio_16_d_1_da.mp3",
+        "total_length": 416.76180528813677,
+        "groups": 2
       },
       {
         "id": 2,
@@ -1869,7 +2257,9 @@
         "diacritic": "િ",
         "svg": "svgs/barakhadi/16_d/2_di.svg",
         "audio_ios": "audio/barakhadi/16_d/2_di.mp3",
-        "audio_android": "audio_16_d_2_di.mp3"
+        "audio_android": "audio_16_d_2_di.mp3",
+        "total_length": 559.2267543217142,
+        "groups": 2
       },
       {
         "id": 3,
@@ -1878,7 +2268,9 @@
         "diacritic": "ી",
         "svg": "svgs/barakhadi/16_d/3_dee.svg",
         "audio_ios": "audio/barakhadi/16_d/3_dee.mp3",
-        "audio_android": "audio_16_d_3_dee.mp3"
+        "audio_android": "audio_16_d_3_dee.mp3",
+        "total_length": 536.2626039405212,
+        "groups": 2
       },
       {
         "id": 4,
@@ -1887,7 +2279,9 @@
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/16_d/4_du.svg",
         "audio_ios": "audio/barakhadi/16_d/4_du.mp3",
-        "audio_android": "audio_16_d_4_du.mp3"
+        "audio_android": "audio_16_d_4_du.mp3",
+        "total_length": 447.25889450309626,
+        "groups": 2
       },
       {
         "id": 5,
@@ -1896,7 +2290,9 @@
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/16_d/5_doo.svg",
         "audio_ios": "audio/barakhadi/16_d/5_doo.mp3",
-        "audio_android": "audio_16_d_5_doo.mp3"
+        "audio_android": "audio_16_d_5_doo.mp3",
+        "total_length": 450.62174899429385,
+        "groups": 2
       },
       {
         "id": 6,
@@ -1905,7 +2301,9 @@
         "diacritic": "ે",
         "svg": "svgs/barakhadi/16_d/6_de.svg",
         "audio_ios": "audio/barakhadi/16_d/6_de.mp3",
-        "audio_android": "audio_16_d_6_de.mp3"
+        "audio_android": "audio_16_d_6_de.mp3",
+        "total_length": 361.5523480403664,
+        "groups": 2
       },
       {
         "id": 7,
@@ -1914,7 +2312,9 @@
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/16_d/7_dai.svg",
         "audio_ios": "audio/barakhadi/16_d/7_dai.mp3",
-        "audio_android": "audio_16_d_7_dai.mp3"
+        "audio_android": "audio_16_d_7_dai.mp3",
+        "total_length": 430.93456430618266,
+        "groups": 3
       },
       {
         "id": 8,
@@ -1923,7 +2323,9 @@
         "diacritic": "ો",
         "svg": "svgs/barakhadi/16_d/8_do.svg",
         "audio_ios": "audio/barakhadi/16_d/8_do.mp3",
-        "audio_android": "audio_16_d_8_do.mp3"
+        "audio_android": "audio_16_d_8_do.mp3",
+        "total_length": 503.030709309655,
+        "groups": 3
       },
       {
         "id": 9,
@@ -1932,7 +2334,9 @@
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/16_d/9_dau.svg",
         "audio_ios": "audio/barakhadi/16_d/9_dau.mp3",
-        "audio_android": "audio_16_d_9_dau.mp3"
+        "audio_android": "audio_16_d_9_dau.mp3",
+        "total_length": 572.4129255754713,
+        "groups": 4
       },
       {
         "id": 10,
@@ -1941,7 +2345,9 @@
         "diacritic": "ં",
         "svg": "svgs/barakhadi/16_d/10_dam.svg",
         "audio_ios": "audio/barakhadi/16_d/10_dam.mp3",
-        "audio_android": "audio_16_d_10_dam.mp3"
+        "audio_android": "audio_16_d_10_dam.mp3",
+        "total_length": 304.46852438217775,
+        "groups": 2
       },
       {
         "id": 11,
@@ -1950,7 +2356,9 @@
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/16_d/11_dah.svg",
         "audio_ios": "audio/barakhadi/16_d/11_dah.mp3",
-        "audio_android": "audio_16_d_11_dah.mp3"
+        "audio_android": "audio_16_d_11_dah.mp3",
+        "total_length": 337.0374656522602,
+        "groups": 3
       }
     ]
   },
@@ -1966,7 +2374,9 @@
         "diacritic": " ",
         "svg": "svgs/barakhadi/17_dh/0_dh.svg",
         "audio_ios": "audio/barakhadi/17_dh/0_dh.mp3",
-        "audio_android": "audio_17_dh_0_dh.mp3"
+        "audio_android": "audio_17_dh_0_dh.mp3",
+        "total_length": 342.1364584091714,
+        "groups": 1
       },
       {
         "id": 1,
@@ -1975,7 +2385,9 @@
         "diacritic": "ા",
         "svg": "svgs/barakhadi/17_dh/1_dha.svg",
         "audio_ios": "audio/barakhadi/17_dh/1_dha.mp3",
-        "audio_android": "audio_17_dh_1_dha.mp3"
+        "audio_android": "audio_17_dh_1_dha.mp3",
+        "total_length": 483.6148196784599,
+        "groups": 2
       },
       {
         "id": 2,
@@ -1984,7 +2396,9 @@
         "diacritic": "િ",
         "svg": "svgs/barakhadi/17_dh/2_dhi.svg",
         "audio_ios": "audio/barakhadi/17_dh/2_dhi.mp3",
-        "audio_android": "audio_17_dh_2_dhi.mp3"
+        "audio_android": "audio_17_dh_2_dhi.mp3",
+        "total_length": 626.0797687120373,
+        "groups": 2
       },
       {
         "id": 3,
@@ -1993,7 +2407,9 @@
         "diacritic": "ી",
         "svg": "svgs/barakhadi/17_dh/3_dhee.svg",
         "audio_ios": "audio/barakhadi/17_dh/3_dhee.mp3",
-        "audio_android": "audio_17_dh_3_dhee.mp3"
+        "audio_android": "audio_17_dh_3_dhee.mp3",
+        "total_length": 603.1156183308444,
+        "groups": 2
       },
       {
         "id": 4,
@@ -2002,7 +2418,9 @@
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/17_dh/4_dhu.svg",
         "audio_ios": "audio/barakhadi/17_dh/4_dhu.mp3",
-        "audio_android": "audio_17_dh_4_dhu.mp3"
+        "audio_android": "audio_17_dh_4_dhu.mp3",
+        "total_length": 514.1119088934195,
+        "groups": 2
       },
       {
         "id": 5,
@@ -2011,7 +2429,9 @@
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/17_dh/5_dhoo.svg",
         "audio_ios": "audio/barakhadi/17_dh/5_dhoo.mp3",
-        "audio_android": "audio_17_dh_5_dhoo.mp3"
+        "audio_android": "audio_17_dh_5_dhoo.mp3",
+        "total_length": 517.4747633846171,
+        "groups": 2
       },
       {
         "id": 6,
@@ -2020,7 +2440,9 @@
         "diacritic": "ે",
         "svg": "svgs/barakhadi/17_dh/6_dhe.svg",
         "audio_ios": "audio/barakhadi/17_dh/6_dhe.mp3",
-        "audio_android": "audio_17_dh_6_dhe.mp3"
+        "audio_android": "audio_17_dh_6_dhe.mp3",
+        "total_length": 428.4053624306896,
+        "groups": 2
       },
       {
         "id": 7,
@@ -2029,7 +2451,9 @@
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/17_dh/7_dhai.svg",
         "audio_ios": "audio/barakhadi/17_dh/7_dhai.mp3",
-        "audio_android": "audio_17_dh_7_dhai.mp3"
+        "audio_android": "audio_17_dh_7_dhai.mp3",
+        "total_length": 497.7875786965058,
+        "groups": 3
       },
       {
         "id": 8,
@@ -2038,7 +2462,9 @@
         "diacritic": "ો",
         "svg": "svgs/barakhadi/17_dh/8_dho.svg",
         "audio_ios": "audio/barakhadi/17_dh/8_dho.mp3",
-        "audio_android": "audio_17_dh_8_dho.mp3"
+        "audio_android": "audio_17_dh_8_dho.mp3",
+        "total_length": 569.8837236999781,
+        "groups": 3
       },
       {
         "id": 9,
@@ -2047,7 +2473,9 @@
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/17_dh/9_dhau.svg",
         "audio_ios": "audio/barakhadi/17_dh/9_dhau.mp3",
-        "audio_android": "audio_17_dh_9_dhau.mp3"
+        "audio_android": "audio_17_dh_9_dhau.mp3",
+        "total_length": 639.2659399657944,
+        "groups": 4
       },
       {
         "id": 10,
@@ -2056,7 +2484,9 @@
         "diacritic": "ં",
         "svg": "svgs/barakhadi/17_dh/10_dham.svg",
         "audio_ios": "audio/barakhadi/17_dh/10_dham.mp3",
-        "audio_android": "audio_17_dh_10_dham.mp3"
+        "audio_android": "audio_17_dh_10_dham.mp3",
+        "total_length": 371.3215387725009,
+        "groups": 2
       },
       {
         "id": 11,
@@ -2065,7 +2495,9 @@
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/17_dh/11_dhah.svg",
         "audio_ios": "audio/barakhadi/17_dh/11_dhah.mp3",
-        "audio_android": "audio_17_dh_11_dhah.mp3"
+        "audio_android": "audio_17_dh_11_dhah.mp3",
+        "total_length": 403.89048004258336,
+        "groups": 3
       }
     ]
   },
@@ -2081,7 +2513,9 @@
         "diacritic": " ",
         "svg": "svgs/barakhadi/18_n/0_n.svg",
         "audio_ios": "audio/barakhadi/18_n/0_n.mp3",
-        "audio_android": "audio_18_n_0_n.mp3"
+        "audio_android": "audio_18_n_0_n.mp3",
+        "total_length": 222.27444110936756,
+        "groups": 1
       },
       {
         "id": 1,
@@ -2090,7 +2524,9 @@
         "diacritic": "ા",
         "svg": "svgs/barakhadi/18_n/1_na.svg",
         "audio_ios": "audio/barakhadi/18_n/1_na.mp3",
-        "audio_android": "audio_18_n_1_na.mp3"
+        "audio_android": "audio_18_n_1_na.mp3",
+        "total_length": 363.7528023786561,
+        "groups": 2
       },
       {
         "id": 2,
@@ -2099,7 +2535,9 @@
         "diacritic": "િ",
         "svg": "svgs/barakhadi/18_n/2_ni.svg",
         "audio_ios": "audio/barakhadi/18_n/2_ni.mp3",
-        "audio_android": "audio_18_n_2_ni.mp3"
+        "audio_android": "audio_18_n_2_ni.mp3",
+        "total_length": 506.2177514122335,
+        "groups": 2
       },
       {
         "id": 3,
@@ -2108,7 +2546,9 @@
         "diacritic": "ી",
         "svg": "svgs/barakhadi/18_n/3_nee.svg",
         "audio_ios": "audio/barakhadi/18_n/3_nee.mp3",
-        "audio_android": "audio_18_n_3_nee.mp3"
+        "audio_android": "audio_18_n_3_nee.mp3",
+        "total_length": 483.25360103104055,
+        "groups": 2
       },
       {
         "id": 4,
@@ -2117,7 +2557,9 @@
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/18_n/4_nu.svg",
         "audio_ios": "audio/barakhadi/18_n/4_nu.mp3",
-        "audio_android": "audio_18_n_4_nu.mp3"
+        "audio_android": "audio_18_n_4_nu.mp3",
+        "total_length": 394.2498915936156,
+        "groups": 2
       },
       {
         "id": 5,
@@ -2126,7 +2568,9 @@
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/18_n/5_noo.svg",
         "audio_ios": "audio/barakhadi/18_n/5_noo.mp3",
-        "audio_android": "audio_18_n_5_noo.mp3"
+        "audio_android": "audio_18_n_5_noo.mp3",
+        "total_length": 397.6127460848132,
+        "groups": 2
       },
       {
         "id": 6,
@@ -2135,7 +2579,9 @@
         "diacritic": "ે",
         "svg": "svgs/barakhadi/18_n/6_ne.svg",
         "audio_ios": "audio/barakhadi/18_n/6_ne.mp3",
-        "audio_android": "audio_18_n_6_ne.mp3"
+        "audio_android": "audio_18_n_6_ne.mp3",
+        "total_length": 308.54334513088577,
+        "groups": 2
       },
       {
         "id": 7,
@@ -2144,7 +2590,9 @@
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/18_n/7_nai.svg",
         "audio_ios": "audio/barakhadi/18_n/7_nai.mp3",
-        "audio_android": "audio_18_n_7_nai.mp3"
+        "audio_android": "audio_18_n_7_nai.mp3",
+        "total_length": 377.925561396702,
+        "groups": 3
       },
       {
         "id": 8,
@@ -2153,7 +2601,9 @@
         "diacritic": "ો",
         "svg": "svgs/barakhadi/18_n/8_no.svg",
         "audio_ios": "audio/barakhadi/18_n/8_no.mp3",
-        "audio_android": "audio_18_n_8_no.mp3"
+        "audio_android": "audio_18_n_8_no.mp3",
+        "total_length": 450.02170640017425,
+        "groups": 3
       },
       {
         "id": 9,
@@ -2162,7 +2612,9 @@
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/18_n/9_nau.svg",
         "audio_ios": "audio/barakhadi/18_n/9_nau.mp3",
-        "audio_android": "audio_18_n_9_nau.mp3"
+        "audio_android": "audio_18_n_9_nau.mp3",
+        "total_length": 519.4039226659905,
+        "groups": 4
       },
       {
         "id": 10,
@@ -2171,7 +2623,9 @@
         "diacritic": "ં",
         "svg": "svgs/barakhadi/18_n/10_nan.svg",
         "audio_ios": "audio/barakhadi/18_n/10_nan.mp3",
-        "audio_android": "audio_18_n_10_nan.mp3"
+        "audio_android": "audio_18_n_10_nan.mp3",
+        "total_length": 251.45952147269708,
+        "groups": 2
       },
       {
         "id": 11,
@@ -2180,7 +2634,9 @@
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/18_n/11_nah.svg",
         "audio_ios": "audio/barakhadi/18_n/11_nah.mp3",
-        "audio_android": "audio_18_n_11_nah.mp3"
+        "audio_android": "audio_18_n_11_nah.mp3",
+        "total_length": 284.02846274277954,
+        "groups": 3
       }
     ]
   },
@@ -2196,7 +2652,9 @@
         "diacritic": " ",
         "svg": "svgs/barakhadi/19_p/0_p.svg",
         "audio_ios": "audio/barakhadi/19_p/0_p.mp3",
-        "audio_android": "audio_19_p_0_p.mp3"
+        "audio_android": "audio_19_p_0_p.mp3",
+        "total_length": 277.47736781704555,
+        "groups": 1
       },
       {
         "id": 1,
@@ -2205,7 +2663,9 @@
         "diacritic": "ા",
         "svg": "svgs/barakhadi/19_p/1_pa.svg",
         "audio_ios": "audio/barakhadi/19_p/1_pa.mp3",
-        "audio_android": "audio_19_p_1_pa.mp3"
+        "audio_android": "audio_19_p_1_pa.mp3",
+        "total_length": 418.9557290863341,
+        "groups": 2
       },
       {
         "id": 2,
@@ -2214,7 +2674,9 @@
         "diacritic": "િ",
         "svg": "svgs/barakhadi/19_p/2_pi.svg",
         "audio_ios": "audio/barakhadi/19_p/2_pi.mp3",
-        "audio_android": "audio_19_p_2_pi.mp3"
+        "audio_android": "audio_19_p_2_pi.mp3",
+        "total_length": 561.4206781199115,
+        "groups": 2
       },
       {
         "id": 3,
@@ -2223,7 +2685,9 @@
         "diacritic": "ી",
         "svg": "svgs/barakhadi/19_p/3_pee.svg",
         "audio_ios": "audio/barakhadi/19_p/3_pee.mp3",
-        "audio_android": "audio_19_p_3_pee.mp3"
+        "audio_android": "audio_19_p_3_pee.mp3",
+        "total_length": 538.4565277387185,
+        "groups": 2
       },
       {
         "id": 4,
@@ -2232,7 +2696,9 @@
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/19_p/4_pu.svg",
         "audio_ios": "audio/barakhadi/19_p/4_pu.mp3",
-        "audio_android": "audio_19_p_4_pu.mp3"
+        "audio_android": "audio_19_p_4_pu.mp3",
+        "total_length": 449.4528183012936,
+        "groups": 2
       },
       {
         "id": 5,
@@ -2241,7 +2707,9 @@
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/19_p/5_poo.svg",
         "audio_ios": "audio/barakhadi/19_p/5_poo.mp3",
-        "audio_android": "audio_19_p_5_poo.mp3"
+        "audio_android": "audio_19_p_5_poo.mp3",
+        "total_length": 452.81567279249117,
+        "groups": 2
       },
       {
         "id": 6,
@@ -2250,7 +2718,9 @@
         "diacritic": "ે",
         "svg": "svgs/barakhadi/19_p/6_pe.svg",
         "audio_ios": "audio/barakhadi/19_p/6_pe.mp3",
-        "audio_android": "audio_19_p_6_pe.mp3"
+        "audio_android": "audio_19_p_6_pe.mp3",
+        "total_length": 363.74627183856376,
+        "groups": 2
       },
       {
         "id": 7,
@@ -2259,7 +2729,9 @@
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/19_p/7_pai.svg",
         "audio_ios": "audio/barakhadi/19_p/7_pai.mp3",
-        "audio_android": "audio_19_p_7_pai.mp3"
+        "audio_android": "audio_19_p_7_pai.mp3",
+        "total_length": 433.12848810438,
+        "groups": 3
       },
       {
         "id": 8,
@@ -2268,7 +2740,9 @@
         "diacritic": "ો",
         "svg": "svgs/barakhadi/19_p/8_po.svg",
         "audio_ios": "audio/barakhadi/19_p/8_po.mp3",
-        "audio_android": "audio_19_p_8_po.mp3"
+        "audio_android": "audio_19_p_8_po.mp3",
+        "total_length": 505.22463310785224,
+        "groups": 3
       },
       {
         "id": 9,
@@ -2277,7 +2751,9 @@
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/19_p/9_pau.svg",
         "audio_ios": "audio/barakhadi/19_p/9_pau.mp3",
-        "audio_android": "audio_19_p_9_pau.mp3"
+        "audio_android": "audio_19_p_9_pau.mp3",
+        "total_length": 574.6068493736685,
+        "groups": 4
       },
       {
         "id": 10,
@@ -2286,7 +2762,9 @@
         "diacritic": "ં",
         "svg": "svgs/barakhadi/19_p/10_pam.svg",
         "audio_ios": "audio/barakhadi/19_p/10_pam.mp3",
-        "audio_android": "audio_19_p_10_pam.mp3"
+        "audio_android": "audio_19_p_10_pam.mp3",
+        "total_length": 306.66244818037507,
+        "groups": 2
       },
       {
         "id": 11,
@@ -2295,7 +2773,9 @@
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/19_p/11_pah.svg",
         "audio_ios": "audio/barakhadi/19_p/11_pah.mp3",
-        "audio_android": "audio_19_p_11_pah.mp3"
+        "audio_android": "audio_19_p_11_pah.mp3",
+        "total_length": 339.2313894504575,
+        "groups": 3
       }
     ]
   },
@@ -2311,7 +2791,9 @@
         "diacritic": " ",
         "svg": "svgs/barakhadi/20_f/0_f.svg",
         "audio_ios": "audio/barakhadi/20_f/0_f.mp3",
-        "audio_android": "audio_20_f_0_f.mp3"
+        "audio_android": "audio_20_f_0_f.mp3",
+        "total_length": 378.20877872543093,
+        "groups": 1
       },
       {
         "id": 1,
@@ -2320,7 +2802,9 @@
         "diacritic": "ા",
         "svg": "svgs/barakhadi/20_f/1_fa.svg",
         "audio_ios": "audio/barakhadi/20_f/1_fa.mp3",
-        "audio_android": "audio_20_f_1_fa.mp3"
+        "audio_android": "audio_20_f_1_fa.mp3",
+        "total_length": 519.6871399947195,
+        "groups": 2
       },
       {
         "id": 2,
@@ -2329,7 +2813,9 @@
         "diacritic": "િ",
         "svg": "svgs/barakhadi/20_f/2_fi.svg",
         "audio_ios": "audio/barakhadi/20_f/2_fi.mp3",
-        "audio_android": "audio_20_f_2_fi.mp3"
+        "audio_android": "audio_20_f_2_fi.mp3",
+        "total_length": 662.1520890282968,
+        "groups": 2
       },
       {
         "id": 3,
@@ -2338,7 +2824,9 @@
         "diacritic": "ી",
         "svg": "svgs/barakhadi/20_f/3_fee.svg",
         "audio_ios": "audio/barakhadi/20_f/3_fee.mp3",
-        "audio_android": "audio_20_f_3_fee.mp3"
+        "audio_android": "audio_20_f_3_fee.mp3",
+        "total_length": 639.1879386471039,
+        "groups": 2
       },
       {
         "id": 4,
@@ -2347,7 +2835,9 @@
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/20_f/4_fu.svg",
         "audio_ios": "audio/barakhadi/20_f/4_fu.mp3",
-        "audio_android": "audio_20_f_4_fu.mp3"
+        "audio_android": "audio_20_f_4_fu.mp3",
+        "total_length": 550.184229209679,
+        "groups": 2
       },
       {
         "id": 5,
@@ -2356,7 +2846,9 @@
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/20_f/5_foo.svg",
         "audio_ios": "audio/barakhadi/20_f/5_foo.mp3",
-        "audio_android": "audio_20_f_5_foo.mp3"
+        "audio_android": "audio_20_f_5_foo.mp3",
+        "total_length": 553.5470837008766,
+        "groups": 2
       },
       {
         "id": 6,
@@ -2365,7 +2857,9 @@
         "diacritic": "ે",
         "svg": "svgs/barakhadi/20_f/6_fe.svg",
         "audio_ios": "audio/barakhadi/20_f/6_fe.mp3",
-        "audio_android": "audio_20_f_6_fe.mp3"
+        "audio_android": "audio_20_f_6_fe.mp3",
+        "total_length": 464.4776827469491,
+        "groups": 2
       },
       {
         "id": 7,
@@ -2374,7 +2868,9 @@
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/20_f/7_fai.svg",
         "audio_ios": "audio/barakhadi/20_f/7_fai.mp3",
-        "audio_android": "audio_20_f_7_fai.mp3"
+        "audio_android": "audio_20_f_7_fai.mp3",
+        "total_length": 533.8598990127654,
+        "groups": 3
       },
       {
         "id": 8,
@@ -2383,7 +2879,9 @@
         "diacritic": "ો",
         "svg": "svgs/barakhadi/20_f/8_fo.svg",
         "audio_ios": "audio/barakhadi/20_f/8_fo.mp3",
-        "audio_android": "audio_20_f_8_fo.mp3"
+        "audio_android": "audio_20_f_8_fo.mp3",
+        "total_length": 605.9560440162377,
+        "groups": 3
       },
       {
         "id": 9,
@@ -2392,7 +2890,9 @@
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/20_f/9_fau.svg",
         "audio_ios": "audio/barakhadi/20_f/9_fau.mp3",
-        "audio_android": "audio_20_f_9_fau.mp3"
+        "audio_android": "audio_20_f_9_fau.mp3",
+        "total_length": 675.3382602820539,
+        "groups": 4
       },
       {
         "id": 10,
@@ -2401,7 +2901,9 @@
         "diacritic": "ં",
         "svg": "svgs/barakhadi/20_f/10_fam.svg",
         "audio_ios": "audio/barakhadi/20_f/10_fam.mp3",
-        "audio_android": "audio_20_f_10_fam.mp3"
+        "audio_android": "audio_20_f_10_fam.mp3",
+        "total_length": 407.39385908876045,
+        "groups": 2
       },
       {
         "id": 11,
@@ -2410,7 +2912,9 @@
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/20_f/11_fah.svg",
         "audio_ios": "audio/barakhadi/20_f/11_fah.mp3",
-        "audio_android": "audio_20_f_11_fah.mp3"
+        "audio_android": "audio_20_f_11_fah.mp3",
+        "total_length": 439.9628003588429,
+        "groups": 3
       }
     ]
   },
@@ -2426,7 +2930,9 @@
         "diacritic": " ",
         "svg": "svgs/barakhadi/21_b/0_b.svg",
         "audio_ios": "audio/barakhadi/21_b/0_b.mp3",
-        "audio_android": "audio_21_b_0_b.mp3"
+        "audio_android": "audio_21_b_0_b.mp3",
+        "total_length": 360.32690690662355,
+        "groups": 1
       },
       {
         "id": 1,
@@ -2435,7 +2941,9 @@
         "diacritic": "ા",
         "svg": "svgs/barakhadi/21_b/1_ba.svg",
         "audio_ios": "audio/barakhadi/21_b/1_ba.mp3",
-        "audio_android": "audio_21_b_1_ba.mp3"
+        "audio_android": "audio_21_b_1_ba.mp3",
+        "total_length": 501.8052681759121,
+        "groups": 2
       },
       {
         "id": 2,
@@ -2444,7 +2952,9 @@
         "diacritic": "િ",
         "svg": "svgs/barakhadi/21_b/2_bi.svg",
         "audio_ios": "audio/barakhadi/21_b/2_bi.mp3",
-        "audio_android": "audio_21_b_2_bi.mp3"
+        "audio_android": "audio_21_b_2_bi.mp3",
+        "total_length": 644.2702172094895,
+        "groups": 2
       },
       {
         "id": 3,
@@ -2453,7 +2963,9 @@
         "diacritic": "ી",
         "svg": "svgs/barakhadi/21_b/3_bee.svg",
         "audio_ios": "audio/barakhadi/21_b/3_bee.mp3",
-        "audio_android": "audio_21_b_3_bee.mp3"
+        "audio_android": "audio_21_b_3_bee.mp3",
+        "total_length": 621.3060668282965,
+        "groups": 2
       },
       {
         "id": 4,
@@ -2462,7 +2974,9 @@
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/21_b/4_bu.svg",
         "audio_ios": "audio/barakhadi/21_b/4_bu.mp3",
-        "audio_android": "audio_21_b_4_bu.mp3"
+        "audio_android": "audio_21_b_4_bu.mp3",
+        "total_length": 532.3023573908715,
+        "groups": 2
       },
       {
         "id": 5,
@@ -2471,7 +2985,9 @@
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/21_b/5_boo.svg",
         "audio_ios": "audio/barakhadi/21_b/5_boo.mp3",
-        "audio_android": "audio_21_b_5_boo.mp3"
+        "audio_android": "audio_21_b_5_boo.mp3",
+        "total_length": 535.6652118820691,
+        "groups": 2
       },
       {
         "id": 6,
@@ -2480,7 +2996,9 @@
         "diacritic": "ે",
         "svg": "svgs/barakhadi/21_b/6_be.svg",
         "audio_ios": "audio/barakhadi/21_b/6_be.mp3",
-        "audio_android": "audio_21_b_6_be.mp3"
+        "audio_android": "audio_21_b_6_be.mp3",
+        "total_length": 446.59581092814176,
+        "groups": 2
       },
       {
         "id": 7,
@@ -2489,7 +3007,9 @@
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/21_b/7_bai.svg",
         "audio_ios": "audio/barakhadi/21_b/7_bai.mp3",
-        "audio_android": "audio_21_b_7_bai.mp3"
+        "audio_android": "audio_21_b_7_bai.mp3",
+        "total_length": 515.978027193958,
+        "groups": 3
       },
       {
         "id": 8,
@@ -2498,7 +3018,9 @@
         "diacritic": "ો",
         "svg": "svgs/barakhadi/21_b/8_bo.svg",
         "audio_ios": "audio/barakhadi/21_b/8_bo.mp3",
-        "audio_android": "audio_21_b_8_bo.mp3"
+        "audio_android": "audio_21_b_8_bo.mp3",
+        "total_length": 588.0741721974302,
+        "groups": 3
       },
       {
         "id": 9,
@@ -2507,7 +3029,9 @@
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/21_b/9_bau.svg",
         "audio_ios": "audio/barakhadi/21_b/9_bau.mp3",
-        "audio_android": "audio_21_b_9_bau.mp3"
+        "audio_android": "audio_21_b_9_bau.mp3",
+        "total_length": 657.4563884632465,
+        "groups": 4
       },
       {
         "id": 10,
@@ -2516,7 +3040,9 @@
         "diacritic": "ં",
         "svg": "svgs/barakhadi/21_b/10_bam.svg",
         "audio_ios": "audio/barakhadi/21_b/10_bam.mp3",
-        "audio_android": "audio_21_b_10_bam.mp3"
+        "audio_android": "audio_21_b_10_bam.mp3",
+        "total_length": 389.51198726995307,
+        "groups": 2
       },
       {
         "id": 11,
@@ -2525,7 +3051,9 @@
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/21_b/11_bah.svg",
         "audio_ios": "audio/barakhadi/21_b/11_bah.mp3",
-        "audio_android": "audio_21_b_11_bah.mp3"
+        "audio_android": "audio_21_b_11_bah.mp3",
+        "total_length": 422.08092854003553,
+        "groups": 3
       }
     ]
   },
@@ -2541,7 +3069,9 @@
         "diacritic": " ",
         "svg": "svgs/barakhadi/22_bh/0_bh.svg",
         "audio_ios": "audio/barakhadi/22_bh/0_bh.mp3",
-        "audio_android": "audio_22_bh_0_bh.mp3"
+        "audio_android": "audio_22_bh_0_bh.mp3",
+        "total_length": 412.40312629735513,
+        "groups": 1
       },
       {
         "id": 1,
@@ -2550,7 +3080,9 @@
         "diacritic": "ા",
         "svg": "svgs/barakhadi/22_bh/1_bha.svg",
         "audio_ios": "audio/barakhadi/22_bh/1_bha.mp3",
-        "audio_android": "audio_22_bh_1_bha.mp3"
+        "audio_android": "audio_22_bh_1_bha.mp3",
+        "total_length": 553.8814875666437,
+        "groups": 2
       },
       {
         "id": 2,
@@ -2559,7 +3091,9 @@
         "diacritic": "િ",
         "svg": "svgs/barakhadi/22_bh/2_bhi.svg",
         "audio_ios": "audio/barakhadi/22_bh/2_bhi.mp3",
-        "audio_android": "audio_22_bh_2_bhi.mp3"
+        "audio_android": "audio_22_bh_2_bhi.mp3",
+        "total_length": 696.3464366002211,
+        "groups": 2
       },
       {
         "id": 3,
@@ -2568,7 +3102,9 @@
         "diacritic": "ી",
         "svg": "svgs/barakhadi/22_bh/3_bhee.svg",
         "audio_ios": "audio/barakhadi/22_bh/3_bhee.mp3",
-        "audio_android": "audio_22_bh_3_bhee.mp3"
+        "audio_android": "audio_22_bh_3_bhee.mp3",
+        "total_length": 673.3822862190282,
+        "groups": 2
       },
       {
         "id": 4,
@@ -2577,7 +3113,9 @@
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/22_bh/4_bhu.svg",
         "audio_ios": "audio/barakhadi/22_bh/4_bhu.mp3",
-        "audio_android": "audio_22_bh_4_bhu.mp3"
+        "audio_android": "audio_22_bh_4_bhu.mp3",
+        "total_length": 584.3785767816032,
+        "groups": 2
       },
       {
         "id": 5,
@@ -2586,7 +3124,9 @@
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/22_bh/5_bhoo.svg",
         "audio_ios": "audio/barakhadi/22_bh/5_bhoo.mp3",
-        "audio_android": "audio_22_bh_5_bhoo.mp3"
+        "audio_android": "audio_22_bh_5_bhoo.mp3",
+        "total_length": 587.7414312728008,
+        "groups": 2
       },
       {
         "id": 6,
@@ -2595,7 +3135,9 @@
         "diacritic": "ે",
         "svg": "svgs/barakhadi/22_bh/6_bhe.svg",
         "audio_ios": "audio/barakhadi/22_bh/6_bhe.mp3",
-        "audio_android": "audio_22_bh_6_bhe.mp3"
+        "audio_android": "audio_22_bh_6_bhe.mp3",
+        "total_length": 498.67203031887334,
+        "groups": 2
       },
       {
         "id": 7,
@@ -2604,7 +3146,9 @@
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/22_bh/7_bhai.svg",
         "audio_ios": "audio/barakhadi/22_bh/7_bhai.mp3",
-        "audio_android": "audio_22_bh_7_bhai.mp3"
+        "audio_android": "audio_22_bh_7_bhai.mp3",
+        "total_length": 568.0542465846895,
+        "groups": 3
       },
       {
         "id": 8,
@@ -2613,7 +3157,9 @@
         "diacritic": "ો",
         "svg": "svgs/barakhadi/22_bh/8_bho.svg",
         "audio_ios": "audio/barakhadi/22_bh/8_bho.mp3",
-        "audio_android": "audio_22_bh_8_bho.mp3"
+        "audio_android": "audio_22_bh_8_bho.mp3",
+        "total_length": 640.1503915881619,
+        "groups": 3
       },
       {
         "id": 9,
@@ -2622,7 +3168,9 @@
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/22_bh/9_bhau.svg",
         "audio_ios": "audio/barakhadi/22_bh/9_bhau.mp3",
-        "audio_android": "audio_22_bh_9_bhau.mp3"
+        "audio_android": "audio_22_bh_9_bhau.mp3",
+        "total_length": 709.5326078539781,
+        "groups": 4
       },
       {
         "id": 10,
@@ -2631,7 +3179,9 @@
         "diacritic": "ં",
         "svg": "svgs/barakhadi/22_bh/10_bham.svg",
         "audio_ios": "audio/barakhadi/22_bh/10_bham.mp3",
-        "audio_android": "audio_22_bh_10_bham.mp3"
+        "audio_android": "audio_22_bh_10_bham.mp3",
+        "total_length": 441.58820666068465,
+        "groups": 2
       },
       {
         "id": 11,
@@ -2640,7 +3190,9 @@
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/22_bh/11_bhah.svg",
         "audio_ios": "audio/barakhadi/22_bh/11_bhah.mp3",
-        "audio_android": "audio_22_bh_11_bhah.mp3"
+        "audio_android": "audio_22_bh_11_bhah.mp3",
+        "total_length": 474.1571479307671,
+        "groups": 3
       }
     ]
   },
@@ -2656,7 +3208,9 @@
         "diacritic": " ",
         "svg": "svgs/barakhadi/23_m/0_m.svg",
         "audio_ios": "audio/barakhadi/23_m/0_m.mp3",
-        "audio_android": "audio_23_m_0_m.mp3"
+        "audio_android": "audio_23_m_0_m.mp3",
+        "total_length": 289.96109312525294,
+        "groups": 1
       },
       {
         "id": 1,
@@ -2665,7 +3219,9 @@
         "diacritic": "ા",
         "svg": "svgs/barakhadi/23_m/1_ma.svg",
         "audio_ios": "audio/barakhadi/23_m/1_ma.mp3",
-        "audio_android": "audio_23_m_1_ma.mp3"
+        "audio_android": "audio_23_m_1_ma.mp3",
+        "total_length": 431.4394543945415,
+        "groups": 2
       },
       {
         "id": 2,
@@ -2674,7 +3230,9 @@
         "diacritic": "િ",
         "svg": "svgs/barakhadi/23_m/2_mi.svg",
         "audio_ios": "audio/barakhadi/23_m/2_mi.mp3",
-        "audio_android": "audio_23_m_2_mi.mp3"
+        "audio_android": "audio_23_m_2_mi.mp3",
+        "total_length": 573.9044034281189,
+        "groups": 2
       },
       {
         "id": 3,
@@ -2683,7 +3241,9 @@
         "diacritic": "ી",
         "svg": "svgs/barakhadi/23_m/3_mee.svg",
         "audio_ios": "audio/barakhadi/23_m/3_mee.mp3",
-        "audio_android": "audio_23_m_3_mee.mp3"
+        "audio_android": "audio_23_m_3_mee.mp3",
+        "total_length": 550.9402530469259,
+        "groups": 2
       },
       {
         "id": 4,
@@ -2692,7 +3252,9 @@
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/23_m/4_mu.svg",
         "audio_ios": "audio/barakhadi/23_m/4_mu.mp3",
-        "audio_android": "audio_23_m_4_mu.mp3"
+        "audio_android": "audio_23_m_4_mu.mp3",
+        "total_length": 461.936543609501,
+        "groups": 2
       },
       {
         "id": 5,
@@ -2701,7 +3263,9 @@
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/23_m/5_moo.svg",
         "audio_ios": "audio/barakhadi/23_m/5_moo.mp3",
-        "audio_android": "audio_23_m_5_moo.mp3"
+        "audio_android": "audio_23_m_5_moo.mp3",
+        "total_length": 465.29939810069857,
+        "groups": 2
       },
       {
         "id": 6,
@@ -2710,7 +3274,9 @@
         "diacritic": "ે",
         "svg": "svgs/barakhadi/23_m/6_me.svg",
         "audio_ios": "audio/barakhadi/23_m/6_me.mp3",
-        "audio_android": "audio_23_m_6_me.mp3"
+        "audio_android": "audio_23_m_6_me.mp3",
+        "total_length": 376.2299971467711,
+        "groups": 2
       },
       {
         "id": 7,
@@ -2719,7 +3285,9 @@
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/23_m/7_mai.svg",
         "audio_ios": "audio/barakhadi/23_m/7_mai.mp3",
-        "audio_android": "audio_23_m_7_mai.mp3"
+        "audio_android": "audio_23_m_7_mai.mp3",
+        "total_length": 445.6122134125874,
+        "groups": 3
       },
       {
         "id": 8,
@@ -2728,7 +3296,9 @@
         "diacritic": "ો",
         "svg": "svgs/barakhadi/23_m/8_mo.svg",
         "audio_ios": "audio/barakhadi/23_m/8_mo.mp3",
-        "audio_android": "audio_23_m_8_mo.mp3"
+        "audio_android": "audio_23_m_8_mo.mp3",
+        "total_length": 517.7083584160597,
+        "groups": 3
       },
       {
         "id": 9,
@@ -2737,7 +3307,9 @@
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/23_m/9_mau.svg",
         "audio_ios": "audio/barakhadi/23_m/9_mau.mp3",
-        "audio_android": "audio_23_m_9_mau.mp3"
+        "audio_android": "audio_23_m_9_mau.mp3",
+        "total_length": 587.090574681876,
+        "groups": 4
       },
       {
         "id": 10,
@@ -2746,7 +3318,9 @@
         "diacritic": "ં",
         "svg": "svgs/barakhadi/23_m/10_mam.svg",
         "audio_ios": "audio/barakhadi/23_m/10_mam.mp3",
-        "audio_android": "audio_23_m_10_mam.mp3"
+        "audio_android": "audio_23_m_10_mam.mp3",
+        "total_length": 319.14617348858246,
+        "groups": 2
       },
       {
         "id": 11,
@@ -2755,7 +3329,9 @@
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/23_m/11_mah.svg",
         "audio_ios": "audio/barakhadi/23_m/11_mah.mp3",
-        "audio_android": "audio_23_m_11_mah.mp3"
+        "audio_android": "audio_23_m_11_mah.mp3",
+        "total_length": 351.7151147586649,
+        "groups": 3
       }
     ]
   },
@@ -2771,7 +3347,9 @@
         "diacritic": " ",
         "svg": "svgs/barakhadi/24_y/0_y.svg",
         "audio_ios": "audio/barakhadi/24_y/0_y.mp3",
-        "audio_android": "audio_24_y_0_y.mp3"
+        "audio_android": "audio_24_y_0_y.mp3",
+        "total_length": 313.1272284507955,
+        "groups": 1
       },
       {
         "id": 1,
@@ -2780,7 +3358,9 @@
         "diacritic": "ા",
         "svg": "svgs/barakhadi/24_y/1_ya.svg",
         "audio_ios": "audio/barakhadi/24_y/1_ya.mp3",
-        "audio_android": "audio_24_y_1_ya.mp3"
+        "audio_android": "audio_24_y_1_ya.mp3",
+        "total_length": 454.605589720084,
+        "groups": 2
       },
       {
         "id": 2,
@@ -2789,7 +3369,9 @@
         "diacritic": "િ",
         "svg": "svgs/barakhadi/24_y/2_yi.svg",
         "audio_ios": "audio/barakhadi/24_y/2_yi.mp3",
-        "audio_android": "audio_24_y_2_yi.mp3"
+        "audio_android": "audio_24_y_2_yi.mp3",
+        "total_length": 597.0705387536614,
+        "groups": 2
       },
       {
         "id": 3,
@@ -2798,7 +3380,9 @@
         "diacritic": "ી",
         "svg": "svgs/barakhadi/24_y/3_yee.svg",
         "audio_ios": "audio/barakhadi/24_y/3_yee.mp3",
-        "audio_android": "audio_24_y_3_yee.mp3"
+        "audio_android": "audio_24_y_3_yee.mp3",
+        "total_length": 574.1063883724685,
+        "groups": 2
       },
       {
         "id": 4,
@@ -2807,7 +3391,9 @@
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/24_y/4_yu.svg",
         "audio_ios": "audio/barakhadi/24_y/4_yu.mp3",
-        "audio_android": "audio_24_y_4_yu.mp3"
+        "audio_android": "audio_24_y_4_yu.mp3",
+        "total_length": 485.1026789350435,
+        "groups": 2
       },
       {
         "id": 5,
@@ -2816,7 +3402,9 @@
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/24_y/5_yoo.svg",
         "audio_ios": "audio/barakhadi/24_y/5_yoo.mp3",
-        "audio_android": "audio_24_y_5_yoo.mp3"
+        "audio_android": "audio_24_y_5_yoo.mp3",
+        "total_length": 488.4655334262411,
+        "groups": 2
       },
       {
         "id": 6,
@@ -2825,7 +3413,9 @@
         "diacritic": "ે",
         "svg": "svgs/barakhadi/24_y/6_ye.svg",
         "audio_ios": "audio/barakhadi/24_y/6_ye.mp3",
-        "audio_android": "audio_24_y_6_ye.mp3"
+        "audio_android": "audio_24_y_6_ye.mp3",
+        "total_length": 399.39613247231364,
+        "groups": 2
       },
       {
         "id": 7,
@@ -2834,7 +3424,9 @@
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/24_y/7_yai.svg",
         "audio_ios": "audio/barakhadi/24_y/7_yai.mp3",
-        "audio_android": "audio_24_y_7_yai.mp3"
+        "audio_android": "audio_24_y_7_yai.mp3",
+        "total_length": 468.7783487381299,
+        "groups": 3
       },
       {
         "id": 8,
@@ -2843,7 +3435,9 @@
         "diacritic": "ો",
         "svg": "svgs/barakhadi/24_y/8_yo.svg",
         "audio_ios": "audio/barakhadi/24_y/8_yo.mp3",
-        "audio_android": "audio_24_y_8_yo.mp3"
+        "audio_android": "audio_24_y_8_yo.mp3",
+        "total_length": 540.8744937416022,
+        "groups": 3
       },
       {
         "id": 9,
@@ -2852,7 +3446,9 @@
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/24_y/9_yau.svg",
         "audio_ios": "audio/barakhadi/24_y/9_yau.mp3",
-        "audio_android": "audio_24_y_9_yau.mp3"
+        "audio_android": "audio_24_y_9_yau.mp3",
+        "total_length": 610.2567100074184,
+        "groups": 4
       },
       {
         "id": 10,
@@ -2861,7 +3457,9 @@
         "diacritic": "ં",
         "svg": "svgs/barakhadi/24_y/10_yam.svg",
         "audio_ios": "audio/barakhadi/24_y/10_yam.mp3",
-        "audio_android": "audio_24_y_10_yam.mp3"
+        "audio_android": "audio_24_y_10_yam.mp3",
+        "total_length": 342.312308814125,
+        "groups": 2
       },
       {
         "id": 11,
@@ -2870,7 +3468,9 @@
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/24_y/11_yah.svg",
         "audio_ios": "audio/barakhadi/24_y/11_yah.mp3",
-        "audio_android": "audio_24_y_11_yah.mp3"
+        "audio_android": "audio_24_y_11_yah.mp3",
+        "total_length": 374.88125008420747,
+        "groups": 3
       }
     ]
   },
@@ -2886,7 +3486,9 @@
         "diacritic": " ",
         "svg": "svgs/barakhadi/25_r/0_r.svg",
         "audio_ios": "audio/barakhadi/25_r/0_r.mp3",
-        "audio_android": "audio_25_r_0_r.mp3"
+        "audio_android": "audio_25_r_0_r.mp3",
+        "total_length": 244.09586297539244,
+        "groups": 1
       },
       {
         "id": 1,
@@ -2895,7 +3497,9 @@
         "diacritic": "ા",
         "svg": "svgs/barakhadi/25_r/1_ra.svg",
         "audio_ios": "audio/barakhadi/25_r/1_ra.mp3",
-        "audio_android": "audio_25_r_1_ra.mp3"
+        "audio_android": "audio_25_r_1_ra.mp3",
+        "total_length": 385.574224244681,
+        "groups": 2
       },
       {
         "id": 2,
@@ -2904,7 +3508,9 @@
         "diacritic": "િ",
         "svg": "svgs/barakhadi/25_r/2_ri.svg",
         "audio_ios": "audio/barakhadi/25_r/2_ri.mp3",
-        "audio_android": "audio_25_r_2_ri.mp3"
+        "audio_android": "audio_25_r_2_ri.mp3",
+        "total_length": 528.0391732782584,
+        "groups": 2
       },
       {
         "id": 3,
@@ -2913,7 +3519,9 @@
         "diacritic": "ી",
         "svg": "svgs/barakhadi/25_r/3_ree.svg",
         "audio_ios": "audio/barakhadi/25_r/3_ree.mp3",
-        "audio_android": "audio_25_r_3_ree.mp3"
+        "audio_android": "audio_25_r_3_ree.mp3",
+        "total_length": 505.0750228970654,
+        "groups": 2
       },
       {
         "id": 4,
@@ -2922,7 +3530,9 @@
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/25_r/4_ru.svg",
         "audio_ios": "audio/barakhadi/25_r/4_ru.mp3",
-        "audio_android": "audio_25_r_4_ru.mp3"
+        "audio_android": "audio_25_r_4_ru.mp3",
+        "total_length": 416.07131345964046,
+        "groups": 2
       },
       {
         "id": 5,
@@ -2931,7 +3541,9 @@
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/25_r/5_roo.svg",
         "audio_ios": "audio/barakhadi/25_r/5_roo.mp3",
-        "audio_android": "audio_25_r_5_roo.mp3"
+        "audio_android": "audio_25_r_5_roo.mp3",
+        "total_length": 419.43416795083806,
+        "groups": 2
       },
       {
         "id": 6,
@@ -2940,7 +3552,9 @@
         "diacritic": "ે",
         "svg": "svgs/barakhadi/25_r/6_re.svg",
         "audio_ios": "audio/barakhadi/25_r/6_re.mp3",
-        "audio_android": "audio_25_r_6_re.mp3"
+        "audio_android": "audio_25_r_6_re.mp3",
+        "total_length": 330.3647669969106,
+        "groups": 2
       },
       {
         "id": 7,
@@ -2949,7 +3563,9 @@
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/25_r/7_rai.svg",
         "audio_ios": "audio/barakhadi/25_r/7_rai.mp3",
-        "audio_android": "audio_25_r_7_rai.mp3"
+        "audio_android": "audio_25_r_7_rai.mp3",
+        "total_length": 399.74698326272687,
+        "groups": 3
       },
       {
         "id": 8,
@@ -2958,7 +3574,9 @@
         "diacritic": "ો",
         "svg": "svgs/barakhadi/25_r/8_ro.svg",
         "audio_ios": "audio/barakhadi/25_r/8_ro.mp3",
-        "audio_android": "audio_25_r_8_ro.mp3"
+        "audio_android": "audio_25_r_8_ro.mp3",
+        "total_length": 471.8431282661992,
+        "groups": 3
       },
       {
         "id": 9,
@@ -2967,7 +3585,9 @@
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/25_r/9_rau.svg",
         "audio_ios": "audio/barakhadi/25_r/9_rau.mp3",
-        "audio_android": "audio_25_r_9_rau.mp3"
+        "audio_android": "audio_25_r_9_rau.mp3",
+        "total_length": 541.2253445320155,
+        "groups": 4
       },
       {
         "id": 10,
@@ -2976,7 +3596,9 @@
         "diacritic": "ં",
         "svg": "svgs/barakhadi/25_r/10_ram.svg",
         "audio_ios": "audio/barakhadi/25_r/10_ram.mp3",
-        "audio_android": "audio_25_r_10_ram.mp3"
+        "audio_android": "audio_25_r_10_ram.mp3",
+        "total_length": 273.28094333872195,
+        "groups": 2
       },
       {
         "id": 11,
@@ -2985,7 +3607,9 @@
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/25_r/11_rah.svg",
         "audio_ios": "audio/barakhadi/25_r/11_rah.mp3",
-        "audio_android": "audio_25_r_11_rah.mp3"
+        "audio_android": "audio_25_r_11_rah.mp3",
+        "total_length": 305.8498846088044,
+        "groups": 3
       }
     ]
   },
@@ -3001,7 +3625,9 @@
         "diacritic": " ",
         "svg": "svgs/barakhadi/26_l/0_l.svg",
         "audio_ios": "audio/barakhadi/26_l/0_l.mp3",
-        "audio_android": "audio_26_l_0_l.mp3"
+        "audio_android": "audio_26_l_0_l.mp3",
+        "total_length": 363.296184241184,
+        "groups": 1
       },
       {
         "id": 1,
@@ -3010,7 +3636,9 @@
         "diacritic": "ા",
         "svg": "svgs/barakhadi/26_l/1_la.svg",
         "audio_ios": "audio/barakhadi/26_l/1_la.mp3",
-        "audio_android": "audio_26_l_1_la.mp3"
+        "audio_android": "audio_26_l_1_la.mp3",
+        "total_length": 504.77454551047254,
+        "groups": 2
       },
       {
         "id": 2,
@@ -3019,7 +3647,9 @@
         "diacritic": "િ",
         "svg": "svgs/barakhadi/26_l/2_li.svg",
         "audio_ios": "audio/barakhadi/26_l/2_li.mp3",
-        "audio_android": "audio_26_l_2_li.mp3"
+        "audio_android": "audio_26_l_2_li.mp3",
+        "total_length": 647.2394945440499,
+        "groups": 2
       },
       {
         "id": 3,
@@ -3028,7 +3658,9 @@
         "diacritic": "ી",
         "svg": "svgs/barakhadi/26_l/3_le.svg",
         "audio_ios": "audio/barakhadi/26_l/3_le.mp3",
-        "audio_android": "audio_26_l_3_le.mp3"
+        "audio_android": "audio_26_l_3_le.mp3",
+        "total_length": 624.275344162857,
+        "groups": 2
       },
       {
         "id": 4,
@@ -3037,7 +3669,9 @@
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/26_l/4_lu.svg",
         "audio_ios": "audio/barakhadi/26_l/4_lu.mp3",
-        "audio_android": "audio_26_l_4_lu.mp3"
+        "audio_android": "audio_26_l_4_lu.mp3",
+        "total_length": 535.271634725432,
+        "groups": 2
       },
       {
         "id": 5,
@@ -3046,7 +3680,9 @@
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/26_l/5_loo.svg",
         "audio_ios": "audio/barakhadi/26_l/5_loo.mp3",
-        "audio_android": "audio_26_l_5_loo.mp3"
+        "audio_android": "audio_26_l_5_loo.mp3",
+        "total_length": 538.6344892166296,
+        "groups": 2
       },
       {
         "id": 6,
@@ -3055,7 +3691,9 @@
         "diacritic": "ે",
         "svg": "svgs/barakhadi/26_l/6_le.svg",
         "audio_ios": "audio/barakhadi/26_l/6_le.mp3",
-        "audio_android": "audio_26_l_6_le.mp3"
+        "audio_android": "audio_26_l_6_le.mp3",
+        "total_length": 449.56508826270215,
+        "groups": 2
       },
       {
         "id": 7,
@@ -3064,7 +3702,9 @@
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/26_l/7_lai.svg",
         "audio_ios": "audio/barakhadi/26_l/7_lai.mp3",
-        "audio_android": "audio_26_l_7_lai.mp3"
+        "audio_android": "audio_26_l_7_lai.mp3",
+        "total_length": 518.9473045285184,
+        "groups": 3
       },
       {
         "id": 8,
@@ -3073,7 +3713,9 @@
         "diacritic": "ો",
         "svg": "svgs/barakhadi/26_l/8_lo.svg",
         "audio_ios": "audio/barakhadi/26_l/8_lo.mp3",
-        "audio_android": "audio_26_l_8_lo.mp3"
+        "audio_android": "audio_26_l_8_lo.mp3",
+        "total_length": 591.0434495319907,
+        "groups": 3
       },
       {
         "id": 9,
@@ -3082,7 +3724,9 @@
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/26_l/9_lau.svg",
         "audio_ios": "audio/barakhadi/26_l/9_lau.mp3",
-        "audio_android": "audio_26_l_9_lau.mp3"
+        "audio_android": "audio_26_l_9_lau.mp3",
+        "total_length": 660.4256657978069,
+        "groups": 4
       },
       {
         "id": 10,
@@ -3091,7 +3735,9 @@
         "diacritic": "ં",
         "svg": "svgs/barakhadi/26_l/10_lam.svg",
         "audio_ios": "audio/barakhadi/26_l/10_lam.mp3",
-        "audio_android": "audio_26_l_10_lam.mp3"
+        "audio_android": "audio_26_l_10_lam.mp3",
+        "total_length": 392.4812646045135,
+        "groups": 2
       },
       {
         "id": 11,
@@ -3100,7 +3746,9 @@
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/26_l/11_lah.svg",
         "audio_ios": "audio/barakhadi/26_l/11_lah.mp3",
-        "audio_android": "audio_26_l_11_lah.mp3"
+        "audio_android": "audio_26_l_11_lah.mp3",
+        "total_length": 425.050205874596,
+        "groups": 3
       }
     ]
   },
@@ -3116,7 +3764,9 @@
         "diacritic": " ",
         "svg": "svgs/barakhadi/27_v/0_v.svg",
         "audio_ios": "audio/barakhadi/27_v/0_v.mp3",
-        "audio_android": "audio_27_v_0_v.mp3"
+        "audio_android": "audio_27_v_0_v.mp3",
+        "total_length": 301.31660370589316,
+        "groups": 1
       },
       {
         "id": 1,
@@ -3125,7 +3775,9 @@
         "diacritic": "ા",
         "svg": "svgs/barakhadi/27_v/1_va.svg",
         "audio_ios": "audio/barakhadi/27_v/1_va.mp3",
-        "audio_android": "audio_27_v_1_va.mp3"
+        "audio_android": "audio_27_v_1_va.mp3",
+        "total_length": 442.7949649751817,
+        "groups": 2
       },
       {
         "id": 2,
@@ -3134,7 +3786,9 @@
         "diacritic": "િ",
         "svg": "svgs/barakhadi/27_v/2_vi.svg",
         "audio_ios": "audio/barakhadi/27_v/2_vi.mp3",
-        "audio_android": "audio_27_v_2_vi.mp3"
+        "audio_android": "audio_27_v_2_vi.mp3",
+        "total_length": 585.2599140087591,
+        "groups": 2
       },
       {
         "id": 3,
@@ -3143,7 +3797,9 @@
         "diacritic": "ી",
         "svg": "svgs/barakhadi/27_v/3_vee.svg",
         "audio_ios": "audio/barakhadi/27_v/3_vee.mp3",
-        "audio_android": "audio_27_v_3_vee.mp3"
+        "audio_android": "audio_27_v_3_vee.mp3",
+        "total_length": 562.2957636275662,
+        "groups": 2
       },
       {
         "id": 4,
@@ -3152,7 +3808,9 @@
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/27_v/4_vu.svg",
         "audio_ios": "audio/barakhadi/27_v/4_vu.mp3",
-        "audio_android": "audio_27_v_4_vu.mp3"
+        "audio_android": "audio_27_v_4_vu.mp3",
+        "total_length": 473.2920541901412,
+        "groups": 2
       },
       {
         "id": 5,
@@ -3161,7 +3819,9 @@
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/27_v/5_voo.svg",
         "audio_ios": "audio/barakhadi/27_v/5_voo.mp3",
-        "audio_android": "audio_27_v_5_voo.mp3"
+        "audio_android": "audio_27_v_5_voo.mp3",
+        "total_length": 476.6549086813388,
+        "groups": 2
       },
       {
         "id": 6,
@@ -3170,7 +3830,9 @@
         "diacritic": "ે",
         "svg": "svgs/barakhadi/27_v/6_ve.svg",
         "audio_ios": "audio/barakhadi/27_v/6_ve.mp3",
-        "audio_android": "audio_27_v_6_ve.mp3"
+        "audio_android": "audio_27_v_6_ve.mp3",
+        "total_length": 387.58550772741137,
+        "groups": 2
       },
       {
         "id": 7,
@@ -3179,7 +3841,9 @@
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/27_v/7_vai.svg",
         "audio_ios": "audio/barakhadi/27_v/7_vai.mp3",
-        "audio_android": "audio_27_v_7_vai.mp3"
+        "audio_android": "audio_27_v_7_vai.mp3",
+        "total_length": 456.9677239932276,
+        "groups": 3
       },
       {
         "id": 8,
@@ -3188,7 +3852,9 @@
         "diacritic": "ો",
         "svg": "svgs/barakhadi/27_v/8_vo.svg",
         "audio_ios": "audio/barakhadi/27_v/8_vo.mp3",
-        "audio_android": "audio_27_v_8_vo.mp3"
+        "audio_android": "audio_27_v_8_vo.mp3",
+        "total_length": 529.0638689966999,
+        "groups": 3
       },
       {
         "id": 9,
@@ -3197,7 +3863,9 @@
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/27_v/9_vau.svg",
         "audio_ios": "audio/barakhadi/27_v/9_vau.mp3",
-        "audio_android": "audio_27_v_9_vau.mp3"
+        "audio_android": "audio_27_v_9_vau.mp3",
+        "total_length": 598.4460852625161,
+        "groups": 4
       },
       {
         "id": 10,
@@ -3206,7 +3874,9 @@
         "diacritic": "ં",
         "svg": "svgs/barakhadi/27_v/10_vam.svg",
         "audio_ios": "audio/barakhadi/27_v/10_vam.mp3",
-        "audio_android": "audio_27_v_10_vam.mp3"
+        "audio_android": "audio_27_v_10_vam.mp3",
+        "total_length": 330.5016840692227,
+        "groups": 2
       },
       {
         "id": 11,
@@ -3215,7 +3885,9 @@
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/27_v/11_vah.svg",
         "audio_ios": "audio/barakhadi/27_v/11_vah.mp3",
-        "audio_android": "audio_27_v_11_vah.mp3"
+        "audio_android": "audio_27_v_11_vah.mp3",
+        "total_length": 363.07062533930514,
+        "groups": 3
       }
     ]
   },
@@ -3231,7 +3903,9 @@
         "diacritic": " ",
         "svg": "svgs/barakhadi/28_sh/0_sh.svg",
         "audio_ios": "audio/barakhadi/28_sh/0_sh.mp3",
-        "audio_android": "audio_28_sh_0_sh.mp3"
+        "audio_android": "audio_28_sh_0_sh.mp3",
+        "total_length": 422.1887564035753,
+        "groups": 1
       },
       {
         "id": 1,
@@ -3240,7 +3914,9 @@
         "diacritic": "ા",
         "svg": "svgs/barakhadi/28_sh/1_sha.svg",
         "audio_ios": "audio/barakhadi/28_sh/1_sha.mp3",
-        "audio_android": "audio_28_sh_1_sha.mp3"
+        "audio_android": "audio_28_sh_1_sha.mp3",
+        "total_length": 563.6671176728639,
+        "groups": 2
       },
       {
         "id": 2,
@@ -3249,7 +3925,9 @@
         "diacritic": "િ",
         "svg": "svgs/barakhadi/28_sh/2_shi.svg",
         "audio_ios": "audio/barakhadi/28_sh/2_shi.mp3",
-        "audio_android": "audio_28_sh_2_shi.mp3"
+        "audio_android": "audio_28_sh_2_shi.mp3",
+        "total_length": 706.1320667064413,
+        "groups": 2
       },
       {
         "id": 3,
@@ -3258,7 +3936,9 @@
         "diacritic": "ી",
         "svg": "svgs/barakhadi/28_sh/3_shee.svg",
         "audio_ios": "audio/barakhadi/28_sh/3_shee.mp3",
-        "audio_android": "audio_28_sh_3_shee.mp3"
+        "audio_android": "audio_28_sh_3_shee.mp3",
+        "total_length": 683.1679163252484,
+        "groups": 2
       },
       {
         "id": 4,
@@ -3267,7 +3947,9 @@
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/28_sh/4_shu.svg",
         "audio_ios": "audio/barakhadi/28_sh/4_shu.mp3",
-        "audio_android": "audio_28_sh_4_shu.mp3"
+        "audio_android": "audio_28_sh_4_shu.mp3",
+        "total_length": 594.1642068878234,
+        "groups": 2
       },
       {
         "id": 5,
@@ -3276,7 +3958,9 @@
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/28_sh/5_shoo.svg",
         "audio_ios": "audio/barakhadi/28_sh/5_shoo.mp3",
-        "audio_android": "audio_28_sh_5_shoo.mp3"
+        "audio_android": "audio_28_sh_5_shoo.mp3",
+        "total_length": 597.527061379021,
+        "groups": 2
       },
       {
         "id": 6,
@@ -3285,7 +3969,9 @@
         "diacritic": "ે",
         "svg": "svgs/barakhadi/28_sh/6_she.svg",
         "audio_ios": "audio/barakhadi/28_sh/6_she.mp3",
-        "audio_android": "audio_28_sh_6_she.mp3"
+        "audio_android": "audio_28_sh_6_she.mp3",
+        "total_length": 508.45766042509354,
+        "groups": 2
       },
       {
         "id": 7,
@@ -3294,7 +3980,9 @@
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/28_sh/7_shai.svg",
         "audio_ios": "audio/barakhadi/28_sh/7_shai.mp3",
-        "audio_android": "audio_28_sh_7_shai.mp3"
+        "audio_android": "audio_28_sh_7_shai.mp3",
+        "total_length": 577.8398766909097,
+        "groups": 3
       },
       {
         "id": 8,
@@ -3303,7 +3991,9 @@
         "diacritic": "ો",
         "svg": "svgs/barakhadi/28_sh/8_sho.svg",
         "audio_ios": "audio/barakhadi/28_sh/8_sho.mp3",
-        "audio_android": "audio_28_sh_8_sho.mp3"
+        "audio_android": "audio_28_sh_8_sho.mp3",
+        "total_length": 649.9360216943821,
+        "groups": 3
       },
       {
         "id": 9,
@@ -3312,7 +4002,9 @@
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/28_sh/9_shau.svg",
         "audio_ios": "audio/barakhadi/28_sh/9_shau.mp3",
-        "audio_android": "audio_28_sh_9_shau.mp3"
+        "audio_android": "audio_28_sh_9_shau.mp3",
+        "total_length": 719.3182379601983,
+        "groups": 4
       },
       {
         "id": 10,
@@ -3321,7 +4013,9 @@
         "diacritic": "ં",
         "svg": "svgs/barakhadi/28_sh/10_sham.svg",
         "audio_ios": "audio/barakhadi/28_sh/10_sham.mp3",
-        "audio_android": "audio_28_sh_10_sham.mp3"
+        "audio_android": "audio_28_sh_10_sham.mp3",
+        "total_length": 451.37383676690484,
+        "groups": 2
       },
       {
         "id": 11,
@@ -3330,7 +4024,9 @@
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/28_sh/11_shah.svg",
         "audio_ios": "audio/barakhadi/28_sh/11_shah.mp3",
-        "audio_android": "audio_28_sh_11_shah.mp3"
+        "audio_android": "audio_28_sh_11_shah.mp3",
+        "total_length": 483.9427780369873,
+        "groups": 3
       }
     ]
   },
@@ -3346,7 +4042,9 @@
         "diacritic": " ",
         "svg": "svgs/barakhadi/29_sh/0_sh.svg",
         "audio_ios": "audio/barakhadi/29_sh/0_sh.mp3",
-        "audio_android": "audio_29_sh_0_sh.mp3"
+        "audio_android": "audio_29_sh_0_sh.mp3",
+        "total_length": 338.5782988663452,
+        "groups": 1
       },
       {
         "id": 1,
@@ -3355,7 +4053,9 @@
         "diacritic": "ા",
         "svg": "svgs/barakhadi/29_sh/1_sha.svg",
         "audio_ios": "audio/barakhadi/29_sh/1_sha.mp3",
-        "audio_android": "audio_29_sh_1_sha.mp3"
+        "audio_android": "audio_29_sh_1_sha.mp3",
+        "total_length": 480.05666013563376,
+        "groups": 2
       },
       {
         "id": 2,
@@ -3364,7 +4064,9 @@
         "diacritic": "િ",
         "svg": "svgs/barakhadi/29_sh/2_shi.svg",
         "audio_ios": "audio/barakhadi/29_sh/2_shi.mp3",
-        "audio_android": "audio_29_sh_2_shi.mp3"
+        "audio_android": "audio_29_sh_2_shi.mp3",
+        "total_length": 622.5216091692112,
+        "groups": 2
       },
       {
         "id": 3,
@@ -3373,7 +4075,9 @@
         "diacritic": "ી",
         "svg": "svgs/barakhadi/29_sh/3_shee.svg",
         "audio_ios": "audio/barakhadi/29_sh/3_shee.mp3",
-        "audio_android": "audio_29_sh_3_shee.mp3"
+        "audio_android": "audio_29_sh_3_shee.mp3",
+        "total_length": 599.5574587880183,
+        "groups": 2
       },
       {
         "id": 4,
@@ -3382,7 +4086,9 @@
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/29_sh/4_shu.svg",
         "audio_ios": "audio/barakhadi/29_sh/4_shu.mp3",
-        "audio_android": "audio_29_sh_4_shu.mp3"
+        "audio_android": "audio_29_sh_4_shu.mp3",
+        "total_length": 510.55374935059325,
+        "groups": 2
       },
       {
         "id": 5,
@@ -3391,7 +4097,9 @@
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/29_sh/5_shoo.svg",
         "audio_ios": "audio/barakhadi/29_sh/5_shoo.mp3",
-        "audio_android": "audio_29_sh_5_shoo.mp3"
+        "audio_android": "audio_29_sh_5_shoo.mp3",
+        "total_length": 513.9166038417909,
+        "groups": 2
       },
       {
         "id": 6,
@@ -3400,7 +4108,9 @@
         "diacritic": "ે",
         "svg": "svgs/barakhadi/29_sh/6_she.svg",
         "audio_ios": "audio/barakhadi/29_sh/6_she.mp3",
-        "audio_android": "audio_29_sh_6_she.mp3"
+        "audio_android": "audio_29_sh_6_she.mp3",
+        "total_length": 426.9359567376226,
+        "groups": 2
       },
       {
         "id": 7,
@@ -3409,7 +4119,9 @@
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/29_sh/7_shai.svg",
         "audio_ios": "audio/barakhadi/29_sh/7_shai.mp3",
-        "audio_android": "audio_29_sh_7_shai.mp3"
+        "audio_android": "audio_29_sh_7_shai.mp3",
+        "total_length": 494.22941915367966,
+        "groups": 3
       },
       {
         "id": 8,
@@ -3418,7 +4130,9 @@
         "diacritic": "ો",
         "svg": "svgs/barakhadi/29_sh/8_sho.svg",
         "audio_ios": "audio/barakhadi/29_sh/8_sho.mp3",
-        "audio_android": "audio_29_sh_8_sho.mp3"
+        "audio_android": "audio_29_sh_8_sho.mp3",
+        "total_length": 568.4143180069111,
+        "groups": 3
       },
       {
         "id": 9,
@@ -3427,7 +4141,9 @@
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/29_sh/9_shau.svg",
         "audio_ios": "audio/barakhadi/29_sh/9_shau.mp3",
-        "audio_android": "audio_29_sh_9_shau.mp3"
+        "audio_android": "audio_29_sh_9_shau.mp3",
+        "total_length": 635.7077804229682,
+        "groups": 4
       },
       {
         "id": 10,
@@ -3436,7 +4152,9 @@
         "diacritic": "ં",
         "svg": "svgs/barakhadi/29_sh/10_sham.svg",
         "audio_ios": "audio/barakhadi/29_sh/10_sham.mp3",
-        "audio_android": "audio_29_sh_10_sham.mp3"
+        "audio_android": "audio_29_sh_10_sham.mp3",
+        "total_length": 367.76337922967474,
+        "groups": 2
       },
       {
         "id": 11,
@@ -3445,7 +4163,9 @@
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/29_sh/11_shah.svg",
         "audio_ios": "audio/barakhadi/29_sh/11_shah.mp3",
-        "audio_android": "audio_29_sh_11_shah.mp3"
+        "audio_android": "audio_29_sh_11_shah.mp3",
+        "total_length": 400.3323204997572,
+        "groups": 3
       }
     ]
   },
@@ -3461,7 +4181,9 @@
         "diacritic": " ",
         "svg": "svgs/barakhadi/30_s/0_s.svg",
         "audio_ios": "audio/barakhadi/30_s/0_s.mp3",
-        "audio_android": "audio_30_s_0_s.mp3"
+        "audio_android": "audio_30_s_0_s.mp3",
+        "total_length": 408.1302838793714,
+        "groups": 1
       },
       {
         "id": 1,
@@ -3470,7 +4192,9 @@
         "diacritic": "ા",
         "svg": "svgs/barakhadi/30_s/1_sa.svg",
         "audio_ios": "audio/barakhadi/30_s/1_sa.mp3",
-        "audio_android": "audio_30_s_1_sa.mp3"
+        "audio_android": "audio_30_s_1_sa.mp3",
+        "total_length": 549.6086451486599,
+        "groups": 2
       },
       {
         "id": 2,
@@ -3479,7 +4203,9 @@
         "diacritic": "િ",
         "svg": "svgs/barakhadi/30_s/2_si.svg",
         "audio_ios": "audio/barakhadi/30_s/2_si.mp3",
-        "audio_android": "audio_30_s_2_si.mp3"
+        "audio_android": "audio_30_s_2_si.mp3",
+        "total_length": 692.0735941822373,
+        "groups": 2
       },
       {
         "id": 3,
@@ -3488,7 +4214,9 @@
         "diacritic": "ી",
         "svg": "svgs/barakhadi/30_s/3_see.svg",
         "audio_ios": "audio/barakhadi/30_s/3_see.mp3",
-        "audio_android": "audio_30_s_3_see.mp3"
+        "audio_android": "audio_30_s_3_see.mp3",
+        "total_length": 669.1094438010443,
+        "groups": 2
       },
       {
         "id": 4,
@@ -3497,7 +4225,9 @@
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/30_s/4_su.svg",
         "audio_ios": "audio/barakhadi/30_s/4_su.mp3",
-        "audio_android": "audio_30_s_4_su.mp3"
+        "audio_android": "audio_30_s_4_su.mp3",
+        "total_length": 580.1057343636194,
+        "groups": 2
       },
       {
         "id": 5,
@@ -3506,7 +4236,9 @@
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/30_s/5_soo.svg",
         "audio_ios": "audio/barakhadi/30_s/5_soo.mp3",
-        "audio_android": "audio_30_s_5_soo.mp3"
+        "audio_android": "audio_30_s_5_soo.mp3",
+        "total_length": 583.468588854817,
+        "groups": 2
       },
       {
         "id": 6,
@@ -3515,7 +4247,9 @@
         "diacritic": "ે",
         "svg": "svgs/barakhadi/30_s/6_se.svg",
         "audio_ios": "audio/barakhadi/30_s/6_se.mp3",
-        "audio_android": "audio_30_s_6_se.mp3"
+        "audio_android": "audio_30_s_6_se.mp3",
+        "total_length": 494.3991879008896,
+        "groups": 2
       },
       {
         "id": 7,
@@ -3524,7 +4258,9 @@
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/30_s/7_sai.svg",
         "audio_ios": "audio/barakhadi/30_s/7_sai.mp3",
-        "audio_android": "audio_30_s_7_sai.mp3"
+        "audio_android": "audio_30_s_7_sai.mp3",
+        "total_length": 563.7814041667059,
+        "groups": 3
       },
       {
         "id": 8,
@@ -3533,7 +4269,9 @@
         "diacritic": "ો",
         "svg": "svgs/barakhadi/30_s/8_so.svg",
         "audio_ios": "audio/barakhadi/30_s/8_so.mp3",
-        "audio_android": "audio_30_s_8_so.mp3"
+        "audio_android": "audio_30_s_8_so.mp3",
+        "total_length": 635.8775491701781,
+        "groups": 3
       },
       {
         "id": 9,
@@ -3542,7 +4280,9 @@
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/30_s/9_sau.svg",
         "audio_ios": "audio/barakhadi/30_s/9_sau.mp3",
-        "audio_android": "audio_30_s_9_sau.mp3"
+        "audio_android": "audio_30_s_9_sau.mp3",
+        "total_length": 705.2597654359943,
+        "groups": 4
       },
       {
         "id": 10,
@@ -3551,7 +4291,9 @@
         "diacritic": "ં",
         "svg": "svgs/barakhadi/30_s/10_sam.svg",
         "audio_ios": "audio/barakhadi/30_s/10_sam.mp3",
-        "audio_android": "audio_30_s_10_sam.mp3"
+        "audio_android": "audio_30_s_10_sam.mp3",
+        "total_length": 437.3153642427009,
+        "groups": 2
       },
       {
         "id": 11,
@@ -3560,7 +4302,9 @@
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/30_s/11_sah.svg",
         "audio_ios": "audio/barakhadi/30_s/11_sah.mp3",
-        "audio_android": "audio_30_s_11_sah.mp3"
+        "audio_android": "audio_30_s_11_sah.mp3",
+        "total_length": 469.8843055127834,
+        "groups": 3
       }
     ]
   },
@@ -3576,7 +4320,9 @@
         "diacritic": " ",
         "svg": "svgs/barakhadi/31_h/0_h.svg",
         "audio_ios": "audio/barakhadi/31_h/0_h.mp3",
-        "audio_android": "audio_31_h_0_h.mp3"
+        "audio_android": "audio_31_h_0_h.mp3",
+        "total_length": 389.3338552322975,
+        "groups": 1
       },
       {
         "id": 1,
@@ -3585,7 +4331,9 @@
         "diacritic": "ા",
         "svg": "svgs/barakhadi/31_h/1_ha.svg",
         "audio_ios": "audio/barakhadi/31_h/1_ha.mp3",
-        "audio_android": "audio_31_h_1_ha.mp3"
+        "audio_android": "audio_31_h_1_ha.mp3",
+        "total_length": 530.812216501586,
+        "groups": 2
       },
       {
         "id": 2,
@@ -3594,7 +4342,9 @@
         "diacritic": "િ",
         "svg": "svgs/barakhadi/31_h/2_hi.svg",
         "audio_ios": "audio/barakhadi/31_h/2_hi.mp3",
-        "audio_android": "audio_31_h_2_hi.mp3"
+        "audio_android": "audio_31_h_2_hi.mp3",
+        "total_length": 673.2771655351635,
+        "groups": 2
       },
       {
         "id": 3,
@@ -3603,7 +4353,9 @@
         "diacritic": "ી",
         "svg": "svgs/barakhadi/31_h/3_hee.svg",
         "audio_ios": "audio/barakhadi/31_h/3_hee.mp3",
-        "audio_android": "audio_31_h_3_hee.mp3"
+        "audio_android": "audio_31_h_3_hee.mp3",
+        "total_length": 650.3130151539705,
+        "groups": 2
       },
       {
         "id": 4,
@@ -3612,7 +4364,9 @@
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/31_h/4_hu.svg",
         "audio_ios": "audio/barakhadi/31_h/4_hu.mp3",
-        "audio_android": "audio_31_h_4_hu.mp3"
+        "audio_android": "audio_31_h_4_hu.mp3",
+        "total_length": 561.3093057165455,
+        "groups": 2
       },
       {
         "id": 5,
@@ -3621,7 +4375,9 @@
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/31_h/5_hoo.svg",
         "audio_ios": "audio/barakhadi/31_h/5_hoo.mp3",
-        "audio_android": "audio_31_h_5_hoo.mp3"
+        "audio_android": "audio_31_h_5_hoo.mp3",
+        "total_length": 564.6721602077431,
+        "groups": 2
       },
       {
         "id": 6,
@@ -3630,7 +4386,9 @@
         "diacritic": "ે",
         "svg": "svgs/barakhadi/31_h/6_he.svg",
         "audio_ios": "audio/barakhadi/31_h/6_he.mp3",
-        "audio_android": "audio_31_h_6_he.mp3"
+        "audio_android": "audio_31_h_6_he.mp3",
+        "total_length": 475.60275925381563,
+        "groups": 2
       },
       {
         "id": 7,
@@ -3639,7 +4397,9 @@
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/31_h/7_hai.svg",
         "audio_ios": "audio/barakhadi/31_h/7_hai.mp3",
-        "audio_android": "audio_31_h_7_hai.mp3"
+        "audio_android": "audio_31_h_7_hai.mp3",
+        "total_length": 544.9849755196319,
+        "groups": 3
       },
       {
         "id": 8,
@@ -3648,7 +4408,9 @@
         "diacritic": "ો",
         "svg": "svgs/barakhadi/31_h/8_ho.svg",
         "audio_ios": "audio/barakhadi/31_h/8_ho.mp3",
-        "audio_android": "audio_31_h_8_ho.mp3"
+        "audio_android": "audio_31_h_8_ho.mp3",
+        "total_length": 617.0811205231042,
+        "groups": 3
       },
       {
         "id": 9,
@@ -3657,7 +4419,9 @@
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/31_h/9_hau.svg",
         "audio_ios": "audio/barakhadi/31_h/9_hau.mp3",
-        "audio_android": "audio_31_h_9_hau.mp3"
+        "audio_android": "audio_31_h_9_hau.mp3",
+        "total_length": 686.4633367889205,
+        "groups": 4
       },
       {
         "id": 10,
@@ -3666,7 +4430,9 @@
         "diacritic": "ં",
         "svg": "svgs/barakhadi/31_h/10_ham.svg",
         "audio_ios": "audio/barakhadi/31_h/10_ham.mp3",
-        "audio_android": "audio_31_h_10_ham.mp3"
+        "audio_android": "audio_31_h_10_ham.mp3",
+        "total_length": 418.518935595627,
+        "groups": 2
       },
       {
         "id": 11,
@@ -3675,7 +4441,9 @@
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/31_h/11_hah.svg",
         "audio_ios": "audio/barakhadi/31_h/11_hah.mp3",
-        "audio_android": "audio_31_h_11_hah.mp3"
+        "audio_android": "audio_31_h_11_hah.mp3",
+        "total_length": 451.08787686570946,
+        "groups": 3
       }
     ]
   },
@@ -3691,7 +4459,9 @@
         "diacritic": " ",
         "svg": "svgs/barakhadi/32_l/0_l.svg",
         "audio_ios": "audio/barakhadi/32_l/0_l.mp3",
-        "audio_android": "audio_32_l_0_l.mp3"
+        "audio_android": "audio_32_l_0_l.mp3",
+        "total_length": 375.01425136038944,
+        "groups": 1
       },
       {
         "id": 1,
@@ -3700,7 +4470,9 @@
         "diacritic": "ા",
         "svg": "svgs/barakhadi/32_l/1_la.svg",
         "audio_ios": "audio/barakhadi/32_l/1_la.mp3",
-        "audio_android": "audio_32_l_1_la.mp3"
+        "audio_android": "audio_32_l_1_la.mp3",
+        "total_length": 516.4057167504852,
+        "groups": 2
       },
       {
         "id": 2,
@@ -3709,7 +4481,9 @@
         "diacritic": "િ",
         "svg": "svgs/barakhadi/32_l/2_li.svg",
         "audio_ios": "audio/barakhadi/32_l/2_li.mp3",
-        "audio_android": "audio_32_l_2_li.mp3"
+        "audio_android": "audio_32_l_2_li.mp3",
+        "total_length": 658.9575616632553,
+        "groups": 2
       },
       {
         "id": 3,
@@ -3718,7 +4492,9 @@
         "diacritic": "ી",
         "svg": "svgs/barakhadi/32_l/3_lee.svg",
         "audio_ios": "audio/barakhadi/32_l/3_lee.mp3",
-        "audio_android": "audio_32_l_3_lee.mp3"
+        "audio_android": "audio_32_l_3_lee.mp3",
+        "total_length": 635.9934112820624,
+        "groups": 2
       },
       {
         "id": 4,
@@ -3727,7 +4503,9 @@
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/32_l/4_lu.svg",
         "audio_ios": "audio/barakhadi/32_l/4_lu.mp3",
-        "audio_android": "audio_32_l_4_lu.mp3"
+        "audio_android": "audio_32_l_4_lu.mp3",
+        "total_length": 546.9897018446375,
+        "groups": 2
       },
       {
         "id": 5,
@@ -3736,7 +4514,9 @@
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/32_l/5_loo.svg",
         "audio_ios": "audio/barakhadi/32_l/5_loo.mp3",
-        "audio_android": "audio_32_l_5_loo.mp3"
+        "audio_android": "audio_32_l_5_loo.mp3",
+        "total_length": 550.3525563358351,
+        "groups": 2
       },
       {
         "id": 6,
@@ -3745,7 +4525,9 @@
         "diacritic": "ે",
         "svg": "svgs/barakhadi/32_l/6_le.svg",
         "audio_ios": "audio/barakhadi/32_l/6_le.mp3",
-        "audio_android": "audio_32_l_6_le.mp3"
+        "audio_android": "audio_32_l_6_le.mp3",
+        "total_length": 463.3719092316668,
+        "groups": 2
       },
       {
         "id": 7,
@@ -3754,7 +4536,9 @@
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/32_l/7_lai.svg",
         "audio_ios": "audio/barakhadi/32_l/7_lai.mp3",
-        "audio_android": "audio_32_l_7_lai.mp3"
+        "audio_android": "audio_32_l_7_lai.mp3",
+        "total_length": 530.6653716477239,
+        "groups": 3
       },
       {
         "id": 8,
@@ -3763,7 +4547,9 @@
         "diacritic": "ો",
         "svg": "svgs/barakhadi/32_l/8_lo.svg",
         "audio_ios": "audio/barakhadi/32_l/8_lo.mp3",
-        "audio_android": "audio_32_l_8_lo.mp3"
+        "audio_android": "audio_32_l_8_lo.mp3",
+        "total_length": 604.8502705009553,
+        "groups": 3
       },
       {
         "id": 9,
@@ -3772,7 +4558,9 @@
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/32_l/9_lau.svg",
         "audio_ios": "audio/barakhadi/32_l/9_lau.mp3",
-        "audio_android": "audio_32_l_9_lau.mp3"
+        "audio_android": "audio_32_l_9_lau.mp3",
+        "total_length": 672.1437329170124,
+        "groups": 4
       },
       {
         "id": 10,
@@ -3781,7 +4569,9 @@
         "diacritic": "ં",
         "svg": "svgs/barakhadi/32_l/10_lam.svg",
         "audio_ios": "audio/barakhadi/32_l/10_lam.mp3",
-        "audio_android": "audio_32_l_10_lam.mp3"
+        "audio_android": "audio_32_l_10_lam.mp3",
+        "total_length": 404.19933172371896,
+        "groups": 2
       },
       {
         "id": 11,
@@ -3790,7 +4580,9 @@
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/32_l/11_lah.svg",
         "audio_ios": "audio/barakhadi/32_l/11_lah.mp3",
-        "audio_android": "audio_32_l_11_lah.mp3"
+        "audio_android": "audio_32_l_11_lah.mp3",
+        "total_length": 436.7682729938014,
+        "groups": 3
       }
     ]
   },
@@ -3806,7 +4598,9 @@
         "diacritic": " ",
         "svg": "svgs/barakhadi/33_x/0_x.svg",
         "audio_ios": "audio/barakhadi/33_x/0_x.mp3",
-        "audio_android": "audio_33_x_0_x.mp3"
+        "audio_android": "audio_33_x_0_x.mp3",
+        "total_length": 467.2063783171594,
+        "groups": 1
       },
       {
         "id": 1,
@@ -3815,7 +4609,9 @@
         "diacritic": "ા",
         "svg": "svgs/barakhadi/33_x/1_xa.svg",
         "audio_ios": "audio/barakhadi/33_x/1_xa.mp3",
-        "audio_android": "audio_33_x_1_xa.mp3"
+        "audio_android": "audio_33_x_1_xa.mp3",
+        "total_length": 608.684741901677,
+        "groups": 2
       },
       {
         "id": 2,
@@ -3824,7 +4620,9 @@
         "diacritic": "િ",
         "svg": "svgs/barakhadi/33_x/2_xi.svg",
         "audio_ios": "audio/barakhadi/33_x/2_xi.mp3",
-        "audio_android": "audio_33_x_2_xi.mp3"
+        "audio_android": "audio_33_x_2_xi.mp3",
+        "total_length": 746.2846208250116,
+        "groups": 2
       },
       {
         "id": 3,
@@ -3833,7 +4631,9 @@
         "diacritic": "ી",
         "svg": "svgs/barakhadi/33_x/3_xee.svg",
         "audio_ios": "audio/barakhadi/33_x/3_xee.mp3",
-        "audio_android": "audio_33_x_3_xee.mp3"
+        "audio_android": "audio_33_x_3_xee.mp3",
+        "total_length": 728.1855382388324,
+        "groups": 2
       },
       {
         "id": 4,
@@ -3842,7 +4642,9 @@
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/33_x/4_xu.svg",
         "audio_ios": "audio/barakhadi/33_x/4_xu.mp3",
-        "audio_android": "audio_33_x_4_xu.mp3"
+        "audio_android": "audio_33_x_4_xu.mp3",
+        "total_length": 634.318453488894,
+        "groups": 2
       },
       {
         "id": 5,
@@ -3851,7 +4653,9 @@
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/33_x/5_xoo.svg",
         "audio_ios": "audio/barakhadi/33_x/5_xoo.mp3",
-        "audio_android": "audio_33_x_5_xoo.mp3"
+        "audio_android": "audio_33_x_5_xoo.mp3",
+        "total_length": 637.6813089948766,
+        "groups": 2
       },
       {
         "id": 6,
@@ -3860,7 +4664,9 @@
         "diacritic": "ે",
         "svg": "svgs/barakhadi/33_x/6_xe.svg",
         "audio_ios": "audio/barakhadi/33_x/6_xe.mp3",
-        "audio_android": "audio_33_x_6_xe.mp3"
+        "audio_android": "audio_33_x_6_xe.mp3",
+        "total_length": 555.5640373387305,
+        "groups": 2
       },
       {
         "id": 7,
@@ -3869,7 +4675,9 @@
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/33_x/7_xai.svg",
         "audio_ios": "audio/barakhadi/33_x/7_xai.mp3",
-        "audio_android": "audio_33_x_7_xai.mp3"
+        "audio_android": "audio_33_x_7_xai.mp3",
+        "total_length": 622.8574977732094,
+        "groups": 3
       },
       {
         "id": 8,
@@ -3878,7 +4686,9 @@
         "diacritic": "ો",
         "svg": "svgs/barakhadi/33_x/8_xo.svg",
         "audio_ios": "audio/barakhadi/33_x/8_xo.mp3",
-        "audio_android": "audio_33_x_8_xo.mp3"
+        "audio_android": "audio_33_x_8_xo.mp3",
+        "total_length": 697.042398608019,
+        "groups": 3
       },
       {
         "id": 9,
@@ -3887,7 +4697,9 @@
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/33_x/9_xau.svg",
         "audio_ios": "audio/barakhadi/33_x/9_xau.mp3",
-        "audio_android": "audio_33_x_9_xau.mp3"
+        "audio_android": "audio_33_x_9_xau.mp3",
+        "total_length": 764.7295715080666,
+        "groups": 4
       },
       {
         "id": 10,
@@ -3896,7 +4708,9 @@
         "diacritic": "ં",
         "svg": "svgs/barakhadi/33_x/10_xam.svg",
         "audio_ios": "audio/barakhadi/33_x/10_xam.mp3",
-        "audio_android": "audio_33_x_10_xam.mp3"
+        "audio_android": "audio_33_x_10_xam.mp3",
+        "total_length": 496.3914608911425,
+        "groups": 2
       },
       {
         "id": 11,
@@ -3905,7 +4719,9 @@
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/33_x/11_kshah.svg",
         "audio_ios": "audio/barakhadi/33_x/11_kshah.mp3",
-        "audio_android": "audio_33_x_11_kshah.mp3"
+        "audio_android": "audio_33_x_11_kshah.mp3",
+        "total_length": 528.9603999505714,
+        "groups": 3
       }
     ]
   },
@@ -3921,7 +4737,9 @@
         "diacritic": " ",
         "svg": "svgs/barakhadi/34_gy/0_gy.svg",
         "audio_ios": "audio/barakhadi/34_gy/0_gy.mp3",
-        "audio_android": "audio_34_gy_0_gy.mp3"
+        "audio_android": "audio_34_gy_0_gy.mp3",
+        "total_length": 419.3536555532116,
+        "groups": 1
       },
       {
         "id": 1,
@@ -3930,7 +4748,9 @@
         "diacritic": "ા",
         "svg": "svgs/barakhadi/34_gy/1_gya.svg",
         "audio_ios": "audio/barakhadi/34_gy/1_gya.mp3",
-        "audio_android": "audio_34_gy_1_gya.mp3"
+        "audio_android": "audio_34_gy_1_gya.mp3",
+        "total_length": 560.8320168225001,
+        "groups": 2
       },
       {
         "id": 2,
@@ -3939,7 +4759,9 @@
         "diacritic": "િ",
         "svg": "svgs/barakhadi/34_gy/2_gyi.svg",
         "audio_ios": "audio/barakhadi/34_gy/2_gyi.mp3",
-        "audio_android": "audio_34_gy_2_gyi.mp3"
+        "audio_android": "audio_34_gy_2_gyi.mp3",
+        "total_length": 698.4318980610637,
+        "groups": 2
       },
       {
         "id": 3,
@@ -3948,7 +4770,9 @@
         "diacritic": "ી",
         "svg": "svgs/barakhadi/34_gy/3_gyee.svg",
         "audio_ios": "audio/barakhadi/34_gy/3_gyee.mp3",
-        "audio_android": "audio_34_gy_3_gyee.mp3"
+        "audio_android": "audio_34_gy_3_gyee.mp3",
+        "total_length": 680.3328154748846,
+        "groups": 2
       },
       {
         "id": 4,
@@ -3957,7 +4781,9 @@
         "diacritic": "ુ",
         "svg": "svgs/barakhadi/34_gy/4_gyu.svg",
         "audio_ios": "audio/barakhadi/34_gy/4_gyu.mp3",
-        "audio_android": "audio_34_gy_4_gyu.mp3"
+        "audio_android": "audio_34_gy_4_gyu.mp3",
+        "total_length": 586.4638673352678,
+        "groups": 2
       },
       {
         "id": 5,
@@ -3966,7 +4792,9 @@
         "diacritic": "ૂ",
         "svg": "svgs/barakhadi/34_gy/5_gyoo.svg",
         "audio_ios": "audio/barakhadi/34_gy/5_gyoo.mp3",
-        "audio_android": "audio_34_gy_5_gyoo.mp3"
+        "audio_android": "audio_34_gy_5_gyoo.mp3",
+        "total_length": 589.8278459104629,
+        "groups": 2
       },
       {
         "id": 6,
@@ -3975,7 +4803,9 @@
         "diacritic": "ે",
         "svg": "svgs/barakhadi/34_gy/6_gye.svg",
         "audio_ios": "audio/barakhadi/34_gy/6_gye.mp3",
-        "audio_android": "audio_34_gy_6_gye.mp3"
+        "audio_android": "audio_34_gy_6_gye.mp3",
+        "total_length": 507.71131342448894,
+        "groups": 2
       },
       {
         "id": 7,
@@ -3984,7 +4814,9 @@
         "diacritic": "ૈ",
         "svg": "svgs/barakhadi/34_gy/7_gyai.svg",
         "audio_ios": "audio/barakhadi/34_gy/7_gyai.mp3",
-        "audio_android": "audio_34_gy_7_gyai.mp3"
+        "audio_android": "audio_34_gy_7_gyai.mp3",
+        "total_length": 575.004775840546,
+        "groups": 3
       },
       {
         "id": 8,
@@ -3993,7 +4825,9 @@
         "diacritic": "ો",
         "svg": "svgs/barakhadi/34_gy/8_gyo.svg",
         "audio_ios": "audio/barakhadi/34_gy/8_gyo.mp3",
-        "audio_android": "audio_34_gy_8_gyo.mp3"
+        "audio_android": "audio_34_gy_8_gyo.mp3",
+        "total_length": 649.1896746937774,
+        "groups": 3
       },
       {
         "id": 9,
@@ -4002,7 +4836,9 @@
         "diacritic": "ૌ",
         "svg": "svgs/barakhadi/34_gy/9_gyau.svg",
         "audio_ios": "audio/barakhadi/34_gy/9_gyau.mp3",
-        "audio_android": "audio_34_gy_9_gyau.mp3"
+        "audio_android": "audio_34_gy_9_gyau.mp3",
+        "total_length": 716.4831371098346,
+        "groups": 4
       },
       {
         "id": 10,
@@ -4011,7 +4847,9 @@
         "diacritic": "ં",
         "svg": "svgs/barakhadi/34_gy/10_gyam.svg",
         "audio_ios": "audio/barakhadi/34_gy/10_gyam.mp3",
-        "audio_android": "audio_34_gy_10_gyam.mp3"
+        "audio_android": "audio_34_gy_10_gyam.mp3",
+        "total_length": 448.5387359165411,
+        "groups": 2
       },
       {
         "id": 11,
@@ -4020,7 +4858,9 @@
         "diacritic": "ઃ",
         "svg": "svgs/barakhadi/34_gy/11_gyah.svg",
         "audio_ios": "audio/barakhadi/34_gy/11_gyah.mp3",
-        "audio_android": "audio_34_gy_11_gyah.mp3"
+        "audio_android": "audio_34_gy_11_gyah.mp3",
+        "total_length": 481.10767718662356,
+        "groups": 3
       }
     ]
   }

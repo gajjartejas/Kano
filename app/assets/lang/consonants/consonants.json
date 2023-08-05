@@ -5,7 +5,9 @@
     "en": "Ka",
     "svg": "svgs/barakhadi/1_k/0_k.svg",
     "audio_ios": "audio/barakhadi/1_k/0_k.mp3",
-    "audio_android": "audio_1_k_0_k.mp3"
+    "audio_android": "audio_1_k_0_k.mp3",
+    "total_length": 325.8909403214536,
+    "groups": 1
   },
   {
     "id": 2,
@@ -13,7 +15,9 @@
     "en": "Kha",
     "svg": "svgs/barakhadi/2_kh/0_kh.svg",
     "audio_ios": "audio/barakhadi/2_kh/0_kh.mp3",
-    "audio_android": "audio_2_kh_0_kh.mp3"
+    "audio_android": "audio_2_kh_0_kh.mp3",
+    "total_length": 355.2332018251525,
+    "groups": 1
   },
   {
     "id": 3,
@@ -21,7 +25,9 @@
     "en": "Ga",
     "svg": "svgs/barakhadi/3_g/0_g.svg",
     "audio_ios": "audio/barakhadi/3_g/0_g.mp3",
-    "audio_android": "audio_3_g_0_g.mp3"
+    "audio_android": "audio_3_g_0_g.mp3",
+    "total_length": 0,
+    "groups": 1
   },
   {
     "id": 4,
@@ -29,7 +35,9 @@
     "en": "Gha",
     "svg": "svgs/barakhadi/4_gh/0_gh.svg",
     "audio_ios": "audio/barakhadi/4_gh/0_gh.mp3",
-    "audio_android": "audio_4_gh_0_gh.mp3"
+    "audio_android": "audio_4_gh_0_gh.mp3",
+    "total_length": 357.47990658006756,
+    "groups": 1
   },
   {
     "id": 5,
@@ -37,7 +45,9 @@
     "en": "Cha",
     "svg": "svgs/barakhadi/5_ch/0_ch.svg",
     "audio_ios": "audio/barakhadi/5_ch/0_ch.mp3",
-    "audio_android": "audio_5_ch_0_ch.mp3"
+    "audio_android": "audio_5_ch_0_ch.mp3",
+    "total_length": 360.187345259573,
+    "groups": 1
   },
   {
     "id": 6,
@@ -45,7 +55,9 @@
     "en": "Chha",
     "svg": "svgs/barakhadi/6_chha/0_chha.svg",
     "audio_ios": "audio/barakhadi/6_chha/0_chha.mp3",
-    "audio_android": "audio_6_chha_0_chha.mp3"
+    "audio_android": "audio_6_chha_0_chha.mp3",
+    "total_length": 472.27417532323756,
+    "groups": 1
   },
   {
     "id": 7,
@@ -53,7 +65,9 @@
     "en": "Ja",
     "svg": "svgs/barakhadi/7_j/0_j.svg",
     "audio_ios": "audio/barakhadi/7_j/0_j.mp3",
-    "audio_android": "audio_7_j_0_j.mp3"
+    "audio_android": "audio_7_j_0_j.mp3",
+    "total_length": 476.1874324973391,
+    "groups": 1
   },
   {
     "id": 8,
@@ -61,7 +75,9 @@
     "en": "Za",
     "svg": "svgs/barakhadi/8_jh/0_jh.svg",
     "audio_ios": "audio/barakhadi/8_jh/0_jh.mp3",
-    "audio_android": "audio_8_jh_0_jh.mp3"
+    "audio_android": "audio_8_jh_0_jh.mp3",
+    "total_length": 365.258756090612,
+    "groups": 1
   },
   {
     "id": 9,
@@ -69,7 +85,9 @@
     "en": "Ta",
     "svg": "svgs/barakhadi/9_t/0_t.svg",
     "audio_ios": "audio/barakhadi/9_t/0_t.mp3",
-    "audio_android": "audio_9_t_0_t.mp3"
+    "audio_android": "audio_9_t_0_t.mp3",
+    "total_length": 251.7823821827207,
+    "groups": 1
   },
   {
     "id": 10,
@@ -77,7 +95,9 @@
     "en": "Tha",
     "svg": "svgs/barakhadi/10_th/0_th.svg",
     "audio_ios": "audio/barakhadi/10_th/0_th.mp3",
-    "audio_android": "audio_10_th_0_th.mp3"
+    "audio_android": "audio_10_th_0_th.mp3",
+    "total_length": 301.6331713669613,
+    "groups": 1
   },
   {
     "id": 11,
@@ -85,7 +105,9 @@
     "en": "Da",
     "svg": "svgs/barakhadi/11_d/0_d.svg",
     "audio_ios": "audio/barakhadi/11_d/0_d.mp3",
-    "audio_android": "audio_11_d_0_d.mp3"
+    "audio_android": "audio_11_d_0_d.mp3",
+    "total_length": 253.5500779852662,
+    "groups": 1
   },
   {
     "id": 12,
@@ -93,7 +115,9 @@
     "en": "Dha",
     "svg": "svgs/barakhadi/12_dh/0_dh.svg",
     "audio_ios": "audio/barakhadi/12_dh/0_dh.mp3",
-    "audio_android": "audio_12_dh_0_dh.mp3"
+    "audio_android": "audio_12_dh_0_dh.mp3",
+    "total_length": 340.69632898980694,
+    "groups": 1
   },
   {
     "id": 13,
@@ -101,7 +125,9 @@
     "en": "Na",
     "svg": "svgs/barakhadi/13_n/0_n.svg",
     "audio_ios": "audio/barakhadi/13_n/0_n.mp3",
-    "audio_android": "audio_13_n_0_n.mp3"
+    "audio_android": "audio_13_n_0_n.mp3",
+    "total_length": 499.8947300096013,
+    "groups": 1
   },
   {
     "id": 14,
@@ -109,7 +135,9 @@
     "en": "Ta",
     "svg": "svgs/barakhadi/14_t/0_t.svg",
     "audio_ios": "audio/barakhadi/14_t/0_t.mp3",
-    "audio_android": "audio_14_t_0_t.mp3"
+    "audio_android": "audio_14_t_0_t.mp3",
+    "total_length": 279.6047462237022,
+    "groups": 1
   },
   {
     "id": 15,
@@ -117,7 +145,9 @@
     "en": "Tha",
     "svg": "svgs/barakhadi/15_th/0_th.svg",
     "audio_ios": "audio/barakhadi/15_th/0_th.mp3",
-    "audio_android": "audio_15_th_0_th.mp3"
+    "audio_android": "audio_15_th_0_th.mp3",
+    "total_length": 367.645041218915,
+    "groups": 1
   },
   {
     "id": 16,
@@ -125,7 +155,9 @@
     "en": "Da",
     "svg": "svgs/barakhadi/16_d/0_d.svg",
     "audio_ios": "audio/barakhadi/16_d/0_d.mp3",
-    "audio_android": "audio_16_d_0_d.mp3"
+    "audio_android": "audio_16_d_0_d.mp3",
+    "total_length": 275.28344401884823,
+    "groups": 1
   },
   {
     "id": 17,
@@ -133,7 +165,9 @@
     "en": "Dha",
     "svg": "svgs/barakhadi/17_dh/0_dh.svg",
     "audio_ios": "audio/barakhadi/17_dh/0_dh.mp3",
-    "audio_android": "audio_17_dh_0_dh.mp3"
+    "audio_android": "audio_17_dh_0_dh.mp3",
+    "total_length": 342.1364584091714,
+    "groups": 1
   },
   {
     "id": 18,
@@ -141,7 +175,9 @@
     "en": "Na",
     "svg": "svgs/barakhadi/18_n/0_n.svg",
     "audio_ios": "audio/barakhadi/18_n/0_n.mp3",
-    "audio_android": "audio_18_n_0_n.mp3"
+    "audio_android": "audio_18_n_0_n.mp3",
+    "total_length": 222.27444110936756,
+    "groups": 1
   },
   {
     "id": 19,
@@ -149,7 +185,9 @@
     "en": "Pa",
     "svg": "svgs/barakhadi/19_p/0_p.svg",
     "audio_ios": "audio/barakhadi/19_p/0_p.mp3",
-    "audio_android": "audio_19_p_0_p.mp3"
+    "audio_android": "audio_19_p_0_p.mp3",
+    "total_length": 277.47736781704555,
+    "groups": 1
   },
   {
     "id": 20,
@@ -157,7 +195,9 @@
     "en": "Pha / Fa",
     "svg": "svgs/barakhadi/20_f/0_f.svg",
     "audio_ios": "audio/barakhadi/20_f/0_f.mp3",
-    "audio_android": "audio_20_f_0_f.mp3"
+    "audio_android": "audio_20_f_0_f.mp3",
+    "total_length": 378.20877872543093,
+    "groups": 1
   },
   {
     "id": 21,
@@ -165,7 +205,9 @@
     "en": "Ba",
     "svg": "svgs/barakhadi/21_b/0_b.svg",
     "audio_ios": "audio/barakhadi/21_b/0_b.mp3",
-    "audio_android": "audio_21_b_0_b.mp3"
+    "audio_android": "audio_21_b_0_b.mp3",
+    "total_length": 360.32690690662355,
+    "groups": 1
   },
   {
     "id": 22,
@@ -173,7 +215,9 @@
     "en": "Bha",
     "svg": "svgs/barakhadi/22_bh/0_bh.svg",
     "audio_ios": "audio/barakhadi/22_bh/0_bh.mp3",
-    "audio_android": "audio_22_bh_0_bh.mp3"
+    "audio_android": "audio_22_bh_0_bh.mp3",
+    "total_length": 412.40312629735513,
+    "groups": 1
   },
   {
     "id": 23,
@@ -181,7 +225,9 @@
     "en": "Ma",
     "svg": "svgs/barakhadi/23_m/0_m.svg",
     "audio_ios": "audio/barakhadi/23_m/0_m.mp3",
-    "audio_android": "audio_23_m_0_m.mp3"
+    "audio_android": "audio_23_m_0_m.mp3",
+    "total_length": 289.96109312525294,
+    "groups": 1
   },
   {
     "id": 24,
@@ -189,7 +235,9 @@
     "en": "Ya",
     "svg": "svgs/barakhadi/24_y/0_y.svg",
     "audio_ios": "audio/barakhadi/24_y/0_y.mp3",
-    "audio_android": "audio_24_y_0_y.mp3"
+    "audio_android": "audio_24_y_0_y.mp3",
+    "total_length": 313.1272284507955,
+    "groups": 1
   },
   {
     "id": 25,
@@ -197,7 +245,9 @@
     "en": "Ra",
     "svg": "svgs/barakhadi/25_r/0_r.svg",
     "audio_ios": "audio/barakhadi/25_r/0_r.mp3",
-    "audio_android": "audio_25_r_0_r.mp3"
+    "audio_android": "audio_25_r_0_r.mp3",
+    "total_length": 244.09586297539244,
+    "groups": 1
   },
   {
     "id": 26,
@@ -205,7 +255,9 @@
     "en": "La",
     "svg": "svgs/barakhadi/26_l/0_l.svg",
     "audio_ios": "audio/barakhadi/26_l/0_l.mp3",
-    "audio_android": "audio_26_l_0_l.mp3"
+    "audio_android": "audio_26_l_0_l.mp3",
+    "total_length": 363.296184241184,
+    "groups": 1
   },
   {
     "id": 27,
@@ -213,7 +265,9 @@
     "en": "Va",
     "svg": "svgs/barakhadi/27_v/0_v.svg",
     "audio_ios": "audio/barakhadi/27_v/0_v.mp3",
-    "audio_android": "audio_27_v_0_v.mp3"
+    "audio_android": "audio_27_v_0_v.mp3",
+    "total_length": 301.31660370589316,
+    "groups": 1
   },
   {
     "id": 28,
@@ -221,7 +275,9 @@
     "en": "Sha",
     "svg": "svgs/barakhadi/28_sh/0_sh.svg",
     "audio_ios": "audio/barakhadi/28_sh/0_sh.mp3",
-    "audio_android": "audio_28_sh_0_sh.mp3"
+    "audio_android": "audio_28_sh_0_sh.mp3",
+    "total_length": 422.1887564035753,
+    "groups": 1
   },
   {
     "id": 29,
@@ -229,7 +285,9 @@
     "en": "Sha",
     "svg": "svgs/barakhadi/29_sh/0_sh.svg",
     "audio_ios": "audio/barakhadi/29_sh/0_sh.mp3",
-    "audio_android": "audio_29_sh_0_sh.mp3"
+    "audio_android": "audio_29_sh_0_sh.mp3",
+    "total_length": 338.5782988663452,
+    "groups": 1
   },
   {
     "id": 30,
@@ -237,7 +295,9 @@
     "en": "Sa",
     "svg": "svgs/barakhadi/30_s/0_s.svg",
     "audio_ios": "audio/barakhadi/30_s/0_s.mp3",
-    "audio_android": "audio_30_s_0_s.mp3"
+    "audio_android": "audio_30_s_0_s.mp3",
+    "total_length": 408.1302838793714,
+    "groups": 1
   },
   {
     "id": 31,
@@ -245,7 +305,9 @@
     "en": "Ha",
     "svg": "svgs/barakhadi/31_h/0_h.svg",
     "audio_ios": "audio/barakhadi/31_h/0_h.mp3",
-    "audio_android": "audio_31_h_0_h.mp3"
+    "audio_android": "audio_31_h_0_h.mp3",
+    "total_length": 389.3338552322975,
+    "groups": 1
   },
   {
     "id": 32,
@@ -253,7 +315,9 @@
     "en": "La",
     "svg": "svgs/barakhadi/32_l/0_l.svg",
     "audio_ios": "audio/barakhadi/32_l/0_l.mp3",
-    "audio_android": "audio_32_l_0_l.mp3"
+    "audio_android": "audio_32_l_0_l.mp3",
+    "total_length": 375.01425136038944,
+    "groups": 1
   },
   {
     "id": 33,
@@ -261,7 +325,9 @@
     "en": "Ksha / Xa",
     "svg": "svgs/barakhadi/33_x/0_x.svg",
     "audio_ios": "audio/barakhadi/33_x/0_x.mp3",
-    "audio_android": "audio_33_x_0_x.mp3"
+    "audio_android": "audio_33_x_0_x.mp3",
+    "total_length": 467.2063783171594,
+    "groups": 1
   },
   {
     "id": 34,
@@ -269,6 +335,8 @@
     "en": "Gna",
     "svg": "svgs/barakhadi/34_gy/0_gy.svg",
     "audio_ios": "audio/barakhadi/34_gy/0_gy_mp3",
-    "audio_android": "audio_34_gy_0_gy.mp3"
+    "audio_android": "audio_34_gy_0_gy.mp3",
+    "total_length": 419.3536555532116,
+    "groups": 1
   }
 ]
