@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { FlatList, useWindowDimensions, View } from 'react-native';
 
 //ThirdParty
@@ -13,6 +13,8 @@ import { ICharCellItem } from 'app/components/CharCellItem';
 import styles from './styles';
 import { LoggedInTabNavigatorParams } from 'app/navigation/types';
 import useSoundPlayer from 'app/hooks/useAudioPlayer';
+import useHintConfig from 'app/hooks/useHintConfig';
+import useToastMessages from 'app/hooks/useToastMessages';
 
 //Params
 type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'LearnCharInfo'>;
@@ -30,6 +32,8 @@ const LearnCharInfo = ({ navigation, route }: Props) => {
   const { index: initialScrollIndex, sectionIndex, groupedEntries, color } = route.params;
   const insets = useSafeAreaInsets();
   const player = useSoundPlayer();
+  const [, , chartHints] = useHintConfig();
+  useToastMessages(chartHints);
 
   //States
   const [, setCurrentIndex] = useState(initialScrollIndex);
@@ -38,9 +42,12 @@ const LearnCharInfo = ({ navigation, route }: Props) => {
     setCurrentIndex(initialScrollIndex);
   }, [initialScrollIndex]);
 
-  const onPressPlaySound = (item: ICharCellItem, _index: number) => {
-    player.play(item.audio);
-  };
+  const onPressPlaySound = useCallback(
+    (item: ICharCellItem, _index: number) => {
+      player.play(item.audio);
+    },
+    [player],
+  );
 
   const renderItem = ({ item, index }: { item: ICharCellItem; index: number }) => {
     return (
@@ -54,25 +61,32 @@ const LearnCharInfo = ({ navigation, route }: Props) => {
     );
   };
 
-  const onPressViewAnimatedDrawing = (item: ICharCellItem, _index: number) => {
-    navigation.navigate('LearnCharAnimatedDrawing', { svgPath: item.svg });
-  };
+  const onPressViewAnimatedDrawing = useCallback(
+    (item: ICharCellItem, _index: number) => {
+      navigation.navigate('LearnCharAnimatedDrawing', { svgPath: item.svg });
+    },
+    [navigation],
+  );
 
-  const onPressStrokeOrder = (item: ICharCellItem, _index: number) => {
-    navigation.navigate('LearnCharStrokeOrder', { svgPath: item.svg });
-  };
+  const onPressStrokeOrder = useCallback(
+    (item: ICharCellItem, _index: number) => {
+      navigation.navigate('LearnCharStrokeOrder', { svgPath: item.svg });
+    },
+    [navigation],
+  );
 
-  const onGoBack = () => {
+  const onGoBack = useCallback(() => {
     navigation.pop();
-  };
+  }, [navigation]);
 
-  //Callbacks
-
-  const getItemLayout = (data: ArrayLike<ICharCellItem> | null | undefined, index: number) => ({
-    length: dimension.width - insets.right - insets.left,
-    offset: (dimension.width - insets.right - insets.left) * index,
-    index,
-  });
+  const getItemLayout = useCallback(
+    (data: ArrayLike<ICharCellItem> | null | undefined, index: number) => ({
+      length: dimension.width - insets.right - insets.left,
+      offset: (dimension.width - insets.right - insets.left) * index,
+      index,
+    }),
+    [dimension.width, insets.left, insets.right],
+  );
 
   return (
     <View style={[styles.container, { backgroundColor: `${color}15` }]}>

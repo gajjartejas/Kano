@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { Image, ImageBackground, Linking, Platform, ScrollView, View } from 'react-native';
 
 //ThirdParty
@@ -41,8 +41,7 @@ const MoreTab = ({ navigation }: Props) => {
 
   //State
   const [visible, setVisible] = React.useState(false);
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [aboutItems, setAboutItems] = React.useState<IMoreItem[]>([
+  const [aboutItems] = React.useState<IMoreItem[]>([
     {
       id: 0,
       iconName: 'feedback',
@@ -81,56 +80,62 @@ const MoreTab = ({ navigation }: Props) => {
     },
   ]);
 
-  const onPress = (item: IMoreItem, _index: number) => {
-    switch (item.id) {
-      case 0:
-        onPressShowDialog();
-        break;
-      case 1:
-        onPressRateApp();
-        break;
-      case 2:
-        onPressMoreApps();
-        break;
-      case 3:
-        onPressContribute();
-        break;
-      case 4:
-        onPressSettings();
-        break;
-      case 5:
-        onPressAbout();
-        break;
-    }
-  };
+  const onPressShowDialog = useCallback(() => setVisible(true), []);
+  const onPressHideDialog = useCallback(() => setVisible(false), []);
 
-  const onPressShowDialog = () => setVisible(true);
-  const onPressHideDialog = () => setVisible(false);
-
-  const onPressRateApp = () => {
-    Utils.openInAppBrowser(
+  const onPressRateApp = useCallback(async () => {
+    await Utils.openInAppBrowser(
       Platform.OS === 'android' ? Config.Constants.PLAY_STORE_URL : Config.Constants.APP_STORE_URL,
     );
-  };
+  }, []);
 
-  const onPressMoreApps = () => {
+  const onPressMoreApps = useCallback(() => {
     navigation.push('MoreApps', {});
-  };
+  }, [navigation]);
 
-  const onPressContribute = () => {
-    Utils.openInAppBrowser(Config.Constants.REPO_URL);
-  };
+  const onPressContribute = useCallback(async () => {
+    await Utils.openInAppBrowser(Config.Constants.REPO_URL);
+  }, []);
 
-  const onPressSettings = () => {
+  const onPressSettings = useCallback(() => {
     navigation.push('Settings', {});
-  };
-  const onPressAbout = () => {
+  }, [navigation]);
+
+  const onPressAbout = useCallback(() => {
     navigation.push('About', {});
-  };
-  const onPressTelegram = () => {
-    Utils.openInAppBrowser(Config.Constants.ABOUT_TELEGRAM_LINK);
-  };
-  const onPressEmail = async () => {
+  }, [navigation]);
+
+  const onPress = useCallback(
+    (item: IMoreItem, _index: number) => {
+      switch (item.id) {
+        case 0:
+          onPressShowDialog();
+          break;
+        case 1:
+          onPressRateApp();
+          break;
+        case 2:
+          onPressMoreApps();
+          break;
+        case 3:
+          onPressContribute();
+          break;
+        case 4:
+          onPressSettings();
+          break;
+        case 5:
+          onPressAbout();
+          break;
+      }
+    },
+    [onPressAbout, onPressContribute, onPressMoreApps, onPressRateApp, onPressSettings, onPressShowDialog],
+  );
+
+  const onPressTelegram = useCallback(async () => {
+    await Utils.openInAppBrowser(Config.Constants.ABOUT_TELEGRAM_LINK);
+  }, []);
+
+  const onPressEmail = useCallback(async () => {
     const email = Config.Constants.ABOUT_SUPPORT_EMAIL;
     const subject = `${t('general.appname')} feedback`;
     const osType = Platform.OS;
@@ -139,8 +144,8 @@ const MoreTab = ({ navigation }: Props) => {
     const model = DeviceInfo.getModel();
     const readableVersion = DeviceInfo.getReadableVersion();
     const body = `OS: ${osType} (${systemVersion})\nBrand: ${brand} (${model})\nApp Version: ${readableVersion}`;
-    Linking.openURL(`mailto:${email}?subject=${subject}&body=${body}`);
-  };
+    await Linking.openURL(`mailto:${email}?subject=${subject}&body=${body}`);
+  }, [t]);
 
   return (
     <Components.AppBaseView

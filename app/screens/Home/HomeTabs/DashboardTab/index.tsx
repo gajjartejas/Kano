@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { Image, ScrollView, View } from 'react-native';
 
 //ThirdParty
@@ -29,19 +29,22 @@ const DashboardTab = ({ navigation }: Props) => {
   const { t } = useTranslation();
 
   //States
-  const cardTapped = (item: IHomeListItem, index: number, sectionIndex: number) => {
-    if (sectionIndex === 0 && index === 0) {
-      navigation.push('GujaratiScriptIntro', {});
-    } else if (sectionIndex === 1 && index === 0) {
-      navigation.push('LearnCharsList', { type: LearnCharsType.Vowel, color: item.color });
-    } else if (sectionIndex === 1 && index === 1) {
-      navigation.push('LearnCharsList', { type: LearnCharsType.Constant, color: item.color });
-    } else if (sectionIndex === 1 && index === 2) {
-      navigation.push('LearnCharsList', { type: LearnCharsType.Barakhadi, color: item.color });
-    } else if (sectionIndex === 2 && index === 0) {
-      navigation.push('LearnCharsList', { type: LearnCharsType.Number, color: item.color });
-    }
-  };
+  const cardTapped = useCallback(
+    (item: IHomeListItem, index: number, sectionIndex: number) => {
+      if (sectionIndex === 0 && index === 0) {
+        navigation.push('GujaratiScriptIntro', {});
+      } else if (sectionIndex === 1 && index === 0) {
+        navigation.push('LearnCharsList', { type: LearnCharsType.Vowel, color: item.color });
+      } else if (sectionIndex === 1 && index === 1) {
+        navigation.push('LearnCharsList', { type: LearnCharsType.Constant, color: item.color });
+      } else if (sectionIndex === 1 && index === 2) {
+        navigation.push('LearnCharsList', { type: LearnCharsType.Barakhadi, color: item.color });
+      } else if (sectionIndex === 2 && index === 0) {
+        navigation.push('LearnCharsList', { type: LearnCharsType.Number, color: item.color });
+      }
+    },
+    [navigation],
+  );
 
   const renderItem = ({ item, index, sectionIndex }: { item: IHomeListItem; index: number; sectionIndex: number }) => {
     return (

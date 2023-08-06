@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useCallback, useRef, useState } from 'react';
 import { Platform, View } from 'react-native';
 
 //ThirdParty
@@ -37,17 +37,16 @@ const LearnCharAnimatedDrawing = ({ navigation, route }: Props) => {
     });
   }, [navigation, svgPath]);
 
-  const onGoBack = () => {
+  const onGoBack = useCallback(() => {
     navigation.pop();
-  };
+  }, [navigation]);
 
-  const onPressRepeat = () => {
-    //refAnimatedCharacter.current?.reset()
+  const onPressRepeat = useCallback(() => {
     setPlaying(false);
     setTimeout(() => {
       setPlaying(true);
     }, 100);
-  };
+  }, []);
 
   const otherProps = Platform.OS === 'ios' ? { statusBarHeight: 0 } : {};
   return (

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { View } from 'react-native';
 
 //ThirdParty
@@ -97,33 +97,36 @@ const Settings = ({ navigation }: Props) => {
     },
   ]);
 
-  const onGoBack = () => {
+  const onGoBack = useCallback(() => {
     navigation.pop();
-  };
+  }, [navigation]);
 
-  const onPress = (item: ISettingItem, _index: number) => {
-    switch (item.route) {
-      case 'Changelog':
-        Utils.openInAppBrowser(Config.Constants.CHANGE_LOG);
-        break;
+  const onPress = useCallback(
+    (item: ISettingItem, _index: number) => {
+      switch (item.route) {
+        case 'Changelog':
+          Utils.openInAppBrowser(Config.Constants.CHANGE_LOG);
+          break;
 
-      case 'Translate':
-        Utils.openInAppBrowser(Config.Constants.TRANSLATE_APP);
-        break;
+        case 'Translate':
+          Utils.openInAppBrowser(Config.Constants.TRANSLATE_APP);
+          break;
 
-      case 'FAQ':
-        Utils.openInAppBrowser(Config.Constants.FAQ);
-        break;
+        case 'FAQ':
+          Utils.openInAppBrowser(Config.Constants.FAQ);
+          break;
 
-      case 'PrivacyPolicy':
-        Utils.openInAppBrowser(Config.Constants.PRIVACY_POLICY);
-        break;
+        case 'PrivacyPolicy':
+          Utils.openInAppBrowser(Config.Constants.PRIVACY_POLICY);
+          break;
 
-      default:
-        // @ts-ignore
-        navigation.push(item.route, {});
-    }
-  };
+        default:
+          // @ts-ignore
+          navigation.push(item.route, {});
+      }
+    },
+    [navigation],
+  );
 
   return (
     <View style={[styles.container, { backgroundColor: colors.background }]}>

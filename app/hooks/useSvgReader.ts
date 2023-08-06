@@ -40,45 +40,7 @@ const useSvgReader = () => {
   const [parsedSvg, setParsedSvg] = useState<IParsedSVG>();
   const [error, setError] = useState<Error | null>();
 
-  const readSvgSilently = useCallback((path: string): Promise<IParsedSVG> => {
-    return new Promise((resolve, reject) => {
-      if (Platform.OS === 'ios') {
-        RNFS.readFile(`${RNFS.MainBundlePath}/${path}`)
-          .then((res: string) => {
-            let parsedSVGText = parseSvgText(res);
-            resolve(parsedSVGText);
-          })
-          .catch((e: Error) => {
-            reject(e);
-          });
-      } else if (Platform.OS === 'android') {
-        RNFS.readFileAssets(`${path}`)
-          .then((res: string) => {
-            let parsedSVGText = parseSvgText(res);
-            resolve(parsedSVGText);
-          })
-          .catch((e: Error) => {
-            reject(e);
-          });
-      }
-    });
-  }, []);
-
-  const readSvg = useCallback(
-    (path: string) => {
-      readSvgSilently(path)
-        .then(svg => {
-          setParsedSvg(svg);
-        })
-        .catch((e: Error) => {
-          console.log('readSvg', e);
-          setError(e);
-        });
-    },
-    [readSvgSilently],
-  );
-
-  const parseSvgText = (text: string): IParsedSVG => {
+  const parseSvgText = useCallback((text: string): IParsedSVG => {
     const doc = new DOMParser().parseFromString(text, 'text/xml');
     const groups = doc.getElementsByTagName('g');
 
@@ -134,7 +96,49 @@ const useSvgReader = () => {
       groups: svgGroups,
       totalLength: totalLength,
     };
-  };
+  }, []);
+
+  const readSvgSilently = useCallback(
+    (path: string): Promise<IParsedSVG> => {
+      return new Promise((resolve, reject) => {
+        if (Platform.OS === 'ios') {
+          RNFS.readFile(`${RNFS.MainBundlePath}/${path}`)
+            .then((res: string) => {
+              let parsedSVGText = parseSvgText(res);
+              resolve(parsedSVGText);
+            })
+            .catch((e: Error) => {
+              reject(e);
+            });
+        } else if (Platform.OS === 'android') {
+          RNFS.readFileAssets(`${path}`)
+            .then((res: string) => {
+              let parsedSVGText = parseSvgText(res);
+              resolve(parsedSVGText);
+            })
+            .catch((e: Error) => {
+              reject(e);
+            });
+        }
+      });
+    },
+    [parseSvgText],
+  );
+
+  const readSvg = useCallback(
+    (path: string) => {
+      readSvgSilently(path)
+        .then(svg => {
+          setParsedSvg(svg);
+        })
+        .catch((e: Error) => {
+          console.log('readSvg Error:', e);
+          setError(e);
+        });
+    },
+    [readSvgSilently],
+  );
+
   return { parsedSvg, error, readSvg, readSvgSilently, parseSvgText };
 };
 

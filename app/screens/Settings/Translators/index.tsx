@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { FlatList, Image, View } from 'react-native';
 
 //ThirdParty
@@ -71,11 +71,9 @@ const Translators = ({ navigation }: Props) => {
     setFinalLicense(languages);
   }, []);
 
-  const onGoBack = () => {
+  const onGoBack = useCallback(() => {
     navigation.pop();
-  };
-
-  useEffect(() => {}, []);
+  }, [navigation]);
 
   const renderItem = ({ item, index }: { item: ITranslator; index: number }) => {
     return (

@@ -110,4 +110,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default memo(LearnCharInfoItemCell, () => false);
+export default memo(LearnCharInfoItemCell, (o, n) => o.item.id === n.item.id);

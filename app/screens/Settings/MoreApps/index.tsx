@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { Linking, View } from 'react-native';
 
 //ThirdParty
@@ -54,11 +54,11 @@ const MoreApps = ({ navigation }: Props) => {
     },
   ]);
 
-  const onGoBack = () => {
+  const onGoBack = useCallback(() => {
     navigation.pop();
-  };
+  }, [navigation]);
 
-  const onPressGithub = (item: IMoreAppItem, _index: number) => {
+  const onPressGithub = useCallback((item: IMoreAppItem, _index: number) => {
     switch (item.id) {
       case 0:
         break;
@@ -68,9 +68,9 @@ const MoreApps = ({ navigation }: Props) => {
         }
         break;
     }
-  };
+  }, []);
 
-  const onPressPlayStore = (item: IMoreAppItem, _index: number) => {
+  const onPressPlayStore = useCallback((item: IMoreAppItem, _index: number) => {
     switch (item.id) {
       case 0:
         break;
@@ -82,7 +82,7 @@ const MoreApps = ({ navigation }: Props) => {
         }
         break;
     }
-  };
+  }, []);
 
   return (
     <View style={[styles.container, { backgroundColor: colors.background }]}>

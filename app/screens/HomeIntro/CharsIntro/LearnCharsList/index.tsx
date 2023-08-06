@@ -23,14 +23,14 @@ const LearnCharsList = ({ navigation, route }: Props) => {
 
   //Constants
   const { colors } = useTheme();
-  const { type, color } = route.params;
+  const { type } = route.params;
   const groupedEntries = Hooks.useCharListItemForType(type);
   const { t } = useTranslation();
 
   //States
   const [title, setTitle] = useState('');
 
-  const configInterface = useCallback(() => {
+  useEffect(() => {
     switch (type) {
       case LearnCharsType.Vowel:
         setTitle(t('learnCharsListScreen.header.titleVowels'));
@@ -38,60 +38,57 @@ const LearnCharsList = ({ navigation, route }: Props) => {
 
       case LearnCharsType.Constant:
         setTitle(t('learnCharsListScreen.header.titleConsonants'));
-
         break;
 
       case LearnCharsType.Barakhadi:
         setTitle(t('learnCharsListScreen.header.titleBarakhadi'));
-
         break;
 
       case LearnCharsType.Number:
         setTitle(t('learnCharsListScreen.header.titleNumerals'));
-
         break;
+
       default:
         break;
     }
   }, [t, type]);
 
-  useEffect(() => {
-    configInterface();
-  }, [configInterface]);
-
-  const cardTapped = (item: ICharListItem, index: number, sectionIndex: number) => {
-    if (sectionIndex === 0 && index === 0) {
-      navigation.push('LearnCharsChart', { type, color: item.color });
-    } else if (sectionIndex === 0 && index === 1) {
-      navigation.push('LearnCharsCard', {
-        type,
-        learnMode: LearnCharsMode.Learn,
-        isRandomMode: false,
-        color: item.color,
-      });
-    } else if (sectionIndex === 0 && index === 2) {
-      navigation.push('LearnBySelectedChar', {
-        type,
-        learnMode: LearnCharsMode.Learn,
-        isRandomMode: false,
-        color: item.color,
-      });
-    } else if (sectionIndex === 1 && index === 0) {
-      navigation.push('LearnCharsCard', {
-        type,
-        learnMode: LearnCharsMode.Practice,
-        isRandomMode: false,
-        color: item.color,
-      });
-    } else if (sectionIndex === 1 && index === 1) {
-      navigation.push('LearnBySelectedChar', {
-        type,
-        learnMode: LearnCharsMode.Practice,
-        isRandomMode: false,
-        color: item.color,
-      });
-    }
-  };
+  const cardTapped = useCallback(
+    (item: ICharListItem, index: number, sectionIndex: number) => {
+      if (sectionIndex === 0 && index === 0) {
+        navigation.push('LearnCharsChart', { type, color: item.color });
+      } else if (sectionIndex === 0 && index === 1) {
+        navigation.push('LearnCharsCard', {
+          type,
+          learnMode: LearnCharsMode.Learn,
+          isRandomMode: false,
+          color: item.color,
+        });
+      } else if (sectionIndex === 0 && index === 2) {
+        navigation.push('LearnBySelectedChar', {
+          type,
+          learnMode: LearnCharsMode.Learn,
+          isRandomMode: false,
+          color: item.color,
+        });
+      } else if (sectionIndex === 1 && index === 0) {
+        navigation.push('LearnCharsCard', {
+          type,
+          learnMode: LearnCharsMode.Practice,
+          isRandomMode: false,
+          color: item.color,
+        });
+      } else if (sectionIndex === 1 && index === 1) {
+        navigation.push('LearnBySelectedChar', {
+          type,
+          learnMode: LearnCharsMode.Practice,
+          isRandomMode: false,
+          color: item.color,
+        });
+      }
+    },
+    [navigation, type],
+  );
 
   const renderItem = ({ item, index, sectionIndex }: { item: ICharListItem; index: number; sectionIndex: number }) => {
     return (
@@ -105,15 +102,15 @@ const LearnCharsList = ({ navigation, route }: Props) => {
     );
   };
 
-  const onGoBack = () => {
+  const onGoBack = useCallback(() => {
     navigation.pop();
-  };
+  }, [navigation]);
 
   return (
-    <View style={[styles.container, { backgroundColor: `${color}15` }]}>
+    <View style={[styles.container, { backgroundColor: colors.background }]}>
       <Appbar.Header style={{ backgroundColor: colors.background }}>
         <Appbar.BackAction onPress={onGoBack} />
-        <Appbar.Content title={title} subtitle="" />
+        <Appbar.Content title={title} />
       </Appbar.Header>
       <Components.AppBaseView edges={['bottom', 'left', 'right']} style={styles.safeArea}>
         <ScrollView style={styles.scrollView}>

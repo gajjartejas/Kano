@@ -112,5 +112,5 @@ const styles = StyleSheet.create({
 });
 
 export default memo(CharCellItem, (p, n) => {
-  return p.selected === n.selected && p.index === n.index && p.sectionIndex === n.sectionIndex;
+  return p.selected === n.selected && p.item.id === n.item.id;
 });

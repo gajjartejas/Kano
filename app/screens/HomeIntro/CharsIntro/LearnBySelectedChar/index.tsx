@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback, useRef } from 'react';
+import React, { useEffect, useState, useRef, useCallback } from 'react';
 import { View, useWindowDimensions, Platform } from 'react-native';
 
 //ThirdParty
@@ -39,7 +39,7 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
   const [numberOfColumns, setNumberOfColumns] = useState<number | null>(null);
   const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set([]));
 
-  const configInterface = useCallback(() => {
+  useEffect(() => {
     switch (type) {
       case LearnCharsType.Vowel:
         setNumberOfColumns(3);
@@ -47,12 +47,10 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
 
       case LearnCharsType.Constant:
         setNumberOfColumns(5);
-
         break;
 
       case LearnCharsType.Barakhadi:
         setNumberOfColumns(6);
-
         break;
 
       case LearnCharsType.Number:
@@ -65,14 +63,10 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
   }, [type]);
 
   useEffect(() => {
-    configInterface();
-  }, [configInterface]);
-
-  useEffect(() => {
     refSelectedIds.current = selectedIds;
   }, [selectedIds]);
 
-  const cardTapped = (item: ISelectCharCellItem, index: number, sectionIndex: number) => {
+  const cardTapped = useCallback((item: ISelectCharCellItem, index: number, sectionIndex: number) => {
     const newSelectedIds = new Set(refSelectedIds.current);
     if (newSelectedIds.has(`${index}-${sectionIndex}`)) {
       newSelectedIds.delete(`${index}-${sectionIndex}`);
@@ -80,7 +74,7 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
       newSelectedIds.add(`${index}-${sectionIndex}`);
     }
     setSelectedIds(newSelectedIds);
-  };
+  }, []);
 
   const renderItem = (item: ISelectCharCellItem, index: number, sectionIndex: number) => {
     return (
@@ -116,38 +110,66 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
     }
   };
 
-  const onGoBack = () => {
+  const onGoBack = useCallback(() => {
     navigation.pop();
-  };
+  }, [navigation]);
 
-  const renderSectionHeader = (titleText: string, index: number) => {
-    if (!titleText || titleText.length < 1) {
-      return null;
-    }
-    let allSelected = true;
-    let sectionIndex = index / 2;
-    let x = mappedGroupedEntries[index + 1] as ISelectCharCellItem[];
-    for (let i = 0; i < x.length; i++) {
-      if (!selectedIds.has(`${i}-${sectionIndex}`)) {
-        allSelected = false;
+  const onSelectCheckbox = useCallback(
+    (index: number) => {
+      let sectionIndex = index / 2;
+      let x = mappedGroupedEntries[index + 1] as ISelectCharCellItem[];
+      let newSelectedIds = new Set(refSelectedIds.current);
+
+      let allSelected = true;
+      for (let i = 0; i < x.length; i++) {
+        if (!newSelectedIds.has(`${i}-${sectionIndex}`)) {
+          allSelected = false;
+        }
       }
-    }
-    return (
-      <View style={styles.listHeaderView}>
-        <Text style={[styles.listHeaderText, { color: colors.textTitle }]}>{titleText}</Text>
-        <Chip
-          selectedColor={allSelected ? colors.white : colors.primary}
-          style={[styles.chipStyle, { backgroundColor: allSelected ? colors.primary : colors.white }]}
-          textStyle={[styles.chipText, { color: allSelected ? colors.white : colors.primary }]}
-          icon={allSelected ? 'check-circle' : 'check-circle-outline'}
-          onPress={() => onSelectCheckbox(index)}>
-          {allSelected ? t('learnBySelectedChar.unselectAll') : t('learnBySelectedChar.selectAll')}
-        </Chip>
-      </View>
-    );
-  };
 
-  const onPressContinue = () => {
+      for (let i = 0; i < x.length; i++) {
+        if (allSelected) {
+          newSelectedIds.delete(`${i}-${sectionIndex}`);
+        } else {
+          newSelectedIds.add(`${i}-${sectionIndex}`);
+        }
+      }
+      setSelectedIds(newSelectedIds);
+    },
+    [mappedGroupedEntries],
+  );
+
+  const renderSectionHeader = useCallback(
+    (titleText: string, index: number) => {
+      if (!titleText || titleText.length < 1) {
+        return null;
+      }
+      let allSelected = true;
+      let sectionIndex = index / 2;
+      let x = mappedGroupedEntries[index + 1] as ISelectCharCellItem[];
+      for (let i = 0; i < x.length; i++) {
+        if (!selectedIds.has(`${i}-${sectionIndex}`)) {
+          allSelected = false;
+        }
+      }
+      return (
+        <View style={styles.listHeaderView}>
+          <Text style={[styles.listHeaderText, { color: colors.textTitle }]}>{titleText}</Text>
+          <Chip
+            selectedColor={allSelected ? colors.white : colors.primary}
+            style={[styles.chipStyle, { backgroundColor: allSelected ? colors.primary : colors.white }]}
+            textStyle={[styles.chipText, { color: allSelected ? colors.white : colors.primary }]}
+            icon={allSelected ? 'check-circle' : 'check-circle-outline'}
+            onPress={() => onSelectCheckbox(index)}>
+            {allSelected ? t('learnBySelectedChar.unselectAll') : t('learnBySelectedChar.selectAll')}
+          </Chip>
+        </View>
+      );
+    },
+    [colors.primary, colors.textTitle, colors.white, mappedGroupedEntries, onSelectCheckbox, selectedIds, t],
+  );
+
+  const onPressContinue = useCallback(() => {
     navigation.pop();
     setTimeout(() => {
       navigation.navigate('LearnCharsCard', {
@@ -158,29 +180,7 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
         color: color,
       });
     }, 500);
-  };
-
-  const onSelectCheckbox = (index: number) => {
-    let sectionIndex = index / 2;
-    let x = mappedGroupedEntries[index + 1] as ISelectCharCellItem[];
-    let newSelectedIds = new Set(refSelectedIds.current);
-
-    let allSelected = true;
-    for (let i = 0; i < x.length; i++) {
-      if (!newSelectedIds.has(`${i}-${sectionIndex}`)) {
-        allSelected = false;
-      }
-    }
-
-    for (let i = 0; i < x.length; i++) {
-      if (allSelected) {
-        newSelectedIds.delete(`${i}-${sectionIndex}`);
-      } else {
-        newSelectedIds.add(`${i}-${sectionIndex}`);
-      }
-    }
-    setSelectedIds(newSelectedIds);
-  };
+  }, [color, isRandomMode, learnMode, navigation, selectedIds, type]);
 
   const otherProps = Platform.OS === 'ios' ? { statusBarHeight: 0 } : {};
   return (
