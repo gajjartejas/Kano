@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { FlatList, InteractionManager, View } from 'react-native';
 
 //ThirdParty
@@ -38,9 +38,9 @@ const License = ({ navigation }: Props) => {
   //States
   let [finalLicense, setFinalLicense] = useState<IFinalLicense[]>([]);
 
-  const onGoBack = () => {
+  const onGoBack = useCallback(() => {
     navigation.pop();
-  };
+  }, [navigation]);
 
   //npx npm-license-crawler -onlyDirectDependencies -json licenses.json
   useEffect(() => {
@@ -73,9 +73,9 @@ const License = ({ navigation }: Props) => {
     );
   };
 
-  const onPressItem = (item: IFinalLicense, _index: number) => {
+  const onPressItem = useCallback((item: IFinalLicense, _index: number) => {
     Utils.openInAppBrowser(item.licenseSpecs.licenseUrl);
-  };
+  }, []);
 
   return (
     <View style={[styles.container, { backgroundColor: colors.background }]}>

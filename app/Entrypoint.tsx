@@ -3,14 +3,10 @@
  * Everything starts from the entrypoint
  */
 import React from 'react';
-import { Provider } from 'react-redux';
-import { ActivityIndicator, StyleSheet } from 'react-native';
-import { PersistGate } from 'redux-persist/es/integration/react';
-import configureStore from 'app/store';
+import { StyleSheet } from 'react-native';
 import { enableScreens } from 'react-native-screens';
 import './locales';
 import AppManager from 'app/components/AppManager';
-const { persistor, store } = configureStore();
 import Navigator from 'app/navigation';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
@@ -21,15 +17,11 @@ enableScreens();
 
 const Entrypoint: React.FC = () => {
   return (
-    <Provider store={store}>
-      <PersistGate loading={<ActivityIndicator />} persistor={persistor}>
-        <GestureHandlerRootView style={styles.container}>
-          <AppManager>
-            <Navigator />
-          </AppManager>
-        </GestureHandlerRootView>
-      </PersistGate>
-    </Provider>
+    <GestureHandlerRootView style={styles.container}>
+      <AppManager>
+        <Navigator />
+      </AppManager>
+    </GestureHandlerRootView>
   );
 };
 

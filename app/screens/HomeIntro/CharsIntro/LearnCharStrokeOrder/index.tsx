@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { Platform, ScrollView, useWindowDimensions, View } from 'react-native';
 
 //ThirdParty
@@ -37,9 +37,9 @@ const LearnCharStrokeOrder = ({ navigation, route }: Props) => {
     });
   }, [navigation, readSvg, svgPath]);
 
-  const onGoBack = () => {
+  const onGoBack = useCallback(() => {
     navigation.pop();
-  };
+  }, [navigation]);
 
   const otherProps = Platform.OS === 'ios' ? { statusBarHeight: 0 } : {};
   return (

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { Image, Linking, View } from 'react-native';
 
 //ThirdParty
@@ -98,31 +98,34 @@ const About = ({ navigation }: Props) => {
     },
   ]);
 
-  const onGoBack = () => {
+  const onGoBack = useCallback(() => {
     navigation.pop();
-  };
+  }, [navigation]);
 
   //
-  const onPressAboutOption = (item: ISettingSection, index: number, subItem: ISettingItem, subIndex: number) => {
-    switch (true) {
-      case index === 1 && subIndex === 0:
-        Utils.openInAppBrowser(Config.Constants.ABOUT_PORTFOLIO);
-        break;
-      case index === 1 && subIndex === 1:
-        Linking.openURL(Config.Constants.ABOUT_INSTAGRAM);
-        break;
-      case index === 1 && subIndex === 2:
-        Linking.openURL(Config.Constants.ABOUT_TELEGRAM_LINK);
-        break;
-      case index === 1 && subIndex === 3:
-        Utils.openInAppBrowser(Config.Constants.ABOUT_GITHUB);
-        break;
-      case index === 1 && subIndex === 4:
-        Linking.openURL(Config.Constants.ABOUT_TWITTER);
-        break;
-      default:
-    }
-  };
+  const onPressAboutOption = useCallback(
+    (item: ISettingSection, index: number, subItem: ISettingItem, subIndex: number) => {
+      switch (true) {
+        case index === 1 && subIndex === 0:
+          Utils.openInAppBrowser(Config.Constants.ABOUT_PORTFOLIO);
+          break;
+        case index === 1 && subIndex === 1:
+          Linking.openURL(Config.Constants.ABOUT_INSTAGRAM);
+          break;
+        case index === 1 && subIndex === 2:
+          Linking.openURL(Config.Constants.ABOUT_TELEGRAM_LINK);
+          break;
+        case index === 1 && subIndex === 3:
+          Utils.openInAppBrowser(Config.Constants.ABOUT_GITHUB);
+          break;
+        case index === 1 && subIndex === 4:
+          Linking.openURL(Config.Constants.ABOUT_TWITTER);
+          break;
+        default:
+      }
+    },
+    [],
+  );
 
   return (
     <View style={[styles.container, { backgroundColor: colors.background }]}>

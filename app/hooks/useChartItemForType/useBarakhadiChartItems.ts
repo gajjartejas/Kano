@@ -7,12 +7,13 @@ import { useTranslation } from 'react-i18next';
 import barakhadi from 'app/assets/lang/barakhadi/barakhadi.json';
 import { ICharCellItem, ICharCellListSection } from 'app/components/CharCellItem';
 import { ICharGroupInfo, ICharInfo } from 'app/models/models/char';
+import { useCallback, useMemo } from 'react';
 
 const useBarakhadiChartItems = (): ICharCellListSection[] => {
   //Constants
   const { t } = useTranslation();
 
-  const transformCharToCellVM = (charInfo: ICharInfo): ICharCellItem => {
+  const transformCharToCellVM = useCallback((charInfo: ICharInfo): ICharCellItem => {
     return {
       id: charInfo.id,
       en: charInfo.en,
@@ -23,16 +24,21 @@ const useBarakhadiChartItems = (): ICharCellListSection[] => {
       totalLength: charInfo.total_length,
       groups: charInfo.groups,
     };
-  };
+  }, []);
 
-  const transformCharsToSectionVM = (group: ICharGroupInfo): ICharCellListSection => {
-    return {
-      title: t('learnCharsChartScreen.header.barakhadi', { en: group.en, gu: group.gu }),
-      data: group.chars?.map((v: ICharInfo) => transformCharToCellVM(v)) || [],
-    };
-  };
+  const transformCharsToSectionVM = useCallback(
+    (group: ICharGroupInfo): ICharCellListSection => {
+      return {
+        title: t('learnCharsChartScreen.header.barakhadi', { en: group.en, gu: group.gu }),
+        data: group.chars?.map((v: ICharInfo) => transformCharToCellVM(v)) || [],
+      };
+    },
+    [t, transformCharToCellVM],
+  );
 
-  return barakhadi.map((v: ICharGroupInfo) => transformCharsToSectionVM(v));
+  return useMemo(() => {
+    return barakhadi.map((v: ICharGroupInfo) => transformCharsToSectionVM(v));
+  }, [transformCharsToSectionVM]);
 };
 
 export default useBarakhadiChartItems;

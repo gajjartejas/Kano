@@ -7,12 +7,13 @@ import { useTranslation } from 'react-i18next';
 import consonants from 'app/assets/lang/consonants/consonants.json';
 import { ICharCellItem, ICharCellListSection } from 'app/components/CharCellItem';
 import { ICharInfo } from 'app/models/models/char';
+import { useCallback, useMemo } from 'react';
 
 const useConsonantsChartItems = (): ICharCellListSection[] => {
   //Constants
   const { t } = useTranslation();
 
-  const transformCharToCellVM = (charInfo: ICharInfo): ICharCellItem => {
+  const transformCharToCellVM = useCallback((charInfo: ICharInfo): ICharCellItem => {
     return {
       id: charInfo.id,
       en: charInfo.en,
@@ -23,17 +24,22 @@ const useConsonantsChartItems = (): ICharCellListSection[] => {
       totalLength: charInfo.total_length,
       groups: charInfo.groups,
     };
-  };
+  }, []);
 
-  const transformCharsToSectionVM = (cellItems: ICharCellItem[]): ICharCellListSection => {
-    return {
-      title: t('learnCharsChartScreen.header.consonants'),
-      data: cellItems,
-    };
-  };
+  const transformCharsToSectionVM = useCallback(
+    (cellItems: ICharCellItem[]): ICharCellListSection => {
+      return {
+        title: t('learnCharsChartScreen.header.consonants'),
+        data: cellItems,
+      };
+    },
+    [t],
+  );
 
   const cellVMs = consonants.map((v: ICharInfo) => transformCharToCellVM(v));
-  return [transformCharsToSectionVM(cellVMs)];
+  return useMemo(() => {
+    return [transformCharsToSectionVM(cellVMs)];
+  }, [cellVMs, transformCharsToSectionVM]);
 };
 
 export default useConsonantsChartItems;

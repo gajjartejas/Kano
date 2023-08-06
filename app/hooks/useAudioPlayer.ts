@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useCallback, useEffect, useRef } from 'react';
 import Sound from 'react-native-sound';
 
 const useSoundPlayer = (): { play: (soundFile: string) => void; pause: () => void } => {
@@ -15,7 +15,7 @@ const useSoundPlayer = (): { play: (soundFile: string) => void; pause: () => voi
     };
   }, []);
 
-  const playSound = (soundFile: string): void => {
+  const playSound = useCallback((soundFile: string): void => {
     if (soundRef.current) {
       soundRef.current.stop();
       soundRef.current.release();
@@ -23,7 +23,7 @@ const useSoundPlayer = (): { play: (soundFile: string) => void; pause: () => voi
 
     soundRef.current = new Sound(soundFile, Sound.MAIN_BUNDLE, error => {
       if (error) {
-        console.log('failed to load the sound', error);
+        console.log('failed to load the sound.', error);
         return;
       }
 
@@ -36,19 +36,19 @@ const useSoundPlayer = (): { play: (soundFile: string) => void; pause: () => voi
 
       soundRef.current?.play(success => {
         if (success) {
-          console.log('successfully finished playing');
+          console.log('successfully finished playing sound.');
         } else {
-          console.log('playback failed due to audio decoding errors');
+          console.log('playback failed due to audio decoding errors.');
         }
       });
     });
-  };
+  }, []);
 
-  const pauseSound = (): void => {
+  const pauseSound = useCallback((): void => {
     if (soundRef.current) {
       soundRef.current.pause();
     }
-  };
+  }, []);
 
   return { play: playSound, pause: pauseSound };
 };

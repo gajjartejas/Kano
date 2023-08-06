@@ -16,6 +16,9 @@
     },
     "chart": {
       "hint1": "👆Tap to see character details."
+    },
+    "chartInfo": {
+      "hint1": "Swipe 👈left/right👉 for next card"
     }
   },
   "about": {

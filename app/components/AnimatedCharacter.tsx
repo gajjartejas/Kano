@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect, useImperativeHandle, useState } from 'react';
+import React, { forwardRef, useCallback, useEffect, useImperativeHandle, useState } from 'react';
 
 //App Modules
 import useSvgReader from 'app/hooks/useSvgReader';
@@ -74,6 +74,8 @@ const AnimatedCharacter = forwardRef<IAnimatedCharacterRef, IAnimatedCharacter>(
   const highlightStroke = props.highlightStroke;
   const arrowFill = props.arrowFill;
   const disableStrokeAnimation = props.disableStrokeAnimation;
+  const onProgress = props.onProgress;
+  const onFinish = props.onFinish;
 
   useImperativeHandle(ref, () => ({
     reset: () => {
@@ -128,14 +130,17 @@ const AnimatedCharacter = forwardRef<IAnimatedCharacterRef, IAnimatedCharacter>(
     readSvg(path);
   }, [path, readSvg]);
 
-  const onFinish = (index: number, length: number) => {
-    if (props.onProgress && typeof props.onProgress === 'function') {
-      props.onProgress(index / length);
-    }
-    if (props.onFinish && typeof props.onFinish === 'function' && index === length) {
-      props.onFinish();
-    }
-  };
+  const onFinishAnimation = useCallback(
+    (index: number, length: number) => {
+      if (onProgress && typeof onProgress === 'function') {
+        onProgress(index / length);
+      }
+      if (onFinish && typeof onFinish === 'function' && index === length) {
+        onFinish();
+      }
+    },
+    [onProgress, onFinish],
+  );
 
   if (!parsedSvg) {
     return null;
@@ -176,7 +181,7 @@ const AnimatedCharacter = forwardRef<IAnimatedCharacterRef, IAnimatedCharacter>(
                       id={p.id}
                       key={p.id}
                       onFinish={() => {
-                        onFinish(index, g.svgClipPaths.length);
+                        onFinishAnimation(index, g.svgClipPaths.length);
                       }}
                       d={p.d}
                       clipPath={`url(#path-clip${g.id})`}

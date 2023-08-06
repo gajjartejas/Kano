@@ -42,7 +42,7 @@ const LearnCharsChart = ({ navigation, route }: Props) => {
   const [title, setTitle] = useState('');
   const [numberOfColumns, setNumberOfColumns] = useState<number | null>(null);
 
-  const configInterface = useCallback(() => {
+  useEffect(() => {
     switch (type) {
       case LearnCharsType.Vowel:
         setTitle(t('learnCharsChartScreen.header.titleVowels'));
@@ -69,13 +69,12 @@ const LearnCharsChart = ({ navigation, route }: Props) => {
     }
   }, [t, type]);
 
-  useEffect(() => {
-    configInterface();
-  }, [configInterface]);
-
-  const cardTapped = (item: ICharCellItem, index: number, sectionIndex: number) => {
-    navigation.push('LearnCharInfo', { index, sectionIndex, groupedEntries, type, color: color });
-  };
+  const cardTapped = useCallback(
+    (item: ICharCellItem, index: number, sectionIndex: number) => {
+      navigation.push('LearnCharInfo', { index, sectionIndex, groupedEntries, type, color: color });
+    },
+    [color, groupedEntries, navigation, type],
+  );
 
   const renderItem = (item: ICharCellItem, index: number, sectionIndex: number) => {
     return (
@@ -110,26 +109,29 @@ const LearnCharsChart = ({ navigation, route }: Props) => {
     }
   };
 
-  const onGoBack = () => {
+  const onGoBack = useCallback(() => {
     navigation.pop();
-  };
+  }, [navigation]);
 
-  const renderSectionHeader = (titleText: string) => {
-    if (!titleText || titleText.length < 1) {
-      return null;
-    }
-    return (
-      <View style={styles.listHeaderView}>
-        <Text style={[styles.listHeaderText, { color: colors.textTitle }]}>{titleText}</Text>
-      </View>
-    );
-  };
+  const renderSectionHeader = useCallback(
+    (titleText: string) => {
+      if (!titleText || titleText.length < 1) {
+        return null;
+      }
+      return (
+        <View style={styles.listHeaderView}>
+          <Text style={[styles.listHeaderText, { color: colors.textTitle }]}>{titleText}</Text>
+        </View>
+      );
+    },
+    [colors.textTitle],
+  );
 
   return (
     <View style={[styles.container, { backgroundColor: `${color}15` }]}>
       <Appbar.Header style={{ backgroundColor: colors.background }}>
         <Appbar.BackAction onPress={onGoBack} />
-        <Appbar.Content title={title} subtitle="" />
+        <Appbar.Content title={title} />
       </Appbar.Header>
       <Components.AppBaseView edges={['bottom', 'left', 'right']} style={styles.safeArea}>
         {!!numberOfColumns && (

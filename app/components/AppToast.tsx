@@ -17,9 +17,9 @@ export interface IAppSuccessToastProps {
 
 const AppToast = (props: ToastConfigParams<IAppSuccessToastProps>) => {
   const { colors } = useTheme<AppTheme>();
-
   const { text1, text2, type, ...rest } = props;
   const minHeight = text1 && text2 ? 50 : 40;
+
   return (
     <BaseToast
       {...rest}

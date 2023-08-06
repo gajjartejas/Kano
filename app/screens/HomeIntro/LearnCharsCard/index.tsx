@@ -140,7 +140,17 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
     }
   }, [progressIndex, progressSection]);
 
-  const configInterface = useCallback(() => {
+  useEffect(() => {
+    // Enable/Disable finish button according to progress.
+    setFinishButtonDisabled(!(practiceMode && correctAnswerIds.length === practiceLeftCardPerGroup.length));
+    setFinishButtonTitle(
+      progressIndex === refGroupedEntries.current[progressSection].data.length
+        ? t('general.finish')
+        : t('general.next'),
+    );
+  }, [correctAnswerIds.length, practiceLeftCardPerGroup.length, practiceMode, progressIndex, progressSection, t]);
+
+  useEffect(() => {
     switch (type) {
       case LearnCharsType.Vowel:
         setTitle(t('learnCharsCardScreen.header.titleVowels'));
@@ -159,80 +169,72 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
     }
   }, [t, type]);
 
-  useEffect(() => {
-    // Enable/Disable finish button according to progress.
-    setFinishButtonDisabled(!(practiceMode && correctAnswerIds.length === practiceLeftCardPerGroup.length));
-    setFinishButtonTitle(
-      progressIndex === refGroupedEntries.current[progressSection].data.length
-        ? t('general.finish')
-        : t('general.next'),
-    );
-  }, [correctAnswerIds.length, practiceLeftCardPerGroup.length, practiceMode, progressIndex, progressSection, t]);
-
-  useEffect(() => {
-    configInterface();
-  }, [configInterface]);
-
-  const onGoBack = () => {
+  const onGoBack = useCallback(() => {
     navigation.pop();
-  };
+  }, [navigation]);
 
-  const onSwipe = (_direction: any) => {
-    //Check learn mode or practice mode
+  const onSwipe = useCallback(
+    (_direction: any) => {
+      //Check learn mode or practice mode
 
-    //For learning mode skip the practice mode section
-    if (isLearningMode) {
-      //Increase progress index
-      refProgressIndex.current = refProgressIndex.current + 1;
-      setProgressIndex(refProgressIndex.current);
+      //For learning mode skip the practice mode section
+      if (isLearningMode) {
+        //Increase progress index
+        refProgressIndex.current = refProgressIndex.current + 1;
+        setProgressIndex(refProgressIndex.current);
 
-      if (refProgressIndex.current === refGroupedEntries.current[progressSection].data.length) {
-        //Show finish level modal
+        if (refProgressIndex.current === refGroupedEntries.current[progressSection].data.length) {
+          //Show finish level modal
+          setTimeout(() => {
+            setFinishLevelVisible(true);
+          }, 300);
+        }
+        return;
+      }
+
+      //Enable practice mode
+      setTimeout(() => {
+        refProgressIndex.current = refProgressIndex.current + 1;
+        setProgressIndex(refProgressIndex.current);
+
+        if (refProgressIndex.current % PRACTICE_GROUP_COUNT_0 === 0 && !practiceMode && refProgressIndex.current > 0) {
+          setPracticeMode(true);
+        }
+      }, 200);
+    },
+    [isLearningMode, practiceMode, progressSection],
+  );
+
+  const onReceiveDragDrop = useCallback(
+    (payload: any, item: ICharCellItem, _index: number) => {
+      //Answer is already correct
+      //Remaining  card -> Already Correct Answer
+      if (correctAnswerIds.map(l => l.right).includes(item.id)) {
+        return;
+      }
+
+      //Answer is correct
+      //Remaining  card -> Correct Answer
+      if (payload === item.id && !correctAnswerIds.map(l => l.right).includes(item.id)) {
+        let newIds = [...correctAnswerIds, { left: payload, right: item.id }];
         setTimeout(() => {
-          setFinishLevelVisible(true);
-        }, 300);
+          setCorrectAnswerIds(newIds);
+        }, 500);
       }
-      return;
-    }
 
-    //Enable practice mode
-    setTimeout(() => {
-      refProgressIndex.current = refProgressIndex.current + 1;
-      setProgressIndex(refProgressIndex.current);
-
-      if (refProgressIndex.current % PRACTICE_GROUP_COUNT_0 === 0 && !practiceMode && refProgressIndex.current > 0) {
-        setPracticeMode(true);
+      //Answer is incorrect
+      //Remaining  card -> Incorrect Answer
+      if (payload !== item.id && !incorrectAnswerIds.map(l => l.right).includes(item.id)) {
+        let newIds = [...incorrectAnswerIds, { left: payload, right: item.id }];
+        setTimeout(() => {
+          setIncorrectAnswerIds(newIds);
+        }, 500);
       }
-    }, 200);
-  };
+    },
+    [correctAnswerIds, incorrectAnswerIds],
+  );
 
-  const onReceiveDragDrop = (payload: any, item: ICharCellItem, _index: number) => {
-    //Answer is already correct
-    //Remaining  card -> Already Correct Answer
-    if (correctAnswerIds.map(l => l.right).includes(item.id)) {
-      return;
-    }
-
-    //Answer is correct
-    //Remaining  card -> Correct Answer
-    if (payload === item.id && !correctAnswerIds.map(l => l.right).includes(item.id)) {
-      let newIds = [...correctAnswerIds, { left: payload, right: item.id }];
-      setTimeout(() => {
-        setCorrectAnswerIds(newIds);
-      }, 500);
-    }
-
-    //Answer is incorrect
-    //Remaining  card -> Incorrect Answer
-    if (payload !== item.id && !incorrectAnswerIds.map(l => l.right).includes(item.id)) {
-      let newIds = [...incorrectAnswerIds, { left: payload, right: item.id }];
-      setTimeout(() => {
-        setIncorrectAnswerIds(newIds);
-      }, 500);
-    }
-  };
-
-  const onPressNext = () => {
+  const onPressNext = useCallback(() => {
     if (progressIndex === refGroupedEntries.current[progressSection].data.length) {
       //Show finish level modal
       setFinishLevelVisible(true);
@@ -243,9 +245,9 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
       setCorrectAnswerIds([]);
       setPracticeMode(false);
     }
-  };
+  }, [progressIndex, progressSection]);
 
-  const onPressHideDialog = () => {
+  const onPressHideDialog = useCallback(() => {
     setFinishLevelVisible(false);
 
     if (progressSection === refGroupedEntries.current.length - 1) {
@@ -259,21 +261,24 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
     setPracticeMode(false);
     setProgressSection(progressSection + 1);
     setProgressIndex(0);
-  };
+  }, [navigation, progressSection]);
 
-  const onPressCard = (_item: ICharCellItem, _index: number) => {
-    player.play(_item.audio);
-    setPlaying(false);
-    setTimeout(() => {
-      setPlaying(true);
-    }, 100);
-  };
+  const onPressCard = useCallback(
+    (_item: ICharCellItem, _index: number) => {
+      player.play(_item.audio);
+      setPlaying(false);
+      setTimeout(() => {
+        setPlaying(true);
+      }, 100);
+    },
+    [player],
+  );
 
-  const onSwitchToRandom = () => {
+  const onSwitchToRandom = useCallback(() => {
     setSwitchToRandomModeAlertVisible(true);
-  };
+  }, []);
 
-  const switchToRandom = () => {
+  const switchToRandom = useCallback(() => {
     navigation.replace('LearnCharsCard', {
       type,
       learnMode: learnMode === LearnCharsMode.Learn ? LearnCharsMode.Practice : LearnCharsMode.Learn,
@@ -281,11 +286,11 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
       onlyInclude: onlyInclude,
       color: color,
     });
-  };
+  }, [color, isRandomMode, learnMode, navigation, onlyInclude, type]);
 
-  const onCloseRandomDialog = () => {
+  const onCloseRandomDialog = useCallback(() => {
     setSwitchToRandomModeAlertVisible(false);
-  };
+  }, []);
 
   return (
     <SafeAreaView edges={['bottom']} style={[styles.container, { backgroundColor: `${color}15` }]}>

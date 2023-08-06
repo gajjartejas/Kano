@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { View } from 'react-native';
 
 //ThirdParty
@@ -6,20 +6,17 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
 import Icon from 'react-native-easy-icon';
 import { Appbar, Divider, List, useTheme } from 'react-native-paper';
-import { useDispatch, useSelector } from 'react-redux';
 
 //App modules
 import Components from 'app/components';
 import styles from './styles';
 
 //Modals
-import IState from 'app/models/models/appState';
-import { IAppearanceType } from 'app/models/reducers/theme';
 import { ISettingItem, ISettingSection, ISettingThemeOptions } from 'app/models/viewModels/settingItem';
 
 //Redux
-import * as themeActions from 'app/store/actions/themeActions';
 import { LoggedInTabNavigatorParams } from 'app/navigation/types';
+import useThemeConfigStore, { IAppearanceType } from 'app/store/themeConfig';
 
 //Params
 type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'SelectAppearance'>;
@@ -33,8 +30,10 @@ const SelectAppearance = ({ navigation }: Props) => {
   //Constants
   const { t } = useTranslation();
   const { colors } = useTheme();
-  const dispatch = useDispatch();
-  const appearance = useSelector((state: IState) => state.themeReducer.appearance);
+  const resetTheme = useThemeConfigStore(store => store.resetTheme);
+  const setPrimaryColor = useThemeConfigStore(store => store.setPrimaryColor);
+  const setAppearance = useThemeConfigStore(store => store.setAppearance);
+  const appearance = useThemeConfigStore(store => store.appearance);
 
   //States
   const [apps] = useState<ISettingSection[]>([
@@ -77,7 +76,7 @@ const SelectAppearance = ({ navigation }: Props) => {
   ]);
 
   //
-  const [themeDialogVisible, setThemeDialogVisible] = React.useState(false);
+  const [themeDialogVisible, setThemeDialogVisible] = useState(false);
   const [themeOptions] = React.useState<ISettingThemeOptions[]>([
     {
       id: 0,
@@ -97,8 +96,8 @@ const SelectAppearance = ({ navigation }: Props) => {
   ]);
 
   //
-  const [accentColorDialogVisible, setAccentColorDialogVisible] = React.useState(false);
-  const [accentColorOptions] = React.useState<IAppearanceColor[]>([
+  const [accentColorDialogVisible, setAccentColorDialogVisible] = useState(false);
+  const [accentColorOptions] = useState<IAppearanceColor[]>([
     { primary: '#008b00', onPrimary: '#ffffff' },
     { primary: '#61d800', onPrimary: '#ffffff' },
     { primary: '#90ee02', onPrimary: '#000000' },
@@ -130,53 +129,58 @@ const SelectAppearance = ({ navigation }: Props) => {
     { primary: '#cc00e9', onPrimary: '#000000' },
   ]);
 
-  const onGoBack = () => {
+  const onGoBack = useCallback(() => {
     navigation.pop();
-  };
+  }, [navigation]);
 
-  //
-  const onPressAppearanceOption = (item: ISettingSection, index: number, subItem: ISettingItem, subIndex: number) => {
-    switch (true) {
-      case index === 0 && subIndex === 0:
-        onPressShowThemeDialog();
-        break;
-      case index === 0 && subIndex === 1:
-        onPressShowAccentColorDialog();
-        break;
-      case index === 1 && subIndex === 0:
-        onPressRestoreDefaultTheme();
-        break;
-      default:
-    }
-  };
+  const onPressRestoreDefaultTheme = useCallback(() => {
+    resetTheme();
+  }, [resetTheme]);
 
-  //
-  const onPressShowThemeDialog = () => setThemeDialogVisible(true);
-  const onPressHideThemeDialog = () => setThemeDialogVisible(false);
+  const onPressShowThemeDialog = useCallback(() => setThemeDialogVisible(true), []);
+  const onPressHideThemeDialog = useCallback(() => setThemeDialogVisible(false), []);
 
-  const onSelectTheme = (item: ISettingThemeOptions, _index: number) => {
-    onPressHideThemeDialog();
+  const onPressShowAccentColorDialog = useCallback(() => setAccentColorDialogVisible(true), []);
+  const onPressHideAccentColorDialog = useCallback(() => setAccentColorDialogVisible(false), []);
 
-    setTimeout(() => {
-      dispatch(themeActions.setAppearance(item.value));
-    }, 100);
-  };
+  const onPressPrimaryColor = useCallback(
+    (item: IAppearanceColor, _index: number) => {
+      onPressHideAccentColorDialog();
+      setTimeout(() => {
+        setPrimaryColor(item.primary, item.onPrimary);
+      }, 100);
+    },
+    [onPressHideAccentColorDialog, setPrimaryColor],
+  );
 
-  //
-  const onPressShowAccentColorDialog = () => setAccentColorDialogVisible(true);
-  const onPressHideAccentColorDialog = () => setAccentColorDialogVisible(false);
+  const onPressAppearanceOption = useCallback(
+    (item: ISettingSection, index: number, subItem: ISettingItem, subIndex: number) => {
+      switch (true) {
+        case index === 0 && subIndex === 0:
+          onPressShowThemeDialog();
+          break;
+        case index === 0 && subIndex === 1:
+          onPressShowAccentColorDialog();
+          break;
+        case index === 1 && subIndex === 0:
+          onPressRestoreDefaultTheme();
+          break;
+        default:
+      }
+    },
+    [onPressRestoreDefaultTheme, onPressShowAccentColorDialog, onPressShowThemeDialog],
+  );
 
-  const onPressPrimaryColor = (item: IAppearanceColor, _index: number) => {
-    onPressHideAccentColorDialog();
-    setTimeout(() => {
-      dispatch(themeActions.setPrimaryColor(item.primary, item.onPrimary));
-    }, 100);
-  };
+  const onSelectTheme = useCallback(
+    (item: ISettingThemeOptions, _index: number) => {
+      onPressHideThemeDialog();
 
-  //
-  const onPressRestoreDefaultTheme = () => {
-    dispatch(themeActions.resetTheme());
-  };
+      setTimeout(() => {
+        setAppearance(item.value);
+      }, 100);
+    },
+    [onPressHideThemeDialog, setAppearance],
+  );
 
   return (
     <View style={[styles.container, { backgroundColor: colors.background }]}>
