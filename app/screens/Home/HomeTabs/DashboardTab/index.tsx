@@ -14,6 +14,7 @@ import styles from './styles';
 import Config from 'app/config';
 import { LearnCharsType, LoggedInTabNavigatorParams } from 'app/navigation/types';
 import { AppTheme } from 'app/models/theme';
+import useHomeListProgressItems from 'app/hooks/useHomeListProgressItems';
 
 //Params
 type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'DashboardTab'>;
@@ -26,6 +27,7 @@ const DashboardTab = ({ navigation }: Props) => {
   //Constants
   const { colors } = useTheme<AppTheme>();
   const groupedEntries = Hooks.useHomeListItems();
+  const groupedEntriesProgress = useHomeListProgressItems();
   const { t } = useTranslation();
 
   //States
@@ -46,7 +48,17 @@ const DashboardTab = ({ navigation }: Props) => {
     [navigation],
   );
 
-  const renderItem = ({ item, index, sectionIndex }: { item: IHomeListItem; index: number; sectionIndex: number }) => {
+  const renderItem = ({
+    item,
+    index,
+    sectionIndex,
+    progress,
+  }: {
+    item: IHomeListItem;
+    index: number;
+    sectionIndex: number;
+    progress: number;
+  }) => {
     return (
       <Components.HomeListItem
         key={item.id}
@@ -54,6 +66,7 @@ const DashboardTab = ({ navigation }: Props) => {
         index={index}
         sectionIndex={sectionIndex}
         onPress={cardTapped}
+        progress={progress}
       />
     );
   };
@@ -84,12 +97,14 @@ const DashboardTab = ({ navigation }: Props) => {
 
         <View style={styles.listContainer}>
           {groupedEntries.map((section, sectionIndex) => {
+            const progressSection = groupedEntriesProgress[sectionIndex];
             return (
               <View style={styles.section} key={sectionIndex.toString()}>
                 <Text style={[styles.sectionHeader, { color: colors.text }]}>{t(section.title)}</Text>
                 <View style={styles.sectionItem}>
                   {section.data.map((item, index) => {
-                    return renderItem({ item, index, sectionIndex });
+                    const progress = progressSection.data[index];
+                    return renderItem({ item, index, sectionIndex, progress });
                   })}
                 </View>
               </View>

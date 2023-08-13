@@ -39,6 +39,14 @@ const Settings = ({ navigation }: Props) => {
           description: t('settings.appearanceSubTitle')!,
           route: 'SelectAppearance',
         },
+        {
+          id: 1,
+          iconName: 'app-settings-alt',
+          iconType: 'material',
+          title: t('settings.generalTitle'),
+          description: t('settings.generalSubTitle'),
+          route: 'GeneralSetting',
+        },
       ],
     },
     {

@@ -1,17 +1,17 @@
 //App Modules
 import { ICharCellListSection } from 'app/components/CharCellItem';
-import useVowels from './useVowelsChartItems';
-import useBarakhadis from './useBarakhadiChartItems';
-import useConsonants from './useConsonantsChartItems';
-import useNumerals from './useNumeralChartItems';
+import useVowelsChartItems from './useVowelsChartItems';
+import useBarakhadiChartItems from './useBarakhadiChartItems';
+import useConsonantsChartItems from './useConsonantsChartItems';
+import useNumeralChartItems from './useNumeralChartItems';
 import { ISelectCharCellListSection } from 'app/components/CharSelectCellItem';
 import { LearnCharsType } from 'app/navigation/types';
 
 const useChartItemForTypes = (type: LearnCharsType): ICharCellListSection[] => {
-  const vowels = useVowels();
-  const barakhadi = useBarakhadis();
-  const consonants = useConsonants();
-  const numerals = useNumerals();
+  const vowels = useVowelsChartItems();
+  const barakhadi = useBarakhadiChartItems();
+  const consonants = useConsonantsChartItems();
+  const numerals = useNumeralChartItems();
 
   switch (type) {
     case LearnCharsType.Vowel:
@@ -71,10 +71,10 @@ const useChartSectionsForTypes = (
 };
 
 const useSelectedChartItemForTypes = (type: LearnCharsType): ISelectCharCellListSection[] => {
-  const vowels = useVowels();
-  const barakhadi = useBarakhadis();
-  const consonants = useConsonants();
-  const numerals = useNumerals();
+  const vowels = useVowelsChartItems();
+  const barakhadi = useBarakhadiChartItems();
+  const consonants = useConsonantsChartItems();
+  const numerals = useNumeralChartItems();
 
   switch (type) {
     case LearnCharsType.Vowel:
@@ -107,4 +107,21 @@ const mapForOtherSelection = (sections: ICharCellListSection[]): ISelectCharCell
   });
 };
 
-export { useChartItemForTypes, useChartSectionsForTypes, useSelectedChartItemForTypes };
+const useLengthForTypes = () => {
+  return (type: LearnCharsType): number => {
+    switch (type) {
+      case LearnCharsType.Vowel:
+        return 12;
+      case LearnCharsType.Constant:
+        return 34;
+      case LearnCharsType.Barakhadi:
+        return 420;
+      case LearnCharsType.Number:
+        return 101;
+      default:
+        return 0;
+    }
+  };
+};
+
+export { useChartItemForTypes, useChartSectionsForTypes, useSelectedChartItemForTypes, useLengthForTypes };

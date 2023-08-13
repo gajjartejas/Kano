@@ -3,7 +3,7 @@ import { ICharListSection } from 'app/components/CharListItem';
 import { useTranslation } from 'react-i18next';
 import { useMemo } from 'react';
 
-const useVowelstListItems = (): ICharListSection[] => {
+const useVowelsListItems = (): ICharListSection[] => {
   //Constants
   const { t } = useTranslation();
 
@@ -63,4 +63,4 @@ const useVowelstListItems = (): ICharListSection[] => {
   }, [t]);
 };
 
-export default useVowelstListItems;
+export default useVowelsListItems;

@@ -429,6 +429,8 @@ PODS:
   - React-jsinspector (0.72.1)
   - React-logger (0.72.1):
     - glog
+  - react-native-get-random-values (1.9.0):
+    - React-Core
   - react-native-in-app-review (4.3.3):
     - React-Core
   - react-native-mmkv (2.10.1):
@@ -550,6 +552,8 @@ PODS:
     - React-jsi (= 0.72.1)
     - React-logger (= 0.72.1)
     - React-perflogger (= 0.72.1)
+  - RealmJS (11.10.1):
+    - React
   - RNBootSplash (4.7.5):
     - React-Core
   - RNCAsyncStorage (1.19.0):
@@ -647,6 +651,7 @@ DEPENDENCIES:
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
+  - react-native-get-random-values (from `../node_modules/react-native-get-random-values`)
   - react-native-in-app-review (from `../node_modules/react-native-in-app-review`)
   - react-native-mmkv (from `../node_modules/react-native-mmkv`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
@@ -667,6 +672,7 @@ DEPENDENCIES:
   - React-runtimescheduler (from `../node_modules/react-native/ReactCommon/react/renderer/runtimescheduler`)
   - React-utils (from `../node_modules/react-native/ReactCommon/react/utils`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
+  - RealmJS (from `../node_modules/realm`)
   - RNBootSplash (from `../node_modules/react-native-bootsplash`)
   - "RNCAsyncStorage (from `../node_modules/@react-native-async-storage/async-storage`)"
   - RNDeviceInfo (from `../node_modules/react-native-device-info`)
@@ -754,6 +760,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
   React-logger:
     :path: "../node_modules/react-native/ReactCommon/logger"
+  react-native-get-random-values:
+    :path: "../node_modules/react-native-get-random-values"
   react-native-in-app-review:
     :path: "../node_modules/react-native-in-app-review"
   react-native-mmkv:
@@ -794,6 +802,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/react/utils"
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
+  RealmJS:
+    :path: "../node_modules/realm"
   RNBootSplash:
     :path: "../node_modules/react-native-bootsplash"
   RNCAsyncStorage:
@@ -871,6 +881,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: 184eae1ecdedc7a083194bd9ff809c93f08fd34c
   React-jsinspector: d0b5bfd1085599265f4212034321e829bdf83cc0
   React-logger: b8103c9b04e707b50cdd2b1aeb382483900cbb37
+  react-native-get-random-values: dee677497c6a740b71e5612e8dbd83e7539ed5bb
   react-native-in-app-review: db8bb167a5f238e7ceca5c242d6b36ce8c4404a4
   react-native-mmkv: dea675cf9697ad35940f1687e98e133e1358ef9f
   react-native-safe-area-context: 68b07eabfb0d14547d36f6929c0e98d818064f02
@@ -891,6 +902,7 @@ SPEC CHECKSUMS:
   React-runtimescheduler: 34e27d6db52587cf93e7d9d44d5ff2dc4948243a
   React-utils: 4324c58d17bcbcb8c49fe7f8c14b4f61d5dd4a42
   ReactCommon: e33f60179aae29423fcf4ea19fdedc038813ea3f
+  RealmJS: 8deebf00c84f499c654bc585583c54f55b586751
   RNBootSplash: 85f6b879c080e958afdb4c62ee04497b05fd7552
   RNCAsyncStorage: 4b98ac3c64efa4e35c1197cb0c5ca5e9f5d4c666
   RNDeviceInfo: 25d818c85db769cc0e7083d39efaa01a6f450df3

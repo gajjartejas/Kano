@@ -24,6 +24,7 @@ import LearnCharInfo from 'app/screens/HomeIntro/CharsIntro/LearnCharInfo';
 import LearnCharsCard from 'app/screens/HomeIntro/LearnCharsCard';
 import LearnBySelectedChar from 'app/screens/HomeIntro/CharsIntro/LearnBySelectedChar';
 import LearnCharStrokeOrder from 'app/screens/HomeIntro/CharsIntro/LearnCharStrokeOrder';
+import GeneralSetting from 'app/screens/Settings/GeneralSetting';
 
 //App Modules
 import { HomeTabsNavigatorParams, LoggedInTabNavigatorParams } from 'app/navigation/types';
@@ -99,6 +100,7 @@ const LoggedInTabNavigator = () => {
       <LoggedInStack.Screen name="LearnCharsChart" component={LearnCharsChart} options={{ headerShown: false }} />
       <LoggedInStack.Screen name="LearnCharInfo" component={LearnCharInfo} options={{ headerShown: false }} />
       <LoggedInStack.Screen name="LearnCharsCard" component={LearnCharsCard} options={{ headerShown: false }} />
+      <LoggedInStack.Screen name="GeneralSetting" component={GeneralSetting} options={{ headerShown: false }} />
       <LoggedInStack.Group screenOptions={{ presentation: 'modal' }}>
         <LoggedInStack.Screen
           name="LearnBySelectedChar"

@@ -15,16 +15,18 @@ export interface TranslatorsParams {}
 export interface MoreTabParams {}
 export interface LearnCharStrokeOrderParams {
   svgPath: string;
+  color: string;
 }
 export interface LearnCharAnimatedDrawingParams {
   svgPath: string;
+  color: string;
 }
 
 export enum LearnCharsType {
-  Vowel = 'Vowel',
-  Constant = 'Constant',
-  Barakhadi = 'Barakhadi',
-  Number = 'Number',
+  Vowel = 0,
+  Constant = 1,
+  Barakhadi = 2,
+  Number = 3,
 }
 
 export interface LearnCharsListParams {

@@ -7,8 +7,8 @@ import { Dialog, TouchableRipple, useTheme, Button, RadioButton, Text } from 're
 
 //App modules
 import { ISettingThemeOptions } from 'app/models/viewModels/settingItem';
-import { IAppearanceType } from 'app/models/reducers/theme';
 import { AppTheme } from 'app/models/theme';
+import { IAppearanceType } from 'app/store/themeConfig';
 
 //Interface
 interface ISelectThemeDialogProps {

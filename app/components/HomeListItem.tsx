@@ -31,12 +31,13 @@ interface IHomeListItemProps {
   index: number;
   sectionIndex: number;
   onPress: (item: IHomeListItem, index: number, sectionIndex: number) => void;
+  progress: number;
 }
 
 const HomeListItem = (props: IHomeListItemProps) => {
   //Const
   const { colors } = useTheme<AppTheme>();
-  const { item, index } = props;
+  const { item, index, progress } = props;
   const sectionIndex = props.sectionIndex;
 
   return (
@@ -74,9 +75,9 @@ const HomeListItem = (props: IHomeListItemProps) => {
             pgColor={colors.primary}
             bgColor={colors.card}
             size={40}
-            text={'80%'}
-            strokeWidth={StyleSheet.hairlineWidth}
-            progressPercent={80}
+            text={`${Math.round(progress * 1000) / 10}%`}
+            strokeWidth={1}
+            progressPercent={progress * 100}
           />
         </View>
       </TouchableRipple>

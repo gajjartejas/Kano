@@ -46,6 +46,8 @@
     "commonHeader": "Common Settings",
     "appearanceTitle": "Appearance",
     "appearanceSubTitle": "Customization of appearance",
+    "generalTitle": "General",
+    "generalSubTitle": "Functional settings of the app",
     "infoHeader": "Information",
     "changelogTitle": "Changelog",
     "changelogSubTitle": "List of changes made in the all updates",
@@ -75,6 +77,18 @@
     "themeOption2": "Dark",
     "themeOption3": "System default"
   },
+  "generalSetting": {
+    "title": "General",
+    "section1": {
+      "header": "Other",
+      "row1": {
+        "title": "Clear progress",
+        "subTitle": "Clear all progress",
+        "dialogTitle": "Clear app progress?",
+        "dialogSubTitle": "Are you sure you want to clear app progress?"
+      }
+    }
+  },
   "librariesScreen": {
     "title": "Libraries"
   },
@@ -100,27 +114,27 @@
   },
   "homeScreen": {
     "header": {
-      "title": "Hi, {{name}} \uD83D\uDC4B",
+      "title": "Hi, \uD83D\uDC4B",
       "subTitle": "Welcome back!"
     },
     "listItemSection1Title": "Introduction",
     "listItemsSection1": {
       "itemTitle1": "Introduction to\nGujarati Script",
-      "itemSubTitle1": "10 hours, 19 lessons"
+      "itemSubTitle1": "1 lesson. 1 section"
     },
     "listItemSection2Title": "Alphabets",
     "listItemsSection2": {
       "itemTitle1": "Introduction to\nVowels(svara)",
-      "itemSubTitle1": "10 hours, 19 lessons",
+      "itemSubTitle1": "12 vowels, 5 sections",
       "itemTitle2": "Introduction to\nConsonants(vyañjana)",
-      "itemSubTitle2": "10 hours, 19 lessons",
+      "itemSubTitle2": "34 consonants, 5 sections",
       "itemTitle3": "Introduction to Barakhadi \n(consonants & vowels)",
-      "itemSubTitle3": "10 hours, 19 lessons"
+      "itemSubTitle3": "420 consonants, 5 sections"
     },
     "listItemSection3Title": "Numbers",
     "listItemsSection3": {
       "itemTitle1": "Introduction to\nGujarati numerals",
-      "itemSubTitle1": "10 hours, 19 lessons"
+      "itemSubTitle1": "101 numbers, 5 sections"
     }
   },
   "learnIntroScreen": {
