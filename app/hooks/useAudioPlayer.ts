@@ -1,7 +1,13 @@
 import { useCallback, useEffect, useRef } from 'react';
 import Sound from 'react-native-sound';
+import { singletonHook } from 'react-singleton-hook';
 
-const useSoundPlayer = (): { play: (soundFile: string) => void; pause: () => void } => {
+interface ISoundPlayerProps {
+  play: ((soundFile: string) => void) | null;
+  pause: (() => void) | null;
+}
+
+const useSoundPlayer = (): ISoundPlayerProps => {
   const soundRef = useRef<Sound | null>(null);
 
   useEffect(() => {
@@ -53,4 +59,10 @@ const useSoundPlayer = (): { play: (soundFile: string) => void; pause: () => voi
   return { play: playSound, pause: pauseSound };
 };
 
-export default useSoundPlayer;
+export default singletonHook(
+  {
+    play: null,
+    pause: null,
+  },
+  useSoundPlayer,
+);

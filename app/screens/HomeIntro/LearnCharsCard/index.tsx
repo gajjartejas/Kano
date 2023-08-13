@@ -5,7 +5,7 @@ import { View } from 'react-native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
 import { DraxProvider, DraxView } from 'react-native-drax';
-import { Appbar, Button, Text, useTheme, TouchableRipple } from 'react-native-paper';
+import { Appbar, Button, Text, TouchableRipple, useTheme } from 'react-native-paper';
 import TinderCard from 'react-tinder-card';
 import Animated, { Easing, FadeIn, FadeInDown, Layout } from 'react-native-reanimated';
 
@@ -21,6 +21,8 @@ import { LearnCharsMode, LearnCharsType, LoggedInTabNavigatorParams } from 'app/
 import { AppTheme } from 'app/models/theme';
 import useToastMessages from 'app/hooks/useToastMessages';
 import useHintConfig from 'app/hooks/useHintConfig';
+import useCardStatics from 'app/realm/crud/cardStatics';
+import { ICardLearnType, ICardOrderType, ICardSelectionType } from 'app/realm/modals/cardStatics';
 
 //Params
 type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'LearnCharsCard'>;
@@ -40,11 +42,12 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
   //Constants
   const { colors } = useTheme<AppTheme>();
   const { t } = useTranslation();
-  const player = useSoundPlayer();
+  const { play } = useSoundPlayer();
   const { type, learnMode, onlyInclude, isRandomMode, color } = route.params;
   const groupedEntries = Hooks.ChartItemForTypes.useChartSectionsForTypes(type, isRandomMode, onlyInclude);
   const isLearningMode = learnMode === LearnCharsMode.Learn;
   const [cardHints] = useHintConfig();
+  const { addCardStatics } = useCardStatics();
   useToastMessages(cardHints);
 
   //States
@@ -90,11 +93,23 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
     if (cardPerGroup.length < 1 || practiceMode) {
       return;
     }
+    if (play === null) {
+      return;
+    }
     let refTimeout = setTimeout(() => {
-      player.play(cardPerGroup[0].audio);
+      play(cardPerGroup[0].audio);
+      addCardStatics({
+        charId: cardPerGroup[0].id,
+        orderType: isRandomMode ? ICardOrderType.RANDOM : ICardOrderType.SEQUENCE,
+        learnType: isLearningMode ? ICardLearnType.LEARN : ICardLearnType.PRACTICE,
+        selectedType: onlyInclude === undefined ? ICardSelectionType.ALL : ICardSelectionType.CUSTOM,
+        createdDate: new Date(),
+        synced: false,
+        sectionType: type,
+      });
     }, 1000);
     return () => clearTimeout(refTimeout);
-  }, [cardPerGroup, player, practiceMode]);
+  }, [addCardStatics, cardPerGroup, isLearningMode, isRandomMode, onlyInclude, play, practiceMode, type]);
 
   useEffect(() => {
     if (progressIndex % GROUP_COUNT === 1) {
@@ -264,14 +279,17 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
   }, [navigation, progressSection]);
 
   const onPressCard = useCallback(
-    (_item: ICharCellItem, _index: number) => {
-      player.play(_item.audio);
+    (item: ICharCellItem, _index: number) => {
+      if (play === null) {
+        return;
+      }
+      play(item.audio);
       setPlaying(false);
       setTimeout(() => {
         setPlaying(true);
       }, 100);
     },
-    [player],
+    [play],
   );
 
   const onSwitchToRandom = useCallback(() => {

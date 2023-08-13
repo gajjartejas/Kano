@@ -25,7 +25,7 @@ const LearnCharAnimatedDrawing = ({ navigation, route }: Props) => {
   //Constants
   const { colors } = useTheme();
   const { t } = useTranslation();
-  const { svgPath } = route.params;
+  const { svgPath, color } = route.params;
 
   //States
   const [show, setShow] = useState(false);
@@ -50,7 +50,7 @@ const LearnCharAnimatedDrawing = ({ navigation, route }: Props) => {
 
   const otherProps = Platform.OS === 'ios' ? { statusBarHeight: 0 } : {};
   return (
-    <View style={[styles.container, { backgroundColor: colors.background }]}>
+    <View style={[styles.container, { backgroundColor: `${color}15` }]}>
       <Appbar.Header style={{ backgroundColor: colors.background }} {...otherProps}>
         <Appbar.Action icon={'chevron-down'} onPress={onGoBack} />
         <Appbar.Content title={t('LearnCharAnimatedDrawing.header.title')} />

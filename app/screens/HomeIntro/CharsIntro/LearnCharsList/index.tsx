@@ -12,6 +12,7 @@ import { ICharListItem } from 'app/components/CharListItem';
 import Hooks from 'app/hooks/index';
 import styles from './styles';
 import { LearnCharsMode, LearnCharsType, LoggedInTabNavigatorParams } from 'app/navigation/types';
+import useCharListProgressForType from 'app/hooks/useCharListProgressForType';
 
 //Params
 type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'LearnCharsList'>;
@@ -19,13 +20,15 @@ type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'LearnCharsList'
 const LearnCharsList = ({ navigation, route }: Props) => {
   //Refs
 
-  //Actions unnecessary
+  //Actions
 
   //Constants
   const { colors } = useTheme();
-  const { type } = route.params;
+  const { type, color } = route.params;
   const groupedEntries = Hooks.useCharListItemForType(type);
   const { t } = useTranslation();
+  const { getCharListProgressForType } = useCharListProgressForType();
+  const progressListItems = getCharListProgressForType(type);
 
   //States
   const [title, setTitle] = useState('');
@@ -90,14 +93,25 @@ const LearnCharsList = ({ navigation, route }: Props) => {
     [navigation, type],
   );
 
-  const renderItem = ({ item, index, sectionIndex }: { item: ICharListItem; index: number; sectionIndex: number }) => {
+  const renderItem = ({
+    item,
+    index,
+    sectionIndex,
+    progress,
+  }: {
+    item: ICharListItem;
+    index: number;
+    sectionIndex: number;
+    progress: number;
+  }) => {
     return (
-      <Components.VowelstListItem
+      <Components.CharListItem
         key={item.id}
         item={item}
         index={index}
         sectionIndex={sectionIndex}
         onPress={cardTapped}
+        progress={progress}
       />
     );
   };
@@ -107,7 +121,7 @@ const LearnCharsList = ({ navigation, route }: Props) => {
   }, [navigation]);
 
   return (
-    <View style={[styles.container, { backgroundColor: colors.background }]}>
+    <View style={[styles.container, { backgroundColor: `${color}20` }]}>
       <Appbar.Header style={{ backgroundColor: colors.background }}>
         <Appbar.BackAction onPress={onGoBack} />
         <Appbar.Content title={title} />
@@ -115,12 +129,14 @@ const LearnCharsList = ({ navigation, route }: Props) => {
       <Components.AppBaseView edges={['bottom', 'left', 'right']} style={styles.safeArea}>
         <ScrollView style={styles.scrollView}>
           {groupedEntries.map((section, sectionIndex) => {
+            const progressSection = progressListItems[sectionIndex];
             return (
               <View style={styles.section} key={sectionIndex.toString()}>
                 <Text style={styles.sectionHeader}>{t(section.title)}</Text>
                 <View style={styles.sectionItem}>
                   {section.data.map((item, index) => {
-                    return renderItem({ item, index, sectionIndex });
+                    const progress = progressSection.data[index];
+                    return renderItem({ item, index, sectionIndex, progress });
                   })}
                 </View>
               </View>

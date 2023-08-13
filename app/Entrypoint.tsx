@@ -9,6 +9,8 @@ import './locales';
 import AppManager from 'app/components/AppManager';
 import Navigator from 'app/navigation';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import RealmContext from 'app/realm/RealmContext';
+import { SingletonHooksContainer } from 'react-singleton-hook';
 
 /**
  * Optimize memory usage and performance: https://reactnavigation.org/docs/react-native-screens/
@@ -18,9 +20,12 @@ enableScreens();
 const Entrypoint: React.FC = () => {
   return (
     <GestureHandlerRootView style={styles.container}>
-      <AppManager>
-        <Navigator />
-      </AppManager>
+      <RealmContext.RealmProvider>
+        <AppManager>
+          <Navigator />
+        </AppManager>
+        <SingletonHooksContainer />
+      </RealmContext.RealmProvider>
     </GestureHandlerRootView>
   );
 };

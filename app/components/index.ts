@@ -9,8 +9,7 @@ import AnimatedCharacter from './AnimatedCharacter';
 import HomeListItem from './HomeListItem';
 import WaveBackground from './WaveBackground';
 import CircularProgress from './CircularProgress';
-import VowelstListItem from './CharListItem';
-import NumeralListItem from './CharListItem';
+import CharListItem from './CharListItem';
 import CharCellItem from './CharCellItem';
 import AppTitleValueItemCell from './AppTitleValueItemCell';
 import LearnCharInfoItemCell from './LearnCharInfoItemCell';
@@ -31,8 +30,7 @@ const Components = {
   HomeListItem,
   WaveBackground,
   CircularProgress,
-  VowelstListItem,
-  NumeralListItem,
+  CharListItem,
   CharCellItem,
   AppTitleValueItemCell,
   LearnCharInfoItemCell,

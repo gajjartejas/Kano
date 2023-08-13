@@ -15,6 +15,7 @@ import { LoggedInTabNavigatorParams } from 'app/navigation/types';
 import useSoundPlayer from 'app/hooks/useAudioPlayer';
 import useHintConfig from 'app/hooks/useHintConfig';
 import useToastMessages from 'app/hooks/useToastMessages';
+import useChartStatics from 'app/realm/crud/chartStatics';
 
 //Params
 type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'LearnCharInfo'>;
@@ -29,14 +30,24 @@ const LearnCharInfo = ({ navigation, route }: Props) => {
   const { colors } = useTheme();
   const { t } = useTranslation();
   const dimension = useWindowDimensions();
-  const { index: initialScrollIndex, sectionIndex, groupedEntries, color } = route.params;
+  const { index: initialScrollIndex, sectionIndex, groupedEntries, color, type } = route.params;
   const insets = useSafeAreaInsets();
-  const player = useSoundPlayer();
+  const { play } = useSoundPlayer();
   const [, , chartHints] = useHintConfig();
   useToastMessages(chartHints);
+  const { addChartStatics } = useChartStatics();
 
   //States
-  const [, setCurrentIndex] = useState(initialScrollIndex);
+  const [currentIndex, setCurrentIndex] = useState(initialScrollIndex);
+
+  useEffect(() => {
+    addChartStatics({
+      charId: groupedEntries[sectionIndex].data[currentIndex].id,
+      createdDate: new Date(),
+      sectionType: type,
+      synced: false,
+    });
+  }, [addChartStatics, currentIndex, groupedEntries, sectionIndex, type]);
 
   useEffect(() => {
     setCurrentIndex(initialScrollIndex);
@@ -44,9 +55,12 @@ const LearnCharInfo = ({ navigation, route }: Props) => {
 
   const onPressPlaySound = useCallback(
     (item: ICharCellItem, _index: number) => {
-      player.play(item.audio);
+      if (play === null) {
+        return;
+      }
+      play(item.audio);
     },
-    [player],
+    [play],
   );
 
   const renderItem = ({ item, index }: { item: ICharCellItem; index: number }) => {
@@ -63,16 +77,16 @@ const LearnCharInfo = ({ navigation, route }: Props) => {
 
   const onPressViewAnimatedDrawing = useCallback(
     (item: ICharCellItem, _index: number) => {
-      navigation.navigate('LearnCharAnimatedDrawing', { svgPath: item.svg });
+      navigation.navigate('LearnCharAnimatedDrawing', { svgPath: item.svg, color: color });
     },
-    [navigation],
+    [color, navigation],
   );
 
   const onPressStrokeOrder = useCallback(
     (item: ICharCellItem, _index: number) => {
-      navigation.navigate('LearnCharStrokeOrder', { svgPath: item.svg });
+      navigation.navigate('LearnCharStrokeOrder', { svgPath: item.svg, color: color });
     },
-    [navigation],
+    [color, navigation],
   );
 
   const onGoBack = useCallback(() => {

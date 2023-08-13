@@ -27,7 +27,7 @@ const LearnCharStrokeOrder = ({ navigation, route }: Props) => {
   const { t } = useTranslation();
   const { parsedSvg, readSvg } = useSvgReader();
   const { width } = useWindowDimensions();
-  const { svgPath } = route.params;
+  const { svgPath, color } = route.params;
 
   //States
 
@@ -43,7 +43,7 @@ const LearnCharStrokeOrder = ({ navigation, route }: Props) => {
 
   const otherProps = Platform.OS === 'ios' ? { statusBarHeight: 0 } : {};
   return (
-    <View style={[styles.container, { backgroundColor: colors.background }]}>
+    <View style={[styles.container, { backgroundColor: `${color}15` }]}>
       <Appbar.Header style={{ backgroundColor: colors.background }} {...otherProps}>
         <Appbar.Action icon={'chevron-down'} onPress={onGoBack} />
         <Appbar.Content title={t('LearnCharStrokeOrder.header.title')} />

@@ -30,13 +30,14 @@ interface ICharListItemProps {
   item: ICharListItem;
   index: number;
   sectionIndex: number;
+  progress: number;
   onPress: (item: ICharListItem, index: number, sectionIndex: number) => void;
 }
 
 const CharListItem = (props: ICharListItemProps) => {
   //Const
   const { colors } = useTheme<AppTheme>();
-  const { item, index } = props;
+  const { item, index, progress } = props;
   const sectionIndex = props.sectionIndex;
 
   return (
@@ -74,9 +75,9 @@ const CharListItem = (props: ICharListItemProps) => {
             pgColor={colors.primary}
             bgColor={colors.card}
             size={40}
-            text={'80%'}
-            strokeWidth={StyleSheet.hairlineWidth}
-            progressPercent={80}
+            text={`${Math.round(progress * 1000) / 10}%`}
+            strokeWidth={1}
+            progressPercent={progress * 100}
           />
         </View>
       </TouchableRipple>

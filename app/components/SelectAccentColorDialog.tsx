@@ -6,9 +6,9 @@ import { useTranslation } from 'react-i18next';
 import { Dialog, TouchableRipple, useTheme, Button } from 'react-native-paper';
 
 //App Modules
-import { IAppearanceType } from 'app/models/reducers/theme';
 import { IAppearanceColor } from 'app/screens/Settings/SelectAppearance';
 import { AppTheme } from 'app/models/theme';
+import { IAppearanceType } from 'app/store/themeConfig';
 
 //Interface
 interface ISelectAccentDialogProps {
