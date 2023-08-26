@@ -18,6 +18,7 @@ import { ISettingItem, ISettingSection, ISettingThemeOptions } from 'app/models/
 import { LoggedInTabNavigatorParams } from 'app/navigation/types';
 import useThemeConfigStore, { IAppearanceType } from 'app/store/themeConfig';
 import { SelectAccentDialogColor } from 'app/components/SelectAccentColorDialog';
+import useCardAnimationConfigStore from 'app/store/cardAnimationConfig';
 
 //Params
 type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'SelectAppearance'>;
@@ -30,6 +31,7 @@ const SelectAppearance = ({ navigation }: Props) => {
   const setPrimaryColor = useThemeConfigStore(store => store.setPrimaryColor);
   const setAppearance = useThemeConfigStore(store => store.setAppearance);
   const appearance = useThemeConfigStore(store => store.appearance);
+  const clearCardAnimationConfig = useCardAnimationConfigStore(store => store.clear);
 
   //States
   const [apps] = useState<ISettingSection[]>([
@@ -100,7 +102,8 @@ const SelectAppearance = ({ navigation }: Props) => {
 
   const onPressRestoreDefaultTheme = useCallback(() => {
     resetTheme();
-  }, [resetTheme]);
+    clearCardAnimationConfig();
+  }, [clearCardAnimationConfig, resetTheme]);
 
   const onPressShowThemeDialog = useCallback(() => setThemeDialogVisible(true), []);
   const onPressHideThemeDialog = useCallback(() => setThemeDialogVisible(false), []);
@@ -141,9 +144,10 @@ const SelectAppearance = ({ navigation }: Props) => {
 
       setTimeout(() => {
         setAppearance(item.value);
+        clearCardAnimationConfig();
       }, 100);
     },
-    [setAppearance],
+    [clearCardAnimationConfig, setAppearance],
   );
 
   return (
