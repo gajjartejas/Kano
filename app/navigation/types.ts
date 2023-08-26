@@ -59,6 +59,8 @@ export interface LearnBySelectedCharParams {
   color: string;
 }
 
+export interface CardAnimationParams {}
+
 export enum LearnCharsMode {
   Learn = 'Learn',
   Practice = 'Practice',
@@ -84,6 +86,7 @@ export type LoggedInTabNavigatorParams = {
   MoreTab: MoreTabParams;
   LearnCharStrokeOrder: LearnCharStrokeOrderParams;
   LearnCharAnimatedDrawing: LearnCharAnimatedDrawingParams;
+  CardAnimation: CardAnimationParams;
 };
 
 export type HomeTabsNavigatorParams = {

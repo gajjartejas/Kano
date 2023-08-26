@@ -17,14 +17,19 @@ interface AnimatedStrokeProps extends PathProps {
   duration: number;
   length: number;
   onFinish: () => void;
+  easing?: Animated.EasingFunction;
 }
 
 const AnimatedPath = Animated.createAnimatedComponent(Path);
 
+export const AnimatedStrokeEasing = Easing;
+export type AnimatedStrokeEasingFunction = Animated.EasingFunction;
+
 const AnimatedStroke = (props: AnimatedStrokeProps) => {
-  let { delay, duration, length } = props;
+  let { delay, duration, length, easing } = props;
   const ref = useRef<any>(null);
   const progress = useSharedValue(0);
+  const easingFn = easing === undefined ? AnimatedStrokeEasing.linear : easing;
 
   useEffect(() => {
     if (!length || delay === null || duration === null) {
@@ -36,7 +41,7 @@ const AnimatedStroke = (props: AnimatedStrokeProps) => {
         1,
         {
           duration: duration,
-          easing: Easing.linear,
+          easing: easingFn,
         },
         finished => {
           if (finished) {
@@ -45,7 +50,7 @@ const AnimatedStroke = (props: AnimatedStrokeProps) => {
         },
       ),
     );
-  }, [progress, delay, duration, length, props]);
+  }, [progress, delay, duration, length, props, easingFn]);
 
   const animatedProps = useAnimatedProps(() => ({
     strokeDashoffset: length - length * Easing.linear(progress.value),

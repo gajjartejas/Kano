@@ -9,7 +9,7 @@ export enum IAppearanceType {
   Auto = 'auto',
 }
 
-interface IAppConfigState {
+interface IThemeConfigState {
   isDark: boolean;
   appearance: IAppearanceType;
   setAppearance: (appearance: IAppearanceType) => void;
@@ -22,7 +22,7 @@ interface IAppConfigState {
 }
 const colorScheme = Appearance.getColorScheme();
 
-const useThemeConfigStore = create<IAppConfigState>()(
+const useThemeConfigStore = create<IThemeConfigState>()(
   devtools(
     persist(
       set => ({

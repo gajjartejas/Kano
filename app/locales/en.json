@@ -80,6 +80,13 @@
   "generalSetting": {
     "title": "General",
     "section1": {
+      "header": "General",
+      "row1": {
+        "title": "Card Animation",
+        "subTitle": "Animation and speed setting"
+      }
+    },
+    "section2": {
       "header": "Other",
       "row1": {
         "title": "Clear progress",
@@ -88,6 +95,24 @@
         "dialogSubTitle": "Are you sure you want to clear app progress?"
       }
     }
+  },
+  "cardAnimation": {
+    "header": {
+      "title": "Card Animation"
+    },
+    "initDelay": "Initial Delay",
+    "duration": "Duration",
+    "strokeWidth": "Stroke Width",
+    "arrowFont": "Arrow Font",
+    "emptyStroke": "Empty Stroke",
+    "highlightStroke": "Highlight Stroke",
+    "stroke": "Stroke",
+    "disableStrokeAnimation": "Disable Stroke Animation",
+    "showArrow": "Show Arrow",
+    "arrowSymbol": "Arrow Symbol",
+    "animationEasing": "Animation Easing",
+    "replay": "Replay",
+    "reset": "Reset"
   },
   "librariesScreen": {
     "title": "Libraries"

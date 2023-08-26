@@ -17,14 +17,10 @@ import { ISettingItem, ISettingSection, ISettingThemeOptions } from 'app/models/
 //Redux
 import { LoggedInTabNavigatorParams } from 'app/navigation/types';
 import useThemeConfigStore, { IAppearanceType } from 'app/store/themeConfig';
+import { SelectAccentDialogColor } from 'app/components/SelectAccentColorDialog';
 
 //Params
 type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'SelectAppearance'>;
-
-export interface IAppearanceColor {
-  primary: string;
-  onPrimary: string;
-}
 
 const SelectAppearance = ({ navigation }: Props) => {
   //Constants
@@ -97,37 +93,6 @@ const SelectAppearance = ({ navigation }: Props) => {
 
   //
   const [accentColorDialogVisible, setAccentColorDialogVisible] = useState(false);
-  const [accentColorOptions] = useState<IAppearanceColor[]>([
-    { primary: '#008b00', onPrimary: '#ffffff' },
-    { primary: '#61d800', onPrimary: '#ffffff' },
-    { primary: '#90ee02', onPrimary: '#000000' },
-    { primary: '#c6f68d', onPrimary: '#000000' },
-    { primary: '#defabb', onPrimary: '#000000' },
-
-    { primary: '#880061', onPrimary: '#ffffff' },
-    { primary: '#dd0074', onPrimary: '#ffffff' },
-    { primary: '#ee0290', onPrimary: '#000000' },
-    { primary: '#f186c0', onPrimary: '#000000' },
-    { primary: '#f5b6da', onPrimary: '#000000' },
-
-    { primary: '#e44304', onPrimary: '#ffffff' },
-    { primary: '#ee6002', onPrimary: '#ffffff' },
-    { primary: '#ff9e22', onPrimary: '#000000' },
-    { primary: '#ffc77d', onPrimary: '#000000' },
-    { primary: '#ffddb0', onPrimary: '#000000' },
-
-    { primary: '#0000d6', onPrimary: '#ffffff' },
-    { primary: '#5300e8', onPrimary: '#ffffff' },
-    { primary: '#7e3ff2', onPrimary: '#000000' },
-    { primary: '#9965f4', onPrimary: '#000000' },
-    { primary: '#b794f6', onPrimary: '#000000' },
-
-    { primary: '#5c00d2', onPrimary: '#ffffff' },
-    { primary: '#8b00dc', onPrimary: '#ffffff' },
-    { primary: '#a100e0', onPrimary: '#000000' },
-    { primary: '#ba00e5', onPrimary: '#000000' },
-    { primary: '#cc00e9', onPrimary: '#000000' },
-  ]);
 
   const onGoBack = useCallback(() => {
     navigation.pop();
@@ -144,13 +109,12 @@ const SelectAppearance = ({ navigation }: Props) => {
   const onPressHideAccentColorDialog = useCallback(() => setAccentColorDialogVisible(false), []);
 
   const onPressPrimaryColor = useCallback(
-    (item: IAppearanceColor, _index: number) => {
-      onPressHideAccentColorDialog();
+    (item: SelectAccentDialogColor) => {
       setTimeout(() => {
         setPrimaryColor(item.primary, item.onPrimary);
       }, 100);
     },
-    [onPressHideAccentColorDialog, setPrimaryColor],
+    [setPrimaryColor],
   );
 
   const onPressAppearanceOption = useCallback(
@@ -173,13 +137,13 @@ const SelectAppearance = ({ navigation }: Props) => {
 
   const onSelectTheme = useCallback(
     (item: ISettingThemeOptions, _index: number) => {
-      onPressHideThemeDialog();
+      setThemeDialogVisible(false);
 
       setTimeout(() => {
         setAppearance(item.value);
       }, 100);
     },
-    [onPressHideThemeDialog, setAppearance],
+    [setAppearance],
   );
 
   return (
@@ -230,10 +194,8 @@ const SelectAppearance = ({ navigation }: Props) => {
 
       <Components.SelectAccentDialog
         visible={accentColorDialogVisible}
-        appearance={appearance}
-        accentColorOptions={accentColorOptions}
         onSelect={onPressPrimaryColor}
-        onPressHideDialog={onPressHideAccentColorDialog}
+        onDismiss={onPressHideAccentColorDialog}
       />
     </View>
   );
