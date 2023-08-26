@@ -17,12 +17,10 @@ import { ISettingItem, ISettingSection } from 'app/models/viewModels/settingItem
 import Components from 'app/components';
 import useCardStatics from 'app/realm/crud/cardStatics';
 import useChartStatics from 'app/realm/crud/chartStatics';
+import { LoggedInTabNavigatorParams } from 'app/navigation/types';
 
 //Params
-type RootStackParamList = {
-  GeneralSetting: {};
-};
-type Props = NativeStackScreenProps<RootStackParamList, 'GeneralSetting'>;
+type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'GeneralSetting'>;
 
 const GeneralSetting = ({ navigation }: Props) => {
   //Refs
@@ -42,10 +40,24 @@ const GeneralSetting = ({ navigation }: Props) => {
       items: [
         {
           id: 0,
-          iconName: 'backup-restore',
+          iconName: 'animation-play',
           iconType: 'material-community',
           title: t('generalSetting.section1.row1.title'),
           description: t('generalSetting.section1.row1.subTitle'),
+          route: 'CardAnimation',
+        },
+      ],
+    },
+    {
+      id: 1,
+      title: t('generalSetting.section2.header'),
+      items: [
+        {
+          id: 0,
+          iconName: 'backup-restore',
+          iconType: 'material-community',
+          title: t('generalSetting.section2.row1.title'),
+          description: t('generalSetting.section2.row1.subTitle'),
           route: 'SelectAppearance',
         },
       ],
@@ -59,14 +71,13 @@ const GeneralSetting = ({ navigation }: Props) => {
   const onPressAppearanceOption = (item: ISettingSection, index: number, subItem: ISettingItem, subIndex: number) => {
     switch (true) {
       case index === 0 && subIndex === 0:
-        clearProgress();
+        navigation.navigate('CardAnimation', {});
+        break;
+      case index === 1 && subIndex === 0:
+        setClearProgressAlertVisible(true);
         break;
       default:
     }
-  };
-
-  const clearProgress = () => {
-    setClearProgressAlertVisible(true);
   };
 
   return (
@@ -109,8 +120,8 @@ const GeneralSetting = ({ navigation }: Props) => {
         </ScrollView>
       </View>
       <Components.AppActionDialog
-        title={t('generalSetting.section1.row1.dialogTitle')}
-        description={t('generalSetting.section1.row1.dialogSubTitle')}
+        title={t('generalSetting.section2.row1.dialogTitle')}
+        description={t('generalSetting.section2.row1.dialogSubTitle')}
         visible={clearProgressAlertVisible}
         cancelText={t('general.cancel')}
         confirmText={t('general.ok')}

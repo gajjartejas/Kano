@@ -9,7 +9,7 @@ export enum IAppearanceType {
   Auto = 'auto',
 }
 
-interface IAppConfigState {
+interface IThemeConfigState {
   isDark: boolean;
   appearance: IAppearanceType;
   setAppearance: (appearance: IAppearanceType) => void;
@@ -22,7 +22,7 @@ interface IAppConfigState {
 }
 const colorScheme = Appearance.getColorScheme();
 
-const useThemeConfigStore = create<IAppConfigState>()(
+const useThemeConfigStore = create<IThemeConfigState>()(
   devtools(
     persist(
       set => ({
@@ -35,6 +35,7 @@ const useThemeConfigStore = create<IAppConfigState>()(
         setAppearance: a =>
           set(_state => ({
             isDark: a === IAppearanceType.Auto ? Appearance.getColorScheme() === 'dark' : a === 'dark',
+            appearance: a,
           })),
         resetTheme: () => set(_state => ({ isDark: colorScheme === 'dark' })),
         setPrimaryColor: (p: string, o: string) => set(_state => ({ primary: p, onPrimary: o, secondaryContainer: p })),

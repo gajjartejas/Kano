@@ -6,7 +6,7 @@ import useSvgReader from 'app/hooks/useSvgReader';
 //ThirdParty
 import { ClipPath, Defs, G, Path, PathProps, Svg, Text, TextPath } from 'react-native-svg';
 import { svgPathProperties } from 'svg-path-properties';
-import AnimatedStroke from './AnimatedStroke';
+import AnimatedStroke, { AnimatedStrokeEasingFunction } from './AnimatedStroke';
 import { ColorValue } from 'react-native';
 
 //Interface
@@ -42,6 +42,9 @@ interface IAnimatedCharacter extends PathProps {
   highlightStroke?: ColorValue;
   arrowFill?: ColorValue;
   disableStrokeAnimation?: boolean;
+  arrowSymbol?: string;
+  arrowFontSize?: number;
+  easing?: AnimatedStrokeEasingFunction;
 }
 
 interface IAnimatedCharacterStrokeTiming {
@@ -68,6 +71,8 @@ const AnimatedCharacter = forwardRef<IAnimatedCharacterRef, IAnimatedCharacter>(
   const play = props.play === undefined ? true : props.play;
   const duration = props.duration === undefined ? 0 : props.duration;
   const showArrow = props.showArrow;
+  const arrowSymbol = props.arrowSymbol === undefined ? '➤' : props.arrowSymbol;
+  const arrowFontSize = props.arrowFontSize === undefined ? 6 : props.arrowFontSize;
   const highlightGroupIndex = props.highlightGroupIndex;
   const highlightStrokeIndex = props.highlightStrokeIndex;
   const stroke = props.stroke;
@@ -76,6 +81,7 @@ const AnimatedCharacter = forwardRef<IAnimatedCharacterRef, IAnimatedCharacter>(
   const disableStrokeAnimation = props.disableStrokeAnimation;
   const onProgress = props.onProgress;
   const onFinish = props.onFinish;
+  const easing = props.easing;
 
   useImperativeHandle(ref, () => ({
     reset: () => {
@@ -192,6 +198,7 @@ const AnimatedCharacter = forwardRef<IAnimatedCharacterRef, IAnimatedCharacter>(
                       stroke={
                         highlightGroupIndex === groupIndex && highlightStrokeIndex === index ? highlightStroke : stroke
                       }
+                      easing={easing}
                     />
                   );
                 })}
@@ -220,11 +227,11 @@ const AnimatedCharacter = forwardRef<IAnimatedCharacterRef, IAnimatedCharacter>(
                   let end = new Array(tr).fill(0).map((_, i) => (i * 100) / tl);
 
                   return (
-                    <Text fill={arrowFill} alignmentBaseline={'middle'} key={p.id} fontSize={6}>
+                    <Text fill={arrowFill} alignmentBaseline={'middle'} key={p.id} fontSize={arrowFontSize}>
                       {end.map(v => {
                         return (
                           <TextPath key={v.toString()} href={`#${p.id}`} startOffset={`${v}%`}>
-                            {'➤'}
+                            {arrowSymbol}
                           </TextPath>
                         );
                       })}

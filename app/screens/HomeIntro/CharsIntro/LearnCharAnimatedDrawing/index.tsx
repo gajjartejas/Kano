@@ -1,4 +1,4 @@
-import React, { useCallback, useRef, useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { Platform, View } from 'react-native';
 
 //ThirdParty
@@ -8,17 +8,18 @@ import { Appbar, Button, useTheme } from 'react-native-paper';
 
 //App modules
 import styles from './styles';
-import AnimatedCharacter, { IAnimatedCharacterRef } from 'app/components/AnimatedCharacter';
+import AnimatedCharacter from 'app/components/AnimatedCharacter';
 import Components from 'app/components';
 import { LoggedInTabNavigatorParams } from 'app/navigation/types';
 import Animated, { Easing, FadeIn, SlideInDown } from 'react-native-reanimated';
+import { easingSymbols } from 'app/config/extra-symbols';
+import useCardAnimationConfigStore from 'app/store/cardAnimationConfig';
 
 //Params
 type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'LearnCharAnimatedDrawing'>;
 
 const LearnCharAnimatedDrawing = ({ navigation, route }: Props) => {
   //Refs
-  const refAnimatedCharacter = useRef<IAnimatedCharacterRef | null>(null);
 
   //Actions
 
@@ -26,6 +27,34 @@ const LearnCharAnimatedDrawing = ({ navigation, route }: Props) => {
   const { colors } = useTheme();
   const { t } = useTranslation();
   const { svgPath, color } = route.params;
+
+  const [
+    initialDelay,
+    duration,
+    strokeWidth,
+    arrowFontSize,
+    arrowSymbol,
+    easingId,
+    emptyStroke,
+    highlightStroke,
+    arrowFill,
+    stroke,
+    disableStrokeAnimation,
+    showArrow,
+  ] = useCardAnimationConfigStore(store => [
+    store.initialDelay,
+    store.duration,
+    store.strokeWidth,
+    store.arrowFontSize,
+    store.arrowSymbol,
+    store.easingId,
+    store.emptyStroke,
+    store.highlightStroke,
+    store.arrowFill,
+    store.stroke,
+    store.disableStrokeAnimation,
+    store.showArrow,
+  ]);
 
   //States
   const [show, setShow] = useState(false);
@@ -63,17 +92,20 @@ const LearnCharAnimatedDrawing = ({ navigation, route }: Props) => {
               entering={FadeIn.duration(600).easing(Easing.bezierFn(1, 0, 0.17, 0.98))}
               layout={SlideInDown.duration(600).easing(Easing.bezierFn(1, 0, 0.17, 0.98))}>
               <AnimatedCharacter
-                ref={refAnimatedCharacter}
-                arrowFill={`${colors.onBackground}`}
-                emptyStroke={`${colors.onSurface}20`}
-                stroke={`${colors.primary}`}
-                highlightStroke={`${colors.primary}`}
-                strokeWidth={6}
-                path={svgPath}
+                initialDelay={initialDelay}
+                duration={duration}
+                emptyStroke={emptyStroke}
+                highlightStroke={highlightStroke}
+                arrowFill={arrowFill}
+                stroke={stroke}
+                disableStrokeAnimation={disableStrokeAnimation}
+                showArrow={showArrow}
+                strokeWidth={strokeWidth}
                 play={playing}
-                showArrow={true}
-                initialDelay={0}
-                duration={4000}
+                path={svgPath}
+                arrowSymbol={arrowSymbol}
+                arrowFontSize={arrowFontSize}
+                easing={easingSymbols.filter(v => v.id === easingId)[0].easing}
               />
             </Animated.View>
           )}

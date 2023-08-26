@@ -13,6 +13,8 @@ import Components from 'app/components';
 import { LoggedInTabNavigatorParams } from 'app/navigation/types';
 import useSvgReader from 'app/hooks/useSvgReader';
 import Animated, { Easing, FadeIn, SlideInDown } from 'react-native-reanimated';
+import useCardAnimationConfigStore from 'app/store/cardAnimationConfig';
+import { easingSymbols } from 'app/config/extra-symbols';
 
 //Params
 type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'LearnCharStrokeOrder'>;
@@ -28,6 +30,31 @@ const LearnCharStrokeOrder = ({ navigation, route }: Props) => {
   const { parsedSvg, readSvg } = useSvgReader();
   const { width } = useWindowDimensions();
   const { svgPath, color } = route.params;
+  const [
+    initialDelay,
+    duration,
+    strokeWidth,
+    arrowFontSize,
+    arrowSymbol,
+    easingId,
+    emptyStroke,
+    highlightStroke,
+    arrowFill,
+    stroke,
+    showArrow,
+  ] = useCardAnimationConfigStore(store => [
+    store.initialDelay,
+    store.duration,
+    store.strokeWidth,
+    store.arrowFontSize,
+    store.arrowSymbol,
+    store.easingId,
+    store.emptyStroke,
+    store.highlightStroke,
+    store.arrowFill,
+    store.stroke,
+    store.showArrow,
+  ]);
 
   //States
 
@@ -64,16 +91,21 @@ const LearnCharStrokeOrder = ({ navigation, route }: Props) => {
                         key={p.id + g.id}>
                         <AnimatedCharacter
                           key={p.id + g.id}
-                          arrowFill={`${colors.onBackground}`}
-                          emptyStroke={`${colors.onSurface}20`}
-                          stroke={`${colors.onSurface}20`}
-                          highlightStroke={`${colors.primary}`}
                           highlightGroupIndex={gidx}
                           highlightStrokeIndex={pidx}
-                          strokeWidth={6}
-                          path={svgPath}
+                          initialDelay={initialDelay}
+                          duration={duration}
+                          emptyStroke={emptyStroke}
+                          highlightStroke={highlightStroke}
+                          arrowFill={arrowFill}
+                          stroke={stroke}
                           disableStrokeAnimation={true}
-                          showArrow={true}
+                          showArrow={showArrow}
+                          strokeWidth={strokeWidth}
+                          path={svgPath}
+                          arrowSymbol={arrowSymbol}
+                          arrowFontSize={arrowFontSize}
+                          easing={easingSymbols.filter(v => v.id === easingId)[0].easing}
                         />
                       </View>
                     );

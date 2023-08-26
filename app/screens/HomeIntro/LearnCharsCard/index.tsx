@@ -23,6 +23,8 @@ import useToastMessages from 'app/hooks/useToastMessages';
 import useHintConfig from 'app/hooks/useHintConfig';
 import useCardStatics from 'app/realm/crud/cardStatics';
 import { ICardLearnType, ICardOrderType, ICardSelectionType } from 'app/realm/modals/cardStatics';
+import useCardAnimationConfigStore from 'app/store/cardAnimationConfig';
+import { easingSymbols } from 'app/config/extra-symbols';
 
 //Params
 type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'LearnCharsCard'>;
@@ -48,6 +50,33 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
   const isLearningMode = learnMode === LearnCharsMode.Learn;
   const [cardHints] = useHintConfig();
   const { addCardStatics } = useCardStatics();
+  const [
+    initialDelay,
+    duration,
+    strokeWidth,
+    arrowFontSize,
+    arrowSymbol,
+    easingId,
+    emptyStroke,
+    highlightStroke,
+    arrowFill,
+    stroke,
+    disableStrokeAnimation,
+    showArrow,
+  ] = useCardAnimationConfigStore(store => [
+    store.initialDelay,
+    store.duration,
+    store.strokeWidth,
+    store.arrowFontSize,
+    store.arrowSymbol,
+    store.easingId,
+    store.emptyStroke,
+    store.highlightStroke,
+    store.arrowFill,
+    store.stroke,
+    store.disableStrokeAnimation,
+    store.showArrow,
+  ]);
   useToastMessages(cardHints);
 
   //States
@@ -353,13 +382,20 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
                           layout={Layout.springify()}
                           style={styles.animatedView}>
                           <AnimatedCharacter
+                            initialDelay={initialDelay}
+                            duration={duration}
+                            emptyStroke={emptyStroke}
+                            highlightStroke={highlightStroke}
+                            arrowFill={arrowFill}
+                            stroke={stroke}
+                            disableStrokeAnimation={disableStrokeAnimation}
+                            showArrow={showArrow}
+                            strokeWidth={strokeWidth}
                             play={playing}
-                            emptyStroke={`${colors.onBackground}20`}
-                            stroke={colors.onBackground}
-                            strokeWidth={6}
-                            initialDelay={0}
                             path={item.svg}
-                            duration={10000}
+                            arrowSymbol={arrowSymbol}
+                            arrowFontSize={arrowFontSize}
+                            easing={easingSymbols.filter(v => v.id === easingId)[0].easing}
                           />
                         </Animated.View>
                         <Text style={[styles.subtitleText, { color: colors.text }]}>{item.en}</Text>
