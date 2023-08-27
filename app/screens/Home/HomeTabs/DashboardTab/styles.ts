@@ -24,7 +24,11 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
   },
   section: { paddingHorizontal: 20 },
-  sectionItem: {},
+  sectionItems: {
+    flexWrap: 'wrap',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
   listContainer: {
     paddingTop: 16,
   },

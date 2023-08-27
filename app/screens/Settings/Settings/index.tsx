@@ -16,6 +16,7 @@ import { ISettingItem, ISettingSection } from 'app/models/viewModels/settingItem
 import Icon from 'react-native-easy-icon';
 import Components from 'app/components';
 import { LoggedInTabNavigatorParams } from 'app/navigation/types';
+import { isTablet } from 'react-native-device-info';
 
 //Params
 type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'Settings'>;
@@ -143,35 +144,37 @@ const Settings = ({ navigation }: Props) => {
         <Appbar.Content title={t('settings.title')} />
       </Appbar.Header>
       <Components.AppBaseView scroll edges={['bottom', 'left', 'right']} style={styles.safeArea}>
-        {apps.map(item => {
-          return (
-            <View key={item.id.toString()}>
-              <List.Subheader style={[styles.listSubHeader, { color: colors.primary }]}>{item.title}</List.Subheader>
-              {item.items.map((subItem, subIndex) => {
-                return (
-                  <List.Item
-                    titleStyle={{ color: colors.onSurface }}
-                    descriptionStyle={{ color: `${colors.onSurface}88` }}
-                    key={subItem.id.toString()}
-                    onPress={() => onPress(subItem, subIndex)}
-                    title={subItem.title}
-                    description={subItem.description}
-                    left={() => (
-                      <Icon
-                        style={styles.listItemIcon}
-                        type={subItem.iconType}
-                        name={subItem.iconName}
-                        color={`${colors.onSurface}88`}
-                        size={24}
-                      />
-                    )}
-                  />
-                );
-              })}
-              <Divider />
-            </View>
-          );
-        })}
+        <View style={[styles.listContainer, isTablet() && styles.cardTablet]}>
+          {apps.map(item => {
+            return (
+              <View key={item.id.toString()}>
+                <List.Subheader style={[styles.listSubHeader, { color: colors.primary }]}>{item.title}</List.Subheader>
+                {item.items.map((subItem, subIndex) => {
+                  return (
+                    <List.Item
+                      titleStyle={{ color: colors.onSurface }}
+                      descriptionStyle={{ color: `${colors.onSurface}88` }}
+                      key={subItem.id.toString()}
+                      onPress={() => onPress(subItem, subIndex)}
+                      title={subItem.title}
+                      description={subItem.description}
+                      left={() => (
+                        <Icon
+                          style={styles.listItemIcon}
+                          type={subItem.iconType}
+                          name={subItem.iconName}
+                          color={`${colors.onSurface}88`}
+                          size={24}
+                        />
+                      )}
+                    />
+                  );
+                })}
+                <Divider />
+              </View>
+            );
+          })}
+        </View>
       </Components.AppBaseView>
     </View>
   );

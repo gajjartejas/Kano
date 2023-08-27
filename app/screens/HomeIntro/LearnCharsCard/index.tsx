@@ -25,6 +25,7 @@ import useCardStatics from 'app/realm/crud/cardStatics';
 import { ICardLearnType, ICardOrderType, ICardSelectionType } from 'app/realm/modals/cardStatics';
 import useCardAnimationConfigStore from 'app/store/cardAnimationConfig';
 import { easingSymbols } from 'app/config/extra-symbols';
+import { isTablet } from 'react-native-device-info';
 
 //Params
 type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'LearnCharsCard'>;
@@ -411,7 +412,7 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
             <>
               <Animated.View
                 entering={FadeInDown.duration(600).easing(Easing.bezierFn(1, 0, 0.17, 0.98))}
-                style={styles.practiceCardsContainer}>
+                style={[styles.practiceCardsContainer, isTablet() && styles.practiceCardsContainerTablet]}>
                 <View style={styles.practiceCardContainer}>
                   {practiceLeftCardPerGroup.map(v => {
                     return (
@@ -459,7 +460,7 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
               </Animated.View>
               <Button
                 disabled={finishButtonDisabled}
-                style={styles.nextButtonStyle}
+                style={[styles.nextButtonStyle, isTablet() && styles.practiceCardsContainerTablet]}
                 mode="contained"
                 onPress={onPressNext}>
                 {finishButtonTitle}
@@ -467,7 +468,11 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
             </>
           )}
 
-          <Button mode="text" labelStyle={styles.randomOrderButton} onPress={onSwitchToRandom}>
+          <Button
+            mode="text"
+            style={[isTablet() && styles.practiceCardsContainerTablet]}
+            labelStyle={[styles.randomOrderButton]}
+            onPress={onSwitchToRandom}>
             {isRandomMode ? t('learnCharsCardScreen.switchToSequence') : t('learnCharsCardScreen.switchToRandom')}
           </Button>
         </Components.AppBaseView>

@@ -31,17 +31,18 @@ interface ICharCellItemProps {
   cellSpacing: number;
   containerSpacing: number;
   selected?: boolean;
+  parentWidth?: number;
 }
 
 const CharCellItem = (props: ICharCellItemProps) => {
   //Const
   const { colors } = useTheme<AppTheme>();
-  const { item, index, sectionIndex, numberOfColumns, cellSpacing, containerSpacing, selected } = props;
-
+  const { item, index, sectionIndex, numberOfColumns, cellSpacing, containerSpacing, selected, parentWidth } = props;
   const dim = useWindowDimensions();
-
-  const titleFontSize = [20, 30, 30, 30, 30, 30, 24][numberOfColumns];
-  const subTitleFontSize = [30, 30, 30, 26, 16, 14, 12][numberOfColumns];
+  const width = parentWidth === undefined ? dim.width : parentWidth;
+  const cellW = (width - containerSpacing * 2 - cellSpacing * numberOfColumns * 2) / numberOfColumns;
+  const titleFontSize = cellW * 0.35;
+  const subTitleFontSize = cellW * 0.15;
 
   return (
     <View
@@ -50,8 +51,8 @@ const CharCellItem = (props: ICharCellItemProps) => {
         {
           backgroundColor: selected ? `${colors.primary}` : `${colors.card}`,
           shadowColor: `${colors.shadow}`,
-          width: (dim.width - containerSpacing * 2 - cellSpacing * numberOfColumns * 2) / numberOfColumns,
-          height: (dim.width - containerSpacing * 2) / numberOfColumns,
+          width: cellW,
+          height: (width - containerSpacing * 2) / numberOfColumns,
         },
       ]}>
       <TouchableRipple
@@ -96,7 +97,9 @@ const styles = StyleSheet.create({
     marginBottom: 6,
     marginHorizontal: 3,
   },
-  touchableButton: { flex: 1 },
+  touchableButton: {
+    flex: 1,
+  },
   titleText: {
     fontWeight: '600',
     fontSize: 30,
@@ -107,10 +110,17 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontFamily: Config.Fonts.NotoSansGujarati.Regular,
   },
-  iconTextContainer: { alignItems: 'center', justifyContent: 'center' },
-  iconTextContainerView: { flex: 1, alignItems: 'center', justifyContent: 'center' },
+  iconTextContainer: {
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  iconTextContainerView: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 });
 
 export default memo(CharCellItem, (p, n) => {
-  return p.selected === n.selected && p.item.id === n.item.id;
+  return p.selected === n.selected && p.item.id === n.item.id && p.parentWidth === n.parentWidth;
 });

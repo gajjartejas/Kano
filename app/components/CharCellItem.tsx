@@ -34,18 +34,18 @@ interface ICharCellItemProps {
   numberOfColumns: number;
   cellSpacing: number;
   containerSpacing: number;
+  parentWidth?: number;
 }
 
 const CharCellItem = (props: ICharCellItemProps) => {
   //Const
   const { colors } = useTheme<AppTheme>();
-  const { item, index, numberOfColumns, cellSpacing, containerSpacing } = props;
-  const sectionIndex = props.sectionIndex;
-
+  const { item, index, numberOfColumns, cellSpacing, containerSpacing, parentWidth, sectionIndex } = props;
   const dim = useWindowDimensions();
-
-  const titleFontSize = [30, 30, 30, 30, 30, 30, 24][numberOfColumns];
-  const subTitleFontSize = [30, 30, 30, 30, 16, 14, 12][numberOfColumns];
+  const width = parentWidth === undefined ? dim.width : parentWidth;
+  const cellW = (width - containerSpacing * 2 - cellSpacing * numberOfColumns * 2) / numberOfColumns;
+  const titleFontSize = cellW * 0.35;
+  const subTitleFontSize = cellW * 0.15;
 
   return (
     <View
@@ -54,8 +54,8 @@ const CharCellItem = (props: ICharCellItemProps) => {
         {
           backgroundColor: `${colors.card}`,
           shadowColor: `${colors.shadow}`,
-          width: (dim.width - containerSpacing * 2 - cellSpacing * numberOfColumns * 2) / numberOfColumns,
-          height: (dim.width - containerSpacing * 2) / numberOfColumns,
+          width: cellW,
+          height: (width - containerSpacing * 2) / numberOfColumns,
         },
       ]}>
       <TouchableRipple

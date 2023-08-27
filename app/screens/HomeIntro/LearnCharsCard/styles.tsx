@@ -111,6 +111,10 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingHorizontal: 20,
   },
+  practiceCardsContainerTablet: {
+    width: '70%',
+    alignSelf: 'center',
+  },
   practiceCardContainer: {
     flex: 1,
   },

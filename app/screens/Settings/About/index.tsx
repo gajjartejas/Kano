@@ -4,7 +4,7 @@ import { Image, Linking, View } from 'react-native';
 //ThirdParty
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
-import DeviceInfo from 'react-native-device-info';
+import DeviceInfo, { isTablet } from 'react-native-device-info';
 import { Appbar, Divider, List, Text, useTheme } from 'react-native-paper';
 
 //App modules
@@ -145,7 +145,11 @@ const About = ({ navigation }: Props) => {
           {apps.map((item, index) => {
             return (
               <View
-                style={[styles.listItem, { backgroundColor: `${colors.card}`, shadowColor: `${colors.shadow}` }]}
+                style={[
+                  styles.listItem,
+                  isTablet() && styles.cardTablet,
+                  { backgroundColor: `${colors.card}`, shadowColor: `${colors.shadow}` },
+                ]}
                 key={item.id.toString()}>
                 <List.Subheader style={[styles.listSubHeader, { color: colors.primary }]}>{item.title}</List.Subheader>
                 {item.items.map((subItem, subIndex) => {

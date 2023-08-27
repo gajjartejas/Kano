@@ -9,6 +9,7 @@ import { Dialog, TouchableRipple, useTheme, Button, RadioButton, Text } from 're
 import { ISettingThemeOptions } from 'app/models/viewModels/settingItem';
 import { AppTheme } from 'app/models/theme';
 import { IAppearanceType } from 'app/store/themeConfig';
+import { isTablet } from 'react-native-device-info';
 
 //Interface
 interface ISelectThemeDialogProps {
@@ -26,7 +27,7 @@ function SelectThemeDialog(props: ISelectThemeDialogProps) {
 
   return (
     <Dialog
-      style={{ backgroundColor: theme.colors.surface }}
+      style={[{ backgroundColor: theme.colors.surface }, isTablet() && styles.cardTablet]}
       visible={props.visible}
       onDismiss={props.onPressHideDialog}>
       <Dialog.Title style={{ color: theme.colors.onSurface }}>{t('appearanceSettings.themeOption')}</Dialog.Title>
@@ -58,9 +59,19 @@ function SelectThemeDialog(props: ISelectThemeDialogProps) {
 }
 
 const styles = StyleSheet.create({
-  itemText: { flex: 1 },
-  itemButtonContainer: { flexDirection: 'row', alignItems: 'center' },
-  itemButton: { flexDirection: 'row', alignItems: 'center', paddingHorizontal: 24, paddingVertical: 6 },
+  itemText: {
+    flex: 1,
+  },
+  itemButtonContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  itemButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 24,
+    paddingVertical: 6,
+  },
   button: {
     alignSelf: 'center',
     width: 44,
@@ -71,8 +82,17 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     marginHorizontal: 8,
   },
-  buttonsContainer: { flexDirection: 'row', alignSelf: 'center' },
-  descriptionText: { fontSize: 16 },
+  buttonsContainer: {
+    flexDirection: 'row',
+    alignSelf: 'center',
+  },
+  descriptionText: {
+    fontSize: 16,
+  },
+  cardTablet: {
+    width: '70%',
+    alignSelf: 'center',
+  },
 });
 
 export default SelectThemeDialog;

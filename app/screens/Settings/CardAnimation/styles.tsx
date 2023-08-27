@@ -33,6 +33,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: 12,
   },
+  cardTablet: {
+    width: '70%',
+    alignSelf: 'center',
+  },
+  listContainer: {
+    flex: 1,
+  },
 });
 
 export default styles;

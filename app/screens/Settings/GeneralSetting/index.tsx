@@ -10,9 +10,10 @@ import Icon from 'react-native-easy-icon';
 //App modules
 import styles from './styles';
 
-//Redux
+//ThirdParty
+import { isTablet } from 'react-native-device-info';
 
-//Modals
+//App Modules
 import { ISettingItem, ISettingSection } from 'app/models/viewModels/settingItem';
 import Components from 'app/components';
 import useCardStatics from 'app/realm/crud/cardStatics';
@@ -88,35 +89,39 @@ const GeneralSetting = ({ navigation }: Props) => {
       </Appbar.Header>
       <View style={styles.safeArea}>
         <ScrollView>
-          {apps.map((item, index) => {
-            return (
-              <View key={item.id.toString()}>
-                <List.Subheader style={[styles.listSubHeader, { color: colors.primary }]}>{item.title}</List.Subheader>
-                {item.items.map((subItem, subIndex) => {
-                  return (
-                    <List.Item
-                      key={subItem.id.toString()}
-                      titleStyle={{ color: colors.onSurface }}
-                      descriptionStyle={{ color: `${colors.onSurface}88` }}
-                      onPress={() => onPressAppearanceOption(item, index, subItem, subIndex)}
-                      title={subItem.title}
-                      description={subItem.description}
-                      left={() => (
-                        <Icon
-                          style={styles.listItemIcon}
-                          type={subItem.iconType}
-                          name={subItem.iconName}
-                          color={`${colors.onSurface}88`}
-                          size={24}
-                        />
-                      )}
-                    />
-                  );
-                })}
-                <Divider />
-              </View>
-            );
-          })}
+          <View style={[styles.listContainer, isTablet() && styles.cardTablet]}>
+            {apps.map((item, index) => {
+              return (
+                <View key={item.id.toString()}>
+                  <List.Subheader style={[styles.listSubHeader, { color: colors.primary }]}>
+                    {item.title}
+                  </List.Subheader>
+                  {item.items.map((subItem, subIndex) => {
+                    return (
+                      <List.Item
+                        key={subItem.id.toString()}
+                        titleStyle={{ color: colors.onSurface }}
+                        descriptionStyle={{ color: `${colors.onSurface}88` }}
+                        onPress={() => onPressAppearanceOption(item, index, subItem, subIndex)}
+                        title={subItem.title}
+                        description={subItem.description}
+                        left={() => (
+                          <Icon
+                            style={styles.listItemIcon}
+                            type={subItem.iconType}
+                            name={subItem.iconName}
+                            color={`${colors.onSurface}88`}
+                            size={24}
+                          />
+                        )}
+                      />
+                    );
+                  })}
+                  <Divider />
+                </View>
+              );
+            })}
+          </View>
         </ScrollView>
       </View>
       <Components.AppActionDialog

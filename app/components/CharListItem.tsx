@@ -5,6 +5,7 @@ import { View, StyleSheet } from 'react-native';
 import { TouchableRipple, useTheme, Text } from 'react-native-paper';
 import Icon from 'react-native-easy-icon';
 import { IconType } from 'react-native-easy-icon/src/Icon';
+import { isTablet } from 'react-native-device-info';
 
 //App Modules
 import CircularProgress from './CircularProgress';
@@ -95,9 +96,9 @@ const styles = StyleSheet.create({
     },
     elevation: 8,
     shadowOpacity: 0.2,
-    flex: 1,
     height: 98,
     marginBottom: 8,
+    width: isTablet() ? '49%' : '100%',
   },
   touchableButton: {
     flex: 1,

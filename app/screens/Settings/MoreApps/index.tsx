@@ -14,6 +14,7 @@ import Utils from 'app/utils';
 import Components from 'app/components';
 import styles from './styles';
 import { LoggedInTabNavigatorParams } from 'app/navigation/types';
+import { isTablet } from 'react-native-device-info';
 
 //Interfaces
 interface IMoreAppItem {
@@ -91,7 +92,7 @@ const MoreApps = ({ navigation }: Props) => {
         <Appbar.Content title={t('moreApps.appsTitle')} />
       </Appbar.Header>
       <Components.AppBaseView scroll edges={['bottom', 'left', 'right']} style={styles.safeArea}>
-        <View style={styles.listContainer}>
+        <View style={[styles.listContainer, isTablet() && styles.cardTablet]}>
           {apps.map((item, index) => {
             return (
               <Components.MoreAppCard

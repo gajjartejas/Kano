@@ -19,6 +19,7 @@ import { LoggedInTabNavigatorParams } from 'app/navigation/types';
 import useThemeConfigStore, { IAppearanceType } from 'app/store/themeConfig';
 import { SelectAccentDialogColor } from 'app/components/SelectAccentColorDialog';
 import useCardAnimationConfigStore from 'app/store/cardAnimationConfig';
+import { isTablet } from 'react-native-device-info';
 
 //Params
 type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'SelectAppearance'>;
@@ -157,35 +158,37 @@ const SelectAppearance = ({ navigation }: Props) => {
         <Appbar.Content title={t('appearanceSettings.title')} />
       </Appbar.Header>
       <Components.AppBaseView scroll edges={['bottom', 'left', 'right']} style={styles.safeArea}>
-        {apps.map((item, index) => {
-          return (
-            <View key={item.id.toString()}>
-              <List.Subheader style={[styles.listSubHeader, { color: colors.primary }]}>{item.title}</List.Subheader>
-              {item.items.map((subItem, subIndex) => {
-                return (
-                  <List.Item
-                    key={subItem.id.toString()}
-                    titleStyle={{ color: colors.onSurface }}
-                    descriptionStyle={{ color: `${colors.onSurface}88` }}
-                    onPress={() => onPressAppearanceOption(item, index, subItem, subIndex)}
-                    title={subItem.title}
-                    description={subItem.description}
-                    left={() => (
-                      <Icon
-                        style={styles.listItemIcon}
-                        type={subItem.iconType}
-                        name={subItem.iconName}
-                        color={`${colors.onSurface}88`}
-                        size={24}
-                      />
-                    )}
-                  />
-                );
-              })}
-              <Divider />
-            </View>
-          );
-        })}
+        <View style={[styles.listContainer, isTablet() && styles.cardTablet]}>
+          {apps.map((item, index) => {
+            return (
+              <View key={item.id.toString()}>
+                <List.Subheader style={[styles.listSubHeader, { color: colors.primary }]}>{item.title}</List.Subheader>
+                {item.items.map((subItem, subIndex) => {
+                  return (
+                    <List.Item
+                      key={subItem.id.toString()}
+                      titleStyle={{ color: colors.onSurface }}
+                      descriptionStyle={{ color: `${colors.onSurface}88` }}
+                      onPress={() => onPressAppearanceOption(item, index, subItem, subIndex)}
+                      title={subItem.title}
+                      description={subItem.description}
+                      left={() => (
+                        <Icon
+                          style={styles.listItemIcon}
+                          type={subItem.iconType}
+                          name={subItem.iconName}
+                          color={`${colors.onSurface}88`}
+                          size={24}
+                        />
+                      )}
+                    />
+                  );
+                })}
+                <Divider />
+              </View>
+            );
+          })}
+        </View>
       </Components.AppBaseView>
 
       <Components.SelectThemeDialog

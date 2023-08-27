@@ -27,6 +27,8 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
+    width: '100%',
+    height: '100%',
   },
   appIcon: { width: 50, height: 50, borderRadius: 25, marginTop: 16 },
   appNameText: { marginTop: 20, fontSize: 18 },
@@ -38,6 +40,10 @@ const styles = StyleSheet.create({
   listItem: { paddingHorizontal: 20, paddingVertical: 12 },
   listIcon: { alignSelf: 'center', marginRight: 20 },
   divider: { marginHorizontal: 20 },
+  cardTablet: {
+    width: '70%',
+    alignSelf: 'center',
+  },
 });
 
 export default styles;

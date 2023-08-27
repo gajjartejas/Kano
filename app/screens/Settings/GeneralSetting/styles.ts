@@ -14,6 +14,13 @@ const styles = StyleSheet.create({
   },
   listSubHeader: { marginLeft: 48 },
   listItemIcon: { alignSelf: 'center', marginHorizontal: 12 },
+  cardTablet: {
+    width: '70%',
+    alignSelf: 'center',
+  },
+  listContainer: {
+    paddingBottom: 8,
+  },
 });
 
 export default styles;

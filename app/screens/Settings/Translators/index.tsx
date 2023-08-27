@@ -1,16 +1,17 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { FlatList, Image, View } from 'react-native';
+import { FlatList, Image, Text, View } from 'react-native';
 
 //ThirdParty
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
-import { Appbar, List, useTheme } from 'react-native-paper';
+import { Appbar, Button, List, useTheme } from 'react-native-paper';
 
 //App modules
 import Config from 'app/config';
 import styles from './styles';
 import Components from 'app/components';
 import { LoggedInTabNavigatorParams } from 'app/navigation/types';
+import Utils from 'app/utils';
 
 //Interfaces
 interface ITranslator {
@@ -55,12 +56,7 @@ const Translators = ({ navigation }: Props) => {
       { id: 20, icon: Config.Images.icons.flag_pt_pt, translators: [], language: 'Português' },
       { id: 21, icon: Config.Images.icons.flag_pt_br, translators: [], language: 'Português (Brasil)' },
       { id: 22, icon: Config.Images.icons.flag_ro, translators: [], language: 'Română' },
-      {
-        id: 23,
-        icon: Config.Images.icons.flag_ru,
-        translators: ['Heathcliff (rtempest805@gmail.com)'],
-        language: 'русский',
-      },
+      { id: 23, icon: Config.Images.icons.flag_ru, translators: [], language: 'русский' },
       { id: 24, icon: Config.Images.icons.flag_sk, translators: [], language: 'slovenčina' },
       { id: 25, icon: Config.Images.icons.flag_tr, translators: [], language: 'Türkçe' },
       { id: 26, icon: Config.Images.icons.flag_uk, translators: [], language: 'Українська' },
@@ -91,6 +87,19 @@ const Translators = ({ navigation }: Props) => {
 
   const onPressItem = (_item: ITranslator, _index: number) => {};
 
+  const onPressContribute = () => {
+    Utils.openInAppBrowser(Config.Constants.TRANSLATE_APP);
+  };
+
+  const EmptyListComponent = (
+    <View style={styles.emptyListContainer}>
+      <Text style={[styles.titleTextStyle, { color: colors.onPrimary }]}>{t('translatorsScreen.emptyList')}</Text>
+      <Button icon="web" mode="text" onPress={onPressContribute}>
+        {t('translatorsScreen.emptyListAction')}
+      </Button>
+    </View>
+  );
+
   return (
     <View style={[styles.container, { backgroundColor: colors.background }]}>
       <Appbar.Header style={{ backgroundColor: colors.background }}>
@@ -99,11 +108,13 @@ const Translators = ({ navigation }: Props) => {
       </Appbar.Header>
       <Components.AppBaseView edges={['bottom', 'left', 'right']} style={styles.safeArea}>
         <FlatList
+          contentContainerStyle={styles.cardTablet}
           style={styles.flatlist}
           keyboardShouldPersistTaps={'handled'}
           data={finalLicense}
           renderItem={renderItem}
           keyExtractor={(item, _index) => item.id.toString()}
+          ListEmptyComponent={EmptyListComponent}
         />
       </Components.AppBaseView>
     </View>
