@@ -101,7 +101,7 @@ const DashboardTab = ({ navigation }: Props) => {
             return (
               <View style={styles.section} key={sectionIndex.toString()}>
                 <Text style={[styles.sectionHeader, { color: colors.text }]}>{t(section.title)}</Text>
-                <View style={styles.sectionItem}>
+                <View style={styles.sectionItems}>
                   {section.data.map((item, index) => {
                     const progress = progressSection.data[index];
                     return renderItem({ item, index, sectionIndex, progress });

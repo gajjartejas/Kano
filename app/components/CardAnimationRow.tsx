@@ -1,6 +1,11 @@
 import { Dimensions, StyleSheet, Switch, Text, TextStyle, TouchableOpacity, View, ViewStyle } from 'react-native';
 import React, { useCallback, useState } from 'react';
+
+//ThirdParty
+import { isTablet } from 'react-native-device-info';
 import { Portal, useTheme } from 'react-native-paper';
+
+//App Modules
 import { SelectAccentDialogColor } from 'app/components/SelectAccentColorDialog';
 import Components from 'app/components/index';
 import { AppTheme } from 'app/models/theme';
@@ -107,6 +112,8 @@ export function RowTitle(props: { title: string; style?: TextStyle }) {
   return <Text style={[props.style, { color: colors.onSurface }]}>{props.title}</Text>;
 }
 
+const scaleFactor = isTablet() ? 1.5 : 1;
+
 const styles = StyleSheet.create({
   colorPickerContainer: {
     flex: 1,
@@ -121,9 +128,9 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   arrowRow: {
-    width: (Dimensions.get('screen').width - 64) / 8 - 4,
-    height: (Dimensions.get('screen').width - 64) / 8 - 4,
-    borderRadius: (Dimensions.get('screen').width - 64 - 4) / 16,
+    width: (Dimensions.get('screen').width - 64) / 8 / scaleFactor - 4,
+    height: (Dimensions.get('screen').width - 64) / 8 / scaleFactor - 4,
+    borderRadius: (Dimensions.get('screen').width - 64 - 4) / 16 / scaleFactor,
     borderWidth: StyleSheet.hairlineWidth,
     alignItems: 'center',
     marginHorizontal: 2,

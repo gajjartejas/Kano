@@ -15,6 +15,7 @@ import { ISelectCharCellItem } from 'app/components/CharSelectCellItem';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { LearnCharsType, LoggedInTabNavigatorParams } from 'app/navigation/types';
 import { AppTheme } from 'app/models/theme';
+import { isTablet } from 'react-native-device-info';
 
 //Params
 type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'LearnBySelectedChar'>;
@@ -38,23 +39,26 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
   //States
   const [numberOfColumns, setNumberOfColumns] = useState<number | null>(null);
   const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set([]));
+  const [parentWidth, setParentWidth] = useState<number | undefined>();
 
   useEffect(() => {
+    const scaleFactor = isTablet() ? 2 : 1;
+
     switch (type) {
       case LearnCharsType.Vowel:
-        setNumberOfColumns(3);
+        setNumberOfColumns(3 * scaleFactor);
         break;
 
       case LearnCharsType.Constant:
-        setNumberOfColumns(5);
+        setNumberOfColumns(5 * scaleFactor);
         break;
 
       case LearnCharsType.Barakhadi:
-        setNumberOfColumns(6);
+        setNumberOfColumns(6 * scaleFactor);
         break;
 
       case LearnCharsType.Number:
-        setNumberOfColumns(6);
+        setNumberOfColumns(6 * scaleFactor);
 
         break;
       default:
@@ -88,6 +92,7 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
         sectionIndex={sectionIndex}
         onPress={cardTapped}
         selected={selectedIds.has(`${index}-${sectionIndex}`)}
+        parentWidth={parentWidth}
       />
     );
   };
@@ -184,13 +189,18 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
 
   const otherProps = Platform.OS === 'ios' ? { statusBarHeight: 0 } : {};
   return (
-    <SafeAreaView edges={['bottom']} style={[styles.container, { backgroundColor: `${color}15` }]}>
+    <SafeAreaView
+      onLayout={event => {
+        setParentWidth(event.nativeEvent.layout.width);
+      }}
+      edges={['bottom']}
+      style={[styles.container, { backgroundColor: `${color}15` }]}>
       <Appbar.Header style={{ backgroundColor: colors.background }} {...otherProps}>
         <Appbar.Action icon={'chevron-down'} onPress={onGoBack} />
         <Appbar.Content title={t('learnBySelectedChar.header.title')} />
       </Appbar.Header>
       <Components.AppBaseView edges={['bottom', 'left', 'right']} style={styles.safeArea}>
-        {!!numberOfColumns && (
+        {!!numberOfColumns && parentWidth !== undefined && (
           <View style={[styles.listContainer, { paddingHorizontal: CONTAINER_SPACING - 1 }]}>
             <FlashList
               data={mappedGroupedEntries}
@@ -216,7 +226,7 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
       <Button
         style={styles.continueButton}
         contentStyle={styles.continueButtonContainer}
-        disabled={selectedIds.size === 0}
+        disabled={selectedIds.size < 2}
         mode="contained"
         onPress={onPressContinue}>
         {t('general.continue')}

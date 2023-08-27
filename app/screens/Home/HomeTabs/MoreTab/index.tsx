@@ -1,12 +1,12 @@
 import React, { useCallback } from 'react';
-import { Image, ImageBackground, Linking, Platform, ScrollView, View } from 'react-native';
+import { Image, Linking, Platform, ScrollView, View } from 'react-native';
 
 //ThirdParty
 import { useTranslation } from 'react-i18next';
 import { Divider, List, Text, useTheme } from 'react-native-paper';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { IconType } from 'react-native-easy-icon/src/Icon';
-import DeviceInfo from 'react-native-device-info';
+import DeviceInfo, { isTablet } from 'react-native-device-info';
 import Icon from 'react-native-easy-icon';
 
 //App Modules
@@ -153,14 +153,15 @@ const MoreTab = ({ navigation }: Props) => {
       style={[styles.container, { backgroundColor: colors.background }]}>
       <ScrollView style={styles.scrollView}>
         <View style={styles.subView}>
-          <ImageBackground source={Config.Images.icons.about_bg} style={styles.imageBackground}>
+          <View style={[styles.imageBackground, isTablet() && styles.cardTablet]}>
+            <Image resizeMode={'cover'} style={[styles.imageBackgroundCover]} source={Config.Images.icons.about_bg} />
             <View style={[styles.imageBackgroundCover, { backgroundColor: `${colors.background}88` }]} />
             <Image source={Config.Images.icons.app_icon} resizeMode="contain" style={styles.appIcon} />
             <Text style={[styles.appNameText, { color: colors.text }]}>{t('general.appname')}</Text>
             <Text style={[styles.appVersion, { color: colors.text }]}>v{DeviceInfo.getVersion()}</Text>
-          </ImageBackground>
+          </View>
 
-          <View style={styles.cardContainer}>
+          <View style={[styles.cardContainer, isTablet() && styles.cardTablet]}>
             {aboutItems.map((subItem, subIndex) => {
               return (
                 <View key={subItem.id.toString()}>

@@ -5,6 +5,9 @@ import { StyleSheet, View } from 'react-native';
 import LottieView from 'lottie-react-native';
 import { Button, Dialog, Paragraph, useTheme } from 'react-native-paper';
 
+//ThirdParty
+import { isTablet } from 'react-native-device-info';
+
 //App Modules
 import Config from 'app/config';
 
@@ -23,7 +26,7 @@ function AppLevelFinishDialog(props: IAppLevelFinishDialogProps) {
   const { visible, onPressHideDialog, title, description, buttonTitle } = props;
 
   return (
-    <Dialog visible={visible} onDismiss={props.onPressHideDialog}>
+    <Dialog style={[isTablet() && styles.cardTablet]} visible={visible} onDismiss={props.onPressHideDialog}>
       <Dialog.Title style={[{ color: colors.onBackground }, styles.titleText]}>{title}</Dialog.Title>
 
       <View style={styles.buttonsContainer}>
@@ -65,6 +68,10 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
     paddingVertical: 6,
     flex: 1,
+  },
+  cardTablet: {
+    width: '70%',
+    alignSelf: 'center',
   },
 });
 

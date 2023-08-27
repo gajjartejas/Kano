@@ -7,6 +7,7 @@ import { Dialog, TouchableRipple, useTheme, Button } from 'react-native-paper';
 
 //App Modules
 import { AppTheme } from 'app/models/theme';
+import { isTablet } from 'react-native-device-info';
 
 //Interface
 interface ISelectAccentDialogProps {
@@ -66,7 +67,7 @@ function SelectAccentDialog(props: ISelectAccentDialogProps) {
   };
 
   return (
-    <Dialog visible={props.visible} onDismiss={onDismiss}>
+    <Dialog style={[isTablet() && styles.cardTablet]} visible={props.visible} onDismiss={onDismiss}>
       <Dialog.Title style={{ color: colors.onSurface }}>{t('appearanceSettings.themeOption')}</Dialog.Title>
       <Dialog.Content>
         <View style={styles.dialogContainer}>
@@ -100,7 +101,15 @@ const styles = StyleSheet.create({
     margin: 4,
     overflow: 'hidden',
   },
-  dialogContainer: { flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-around' },
+  dialogContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+  },
+  cardTablet: {
+    width: '70%',
+    alignSelf: 'center',
+  },
 });
 
 export default SelectAccentDialog;

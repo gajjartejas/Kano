@@ -16,6 +16,7 @@ import { LearnCharsType, LoggedInTabNavigatorParams } from 'app/navigation/types
 import { AppTheme } from 'app/models/theme';
 import useHintConfig from 'app/hooks/useHintConfig';
 import useToastMessages from 'app/hooks/useToastMessages';
+import { isTablet } from 'react-native-device-info';
 
 //Params
 type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'LearnCharsChart'>;
@@ -43,25 +44,27 @@ const LearnCharsChart = ({ navigation, route }: Props) => {
   const [numberOfColumns, setNumberOfColumns] = useState<number | null>(null);
 
   useEffect(() => {
+    const scaleFactor = isTablet() ? 2 : 1;
+
     switch (type) {
       case LearnCharsType.Vowel:
         setTitle(t('learnCharsChartScreen.header.titleVowels'));
-        setNumberOfColumns(3);
+        setNumberOfColumns(3 * scaleFactor);
         break;
 
       case LearnCharsType.Constant:
         setTitle(t('learnCharsChartScreen.header.titleConsonants'));
-        setNumberOfColumns(5);
+        setNumberOfColumns(5 * scaleFactor);
         break;
 
       case LearnCharsType.Barakhadi:
         setTitle(t('learnCharsChartScreen.header.titleBarakhadi'));
-        setNumberOfColumns(4);
+        setNumberOfColumns(4 * scaleFactor);
         break;
 
       case LearnCharsType.Number:
         setTitle(t('learnCharsChartScreen.header.titleNumerals'));
-        setNumberOfColumns(6);
+        setNumberOfColumns(6 * scaleFactor);
         break;
 
       default:

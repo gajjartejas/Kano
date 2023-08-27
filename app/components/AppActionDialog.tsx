@@ -3,6 +3,7 @@ import { StyleSheet } from 'react-native';
 
 //ThirdParty
 import { Dialog, Text, useTheme, Button } from 'react-native-paper';
+import { isTablet } from 'react-native-device-info';
 
 //Interface
 interface IAppActionDialogProps {
@@ -21,7 +22,7 @@ function AppActionDialog(props: IAppActionDialogProps) {
   const { colors } = useTheme();
 
   return (
-    <Dialog visible={props.visible} onDismiss={onPressCancel}>
+    <Dialog style={[isTablet() && styles.cardTablet]} visible={props.visible} onDismiss={onPressCancel}>
       <Dialog.Title style={{ color: colors.onBackground }}>{title}</Dialog.Title>
       <Dialog.Content>
         <Text style={[styles.descriptionText, { color: `${colors.onBackground}88` }]}>{description}</Text>
@@ -45,8 +46,17 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     marginHorizontal: 8,
   },
-  buttonsContainer: { flexDirection: 'row', alignSelf: 'center' },
-  descriptionText: { fontSize: 16 },
+  buttonsContainer: {
+    flexDirection: 'row',
+    alignSelf: 'center',
+  },
+  descriptionText: {
+    fontSize: 16,
+  },
+  cardTablet: {
+    width: '70%',
+    alignSelf: 'center',
+  },
 });
 
 export default AppActionDialog;

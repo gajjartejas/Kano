@@ -9,6 +9,7 @@ import { IconType } from 'react-native-easy-icon/src/Icon';
 //App Modules
 import CircularProgress from './CircularProgress';
 import { AppTheme } from 'app/models/theme';
+import { isTablet } from 'react-native-device-info';
 
 //Interface
 export interface IHomeListItem {
@@ -95,9 +96,9 @@ const styles = StyleSheet.create({
     },
     elevation: 8,
     shadowOpacity: 0.2,
-    flex: 1,
     height: 98,
     marginBottom: 8,
+    width: isTablet() ? '49%' : '100%',
   },
   touchableButton: {
     flex: 1,

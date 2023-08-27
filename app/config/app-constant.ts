@@ -22,7 +22,7 @@ const Constant = {
 
   CHANGE_LOG: `${GITHUB_PROJECT_LINK}/releases`,
   FAQ: `${GITHUB_PROJECT_LINK}/blob/main/docs/faqs.md`,
-  TRANSLATE_APP: 'https://app.tolgee.io/projects/501/translations',
+  TRANSLATE_APP: 'https://app.tolgee.io/accept_invitation/qVHuUkAOWekjoKYDThUsDhtSbHlvMZIyCTsngHrrCwDMKCYvHH',
   PRIVACY_POLICY: `${GITHUB_PROJECT_LINK}/blob/main/docs/privacy.md`,
   TERMS_OF_SERVICE: `${GITHUB_PROJECT_LINK}/blob/main/docs/terms.md`,
 

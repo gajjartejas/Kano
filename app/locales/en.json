@@ -118,7 +118,9 @@
     "title": "Libraries"
   },
   "translatorsScreen": {
-    "title": "Translators"
+    "title": "Translators",
+    "emptyList": "Be the pioneer – no contributors found yet!",
+    "emptyListAction": "Click here to contribute"
   },
   "aboutScreen": {
     "title": "About Kano",

@@ -12,6 +12,7 @@ import AppTitleValueItemCell from './AppTitleValueItemCell';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { AppTheme } from 'app/models/theme';
 import useSvgReader from 'app/hooks/useSvgReader';
+import { isTablet } from 'react-native-device-info';
 
 //Interface
 interface ILearnCharInfoItemCellProps {
@@ -46,7 +47,12 @@ const LearnCharInfoItemCell = (props: ILearnCharInfoItemCellProps) => {
   return (
     <View style={[styles.container, { width: dim.width - insets.right - insets.left }]}>
       <Text style={[styles.headerText, { color: colors.text }]}>{gu}</Text>
-      <View style={[styles.card, { backgroundColor: `${colors.card}`, shadowColor: `${colors.shadow}` }]}>
+      <View
+        style={[
+          styles.card,
+          isTablet() && styles.cardTablet,
+          { backgroundColor: `${colors.card}`, shadowColor: `${colors.shadow}` },
+        ]}>
         <AppTitleValueItemCell touchDisabled title={t('learnCharInfoScreen.character')} value={character} />
         <AppTitleValueItemCell touchDisabled title={t('learnCharInfoScreen.diacritic')} value={diacritic} />
         <AppTitleValueItemCell
@@ -57,7 +63,12 @@ const LearnCharInfoItemCell = (props: ILearnCharInfoItemCellProps) => {
         <AppTitleValueItemCell touchDisabled title={t('learnCharInfoScreen.numberOfStrokes')} value={numberOfStrokes} />
         <AppTitleValueItemCell touchDisabled title={t('learnCharInfoScreen.length')} value={length} />
       </View>
-      <View style={[styles.card, { backgroundColor: `${colors.card}`, shadowColor: `${colors.shadow}` }]}>
+      <View
+        style={[
+          styles.card,
+          isTablet() && styles.cardTablet,
+          { backgroundColor: `${colors.card}`, shadowColor: `${colors.shadow}` },
+        ]}>
         <AppTitleValueItemCell bold touchDisabled title={t('learnCharInfoScreen.moreInfo')} />
         <AppTitleValueItemCell
           iconName="chevron-right"
@@ -91,7 +102,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     fontFamily: Config.Fonts.NotoSansGujarati.SemiBold,
     fontWeight: '400',
-    fontSize: 100,
+    fontSize: isTablet() ? 200 : 100,
     marginTop: 32,
     marginBottom: 12,
   },
@@ -107,6 +118,10 @@ const styles = StyleSheet.create({
     marginBottom: 8,
     marginHorizontal: 20,
     paddingVertical: 8,
+  },
+  cardTablet: {
+    width: '70%',
+    alignSelf: 'center',
   },
 });
 

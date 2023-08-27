@@ -84,7 +84,12 @@ const License = ({ navigation }: Props) => {
         <Appbar.Content title={t('librariesScreen.title')} />
       </Appbar.Header>
       <Components.AppBaseView edges={['bottom', 'left', 'right']} style={styles.subView}>
-        <FlatList data={finalLicense} renderItem={renderItem} keyExtractor={item => item.name} />
+        <FlatList
+          contentContainerStyle={styles.cardTablet}
+          data={finalLicense}
+          renderItem={renderItem}
+          keyExtractor={item => item.name}
+        />
       </Components.AppBaseView>
     </View>
   );

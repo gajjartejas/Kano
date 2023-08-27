@@ -46,7 +46,7 @@ const initialState: ICardAnimationConfigState = {
   arrowSymbol: '→',
   easingId: 0,
   emptyStroke: IS_DARK ? '#FFFFFF11' : '#00000022',
-  highlightStroke: IS_DARK ? '#0000FF' : '#FFFF00',
+  highlightStroke: IS_DARK ? '#0000FF' : '#0000FF',
   arrowFill: IS_DARK ? '#000000' : '#FFFFFF',
   stroke: IS_DARK ? '#FFFFFF' : '#000000',
   disableStrokeAnimation: false,

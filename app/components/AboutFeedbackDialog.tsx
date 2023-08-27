@@ -5,6 +5,7 @@ import { StyleSheet, View } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import Icon from 'react-native-easy-icon';
 import { Dialog, Paragraph, TouchableRipple, useTheme, Button } from 'react-native-paper';
+import { isTablet } from 'react-native-device-info';
 
 //Interface
 interface IAboutFeedbackDialogProps {
@@ -20,7 +21,7 @@ function AboutFeedbackDialog(props: IAboutFeedbackDialogProps) {
   const { colors } = useTheme();
 
   return (
-    <Dialog visible={props.visible} onDismiss={props.onPressHideDialog}>
+    <Dialog style={[isTablet() && styles.cardTablet]} visible={props.visible} onDismiss={props.onPressHideDialog}>
       <Dialog.Title style={{ color: colors.onBackground }}>{t('about.sendFeedback')}</Dialog.Title>
       <Dialog.Content>
         <Paragraph style={[styles.descriptionText, { color: `${colors.onBackground}88` }]}>
@@ -63,6 +64,10 @@ const styles = StyleSheet.create({
   },
   buttonsContainer: { flexDirection: 'row', alignSelf: 'center' },
   descriptionText: { fontSize: 16 },
+  cardTablet: {
+    width: '70%',
+    alignSelf: 'center',
+  },
 });
 
 export default AboutFeedbackDialog;
