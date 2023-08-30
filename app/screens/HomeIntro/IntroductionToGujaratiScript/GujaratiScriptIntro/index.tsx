@@ -1,32 +1,46 @@
-import React, { useState } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import { View } from 'react-native';
 
 //ThirdParty
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { useTranslation } from 'react-i18next';
-import { Appbar, useTheme, Button } from 'react-native-paper';
-import Animated, { Easing, FadeIn, Layout } from 'react-native-reanimated';
+import { Appbar, useTheme } from 'react-native-paper';
 
 //App modules
 import styles from './styles';
-import AnimatedCharacter from 'app/components/AnimatedCharacter';
 import Components from 'app/components';
 import { LoggedInTabNavigatorParams } from 'app/navigation/types';
+import { useMarkdown, useMarkdownHookOptions } from 'react-native-marked';
+import useThemeConfigStore from 'app/store/themeConfig';
+import { ColorSchemeName } from 'react-native/Libraries/Utilities/Appearance';
+import useOtherStatics from 'app/realm/crud/otherStatics';
 
 //Params
 type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'GujaratiScriptIntro'>;
 
-const GujaratiScriptIntro = ({ navigation }: Props) => {
+const GujaratiScriptIntro = ({ navigation, route }: Props) => {
   //Refs
 
   //Actions
 
   //Constants
   const { colors } = useTheme();
-  const { t } = useTranslation();
+  const { title, content, type } = route.params;
+  const colorScheme = useThemeConfigStore(store => store.appearance) as ColorSchemeName;
+  const options: useMarkdownHookOptions = {
+    colorScheme,
+  };
+  const elements = useMarkdown(content, options);
+  const { addOtherStatics } = useOtherStatics();
 
   //States
-  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    addOtherStatics({
+      sectionType: type,
+      createdDate: new Date(),
+      synced: false,
+    });
+  }, [addOtherStatics, type]);
 
   const onGoBack = () => {
     navigation.pop();
@@ -36,32 +50,14 @@ const GujaratiScriptIntro = ({ navigation }: Props) => {
     <View style={[styles.container, { backgroundColor: colors.background }]}>
       <Appbar.Header style={{ backgroundColor: colors.background }}>
         <Appbar.BackAction onPress={onGoBack} />
-        <Appbar.Content title={t('learnIntroScreen.header.title')} />
+        <Appbar.Content title={title} />
       </Appbar.Header>
-      <Components.AppBaseView edges={['bottom', 'left', 'right']} style={styles.safeArea}>
-        <Button
-          onPress={() => {
-            setShow(!show);
-          }}>
-          {'Animate'}
-        </Button>
-        {show && (
-          <Animated.View
-            entering={FadeIn.duration(1200).easing(Easing.bezierFn(1, 0, 0.17, 0.98))}
-            layout={Layout.springify()}
-            style={styles.animatedChar}>
-            <AnimatedCharacter
-              emptyStroke="#ffffff10"
-              stroke="#ff0000"
-              showArrow={true}
-              strokeWidth={6}
-              play
-              initialDelay={0}
-              path={'svgs/barakhadi/1_k/1_ka.svg'}
-              duration={1000}
-            />
-          </Animated.View>
-        )}
+      <Components.AppBaseView scroll={true} edges={['bottom', 'left', 'right']} style={styles.safeArea}>
+        <View style={styles.contentContainer}>
+          {elements.map((element, index) => {
+            return <Fragment key={`demo_${index}`}>{element}</Fragment>;
+          })}
+        </View>
       </Components.AppBaseView>
     </View>
   );

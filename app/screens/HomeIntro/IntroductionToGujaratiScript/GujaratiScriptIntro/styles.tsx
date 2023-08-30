@@ -12,7 +12,10 @@ const styles = StyleSheet.create({
   subView: {
     marginHorizontal: 32,
   },
-  moreCard: { marginTop: 16, marginHorizontal: 24 },
+  moreCard: {
+    marginTop: 16,
+    marginHorizontal: 24,
+  },
   flatlist: {
     flex: 1,
   },
@@ -52,7 +55,14 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     color: 'white',
   },
-  animatedChar: { flex: 1 },
+  animatedChar: {
+    flex: 1,
+  },
+  contentContainer: {
+    flex: 1,
+    marginHorizontal: 20,
+    marginVertical: 20,
+  },
 });
 
 export default styles;

@@ -1,10 +1,15 @@
 import { NavigatorScreenParams } from '@react-navigation/native';
 import { ICharCellListSection } from 'app/components/CharCellItem';
+import { OtherStaticTypes } from 'app/realm/modals/otherStatics';
 
 export interface LoadingParams {}
 export interface DashboardTabParams {}
 export interface HomeTabsParams {}
-export interface GujaratiScriptIntroParams {}
+export interface GujaratiScriptIntroParams {
+  content: string;
+  title: string;
+  type: OtherStaticTypes;
+}
 export interface GeneralSettingParams {}
 export interface MoreAppsParams {}
 export interface SettingsParams {}

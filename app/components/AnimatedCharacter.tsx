@@ -222,9 +222,9 @@ const AnimatedCharacter = forwardRef<IAnimatedCharacterRef, IAnimatedCharacter>(
               {showArrow &&
                 g.svgClipPaths.map(p => {
                   const properties = new svgPathProperties(p.d);
-                  let tl = properties.getTotalLength() * 0.2;
-                  let tr = Math.round(tl);
-                  let end = new Array(tr).fill(0).map((_, i) => (i * 100) / tl);
+                  const tl = properties.getTotalLength() * 0.2;
+                  const tr = Math.round(tl);
+                  const end = new Array(tr).fill(0).map((_, i) => (i * 100) / tl);
 
                   return (
                     <Text fill={arrowFill} alignmentBaseline={'middle'} key={p.id} fontSize={arrowFontSize}>

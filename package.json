@@ -8,7 +8,7 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "start": "react-native start",
     "test": "jest",
-    "postinstall": "node ./post-install.js",
+    "postinstall": "npx patch-package && node ./post-install.js",
     "license-crawler": "npx npm-license-crawler -onlyDirectDependencies -json licenses.json"
   },
   "dependencies": {
@@ -39,6 +39,7 @@
     "react-native-in-app-review": "^4.3.3",
     "react-native-inappbrowser-reborn": "^3.7.0",
     "react-native-localize": "^3.0.2",
+    "react-native-marked": "^5.1.0",
     "react-native-mmkv": "^2.10.1",
     "react-native-paper": "^5.9.1",
     "react-native-reanimated": "^3.3.0",

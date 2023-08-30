@@ -1,12 +1,13 @@
 // Create a configuration object
 
 import DeviceData from 'app/realm/modals/cardStatics';
+import ChartStatics from 'app/realm/modals/chartStatics';
+import OtherStatics from 'app/realm/modals/otherStatics';
 import { createRealmContext } from '@realm/react';
 import { onMigration } from 'app/realm/migration';
-import ChartStatics from 'app/realm/modals/chartStatics';
 
 const realmContext: Realm.Configuration = {
-  schema: [DeviceData, ChartStatics],
+  schema: [DeviceData, ChartStatics, OtherStatics],
   onMigration: onMigration,
   deleteRealmIfMigrationNeeded: __DEV__,
 };
