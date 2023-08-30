@@ -1,0 +1,13 @@
+diff --git a/node_modules/react-native-marked/src/utils/table.ts b/node_modules/react-native-marked/src/utils/table.ts
+index d121105..766ad44 100644
+--- a/node_modules/react-native-marked/src/utils/table.ts
++++ b/node_modules/react-native-marked/src/utils/table.ts
+@@ -9,7 +9,7 @@ export const getTableWidthArr = (totalCols: number, windowWidth: number) => {
+ 	return Array(totalCols)
+ 		.fill(0)
+ 		.map(() => {
+-			return Math.floor(windowWidth * (1.3 / 3));
++			return 80
+ 		});
+ };
+ 

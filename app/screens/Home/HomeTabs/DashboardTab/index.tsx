@@ -15,6 +15,7 @@ import Config from 'app/config';
 import { LearnCharsType, LoggedInTabNavigatorParams } from 'app/navigation/types';
 import { AppTheme } from 'app/models/theme';
 import useHomeListProgressItems from 'app/hooks/useHomeListProgressItems';
+import { OtherStaticTypes } from 'app/realm/modals/otherStatics';
 
 //Params
 type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'DashboardTab'>;
@@ -34,7 +35,17 @@ const DashboardTab = ({ navigation }: Props) => {
   const cardTapped = useCallback(
     (item: IHomeListItem, index: number, sectionIndex: number) => {
       if (sectionIndex === 0 && index === 0) {
-        navigation.push('GujaratiScriptIntro', {});
+        navigation.push('GujaratiScriptIntro', {
+          content: t('homeScreen.listItemsSection1.itemDesc1'),
+          title: t('learnIntroScreen.header.title'),
+          type: OtherStaticTypes.OverViewIntro,
+        });
+      } else if (sectionIndex === 0 && index === 1) {
+        navigation.push('GujaratiScriptIntro', {
+          content: t('homeScreen.listItemsSection1.itemDesc2'),
+          title: t('learnIntroScreen.header.title'),
+          type: OtherStaticTypes.CulturalIntro,
+        });
       } else if (sectionIndex === 1 && index === 0) {
         navigation.push('LearnCharsList', { type: LearnCharsType.Vowel, color: item.color });
       } else if (sectionIndex === 1 && index === 1) {

@@ -19,6 +19,7 @@ import Components from 'app/components';
 import useCardStatics from 'app/realm/crud/cardStatics';
 import useChartStatics from 'app/realm/crud/chartStatics';
 import { LoggedInTabNavigatorParams } from 'app/navigation/types';
+import useOtherStatics from 'app/realm/crud/otherStatics';
 
 //Params
 type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'GeneralSetting'>;
@@ -31,6 +32,7 @@ const GeneralSetting = ({ navigation }: Props) => {
   const { colors } = useTheme();
   const { clearAllData: clearAllCardData } = useCardStatics();
   const { clearAllData: clearAllChartData } = useChartStatics();
+  const { clearAllData: clearAllOtherData } = useOtherStatics();
 
   //States
   const [clearProgressAlertVisible, setClearProgressAlertVisible] = useState(false);
@@ -79,6 +81,13 @@ const GeneralSetting = ({ navigation }: Props) => {
         break;
       default:
     }
+  };
+
+  const onClearAllData = () => {
+    setClearProgressAlertVisible(false);
+    clearAllCardData();
+    clearAllChartData();
+    clearAllOtherData();
   };
 
   return (
@@ -130,11 +139,7 @@ const GeneralSetting = ({ navigation }: Props) => {
         visible={clearProgressAlertVisible}
         cancelText={t('general.cancel')}
         confirmText={t('general.ok')}
-        onPressConfirm={() => {
-          setClearProgressAlertVisible(false);
-          clearAllCardData();
-          clearAllChartData();
-        }}
+        onPressConfirm={onClearAllData}
         onPressCancel={() => setClearProgressAlertVisible(false)}
       />
     </View>

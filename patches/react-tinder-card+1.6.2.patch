@@ -1,0 +1,13 @@
+diff --git a/node_modules/react-tinder-card/index.native.js b/node_modules/react-tinder-card/index.native.js
+index f443f57..8522760 100644
+--- a/node_modules/react-tinder-card/index.native.js
++++ b/node_modules/react-tinder-card/index.native.js
+@@ -155,7 +155,7 @@ const TinderCard = React.forwardRef(
+         PanResponder.create({
+           // Ask to be the responder:
+           onStartShouldSetPanResponder: (evt, gestureState) => true,
+-          onStartShouldSetPanResponderCapture: (evt, gestureState) => true,
++          onStartShouldSetPanResponderCapture: (evt, gestureState) => false,
+           onMoveShouldSetPanResponder: (evt, gestureState) => true,
+           onMoveShouldSetPanResponderCapture: (evt, gestureState) => true,
+ 

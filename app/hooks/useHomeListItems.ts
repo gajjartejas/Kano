@@ -20,6 +20,14 @@ const useHomeListItems = (): IHomeListSection[] => {
             iconFamily: 'material-community',
             color: '#9a0007',
           },
+          {
+            id: 1,
+            title: t('homeScreen.listItemsSection1.itemTitle2'),
+            subTitle: t('homeScreen.listItemsSection1.itemSubTitle2'),
+            iconName: 'egg',
+            iconFamily: 'material-community',
+            color: '#7C4DFF',
+          },
         ],
       },
       {
