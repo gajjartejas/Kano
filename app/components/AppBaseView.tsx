@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { ScrollView, ViewStyle } from 'react-native';
 import { Edge, SafeAreaView } from 'react-native-safe-area-context';
 
@@ -18,4 +18,4 @@ const AppBaseView = (props: iAppBaseViewProps) => {
   );
 };
 
-export default AppBaseView;
+export default memo(AppBaseView);

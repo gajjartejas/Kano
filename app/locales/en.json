@@ -32,12 +32,12 @@
   },
   "moreApps": {
     "appsTitle": "More Apps",
-    "apps1Title": "Kano - An interactive way to learn Gujarati",
-    "apps1Desc": "An interactive way to learn Gujarati",
-    "apps2Title": "MIUI - Ads helper",
-    "apps2Desc": "This application allows you to enable/disable ads or recommendations for various apps in Xiaomi (MIUI) devices.",
-    "apps3Title": "OHM-Client",
-    "apps3Desc": "`OHM-Client` is an unofficial open hardware monitor client app for android and iOS written in react-native. Using this app you can monitor open hardware monitor web server.",
+    "apps1Title": "Kano",
+    "apps1Desc": "An interactive way to learn Gujarati kakko, barakhadi and numbers.",
+    "apps2Title": "OHM-Client",
+    "apps2Desc": "`OHM-Client` is an unofficial open hardware monitor client app for android and iOS written in react-native. Using this app you can monitor open hardware monitor web server.",
+    "apps3Title": "MIUI - Ads helper",
+    "apps3Desc": "This application allows you to enable/disable ads or recommendations for various apps in Xiaomi (MIUI) devices.",
     "appsGithub": "Github",
     "appsPlayStore": "Play Store"
   },
@@ -125,7 +125,7 @@
   "aboutScreen": {
     "title": "About Kano",
     "infoHeader": "Information",
-    "infoDescTitle": "This application allows you to enable/disable ads or recommendations for various apps in Xiaomi (MIUI) devices.",
+    "infoDescTitle": "An interactive way to learn Gujarati kakko, barakhadi and numbers.",
     "infoAuthorNameTitle": "Tejas Gajjar",
     "developerTitle": "Developer",
     "portfolioTitle": "Portfolio",

@@ -4,7 +4,7 @@ import { Linking, View } from 'react-native';
 //ThirdParty
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
-import { Appbar, useTheme } from 'react-native-paper';
+import { useTheme } from 'react-native-paper';
 
 //App modules
 import Config from 'app/config';
@@ -14,7 +14,8 @@ import Utils from 'app/utils';
 import Components from 'app/components';
 import styles from './styles';
 import { LoggedInTabNavigatorParams } from 'app/navigation/types';
-import { isTablet } from 'react-native-device-info';
+import useLargeScreenMode from 'app/hooks/useLargeScreenMode';
+import AppHeader from 'app/components/AppHeader';
 
 //Interfaces
 interface IMoreAppItem {
@@ -34,6 +35,7 @@ const MoreApps = ({ navigation }: Props) => {
   //Constants
   const { t } = useTranslation();
   const { colors } = useTheme();
+  const largeScreenMode = useLargeScreenMode();
 
   //States
   const [apps] = useState<IMoreAppItem[]>([
@@ -42,13 +44,24 @@ const MoreApps = ({ navigation }: Props) => {
       icon: Config.Images.icons.app_icon,
       title: t('moreApps.apps1Title'),
       description: t('moreApps.apps1Desc'),
-      showLinks: false,
+      showLinks: true,
+      github: Config.Constants.REPO_URL,
+      playStore: Config.Constants.PLAY_STORE_URL,
     },
     {
       id: 1,
-      icon: Config.Images.icons.ic_more_app_miuiadshelper,
+      icon: Config.Images.icons.ic_more_app_ohmclient,
       title: t('moreApps.apps2Title'),
       description: t('moreApps.apps2Desc'),
+      showLinks: true,
+      github: Config.Constants.MORE_APPS_OHMCLIENT_GITHUB,
+      playStore: Config.Constants.MORE_APPS_OHMCLIENT_PLAY_STORE,
+    },
+    {
+      id: 2,
+      icon: Config.Images.icons.ic_more_app_miuiadshelper,
+      title: t('moreApps.apps3Title'),
+      description: t('moreApps.apps3Desc'),
       showLinks: true,
       github: Config.Constants.MORE_APPS_MIUI_ADS_HELPER_GITHUB,
       playStore: Config.Constants.MORE_APPS_MIUI_ADS_HELPER_PLAY_STORE,
@@ -60,39 +73,28 @@ const MoreApps = ({ navigation }: Props) => {
   }, [navigation]);
 
   const onPressGithub = useCallback((item: IMoreAppItem, _index: number) => {
-    switch (item.id) {
-      case 0:
-        break;
-      case 1:
-        if (item.github != null) {
-          Utils.openInAppBrowser(item.github);
-        }
-        break;
+    if (item.github != null) {
+      Utils.openInAppBrowser(item.github);
     }
   }, []);
 
   const onPressPlayStore = useCallback((item: IMoreAppItem, _index: number) => {
-    switch (item.id) {
-      case 0:
-        break;
-      case 1:
-        if (item.github != null) {
-          if (item.playStore != null) {
-            Linking.openURL(item.playStore);
-          }
-        }
-        break;
+    if (item.playStore != null) {
+      Linking.openURL(item.playStore);
     }
   }, []);
 
   return (
     <View style={[styles.container, { backgroundColor: colors.background }]}>
-      <Appbar.Header style={{ backgroundColor: colors.background }}>
-        <Appbar.BackAction onPress={onGoBack} />
-        <Appbar.Content title={t('moreApps.appsTitle')} />
-      </Appbar.Header>
+      <AppHeader
+        showBackButton={true}
+        onPressBackButton={onGoBack}
+        title={t('moreApps.appsTitle')}
+        style={{ backgroundColor: colors.background }}
+      />
+
       <Components.AppBaseView scroll edges={['bottom', 'left', 'right']} style={styles.safeArea}>
-        <View style={[styles.listContainer, isTablet() && styles.cardTablet]}>
+        <View style={[styles.listContainer, largeScreenMode && styles.cardTablet]}>
           {apps.map((item, index) => {
             return (
               <Components.MoreAppCard

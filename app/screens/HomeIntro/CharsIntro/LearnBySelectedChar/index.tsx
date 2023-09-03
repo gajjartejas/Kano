@@ -2,20 +2,22 @@ import React, { useEffect, useState, useRef, useCallback } from 'react';
 import { View, useWindowDimensions, Platform } from 'react-native';
 
 //ThirdParty
-import { Appbar, Button, Chip, Text, useTheme } from 'react-native-paper';
+import { Button, Chip, Text, useTheme } from 'react-native-paper';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
 import { FlashList } from '@shopify/flash-list';
+import Icon from 'react-native-easy-icon';
 
 //App modules
 import Components from 'app/components';
 import styles from './styles';
-import Hooks from 'app/hooks/index';
 import { ISelectCharCellItem } from 'app/components/CharSelectCellItem';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { LearnCharsType, LoggedInTabNavigatorParams } from 'app/navigation/types';
 import { AppTheme } from 'app/models/theme';
-import { isTablet } from 'react-native-device-info';
+import useLargeScreenMode from 'app/hooks/useLargeScreenMode';
+import AppHeader from 'app/components/AppHeader';
+import { useSelectedChartItemForTypes } from 'app/hooks/useChartItemForType';
 
 //Params
 type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'LearnBySelectedChar'>;
@@ -33,8 +35,9 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
   const { type, learnMode, isRandomMode, color } = route.params;
   const { t } = useTranslation();
   const dim = useWindowDimensions();
-  const groupedEntries = Hooks.ChartItemForTypes.useSelectedChartItemForTypes(type);
+  const groupedEntries = useSelectedChartItemForTypes(type);
   const mappedGroupedEntries = groupedEntries.map(v => [v.title, v.data]).flat(1);
+  const largeScreenMode = useLargeScreenMode();
 
   //States
   const [numberOfColumns, setNumberOfColumns] = useState<number | null>(null);
@@ -42,7 +45,7 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
   const [parentWidth, setParentWidth] = useState<number | undefined>();
 
   useEffect(() => {
-    const scaleFactor = isTablet() ? 2 : 1;
+    const scaleFactor = largeScreenMode ? 2 : 1;
 
     switch (type) {
       case LearnCharsType.Vowel:
@@ -64,7 +67,7 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
       default:
         break;
     }
-  }, [type]);
+  }, [largeScreenMode, type]);
 
   useEffect(() => {
     refSelectedIds.current = selectedIds;
@@ -161,10 +164,18 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
         <View style={styles.listHeaderView}>
           <Text style={[styles.listHeaderText, { color: colors.textTitle }]}>{titleText}</Text>
           <Chip
-            selectedColor={allSelected ? colors.white : colors.primary}
             style={[styles.chipStyle, { backgroundColor: allSelected ? colors.primary : colors.white }]}
             textStyle={[styles.chipText, { color: allSelected ? colors.white : colors.primary }]}
-            icon={allSelected ? 'check-circle' : 'check-circle-outline'}
+            avatar={
+              <View style={styles.chipIconContainer}>
+                <Icon
+                  type="material-community"
+                  name={allSelected ? 'check-circle' : 'check-circle-outline'}
+                  color={allSelected ? colors.white : colors.primary}
+                  size={16}
+                />
+              </View>
+            }
             onPress={() => onSelectCheckbox(index)}>
             {allSelected ? t('learnBySelectedChar.unselectAll') : t('learnBySelectedChar.selectAll')}
           </Chip>
@@ -188,6 +199,7 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
   }, [color, isRandomMode, learnMode, navigation, selectedIds, type]);
 
   const otherProps = Platform.OS === 'ios' ? { statusBarHeight: 0 } : {};
+
   return (
     <SafeAreaView
       onLayout={event => {
@@ -195,10 +207,15 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
       }}
       edges={['bottom']}
       style={[styles.container, { backgroundColor: `${color}15` }]}>
-      <Appbar.Header style={{ backgroundColor: colors.background }} {...otherProps}>
-        <Appbar.Action icon={'chevron-down'} onPress={onGoBack} />
-        <Appbar.Content title={t('learnBySelectedChar.header.title')} />
-      </Appbar.Header>
+      <AppHeader
+        showBackButton={true}
+        onPressBackButton={onGoBack}
+        title={t('learnBySelectedChar.header.title')}
+        style={{ backgroundColor: `${color}15` }}
+        backArrowImage={'chevron-down'}
+        {...otherProps}
+      />
+
       <Components.AppBaseView edges={['bottom', 'left', 'right']} style={styles.safeArea}>
         {!!numberOfColumns && parentWidth !== undefined && (
           <View style={[styles.listContainer, { paddingHorizontal: CONTAINER_SPACING - 1 }]}>

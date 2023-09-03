@@ -5,11 +5,11 @@ import { View, StyleSheet } from 'react-native';
 import { TouchableRipple, useTheme, Text } from 'react-native-paper';
 import Icon from 'react-native-easy-icon';
 import { IconType } from 'react-native-easy-icon/src/Icon';
-import { isTablet } from 'react-native-device-info';
 
 //App Modules
 import CircularProgress from './CircularProgress';
 import { AppTheme } from 'app/models/theme';
+import useLargeScreenMode from 'app/hooks/useLargeScreenMode';
 
 //Interface
 export interface ICharListItem {
@@ -40,9 +40,12 @@ const CharListItem = (props: ICharListItemProps) => {
   const { colors } = useTheme<AppTheme>();
   const { item, index, progress } = props;
   const sectionIndex = props.sectionIndex;
+  const largeScreenMode = useLargeScreenMode();
+  const width = largeScreenMode ? '49%' : '100%';
 
   return (
-    <View style={[styles.container, { backgroundColor: `${item.color}`, shadowColor: `${colors.shadow}` }]}>
+    <View
+      style={[styles.container, { width: width, backgroundColor: `${item.color}`, shadowColor: `${colors.shadow}` }]}>
       <TouchableRipple
         rippleColor={`${colors.primary}20`}
         style={[styles.touchableButton, { backgroundColor: `${colors.card}20` }]}
@@ -98,7 +101,6 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.2,
     height: 98,
     marginBottom: 8,
-    width: isTablet() ? '49%' : '100%',
   },
   touchableButton: {
     flex: 1,
@@ -132,4 +134,4 @@ const styles = StyleSheet.create({
   textContainer: { marginRight: 8, flex: 1 },
 });
 
-export default memo(CharListItem, () => false);
+export default memo(CharListItem);

@@ -8,14 +8,14 @@ import { Text, useTheme } from 'react-native-paper';
 
 //App modules
 import Components from 'app/components';
-import { IHomeListItem } from 'app/components/HomeListItem';
-import Hooks from 'app/hooks/index';
 import styles from './styles';
 import Config from 'app/config';
+import { IHomeListItem } from 'app/components/HomeListItem';
 import { LearnCharsType, LoggedInTabNavigatorParams } from 'app/navigation/types';
 import { AppTheme } from 'app/models/theme';
 import useHomeListProgressItems from 'app/hooks/useHomeListProgressItems';
 import { OtherStaticTypes } from 'app/realm/modals/otherStatics';
+import useHomeListItems from 'app/hooks/useHomeListItems';
 
 //Params
 type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'DashboardTab'>;
@@ -27,7 +27,7 @@ const DashboardTab = ({ navigation }: Props) => {
 
   //Constants
   const { colors } = useTheme<AppTheme>();
-  const groupedEntries = Hooks.useHomeListItems();
+  const groupedEntries = useHomeListItems();
   const groupedEntriesProgress = useHomeListProgressItems();
   const { t } = useTranslation();
 
@@ -39,12 +39,14 @@ const DashboardTab = ({ navigation }: Props) => {
           content: t('homeScreen.listItemsSection1.itemDesc1'),
           title: t('learnIntroScreen.header.title'),
           type: OtherStaticTypes.OverViewIntro,
+          color: item.color,
         });
       } else if (sectionIndex === 0 && index === 1) {
         navigation.push('GujaratiScriptIntro', {
           content: t('homeScreen.listItemsSection1.itemDesc2'),
           title: t('learnIntroScreen.header.title'),
           type: OtherStaticTypes.CulturalIntro,
+          color: item.color,
         });
       } else if (sectionIndex === 1 && index === 0) {
         navigation.push('LearnCharsList', { type: LearnCharsType.Vowel, color: item.color });
@@ -56,7 +58,7 @@ const DashboardTab = ({ navigation }: Props) => {
         navigation.push('LearnCharsList', { type: LearnCharsType.Number, color: item.color });
       }
     },
-    [navigation],
+    [navigation, t],
   );
 
   const renderItem = ({

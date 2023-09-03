@@ -4,8 +4,8 @@ import { Image, Linking, View } from 'react-native';
 //ThirdParty
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
-import DeviceInfo, { isTablet } from 'react-native-device-info';
-import { Appbar, Divider, List, Text, useTheme } from 'react-native-paper';
+import DeviceInfo from 'react-native-device-info';
+import { Divider, List, Text, useTheme } from 'react-native-paper';
 
 //App modules
 import Config from 'app/config';
@@ -18,6 +18,8 @@ import styles from './styles';
 import Components from 'app/components';
 import { AppTheme } from 'app/models/theme';
 import { LoggedInTabNavigatorParams } from 'app/navigation/types';
+import useLargeScreenMode from 'app/hooks/useLargeScreenMode';
+import AppHeader from 'app/components/AppHeader';
 
 type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'About'>;
 
@@ -25,6 +27,7 @@ const About = ({ navigation }: Props) => {
   //Constants
   const { t } = useTranslation();
   const { colors } = useTheme<AppTheme>();
+  const largeScreenMode = useLargeScreenMode();
 
   //States
   const [apps] = useState<ISettingSection[]>([
@@ -129,11 +132,12 @@ const About = ({ navigation }: Props) => {
 
   return (
     <View style={[styles.container, { backgroundColor: colors.background }]}>
-      <Appbar.Header style={{ backgroundColor: colors.background }}>
-        <Appbar.BackAction onPress={onGoBack} />
-        <Appbar.Content title={t('aboutScreen.title')} />
-      </Appbar.Header>
-
+      <AppHeader
+        showBackButton={true}
+        onPressBackButton={onGoBack}
+        title={t('aboutScreen.title')}
+        style={{ backgroundColor: colors.background }}
+      />
       <Components.AppBaseView scroll edges={['bottom', 'left', 'right']} style={styles.safeArea}>
         <Image source={Config.Images.icons.app_icon} resizeMode="contain" style={styles.appicon} />
         <Text style={[styles.appNameText, { color: colors.onBackground }]}>{DeviceInfo.getApplicationName()}</Text>
@@ -147,7 +151,7 @@ const About = ({ navigation }: Props) => {
               <View
                 style={[
                   styles.listItem,
-                  isTablet() && styles.cardTablet,
+                  largeScreenMode && styles.cardTablet,
                   { backgroundColor: `${colors.card}`, shadowColor: `${colors.shadow}` },
                 ]}
                 key={item.id.toString()}>

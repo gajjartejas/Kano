@@ -9,6 +9,7 @@ export interface GujaratiScriptIntroParams {
   content: string;
   title: string;
   type: OtherStaticTypes;
+  color: string;
 }
 export interface GeneralSettingParams {}
 export interface MoreAppsParams {}

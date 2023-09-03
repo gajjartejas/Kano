@@ -2,7 +2,7 @@ import React, { useEffect, useState, useCallback } from 'react';
 import { View, useWindowDimensions } from 'react-native';
 
 //ThirdParty
-import { Appbar, Text, useTheme } from 'react-native-paper';
+import { Text, useTheme } from 'react-native-paper';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
 import { FlashList } from '@shopify/flash-list';
@@ -10,13 +10,14 @@ import { FlashList } from '@shopify/flash-list';
 //App modules
 import Components from 'app/components';
 import styles from './styles';
-import Hooks from 'app/hooks/index';
 import { ICharCellItem } from 'app/components/CharCellItem';
 import { LearnCharsType, LoggedInTabNavigatorParams } from 'app/navigation/types';
 import { AppTheme } from 'app/models/theme';
 import useHintConfig from 'app/hooks/useHintConfig';
 import useToastMessages from 'app/hooks/useToastMessages';
-import { isTablet } from 'react-native-device-info';
+import useLargeScreenMode from 'app/hooks/useLargeScreenMode';
+import AppHeader from 'app/components/AppHeader';
+import { useChartItemForTypes } from 'app/hooks/useChartItemForType';
 
 //Params
 type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'LearnCharsChart'>;
@@ -32,11 +33,12 @@ const LearnCharsChart = ({ navigation, route }: Props) => {
   //Constants
   const { colors } = useTheme<AppTheme>();
   const { type, color } = route.params;
-  const groupedEntries = Hooks.ChartItemForTypes.useChartItemForTypes(type);
+  const groupedEntries = useChartItemForTypes(type);
   const { t } = useTranslation();
   const mappedGroupedEntries = groupedEntries.map(v => [v.title, v.data]).flat(1);
   const dim = useWindowDimensions();
-  const [_, chartHints] = useHintConfig();
+  const [, chartHints] = useHintConfig();
+  const largeScreenMode = useLargeScreenMode();
   useToastMessages(chartHints);
 
   //States
@@ -44,7 +46,7 @@ const LearnCharsChart = ({ navigation, route }: Props) => {
   const [numberOfColumns, setNumberOfColumns] = useState<number | null>(null);
 
   useEffect(() => {
-    const scaleFactor = isTablet() ? 2 : 1;
+    const scaleFactor = largeScreenMode ? 2 : 1;
 
     switch (type) {
       case LearnCharsType.Vowel:
@@ -70,7 +72,7 @@ const LearnCharsChart = ({ navigation, route }: Props) => {
       default:
         break;
     }
-  }, [t, type]);
+  }, [largeScreenMode, t, type]);
 
   const cardTapped = useCallback(
     (item: ICharCellItem, index: number, sectionIndex: number) => {
@@ -132,10 +134,13 @@ const LearnCharsChart = ({ navigation, route }: Props) => {
 
   return (
     <View style={[styles.container, { backgroundColor: `${color}15` }]}>
-      <Appbar.Header style={{ backgroundColor: colors.background }}>
-        <Appbar.BackAction onPress={onGoBack} />
-        <Appbar.Content title={title} />
-      </Appbar.Header>
+      <AppHeader
+        showBackButton={true}
+        onPressBackButton={onGoBack}
+        title={title}
+        style={{ backgroundColor: `${color}15` }}
+      />
+
       <Components.AppBaseView edges={['bottom', 'left', 'right']} style={styles.safeArea}>
         {!!numberOfColumns && (
           <View style={[styles.listContainer, { paddingHorizontal: CONTAINER_SPACING - 1 }]}>

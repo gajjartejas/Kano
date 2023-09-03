@@ -4,7 +4,6 @@ import { FlatList, useWindowDimensions, View } from 'react-native';
 //ThirdParty
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
-import { Appbar, useTheme } from 'react-native-paper';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 //App modules
@@ -16,6 +15,7 @@ import useSoundPlayer from 'app/hooks/useAudioPlayer';
 import useHintConfig from 'app/hooks/useHintConfig';
 import useToastMessages from 'app/hooks/useToastMessages';
 import useChartStatics from 'app/realm/crud/chartStatics';
+import AppHeader from 'app/components/AppHeader';
 
 //Params
 type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'LearnCharInfo'>;
@@ -27,7 +27,6 @@ const LearnCharInfo = ({ navigation, route }: Props) => {
   //Actions
 
   //Constants
-  const { colors } = useTheme();
   const { t } = useTranslation();
   const dimension = useWindowDimensions();
   const { index: initialScrollIndex, sectionIndex, groupedEntries, color, type } = route.params;
@@ -104,10 +103,13 @@ const LearnCharInfo = ({ navigation, route }: Props) => {
 
   return (
     <View style={[styles.container, { backgroundColor: `${color}15` }]}>
-      <Appbar.Header style={{ backgroundColor: colors.background }}>
-        <Appbar.BackAction onPress={onGoBack} />
-        <Appbar.Content title={t('learnCharInfoScreen.header.title')} />
-      </Appbar.Header>
+      <AppHeader
+        showBackButton={true}
+        onPressBackButton={onGoBack}
+        title={t('learnCharInfoScreen.header.title')}
+        style={{ backgroundColor: `${color}15` }}
+      />
+
       <Components.AppBaseView scroll edges={['bottom', 'left', 'right']} style={styles.safeArea}>
         <FlatList
           ref={refFlatList}

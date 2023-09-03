@@ -1,11 +1,13 @@
-import Config from 'app/config';
-import React from 'react';
+import React, { memo } from 'react';
 import { StyleSheet, View } from 'react-native';
 
 //Third Party
 import Icon from 'react-native-easy-icon';
 import { IconType } from 'react-native-easy-icon/src/Icon';
 import { Text, TouchableRipple, useTheme } from 'react-native-paper';
+
+//App Modules
+import Config from 'app/config';
 import { AppTheme } from 'app/models/theme';
 
 //Interface
@@ -75,4 +77,4 @@ const styles = StyleSheet.create({
   boldText: { fontWeight: '600', fontFamily: Config.Fonts.NotoSansGujarati.Bold },
 });
 
-export default AppTitleValueItemCell;
+export default memo(AppTitleValueItemCell);

@@ -12,7 +12,7 @@ import AppTitleValueItemCell from './AppTitleValueItemCell';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { AppTheme } from 'app/models/theme';
 import useSvgReader from 'app/hooks/useSvgReader';
-import { isTablet } from 'react-native-device-info';
+import useLargeScreenMode from 'app/hooks/useLargeScreenMode';
 
 //Interface
 interface ILearnCharInfoItemCellProps {
@@ -43,14 +43,16 @@ const LearnCharInfoItemCell = (props: ILearnCharInfoItemCellProps) => {
   const englishCharacter = en;
   const numberOfStrokes = parsedSvg?.groups.length.toString();
   const length = parsedSvg?.totalLength ? Math.round(parsedSvg?.totalLength).toString() + ' px' : 'N/A';
+  const largeScreenMode = useLargeScreenMode();
+  const fontSize = largeScreenMode ? 200 : 100;
 
   return (
     <View style={[styles.container, { width: dim.width - insets.right - insets.left }]}>
-      <Text style={[styles.headerText, { color: colors.text }]}>{gu}</Text>
+      <Text style={[styles.headerText, { fontSize: fontSize, color: colors.text }]}>{gu}</Text>
       <View
         style={[
           styles.card,
-          isTablet() && styles.cardTablet,
+          largeScreenMode && styles.cardTablet,
           { backgroundColor: `${colors.card}`, shadowColor: `${colors.shadow}` },
         ]}>
         <AppTitleValueItemCell touchDisabled title={t('learnCharInfoScreen.character')} value={character} />
@@ -66,7 +68,7 @@ const LearnCharInfoItemCell = (props: ILearnCharInfoItemCellProps) => {
       <View
         style={[
           styles.card,
-          isTablet() && styles.cardTablet,
+          largeScreenMode && styles.cardTablet,
           { backgroundColor: `${colors.card}`, shadowColor: `${colors.shadow}` },
         ]}>
         <AppTitleValueItemCell bold touchDisabled title={t('learnCharInfoScreen.moreInfo')} />
@@ -102,7 +104,6 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     fontFamily: Config.Fonts.NotoSansGujarati.SemiBold,
     fontWeight: '400',
-    fontSize: isTablet() ? 200 : 100,
     marginTop: 32,
     marginBottom: 12,
   },

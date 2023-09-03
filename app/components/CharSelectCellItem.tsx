@@ -1,12 +1,12 @@
 import React, { memo } from 'react';
 import { View, StyleSheet, useWindowDimensions } from 'react-native';
 
-//App Modules
-import Config from 'app/config';
-
 //Third Party
 import { TouchableRipple, useTheme, Text } from 'react-native-paper';
 import { AppTheme } from 'app/models/theme';
+
+//App Modules
+import Config from 'app/config';
 
 //Interface
 export interface ISelectCharCellItem {
@@ -122,5 +122,11 @@ const styles = StyleSheet.create({
 });
 
 export default memo(CharCellItem, (p, n) => {
-  return p.selected === n.selected && p.item.id === n.item.id && p.parentWidth === n.parentWidth;
+  return (
+    p.index === n.index &&
+    p.sectionIndex === n.sectionIndex &&
+    p.selected === n.selected &&
+    p.item.id === n.item.id &&
+    p.parentWidth === n.parentWidth
+  );
 });

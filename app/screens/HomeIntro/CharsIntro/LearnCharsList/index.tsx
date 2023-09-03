@@ -4,15 +4,16 @@ import { ScrollView, View } from 'react-native';
 //ThirdParty
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
-import { Appbar, Text, useTheme } from 'react-native-paper';
+import { Text } from 'react-native-paper';
 
 //App modules
 import Components from 'app/components';
 import { ICharListItem } from 'app/components/CharListItem';
-import Hooks from 'app/hooks/index';
 import styles from './styles';
 import { LearnCharsMode, LearnCharsType, LoggedInTabNavigatorParams } from 'app/navigation/types';
 import useCharListProgressForType from 'app/hooks/useCharListProgressForType';
+import AppHeader from 'app/components/AppHeader';
+import useCharListItemForType from 'app/hooks/useCharListItemForType';
 
 //Params
 type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'LearnCharsList'>;
@@ -23,9 +24,8 @@ const LearnCharsList = ({ navigation, route }: Props) => {
   //Actions
 
   //Constants
-  const { colors } = useTheme();
   const { type, color } = route.params;
-  const groupedEntries = Hooks.useCharListItemForType(type);
+  const groupedEntries = useCharListItemForType(type);
   const { t } = useTranslation();
   const { getCharListProgressForType } = useCharListProgressForType();
   const progressListItems = getCharListProgressForType(type);
@@ -121,11 +121,14 @@ const LearnCharsList = ({ navigation, route }: Props) => {
   }, [navigation]);
 
   return (
-    <View style={[styles.container, { backgroundColor: `${color}20` }]}>
-      <Appbar.Header style={{ backgroundColor: colors.background }}>
-        <Appbar.BackAction onPress={onGoBack} />
-        <Appbar.Content title={title} />
-      </Appbar.Header>
+    <View style={[styles.container, { backgroundColor: `${color}15` }]}>
+      <AppHeader
+        showBackButton={true}
+        onPressBackButton={onGoBack}
+        title={title}
+        style={{ backgroundColor: `${color}15` }}
+      />
+
       <Components.AppBaseView edges={['bottom', 'left', 'right']} style={styles.safeArea}>
         <ScrollView style={styles.scrollView}>
           {groupedEntries.map((section, sectionIndex) => {
