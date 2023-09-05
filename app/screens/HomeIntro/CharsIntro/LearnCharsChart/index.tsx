@@ -36,7 +36,7 @@ const LearnCharsChart = ({ navigation, route }: Props) => {
   const groupedEntries = useChartItemForTypes(type);
   const { t } = useTranslation();
   const mappedGroupedEntries = groupedEntries.map(v => [v.title, v.data]).flat(1);
-  const dim = useWindowDimensions();
+  const { width } = useWindowDimensions();
   const [, chartHints] = useHintConfig();
   const largeScreenMode = useLargeScreenMode();
   useToastMessages(chartHints);
@@ -143,18 +143,16 @@ const LearnCharsChart = ({ navigation, route }: Props) => {
 
       <Components.AppBaseView edges={['bottom', 'left', 'right']} style={styles.safeArea}>
         {!!numberOfColumns && (
-          <View style={[styles.listContainer, { paddingHorizontal: CONTAINER_SPACING - 1 }]}>
-            <FlashList
-              data={mappedGroupedEntries}
-              renderItem={renderSection}
-              getItemType={item => {
-                return typeof item === 'string' ? 'sectionHeader' : 'row';
-              }}
-              contentContainerStyle={styles.listContentContainer}
-              stickyHeaderHiddenOnScroll={true}
-              estimatedItemSize={dim.width - CONTAINER_SPACING * 2}
-            />
-          </View>
+          <FlashList
+            data={mappedGroupedEntries}
+            renderItem={renderSection}
+            getItemType={item => {
+              return typeof item === 'string' ? 'sectionHeader' : 'row';
+            }}
+            contentContainerStyle={{ ...styles.listContentContainer, paddingHorizontal: CONTAINER_SPACING - 1 }}
+            stickyHeaderHiddenOnScroll={true}
+            estimatedItemSize={width - CONTAINER_SPACING * 2}
+          />
         )}
       </Components.AppBaseView>
     </View>

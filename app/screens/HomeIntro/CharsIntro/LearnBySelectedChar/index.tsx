@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef, useCallback } from 'react';
-import { View, useWindowDimensions, Platform } from 'react-native';
+import { View, Platform, useWindowDimensions } from 'react-native';
 
 //ThirdParty
 import { Button, Chip, Text, useTheme } from 'react-native-paper';
@@ -34,7 +34,7 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
   const { colors } = useTheme<AppTheme>();
   const { type, learnMode, isRandomMode, color } = route.params;
   const { t } = useTranslation();
-  const dim = useWindowDimensions();
+  const { width } = useWindowDimensions();
   const groupedEntries = useSelectedChartItemForTypes(type);
   const mappedGroupedEntries = groupedEntries.map(v => [v.title, v.data]).flat(1);
   const largeScreenMode = useLargeScreenMode();
@@ -201,12 +201,7 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
   const otherProps = Platform.OS === 'ios' ? { statusBarHeight: 0 } : {};
 
   return (
-    <SafeAreaView
-      onLayout={event => {
-        setParentWidth(event.nativeEvent.layout.width);
-      }}
-      edges={['bottom']}
-      style={[styles.container, { backgroundColor: `${color}15` }]}>
+    <SafeAreaView edges={['bottom']} style={[styles.container, { backgroundColor: `${color}15` }]}>
       <AppHeader
         showBackButton={true}
         onPressBackButton={onGoBack}
@@ -216,33 +211,36 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
         {...otherProps}
       />
 
-      <Components.AppBaseView edges={['bottom', 'left', 'right']} style={styles.safeArea}>
+      <Components.AppBaseView
+        onLayout={event => {
+          setParentWidth(event.nativeEvent.layout.width - 2 * CONTAINER_SPACING - 1);
+        }}
+        edges={['bottom', 'left', 'right']}
+        style={styles.safeArea}>
         {!!numberOfColumns && parentWidth !== undefined && (
-          <View style={[styles.listContainer, { paddingHorizontal: CONTAINER_SPACING - 1 }]}>
-            <FlashList
-              data={mappedGroupedEntries}
-              extraData={selectedIds}
-              renderItem={renderSection}
-              getItemType={item => {
-                return typeof item === 'string' ? 'sectionHeader' : 'row';
-              }}
-              contentContainerStyle={styles.listContentContainer}
-              stickyHeaderHiddenOnScroll={true}
-              estimatedItemSize={(dim.width - CONTAINER_SPACING * 2) / numberOfColumns}
-              keyExtractor={item => {
-                if (typeof item === 'string') {
-                  return item;
-                } else {
-                  return item.map(v => v.title).join('');
-                }
-              }}
-            />
-          </View>
+          <FlashList
+            data={mappedGroupedEntries}
+            extraData={selectedIds}
+            renderItem={renderSection}
+            getItemType={item => {
+              return typeof item === 'string' ? 'sectionHeader' : 'row';
+            }}
+            contentContainerStyle={{ ...styles.listContentContainer, paddingHorizontal: CONTAINER_SPACING - 1 }}
+            stickyHeaderHiddenOnScroll={true}
+            estimatedItemSize={(width - CONTAINER_SPACING * 2) / numberOfColumns}
+            keyExtractor={item => {
+              if (typeof item === 'string') {
+                return item;
+              } else {
+                return item.map(v => v.title).join('');
+              }
+            }}
+          />
         )}
       </Components.AppBaseView>
       <Button
         style={styles.continueButton}
-        contentStyle={styles.continueButtonContainer}
+        contentStyle={[styles.continueButtonContainer]}
         disabled={selectedIds.size < 2}
         mode="contained"
         onPress={onPressContinue}>

@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
     },
     elevation: 8,
     shadowOpacity: 0.2,
-    height: 98,
+    minHeight: 98,
     marginBottom: 8,
   },
   touchableButton: {

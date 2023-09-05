@@ -28,7 +28,7 @@ const LearnCharInfoItemCell = (props: ILearnCharInfoItemCellProps) => {
   const { colors } = useTheme<AppTheme>();
   const { parsedSvg, readSvg } = useSvgReader();
 
-  const dim = useWindowDimensions();
+  const { width } = useWindowDimensions();
   const insets = useSafeAreaInsets();
   const { t } = useTranslation();
   const { item, index, onPressPlaySound, onPressViewAnimatedDrawing, onPressStrokeOrder } = props;
@@ -47,50 +47,69 @@ const LearnCharInfoItemCell = (props: ILearnCharInfoItemCellProps) => {
   const fontSize = largeScreenMode ? 200 : 100;
 
   return (
-    <View style={[styles.container, { width: dim.width - insets.right - insets.left }]}>
-      <Text style={[styles.headerText, { fontSize: fontSize, color: colors.text }]}>{gu}</Text>
-      <View
+    <View
+      style={[
+        styles.container,
+        { width: width - insets.right - insets.left },
+        largeScreenMode && { flexDirection: 'row' },
+      ]}>
+      <Text
         style={[
-          styles.card,
-          largeScreenMode && styles.cardTablet,
-          { backgroundColor: `${colors.card}`, shadowColor: `${colors.shadow}` },
+          styles.headerText,
+          largeScreenMode && { alignSelf: 'flex-start', marginLeft: 20 },
+          { fontSize: fontSize, color: colors.text },
         ]}>
-        <AppTitleValueItemCell touchDisabled title={t('learnCharInfoScreen.character')} value={character} />
-        <AppTitleValueItemCell touchDisabled title={t('learnCharInfoScreen.diacritic')} value={diacritic} />
-        <AppTitleValueItemCell
-          touchDisabled
-          title={t('learnCharInfoScreen.englishCharacter')}
-          value={englishCharacter}
-        />
-        <AppTitleValueItemCell touchDisabled title={t('learnCharInfoScreen.numberOfStrokes')} value={numberOfStrokes} />
-        <AppTitleValueItemCell touchDisabled title={t('learnCharInfoScreen.length')} value={length} />
-      </View>
-      <View
-        style={[
-          styles.card,
-          largeScreenMode && styles.cardTablet,
-          { backgroundColor: `${colors.card}`, shadowColor: `${colors.shadow}` },
-        ]}>
-        <AppTitleValueItemCell bold touchDisabled title={t('learnCharInfoScreen.moreInfo')} />
-        <AppTitleValueItemCell
-          iconName="chevron-right"
-          iconFamily="font-awesome"
-          onPress={() => onPressStrokeOrder(item, index)}
-          title={t('learnCharInfoScreen.viewStrokeOrder')}
-        />
-        <AppTitleValueItemCell
-          iconName="chevron-right"
-          iconFamily="font-awesome"
-          onPress={() => onPressViewAnimatedDrawing(item, index)}
-          title={t('learnCharInfoScreen.viewAnimatedDrawing')}
-        />
-        <AppTitleValueItemCell
-          iconName="play-circle"
-          iconFamily="font-awesome"
-          leftIconSize={20}
-          onPress={() => onPressPlaySound(item, index)}
-          title={t('learnCharInfoScreen.playSound')}
-        />
+        {gu}
+      </Text>
+
+      <View style={{ flex: 1, marginTop: 20 }}>
+        <View
+          style={[
+            styles.card,
+            largeScreenMode && styles.cardTablet,
+            { backgroundColor: `${colors.card}`, shadowColor: `${colors.shadow}` },
+          ]}>
+          <AppTitleValueItemCell touchDisabled title={t('learnCharInfoScreen.character')} value={character} />
+          <AppTitleValueItemCell touchDisabled title={t('learnCharInfoScreen.diacritic')} value={diacritic} />
+          <AppTitleValueItemCell
+            touchDisabled
+            title={t('learnCharInfoScreen.englishCharacter')}
+            value={englishCharacter}
+          />
+          <AppTitleValueItemCell
+            touchDisabled
+            title={t('learnCharInfoScreen.numberOfStrokes')}
+            value={numberOfStrokes}
+          />
+          <AppTitleValueItemCell touchDisabled title={t('learnCharInfoScreen.length')} value={length} />
+        </View>
+        <View
+          style={[
+            styles.card,
+            largeScreenMode && styles.cardTablet,
+            { backgroundColor: `${colors.card}`, shadowColor: `${colors.shadow}` },
+          ]}>
+          <AppTitleValueItemCell bold touchDisabled title={t('learnCharInfoScreen.moreInfo')} />
+          <AppTitleValueItemCell
+            iconName="chevron-right"
+            iconFamily="font-awesome"
+            onPress={() => onPressStrokeOrder(item, index)}
+            title={t('learnCharInfoScreen.viewStrokeOrder')}
+          />
+          <AppTitleValueItemCell
+            iconName="chevron-right"
+            iconFamily="font-awesome"
+            onPress={() => onPressViewAnimatedDrawing(item, index)}
+            title={t('learnCharInfoScreen.viewAnimatedDrawing')}
+          />
+          <AppTitleValueItemCell
+            iconName="play-circle"
+            iconFamily="font-awesome"
+            leftIconSize={20}
+            onPress={() => onPressPlaySound(item, index)}
+            title={t('learnCharInfoScreen.playSound')}
+          />
+        </View>
       </View>
     </View>
   );
@@ -105,7 +124,6 @@ const styles = StyleSheet.create({
     fontFamily: Config.Fonts.NotoSansGujarati.SemiBold,
     fontWeight: '400',
     marginTop: 32,
-    marginBottom: 12,
   },
   card: {
     borderRadius: 4,

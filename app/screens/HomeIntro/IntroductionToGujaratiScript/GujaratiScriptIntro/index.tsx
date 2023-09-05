@@ -37,6 +37,7 @@ const GujaratiScriptIntro = ({ navigation, route }: Props) => {
       setIsReady(true);
     },
     false,
+    400,
     [navigation],
   );
 

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StatusBar } from 'react-native';
+import { Platform, StatusBar } from 'react-native';
 
 //Third Party
 import { NavigationContainer } from '@react-navigation/native';
@@ -60,6 +60,9 @@ const RootNavigation: React.FC = () => {
       };
 
   useEffect(() => {
+    if (Platform.OS === 'ios') {
+      return;
+    }
     let to = setTimeout(() => {
       StatusBar.setBackgroundColor('#FFFFFF01');
     }, 500);

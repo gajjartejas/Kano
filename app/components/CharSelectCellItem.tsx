@@ -38,9 +38,10 @@ const CharCellItem = (props: ICharCellItemProps) => {
   //Const
   const { colors } = useTheme<AppTheme>();
   const { item, index, sectionIndex, numberOfColumns, cellSpacing, containerSpacing, selected, parentWidth } = props;
-  const dim = useWindowDimensions();
-  const width = parentWidth === undefined ? dim.width : parentWidth;
-  const cellW = (width - containerSpacing * 2 - cellSpacing * numberOfColumns * 2) / numberOfColumns;
+  const { width } = useWindowDimensions();
+
+  const pw = parentWidth === undefined ? width : parentWidth;
+  const cellW = (pw - containerSpacing * 2 - cellSpacing * numberOfColumns * 2) / numberOfColumns;
   const titleFontSize = cellW * 0.35;
   const subTitleFontSize = cellW * 0.15;
 
@@ -52,7 +53,7 @@ const CharCellItem = (props: ICharCellItemProps) => {
           backgroundColor: selected ? `${colors.primary}` : `${colors.card}`,
           shadowColor: `${colors.shadow}`,
           width: cellW,
-          height: (width - containerSpacing * 2) / numberOfColumns,
+          height: (pw - containerSpacing * 2) / numberOfColumns,
         },
       ]}>
       <TouchableRipple

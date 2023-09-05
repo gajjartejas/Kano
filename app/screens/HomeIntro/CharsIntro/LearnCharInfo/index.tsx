@@ -16,7 +16,6 @@ import useHintConfig from 'app/hooks/useHintConfig';
 import useToastMessages from 'app/hooks/useToastMessages';
 import useChartStatics from 'app/realm/crud/chartStatics';
 import AppHeader from 'app/components/AppHeader';
-
 //Params
 type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'LearnCharInfo'>;
 
@@ -28,7 +27,7 @@ const LearnCharInfo = ({ navigation, route }: Props) => {
 
   //Constants
   const { t } = useTranslation();
-  const dimension = useWindowDimensions();
+  const { width } = useWindowDimensions();
   const { index: initialScrollIndex, sectionIndex, groupedEntries, color, type } = route.params;
   const insets = useSafeAreaInsets();
   const { play } = useSoundPlayer();
@@ -94,11 +93,11 @@ const LearnCharInfo = ({ navigation, route }: Props) => {
 
   const getItemLayout = useCallback(
     (data: ArrayLike<ICharCellItem> | null | undefined, index: number) => ({
-      length: dimension.width - insets.right - insets.left,
-      offset: (dimension.width - insets.right - insets.left) * index,
+      length: width - insets.right - insets.left,
+      offset: (width - insets.right - insets.left) * index,
       index,
     }),
-    [dimension.width, insets.left, insets.right],
+    [insets.left, insets.right, width],
   );
 
   return (
@@ -124,7 +123,7 @@ const LearnCharInfo = ({ navigation, route }: Props) => {
           data={groupedEntries[sectionIndex].data}
           renderItem={renderItem}
           keyExtractor={photo => photo.id.toString()}
-          style={{ width: dimension.width - insets.right - insets.left }}
+          style={{ width: width - insets.right - insets.left }}
           initialScrollIndex={initialScrollIndex}
           onScrollToIndexFailed={() => {}}
           getItemLayout={getItemLayout}

@@ -15,6 +15,7 @@ import Animated, { Easing, FadeIn, SlideInDown } from 'react-native-reanimated';
 import useCardAnimationConfigStore from 'app/store/cardAnimationConfig';
 import { easingSymbols } from 'app/config/extra-symbols';
 import AppHeader from 'app/components/AppHeader';
+import useLargeScreenMode from 'app/hooks/useLargeScreenMode';
 
 //Params
 type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'LearnCharStrokeOrder'>;
@@ -29,6 +30,9 @@ const LearnCharStrokeOrder = ({ navigation, route }: Props) => {
   const { parsedSvg, readSvg } = useSvgReader();
   const { width } = useWindowDimensions();
   const { svgPath, color } = route.params;
+  const largeScreenMode = useLargeScreenMode();
+  const cellDim = largeScreenMode ? width * 0.3 : width * 0.6;
+
   const [
     initialDelay,
     duration,
@@ -80,18 +84,22 @@ const LearnCharStrokeOrder = ({ navigation, route }: Props) => {
       />
 
       <Components.AppBaseView edges={['bottom', 'left', 'right']} style={styles.safeArea}>
-        <ScrollView>
+        <ScrollView horizontal={largeScreenMode}>
           <View style={[styles.contentContainer]}>
             {!!svgPath && (
               <Animated.View
-                style={styles.contentContainer1}
+                style={[styles.contentContainer1, largeScreenMode && styles.tabContainer]}
                 entering={FadeIn.duration(600).easing(Easing.bezierFn(1, 0, 0.17, 0.98))}
                 layout={SlideInDown.duration(600).easing(Easing.bezierFn(1, 0, 0.17, 0.98))}>
                 {parsedSvg?.groups.map((g, gidx) => {
                   return g.svgClipPaths.map((p, pidx) => {
                     return (
                       <View
-                        style={[styles.animatedCharContainer, { width: width * 0.6, height: width * 0.6 }]}
+                        style={[
+                          styles.animatedCharContainer,
+                          largeScreenMode && styles.animatedCharContainerTab,
+                          { width: cellDim, height: cellDim },
+                        ]}
                         key={p.id + g.id}>
                         <AnimatedCharacter
                           key={p.id + g.id}

@@ -40,7 +40,14 @@ const AppHeader = (props: AppHeaderProps) => {
 
   const backButtonPaddingForTitle = !props.showBackButton ? { marginLeft: 0 } : { marginLeft: 60, marginRight: 60 };
   return (
-    <View style={{ ...styles.headerContainer, backgroundColor: colors.background, ...props.style }}>
+    <View
+      style={{
+        ...styles.headerContainer,
+        paddingLeft: insets.left,
+        paddingRight: insets.right,
+        backgroundColor: colors.background,
+        ...props.style,
+      }}>
       <View style={[styles.statusBar, { height: statusBarHeight }]} />
       <View style={styles.navigationContainer}>
         <View style={[StyleSheet.absoluteFill, styles.titleViewStyle]}>
@@ -98,7 +105,8 @@ const styles = StyleSheet.create({
     height: 18,
   },
   titleTextStyle: {
-    fontSize: 20,
+    fontSize: 16,
+    fontWeight: '400',
   },
   titleViewStyle: {
     flex: 1,

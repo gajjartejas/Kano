@@ -14,6 +14,7 @@ const styles = StyleSheet.create({
   },
   animatedChar: {
     height: 250,
+    marginRight: 16,
   },
   halfWidth: {
     width: '48%',
@@ -34,11 +35,17 @@ const styles = StyleSheet.create({
     marginTop: 12,
   },
   cardTablet: {
-    width: '70%',
-    alignSelf: 'center',
+    flexDirection: 'row',
   },
   listContainer: {
     flex: 1,
+    marginTop: 16,
+  },
+  bottomOffset: {
+    marginBottom: 16,
+  },
+  rightSpacing32: {
+    marginRight: 32,
   },
 });
 

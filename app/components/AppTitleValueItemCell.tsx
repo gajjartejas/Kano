@@ -61,20 +61,36 @@ const AppTitleValueItemCell = (props: IVovelCharCellItemProps) => {
 };
 
 const styles = StyleSheet.create({
-  container: { flexDirection: 'row', width: '100%' },
-  touchableButton: { flex: 1, paddingVertical: 12 },
+  container: {
+    flexDirection: 'row',
+    width: '100%',
+  },
+  touchableButton: {
+    flex: 1,
+    paddingVertical: 12,
+  },
   titleText: {
-    fontSize: 15,
+    fontSize: 12,
     fontFamily: Config.Fonts.NotoSansGujarati.Medium,
   },
-  textContainer: { marginHorizontal: 16, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
+  textContainer: {
+    marginHorizontal: 16,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
   subTitleText: {
     fontWeight: '500',
-    fontSize: 15,
+    fontSize: 14,
     fontFamily: Config.Fonts.NotoSansGujarati.Medium,
   },
-  leftIcon: { alignSelf: 'center' },
-  boldText: { fontWeight: '600', fontFamily: Config.Fonts.NotoSansGujarati.Bold },
+  leftIcon: {
+    alignSelf: 'center',
+  },
+  boldText: {
+    fontWeight: '600',
+    fontFamily: Config.Fonts.NotoSansGujarati.Bold,
+  },
 });
 
 export default memo(AppTitleValueItemCell);

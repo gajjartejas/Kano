@@ -69,6 +69,7 @@ const CardAnimation = ({ navigation }: Props) => {
       setIsReady(true);
     },
     false,
+    200,
     [navigation],
   );
 
@@ -93,43 +94,45 @@ const CardAnimation = ({ navigation }: Props) => {
         <Components.AppBaseView edges={['bottom', 'left', 'right']} style={styles.safeArea}>
           <View style={styles.subView}>
             <View style={[styles.listContainer, largeScreenMode && styles.cardTablet]}>
-              <Animated.View
-                entering={FadeIn.duration(1200).easing(Easing.bezierFn(1, 0, 0.17, 0.98))}
-                layout={Layout.springify()}
-                style={styles.animatedChar}>
-                <AnimatedCharacter
-                  initialDelay={initialDelay}
-                  duration={duration}
-                  emptyStroke={emptyStroke}
-                  highlightStroke={highlightStroke}
-                  arrowFill={arrowFill}
-                  stroke={stroke}
-                  disableStrokeAnimation={disableStrokeAnimation}
-                  showArrow={showArrow}
-                  strokeWidth={strokeWidth}
-                  play={play}
-                  path={'svgs/barakhadi/1_k/1_ka.svg'}
-                  arrowSymbol={arrowSymbol}
-                  arrowFontSize={arrowFontSize}
-                  easing={easingSymbols.filter(v => v.id === easingId)[0].easing}
-                />
-              </Animated.View>
+              <View style={styles.rightSpacing32}>
+                <Animated.View
+                  entering={FadeIn.duration(1200).easing(Easing.bezierFn(1, 0, 0.17, 0.98))}
+                  layout={Layout.springify()}
+                  style={styles.animatedChar}>
+                  <AnimatedCharacter
+                    initialDelay={initialDelay}
+                    duration={duration}
+                    emptyStroke={emptyStroke}
+                    highlightStroke={highlightStroke}
+                    arrowFill={arrowFill}
+                    stroke={stroke}
+                    disableStrokeAnimation={disableStrokeAnimation}
+                    showArrow={showArrow}
+                    strokeWidth={strokeWidth}
+                    play={play}
+                    path={'svgs/barakhadi/1_k/1_ka.svg'}
+                    arrowSymbol={arrowSymbol}
+                    arrowFontSize={arrowFontSize}
+                    easing={easingSymbols.filter(v => v.id === easingId)[0].easing}
+                  />
+                </Animated.View>
 
-              <View style={styles.buttonContainer}>
-                <Button
-                  icon="reload"
-                  mode="text"
-                  onPress={() => {
-                    setPlay(false);
-                    setTimeout(() => {
-                      setPlay(true);
-                    }, 100);
-                  }}>
-                  {t('cardAnimation.replay')}
-                </Button>
-                <Button icon="trash-can-outline" mode="text" onPress={onPressReset}>
-                  {t('cardAnimation.reset')}
-                </Button>
+                <View style={styles.buttonContainer}>
+                  <Button
+                    icon="reload"
+                    mode="text"
+                    onPress={() => {
+                      setPlay(false);
+                      setTimeout(() => {
+                        setPlay(true);
+                      }, 100);
+                    }}>
+                    {t('cardAnimation.replay')}
+                  </Button>
+                  <Button icon="trash-can-outline" mode="text" onPress={onPressReset}>
+                    {t('cardAnimation.reset')}
+                  </Button>
+                </View>
               </View>
 
               <ScrollView showsVerticalScrollIndicator={false} style={styles.scrollView}>
@@ -236,7 +239,7 @@ const CardAnimation = ({ navigation }: Props) => {
                 </View>
 
                 <RowTitle style={styles.rowMargin} title={t('cardAnimation.animationEasing')} />
-                <View style={styles.wrapRow}>
+                <View style={[styles.wrapRow, styles.bottomOffset]}>
                   {easingSymbols.map(v => {
                     return (
                       <ArrowRow

@@ -85,7 +85,9 @@ export function ArrowRow(props: {
   const marginTop = name ? 4 : 0;
   const fontWeight = selected ? '600' : '400';
   const largeScreenMode = useLargeScreenMode();
-  const scaleFactor = largeScreenMode ? 1.5 : 1;
+  const { width, height } = Dimensions.get('screen');
+  const d = largeScreenMode ? height : width;
+  const ic = (d - 64) / 8 - 4;
 
   return (
     <TouchableOpacity
@@ -95,9 +97,9 @@ export function ArrowRow(props: {
         styles.arrowRow,
         {
           borderColor: `${colors.backdrop}`,
-          width: (Dimensions.get('screen').width - 64) / 8 / scaleFactor - 4,
-          height: (Dimensions.get('screen').width - 64) / 8 / scaleFactor - 4,
-          borderRadius: (Dimensions.get('screen').width - 64 - 4) / 16 / scaleFactor,
+          width: ic,
+          height: ic,
+          borderRadius: ic / 2,
         },
         selected && { backgroundColor: colors.primary },
       ]}>
@@ -139,7 +141,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   arrowRow: {
-    borderWidth: StyleSheet.hairlineWidth,
+    borderWidth: 1,
     alignItems: 'center',
     marginHorizontal: 2,
     marginVertical: 2,
