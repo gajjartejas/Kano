@@ -5,7 +5,6 @@ import { Platform, StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Provider as PaperProvider } from 'react-native-paper';
-import analytics from '@react-native-firebase/analytics';
 import Toast from 'react-native-toast-message';
 
 //Screens
@@ -27,9 +26,7 @@ const homeOptions: Object = {
 };
 
 const RootNavigation: React.FC = () => {
-  const routeNameRef = React.useRef<string | null>();
   const navigationRef = React.useRef<any>();
-
   const isDark = useThemeConfigStore(state => state.isDark);
   const primary = useThemeConfigStore(state => state.primary);
   const onPrimary = useThemeConfigStore(state => state.onPrimary);
@@ -72,24 +69,7 @@ const RootNavigation: React.FC = () => {
 
   return (
     <PaperProvider theme={theme}>
-      <NavigationContainer
-        ref={navigationRef}
-        onReady={() => {
-          routeNameRef.current = navigationRef.current!.getCurrentRoute().name;
-        }}
-        onStateChange={async () => {
-          const previousRouteName = routeNameRef.current;
-          const currentRouteName = navigationRef.current.getCurrentRoute().name;
-
-          if (previousRouteName !== currentRouteName) {
-            await analytics().logScreenView({
-              screen_name: currentRouteName,
-              screen_class: currentRouteName,
-            });
-          }
-          routeNameRef.current = currentRouteName;
-        }}
-        theme={theme}>
+      <NavigationContainer ref={navigationRef} theme={theme}>
         <StatusBar
           backgroundColor={'#FFFFFF01'}
           barStyle={isDark ? 'light-content' : 'dark-content'}
