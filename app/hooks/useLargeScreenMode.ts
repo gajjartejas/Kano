@@ -1,16 +1,20 @@
 import { useEffect, useState } from 'react';
 
 //App Modules
-import { Dimensions } from 'react-native';
+import { Dimensions, useWindowDimensions } from 'react-native';
 import { isTablet } from 'react-native-device-info';
+
+export const useIsLandscape = () => {
+  const { width, height } = useWindowDimensions();
+  return width > height;
+};
 
 const useLargeScreenMode = () => {
   const [isLargeScreen, setIsLargeScreen] = useState(false);
+  const isLandscape = useIsLandscape();
 
   useEffect(() => {
     const checkScreenSize = () => {
-      const { width, height } = Dimensions.get('window');
-      const isLandscape = width > height;
       setIsLargeScreen(isTablet() || isLandscape);
     };
 
@@ -21,7 +25,7 @@ const useLargeScreenMode = () => {
     return () => {
       dimensionChangeListener.remove();
     };
-  }, []);
+  }, [isLandscape]);
 
   return isLargeScreen;
 };
