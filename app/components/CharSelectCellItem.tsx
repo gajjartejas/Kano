@@ -41,7 +41,7 @@ const CharCellItem = (props: ICharCellItemProps) => {
   const { width } = useWindowDimensions();
 
   const pw = parentWidth === undefined ? width : parentWidth;
-  const cellW = (pw - containerSpacing * 2 - cellSpacing * numberOfColumns * 2) / numberOfColumns;
+  const cellW = (pw - cellSpacing * numberOfColumns * 2) / numberOfColumns;
   const titleFontSize = cellW * 0.35;
   const subTitleFontSize = cellW * 0.15;
 

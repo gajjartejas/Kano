@@ -201,7 +201,7 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
   const otherProps = Platform.OS === 'ios' ? { statusBarHeight: 0 } : {};
 
   return (
-    <SafeAreaView edges={['bottom']} style={[styles.container, { backgroundColor: `${color}15` }]}>
+    <View style={[styles.container, { backgroundColor: `${color}15` }]}>
       <AppHeader
         showBackButton={true}
         onPressBackButton={onGoBack}
@@ -211,42 +211,43 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
         {...otherProps}
       />
 
-      <Components.AppBaseView
-        onLayout={event => {
-          setParentWidth(event.nativeEvent.layout.width - 2 * CONTAINER_SPACING - 1);
-        }}
-        edges={['bottom', 'left', 'right']}
-        style={styles.safeArea}>
-        {!!numberOfColumns && parentWidth !== undefined && (
-          <FlashList
-            data={mappedGroupedEntries}
-            extraData={selectedIds}
-            renderItem={renderSection}
-            getItemType={item => {
-              return typeof item === 'string' ? 'sectionHeader' : 'row';
-            }}
-            contentContainerStyle={{ ...styles.listContentContainer, paddingHorizontal: CONTAINER_SPACING - 1 }}
-            stickyHeaderHiddenOnScroll={true}
-            estimatedItemSize={(width - CONTAINER_SPACING * 2) / numberOfColumns}
-            keyExtractor={item => {
-              if (typeof item === 'string') {
-                return item;
-              } else {
-                return item.map(v => v.title).join('');
-              }
-            }}
-          />
-        )}
+      <Components.AppBaseView edges={['bottom', 'left', 'right']} style={styles.safeArea}>
+        <View
+          style={{ flex: 1 }}
+          onLayout={event => {
+            setParentWidth(event.nativeEvent.layout.width - 2 * CONTAINER_SPACING);
+          }}>
+          {!!numberOfColumns && parentWidth !== undefined && (
+            <FlashList
+              data={mappedGroupedEntries}
+              extraData={selectedIds}
+              renderItem={renderSection}
+              getItemType={item => {
+                return typeof item === 'string' ? 'sectionHeader' : 'row';
+              }}
+              contentContainerStyle={{ ...styles.listContentContainer, paddingHorizontal: CONTAINER_SPACING }}
+              stickyHeaderHiddenOnScroll={true}
+              estimatedItemSize={(parentWidth - CELL_SPACING * numberOfColumns * 2) / numberOfColumns}
+              keyExtractor={item => {
+                if (typeof item === 'string') {
+                  return item;
+                } else {
+                  return item.map(v => v.title).join('');
+                }
+              }}
+            />
+          )}
+        </View>
+        <Button
+          style={[styles.continueButton]}
+          contentStyle={[styles.continueButtonContainer]}
+          disabled={selectedIds.size < 2}
+          mode="contained"
+          onPress={onPressContinue}>
+          {t('general.continue')}
+        </Button>
       </Components.AppBaseView>
-      <Button
-        style={styles.continueButton}
-        contentStyle={[styles.continueButtonContainer]}
-        disabled={selectedIds.size < 2}
-        mode="contained"
-        onPress={onPressContinue}>
-        {t('general.continue')}
-      </Button>
-    </SafeAreaView>
+    </View>
   );
 };
 
