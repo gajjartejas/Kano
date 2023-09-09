@@ -13,7 +13,10 @@ const styles = StyleSheet.create({
   subView: {
     marginHorizontal: 32,
   },
-  moreCard: { marginTop: 16, marginHorizontal: 24 },
+  moreCard: {
+    marginTop: 16,
+    marginHorizontal: 24,
+  },
   flatlist: {
     flex: 1,
   },
@@ -53,7 +56,11 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     color: 'white',
   },
-  cardContainer: { flex: 1, alignItems: 'center', justifyContent: 'center' },
+  cardContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   card: {
     position: 'absolute',
     backgroundColor: '#ffffff',
@@ -131,8 +138,14 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
     paddingVertical: 6,
   },
-  animatedView: { width: '80%', flex: 1 },
-  randomOrderButton: { fontSize: 10, alignSelf: 'center' },
+  animatedView: {
+    width: '80%',
+    flex: 1,
+  },
+  randomOrderButton: {
+    fontSize: 10,
+    alignSelf: 'center',
+  },
 });
 
 export default styles;

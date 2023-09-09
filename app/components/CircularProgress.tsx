@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Svg, Circle, Text as SVGText, SvgProps } from 'react-native-svg';
 
 interface CircularProgressProps extends SvgProps {
@@ -57,4 +57,4 @@ const CircularProgress = (props: CircularProgressProps) => {
   );
 };
 
-export default CircularProgress;
+export default memo(CircularProgress);

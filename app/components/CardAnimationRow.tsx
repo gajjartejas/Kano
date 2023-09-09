@@ -2,13 +2,14 @@ import { Dimensions, StyleSheet, Switch, Text, TextStyle, TouchableOpacity, View
 import React, { useCallback, useState } from 'react';
 
 //ThirdParty
-import { isTablet } from 'react-native-device-info';
 import { Portal, useTheme } from 'react-native-paper';
 
 //App Modules
 import { SelectAccentDialogColor } from 'app/components/SelectAccentColorDialog';
 import Components from 'app/components/index';
 import { AppTheme } from 'app/models/theme';
+import Config from 'app/config';
+import useLargeScreenMode from 'app/hooks/useLargeScreenMode';
 
 export function ColorRow(props: {
   style?: ViewStyle | ViewStyle[];
@@ -82,6 +83,11 @@ export function ArrowRow(props: {
   const { style, arrow, onPress, name, selected } = props;
   const { colors } = useTheme<AppTheme>();
   const marginTop = name ? 4 : 0;
+  const fontWeight = selected ? '600' : '400';
+  const largeScreenMode = useLargeScreenMode();
+  const { width, height } = Dimensions.get('screen');
+  const d = largeScreenMode ? height : width;
+  const ic = (d - 64) / 8 - 4;
 
   return (
     <TouchableOpacity
@@ -89,20 +95,29 @@ export function ArrowRow(props: {
       style={[
         style,
         styles.arrowRow,
-        { borderColor: `${colors.backdrop}` },
+        {
+          borderColor: `${colors.backdrop}`,
+          width: ic,
+          height: ic,
+          borderRadius: ic / 2,
+        },
         selected && { backgroundColor: colors.primary },
       ]}>
       <View style={styles.arrowTextContainer}>
-        <RowTitle
-          style={{
-            ...styles.arrowTitleFont,
-            color: colors.onSurface,
-            marginTop,
-          }}
-          title={arrow}
-        />
+        {!name && (
+          <RowTitle
+            style={{
+              ...styles.arrowTitleFont,
+              color: colors.onSurface,
+              marginTop,
+            }}
+            title={arrow}
+          />
+        )}
+        {!!name && (
+          <Text style={[{ color: colors.onSurface, fontWeight: fontWeight }, styles.arrowMiniText]}>{name}</Text>
+        )}
       </View>
-      {!!name && <Text style={[{ color: colors.onSurface }, styles.arrowMiniText]}>{name}</Text>}
     </TouchableOpacity>
   );
 }
@@ -111,8 +126,6 @@ export function RowTitle(props: { title: string; style?: TextStyle }) {
   const { colors } = useTheme();
   return <Text style={[props.style, { color: colors.onSurface }]}>{props.title}</Text>;
 }
-
-const scaleFactor = isTablet() ? 1.5 : 1;
 
 const styles = StyleSheet.create({
   colorPickerContainer: {
@@ -128,10 +141,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   arrowRow: {
-    width: (Dimensions.get('screen').width - 64) / 8 / scaleFactor - 4,
-    height: (Dimensions.get('screen').width - 64) / 8 / scaleFactor - 4,
-    borderRadius: (Dimensions.get('screen').width - 64 - 4) / 16 / scaleFactor,
-    borderWidth: StyleSheet.hairlineWidth,
+    borderWidth: 1,
     alignItems: 'center',
     marginHorizontal: 2,
     marginVertical: 2,
@@ -143,9 +153,10 @@ const styles = StyleSheet.create({
   },
   arrowTitleFont: {
     fontSize: 18,
+    fontFamily: Config.Fonts.NotoSansGujarati.Medium,
   },
   arrowMiniText: {
-    fontSize: 6,
+    fontSize: 8,
     marginVertical: 4,
   },
 });

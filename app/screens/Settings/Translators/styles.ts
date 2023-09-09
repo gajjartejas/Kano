@@ -31,6 +31,7 @@ const styles = StyleSheet.create({
   },
   titleTextStyle: {
     fontSize: 16,
+    textAlign: 'center',
   },
   emptyListContainer: {
     flex: 1,

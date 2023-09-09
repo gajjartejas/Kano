@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { StyleSheet, View } from 'react-native';
 
 //ThirdParty
@@ -6,10 +6,10 @@ import LottieView from 'lottie-react-native';
 import { Button, Dialog, Paragraph, useTheme } from 'react-native-paper';
 
 //ThirdParty
-import { isTablet } from 'react-native-device-info';
 
 //App Modules
 import Config from 'app/config';
+import useLargeScreenMode from 'app/hooks/useLargeScreenMode';
 
 //Interface
 interface IAppLevelFinishDialogProps {
@@ -24,9 +24,10 @@ function AppLevelFinishDialog(props: IAppLevelFinishDialogProps) {
   //Constants
   const { colors } = useTheme();
   const { visible, onPressHideDialog, title, description, buttonTitle } = props;
+  const largeScreenMode = useLargeScreenMode();
 
   return (
-    <Dialog style={[isTablet() && styles.cardTablet]} visible={visible} onDismiss={props.onPressHideDialog}>
+    <Dialog style={[largeScreenMode && styles.cardTablet]} visible={visible} onDismiss={props.onPressHideDialog}>
       <Dialog.Title style={[{ color: colors.onBackground }, styles.titleText]}>{title}</Dialog.Title>
 
       <View style={styles.buttonsContainer}>
@@ -75,4 +76,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AppLevelFinishDialog;
+export default memo(AppLevelFinishDialog);

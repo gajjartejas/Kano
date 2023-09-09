@@ -1,8 +1,8 @@
 //ThirdParty
-import { IHomeListSection } from 'app/components/HomeListItem';
 import { useTranslation } from 'react-i18next';
 import { useMemo } from 'react';
 
+import { IHomeListSection } from 'app/components/HomeListItem';
 const useHomeListItems = (): IHomeListSection[] => {
   //Constants
   const { t } = useTranslation();

@@ -42,6 +42,13 @@ const styles = StyleSheet.create({
   animatedCharContainer: {
     marginTop: 16,
   },
+  animatedCharContainerTab: {
+    marginTop: 0,
+    marginRight: 8,
+  },
+  tabContainer: {
+    flexDirection: 'row',
+  },
 });
 
 export default styles;

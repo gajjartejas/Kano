@@ -1,11 +1,11 @@
 import React, { useCallback, useState } from 'react';
-import { View } from 'react-native';
+import { Appearance, View } from 'react-native';
 
 //ThirdParty
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
 import Icon from 'react-native-easy-icon';
-import { Appbar, Divider, List, useTheme } from 'react-native-paper';
+import { Divider, List, useTheme } from 'react-native-paper';
 
 //App modules
 import Components from 'app/components';
@@ -19,7 +19,8 @@ import { LoggedInTabNavigatorParams } from 'app/navigation/types';
 import useThemeConfigStore, { IAppearanceType } from 'app/store/themeConfig';
 import { SelectAccentDialogColor } from 'app/components/SelectAccentColorDialog';
 import useCardAnimationConfigStore from 'app/store/cardAnimationConfig';
-import { isTablet } from 'react-native-device-info';
+import useLargeScreenMode from 'app/hooks/useLargeScreenMode';
+import AppHeader from 'app/components/AppHeader';
 
 //Params
 type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'SelectAppearance'>;
@@ -32,7 +33,8 @@ const SelectAppearance = ({ navigation }: Props) => {
   const setPrimaryColor = useThemeConfigStore(store => store.setPrimaryColor);
   const setAppearance = useThemeConfigStore(store => store.setAppearance);
   const appearance = useThemeConfigStore(store => store.appearance);
-  const clearCardAnimationConfig = useCardAnimationConfigStore(store => store.clear);
+  const setTheme = useCardAnimationConfigStore(store => store.setTheme);
+  const largeScreenMode = useLargeScreenMode();
 
   //States
   const [apps] = useState<ISettingSection[]>([
@@ -103,8 +105,8 @@ const SelectAppearance = ({ navigation }: Props) => {
 
   const onPressRestoreDefaultTheme = useCallback(() => {
     resetTheme();
-    clearCardAnimationConfig();
-  }, [clearCardAnimationConfig, resetTheme]);
+    setTheme(Appearance.getColorScheme() === 'dark');
+  }, [setTheme, resetTheme]);
 
   const onPressShowThemeDialog = useCallback(() => setThemeDialogVisible(true), []);
   const onPressHideThemeDialog = useCallback(() => setThemeDialogVisible(false), []);
@@ -114,11 +116,12 @@ const SelectAppearance = ({ navigation }: Props) => {
 
   const onPressPrimaryColor = useCallback(
     (item: SelectAccentDialogColor) => {
+      onPressHideAccentColorDialog();
       setTimeout(() => {
         setPrimaryColor(item.primary, item.onPrimary);
       }, 100);
     },
-    [setPrimaryColor],
+    [onPressHideAccentColorDialog, setPrimaryColor],
   );
 
   const onPressAppearanceOption = useCallback(
@@ -145,20 +148,23 @@ const SelectAppearance = ({ navigation }: Props) => {
 
       setTimeout(() => {
         setAppearance(item.value);
-        clearCardAnimationConfig();
+        setTheme(item.value === IAppearanceType.Auto ? Appearance.getColorScheme() === 'dark' : item.value === 'dark');
       }, 100);
     },
-    [clearCardAnimationConfig, setAppearance],
+    [setTheme, setAppearance],
   );
 
   return (
     <View style={[styles.container, { backgroundColor: colors.background }]}>
-      <Appbar.Header style={{ backgroundColor: colors.background }}>
-        <Appbar.BackAction onPress={onGoBack} />
-        <Appbar.Content title={t('appearanceSettings.title')} />
-      </Appbar.Header>
+      <AppHeader
+        showBackButton={true}
+        onPressBackButton={onGoBack}
+        title={t('appearanceSettings.title')}
+        style={{ backgroundColor: colors.background }}
+      />
+
       <Components.AppBaseView scroll edges={['bottom', 'left', 'right']} style={styles.safeArea}>
-        <View style={[styles.listContainer, isTablet() && styles.cardTablet]}>
+        <View style={[styles.listContainer, largeScreenMode && styles.cardTablet]}>
           {apps.map((item, index) => {
             return (
               <View key={item.id.toString()}>

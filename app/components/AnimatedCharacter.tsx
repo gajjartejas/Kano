@@ -1,13 +1,13 @@
-import React, { forwardRef, useCallback, useEffect, useImperativeHandle, useState } from 'react';
-
-//App Modules
-import useSvgReader from 'app/hooks/useSvgReader';
+import React, { forwardRef, memo, useCallback, useEffect, useImperativeHandle, useState } from 'react';
+import { ColorValue } from 'react-native';
 
 //ThirdParty
 import { ClipPath, Defs, G, Path, PathProps, Svg, Text, TextPath } from 'react-native-svg';
 import { svgPathProperties } from 'svg-path-properties';
 import AnimatedStroke, { AnimatedStrokeEasingFunction } from './AnimatedStroke';
-import { ColorValue } from 'react-native';
+
+//App Modules
+import useSvgReader from 'app/hooks/useSvgReader';
 
 //Interface
 interface IAnimatedCharacter extends PathProps {
@@ -245,4 +245,4 @@ const AnimatedCharacter = forwardRef<IAnimatedCharacterRef, IAnimatedCharacter>(
   );
 });
 AnimatedCharacter.displayName = 'AnimatedCharacter';
-export default AnimatedCharacter;
+export default memo(AnimatedCharacter);

@@ -4,7 +4,6 @@ import { Platform, ScrollView, useWindowDimensions, View } from 'react-native';
 //ThirdParty
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
-import { Appbar, useTheme } from 'react-native-paper';
 
 //App modules
 import styles from './styles';
@@ -15,6 +14,8 @@ import useSvgReader from 'app/hooks/useSvgReader';
 import Animated, { Easing, FadeIn, SlideInDown } from 'react-native-reanimated';
 import useCardAnimationConfigStore from 'app/store/cardAnimationConfig';
 import { easingSymbols } from 'app/config/extra-symbols';
+import AppHeader from 'app/components/AppHeader';
+import useLargeScreenMode from 'app/hooks/useLargeScreenMode';
 
 //Params
 type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'LearnCharStrokeOrder'>;
@@ -25,11 +26,13 @@ const LearnCharStrokeOrder = ({ navigation, route }: Props) => {
   //Actions
 
   //Constants
-  const { colors } = useTheme();
   const { t } = useTranslation();
   const { parsedSvg, readSvg } = useSvgReader();
   const { width } = useWindowDimensions();
   const { svgPath, color } = route.params;
+  const largeScreenMode = useLargeScreenMode();
+  const cellDim = largeScreenMode ? width * 0.3 : width * 0.6;
+
   const [
     initialDelay,
     duration,
@@ -71,23 +74,32 @@ const LearnCharStrokeOrder = ({ navigation, route }: Props) => {
   const otherProps = Platform.OS === 'ios' ? { statusBarHeight: 0 } : {};
   return (
     <View style={[styles.container, { backgroundColor: `${color}15` }]}>
-      <Appbar.Header style={{ backgroundColor: colors.background }} {...otherProps}>
-        <Appbar.Action icon={'chevron-down'} onPress={onGoBack} />
-        <Appbar.Content title={t('LearnCharStrokeOrder.header.title')} />
-      </Appbar.Header>
+      <AppHeader
+        showBackButton={true}
+        onPressBackButton={onGoBack}
+        title={t('LearnCharStrokeOrder.header.title')}
+        backArrowImage={'chevron-down'}
+        style={{ backgroundColor: `${color}15` }}
+        {...otherProps}
+      />
+
       <Components.AppBaseView edges={['bottom', 'left', 'right']} style={styles.safeArea}>
-        <ScrollView>
+        <ScrollView horizontal={largeScreenMode}>
           <View style={[styles.contentContainer]}>
             {!!svgPath && (
               <Animated.View
-                style={styles.contentContainer1}
+                style={[styles.contentContainer1, largeScreenMode && styles.tabContainer]}
                 entering={FadeIn.duration(600).easing(Easing.bezierFn(1, 0, 0.17, 0.98))}
                 layout={SlideInDown.duration(600).easing(Easing.bezierFn(1, 0, 0.17, 0.98))}>
                 {parsedSvg?.groups.map((g, gidx) => {
                   return g.svgClipPaths.map((p, pidx) => {
                     return (
                       <View
-                        style={[styles.animatedCharContainer, { width: width * 0.6, height: width * 0.6 }]}
+                        style={[
+                          styles.animatedCharContainer,
+                          largeScreenMode && styles.animatedCharContainerTab,
+                          { width: cellDim, height: cellDim },
+                        ]}
                         key={p.id + g.id}>
                         <AnimatedCharacter
                           key={p.id + g.id}

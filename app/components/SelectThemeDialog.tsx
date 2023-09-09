@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { StyleSheet, View } from 'react-native';
 
 //ThirdParty
@@ -9,7 +9,7 @@ import { Dialog, TouchableRipple, useTheme, Button, RadioButton, Text } from 're
 import { ISettingThemeOptions } from 'app/models/viewModels/settingItem';
 import { AppTheme } from 'app/models/theme';
 import { IAppearanceType } from 'app/store/themeConfig';
-import { isTablet } from 'react-native-device-info';
+import useLargeScreenMode from 'app/hooks/useLargeScreenMode';
 
 //Interface
 interface ISelectThemeDialogProps {
@@ -24,15 +24,21 @@ function SelectThemeDialog(props: ISelectThemeDialogProps) {
   //Constants
   const { t } = useTranslation();
   const theme = useTheme<AppTheme>();
+  const largeScreenMode = useLargeScreenMode();
 
   return (
     <Dialog
-      style={[{ backgroundColor: theme.colors.surface }, isTablet() && styles.cardTablet]}
+      style={[{ backgroundColor: theme.colors.surface }, largeScreenMode && styles.cardTablet]}
       visible={props.visible}
       onDismiss={props.onPressHideDialog}>
       <Dialog.Title style={{ color: theme.colors.onSurface }}>{t('appearanceSettings.themeOption')}</Dialog.Title>
       <View>
-        <RadioButton.Group onValueChange={() => {}} value={props.appearance}>
+        <RadioButton.Group
+          onValueChange={v => {
+            const [item] = props.themeOptions.filter(c => c.value === v);
+            props.onSelect(item, props.themeOptions.indexOf(item));
+          }}
+          value={props.appearance}>
           {props.themeOptions.map((item, index) => {
             return (
               <TouchableRipple
@@ -95,4 +101,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default SelectThemeDialog;
+export default memo(SelectThemeDialog);

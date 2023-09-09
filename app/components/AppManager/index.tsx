@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo, ReactElement } from 'react';
 import { View } from 'react-native';
 
 //App Modules
@@ -6,7 +6,7 @@ import styles from './styles';
 
 //Interface
 export type Props = {
-  children: JSX.Element[] | JSX.Element;
+  children: ReactElement[] | ReactElement;
 };
 
 const AppManager = ({ children }: Props) => {
@@ -17,4 +17,4 @@ const AppManager = ({ children }: Props) => {
   );
 };
 
-export default AppManager;
+export default memo(AppManager);

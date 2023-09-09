@@ -1,15 +1,15 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Dimensions, StyleSheet } from 'react-native';
 
 //Third Party
 import { useTheme } from 'react-native-paper';
 import { BaseToast } from 'react-native-toast-message';
 import Icon from 'react-native-easy-icon';
+import { ToastConfigParams } from 'react-native-toast-message/lib/src/types';
 
 //App modules
 import { AppTheme } from 'app/models/theme';
-import { ToastConfigParams } from 'react-native-toast-message/lib/src/types';
-import { isTablet } from 'react-native-device-info';
+import useLargeScreenMode from 'app/hooks/useLargeScreenMode';
 
 export interface IAppSuccessToastProps {
   type: 'success' | 'error' | 'info';
@@ -19,6 +19,7 @@ const AppToast = (props: ToastConfigParams<IAppSuccessToastProps>) => {
   const { colors } = useTheme<AppTheme>();
   const { text1, text2, type, ...rest } = props;
   const minHeight = text1 && text2 ? 50 : 40;
+  const largeScreenMode = useLargeScreenMode();
 
   return (
     <BaseToast
@@ -30,7 +31,7 @@ const AppToast = (props: ToastConfigParams<IAppSuccessToastProps>) => {
           backgroundColor: type === 'error' ? colors.error : colors.primary,
           minHeight: minHeight,
         },
-        isTablet() && { width: Dimensions.get('window').width * 0.7 },
+        largeScreenMode && { width: Dimensions.get('window').width * 0.7 },
       ]}
       renderLeadingIcon={() => <Icon type={'font-awesome'} name={'info-circle'} color={colors.white} size={18} />}
       contentContainerStyle={styles.contentContainerStyle}
@@ -65,4 +66,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AppToast;
+export default memo(AppToast);

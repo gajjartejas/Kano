@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Svg, { Defs, G, LinearGradient, Path, Rect, Stop, SvgProps } from 'react-native-svg';
+import { memo } from 'react';
 
 const SVGComponent = (props: SvgProps) => (
   <Svg height="100%" preserveAspectRatio="xMinYMin slice" width="100%" viewBox="0 0 900 675" {...props}>
@@ -71,4 +72,4 @@ const SVGComponent = (props: SvgProps) => (
   </Svg>
 );
 
-export default SVGComponent;
+export default memo(SVGComponent);

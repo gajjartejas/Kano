@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { StyleSheet, View } from 'react-native';
 
 //ThirdParty
 import { useTranslation } from 'react-i18next';
 import Icon from 'react-native-easy-icon';
 import { Dialog, Paragraph, TouchableRipple, useTheme, Button } from 'react-native-paper';
-import { isTablet } from 'react-native-device-info';
+
+//App Modules
+import useLargeScreenMode from 'app/hooks/useLargeScreenMode';
 
 //Interface
 interface IAboutFeedbackDialogProps {
@@ -19,9 +21,10 @@ function AboutFeedbackDialog(props: IAboutFeedbackDialogProps) {
   //Constants
   const { t } = useTranslation();
   const { colors } = useTheme();
+  const largeScreenMode = useLargeScreenMode();
 
   return (
-    <Dialog style={[isTablet() && styles.cardTablet]} visible={props.visible} onDismiss={props.onPressHideDialog}>
+    <Dialog style={[largeScreenMode && styles.cardTablet]} visible={props.visible} onDismiss={props.onPressHideDialog}>
       <Dialog.Title style={{ color: colors.onBackground }}>{t('about.sendFeedback')}</Dialog.Title>
       <Dialog.Content>
         <Paragraph style={[styles.descriptionText, { color: `${colors.onBackground}88` }]}>
@@ -70,4 +73,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AboutFeedbackDialog;
+export default memo(AboutFeedbackDialog);

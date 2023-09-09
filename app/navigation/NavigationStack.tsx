@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StatusBar } from 'react-native';
+import { Platform, StatusBar } from 'react-native';
 
 //Third Party
 import { NavigationContainer } from '@react-navigation/native';
@@ -16,6 +16,7 @@ import { HomeTabNavigatorParams } from 'app/navigation/types';
 import useToastConfig from 'app/hooks/useToastConfig';
 import { PaperThemeDark, PaperThemeDefault } from 'app/config/app-theme-config';
 import useThemeConfigStore from 'app/store/themeConfig';
+import { useEffect } from 'react';
 
 const homeOptions: Object = {
   title: 'Home',
@@ -58,6 +59,17 @@ const RootNavigation: React.FC = () => {
         },
       };
 
+  useEffect(() => {
+    if (Platform.OS === 'ios') {
+      return;
+    }
+    let to = setTimeout(() => {
+      StatusBar.setBackgroundColor('#FFFFFF01');
+    }, 500);
+
+    return () => clearTimeout(to);
+  }, []);
+
   return (
     <PaperProvider theme={theme}>
       <NavigationContainer
@@ -79,7 +91,7 @@ const RootNavigation: React.FC = () => {
         }}
         theme={theme}>
         <StatusBar
-          backgroundColor={isDark ? '#000000' : '#00000000'}
+          backgroundColor={'#FFFFFF01'}
           barStyle={isDark ? 'light-content' : 'dark-content'}
           translucent={true}
         />

@@ -3,7 +3,7 @@ import { ScrollView, View } from 'react-native';
 
 //ThirdParty
 import { useTranslation } from 'react-i18next';
-import { Appbar, Divider, List, useTheme } from 'react-native-paper';
+import { Divider, List, useTheme } from 'react-native-paper';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import Icon from 'react-native-easy-icon';
 
@@ -11,7 +11,6 @@ import Icon from 'react-native-easy-icon';
 import styles from './styles';
 
 //ThirdParty
-import { isTablet } from 'react-native-device-info';
 
 //App Modules
 import { ISettingItem, ISettingSection } from 'app/models/viewModels/settingItem';
@@ -20,6 +19,8 @@ import useCardStatics from 'app/realm/crud/cardStatics';
 import useChartStatics from 'app/realm/crud/chartStatics';
 import { LoggedInTabNavigatorParams } from 'app/navigation/types';
 import useOtherStatics from 'app/realm/crud/otherStatics';
+import useLargeScreenMode from 'app/hooks/useLargeScreenMode';
+import AppHeader from 'app/components/AppHeader';
 
 //Params
 type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'GeneralSetting'>;
@@ -33,6 +34,7 @@ const GeneralSetting = ({ navigation }: Props) => {
   const { clearAllData: clearAllCardData } = useCardStatics();
   const { clearAllData: clearAllChartData } = useChartStatics();
   const { clearAllData: clearAllOtherData } = useOtherStatics();
+  const largeScreenMode = useLargeScreenMode();
 
   //States
   const [clearProgressAlertVisible, setClearProgressAlertVisible] = useState(false);
@@ -92,13 +94,16 @@ const GeneralSetting = ({ navigation }: Props) => {
 
   return (
     <View style={[styles.container, { backgroundColor: colors.background }]}>
-      <Appbar.Header style={{ backgroundColor: colors.background }}>
-        <Appbar.BackAction onPress={onGoBack} />
-        <Appbar.Content title={t('generalSetting.title')} />
-      </Appbar.Header>
+      <AppHeader
+        showBackButton={true}
+        onPressBackButton={onGoBack}
+        title={t('generalSetting.title')}
+        style={{ backgroundColor: colors.background }}
+      />
+
       <View style={styles.safeArea}>
         <ScrollView>
-          <View style={[styles.listContainer, isTablet() && styles.cardTablet]}>
+          <View style={[styles.listContainer, largeScreenMode && styles.cardTablet]}>
             {apps.map((item, index) => {
               return (
                 <View key={item.id.toString()}>

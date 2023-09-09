@@ -5,13 +5,12 @@ import { View } from 'react-native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
 import { DraxProvider, DraxView } from 'react-native-drax';
-import { Appbar, Button, Text, TouchableRipple, useTheme } from 'react-native-paper';
+import { Button, Text, TouchableRipple, useTheme } from 'react-native-paper';
 import TinderCard from 'react-tinder-card';
 import Animated, { Easing, FadeIn, FadeInDown, Layout } from 'react-native-reanimated';
 
 //App modules
 import { ICharCellItem, ICharCellListSection } from 'app/components/CharCellItem';
-import Hooks from 'app/hooks/index';
 import styles from './styles';
 import Components from 'app/components';
 import AnimatedCharacter from 'app/components/AnimatedCharacter';
@@ -25,7 +24,9 @@ import useCardStatics from 'app/realm/crud/cardStatics';
 import { ICardLearnType, ICardOrderType, ICardSelectionType } from 'app/realm/modals/cardStatics';
 import useCardAnimationConfigStore from 'app/store/cardAnimationConfig';
 import { easingSymbols } from 'app/config/extra-symbols';
-import { isTablet } from 'react-native-device-info';
+import useLargeScreenMode from 'app/hooks/useLargeScreenMode';
+import AppHeader from 'app/components/AppHeader';
+import { useChartSectionsForTypes } from 'app/hooks/useChartItemForType';
 
 //Params
 type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'LearnCharsCard'>;
@@ -47,10 +48,11 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
   const { t } = useTranslation();
   const { play } = useSoundPlayer();
   const { type, learnMode, onlyInclude, isRandomMode, color } = route.params;
-  const groupedEntries = Hooks.ChartItemForTypes.useChartSectionsForTypes(type, isRandomMode, onlyInclude);
+  const groupedEntries = useChartSectionsForTypes(type, isRandomMode, onlyInclude);
   const isLearningMode = learnMode === LearnCharsMode.Learn;
   const [cardHints] = useHintConfig();
   const { addCardStatics } = useCardStatics();
+  const largeScreenMode = useLargeScreenMode();
   const [
     initialDelay,
     duration,
@@ -342,16 +344,20 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
 
   return (
     <SafeAreaView edges={['bottom']} style={[styles.container, { backgroundColor: `${color}15` }]}>
-      <Appbar.Header style={{ backgroundColor: colors.background }}>
-        <Appbar.BackAction onPress={onGoBack} />
-        <Appbar.Content title={title} />
-      </Appbar.Header>
+      <AppHeader
+        showBackButton={true}
+        onPressBackButton={onGoBack}
+        title={title}
+        style={{ backgroundColor: `${color}15` }}
+      />
+
       <DraxProvider>
         <Components.AppBaseView edges={['bottom', 'left', 'right']} style={styles.safeArea}>
           {!practiceMode && (
             <View
               onLayout={e => {
-                setWidth(e.nativeEvent.layout.width);
+                const { width: w, height: h } = e.nativeEvent.layout;
+                setWidth(w > h ? h : w);
               }}
               style={styles.cardContainer}>
               {cardPerGroup.map((item, index) => {
@@ -371,7 +377,7 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
                         style={[
                           styles.card,
                           {
-                            backgroundColor: colors.card,
+                            backgroundColor: `${color}30`,
                             width: width * 0.7,
                             height: width * 0.7,
                             top: (-width * 0.7) / 2 - 50,
@@ -412,7 +418,7 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
             <>
               <Animated.View
                 entering={FadeInDown.duration(600).easing(Easing.bezierFn(1, 0, 0.17, 0.98))}
-                style={[styles.practiceCardsContainer, isTablet() && styles.practiceCardsContainerTablet]}>
+                style={[styles.practiceCardsContainer, largeScreenMode && styles.practiceCardsContainerTablet]}>
                 <View style={styles.practiceCardContainer}>
                   {practiceLeftCardPerGroup.map(v => {
                     return (
@@ -460,7 +466,7 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
               </Animated.View>
               <Button
                 disabled={finishButtonDisabled}
-                style={[styles.nextButtonStyle, isTablet() && styles.practiceCardsContainerTablet]}
+                style={[styles.nextButtonStyle, largeScreenMode && styles.practiceCardsContainerTablet]}
                 mode="contained"
                 onPress={onPressNext}>
                 {finishButtonTitle}
@@ -470,7 +476,7 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
 
           <Button
             mode="text"
-            style={[isTablet() && styles.practiceCardsContainerTablet]}
+            style={[largeScreenMode && styles.practiceCardsContainerTablet]}
             labelStyle={[styles.randomOrderButton]}
             onPress={onSwitchToRandom}>
             {isRandomMode ? t('learnCharsCardScreen.switchToSequence') : t('learnCharsCardScreen.switchToRandom')}

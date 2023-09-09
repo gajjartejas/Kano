@@ -4,7 +4,7 @@ import { Platform, View } from 'react-native';
 //ThirdParty
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
-import { Appbar, Button, useTheme } from 'react-native-paper';
+import { Button } from 'react-native-paper';
 
 //App modules
 import styles from './styles';
@@ -14,6 +14,7 @@ import { LoggedInTabNavigatorParams } from 'app/navigation/types';
 import Animated, { Easing, FadeIn, SlideInDown } from 'react-native-reanimated';
 import { easingSymbols } from 'app/config/extra-symbols';
 import useCardAnimationConfigStore from 'app/store/cardAnimationConfig';
+import AppHeader from 'app/components/AppHeader';
 
 //Params
 type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'LearnCharAnimatedDrawing'>;
@@ -24,7 +25,6 @@ const LearnCharAnimatedDrawing = ({ navigation, route }: Props) => {
   //Actions
 
   //Constants
-  const { colors } = useTheme();
   const { t } = useTranslation();
   const { svgPath, color } = route.params;
 
@@ -80,10 +80,15 @@ const LearnCharAnimatedDrawing = ({ navigation, route }: Props) => {
   const otherProps = Platform.OS === 'ios' ? { statusBarHeight: 0 } : {};
   return (
     <View style={[styles.container, { backgroundColor: `${color}15` }]}>
-      <Appbar.Header style={{ backgroundColor: colors.background }} {...otherProps}>
-        <Appbar.Action icon={'chevron-down'} onPress={onGoBack} />
-        <Appbar.Content title={t('LearnCharAnimatedDrawing.header.title')} />
-      </Appbar.Header>
+      <AppHeader
+        showBackButton={true}
+        onPressBackButton={onGoBack}
+        title={t('LearnCharAnimatedDrawing.header.title')}
+        backArrowImage={'chevron-down'}
+        style={{ backgroundColor: `${color}15` }}
+        {...otherProps}
+      />
+
       <Components.AppBaseView edges={['bottom', 'left', 'right']} style={styles.safeArea}>
         <View style={styles.contentContainer}>
           {show && (

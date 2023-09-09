@@ -33,7 +33,7 @@ interface ICardAnimationConfigActions {
   setStroke: (stroke: string) => void;
   setDisableStrokeAnimation: (disableStrokeAnimation: boolean) => void;
   setShowArrow: (showArrow: boolean) => void;
-  clear: () => void;
+  setTheme: (isDark: boolean) => void;
 }
 
 const IS_DARK = Appearance.getColorScheme() === 'dark';
@@ -72,7 +72,13 @@ const useCardAnimationConfigStore = create<ICardAnimationConfigState & ICardAnim
         setDisableStrokeAnimation: (disableStrokeAnimation: boolean) =>
           set(_state => ({ disableStrokeAnimation: disableStrokeAnimation })),
         setShowArrow: (showArrow: boolean) => set(_state => ({ showArrow: showArrow })),
-        clear: () => set(_state => ({ ...initialState })),
+        setTheme: (isDark: boolean) =>
+          set(_state => ({
+            emptyStroke: isDark ? '#FFFFFF11' : '#00000022',
+            highlightStroke: isDark ? '#0000FF' : '#0000FF',
+            arrowFill: isDark ? '#000000' : '#FFFFFF',
+            stroke: isDark ? '#FFFFFF' : '#000000',
+          })),
       }),
       {
         name: 'app-card-animation-storage',

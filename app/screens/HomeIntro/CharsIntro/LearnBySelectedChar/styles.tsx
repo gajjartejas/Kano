@@ -64,7 +64,13 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     fontFamily: Config.Fonts.NotoSansGujarati.Medium,
   },
-  chipStyle: {},
+  chipStyle: {
+    minWidth: 120,
+  },
+  chipIconContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   chipText: { fontSize: 12 },
   emptyListHeader: {
     paddingVertical: 8,

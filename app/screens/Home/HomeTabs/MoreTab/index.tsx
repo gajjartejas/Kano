@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { Divider, List, Text, useTheme } from 'react-native-paper';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { IconType } from 'react-native-easy-icon/src/Icon';
-import DeviceInfo, { isTablet } from 'react-native-device-info';
+import DeviceInfo from 'react-native-device-info';
 import Icon from 'react-native-easy-icon';
 
 //App Modules
@@ -18,6 +18,7 @@ import Components from 'app/components';
 import styles from './styles';
 import { LoggedInTabNavigatorParams } from 'app/navigation/types';
 import { AppTheme } from 'app/models/theme';
+import useLargeScreenMode from 'app/hooks/useLargeScreenMode';
 
 //Interfaces
 interface IMoreItem {
@@ -38,6 +39,7 @@ const MoreTab = ({ navigation }: Props) => {
   //Constants
   const { t } = useTranslation();
   const { colors } = useTheme<AppTheme>();
+  const largeScreenMode = useLargeScreenMode();
 
   //State
   const [visible, setVisible] = React.useState(false);
@@ -153,7 +155,7 @@ const MoreTab = ({ navigation }: Props) => {
       style={[styles.container, { backgroundColor: colors.background }]}>
       <ScrollView style={styles.scrollView}>
         <View style={styles.subView}>
-          <View style={[styles.imageBackground, isTablet() && styles.cardTablet]}>
+          <View style={[styles.imageBackground, largeScreenMode && styles.cardTablet]}>
             <Image resizeMode={'cover'} style={[styles.imageBackgroundCover]} source={Config.Images.icons.about_bg} />
             <View style={[styles.imageBackgroundCover, { backgroundColor: `${colors.background}88` }]} />
             <Image source={Config.Images.icons.app_icon} resizeMode="contain" style={styles.appIcon} />
@@ -161,7 +163,7 @@ const MoreTab = ({ navigation }: Props) => {
             <Text style={[styles.appVersion, { color: colors.text }]}>v{DeviceInfo.getVersion()}</Text>
           </View>
 
-          <View style={[styles.cardContainer, isTablet() && styles.cardTablet]}>
+          <View style={[styles.cardContainer, largeScreenMode && styles.cardTablet]}>
             {aboutItems.map((subItem, subIndex) => {
               return (
                 <View key={subItem.id.toString()}>

@@ -1,5 +1,6 @@
-//ThirdParty
 import { useCallback } from 'react';
+
+//ThirdParty
 import useCardStatics from 'app/realm/crud/cardStatics';
 import { ICardLearnType, ICardOrderType, ICardSelectionType } from 'app/realm/modals/cardStatics';
 import { LearnCharsType } from 'app/navigation/types';

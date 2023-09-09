@@ -4,19 +4,20 @@ import { View } from 'react-native';
 //ThirdParty
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
-import { Appbar, Divider, List, useTheme } from 'react-native-paper';
+import { Divider, List, useTheme } from 'react-native-paper';
 
 //App modules
 import Config from 'app/config';
 import Utils from 'app/utils';
 import styles from './styles';
+import { LoggedInTabNavigatorParams } from 'app/navigation/types';
+import useLargeScreenMode from 'app/hooks/useLargeScreenMode';
 
 //Modals
 import { ISettingItem, ISettingSection } from 'app/models/viewModels/settingItem';
 import Icon from 'react-native-easy-icon';
 import Components from 'app/components';
-import { LoggedInTabNavigatorParams } from 'app/navigation/types';
-import { isTablet } from 'react-native-device-info';
+import AppHeader from 'app/components/AppHeader';
 
 //Params
 type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'Settings'>;
@@ -25,6 +26,7 @@ const Settings = ({ navigation }: Props) => {
   //Constants
   const { t } = useTranslation();
   const { colors } = useTheme();
+  const largeScreenMode = useLargeScreenMode();
 
   //States
   const [apps] = useState<ISettingSection[]>([
@@ -139,12 +141,15 @@ const Settings = ({ navigation }: Props) => {
 
   return (
     <View style={[styles.container, { backgroundColor: colors.background }]}>
-      <Appbar.Header style={{ backgroundColor: colors.background }}>
-        <Appbar.BackAction onPress={onGoBack} />
-        <Appbar.Content title={t('settings.title')} />
-      </Appbar.Header>
+      <AppHeader
+        showBackButton={true}
+        onPressBackButton={onGoBack}
+        title={t('settings.title')}
+        style={{ backgroundColor: colors.background }}
+      />
+
       <Components.AppBaseView scroll edges={['bottom', 'left', 'right']} style={styles.safeArea}>
-        <View style={[styles.listContainer, isTablet() && styles.cardTablet]}>
+        <View style={[styles.listContainer, largeScreenMode && styles.cardTablet]}>
           {apps.map(item => {
             return (
               <View key={item.id.toString()}>

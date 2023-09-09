@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { StyleSheet } from 'react-native';
 
 //ThirdParty
 import { Dialog, Text, useTheme, Button } from 'react-native-paper';
-import { isTablet } from 'react-native-device-info';
+
+//App Modules
+import useLargeScreenMode from 'app/hooks/useLargeScreenMode';
 
 //Interface
 interface IAppActionDialogProps {
@@ -20,9 +22,10 @@ function AppActionDialog(props: IAppActionDialogProps) {
   //Constants
   const { title, description, onPressConfirm, onPressCancel, confirmText, cancelText } = props;
   const { colors } = useTheme();
+  const largeScreenMode = useLargeScreenMode();
 
   return (
-    <Dialog style={[isTablet() && styles.cardTablet]} visible={props.visible} onDismiss={onPressCancel}>
+    <Dialog style={[largeScreenMode && styles.cardTablet]} visible={props.visible} onDismiss={onPressCancel}>
       <Dialog.Title style={{ color: colors.onBackground }}>{title}</Dialog.Title>
       <Dialog.Content>
         <Text style={[styles.descriptionText, { color: `${colors.onBackground}88` }]}>{description}</Text>
@@ -59,4 +62,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AppActionDialog;
+export default memo(AppActionDialog);

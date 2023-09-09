@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { memo, useEffect, useRef } from 'react';
 
 //ThirdParty
 import Animated, {
@@ -50,6 +50,11 @@ const AnimatedStroke = (props: AnimatedStrokeProps) => {
         },
       ),
     );
+
+    // Cleanup function
+    return () => {
+      progress.value = 0;
+    };
   }, [progress, delay, duration, length, props, easingFn]);
 
   const animatedProps = useAnimatedProps(() => ({
@@ -59,4 +64,4 @@ const AnimatedStroke = (props: AnimatedStrokeProps) => {
   return <AnimatedPath {...props} animatedProps={animatedProps} ref={ref} strokeDasharray={length} />;
 };
 
-export default AnimatedStroke;
+export default memo(AnimatedStroke);
