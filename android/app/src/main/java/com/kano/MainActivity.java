@@ -6,6 +6,7 @@ import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint;
 import com.facebook.react.defaults.DefaultReactActivityDelegate;
+import com.proyecto26.inappbrowser.RNInAppBrowserModule;
 import com.zoontek.rnbootsplash.RNBootSplash;
 
 public class MainActivity extends ReactActivity {
@@ -38,4 +39,11 @@ public class MainActivity extends ReactActivity {
     RNBootSplash.init(this); // ⬅️ initialize the splash screen
     super.onCreate(null); // or super.onCreate(null) with react-native-screens
   }
+
+  @Override
+  protected void onStart() {
+    super.onStart();
+    RNInAppBrowserModule.onStart(this);
+  }
+
 }

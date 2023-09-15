@@ -113,22 +113,22 @@ const Settings = ({ navigation }: Props) => {
   }, [navigation]);
 
   const onPress = useCallback(
-    (item: ISettingItem, _index: number) => {
+    async (item: ISettingItem, _index: number) => {
       switch (item.route) {
         case 'Changelog':
-          Utils.openInAppBrowser(Config.Constants.CHANGE_LOG);
+          await Utils.openInAppBrowser(Config.Constants.CHANGE_LOG);
           break;
 
         case 'Translate':
-          Utils.openInAppBrowser(Config.Constants.TRANSLATE_APP);
+          await Utils.openInAppBrowser(Config.Constants.TRANSLATE_APP);
           break;
 
         case 'FAQ':
-          Utils.openInAppBrowser(Config.Constants.FAQ);
+          await Utils.openInAppBrowser(Config.Constants.FAQ);
           break;
 
         case 'PrivacyPolicy':
-          Utils.openInAppBrowser(Config.Constants.PRIVACY_POLICY);
+          await Utils.openInAppBrowser(Config.Constants.PRIVACY_POLICY);
           break;
 
         default:

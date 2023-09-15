@@ -42,6 +42,7 @@ const About = ({ navigation }: Props) => {
           title: t('aboutScreen.infoDescTitle'),
           description: '',
           route: '',
+          touchable: false,
         },
         {
           id: 1,
@@ -50,6 +51,7 @@ const About = ({ navigation }: Props) => {
           title: t('aboutScreen.infoAuthorNameTitle'),
           description: '',
           route: '',
+          touchable: false,
         },
       ],
     },
@@ -64,6 +66,7 @@ const About = ({ navigation }: Props) => {
           title: t('aboutScreen.portfolioTitle'),
           description: t('aboutScreen.portfolioSubTitle')!,
           route: '',
+          touchable: true,
         },
         {
           id: 1,
@@ -72,6 +75,7 @@ const About = ({ navigation }: Props) => {
           title: t('aboutScreen.instagramTitle'),
           description: t('aboutScreen.instagramSubTitle')!,
           route: '',
+          touchable: true,
         },
         {
           id: 3,
@@ -80,6 +84,7 @@ const About = ({ navigation }: Props) => {
           title: t('aboutScreen.telegramTitle'),
           description: t('aboutScreen.telegramSubTitle')!,
           route: '',
+          touchable: true,
         },
         {
           id: 4,
@@ -88,6 +93,7 @@ const About = ({ navigation }: Props) => {
           title: t('aboutScreen.githubTitle'),
           description: t('aboutScreen.githubSubTitle')!,
           route: '',
+          touchable: true,
         },
         {
           id: 5,
@@ -96,6 +102,7 @@ const About = ({ navigation }: Props) => {
           title: t('aboutScreen.twitterTitle'),
           description: t('aboutScreen.twitterSubTitle')!,
           route: '',
+          touchable: true,
         },
       ],
     },
@@ -107,22 +114,22 @@ const About = ({ navigation }: Props) => {
 
   //
   const onPressAboutOption = useCallback(
-    (item: ISettingSection, index: number, subItem: ISettingItem, subIndex: number) => {
+    async (item: ISettingSection, index: number, subItem: ISettingItem, subIndex: number) => {
       switch (true) {
         case index === 1 && subIndex === 0:
-          Utils.openInAppBrowser(Config.Constants.ABOUT_PORTFOLIO);
+          await Utils.openInAppBrowser(Config.Constants.ABOUT_PORTFOLIO);
           break;
         case index === 1 && subIndex === 1:
-          Linking.openURL(Config.Constants.ABOUT_INSTAGRAM);
+          await Utils.openBrowser(Config.Constants.ABOUT_INSTAGRAM);
           break;
         case index === 1 && subIndex === 2:
-          Linking.openURL(Config.Constants.ABOUT_TELEGRAM_LINK);
+          await Utils.openBrowser(Config.Constants.ABOUT_TELEGRAM_LINK);
           break;
         case index === 1 && subIndex === 3:
-          Utils.openInAppBrowser(Config.Constants.ABOUT_GITHUB);
+          await Utils.openInAppBrowser(Config.Constants.ABOUT_GITHUB);
           break;
         case index === 1 && subIndex === 4:
-          Linking.openURL(Config.Constants.ABOUT_TWITTER);
+          await Utils.openBrowser(Config.Constants.ABOUT_TWITTER);
           break;
         default:
       }
@@ -166,6 +173,7 @@ const About = ({ navigation }: Props) => {
                         onPress={() => onPressAboutOption(item, index, subItem, subIndex)}
                         title={subItem.title}
                         description={subItem.description}
+                        disabled={!subItem.touchable}
                         left={() => (
                           <Icon
                             style={styles.listIcon}

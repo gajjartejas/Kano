@@ -9,6 +9,7 @@ export interface ISettingItem {
   title: string;
   description?: string;
   route?: any;
+  touchable?: boolean;
 }
 
 export interface ISettingSection {

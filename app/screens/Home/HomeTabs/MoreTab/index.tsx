@@ -86,7 +86,7 @@ const MoreTab = ({ navigation }: Props) => {
   const onPressHideDialog = useCallback(() => setVisible(false), []);
 
   const onPressRateApp = useCallback(async () => {
-    await Utils.openInAppBrowser(
+    await Utils.openBrowser(
       Platform.OS === 'android' ? Config.Constants.PLAY_STORE_URL : Config.Constants.APP_STORE_URL,
     );
   }, []);
@@ -133,8 +133,8 @@ const MoreTab = ({ navigation }: Props) => {
     [onPressAbout, onPressContribute, onPressMoreApps, onPressRateApp, onPressSettings, onPressShowDialog],
   );
 
-  const onPressTelegram = useCallback(async () => {
-    await Utils.openInAppBrowser(Config.Constants.ABOUT_TELEGRAM_LINK);
+  const onPressGithub = useCallback(async () => {
+    await Utils.openInAppBrowser(Config.Constants.ABOUT_NEW_GITHUB_ISSUE);
   }, []);
 
   const onPressEmail = useCallback(async () => {
@@ -146,7 +146,7 @@ const MoreTab = ({ navigation }: Props) => {
     const model = DeviceInfo.getModel();
     const readableVersion = DeviceInfo.getReadableVersion();
     const body = `OS: ${osType} (${systemVersion})\nBrand: ${brand} (${model})\nApp Version: ${readableVersion}`;
-    await Linking.openURL(`mailto:${email}?subject=${subject}&body=${body}`);
+    await Utils.openBrowser(`mailto:${email}?subject=${subject}&body=${body}`);
   }, [t]);
 
   return (
@@ -193,7 +193,7 @@ const MoreTab = ({ navigation }: Props) => {
 
       <Components.AboutFeedbackDialog
         visible={visible}
-        onPressTelegram={onPressTelegram}
+        onPressGithub={onPressGithub}
         onPressEmail={onPressEmail}
         onPressHideDialog={onPressHideDialog}
       />

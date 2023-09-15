@@ -72,15 +72,15 @@ const MoreApps = ({ navigation }: Props) => {
     navigation.pop();
   }, [navigation]);
 
-  const onPressGithub = useCallback((item: IMoreAppItem, _index: number) => {
+  const onPressGithub = useCallback(async (item: IMoreAppItem, _index: number) => {
     if (item.github != null) {
-      Utils.openInAppBrowser(item.github);
+      await Utils.openInAppBrowser(item.github);
     }
   }, []);
 
-  const onPressPlayStore = useCallback((item: IMoreAppItem, _index: number) => {
+  const onPressPlayStore = useCallback(async (item: IMoreAppItem, _index: number) => {
     if (item.playStore != null) {
-      Linking.openURL(item.playStore);
+      await Utils.openBrowser(item.playStore);
     }
   }, []);
 

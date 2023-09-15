@@ -89,8 +89,8 @@ const Translators = ({ navigation }: Props) => {
 
   const onPressItem = (_item: ITranslator, _index: number) => {};
 
-  const onPressContribute = () => {
-    Utils.openInAppBrowser(Config.Constants.TRANSLATE_APP);
+  const onPressContribute = async () => {
+    await Utils.openInAppBrowser(Config.Constants.TRANSLATE_APP);
   };
 
   const EmptyListComponent = (
