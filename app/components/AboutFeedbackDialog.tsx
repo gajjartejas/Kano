@@ -12,7 +12,7 @@ import useLargeScreenMode from 'app/hooks/useLargeScreenMode';
 //Interface
 interface IAboutFeedbackDialogProps {
   visible: boolean;
-  onPressTelegram: () => void;
+  onPressGithub: () => void;
   onPressEmail: () => void;
   onPressHideDialog: () => void;
 }
@@ -35,9 +35,9 @@ function AboutFeedbackDialog(props: IAboutFeedbackDialogProps) {
         <TouchableRipple
           borderless={true}
           style={[styles.button, { backgroundColor: `${colors.onBackground}33` }]}
-          onPress={props.onPressTelegram}
+          onPress={props.onPressGithub}
           rippleColor="rgba(0, 0, 0, .32)">
-          <Icon type="font-awesome-brands" name="telegram-plane" color={`${colors.onBackground}88`} size={24} />
+          <Icon type="font-awesome-brands" name="github" color={`${colors.onBackground}88`} size={24} />
         </TouchableRipple>
         <TouchableRipple
           borderless={true}

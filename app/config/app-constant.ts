@@ -11,6 +11,7 @@ const Constant = {
 
   REPO_URL: GITHUB_PROJECT_LINK,
 
+  ABOUT_NEW_GITHUB_ISSUE: `${GITHUB_PROJECT_LINK}/issues`,
   ABOUT_TELEGRAM_LINK: 'https://t.me/appstejas',
   ABOUT_SUPPORT_EMAIL: 'gajjartejas26@gmail.com',
 
@@ -27,7 +28,7 @@ const Constant = {
   TERMS_OF_SERVICE: `${GITHUB_PROJECT_LINK}/blob/main/docs/terms.md`,
 
   ABOUT_HELP: `${GITHUB_PROJECT_LINK}/blob/main/docs/help.md`,
-  ABOUT_PORTFOLIO: 'https://www.gajjartejas.me',
+  ABOUT_PORTFOLIO: 'https://gajjartejas.me',
   ABOUT_INSTAGRAM: 'https://www.instagram.com/gajjartejas',
   ABOUT_JOIN_TELEGRAM: 'https://t.me/appstejas',
   ABOUT_GITHUB: GITHUB_PROFILE,

@@ -76,8 +76,8 @@ const License = ({ navigation }: Props) => {
     );
   };
 
-  const onPressItem = useCallback((item: IFinalLicense, _index: number) => {
-    Utils.openInAppBrowser(item.licenseSpecs.licenseUrl);
+  const onPressItem = useCallback(async (item: IFinalLicense, _index: number) => {
+    await Utils.openInAppBrowser(item.licenseSpecs.licenseUrl);
   }, []);
 
   return (

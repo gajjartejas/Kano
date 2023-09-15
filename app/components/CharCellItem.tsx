@@ -108,4 +108,10 @@ const styles = StyleSheet.create({
   iconTextContainerView: { flex: 1, alignItems: 'center', justifyContent: 'center' },
 });
 
-export default memo(CharCellItem, (o, n) => o.item.id === n.item.id);
+export default memo(CharCellItem, (p, n) => {
+  return (
+    p.sectionIndex === n.sectionIndex &&
+    p.item.id === n.item.id &&
+    p.parentWidth === n.parentWidth
+  );
+});
