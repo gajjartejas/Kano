@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef, useCallback } from 'react';
-import { View, Platform, useWindowDimensions } from 'react-native';
+import { View, Platform } from 'react-native';
 
 //ThirdParty
 import { Button, Chip, Text, useTheme } from 'react-native-paper';
@@ -12,7 +12,6 @@ import Icon from 'react-native-easy-icon';
 import Components from 'app/components';
 import styles from './styles';
 import { ISelectCharCellItem } from 'app/components/CharSelectCellItem';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { LearnCharsType, LoggedInTabNavigatorParams } from 'app/navigation/types';
 import { AppTheme } from 'app/models/theme';
 import useLargeScreenMode from 'app/hooks/useLargeScreenMode';
@@ -34,7 +33,6 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
   const { colors } = useTheme<AppTheme>();
   const { type, learnMode, isRandomMode, color } = route.params;
   const { t } = useTranslation();
-  const { width } = useWindowDimensions();
   const groupedEntries = useSelectedChartItemForTypes(type);
   const mappedGroupedEntries = groupedEntries.map(v => [v.title, v.data]).flat(1);
   const largeScreenMode = useLargeScreenMode();
@@ -208,12 +206,13 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
         title={t('learnBySelectedChar.header.title')}
         style={{ backgroundColor: `${color}15` }}
         backArrowImage={'chevron-down'}
+        largeHeader={true}
         {...otherProps}
       />
 
       <Components.AppBaseView edges={['bottom', 'left', 'right']} style={styles.safeArea}>
         <View
-          style={{ flex: 1 }}
+          style={styles.container}
           onLayout={event => {
             setParentWidth(event.nativeEvent.layout.width - 2 * CONTAINER_SPACING);
           }}>
@@ -242,7 +241,7 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
           style={[styles.continueButton]}
           contentStyle={[styles.continueButtonContainer]}
           disabled={selectedIds.size < 2}
-          mode="contained"
+          mode="contained-tonal"
           onPress={onPressContinue}>
           {t('general.continue')}
         </Button>

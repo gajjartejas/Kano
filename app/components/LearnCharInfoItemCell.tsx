@@ -47,22 +47,17 @@ const LearnCharInfoItemCell = (props: ILearnCharInfoItemCellProps) => {
   const fontSize = largeScreenMode ? 200 : 100;
 
   return (
-    <View
-      style={[
-        styles.container,
-        { width: width - insets.right - insets.left },
-        largeScreenMode && { flexDirection: 'row' },
-      ]}>
+    <View style={[styles.container, { width: width - insets.right - insets.left }, largeScreenMode && styles.flexRow]}>
       <Text
         style={[
           styles.headerText,
-          largeScreenMode && { alignSelf: 'flex-start', marginLeft: 20 },
+          largeScreenMode && styles.headerTextLargeMode,
           { fontSize: fontSize, color: colors.text },
         ]}>
         {gu}
       </Text>
 
-      <View style={{ flex: 1, marginTop: 20 }}>
+      <View style={styles.rowContainer}>
         <View
           style={[
             styles.card,
@@ -141,6 +136,17 @@ const styles = StyleSheet.create({
   cardTablet: {
     width: '70%',
     alignSelf: 'center',
+  },
+  flexRow: {
+    flexDirection: 'row',
+  },
+  headerTextLargeMode: {
+    alignSelf: 'flex-start',
+    marginLeft: 20,
+  },
+  rowContainer: {
+    flex: 1,
+    marginTop: 20,
   },
 });
 

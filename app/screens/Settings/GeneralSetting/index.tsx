@@ -21,6 +21,7 @@ import { LoggedInTabNavigatorParams } from 'app/navigation/types';
 import useOtherStatics from 'app/realm/crud/otherStatics';
 import useLargeScreenMode from 'app/hooks/useLargeScreenMode';
 import AppHeader from 'app/components/AppHeader';
+import useCardAnimationConfigStore from 'app/store/cardAnimationConfig';
 
 //Params
 type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'GeneralSetting'>;
@@ -35,9 +36,13 @@ const GeneralSetting = ({ navigation }: Props) => {
   const { clearAllData: clearAllChartData } = useChartStatics();
   const { clearAllData: clearAllOtherData } = useOtherStatics();
   const largeScreenMode = useLargeScreenMode();
+  const cardAutoSwipeDurationSeconds = useCardAnimationConfigStore(store => store.cardAutoSwipeDurationSeconds);
+  const setCardAutoSwipeDurationSeconds = useCardAnimationConfigStore(store => store.setCardAutoSwipeDurationSeconds);
 
   //States
   const [clearProgressAlertVisible, setClearProgressAlertVisible] = useState(false);
+  const [autoSwipeCardModeAlertVisible, setAutoSwipeCardModeAlertVisible] = useState(false);
+
   const [apps] = useState<ISettingSection[]>([
     {
       id: 0,
@@ -49,6 +54,14 @@ const GeneralSetting = ({ navigation }: Props) => {
           iconType: 'material-community',
           title: t('generalSetting.section1.row1.title'),
           description: t('generalSetting.section1.row1.subTitle'),
+          route: 'CardAnimation',
+        },
+        {
+          id: 1,
+          iconName: 'gesture-swipe',
+          iconType: 'material-community',
+          title: t('generalSetting.section1.row2.title'),
+          description: t('generalSetting.section1.row2.subTitle'),
           route: 'CardAnimation',
         },
       ],
@@ -78,6 +91,9 @@ const GeneralSetting = ({ navigation }: Props) => {
       case index === 0 && subIndex === 0:
         navigation.navigate('CardAnimation', {});
         break;
+      case index === 0 && subIndex === 1:
+        setAutoSwipeCardModeAlertVisible(true);
+        break;
       case index === 1 && subIndex === 0:
         setClearProgressAlertVisible(true);
         break;
@@ -90,6 +106,11 @@ const GeneralSetting = ({ navigation }: Props) => {
     clearAllCardData();
     clearAllChartData();
     clearAllOtherData();
+  };
+
+  const onPressConfirmCardAutoSwipeDuration = (value: number) => {
+    setCardAutoSwipeDurationSeconds(value);
+    setAutoSwipeCardModeAlertVisible(false);
   };
 
   return (
@@ -146,6 +167,19 @@ const GeneralSetting = ({ navigation }: Props) => {
         confirmText={t('general.ok')}
         onPressConfirm={onClearAllData}
         onPressCancel={() => setClearProgressAlertVisible(false)}
+      />
+      <Components.AppSliderDialog
+        title={t('generalSetting.section1.row2.cardAutoSwipeDurationAlert.title')}
+        description={t('generalSetting.section1.row2.cardAutoSwipeDurationAlert.desc')}
+        visible={autoSwipeCardModeAlertVisible}
+        cancelText={t('general.cancel')}
+        confirmText={t('general.ok')}
+        onPressConfirm={onPressConfirmCardAutoSwipeDuration}
+        onPressCancel={() => setAutoSwipeCardModeAlertVisible(false)}
+        range={[1, 10]}
+        step={1}
+        unit={t('generalSetting.section1.row2.cardAutoSwipeDurationAlert.unit')}
+        value={cardAutoSwipeDurationSeconds}
       />
     </View>
   );

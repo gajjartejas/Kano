@@ -109,9 +109,5 @@ const styles = StyleSheet.create({
 });
 
 export default memo(CharCellItem, (p, n) => {
-  return (
-    p.sectionIndex === n.sectionIndex &&
-    p.item.id === n.item.id &&
-    p.parentWidth === n.parentWidth
-  );
+  return p.sectionIndex === n.sectionIndex && p.item.id === n.item.id && p.parentWidth === n.parentWidth;
 });

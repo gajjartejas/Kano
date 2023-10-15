@@ -17,6 +17,7 @@ interface ICardAnimationConfigState {
   stroke: string;
   disableStrokeAnimation: boolean;
   showArrow: boolean;
+  cardAutoSwipeDurationSeconds: number;
 }
 
 interface ICardAnimationConfigActions {
@@ -34,6 +35,7 @@ interface ICardAnimationConfigActions {
   setDisableStrokeAnimation: (disableStrokeAnimation: boolean) => void;
   setShowArrow: (showArrow: boolean) => void;
   setTheme: (isDark: boolean) => void;
+  setCardAutoSwipeDurationSeconds: (duration: number) => void;
 }
 
 const IS_DARK = Appearance.getColorScheme() === 'dark';
@@ -51,6 +53,7 @@ const initialState: ICardAnimationConfigState = {
   stroke: IS_DARK ? '#FFFFFF' : '#000000',
   disableStrokeAnimation: false,
   showArrow: true,
+  cardAutoSwipeDurationSeconds: 4,
 };
 
 const useCardAnimationConfigStore = create<ICardAnimationConfigState & ICardAnimationConfigActions>()(
@@ -79,6 +82,8 @@ const useCardAnimationConfigStore = create<ICardAnimationConfigState & ICardAnim
             arrowFill: isDark ? '#000000' : '#FFFFFF',
             stroke: isDark ? '#FFFFFF' : '#000000',
           })),
+        setCardAutoSwipeDurationSeconds: (duration: number) =>
+          set(_state => ({ cardAutoSwipeDurationSeconds: duration })),
       }),
       {
         name: 'app-card-animation-storage',
