@@ -11,6 +11,7 @@ import Navigator from 'app/navigation';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import RealmContext from 'app/realm/RealmContext';
 import { SingletonHooksContainer } from 'react-singleton-hook';
+import { initialWindowMetrics, SafeAreaProvider } from 'react-native-safe-area-context';
 
 /**
  * Optimize memory usage and performance: https://reactnavigation.org/docs/react-native-screens/
@@ -20,12 +21,14 @@ enableScreens();
 const Entrypoint: React.FC = () => {
   return (
     <GestureHandlerRootView style={styles.container}>
-      <RealmContext.RealmProvider>
-        <AppManager>
-          <Navigator />
-        </AppManager>
-        <SingletonHooksContainer />
-      </RealmContext.RealmProvider>
+      <SafeAreaProvider initialMetrics={initialWindowMetrics}>
+        <RealmContext.RealmProvider>
+          <AppManager>
+            <Navigator />
+          </AppManager>
+          <SingletonHooksContainer />
+        </RealmContext.RealmProvider>
+      </SafeAreaProvider>
     </GestureHandlerRootView>
   );
 };

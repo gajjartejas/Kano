@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { Image, Linking, Platform, ScrollView, View } from 'react-native';
+import { Image, Platform, ScrollView, View } from 'react-native';
 
 //ThirdParty
 import { useTranslation } from 'react-i18next';

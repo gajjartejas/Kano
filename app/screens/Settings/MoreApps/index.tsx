@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { Linking, View } from 'react-native';
+import { View } from 'react-native';
 
 //ThirdParty
 import { NativeStackScreenProps } from '@react-navigation/native-stack';

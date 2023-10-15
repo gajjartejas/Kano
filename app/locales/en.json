@@ -7,7 +7,8 @@
     "next": "NEXT",
     "continue": "CONTINUE",
     "ok": "OK",
-    "cancel": "CANCEL"
+    "cancel": "CANCEL",
+    "value": "Value"
   },
   "hints": {
     "card": {
@@ -84,6 +85,15 @@
       "row1": {
         "title": "Card Animation",
         "subTitle": "Animation and speed setting"
+      },
+      "row2": {
+        "title": "Card Auto Swipe Duration",
+        "subTitle": "Card auto swipe duration in seconds",
+        "cardAutoSwipeDurationAlert": {
+          "title": "Card Auto Swipe Duration",
+          "desc": "Card auto swipe duration in seconds",
+          "unit": "Second(s)"
+        }
       }
     },
     "section2": {
@@ -248,7 +258,9 @@
       "title": "Change Mode",
       "descRandom": "Are you sure you want to switch to random mode?",
       "descSeq": "Are you sure you want to switch to sequence mode?"
-    }
+    },
+    "stop": "STOP",
+    "play": "PLAY"
   },
   "learnBySelectedChar": {
     "header": {

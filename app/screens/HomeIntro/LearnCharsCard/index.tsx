@@ -5,28 +5,30 @@ import { View } from 'react-native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
 import { DraxProvider, DraxView } from 'react-native-drax';
-import { Button, Text, TouchableRipple, useTheme } from 'react-native-paper';
+import { Button, IconButton, Text, TouchableRipple, useTheme } from 'react-native-paper';
 import TinderCard from 'react-tinder-card';
 import Animated, { Easing, FadeIn, FadeInDown, Layout } from 'react-native-reanimated';
+import Icon from 'react-native-easy-icon';
+import Toast from 'react-native-toast-message';
+import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 
 //App modules
-import { ICharCellItem, ICharCellListSection } from 'app/components/CharCellItem';
 import styles from './styles';
 import Components from 'app/components';
 import AnimatedCharacter from 'app/components/AnimatedCharacter';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import useSoundPlayer from 'app/hooks/useAudioPlayer';
+import { easingSymbols } from 'app/config/extra-symbols';
 import { LearnCharsMode, LearnCharsType, LoggedInTabNavigatorParams } from 'app/navigation/types';
 import { AppTheme } from 'app/models/theme';
+import { ICharCellItem, ICharCellListSection } from 'app/components/CharCellItem';
+import { ICardLearnType, ICardOrderType, ICardSelectionType } from 'app/realm/modals/cardStatics';
+import AppHeader from 'app/components/AppHeader';
+import { useChartSectionsForTypes } from 'app/hooks/useChartItemForType';
+import useLargeScreenMode from 'app/hooks/useLargeScreenMode';
 import useToastMessages from 'app/hooks/useToastMessages';
 import useHintConfig from 'app/hooks/useHintConfig';
 import useCardStatics from 'app/realm/crud/cardStatics';
-import { ICardLearnType, ICardOrderType, ICardSelectionType } from 'app/realm/modals/cardStatics';
+import useSoundPlayer from 'app/hooks/useAudioPlayer';
 import useCardAnimationConfigStore from 'app/store/cardAnimationConfig';
-import { easingSymbols } from 'app/config/extra-symbols';
-import useLargeScreenMode from 'app/hooks/useLargeScreenMode';
-import AppHeader from 'app/components/AppHeader';
-import { useChartSectionsForTypes } from 'app/hooks/useChartItemForType';
 
 //Params
 type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'LearnCharsCard'>;
@@ -40,6 +42,7 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
   //Refs
   const refGroupedEntries = useRef<ICharCellListSection[]>([]);
   const refProgressIndex = useRef<number>(0);
+  const refAutoSwipeTimer = useRef<any | null>(null);
 
   //Actions
 
@@ -52,6 +55,7 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
   const isLearningMode = learnMode === LearnCharsMode.Learn;
   const [cardHints] = useHintConfig();
   const { addCardStatics } = useCardStatics();
+  const insets = useSafeAreaInsets();
   const largeScreenMode = useLargeScreenMode();
   const [
     initialDelay,
@@ -66,6 +70,7 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
     stroke,
     disableStrokeAnimation,
     showArrow,
+    cardAutoSwipeDurationSeconds,
   ] = useCardAnimationConfigStore(store => [
     store.initialDelay,
     store.duration,
@@ -79,6 +84,7 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
     store.stroke,
     store.disableStrokeAnimation,
     store.showArrow,
+    store.cardAutoSwipeDurationSeconds,
   ]);
   useToastMessages(cardHints);
 
@@ -99,12 +105,60 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
   const [title, setTitle] = useState('');
   const [width, setWidth] = useState(0);
 
+  //Mute
+  const [mute, setMute] = useState(false);
+
+  //Auto Play
+  const [autoSwiping, setAutoSwiping] = useState(false);
+
   //Alerts
   const [switchToRandomModeAlertVisible, setSwitchToRandomModeAlertVisible] = useState(false);
 
   const [finishButtonTitle, setFinishButtonTitle] = useState('');
   const [finishButtonDisabled, setFinishButtonDisabled] = useState(false);
   const [finishLevelVisible, setFinishLevelVisible] = React.useState(false);
+
+  useEffect(() => {
+    if (!autoSwiping) {
+      return;
+    }
+    if (refAutoSwipeTimer.current === null) {
+      //Increase progress index
+      refProgressIndex.current = refProgressIndex.current + 1;
+      setProgressIndex(refProgressIndex.current);
+    }
+
+    refAutoSwipeTimer.current = setInterval(() => {
+      //Increase progress index
+      refProgressIndex.current = refProgressIndex.current + 1;
+      setProgressIndex(refProgressIndex.current);
+
+      if (refProgressIndex.current === refGroupedEntries.current[progressSection].data.length) {
+        Toast.show({
+          text1: t('learnCharsCardScreen.completeDialog.title', { section: progressSection + 1 }),
+          text2: t('learnCharsCardScreen.completeDialog.description', { section: progressSection + 1 }),
+          position: 'bottom',
+        });
+        if (progressSection === refGroupedEntries.current.length - 1) {
+          navigation.pop();
+        }
+
+        //Go to next level
+        refProgressIndex.current = 0;
+        setIncorrectAnswerIds([]);
+        setCorrectAnswerIds([]);
+        setPracticeMode(false);
+        setProgressSection(progressSection + 1);
+        setProgressIndex(0);
+        return;
+      }
+    }, cardAutoSwipeDurationSeconds * 1000);
+
+    return () => {
+      refAutoSwipeTimer.current && clearInterval(refAutoSwipeTimer.current);
+      refAutoSwipeTimer.current = null;
+    };
+  }, [autoSwiping, cardAutoSwipeDurationSeconds, navigation, progressSection, t]);
 
   useEffect(() => {
     if (refGroupedEntries.current.length > 0) {
@@ -121,6 +175,9 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
   }, [groupedEntries, isRandomMode]);
 
   useEffect(() => {
+    if (mute) {
+      return;
+    }
     //Play audio after screen loads/animation completes
     if (cardPerGroup.length < 1 || practiceMode) {
       return;
@@ -141,7 +198,7 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
       });
     }, 1000);
     return () => clearTimeout(refTimeout);
-  }, [addCardStatics, cardPerGroup, isLearningMode, isRandomMode, onlyInclude, play, practiceMode, type]);
+  }, [addCardStatics, cardPerGroup, isLearningMode, isRandomMode, mute, onlyInclude, play, practiceMode, type]);
 
   useEffect(() => {
     if (progressIndex % GROUP_COUNT === 1) {
@@ -312,6 +369,9 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
 
   const onPressCard = useCallback(
     (item: ICharCellItem, _index: number) => {
+      if (mute) {
+        return;
+      }
       if (play === null) {
         return;
       }
@@ -321,27 +381,50 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
         setPlaying(true);
       }, 100);
     },
-    [play],
+    [mute, play],
   );
 
-  const onSwitchToRandom = useCallback(() => {
+  const onToggleRandomSequence = useCallback(() => {
     setSwitchToRandomModeAlertVisible(true);
   }, []);
+
+  const onToggleMuteUnmute = useCallback(() => {
+    setMute(!mute);
+  }, [mute]);
+
+  const onPresentCharInfo = useCallback(() => {
+    navigation.push('LearnCharInfo', {
+      index: progressIndex,
+      sectionIndex: progressSection,
+      groupedEntries,
+      type,
+      color: color,
+    });
+  }, [color, groupedEntries, navigation, progressIndex, progressSection, type]);
 
   const switchToRandom = useCallback(() => {
     navigation.replace('LearnCharsCard', {
       type,
-      learnMode: learnMode === LearnCharsMode.Learn ? LearnCharsMode.Practice : LearnCharsMode.Learn,
+      learnMode: learnMode,
       isRandomMode: !isRandomMode,
       onlyInclude: onlyInclude,
       color: color,
     });
   }, [color, isRandomMode, learnMode, navigation, onlyInclude, type]);
 
+  const onPressSetting = useCallback(() => {
+    navigation.push('GeneralSetting', {});
+  }, [navigation]);
+
   const onCloseRandomDialog = useCallback(() => {
     setSwitchToRandomModeAlertVisible(false);
   }, []);
 
+  const onToggleAutoSwipe = useCallback(() => {
+    setAutoSwiping(!autoSwiping);
+  }, [autoSwiping]);
+
+  console.log('isLearningMode', isLearningMode);
   return (
     <SafeAreaView edges={['bottom']} style={[styles.container, { backgroundColor: `${color}15` }]}>
       <AppHeader
@@ -367,7 +450,7 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
                     onSwipe={onSwipe}
                     swipeRequirementType={'position'}
                     swipeThreshold={100}
-                    preventSwipe={[]}>
+                    preventSwipe={autoSwiping ? ['left', 'right', 'up', 'bottom'] : []}>
                     <TouchableRipple rippleColor={`${colors.primary}20`} onPress={() => onPressCard(item, index)}>
                       <Animated.View
                         entering={FadeInDown.duration(index % GROUP_COUNT === 1 ? 0 : 1000).easing(
@@ -467,20 +550,66 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
               <Button
                 disabled={finishButtonDisabled}
                 style={[styles.nextButtonStyle, largeScreenMode && styles.practiceCardsContainerTablet]}
-                mode="contained"
+                mode="contained-tonal"
                 onPress={onPressNext}>
                 {finishButtonTitle}
               </Button>
             </>
           )}
 
-          <Button
-            mode="text"
-            style={[largeScreenMode && styles.practiceCardsContainerTablet]}
-            labelStyle={[styles.randomOrderButton]}
-            onPress={onSwitchToRandom}>
-            {isRandomMode ? t('learnCharsCardScreen.switchToSequence') : t('learnCharsCardScreen.switchToRandom')}
-          </Button>
+          {isLearningMode && (
+            <View style={[styles.bottomButtons, insets.bottom > 0 && styles.bottomMargin]}>
+              <Button
+                mode="contained-tonal"
+                icon={autoSwiping ? 'stop' : 'play'}
+                labelStyle={[styles.playPauseButtonLabel]}
+                onPress={onToggleAutoSwipe}>
+                {autoSwiping ? t('learnCharsCardScreen.stop') : t('learnCharsCardScreen.play')}
+              </Button>
+
+              <IconButton
+                style={[styles.randomModeIconButton, { backgroundColor: `${color}30` }]}
+                icon={() => (
+                  <Icon
+                    type={'font-awesome'}
+                    name={isRandomMode ? 'long-arrow-right' : 'random'}
+                    color={colors.white}
+                    size={18}
+                  />
+                )}
+                mode="contained-tonal"
+                onPress={onToggleRandomSequence}
+              />
+
+              <IconButton
+                style={[styles.muteUnmuteButton, { backgroundColor: `${color}30` }]}
+                icon={() => (
+                  <Icon
+                    type={'font-awesome5'}
+                    name={mute ? 'volume-mute' : 'volume-up'}
+                    color={colors.white}
+                    size={18}
+                  />
+                )}
+                mode="contained-tonal"
+                onPress={onToggleMuteUnmute}
+              />
+
+              <IconButton
+                style={[styles.settingButton, { backgroundColor: `${color}30` }]}
+                icon={() => <Icon type={'font-awesome5'} name={'info'} color={colors.white} size={18} />}
+                mode="contained-tonal"
+                onPress={onPresentCharInfo}
+              />
+
+              <IconButton
+                style={[styles.presentCharInfoButton, { backgroundColor: `${color}30` }]}
+                icon={() => <Icon type={'font-awesome'} name={'gear'} color={colors.white} size={18} />}
+                mode="contained-tonal"
+                onPress={onPressSetting}
+              />
+            </View>
+          )}
         </Components.AppBaseView>
       </DraxProvider>
       <Components.AppLevelFinishDialog
@@ -502,7 +631,6 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
         confirmText={t('general.ok')}
         onPressConfirm={() => {
           setSwitchToRandomModeAlertVisible(false);
-
           setTimeout(() => {
             switchToRandom();
           }, 500);

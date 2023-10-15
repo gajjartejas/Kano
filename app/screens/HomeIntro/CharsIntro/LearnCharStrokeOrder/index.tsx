@@ -81,6 +81,7 @@ const LearnCharStrokeOrder = ({ navigation, route }: Props) => {
         title={t('LearnCharStrokeOrder.header.title')}
         backArrowImage={'chevron-down'}
         style={{ backgroundColor: `${color}15` }}
+        largeHeader={true}
         {...otherProps}
       />
 

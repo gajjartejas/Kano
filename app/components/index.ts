@@ -17,6 +17,7 @@ import AppLevelFinishDialog from './AppLevelFinishDialog';
 import CharSelectCellItem from './CharSelectCellItem';
 import AppActionDialog from './AppActionDialog';
 import AppBaseView from './AppBaseView';
+import AppSliderDialog from './AppSliderDialog';
 
 const Components = {
   AppNoConnection,
@@ -38,6 +39,7 @@ const Components = {
   CharSelectCellItem,
   AppActionDialog,
   AppBaseView,
+  AppSliderDialog,
 };
 
 export default Components;

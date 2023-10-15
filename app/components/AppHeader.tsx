@@ -22,6 +22,7 @@ interface AppHeaderProps {
   RightViewComponent?: React.ReactElement | null;
   statusBarHeight?: number | null;
   backArrowImage?: string;
+  largeHeader?: boolean;
 }
 
 const AppHeader = (props: AppHeaderProps) => {
@@ -49,7 +50,7 @@ const AppHeader = (props: AppHeaderProps) => {
         ...props.style,
       }}>
       <View style={[styles.statusBar, { height: statusBarHeight }]} />
-      <View style={styles.navigationContainer}>
+      <View style={[styles.navigationContainer, props.largeHeader && styles.largeStatusBarHeight]}>
         <View style={[StyleSheet.absoluteFill, styles.titleViewStyle]}>
           <Text
             numberOfLines={1}
@@ -99,6 +100,7 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     marginLeft: 4,
     overflow: 'hidden',
+    alignSelf: 'center',
   },
   drawerImage: {
     width: 18,
@@ -106,7 +108,7 @@ const styles = StyleSheet.create({
   },
   titleTextStyle: {
     fontSize: 16,
-    fontWeight: '400',
+    fontWeight: '500',
   },
   titleViewStyle: {
     flex: 1,
@@ -119,6 +121,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignContent: 'flex-start',
     marginLeft: 13,
+  },
+  largeStatusBarHeight: {
+    height: 52,
   },
 });
 

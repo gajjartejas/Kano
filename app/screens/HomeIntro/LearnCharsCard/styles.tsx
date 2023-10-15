@@ -89,6 +89,7 @@ const styles = StyleSheet.create({
     marginVertical: 8,
     marginHorizontal: 8,
     borderRadius: 8,
+    backgroundColor: '#ffffff',
     shadowColor: 'black',
     shadowOffset: { width: 0, height: 0 },
     shadowOpacity: 0.1,
@@ -101,6 +102,7 @@ const styles = StyleSheet.create({
     marginVertical: 8,
     marginHorizontal: 8,
     borderRadius: 8,
+    backgroundColor: '#ffffff',
     shadowColor: 'black',
     shadowOffset: { width: 0, height: 0 },
     shadowOpacity: 0.1,
@@ -142,9 +144,34 @@ const styles = StyleSheet.create({
     width: '80%',
     flex: 1,
   },
-  randomOrderButton: {
-    fontSize: 10,
+  playPauseButtonLabel: {
+    fontSize: 16,
     alignSelf: 'center',
+  },
+  bottomButtons: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 16,
+  },
+  bottomMargin: {
+    marginBottom: 0,
+  },
+  randomModeIconButton: {
+    position: 'absolute',
+    left: 16,
+  },
+  muteUnmuteButton: {
+    position: 'absolute',
+    left: 62,
+  },
+  presentCharInfoButton: {
+    position: 'absolute',
+    right: 62,
+  },
+  settingButton: {
+    position: 'absolute',
+    right: 16,
   },
 });
 

@@ -40,7 +40,7 @@ function AppLevelFinishDialog(props: IAppLevelFinishDialogProps) {
       </Dialog.Content>
 
       <Dialog.Actions>
-        <Button style={styles.nextButtonStyle} mode="contained" onPress={onPressHideDialog}>
+        <Button style={styles.nextButtonStyle} mode="contained-tonal" onPress={onPressHideDialog}>
           {buttonTitle}
         </Button>
       </Dialog.Actions>

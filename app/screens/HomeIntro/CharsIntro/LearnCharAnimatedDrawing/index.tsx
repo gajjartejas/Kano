@@ -86,6 +86,7 @@ const LearnCharAnimatedDrawing = ({ navigation, route }: Props) => {
         title={t('LearnCharAnimatedDrawing.header.title')}
         backArrowImage={'chevron-down'}
         style={{ backgroundColor: `${color}15` }}
+        largeHeader={true}
         {...otherProps}
       />
 
