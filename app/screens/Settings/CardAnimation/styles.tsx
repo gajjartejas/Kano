@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -46,6 +46,11 @@ const styles = StyleSheet.create({
   },
   rightSpacing32: {
     marginRight: 32,
+  },
+  slider: {
+    marginLeft: Platform.select({ ios: 0, android: -10 }),
+    marginRight: Platform.select({ ios: 0, android: -10 }),
+    marginTop: Platform.select({ ios: 4, android: 8 }),
   },
 });
 

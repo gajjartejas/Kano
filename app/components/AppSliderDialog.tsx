@@ -1,5 +1,5 @@
 import React, { memo, useEffect, useState } from 'react';
-import { StyleSheet } from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
 
 //ThirdParty
 import { Dialog, Text, useTheme, Button } from 'react-native-paper';
@@ -58,8 +58,9 @@ function AppSliderDialog(props: IAppSliderDialogProps) {
           step={step}
           value={currentValue}
           onValueChange={setCurrentValue}
+          thumbTintColor={colors.primary}
         />
-        <Text style={[styles.descriptionText, { color: `${colors.onBackground}88` }]}>{valueLabel}</Text>
+        <Text style={[styles.bottomDescriptionText, { color: `${colors.onBackground}88` }]}>{valueLabel}</Text>
       </Dialog.Content>
       <Dialog.Actions>
         <Button onPress={onPressCancel}>{cancelText}</Button>
@@ -87,12 +88,18 @@ const styles = StyleSheet.create({
   descriptionText: {
     fontSize: 16,
   },
+  bottomDescriptionText: {
+    fontSize: 16,
+    marginTop: 16,
+  },
   cardTablet: {
     width: '70%',
     alignSelf: 'center',
   },
   slider: {
-    marginTop: 12,
+    marginTop: 16,
+    marginLeft: Platform.select({ ios: 0, android: -15 }),
+    marginRight: Platform.select({ ios: 0, android: -15 }),
   },
 });
 

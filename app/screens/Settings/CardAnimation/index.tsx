@@ -94,7 +94,7 @@ const CardAnimation = ({ navigation }: Props) => {
         <Components.AppBaseView edges={['bottom', 'left', 'right']} style={styles.safeArea}>
           <View style={styles.subView}>
             <View style={[styles.listContainer, largeScreenMode && styles.cardTablet]}>
-              <View style={styles.rightSpacing32}>
+              <View style={largeScreenMode && [styles.rightSpacing32]}>
                 <Animated.View
                   entering={FadeIn.duration(1200).easing(Easing.bezierFn(1, 0, 0.17, 0.98))}
                   layout={Layout.springify()}
@@ -140,6 +140,7 @@ const CardAnimation = ({ navigation }: Props) => {
                   <View style={[styles.halfWidth, styles.rowMargin]}>
                     <RowTitle title={t('cardAnimation.initDelay')} />
                     <Slider
+                      style={styles.slider}
                       value={initialDelay}
                       onSlidingComplete={v => setInitialDelay(v)}
                       minimumValue={0}
@@ -153,6 +154,7 @@ const CardAnimation = ({ navigation }: Props) => {
                   <View style={[styles.halfWidth, styles.rowMargin]}>
                     <RowTitle title={t('cardAnimation.duration')} />
                     <Slider
+                      style={styles.slider}
                       value={duration}
                       onSlidingComplete={v => setDuration(v)}
                       minimumValue={0}
@@ -167,6 +169,7 @@ const CardAnimation = ({ navigation }: Props) => {
                   <View style={[styles.halfWidth, styles.rowMargin]}>
                     <RowTitle title={t('cardAnimation.strokeWidth')} />
                     <Slider
+                      style={styles.slider}
                       value={strokeWidth}
                       onSlidingComplete={v => setStrokeWidth(v)}
                       minimumValue={0}
@@ -180,6 +183,7 @@ const CardAnimation = ({ navigation }: Props) => {
                   <View style={[styles.halfWidth, styles.rowMargin]}>
                     <RowTitle title={t('cardAnimation.arrowFont')} />
                     <Slider
+                      style={styles.slider}
                       onSlidingComplete={v => setArrowFontSize(v)}
                       minimumValue={1}
                       step={1}
