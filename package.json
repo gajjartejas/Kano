@@ -49,7 +49,7 @@
     "react-native-toast-message": "^2.1.6",
     "react-native-vector-icons": "^10.0.0",
     "react-singleton-hook": "^4.0.1",
-    "react-tinder-card": "^1.6.2",
+    "react-tinder-card": "^1.6.3",
     "realm": "^11.10.1",
     "svg-path-properties": "^1.2.0",
     "zustand": "^4.4.0"

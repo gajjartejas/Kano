@@ -12,6 +12,7 @@ export interface GujaratiScriptIntroParams {
   color: string;
 }
 export interface GeneralSettingParams {}
+export interface SwipeCardSettingParams {}
 export interface MoreAppsParams {}
 export interface SettingsParams {}
 export interface LicenseTypes {}
@@ -93,6 +94,7 @@ export type LoggedInTabNavigatorParams = {
   LearnCharStrokeOrder: LearnCharStrokeOrderParams;
   LearnCharAnimatedDrawing: LearnCharAnimatedDrawingParams;
   CardAnimation: CardAnimationParams;
+  SwipeCardSetting: SwipeCardSettingParams;
 };
 
 export type HomeTabsNavigatorParams = {

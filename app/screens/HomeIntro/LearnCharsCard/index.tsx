@@ -413,7 +413,7 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
   }, [color, isRandomMode, learnMode, navigation, onlyInclude, type]);
 
   const onPressSetting = useCallback(() => {
-    navigation.push('GeneralSetting', {});
+    navigation.push('SwipeCardSetting', {});
   }, [navigation]);
 
   const onCloseRandomDialog = useCallback(() => {
@@ -438,6 +438,7 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
         <Components.AppBaseView edges={['bottom', 'left', 'right']} style={styles.safeArea}>
           {!practiceMode && (
             <View
+              pointerEvents={autoSwiping ? 'none' : 'auto'}
               onLayout={e => {
                 const { width: w, height: h } = e.nativeEvent.layout;
                 setWidth(w > h ? h : w);
@@ -450,7 +451,7 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
                     onSwipe={onSwipe}
                     swipeRequirementType={'position'}
                     swipeThreshold={100}
-                    preventSwipe={autoSwiping ? ['left', 'right', 'up', 'bottom'] : []}>
+                    preventSwipe={[]}>
                     <TouchableRipple rippleColor={`${colors.primary}20`} onPress={() => onPressCard(item, index)}>
                       <Animated.View
                         entering={FadeInDown.duration(index % GROUP_COUNT === 1 ? 0 : 1000).easing(

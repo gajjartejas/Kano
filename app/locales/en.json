@@ -83,6 +83,25 @@
     "section1": {
       "header": "General",
       "row1": {
+        "title": "Swipe Card",
+        "subTitle": "Change card animation & duration"
+      }
+    },
+    "section2": {
+      "header": "Other",
+      "row1": {
+        "title": "Clear progress",
+        "subTitle": "Clear all progress",
+        "dialogTitle": "Clear app progress?",
+        "dialogSubTitle": "Are you sure you want to clear app progress?"
+      }
+    }
+  },
+  "swipeCardSetting": {
+    "title": "Swipe Card",
+    "section1": {
+      "header": "General",
+      "row1": {
         "title": "Card Animation",
         "subTitle": "Animation and speed setting"
       },
@@ -94,15 +113,6 @@
           "desc": "Card auto swipe duration in seconds",
           "unit": "Second(s)"
         }
-      }
-    },
-    "section2": {
-      "header": "Other",
-      "row1": {
-        "title": "Clear progress",
-        "subTitle": "Clear all progress",
-        "dialogTitle": "Clear app progress?",
-        "dialogSubTitle": "Are you sure you want to clear app progress?"
       }
     }
   },

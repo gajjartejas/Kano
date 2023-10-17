@@ -26,11 +26,12 @@ import LearnBySelectedChar from 'app/screens/HomeIntro/CharsIntro/LearnBySelecte
 import LearnCharStrokeOrder from 'app/screens/HomeIntro/CharsIntro/LearnCharStrokeOrder';
 import GeneralSetting from 'app/screens/Settings/GeneralSetting';
 import CardAnimation from 'app/screens/Settings/CardAnimation';
+import LearnCharAnimatedDrawing from 'app/screens/HomeIntro/CharsIntro/LearnCharAnimatedDrawing';
+import SwipeCardSetting from 'app/screens/Settings/SwipeCardSetting';
 
 //App Modules
 import { HomeTabsNavigatorParams, LoggedInTabNavigatorParams } from 'app/navigation/types';
 import { AppTheme } from 'app/models/theme';
-import LearnCharAnimatedDrawing from 'app/screens/HomeIntro/CharsIntro/LearnCharAnimatedDrawing';
 
 const Tab = createMaterialBottomTabNavigator<HomeTabsNavigatorParams>();
 
@@ -102,6 +103,7 @@ const LoggedInTabNavigator = () => {
       <LoggedInStack.Screen name="LearnCharInfo" component={LearnCharInfo} options={{ headerShown: false }} />
       <LoggedInStack.Screen name="LearnCharsCard" component={LearnCharsCard} options={{ headerShown: false }} />
       <LoggedInStack.Screen name="GeneralSetting" component={GeneralSetting} options={{ headerShown: false }} />
+      <LoggedInStack.Screen name="SwipeCardSetting" component={SwipeCardSetting} options={{ headerShown: false }} />
       <LoggedInStack.Screen name="CardAnimation" component={CardAnimation} options={{ headerShown: false }} />
       <LoggedInStack.Group screenOptions={{ presentation: 'modal' }}>
         <LoggedInStack.Screen
