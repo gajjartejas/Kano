@@ -15,56 +15,47 @@ import styles from './styles';
 //App Modules
 import { ISettingItem, ISettingSection } from 'app/models/viewModels/settingItem';
 import Components from 'app/components';
-import useCardStatics from 'app/realm/crud/cardStatics';
-import useChartStatics from 'app/realm/crud/chartStatics';
 import { LoggedInTabNavigatorParams } from 'app/navigation/types';
-import useOtherStatics from 'app/realm/crud/otherStatics';
 import useLargeScreenMode from 'app/hooks/useLargeScreenMode';
 import AppHeader from 'app/components/AppHeader';
+import useCardAnimationConfigStore from 'app/store/cardAnimationConfig';
 
 //Params
-type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'GeneralSetting'>;
+type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'SwipeCardSetting'>;
 
-const GeneralSetting = ({ navigation }: Props) => {
+const SwipeCardSetting = ({ navigation }: Props) => {
   //Refs
 
   //Constants
   const { t } = useTranslation();
   const { colors } = useTheme();
-  const { clearAllData: clearAllCardData } = useCardStatics();
-  const { clearAllData: clearAllChartData } = useChartStatics();
-  const { clearAllData: clearAllOtherData } = useOtherStatics();
   const largeScreenMode = useLargeScreenMode();
+  const cardAutoSwipeDurationSeconds = useCardAnimationConfigStore(store => store.cardAutoSwipeDurationSeconds);
+  const setCardAutoSwipeDurationSeconds = useCardAnimationConfigStore(store => store.setCardAutoSwipeDurationSeconds);
 
   //States
-  const [clearProgressAlertVisible, setClearProgressAlertVisible] = useState(false);
+  const [autoSwipeCardModeAlertVisible, setAutoSwipeCardModeAlertVisible] = useState(false);
 
   const [apps] = useState<ISettingSection[]>([
     {
       id: 0,
-      title: t('generalSetting.section1.header'),
+      title: t('swipeCardSetting.section1.header'),
       items: [
         {
           id: 0,
-          iconName: 'cards',
+          iconName: 'animation-play',
           iconType: 'material-community',
-          title: t('generalSetting.section1.row1.title'),
-          description: t('generalSetting.section1.row1.subTitle'),
+          title: t('swipeCardSetting.section1.row1.title'),
+          description: t('swipeCardSetting.section1.row1.subTitle'),
           route: 'CardAnimation',
         },
-      ],
-    },
-    {
-      id: 1,
-      title: t('generalSetting.section2.header'),
-      items: [
         {
-          id: 0,
-          iconName: 'backup-restore',
+          id: 1,
+          iconName: 'gesture-swipe',
           iconType: 'material-community',
-          title: t('generalSetting.section2.row1.title'),
-          description: t('generalSetting.section2.row1.subTitle'),
-          route: 'SelectAppearance',
+          title: t('swipeCardSetting.section1.row2.title'),
+          description: t('swipeCardSetting.section1.row2.subTitle'),
+          route: 'CardAnimation',
         },
       ],
     },
@@ -77,20 +68,18 @@ const GeneralSetting = ({ navigation }: Props) => {
   const onPressAppearanceOption = (item: ISettingSection, index: number, subItem: ISettingItem, subIndex: number) => {
     switch (true) {
       case index === 0 && subIndex === 0:
-        navigation.navigate('SwipeCardSetting', {});
+        navigation.navigate('CardAnimation', {});
         break;
-      case index === 1 && subIndex === 0:
-        setClearProgressAlertVisible(true);
+      case index === 0 && subIndex === 1:
+        setAutoSwipeCardModeAlertVisible(true);
         break;
       default:
     }
   };
 
-  const onClearAllData = () => {
-    setClearProgressAlertVisible(false);
-    clearAllCardData();
-    clearAllChartData();
-    clearAllOtherData();
+  const onPressConfirmCardAutoSwipeDuration = (value: number) => {
+    setCardAutoSwipeDurationSeconds(value);
+    setAutoSwipeCardModeAlertVisible(false);
   };
 
   return (
@@ -98,7 +87,7 @@ const GeneralSetting = ({ navigation }: Props) => {
       <AppHeader
         showBackButton={true}
         onPressBackButton={onGoBack}
-        title={t('generalSetting.title')}
+        title={t('swipeCardSetting.title')}
         style={{ backgroundColor: colors.background }}
       />
 
@@ -139,17 +128,21 @@ const GeneralSetting = ({ navigation }: Props) => {
           </View>
         </ScrollView>
       </View>
-      <Components.AppActionDialog
-        title={t('generalSetting.section2.row1.dialogTitle')}
-        description={t('generalSetting.section2.row1.dialogSubTitle')}
-        visible={clearProgressAlertVisible}
+      <Components.AppSliderDialog
+        title={t('swipeCardSetting.section1.row2.cardAutoSwipeDurationAlert.title')}
+        description={t('swipeCardSetting.section1.row2.cardAutoSwipeDurationAlert.desc')}
+        visible={autoSwipeCardModeAlertVisible}
         cancelText={t('general.cancel')}
         confirmText={t('general.ok')}
-        onPressConfirm={onClearAllData}
-        onPressCancel={() => setClearProgressAlertVisible(false)}
+        onPressConfirm={onPressConfirmCardAutoSwipeDuration}
+        onPressCancel={() => setAutoSwipeCardModeAlertVisible(false)}
+        range={[1, 10]}
+        step={1}
+        unit={t('swipeCardSetting.section1.row2.cardAutoSwipeDurationAlert.unit')}
+        value={cardAutoSwipeDurationSeconds}
       />
     </View>
   );
 };
 
-export default GeneralSetting;
+export default SwipeCardSetting;
