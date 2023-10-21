@@ -20,7 +20,7 @@ interface AnimatedStrokeProps extends PathProps {
   easing?: Animated.EasingFunction;
 }
 
-const AnimatedPath = Animated.createAnimatedComponent(Path);
+const AnimatedPath = memo(Animated.createAnimatedComponent(Path));
 
 export const AnimatedStrokeEasing = Easing;
 export type AnimatedStrokeEasingFunction = Animated.EasingFunction;
@@ -58,7 +58,7 @@ const AnimatedStroke = (props: AnimatedStrokeProps) => {
   }, [progress, delay, duration, length, props, easingFn]);
 
   const animatedProps = useAnimatedProps(() => ({
-    strokeDashoffset: length - length * Easing.linear(progress.value),
+    strokeDashoffset: length - length * easingFn(progress.value),
   }));
 
   return <AnimatedPath {...props} animatedProps={animatedProps} ref={ref} strokeDasharray={length} />;

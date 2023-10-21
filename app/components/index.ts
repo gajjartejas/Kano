@@ -18,6 +18,7 @@ import CharSelectCellItem from './CharSelectCellItem';
 import AppActionDialog from './AppActionDialog';
 import AppBaseView from './AppBaseView';
 import AppSliderDialog from './AppSliderDialog';
+import SwipeCard from './SwipeCard';
 
 const Components = {
   AppNoConnection,
@@ -40,6 +41,7 @@ const Components = {
   AppActionDialog,
   AppBaseView,
   AppSliderDialog,
+  SwipeCard,
 };
 
 export default Components;

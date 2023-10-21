@@ -5,9 +5,8 @@ import { View } from 'react-native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
 import { DraxProvider, DraxView } from 'react-native-drax';
-import { Button, IconButton, Text, TouchableRipple, useTheme } from 'react-native-paper';
-import TinderCard from 'react-tinder-card';
-import Animated, { Easing, FadeIn, FadeInDown, Layout } from 'react-native-reanimated';
+import { Button, IconButton, Text, useTheme } from 'react-native-paper';
+import Animated, { Easing, FadeInDown } from 'react-native-reanimated';
 import Icon from 'react-native-easy-icon';
 import Toast from 'react-native-toast-message';
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -15,7 +14,6 @@ import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context'
 //App modules
 import styles from './styles';
 import Components from 'app/components';
-import AnimatedCharacter from 'app/components/AnimatedCharacter';
 import { easingSymbols } from 'app/config/extra-symbols';
 import { LearnCharsMode, LearnCharsType, LoggedInTabNavigatorParams } from 'app/navigation/types';
 import { AppTheme } from 'app/models/theme';
@@ -283,16 +281,18 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
 
       //For learning mode skip the practice mode section
       if (isLearningMode) {
-        //Increase progress index
-        refProgressIndex.current = refProgressIndex.current + 1;
-        setProgressIndex(refProgressIndex.current);
+        setTimeout(() => {
+          //Increase progress index
+          refProgressIndex.current = refProgressIndex.current + 1;
+          setProgressIndex(refProgressIndex.current);
 
-        if (refProgressIndex.current === refGroupedEntries.current[progressSection].data.length) {
-          //Show finish level modal
-          setTimeout(() => {
-            setFinishLevelVisible(true);
-          }, 300);
-        }
+          if (refProgressIndex.current === refGroupedEntries.current[progressSection].data.length) {
+            //Show finish level modal
+            setTimeout(() => {
+              setFinishLevelVisible(true);
+            }, 300);
+          }
+        }, 300);
         return;
       }
 
@@ -424,7 +424,6 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
     setAutoSwiping(!autoSwiping);
   }, [autoSwiping]);
 
-  console.log('isLearningMode', isLearningMode);
   return (
     <SafeAreaView edges={['bottom']} style={[styles.container, { backgroundColor: `${color}15` }]}>
       <AppHeader
@@ -446,53 +445,29 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
               style={styles.cardContainer}>
               {cardPerGroup.map((item, index) => {
                 return (
-                  <TinderCard
+                  <Components.SwipeCard
                     key={item.id.toString()}
                     onSwipe={onSwipe}
-                    swipeRequirementType={'position'}
-                    swipeThreshold={100}
-                    preventSwipe={[]}>
-                    <TouchableRipple rippleColor={`${colors.primary}20`} onPress={() => onPressCard(item, index)}>
-                      <Animated.View
-                        entering={FadeInDown.duration(index % GROUP_COUNT === 1 ? 0 : 1000).easing(
-                          Easing.bezierFn(1, 0, 0.17, 0.98),
-                        )}
-                        layout={Layout.springify()}
-                        style={[
-                          styles.card,
-                          {
-                            backgroundColor: `${color}30`,
-                            width: width * 0.7,
-                            height: width * 0.7,
-                            top: (-width * 0.7) / 2 - 50,
-                            left: (-width * 0.7) / 2,
-                          },
-                        ]}>
-                        <Animated.View
-                          entering={FadeIn.duration(1200).easing(Easing.bezierFn(1, 0, 0.17, 0.98))}
-                          layout={Layout.springify()}
-                          style={styles.animatedView}>
-                          <AnimatedCharacter
-                            initialDelay={initialDelay}
-                            duration={duration}
-                            emptyStroke={emptyStroke}
-                            highlightStroke={highlightStroke}
-                            arrowFill={arrowFill}
-                            stroke={stroke}
-                            disableStrokeAnimation={disableStrokeAnimation}
-                            showArrow={showArrow}
-                            strokeWidth={strokeWidth}
-                            play={playing}
-                            path={item.svg}
-                            arrowSymbol={arrowSymbol}
-                            arrowFontSize={arrowFontSize}
-                            easing={easingSymbols.filter(v => v.id === easingId)[0].easing}
-                          />
-                        </Animated.View>
-                        <Text style={[styles.subtitleText, { color: colors.text }]}>{item.en}</Text>
-                      </Animated.View>
-                    </TouchableRipple>
-                  </TinderCard>
+                    onPress={() => onPressCard(item, index)}
+                    index={index}
+                    color={color}
+                    width={width}
+                    initialDelay={initialDelay}
+                    duration={duration}
+                    emptyStroke={emptyStroke}
+                    highlightStroke={highlightStroke}
+                    arrowFill={arrowFill}
+                    stroke={stroke}
+                    disableStrokeAnimation={disableStrokeAnimation}
+                    showArrow={showArrow}
+                    strokeWidth={strokeWidth}
+                    play={playing}
+                    item={item}
+                    arrowSymbol={arrowSymbol}
+                    arrowFontSize={arrowFontSize}
+                    easing={easingSymbols.filter(v => v.id === easingId)[0].easing}
+                    groupCount={GROUP_COUNT}
+                  />
                 );
               })}
             </View>
