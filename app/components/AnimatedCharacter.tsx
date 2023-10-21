@@ -10,7 +10,7 @@ import AnimatedStroke, { AnimatedStrokeEasingFunction } from './AnimatedStroke';
 import useSvgReader from 'app/hooks/useSvgReader';
 
 //Interface
-interface IAnimatedCharacter extends PathProps {
+export interface IAnimatedCharacterProps extends PathProps {
   /**
    * Initial delay in ms
    */
@@ -61,7 +61,7 @@ export interface IAnimatedCharacterRef extends PathProps {
   reset: () => void;
 }
 
-const AnimatedCharacter = forwardRef<IAnimatedCharacterRef, IAnimatedCharacter>((props, ref) => {
+const AnimatedCharacter = forwardRef<IAnimatedCharacterRef, IAnimatedCharacterProps>((props, ref) => {
   const { parsedSvg, readSvg } = useSvgReader();
   const [strokeTiming, setStrokeTiming] = useState<IAnimatedCharacterStrokeGroupTiming[]>([]);
 
@@ -148,7 +148,7 @@ const AnimatedCharacter = forwardRef<IAnimatedCharacterRef, IAnimatedCharacter>(
     [onProgress, onFinish],
   );
 
-  if (!parsedSvg) {
+  if (!parsedSvg || !strokeTiming || strokeTiming.length < 1) {
     return null;
   }
 
