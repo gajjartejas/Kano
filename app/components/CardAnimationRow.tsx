@@ -11,7 +11,7 @@ import { AppTheme } from 'app/models/theme';
 import Config from 'app/config';
 import useLargeScreenMode from 'app/hooks/useLargeScreenMode';
 
-export function ColorRow(props: {
+export const ColorRow = React.memo(function ColorRow(props: {
   style?: ViewStyle | ViewStyle[];
   label: string;
   color: string;
@@ -55,9 +55,9 @@ export function ColorRow(props: {
       </Portal>
     </View>
   );
-}
+});
 
-export function SwitchRow(props: {
+export const SwitchRow = React.memo(function SwitchRow(props: {
   style?: ViewStyle;
   label: string;
   value: boolean;
@@ -71,9 +71,9 @@ export function SwitchRow(props: {
       <Switch value={value} onValueChange={onValueChange} />
     </View>
   );
-}
+});
 
-export function ArrowRow(props: {
+export const ArrowRow = React.memo(function ArrowRow(props: {
   selected?: boolean;
   style?: ViewStyle;
   onPress: () => void;
@@ -120,12 +120,12 @@ export function ArrowRow(props: {
       </View>
     </TouchableOpacity>
   );
-}
+});
 
-export function RowTitle(props: { title: string; style?: TextStyle }) {
+export const RowTitle = React.memo(function RowTitle(props: { title: string; style?: TextStyle }) {
   const { colors } = useTheme();
   return <Text style={[props.style, { color: colors.onSurface }]}>{props.title}</Text>;
-}
+});
 
 const styles = StyleSheet.create({
   colorPickerContainer: {

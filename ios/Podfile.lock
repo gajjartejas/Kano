@@ -387,7 +387,7 @@ PODS:
     - RCTTypeSafety
     - React-Core
     - ReactCommon/turbomodule/core
-  - react-native-slider (4.4.2):
+  - react-native-slider (4.4.3):
     - React-Core
   - React-NativeModulesApple (0.72.1):
     - hermes-engine
@@ -525,7 +525,7 @@ PODS:
     - React-Core
   - RNLocalize (3.0.2):
     - React-Core
-  - RNReanimated (3.3.0):
+  - RNReanimated (3.5.4):
     - DoubleConversion
     - FBLazyVector
     - glog
@@ -562,7 +562,7 @@ PODS:
     - RNSound/Core (= 0.11.2)
   - RNSound/Core (0.11.2):
     - React-Core
-  - RNSVG (13.11.0):
+  - RNSVG (13.14.0):
     - React-Core
   - RNVectorIcons (10.0.0):
     - React-Core
@@ -824,7 +824,7 @@ SPEC CHECKSUMS:
   react-native-in-app-review: db8bb167a5f238e7ceca5c242d6b36ce8c4404a4
   react-native-mmkv: dea675cf9697ad35940f1687e98e133e1358ef9f
   react-native-safe-area-context: 68b07eabfb0d14547d36f6929c0e98d818064f02
-  react-native-slider: 33b8d190b59d4f67a541061bb91775d53d617d9d
+  react-native-slider: 1cdd6ba29675df21f30544253bf7351d3c2d68c4
   React-NativeModulesApple: bdfd86e972ea8103941faab9c7f64ea9be7e2be6
   React-perflogger: 3d501f34c8d4b10cb75f348e43591765788525ad
   React-RCTActionSheet: f5335572c979198c0c3daff67b07bd1ad8370c1d
@@ -853,10 +853,10 @@ SPEC CHECKSUMS:
   RNGestureHandler: dec4645026e7401a0899f2846d864403478ff6a5
   RNInAppBrowser: e36d6935517101ccba0e875bac8ad7b0cb655364
   RNLocalize: dbea38dcb344bf80ff18a1757b1becf11f70cae4
-  RNReanimated: 9f7068e43b9358a46a688d94a5a3adb258139457
+  RNReanimated: ab2e96c6d5591c3dfbb38a464f54c8d17fb34a87
   RNScreens: 50ffe2fa2342eabb2d0afbe19f7c1af286bc7fb3
   RNSound: 6c156f925295bdc83e8e422e7d8b38d33bc71852
-  RNSVG: 03e4d258ca355d7836a0a5dd4d4dc63c1eb49cbb
+  RNSVG: d00c8f91c3cbf6d476451313a18f04d220d4f396
   RNVectorIcons: 8b5bb0fa61d54cd2020af4f24a51841ce365c7e9
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   Yoga: 65286bb6a07edce5e4fe8c90774da977ae8fc009

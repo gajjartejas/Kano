@@ -30,8 +30,8 @@ const SwipeCardSetting = ({ navigation }: Props) => {
   const { t } = useTranslation();
   const { colors } = useTheme();
   const largeScreenMode = useLargeScreenMode();
-  const cardAutoSwipeDurationSeconds = useCardAnimationConfigStore(store => store.cardAutoSwipeDurationSeconds);
-  const setCardAutoSwipeDurationSeconds = useCardAnimationConfigStore(store => store.setCardAutoSwipeDurationSeconds);
+  const cardAutoSwipeDuration = useCardAnimationConfigStore(store => store.cardAutoSwipeDuration);
+  const setCardAutoSwipeDuration = useCardAnimationConfigStore(store => store.setCardAutoSwipeDuration);
 
   //States
   const [autoSwipeCardModeAlertVisible, setAutoSwipeCardModeAlertVisible] = useState(false);
@@ -78,7 +78,7 @@ const SwipeCardSetting = ({ navigation }: Props) => {
   };
 
   const onPressConfirmCardAutoSwipeDuration = (value: number) => {
-    setCardAutoSwipeDurationSeconds(value);
+    setCardAutoSwipeDuration(value * 1000);
     setAutoSwipeCardModeAlertVisible(false);
   };
 
@@ -139,7 +139,7 @@ const SwipeCardSetting = ({ navigation }: Props) => {
         range={[1, 10]}
         step={1}
         unit={t('swipeCardSetting.section1.row2.cardAutoSwipeDurationAlert.unit')}
-        value={cardAutoSwipeDurationSeconds}
+        value={cardAutoSwipeDuration / 1000}
       />
     </View>
   );

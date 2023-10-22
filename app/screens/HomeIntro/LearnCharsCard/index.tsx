@@ -68,7 +68,7 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
     stroke,
     disableStrokeAnimation,
     showArrow,
-    cardAutoSwipeDurationSeconds,
+    cardAutoSwipeDuration,
   ] = useCardAnimationConfigStore(store => [
     store.initialDelay,
     store.duration,
@@ -82,7 +82,7 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
     store.stroke,
     store.disableStrokeAnimation,
     store.showArrow,
-    store.cardAutoSwipeDurationSeconds,
+    store.cardAutoSwipeDuration,
   ]);
   useToastMessages(cardHints);
 
@@ -150,13 +150,13 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
         setProgressIndex(0);
         return;
       }
-    }, cardAutoSwipeDurationSeconds * 1000);
+    }, cardAutoSwipeDuration);
 
     return () => {
       refAutoSwipeTimer.current && clearInterval(refAutoSwipeTimer.current);
       refAutoSwipeTimer.current = null;
     };
-  }, [autoSwiping, cardAutoSwipeDurationSeconds, navigation, progressSection, t]);
+  }, [autoSwiping, cardAutoSwipeDuration, navigation, progressSection, t]);
 
   useEffect(() => {
     if (refGroupedEntries.current.length > 0) {
@@ -194,9 +194,20 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
         synced: false,
         sectionType: type,
       });
-    }, 1000);
+    }, initialDelay);
     return () => clearTimeout(refTimeout);
-  }, [addCardStatics, cardPerGroup, isLearningMode, isRandomMode, mute, onlyInclude, play, practiceMode, type]);
+  }, [
+    addCardStatics,
+    cardPerGroup,
+    initialDelay,
+    isLearningMode,
+    isRandomMode,
+    mute,
+    onlyInclude,
+    play,
+    practiceMode,
+    type,
+  ]);
 
   useEffect(() => {
     if (progressIndex % GROUP_COUNT === 1) {
@@ -288,9 +299,8 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
 
           if (refProgressIndex.current === refGroupedEntries.current[progressSection].data.length) {
             //Show finish level modal
-            setTimeout(() => {
-              setFinishLevelVisible(true);
-            }, 300);
+
+            setFinishLevelVisible(true);
           }
         }, 300);
         return;
