@@ -34,6 +34,7 @@ const CardAnimation = ({ navigation }: Props) => {
   const { t } = useTranslation();
   const appearance = useThemeConfigStore(store => store.appearance);
   const setTheme = useCardAnimationConfigStore(store => store.setTheme);
+  const reset = useCardAnimationConfigStore(store => store.reset);
   const largeScreenMode = useLargeScreenMode();
 
   //States
@@ -79,7 +80,8 @@ const CardAnimation = ({ navigation }: Props) => {
 
   const onPressReset = useCallback(() => {
     setTheme(appearance === IAppearanceType.Auto ? Appearance.getColorScheme() === 'dark' : appearance === 'dark');
-  }, [appearance, setTheme]);
+    reset();
+  }, [appearance, reset, setTheme]);
 
   return (
     <View style={[styles.container, { backgroundColor: colors.background }]}>
@@ -138,27 +140,27 @@ const CardAnimation = ({ navigation }: Props) => {
               <ScrollView showsVerticalScrollIndicator={false} style={styles.scrollView}>
                 <View style={styles.wrapRow}>
                   <View style={[styles.halfWidth, styles.rowMargin]}>
-                    <RowTitle title={t('cardAnimation.initDelay')} />
+                    <RowTitle title={t('cardAnimation.initDelay', { value: initialDelay / 1000 })} />
                     <Slider
                       style={styles.slider}
                       value={initialDelay}
                       onSlidingComplete={v => setInitialDelay(v)}
-                      minimumValue={0}
-                      step={100}
-                      maximumValue={1000}
+                      minimumValue={1000}
+                      step={500}
+                      maximumValue={10000}
                       minimumTrackTintColor={colors.primary}
                       maximumTrackTintColor={colors.primary}
                       thumbTintColor={colors.primary}
                     />
                   </View>
                   <View style={[styles.halfWidth, styles.rowMargin]}>
-                    <RowTitle title={t('cardAnimation.duration')} />
+                    <RowTitle title={t('cardAnimation.duration', { value: duration / 1000 })} />
                     <Slider
                       style={styles.slider}
                       value={duration}
                       onSlidingComplete={v => setDuration(v)}
                       minimumValue={0}
-                      step={1000}
+                      step={500}
                       maximumValue={10000}
                       minimumTrackTintColor={colors.primary}
                       maximumTrackTintColor={colors.primary}
@@ -167,7 +169,7 @@ const CardAnimation = ({ navigation }: Props) => {
                   </View>
 
                   <View style={[styles.halfWidth, styles.rowMargin]}>
-                    <RowTitle title={t('cardAnimation.strokeWidth')} />
+                    <RowTitle title={t('cardAnimation.strokeWidth', { value: strokeWidth })} />
                     <Slider
                       style={styles.slider}
                       value={strokeWidth}
@@ -181,9 +183,10 @@ const CardAnimation = ({ navigation }: Props) => {
                     />
                   </View>
                   <View style={[styles.halfWidth, styles.rowMargin]}>
-                    <RowTitle title={t('cardAnimation.arrowFont')} />
+                    <RowTitle title={t('cardAnimation.arrowFont', { value: arrowFontSize })} />
                     <Slider
                       style={styles.slider}
+                      value={arrowFontSize}
                       onSlidingComplete={v => setArrowFontSize(v)}
                       minimumValue={1}
                       step={1}

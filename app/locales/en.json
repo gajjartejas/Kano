@@ -120,10 +120,10 @@
     "header": {
       "title": "Card Animation"
     },
-    "initDelay": "Initial Delay",
-    "duration": "Duration",
-    "strokeWidth": "Stroke Width",
-    "arrowFont": "Arrow Font",
+    "initDelay": "Initial Delay: {{value}}s",
+    "duration": "Duration: {{value}}s",
+    "strokeWidth": "Stroke Width: {{value}}px",
+    "arrowFont": "Arrow Font: {{value}}px",
     "emptyStroke": "Empty Stroke",
     "highlightStroke": "Highlight Stroke",
     "stroke": "Stroke",
