@@ -151,7 +151,7 @@ const MoreTab = ({ navigation }: Props) => {
 
   return (
     <Components.AppBaseView
-      edges={['bottom', 'left', 'right', 'top']}
+      edges={[ 'left', 'right', 'top']}
       style={[styles.container, { backgroundColor: colors.background }]}>
       <ScrollView style={styles.scrollView}>
         <View style={styles.subView}>
