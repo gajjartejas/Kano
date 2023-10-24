@@ -543,15 +543,17 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
             </>
           )}
 
-          {isLearningMode && (
+          {!practiceMode && (
             <View style={[styles.bottomButtons, insets.bottom > 0 && styles.bottomMargin]}>
-              <Button
-                mode="contained-tonal"
-                icon={autoSwiping ? 'stop' : 'play'}
-                labelStyle={[styles.playPauseButtonLabel]}
-                onPress={onToggleAutoSwipe}>
-                {autoSwiping ? t('learnCharsCardScreen.stop') : t('learnCharsCardScreen.play')}
-              </Button>
+              {isLearningMode && (
+                <Button
+                  mode="contained-tonal"
+                  icon={autoSwiping ? 'stop' : 'play'}
+                  labelStyle={[styles.playPauseButtonLabel]}
+                  onPress={onToggleAutoSwipe}>
+                  {autoSwiping ? t('learnCharsCardScreen.stop') : t('learnCharsCardScreen.play')}
+                </Button>
+              )}
 
               <IconButton
                 style={[styles.randomModeIconButton, { backgroundColor: `${color}30` }]}
