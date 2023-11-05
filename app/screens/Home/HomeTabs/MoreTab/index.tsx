@@ -151,16 +151,16 @@ const MoreTab = ({ navigation }: Props) => {
 
   return (
     <Components.AppBaseView
-      edges={[ 'left', 'right', 'top']}
+      edges={['left', 'right', 'top']}
       style={[styles.container, { backgroundColor: colors.background }]}>
       <ScrollView style={styles.scrollView}>
         <View style={styles.subView}>
           <View style={[styles.imageBackground, largeScreenMode && styles.cardTablet]}>
-            <Image resizeMode={'cover'} style={[styles.imageBackgroundCover]} source={Config.Images.icons.about_bg} />
-            <View style={[styles.imageBackgroundCover, { backgroundColor: `${colors.background}88` }]} />
             <Image source={Config.Images.icons.app_icon} resizeMode="contain" style={styles.appIcon} />
             <Text style={[styles.appNameText, { color: colors.text }]}>{t('general.appname')}</Text>
-            <Text style={[styles.appVersion, { color: colors.text }]}>v{DeviceInfo.getVersion()}</Text>
+            <Text style={[styles.appVersion, { color: colors.text }]}>
+              {t('about.version', { version: DeviceInfo.getReadableVersion() })}
+            </Text>
           </View>
 
           <View style={[styles.cardContainer, largeScreenMode && styles.cardTablet]}>

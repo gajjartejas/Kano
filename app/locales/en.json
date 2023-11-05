@@ -23,6 +23,7 @@
     }
   },
   "about": {
+    "version": "Version: {{version}}",
     "sendFeedback": "Send Feedback",
     "rateApp": "Rate App",
     "moreApps": "More Apps",
