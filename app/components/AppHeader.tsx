@@ -13,7 +13,7 @@ import Icon from 'react-native-easy-icon';
 interface AppHeaderProps {
   showBackButton?: boolean;
   onPressBackButton?: () => void;
-  title?: string;
+  title?: string | null;
   leftTitle?: string;
   style?: object;
   textStyle?: object | null;

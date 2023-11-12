@@ -10,6 +10,7 @@ import Animated, { Easing, FadeInDown } from 'react-native-reanimated';
 import Icon from 'react-native-easy-icon';
 import Toast from 'react-native-toast-message';
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
+import IdleTimerManager from 'react-native-idle-timer';
 
 //App modules
 import styles from './styles';
@@ -115,6 +116,11 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
   const [finishButtonTitle, setFinishButtonTitle] = useState('');
   const [finishButtonDisabled, setFinishButtonDisabled] = useState(false);
   const [finishLevelVisible, setFinishLevelVisible] = React.useState(false);
+
+  useEffect(() => {
+    IdleTimerManager.setIdleTimerDisabled(autoSwiping);
+    return () => IdleTimerManager.setIdleTimerDisabled(false);
+  }, [autoSwiping]);
 
   useEffect(() => {
     if (!autoSwiping) {
