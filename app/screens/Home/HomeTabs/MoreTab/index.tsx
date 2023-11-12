@@ -4,10 +4,12 @@ import { Image, Platform, ScrollView, View } from 'react-native';
 //ThirdParty
 import { useTranslation } from 'react-i18next';
 import { Divider, List, Text, useTheme } from 'react-native-paper';
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { IconType } from 'react-native-easy-icon/src/Icon';
 import DeviceInfo from 'react-native-device-info';
 import Icon from 'react-native-easy-icon';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { MaterialBottomTabNavigationProp } from '@react-navigation/material-bottom-tabs';
+import { CompositeNavigationProp, useNavigation } from '@react-navigation/native';
 
 //App Modules
 import Utils from 'app/utils';
@@ -16,7 +18,7 @@ import Utils from 'app/utils';
 import Config from 'app/config';
 import Components from 'app/components';
 import styles from './styles';
-import { LoggedInTabNavigatorParams } from 'app/navigation/types';
+import { HomeTabsNavigatorParams, LoggedInTabNavigatorParams } from 'app/navigation/types';
 import { AppTheme } from 'app/models/theme';
 import useLargeScreenMode from 'app/hooks/useLargeScreenMode';
 
@@ -29,9 +31,12 @@ interface IMoreItem {
 }
 
 //Params
-type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'MoreTab'>;
+type MoreTabNavigationProp = CompositeNavigationProp<
+  MaterialBottomTabNavigationProp<HomeTabsNavigatorParams, 'MoreTab'>,
+  NativeStackNavigationProp<LoggedInTabNavigatorParams>
+>;
 
-const MoreTab = ({ navigation }: Props) => {
+const MoreTab = () => {
   //Refs
 
   //Actions
@@ -40,6 +45,7 @@ const MoreTab = ({ navigation }: Props) => {
   const { t } = useTranslation();
   const { colors } = useTheme<AppTheme>();
   const largeScreenMode = useLargeScreenMode();
+  const navigation = useNavigation<MoreTabNavigationProp>();
 
   //State
   const [visible, setVisible] = React.useState(false);
@@ -108,19 +114,19 @@ const MoreTab = ({ navigation }: Props) => {
   }, [navigation]);
 
   const onPress = useCallback(
-    (item: IMoreItem, _index: number) => {
+    async (item: IMoreItem, _index: number) => {
       switch (item.id) {
         case 0:
           onPressShowDialog();
           break;
         case 1:
-          onPressRateApp();
+          await onPressRateApp();
           break;
         case 2:
           onPressMoreApps();
           break;
         case 3:
-          onPressContribute();
+          await onPressContribute();
           break;
         case 4:
           onPressSettings();
@@ -151,7 +157,7 @@ const MoreTab = ({ navigation }: Props) => {
 
   return (
     <Components.AppBaseView
-      edges={[ 'left', 'right', 'top']}
+      edges={['left', 'right', 'top']}
       style={[styles.container, { backgroundColor: colors.background }]}>
       <ScrollView style={styles.scrollView}>
         <View style={styles.subView}>

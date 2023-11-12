@@ -376,6 +376,8 @@ PODS:
     - glog
   - react-native-get-random-values (1.9.0):
     - React-Core
+  - react-native-idle-timer (2.2.1):
+    - React-Core
   - react-native-in-app-review (4.3.3):
     - React-Core
   - react-native-mmkv (2.10.1):
@@ -595,6 +597,7 @@ DEPENDENCIES:
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
   - react-native-get-random-values (from `../node_modules/react-native-get-random-values`)
+  - react-native-idle-timer (from `../node_modules/react-native-idle-timer`)
   - react-native-in-app-review (from `../node_modules/react-native-in-app-review`)
   - react-native-mmkv (from `../node_modules/react-native-mmkv`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
@@ -703,6 +706,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/logger"
   react-native-get-random-values:
     :path: "../node_modules/react-native-get-random-values"
+  react-native-idle-timer:
+    :path: "../node_modules/react-native-idle-timer"
   react-native-in-app-review:
     :path: "../node_modules/react-native-in-app-review"
   react-native-mmkv:
@@ -821,6 +826,7 @@ SPEC CHECKSUMS:
   React-jsinspector: d0b5bfd1085599265f4212034321e829bdf83cc0
   React-logger: b8103c9b04e707b50cdd2b1aeb382483900cbb37
   react-native-get-random-values: dee677497c6a740b71e5612e8dbd83e7539ed5bb
+  react-native-idle-timer: f1920a59fe776340d004ff9de13c4a6eedcc8807
   react-native-in-app-review: db8bb167a5f238e7ceca5c242d6b36ce8c4404a4
   react-native-mmkv: dea675cf9697ad35940f1687e98e133e1358ef9f
   react-native-safe-area-context: 68b07eabfb0d14547d36f6929c0e98d818064f02
