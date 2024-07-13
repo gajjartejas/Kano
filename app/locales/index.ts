@@ -1,8 +1,20 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import * as RNLocalize from 'react-native-localize';
+import Config from 'app/config';
 
-// tips: export each translation to a seperate file
+export const SUPPORTED_LANGUAGES = [
+  { id: 0, selected: false, code: 'en', icon: Config.Images.icons.flag_en, translators: [], language: 'English' },
+  {
+    id: 1,
+    selected: false,
+    code: 'gu',
+    icon: Config.Images.icons.flag_hi,
+    translators: [],
+    language: 'ગુજરાતી(Gujarati)',
+  },
+];
+
 const resources = {
   en: {
     translation: require('./en.json'),

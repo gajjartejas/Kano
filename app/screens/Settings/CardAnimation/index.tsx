@@ -52,10 +52,6 @@ const CardAnimation = ({ navigation }: Props) => {
   const [arrowSymbol, setArrowSymbol] = useCardAnimationConfigStore(store => [store.arrowSymbol, store.setArrowSymbol]);
   const [easingId, setEasingId] = useCardAnimationConfigStore(store => [store.easingId, store.setEasingId]);
   const [emptyStroke, setEmptyStroke] = useCardAnimationConfigStore(store => [store.emptyStroke, store.setEmptyStroke]);
-  const [highlightStroke, setHighlightStroke] = useCardAnimationConfigStore(store => [
-    store.highlightStroke,
-    store.setHighlightStroke,
-  ]);
   const [arrowFill, setArrowFill] = useCardAnimationConfigStore(store => [store.arrowFill, store.setArrowFill]);
   const [stroke, setStroke] = useCardAnimationConfigStore(store => [store.stroke, store.setStroke]);
   const [disableStrokeAnimation, setDisableStrokeAnimation] = useCardAnimationConfigStore(store => [
@@ -74,9 +70,9 @@ const CardAnimation = ({ navigation }: Props) => {
     [navigation],
   );
 
-  const onGoBack = () => {
+  const onGoBack = useCallback(() => {
     navigation.pop();
-  };
+  }, [navigation]);
 
   const onPressReset = useCallback(() => {
     setTheme(appearance === IAppearanceType.Auto ? Appearance.getColorScheme() === 'dark' : appearance === 'dark');
@@ -84,7 +80,9 @@ const CardAnimation = ({ navigation }: Props) => {
   }, [appearance, reset, setTheme]);
 
   return (
-    <View style={[styles.container, { backgroundColor: colors.background }]}>
+    <Components.AppBaseView
+      edges={['bottom', 'left', 'right']}
+      style={[styles.container, { backgroundColor: colors.background }]}>
       <AppHeader
         showBackButton={true}
         onPressBackButton={onGoBack}
@@ -93,7 +91,7 @@ const CardAnimation = ({ navigation }: Props) => {
       />
 
       {isReady && (
-        <Components.AppBaseView edges={['bottom', 'left', 'right']} style={styles.safeArea}>
+        <Components.AppBaseView edges={[]} style={styles.safeArea}>
           <View style={styles.subView}>
             <View style={[styles.listContainer, largeScreenMode && styles.cardTablet]}>
               <View style={largeScreenMode && [styles.rightSpacing32]}>
@@ -105,7 +103,7 @@ const CardAnimation = ({ navigation }: Props) => {
                     initialDelay={initialDelay}
                     duration={duration}
                     emptyStroke={emptyStroke}
-                    highlightStroke={highlightStroke}
+                    highlightStroke={stroke}
                     arrowFill={arrowFill}
                     stroke={stroke}
                     disableStrokeAnimation={disableStrokeAnimation}
@@ -205,12 +203,6 @@ const CardAnimation = ({ navigation }: Props) => {
                   />
                   <ColorRow
                     style={[styles.halfWidth, styles.rowMargin]}
-                    label={t('cardAnimation.highlightStroke')}
-                    color={highlightStroke}
-                    onColor={color => setHighlightStroke(color)}
-                  />
-                  <ColorRow
-                    style={[styles.halfWidth, styles.rowMargin]}
                     label={'Arrow'}
                     color={arrowFill}
                     onColor={v => setArrowFill(v)}
@@ -264,7 +256,7 @@ const CardAnimation = ({ navigation }: Props) => {
           </View>
         </Components.AppBaseView>
       )}
-    </View>
+    </Components.AppBaseView>
   );
 };
 

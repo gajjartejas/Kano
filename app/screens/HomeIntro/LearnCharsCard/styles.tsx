@@ -138,7 +138,6 @@ const styles = StyleSheet.create({
   nextButtonStyle: {
     marginBottom: 16,
     marginHorizontal: 20,
-    paddingVertical: 6,
   },
   animatedView: {
     width: '80%',
@@ -151,27 +150,31 @@ const styles = StyleSheet.create({
   bottomButtons: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     marginBottom: 16,
+  },
+  bottomSideButtons: {
+    flexDirection: 'row',
   },
   bottomMargin: {
     marginBottom: 0,
   },
   randomModeIconButton: {
-    position: 'absolute',
-    left: 16,
+    marginLeft: 16,
   },
   muteUnmuteButton: {
-    position: 'absolute',
-    left: 62,
+    marginLeft: 8,
   },
   presentCharInfoButton: {
-    position: 'absolute',
-    right: 62,
+    marginRight: 16,
   },
   settingButton: {
-    position: 'absolute',
-    right: 16,
+    marginRight: 8,
+  },
+  practiceCardTextIcon: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 

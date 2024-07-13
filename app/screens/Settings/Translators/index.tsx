@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { FlatList, Image, Text, View } from 'react-native';
 
 //ThirdParty
@@ -35,7 +35,7 @@ const Translators = ({ navigation }: Props) => {
   let [finalLicense, setFinalLicense] = useState<ITranslator[]>([]);
 
   useEffect(() => {
-    let languages = [
+    const languages = [
       { id: 0, icon: Config.Images.icons.flag_ar, translators: [], language: 'العربية' },
       { id: 1, icon: Config.Images.icons.flag_cs, translators: [], language: 'čeština' },
       { id: 2, icon: Config.Images.icons.flag_da, translators: [], language: 'dansk' },
@@ -87,25 +87,29 @@ const Translators = ({ navigation }: Props) => {
     );
   };
 
-  const onPressItem = (_item: ITranslator, _index: number) => {};
+  const onPressItem = useCallback((_item: ITranslator, _index: number) => {}, []);
 
-  const onPressContribute = async () => {
+  const onPressContribute = useCallback(async () => {
     await Utils.openInAppBrowser(Config.Constants.TRANSLATE_APP);
-  };
+  }, []);
 
-  const EmptyListComponent = (
-    <View style={styles.emptyListContainer}>
-      <Text style={[styles.titleTextStyle, { color: `${colors.onBackground}${colors.opacity}` }]}>
-        {t('translatorsScreen.emptyList')}
-      </Text>
-      <Button icon="web" mode="text" onPress={onPressContribute}>
-        {t('translatorsScreen.emptyListAction')}
-      </Button>
-    </View>
-  );
+  const EmptyListComponent = useMemo(() => {
+    return (
+      <View style={styles.emptyListContainer}>
+        <Text style={[styles.titleTextStyle, { color: `${colors.onBackground}${colors.opacity}` }]}>
+          {t('translatorsScreen.emptyList')}
+        </Text>
+        <Button icon="web" mode="text" onPress={onPressContribute}>
+          {t('translatorsScreen.emptyListAction')}
+        </Button>
+      </View>
+    );
+  }, [colors.onBackground, colors.opacity, onPressContribute, t]);
 
   return (
-    <View style={[styles.container, { backgroundColor: colors.background }]}>
+    <Components.AppBaseView
+      edges={['bottom', 'left', 'right']}
+      style={[styles.container, { backgroundColor: colors.background }]}>
       <AppHeader
         showBackButton={true}
         onPressBackButton={onGoBack}
@@ -113,7 +117,7 @@ const Translators = ({ navigation }: Props) => {
         style={{ backgroundColor: colors.background }}
       />
 
-      <Components.AppBaseView edges={['bottom', 'left', 'right']} style={styles.safeArea}>
+      <Components.AppBaseView edges={[]} style={styles.safeArea}>
         <FlatList
           contentContainerStyle={styles.cardTablet}
           style={styles.flatlist}
@@ -124,7 +128,7 @@ const Translators = ({ navigation }: Props) => {
           ListEmptyComponent={EmptyListComponent}
         />
       </Components.AppBaseView>
-    </View>
+    </Components.AppBaseView>
   );
 };
 

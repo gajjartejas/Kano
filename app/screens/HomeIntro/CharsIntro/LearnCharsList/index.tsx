@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { ScrollView, View } from 'react-native';
+import { View } from 'react-native';
 
 //ThirdParty
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
@@ -121,7 +121,9 @@ const LearnCharsList = ({ navigation, route }: Props) => {
   }, [navigation]);
 
   return (
-    <View style={[styles.container, { backgroundColor: `${color}15` }]}>
+    <Components.AppBaseView
+      edges={['bottom', 'left', 'right']}
+      style={[styles.container, { backgroundColor: `${color}15` }]}>
       <AppHeader
         showBackButton={true}
         onPressBackButton={onGoBack}
@@ -129,25 +131,23 @@ const LearnCharsList = ({ navigation, route }: Props) => {
         style={{ backgroundColor: `${color}15` }}
       />
 
-      <Components.AppBaseView edges={['bottom', 'left', 'right']} style={styles.safeArea}>
-        <ScrollView style={styles.scrollView}>
-          {groupedEntries.map((section, sectionIndex) => {
-            const progressSection = progressListItems[sectionIndex];
-            return (
-              <View style={styles.section} key={sectionIndex.toString()}>
-                <Text style={styles.sectionHeader}>{t(section.title)}</Text>
-                <View style={styles.sectionItem}>
-                  {section.data.map((item, index) => {
-                    const progress = progressSection.data[index];
-                    return renderItem({ item, index, sectionIndex, progress });
-                  })}
-                </View>
+      <Components.AppBaseView edges={[]} scroll={true} style={styles.safeArea}>
+        {groupedEntries.map((section, sectionIndex) => {
+          const progressSection = progressListItems[sectionIndex];
+          return (
+            <View style={styles.section} key={sectionIndex.toString()}>
+              <Text style={styles.sectionHeader}>{t(section.title)}</Text>
+              <View style={styles.sectionItem}>
+                {section.data.map((item, index) => {
+                  const progress = progressSection.data[index];
+                  return renderItem({ item, index, sectionIndex, progress });
+                })}
               </View>
-            );
-          })}
-        </ScrollView>
+            </View>
+          );
+        })}
       </Components.AppBaseView>
-    </View>
+    </Components.AppBaseView>
   );
 };
 

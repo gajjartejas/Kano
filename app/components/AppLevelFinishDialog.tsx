@@ -3,7 +3,7 @@ import { StyleSheet, View } from 'react-native';
 
 //ThirdParty
 import LottieView from 'lottie-react-native';
-import { Button, Dialog, Paragraph, useTheme } from 'react-native-paper';
+import { Button, Dialog, Paragraph, Portal, useTheme } from 'react-native-paper';
 
 //ThirdParty
 
@@ -27,24 +27,26 @@ function AppLevelFinishDialog(props: IAppLevelFinishDialogProps) {
   const largeScreenMode = useLargeScreenMode();
 
   return (
-    <Dialog style={[largeScreenMode && styles.cardTablet]} visible={visible} onDismiss={props.onPressHideDialog}>
-      <Dialog.Title style={[{ color: colors.onBackground }, styles.titleText]}>{title}</Dialog.Title>
+    <Portal>
+      <Dialog style={[largeScreenMode && styles.cardTablet]} visible={visible} onDismiss={props.onPressHideDialog}>
+        <Dialog.Title style={[{ color: colors.onBackground }, styles.titleText]}>{title}</Dialog.Title>
 
-      <View style={styles.buttonsContainer}>
-        <LottieView style={styles.lottie} source={Config.Lotties.icons.level_completed} autoPlay loop />
-        <LottieView style={styles.lottie1} source={Config.Lotties.icons.five_stars} autoPlay loop />
-      </View>
+        <View style={styles.buttonsContainer}>
+          <LottieView style={styles.lottie} source={Config.Lotties.icons.level_completed} autoPlay loop />
+          <LottieView style={styles.lottie1} source={Config.Lotties.icons.five_stars} autoPlay loop />
+        </View>
 
-      <Dialog.Content>
-        <Paragraph style={[styles.descriptionText, { color: `${colors.onBackground}88` }]}>{description}</Paragraph>
-      </Dialog.Content>
+        <Dialog.Content>
+          <Paragraph style={[styles.descriptionText, { color: `${colors.onBackground}88` }]}>{description}</Paragraph>
+        </Dialog.Content>
 
-      <Dialog.Actions>
-        <Button style={styles.nextButtonStyle} mode="contained-tonal" onPress={onPressHideDialog}>
-          {buttonTitle}
-        </Button>
-      </Dialog.Actions>
-    </Dialog>
+        <Dialog.Actions>
+          <Button style={styles.nextButtonStyle} mode="contained-tonal" onPress={onPressHideDialog}>
+            {buttonTitle}
+          </Button>
+        </Dialog.Actions>
+      </Dialog>
+    </Portal>
   );
 }
 

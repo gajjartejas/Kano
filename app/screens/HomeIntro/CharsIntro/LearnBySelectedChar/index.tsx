@@ -199,7 +199,9 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
   const otherProps = Platform.OS === 'ios' ? { statusBarHeight: 0 } : {};
 
   return (
-    <View style={[styles.container, { backgroundColor: `${color}15` }]}>
+    <Components.AppBaseView
+      edges={['bottom', 'left', 'right']}
+      style={[styles.container, { backgroundColor: `${color}15` }]}>
       <AppHeader
         showBackButton={true}
         onPressBackButton={onGoBack}
@@ -210,7 +212,7 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
         {...otherProps}
       />
 
-      <Components.AppBaseView edges={['bottom', 'left', 'right']} style={styles.safeArea}>
+      <Components.AppBaseView edges={[]} style={styles.safeArea}>
         <View
           style={styles.container}
           onLayout={event => {
@@ -246,7 +248,7 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
           {t('general.continue')}
         </Button>
       </Components.AppBaseView>
-    </View>
+    </Components.AppBaseView>
   );
 };
 

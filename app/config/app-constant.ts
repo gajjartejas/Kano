@@ -12,25 +12,31 @@ const Constant = {
   REPO_URL: GITHUB_PROJECT_LINK,
 
   ABOUT_NEW_GITHUB_ISSUE: `${GITHUB_PROJECT_LINK}/issues`,
-  ABOUT_TELEGRAM_LINK: 'https://t.me/appstejas',
+  ABOUT_TELEGRAM_LINK: 'https://t.me/tejasapps',
   ABOUT_SUPPORT_EMAIL: 'gajjartejas26@gmail.com',
 
-  MORE_APPS_MIUI_ADS_HELPER_GITHUB: 'https://github.com/gajjartejas/MIUIAdsHelper',
-  MORE_APPS_MIUI_ADS_HELPER_PLAY_STORE: 'https://play.google.com/store/apps/details?id=com.tejasgajjar.miuiadshelper',
+  MORE_APPS_1_GITHUB: 'https://github.com/gajjartejas/MIUIAdsHelper',
+  MORE_APPS_1_PLAY_STORE: 'https://play.google.com/store/apps/details?id=com.tejasgajjar.miuiadshelper',
 
-  MORE_APPS_OHMCLIENT_GITHUB: 'https://github.com/gajjartejas/OHM-Client',
-  MORE_APPS_OHMCLIENT_PLAY_STORE: 'https://play.google.com/store/apps/details?id=com.tejasgajjar.ohmc',
+  MORE_APPS_2_GITHUB: 'https://github.com/gajjartejas/Kano',
+  MORE_APPS_2_PLAY_STORE: 'https://play.google.com/store/apps/details?id=com.tejasgajjar.kano',
+
+  MORE_APPS_3_GITHUB: 'https://github.com/gajjartejas/PiGo',
+  MORE_APPS_3_PLAY_STORE: 'https://play.google.com/store/apps/details?id=com.tejasgajjar.miuiadshelper',
+
+  MORE_APPS_4_GITHUB: 'https://github.com/gajjartejas/OHM-Client',
+  MORE_APPS_4_PLAY_STORE: 'https://play.google.com/store/apps/details?id=com.tejasgajjar.ohmc',
 
   CHANGE_LOG: `${GITHUB_PROJECT_LINK}/releases`,
-  FAQ: `${GITHUB_PROJECT_LINK}/blob/main/docs/faqs.md`,
-  TRANSLATE_APP: 'https://app.tolgee.io/accept_invitation/qVHuUkAOWekjoKYDThUsDhtSbHlvMZIyCTsngHrrCwDMKCYvHH',
+  FAQ: `${GITHUB_PROJECT_LINK}/blob/main/docs/faqs.md#frequently-asked-questions`,
+  TRANSLATE_APP: `${GITHUB_PROJECT_LINK}/tree/main/app/locales`,
   PRIVACY_POLICY: `${GITHUB_PROJECT_LINK}/blob/main/docs/privacy.md`,
   TERMS_OF_SERVICE: `${GITHUB_PROJECT_LINK}/blob/main/docs/terms.md`,
 
-  ABOUT_HELP: `${GITHUB_PROJECT_LINK}/blob/main/docs/help.md`,
-  ABOUT_PORTFOLIO: 'https://gajjartejas.me',
+  ABOUT_HELP: `${GITHUB_PROJECT_LINK}/blob/main/docs/help.md#help`,
+  ABOUT_PORTFOLIO: 'https://www.gajjartejas.me',
   ABOUT_INSTAGRAM: 'https://www.instagram.com/gajjartejas',
-  ABOUT_JOIN_TELEGRAM: 'https://t.me/appstejas',
+  ABOUT_JOIN_TELEGRAM: 'https://t.me/tejasapps',
   ABOUT_GITHUB: GITHUB_PROFILE,
   ABOUT_TWITTER: 'https://twitter.com/gajjartejas',
 };

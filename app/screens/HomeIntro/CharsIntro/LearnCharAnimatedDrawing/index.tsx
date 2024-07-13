@@ -36,7 +36,6 @@ const LearnCharAnimatedDrawing = ({ navigation, route }: Props) => {
     arrowSymbol,
     easingId,
     emptyStroke,
-    highlightStroke,
     arrowFill,
     stroke,
     disableStrokeAnimation,
@@ -49,7 +48,6 @@ const LearnCharAnimatedDrawing = ({ navigation, route }: Props) => {
     store.arrowSymbol,
     store.easingId,
     store.emptyStroke,
-    store.highlightStroke,
     store.arrowFill,
     store.stroke,
     store.disableStrokeAnimation,
@@ -78,8 +76,11 @@ const LearnCharAnimatedDrawing = ({ navigation, route }: Props) => {
   }, []);
 
   const otherProps = Platform.OS === 'ios' ? { statusBarHeight: 0 } : {};
+
   return (
-    <View style={[styles.container, { backgroundColor: `${color}15` }]}>
+    <Components.AppBaseView
+      edges={['bottom', 'left', 'right']}
+      style={[styles.container, { backgroundColor: `${color}15` }]}>
       <AppHeader
         showBackButton={true}
         onPressBackButton={onGoBack}
@@ -90,7 +91,7 @@ const LearnCharAnimatedDrawing = ({ navigation, route }: Props) => {
         {...otherProps}
       />
 
-      <Components.AppBaseView edges={['bottom', 'left', 'right']} style={styles.safeArea}>
+      <Components.AppBaseView edges={[]} style={styles.safeArea}>
         <View style={styles.contentContainer}>
           {show && (
             <Animated.View
@@ -101,7 +102,7 @@ const LearnCharAnimatedDrawing = ({ navigation, route }: Props) => {
                 initialDelay={initialDelay}
                 duration={duration}
                 emptyStroke={emptyStroke}
-                highlightStroke={highlightStroke}
+                highlightStroke={stroke}
                 arrowFill={arrowFill}
                 stroke={stroke}
                 disableStrokeAnimation={disableStrokeAnimation}
@@ -122,7 +123,7 @@ const LearnCharAnimatedDrawing = ({ navigation, route }: Props) => {
           )}
         </View>
       </Components.AppBaseView>
-    </View>
+    </Components.AppBaseView>
   );
 };
 

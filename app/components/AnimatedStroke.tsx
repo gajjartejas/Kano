@@ -3,6 +3,7 @@ import React, { memo, useEffect, useRef } from 'react';
 //ThirdParty
 import Animated, {
   Easing,
+  EasingFunction,
   runOnJS,
   useAnimatedProps,
   useSharedValue,
@@ -17,13 +18,13 @@ interface AnimatedStrokeProps extends PathProps {
   duration: number;
   length: number;
   onFinish: () => void;
-  easing?: Animated.EasingFunction;
+  easing?: EasingFunction;
 }
 
 const AnimatedPath = memo(Animated.createAnimatedComponent(Path));
 
 export const AnimatedStrokeEasing = Easing;
-export type AnimatedStrokeEasingFunction = Animated.EasingFunction;
+export type AnimatedStrokeEasingFunction = EasingFunction;
 
 const AnimatedStroke = (props: AnimatedStrokeProps) => {
   let { delay, duration, length, easing } = props;

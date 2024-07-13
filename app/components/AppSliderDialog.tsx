@@ -2,7 +2,7 @@ import React, { memo, useEffect, useState } from 'react';
 import { Platform, StyleSheet } from 'react-native';
 
 //ThirdParty
-import { Dialog, Text, useTheme, Button } from 'react-native-paper';
+import { Dialog, Text, useTheme, Button, Portal } from 'react-native-paper';
 
 //App Modules
 import useLargeScreenMode from 'app/hooks/useLargeScreenMode';
@@ -45,28 +45,30 @@ function AppSliderDialog(props: IAppSliderDialogProps) {
   const valueLabel = `${t('general.value')}: ${currentValue} ${unit}`;
 
   return (
-    <Dialog style={[largeScreenMode && styles.cardTablet]} visible={props.visible} onDismiss={onPressCancel}>
-      <Dialog.Title style={{ color: colors.onBackground }}>{title}</Dialog.Title>
-      <Dialog.Content>
-        <Text style={[styles.descriptionText, { color: `${colors.onBackground}88` }]}>{description}</Text>
-        <Slider
-          style={styles.slider}
-          minimumValue={min}
-          maximumValue={max}
-          minimumTrackTintColor={colors.primary}
-          maximumTrackTintColor={colors.onBackground}
-          step={step}
-          value={currentValue}
-          onValueChange={setCurrentValue}
-          thumbTintColor={colors.primary}
-        />
-        <Text style={[styles.bottomDescriptionText, { color: `${colors.onBackground}88` }]}>{valueLabel}</Text>
-      </Dialog.Content>
-      <Dialog.Actions>
-        <Button onPress={onPressCancel}>{cancelText}</Button>
-        <Button onPress={() => onPressConfirm(currentValue || value)}>{confirmText}</Button>
-      </Dialog.Actions>
-    </Dialog>
+    <Portal>
+      <Dialog style={[largeScreenMode && styles.cardTablet]} visible={props.visible} onDismiss={onPressCancel}>
+        <Dialog.Title style={{ color: colors.onBackground }}>{title}</Dialog.Title>
+        <Dialog.Content>
+          <Text style={[styles.descriptionText, { color: `${colors.onBackground}88` }]}>{description}</Text>
+          <Slider
+            style={styles.slider}
+            minimumValue={min}
+            maximumValue={max}
+            minimumTrackTintColor={colors.primary}
+            maximumTrackTintColor={colors.onBackground}
+            step={step}
+            value={currentValue}
+            onValueChange={setCurrentValue}
+            thumbTintColor={colors.primary}
+          />
+          <Text style={[styles.bottomDescriptionText, { color: `${colors.onBackground}88` }]}>{valueLabel}</Text>
+        </Dialog.Content>
+        <Dialog.Actions>
+          <Button onPress={onPressCancel}>{cancelText}</Button>
+          <Button onPress={() => onPressConfirm(currentValue || value)}>{confirmText}</Button>
+        </Dialog.Actions>
+      </Dialog>
+    </Portal>
   );
 }
 

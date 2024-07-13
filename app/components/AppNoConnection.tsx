@@ -5,7 +5,7 @@ import { View, StyleSheet } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import { useTheme, Text } from 'react-native-paper';
 
-const AppNoInternetConnection = () => {
+const AppNoConnection = () => {
   //Const
   const { t } = useTranslation();
   const { colors } = useTheme();
@@ -28,4 +28,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default memo(AppNoInternetConnection);
+export default memo(AppNoConnection);

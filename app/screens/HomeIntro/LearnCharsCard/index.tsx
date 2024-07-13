@@ -64,7 +64,6 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
     arrowSymbol,
     easingId,
     emptyStroke,
-    highlightStroke,
     arrowFill,
     stroke,
     disableStrokeAnimation,
@@ -78,7 +77,6 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
     store.arrowSymbol,
     store.easingId,
     store.emptyStroke,
-    store.highlightStroke,
     store.arrowFill,
     store.stroke,
     store.disableStrokeAnimation,
@@ -441,7 +439,7 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
   }, [autoSwiping]);
 
   return (
-    <SafeAreaView edges={['bottom']} style={[styles.container, { backgroundColor: `${color}15` }]}>
+    <SafeAreaView edges={['bottom', 'left', 'right']} style={[styles.container, { backgroundColor: `${color}15` }]}>
       <AppHeader
         showBackButton={true}
         onPressBackButton={onGoBack}
@@ -450,7 +448,7 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
       />
 
       <DraxProvider>
-        <Components.AppBaseView edges={['bottom', 'left', 'right']} style={styles.safeArea}>
+        <Components.AppBaseView edges={[]} style={styles.safeArea}>
           {!practiceMode && (
             <View
               pointerEvents={autoSwiping ? 'none' : 'auto'}
@@ -471,7 +469,7 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
                     initialDelay={initialDelay}
                     duration={duration}
                     emptyStroke={emptyStroke}
-                    highlightStroke={highlightStroke}
+                    highlightStroke={stroke}
                     arrowFill={arrowFill}
                     stroke={stroke}
                     disableStrokeAnimation={disableStrokeAnimation}
@@ -506,11 +504,16 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
                         style={[
                           styles.draggable,
                           { backgroundColor: colors.card },
-                          incorrectAnswerIds.map(l => l.left).includes(v.id) && { backgroundColor: colors.error },
+                          incorrectAnswerIds.map(l => l.left).includes(v.id) && { backgroundColor: colors.card },
                           correctAnswerIds.map(l => l.left).includes(v.id) && { backgroundColor: colors.primary },
                         ]}
                         payload={v.id}>
-                        <Text style={styles.practiceCardText}>{v.gu}</Text>
+                        <View style={styles.practiceCardTextIcon}>
+                          <Text style={styles.practiceCardText}>{v.gu}</Text>
+                        </View>
+                        {correctAnswerIds.map(l => l.left).includes(v.id) && (
+                          <Icon type="font-awesome" name={'check-circle'} color={'white'} size={16} />
+                        )}
                       </DraxView>
                     );
                   })}
@@ -525,7 +528,7 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
                         style={[
                           styles.receiver,
                           { backgroundColor: colors.card },
-                          incorrectAnswerIds.map(l => l.right).includes(item.id) && { backgroundColor: colors.error },
+                          incorrectAnswerIds.map(l => l.right).includes(item.id) && { backgroundColor: colors.card },
                           correctAnswerIds.map(l => l.right).includes(item.id) && { backgroundColor: colors.primary },
                         ]}
                         draggingStyle={styles.dragging}
@@ -551,57 +554,62 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
 
           {!practiceMode && (
             <View style={[styles.bottomButtons, insets.bottom > 0 && styles.bottomMargin]}>
+              <View style={styles.bottomSideButtons}>
+                <IconButton
+                  style={[styles.randomModeIconButton, { backgroundColor: `${color}60` }]}
+                  icon={() => (
+                    <Icon
+                      type={'font-awesome'}
+                      name={isRandomMode ? 'long-arrow-right' : 'random'}
+                      color={colors.white}
+                      size={18}
+                    />
+                  )}
+                  mode="contained-tonal"
+                  onPress={onToggleRandomSequence}
+                />
+
+                <IconButton
+                  style={[styles.muteUnmuteButton, { backgroundColor: `${color}60` }]}
+                  icon={() => (
+                    <Icon
+                      type={'font-awesome5'}
+                      name={mute ? 'volume-mute' : 'volume-up'}
+                      color={colors.white}
+                      size={18}
+                    />
+                  )}
+                  mode="contained-tonal"
+                  onPress={onToggleMuteUnmute}
+                />
+              </View>
+
               {isLearningMode && (
                 <Button
-                  mode="contained-tonal"
+                  mode="contained"
                   icon={autoSwiping ? 'stop' : 'play'}
-                  labelStyle={[styles.playPauseButtonLabel]}
+                  style={{ backgroundColor: colors.primary }}
+                  labelStyle={[[styles.playPauseButtonLabel, { color: colors.white }]]}
                   onPress={onToggleAutoSwipe}>
                   {autoSwiping ? t('learnCharsCardScreen.stop') : t('learnCharsCardScreen.play')}
                 </Button>
               )}
 
-              <IconButton
-                style={[styles.randomModeIconButton, { backgroundColor: `${color}30` }]}
-                icon={() => (
-                  <Icon
-                    type={'font-awesome'}
-                    name={isRandomMode ? 'long-arrow-right' : 'random'}
-                    color={colors.white}
-                    size={18}
-                  />
-                )}
-                mode="contained-tonal"
-                onPress={onToggleRandomSequence}
-              />
+              <View style={styles.bottomSideButtons}>
+                <IconButton
+                  style={[styles.settingButton, { backgroundColor: `${color}60` }]}
+                  icon={() => <Icon type={'font-awesome5'} name={'info'} color={colors.white} size={18} />}
+                  mode="contained-tonal"
+                  onPress={onPresentCharInfo}
+                />
 
-              <IconButton
-                style={[styles.muteUnmuteButton, { backgroundColor: `${color}30` }]}
-                icon={() => (
-                  <Icon
-                    type={'font-awesome5'}
-                    name={mute ? 'volume-mute' : 'volume-up'}
-                    color={colors.white}
-                    size={18}
-                  />
-                )}
-                mode="contained-tonal"
-                onPress={onToggleMuteUnmute}
-              />
-
-              <IconButton
-                style={[styles.settingButton, { backgroundColor: `${color}30` }]}
-                icon={() => <Icon type={'font-awesome5'} name={'info'} color={colors.white} size={18} />}
-                mode="contained-tonal"
-                onPress={onPresentCharInfo}
-              />
-
-              <IconButton
-                style={[styles.presentCharInfoButton, { backgroundColor: `${color}30` }]}
-                icon={() => <Icon type={'font-awesome'} name={'gear'} color={colors.white} size={18} />}
-                mode="contained-tonal"
-                onPress={onPressSetting}
-              />
+                <IconButton
+                  style={[styles.presentCharInfoButton, { backgroundColor: `${color}60` }]}
+                  icon={() => <Icon type={'font-awesome'} name={'gear'} color={colors.white} size={18} />}
+                  mode="contained-tonal"
+                  onPress={onPressSetting}
+                />
+              </View>
             </View>
           )}
         </Components.AppBaseView>

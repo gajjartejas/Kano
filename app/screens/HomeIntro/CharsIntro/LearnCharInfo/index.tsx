@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { FlatList, useWindowDimensions, View } from 'react-native';
+import { FlatList, useWindowDimensions } from 'react-native';
 
 //ThirdParty
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
@@ -101,7 +101,9 @@ const LearnCharInfo = ({ navigation, route }: Props) => {
   );
 
   return (
-    <View style={[styles.container, { backgroundColor: `${color}15` }]}>
+    <Components.AppBaseView
+      edges={['bottom', 'left', 'right']}
+      style={[styles.container, { backgroundColor: `${color}15` }]}>
       <AppHeader
         showBackButton={true}
         onPressBackButton={onGoBack}
@@ -109,7 +111,7 @@ const LearnCharInfo = ({ navigation, route }: Props) => {
         style={{ backgroundColor: `${color}15` }}
       />
 
-      <Components.AppBaseView scroll edges={['bottom', 'left', 'right']} style={styles.safeArea}>
+      <Components.AppBaseView edges={[]} scroll={true} style={styles.safeArea}>
         <FlatList
           ref={refFlatList}
           removeClippedSubviews
@@ -133,7 +135,7 @@ const LearnCharInfo = ({ navigation, route }: Props) => {
           }}
         />
       </Components.AppBaseView>
-    </View>
+    </Components.AppBaseView>
   );
 };
 

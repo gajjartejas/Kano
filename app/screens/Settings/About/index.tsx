@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useMemo } from 'react';
 import { Image, View } from 'react-native';
 
 //ThirdParty
@@ -30,91 +30,92 @@ const About = ({ navigation }: Props) => {
   const largeScreenMode = useLargeScreenMode();
 
   //States
-  const [apps] = useState<ISettingSection[]>([
-    {
-      id: 0,
-      title: t('aboutScreen.infoHeader'),
-      items: [
-        {
-          id: 0,
-          iconName: 'information',
-          iconType: 'material-community',
-          title: t('aboutScreen.infoDescTitle'),
-          description: '',
-          route: '',
-          touchable: false,
-        },
-        {
-          id: 1,
-          iconName: 'face-man',
-          iconType: 'material-community',
-          title: t('aboutScreen.infoAuthorNameTitle'),
-          description: '',
-          route: '',
-          touchable: false,
-        },
-      ],
-    },
-    {
-      id: 1,
-      title: t('aboutScreen.developerTitle'),
-      items: [
-        {
-          id: 0,
-          iconName: 'briefcase',
-          iconType: 'material-community',
-          title: t('aboutScreen.portfolioTitle'),
-          description: t('aboutScreen.portfolioSubTitle')!,
-          route: '',
-          touchable: true,
-        },
-        {
-          id: 1,
-          iconName: 'instagram',
-          iconType: 'material-community',
-          title: t('aboutScreen.instagramTitle'),
-          description: t('aboutScreen.instagramSubTitle')!,
-          route: '',
-          touchable: true,
-        },
-        {
-          id: 3,
-          iconName: 'telegram-plane',
-          iconType: 'font-awesome5',
-          title: t('aboutScreen.telegramTitle'),
-          description: t('aboutScreen.telegramSubTitle')!,
-          route: '',
-          touchable: true,
-        },
-        {
-          id: 4,
-          iconName: 'github',
-          iconType: 'material-community',
-          title: t('aboutScreen.githubTitle'),
-          description: t('aboutScreen.githubSubTitle')!,
-          route: '',
-          touchable: true,
-        },
-        {
-          id: 5,
-          iconName: 'twitter',
-          iconType: 'material-community',
-          title: t('aboutScreen.twitterTitle'),
-          description: t('aboutScreen.twitterSubTitle')!,
-          route: '',
-          touchable: true,
-        },
-      ],
-    },
-  ]);
+  const apps: ISettingSection[] = useMemo(() => {
+    return [
+      {
+        id: 0,
+        title: t('aboutScreen.infoHeader'),
+        items: [
+          {
+            id: 0,
+            iconName: 'information',
+            iconType: 'material-community',
+            title: t('aboutScreen.infoDescTitle'),
+            description: '',
+            route: '',
+            touchable: false,
+          },
+          {
+            id: 1,
+            iconName: 'face-man',
+            iconType: 'material-community',
+            title: t('aboutScreen.infoAuthorNameTitle'),
+            description: '',
+            route: '',
+            touchable: false,
+          },
+        ],
+      },
+      {
+        id: 1,
+        title: t('aboutScreen.developerTitle'),
+        items: [
+          {
+            id: 0,
+            iconName: 'briefcase',
+            iconType: 'material-community',
+            title: t('aboutScreen.portfolioTitle'),
+            description: t('aboutScreen.portfolioSubTitle')!,
+            route: '',
+            touchable: true,
+          },
+          {
+            id: 1,
+            iconName: 'instagram',
+            iconType: 'material-community',
+            title: t('aboutScreen.instagramTitle'),
+            description: t('aboutScreen.instagramSubTitle')!,
+            route: '',
+            touchable: true,
+          },
+          {
+            id: 3,
+            iconName: 'telegram-plane',
+            iconType: 'font-awesome5',
+            title: t('aboutScreen.telegramTitle'),
+            description: t('aboutScreen.telegramSubTitle')!,
+            route: '',
+            touchable: true,
+          },
+          {
+            id: 4,
+            iconName: 'github',
+            iconType: 'material-community',
+            title: t('aboutScreen.githubTitle'),
+            description: t('aboutScreen.githubSubTitle')!,
+            route: '',
+            touchable: true,
+          },
+          {
+            id: 5,
+            iconName: 'twitter',
+            iconType: 'material-community',
+            title: t('aboutScreen.twitterTitle'),
+            description: t('aboutScreen.twitterSubTitle')!,
+            route: '',
+            touchable: true,
+          },
+        ],
+      },
+    ];
+  }, [t]);
 
   const onGoBack = useCallback(() => {
     navigation.pop();
   }, [navigation]);
 
-  //
   const onPressAboutOption = useCallback(
-    async (item: ISettingSection, index: number, subItem: ISettingItem, subIndex: number) => {
+    async (_item: ISettingSection, index: number, _subItem: ISettingItem, subIndex: number) => {
       switch (true) {
         case index === 1 && subIndex === 0:
           await Utils.openInAppBrowser(Config.Constants.ABOUT_PORTFOLIO);
@@ -138,14 +139,16 @@ const About = ({ navigation }: Props) => {
   );
 
   return (
-    <View style={[styles.container, { backgroundColor: colors.background }]}>
+    <Components.AppBaseView
+      edges={['bottom', 'left', 'right']}
+      style={[styles.container, { backgroundColor: colors.background }]}>
       <AppHeader
         showBackButton={true}
         onPressBackButton={onGoBack}
         title={t('aboutScreen.title')}
         style={{ backgroundColor: colors.background }}
       />
-      <Components.AppBaseView scroll edges={['bottom', 'left', 'right']} style={styles.safeArea}>
+      <Components.AppBaseView scroll edges={[]} style={styles.safeArea}>
         <Image source={Config.Images.icons.app_icon} resizeMode="contain" style={styles.appicon} />
         <Text style={[styles.appNameText, { color: colors.onBackground }]}>{DeviceInfo.getApplicationName()}</Text>
         <Text style={[styles.appVersionText, { color: `${colors.onBackground}88` }]}>
@@ -193,7 +196,7 @@ const About = ({ navigation }: Props) => {
           })}
         </View>
       </Components.AppBaseView>
-    </View>
+    </Components.AppBaseView>
   );
 };
 

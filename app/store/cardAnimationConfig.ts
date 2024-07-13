@@ -12,7 +12,6 @@ interface ICardAnimationConfigState {
   arrowSymbol: string;
   easingId: number;
   emptyStroke: string;
-  highlightStroke: string;
   arrowFill: string;
   stroke: string;
   disableStrokeAnimation: boolean;
@@ -29,7 +28,6 @@ interface ICardAnimationConfigActions {
   setArrowSymbol: (arrowSymbol: string) => void;
   setEasingId: (easingId: number) => void;
   setEmptyStroke: (emptyStroke: string) => void;
-  setHighlightStroke: (highlightStroke: string) => void;
   setArrowFill: (arrowFill: string) => void;
   setStroke: (stroke: string) => void;
   setDisableStrokeAnimation: (disableStrokeAnimation: boolean) => void;
@@ -49,7 +47,6 @@ const initialState: ICardAnimationConfigState = {
   arrowSymbol: '→',
   easingId: 0,
   emptyStroke: IS_DARK ? '#FFFFFF11' : '#00000022',
-  highlightStroke: IS_DARK ? '#0000FF' : '#0000FF',
   arrowFill: IS_DARK ? '#000000' : '#FFFFFF',
   stroke: IS_DARK ? '#FFFFFF' : '#000000',
   disableStrokeAnimation: false,
@@ -70,7 +67,6 @@ const useCardAnimationConfigStore = create<ICardAnimationConfigState & ICardAnim
         setArrowSymbol: (arrowSymbol: string) => set(_state => ({ arrowSymbol: arrowSymbol })),
         setEasingId: (easingId: number) => set(_state => ({ easingId: easingId })),
         setEmptyStroke: (emptyStroke: string) => set(_state => ({ emptyStroke: emptyStroke })),
-        setHighlightStroke: (highlightStroke: string) => set(_state => ({ highlightStroke: highlightStroke })),
         setArrowFill: (arrowFill: string) => set(_state => ({ arrowFill: arrowFill })),
         setStroke: (stroke: string) => set(_state => ({ stroke: stroke })),
         setDisableStrokeAnimation: (disableStrokeAnimation: boolean) =>
@@ -79,7 +75,6 @@ const useCardAnimationConfigStore = create<ICardAnimationConfigState & ICardAnim
         setTheme: (isDark: boolean) =>
           set(_state => ({
             emptyStroke: isDark ? '#FFFFFF11' : '#00000022',
-            highlightStroke: isDark ? '#0000FF' : '#0000FF',
             arrowFill: isDark ? '#000000' : '#FFFFFF',
             stroke: isDark ? '#FFFFFF' : '#000000',
           })),

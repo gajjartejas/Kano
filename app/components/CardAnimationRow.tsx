@@ -86,7 +86,7 @@ export const ArrowRow = React.memo(function ArrowRow(props: {
   const fontWeight = selected ? '600' : '400';
   const largeScreenMode = useLargeScreenMode();
   const { width, height } = Dimensions.get('screen');
-  const d = largeScreenMode ? height : width;
+  const d = largeScreenMode ? height / 2 : width;
   const ic = (d - 64) / 8 - 4;
 
   return (

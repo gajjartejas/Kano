@@ -2,10 +2,13 @@
  */
 const Images = {
   icons: {
-    app_icon: require('app/assets/images/appicon.png'),
-    ic_more_app_ohmclient: require('app/assets/images/ic_more_app_ohmclient.png'),
+    app_icon: require('app/assets/images/app_icon.png'),
+
+    ic_more_app_ohmc: require('app/assets/images/ic_more_app_ohmc.png'),
     ic_more_app_miuiadshelper: require('app/assets/images/ic_more_app_miuiadshelper.png'),
-    home_header: require('app/assets/images/home_header.jpg'),
+    ic_more_app_kano: require('app/assets/images/app_icon.png'),
+    ic_more_app_pigo: require('../assets/images/ic_more_app_pigo.png'),
+
     avatar: require('app/assets/images/avatar.png'),
 
     flag_ar: require('app/assets/images/flags/ar.png'),
