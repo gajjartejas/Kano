@@ -13,6 +13,7 @@ interface IThemeConfigState {
   isDark: boolean;
   appearance: IAppearanceType;
   setAppearance: (appearance: IAppearanceType) => void;
+  setIsDarkMode: (isDark: boolean) => void;
   resetTheme: () => void;
   setPrimaryColor: (primary: string, onPrimary: string) => void;
   primary: string;
@@ -36,6 +37,10 @@ const useThemeConfigStore = create<IThemeConfigState>()(
           set(_state => ({
             isDark: a === IAppearanceType.Auto ? Appearance.getColorScheme() === 'dark' : a === 'dark',
             appearance: a,
+          })),
+        setIsDarkMode: a =>
+          set(_state => ({
+            isDark: a,
           })),
         resetTheme: () => set(_state => ({ isDark: colorScheme === 'dark', appearance: IAppearanceType.Auto })),
         setPrimaryColor: (p: string, o: string) => set(_state => ({ primary: p, onPrimary: o, secondaryContainer: p })),

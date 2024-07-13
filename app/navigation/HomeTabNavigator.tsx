@@ -8,9 +8,9 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 //Screens
-import Loading from 'app/screens/Auth/Loading';
-import DashboardTab from 'app/screens/Home/HomeTabs/DashboardTab';
-import MoreTab from 'app/screens/Home/HomeTabs/MoreTab';
+import Loading from 'app/screens/Loading';
+import DashboardTab from 'app/screens/Home/DashboardTab';
+import MoreTab from 'app/screens/Home/MoreTab';
 import MoreApps from 'app/screens/Settings/MoreApps';
 import Settings from 'app/screens/Settings/Settings';
 import About from 'app/screens/Settings/About';
@@ -28,6 +28,7 @@ import GeneralSetting from 'app/screens/Settings/GeneralSetting';
 import CardAnimation from 'app/screens/Settings/CardAnimation';
 import LearnCharAnimatedDrawing from 'app/screens/HomeIntro/CharsIntro/LearnCharAnimatedDrawing';
 import SwipeCardSetting from 'app/screens/Settings/SwipeCardSetting';
+import ChangeLanguage from 'app/screens/Settings/ChangeLanguage';
 
 //App Modules
 import { HomeTabsNavigatorParams, LoggedInTabNavigatorParams } from 'app/navigation/types';
@@ -105,6 +106,7 @@ const LoggedInTabNavigator = () => {
       <LoggedInStack.Screen name="GeneralSetting" component={GeneralSetting} options={{ headerShown: false }} />
       <LoggedInStack.Screen name="SwipeCardSetting" component={SwipeCardSetting} options={{ headerShown: false }} />
       <LoggedInStack.Screen name="CardAnimation" component={CardAnimation} options={{ headerShown: false }} />
+      <LoggedInStack.Screen name="ChangeLanguage" component={ChangeLanguage} options={{ headerShown: false }} />
       <LoggedInStack.Group screenOptions={{ presentation: 'modal' }}>
         <LoggedInStack.Screen
           name="LearnBySelectedChar"

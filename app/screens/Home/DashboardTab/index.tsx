@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { Image, ScrollView, View } from 'react-native';
+import { Image, View } from 'react-native';
 
 //ThirdParty
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
@@ -88,7 +88,7 @@ const DashboardTab = ({ navigation }: Props) => {
     <Components.AppBaseView
       edges={['left', 'right']}
       style={[styles.container, { backgroundColor: colors.background }]}>
-      <ScrollView style={styles.carouselContainer}>
+      <Components.AppBaseView edges={[]} scroll={true} style={styles.carouselContainer}>
         <View style={styles.headerContainer}>
           <View style={styles.headerDetailContainer}>
             <Text style={[styles.headerDetailText, { color: colors.text }]}>
@@ -124,7 +124,7 @@ const DashboardTab = ({ navigation }: Props) => {
             );
           })}
         </View>
-      </ScrollView>
+      </Components.AppBaseView>
     </Components.AppBaseView>
   );
 };

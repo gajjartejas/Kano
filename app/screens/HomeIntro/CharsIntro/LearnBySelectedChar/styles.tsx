@@ -13,7 +13,10 @@ const styles = StyleSheet.create({
   subView: {
     marginHorizontal: 32,
   },
-  moreCard: { marginTop: 16, marginHorizontal: 24 },
+  moreCard: {
+    marginTop: 16,
+    marginHorizontal: 24,
+  },
   flatlist: {
     flex: 1,
   },
@@ -36,7 +39,9 @@ const styles = StyleSheet.create({
     position: 'absolute',
     overflow: 'hidden',
   },
-  section: { paddingHorizontal: 20 },
+  section: {
+    paddingHorizontal: 20,
+  },
   sectionItem: {
     flexDirection: 'row',
     flexWrap: 'wrap',
@@ -71,14 +76,23 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  chipText: { fontSize: 12 },
+  chipText: {
+    fontSize: 12,
+  },
   emptyListHeader: {
     paddingVertical: 8,
   },
-  listContentContainer: { paddingVertical: 8 },
-  listContainer: { flex: 1 },
+  listContentContainer: {
+    paddingVertical: 8,
+  },
+  listContainer: {
+    flex: 1,
+  },
   continueButtonContainer: {},
-  continueButton: { marginHorizontal: 20 },
+  continueButton: {
+    marginHorizontal: 20,
+    marginBottom: 8,
+  },
 });
 
 export default styles;

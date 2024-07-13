@@ -133,7 +133,9 @@ const LearnCharsChart = ({ navigation, route }: Props) => {
   );
 
   return (
-    <View style={[styles.container, { backgroundColor: `${color}15` }]}>
+    <Components.AppBaseView
+      edges={['bottom', 'left', 'right']}
+      style={[styles.container, { backgroundColor: `${color}15` }]}>
       <AppHeader
         showBackButton={true}
         onPressBackButton={onGoBack}
@@ -141,7 +143,7 @@ const LearnCharsChart = ({ navigation, route }: Props) => {
         style={{ backgroundColor: `${color}15` }}
       />
 
-      <Components.AppBaseView edges={['bottom', 'left', 'right']} style={styles.safeArea}>
+      <Components.AppBaseView edges={[]} style={styles.safeArea}>
         {!!numberOfColumns && (
           <FlashList
             data={mappedGroupedEntries}
@@ -155,7 +157,7 @@ const LearnCharsChart = ({ navigation, route }: Props) => {
           />
         )}
       </Components.AppBaseView>
-    </View>
+    </Components.AppBaseView>
   );
 };
 

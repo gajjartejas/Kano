@@ -7,6 +7,7 @@ import Config from 'app/config';
 //Third Party
 import { TouchableRipple, useTheme, Text } from 'react-native-paper';
 import { AppTheme } from 'app/models/theme';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 //Interface
 export interface ICharCellItem {
@@ -42,8 +43,10 @@ const CharCellItem = (props: ICharCellItemProps) => {
   const { colors } = useTheme<AppTheme>();
   const { item, index, numberOfColumns, cellSpacing, containerSpacing, parentWidth, sectionIndex } = props;
   const { width } = useWindowDimensions();
+  const { left, right } = useSafeAreaInsets();
 
-  const pw = parentWidth === undefined ? width : parentWidth;
+  // -1 is hack
+  const pw = (parentWidth === undefined ? width - (left + right) : parentWidth) - 1;
   const cellW = (pw - containerSpacing * 2 - cellSpacing * numberOfColumns * 2) / numberOfColumns;
   const titleFontSize = cellW * 0.35;
   const subTitleFontSize = cellW * 0.15;

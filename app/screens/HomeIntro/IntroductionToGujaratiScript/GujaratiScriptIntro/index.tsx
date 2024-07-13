@@ -54,7 +54,9 @@ const GujaratiScriptIntro = ({ navigation, route }: Props) => {
   };
 
   return (
-    <View style={[styles.container, { backgroundColor: `${color}15` }]}>
+    <Components.AppBaseView
+      edges={['bottom', 'left', 'right']}
+      style={[styles.container, { backgroundColor: `${color}15` }]}>
       <AppHeader
         showBackButton={true}
         onPressBackButton={onGoBack}
@@ -63,7 +65,7 @@ const GujaratiScriptIntro = ({ navigation, route }: Props) => {
       />
 
       {isReady && (
-        <Components.AppBaseView scroll={true} edges={['bottom', 'left', 'right']} style={styles.safeArea}>
+        <Components.AppBaseView edges={[]} scroll={true} style={styles.safeArea}>
           <View style={styles.contentContainer}>
             {elements.map((element, index) => {
               return <Fragment key={`demo_${index}`}>{element}</Fragment>;
@@ -71,7 +73,7 @@ const GujaratiScriptIntro = ({ navigation, route }: Props) => {
           </View>
         </Components.AppBaseView>
       )}
-    </View>
+    </Components.AppBaseView>
   );
 };
 

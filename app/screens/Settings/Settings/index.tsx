@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useMemo } from 'react';
 import { View } from 'react-native';
 
 //ThirdParty
@@ -18,6 +18,7 @@ import { ISettingItem, ISettingSection } from 'app/models/viewModels/settingItem
 import Icon from 'react-native-easy-icon';
 import Components from 'app/components';
 import AppHeader from 'app/components/AppHeader';
+import useAppLangConfigStore from 'app/store/appLangConfig';
 
 //Params
 type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'Settings'>;
@@ -27,86 +28,100 @@ const Settings = ({ navigation }: Props) => {
   const { t } = useTranslation();
   const { colors } = useTheme();
   const largeScreenMode = useLargeScreenMode();
+  const selectedLanguageName = useAppLangConfigStore(store => store.selectedLanguageName);
 
   //States
-  const [apps] = useState<ISettingSection[]>([
-    {
-      id: 0,
-      title: t('settings.commonHeader'),
-      items: [
-        {
-          id: 0,
-          iconName: 'wb-sunny',
-          iconType: 'material',
-          title: t('settings.appearanceTitle'),
-          description: t('settings.appearanceSubTitle')!,
-          route: 'SelectAppearance',
-        },
-        {
-          id: 1,
-          iconName: 'app-settings-alt',
-          iconType: 'material',
-          title: t('settings.generalTitle'),
-          description: t('settings.generalSubTitle'),
-          route: 'GeneralSetting',
-        },
-      ],
-    },
-    {
-      id: 1,
-      title: t('settings.infoHeader'),
-      items: [
-        {
-          id: 0,
-          iconName: 'notes',
-          iconType: 'material',
-          title: t('settings.changelogTitle'),
-          description: t('settings.changelogSubTitle')!,
-          route: 'Changelog',
-        },
-        {
-          id: 1,
-          iconName: 'library-shelves',
-          iconType: 'material-community',
-          title: t('settings.librariesTitle'),
-          description: t('settings.librariesSubTitle')!,
-          route: 'License',
-        },
-        {
-          id: 2,
-          iconName: 'frequently-asked-questions',
-          iconType: 'material-community',
-          title: t('settings.faqTitle'),
-          description: t('settings.faqSubTitle')!,
-          route: 'FAQ',
-        },
-        {
-          id: 3,
-          iconName: 'language',
-          iconType: 'ionicon',
-          title: t('settings.translateTitle'),
-          description: t('settings.translateSubTitle')!,
-          route: 'Translate',
-        },
-        {
-          id: 4,
-          iconName: 'people',
-          iconType: 'ionicon',
-          title: t('settings.translatorsTitle'),
-          description: t('settings.translatorsSubTitle')!,
-          route: 'Translators',
-        },
-        {
-          id: 5,
-          iconName: 'privacy-tip',
-          iconType: 'material',
-          title: t('settings.privacyTitle'),
-          description: t('settings.privacySubTitle')!,
-          route: 'PrivacyPolicy',
-        },
-      ],
-    },
-  ]);
+  const apps: ISettingSection[] = useMemo(
+    () => [
+      {
+        id: 0,
+        title: t('settings.commonHeader'),
+        items: [
+          {
+            id: 0,
+            iconName: 'language',
+            iconType: 'material',
+            title: t('settings.languageTitle'),
+            description: t('settings.languageSubTitle', {
+              language: selectedLanguageName,
+            })!,
+            route: 'ChangeLanguage',
+          },
+          {
+            id: 1,
+            iconName: 'wb-sunny',
+            iconType: 'material',
+            title: t('settings.appearanceTitle'),
+            description: t('settings.appearanceSubTitle')!,
+            route: 'SelectAppearance',
+          },
+          {
+            id: 2,
+            iconName: 'app-settings-alt',
+            iconType: 'material',
+            title: t('settings.generalTitle'),
+            description: t('settings.generalSubTitle'),
+            route: 'GeneralSetting',
+          },
+        ],
+      },
+      {
+        id: 1,
+        title: t('settings.infoHeader'),
+        items: [
+          {
+            id: 0,
+            iconName: 'notes',
+            iconType: 'material',
+            title: t('settings.changelogTitle'),
+            description: t('settings.changelogSubTitle')!,
+            route: 'Changelog',
+          },
+          {
+            id: 1,
+            iconName: 'library-shelves',
+            iconType: 'material-community',
+            title: t('settings.librariesTitle'),
+            description: t('settings.librariesSubTitle')!,
+            route: 'License',
+          },
+          {
+            id: 2,
+            iconName: 'frequently-asked-questions',
+            iconType: 'material-community',
+            title: t('settings.faqTitle'),
+            description: t('settings.faqSubTitle')!,
+            route: 'FAQ',
+          },
+          {
+            id: 3,
+            iconName: 'language',
+            iconType: 'ionicon',
+            title: t('settings.translateTitle'),
+            description: t('settings.translateSubTitle')!,
+            route: 'Translate',
+          },
+          {
+            id: 4,
+            iconName: 'people',
+            iconType: 'ionicon',
+            title: t('settings.translatorsTitle'),
+            description: t('settings.translatorsSubTitle')!,
+            route: 'Translators',
+          },
+          {
+            id: 5,
+            iconName: 'privacy-tip',
+            iconType: 'material',
+            title: t('settings.privacyTitle'),
+            description: t('settings.privacySubTitle')!,
+            route: 'PrivacyPolicy',
+          },
+        ],
+      },
+    ],
+    [selectedLanguageName, t],
+  );
 
   const onGoBack = useCallback(() => {
     navigation.pop();
@@ -140,7 +155,9 @@ const Settings = ({ navigation }: Props) => {
   );
 
   return (
-    <View style={[styles.container, { backgroundColor: colors.background }]}>
+    <Components.AppBaseView
+      edges={['bottom', 'left', 'right']}
+      style={[styles.container, { backgroundColor: colors.background }]}>
       <AppHeader
         showBackButton={true}
         onPressBackButton={onGoBack}
@@ -148,7 +165,7 @@ const Settings = ({ navigation }: Props) => {
         style={{ backgroundColor: colors.background }}
       />
 
-      <Components.AppBaseView scroll edges={['bottom', 'left', 'right']} style={styles.safeArea}>
+      <Components.AppBaseView edges={[]} scroll={true} style={styles.safeArea}>
         <View style={[styles.listContainer, largeScreenMode && styles.cardTablet]}>
           {apps.map(item => {
             return (
@@ -181,7 +198,7 @@ const Settings = ({ navigation }: Props) => {
           })}
         </View>
       </Components.AppBaseView>
-    </View>
+    </Components.AppBaseView>
   );
 };
 

@@ -7,6 +7,7 @@ import { AppTheme } from 'app/models/theme';
 
 //App Modules
 import Config from 'app/config';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 //Interface
 export interface ISelectCharCellItem {
@@ -39,8 +40,10 @@ const CharCellItem = (props: ICharCellItemProps) => {
   const { colors } = useTheme<AppTheme>();
   const { item, index, sectionIndex, numberOfColumns, cellSpacing, containerSpacing, selected, parentWidth } = props;
   const { width } = useWindowDimensions();
+  const { left, right } = useSafeAreaInsets();
 
-  const pw = parentWidth === undefined ? width : parentWidth;
+  // -1 is hack
+  const pw = (parentWidth === undefined ? width - (left + right) : parentWidth) - 1;
   const cellW = (pw - cellSpacing * numberOfColumns * 2) / numberOfColumns;
   const titleFontSize = cellW * 0.35;
   const subTitleFontSize = cellW * 0.15;

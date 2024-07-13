@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { ScrollView, View } from 'react-native';
+import React, { useCallback, useMemo, useState } from 'react';
+import { View } from 'react-native';
 
 //ThirdParty
 import { useTranslation } from 'react-i18next';
@@ -36,54 +36,63 @@ const SwipeCardSetting = ({ navigation }: Props) => {
   //States
   const [autoSwipeCardModeAlertVisible, setAutoSwipeCardModeAlertVisible] = useState(false);
 
-  const [apps] = useState<ISettingSection[]>([
-    {
-      id: 0,
-      title: t('swipeCardSetting.section1.header'),
-      items: [
-        {
-          id: 0,
-          iconName: 'animation-play',
-          iconType: 'material-community',
-          title: t('swipeCardSetting.section1.row1.title'),
-          description: t('swipeCardSetting.section1.row1.subTitle'),
-          route: 'CardAnimation',
-        },
-        {
-          id: 1,
-          iconName: 'gesture-swipe',
-          iconType: 'material-community',
-          title: t('swipeCardSetting.section1.row2.title'),
-          description: t('swipeCardSetting.section1.row2.subTitle'),
-          route: 'CardAnimation',
-        },
-      ],
-    },
-  ]);
+  const apps: ISettingSection[] = useMemo(
+    () => [
+      {
+        id: 0,
+        title: t('swipeCardSetting.section1.header'),
+        items: [
+          {
+            id: 0,
+            iconName: 'animation-play',
+            iconType: 'material-community',
+            title: t('swipeCardSetting.section1.row1.title'),
+            description: t('swipeCardSetting.section1.row1.subTitle'),
+            route: 'CardAnimation',
+          },
+          {
+            id: 1,
+            iconName: 'gesture-swipe',
+            iconType: 'material-community',
+            title: t('swipeCardSetting.section1.row2.title'),
+            description: t('swipeCardSetting.section1.row2.subTitle'),
+            route: 'CardAnimation',
+          },
+        ],
+      },
+    ],
+    [t],
+  );
 
-  const onGoBack = () => {
+  const onGoBack = useCallback(() => {
     navigation.pop();
-  };
+  }, [navigation]);
 
-  const onPressAppearanceOption = (item: ISettingSection, index: number, subItem: ISettingItem, subIndex: number) => {
-    switch (true) {
-      case index === 0 && subIndex === 0:
-        navigation.navigate('CardAnimation', {});
-        break;
-      case index === 0 && subIndex === 1:
-        setAutoSwipeCardModeAlertVisible(true);
-        break;
-      default:
-    }
-  };
+  const onPressAppearanceOption = useCallback(
+    (item: ISettingSection, index: number, subItem: ISettingItem, subIndex: number) => {
+      switch (true) {
+        case index === 0 && subIndex === 0:
+          navigation.navigate('CardAnimation', {});
+          break;
+        case index === 0 && subIndex === 1:
+          setAutoSwipeCardModeAlertVisible(true);
+          break;
+        default:
+      }
+    },
+    [navigation],
+  );
 
-  const onPressConfirmCardAutoSwipeDuration = (value: number) => {
-    setCardAutoSwipeDuration(value * 1000);
-    setAutoSwipeCardModeAlertVisible(false);
-  };
+  const onPressConfirmCardAutoSwipeDuration = useCallback(
+    (value: number) => {
+      setCardAutoSwipeDuration(value * 1000);
+      setAutoSwipeCardModeAlertVisible(false);
+    },
+    [setCardAutoSwipeDuration],
+  );
 
   return (
-    <View style={[styles.container, { backgroundColor: colors.background }]}>
+    <Components.AppBaseView edges={[]} style={[styles.container, { backgroundColor: colors.background }]}>
       <AppHeader
         showBackButton={true}
         onPressBackButton={onGoBack}
@@ -91,43 +100,39 @@ const SwipeCardSetting = ({ navigation }: Props) => {
         style={{ backgroundColor: colors.background }}
       />
 
-      <View style={styles.safeArea}>
-        <ScrollView>
-          <View style={[styles.listContainer, largeScreenMode && styles.cardTablet]}>
-            {apps.map((item, index) => {
-              return (
-                <View key={item.id.toString()}>
-                  <List.Subheader style={[styles.listSubHeader, { color: colors.primary }]}>
-                    {item.title}
-                  </List.Subheader>
-                  {item.items.map((subItem, subIndex) => {
-                    return (
-                      <List.Item
-                        key={subItem.id.toString()}
-                        titleStyle={{ color: colors.onSurface }}
-                        descriptionStyle={{ color: `${colors.onSurface}88` }}
-                        onPress={() => onPressAppearanceOption(item, index, subItem, subIndex)}
-                        title={subItem.title}
-                        description={subItem.description}
-                        left={() => (
-                          <Icon
-                            style={styles.listItemIcon}
-                            type={subItem.iconType}
-                            name={subItem.iconName}
-                            color={`${colors.onSurface}88`}
-                            size={24}
-                          />
-                        )}
-                      />
-                    );
-                  })}
-                  <Divider />
-                </View>
-              );
-            })}
-          </View>
-        </ScrollView>
-      </View>
+      <Components.AppBaseView edges={[]} scroll={true} style={styles.safeArea}>
+        <View style={[styles.listContainer, largeScreenMode && styles.cardTablet]}>
+          {apps.map((item, index) => {
+            return (
+              <View key={item.id.toString()}>
+                <List.Subheader style={[styles.listSubHeader, { color: colors.primary }]}>{item.title}</List.Subheader>
+                {item.items.map((subItem, subIndex) => {
+                  return (
+                    <List.Item
+                      key={subItem.id.toString()}
+                      titleStyle={{ color: colors.onSurface }}
+                      descriptionStyle={{ color: `${colors.onSurface}88` }}
+                      onPress={() => onPressAppearanceOption(item, index, subItem, subIndex)}
+                      title={subItem.title}
+                      description={subItem.description}
+                      left={() => (
+                        <Icon
+                          style={styles.listItemIcon}
+                          type={subItem.iconType}
+                          name={subItem.iconName}
+                          color={`${colors.onSurface}88`}
+                          size={24}
+                        />
+                      )}
+                    />
+                  );
+                })}
+                <Divider />
+              </View>
+            );
+          })}
+        </View>
+      </Components.AppBaseView>
       <Components.AppSliderDialog
         title={t('swipeCardSetting.section1.row2.cardAutoSwipeDurationAlert.title')}
         description={t('swipeCardSetting.section1.row2.cardAutoSwipeDurationAlert.desc')}
@@ -141,7 +146,7 @@ const SwipeCardSetting = ({ navigation }: Props) => {
         unit={t('swipeCardSetting.section1.row2.cardAutoSwipeDurationAlert.unit')}
         value={cardAutoSwipeDuration / 1000}
       />
-    </View>
+    </Components.AppBaseView>
   );
 };
 

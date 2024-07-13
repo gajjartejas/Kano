@@ -1,5 +1,5 @@
-import React, { useCallback } from 'react';
-import { Image, Platform, ScrollView, View } from 'react-native';
+import React, { useCallback, useMemo } from 'react';
+import { Image, Platform, View } from 'react-native';
 
 //ThirdParty
 import { useTranslation } from 'react-i18next';
@@ -49,44 +49,46 @@ const MoreTab = () => {
 
   //State
   const [visible, setVisible] = React.useState(false);
-  const [aboutItems] = React.useState<IMoreItem[]>([
-    {
-      id: 0,
-      iconName: 'feedback',
-      iconType: 'material',
-      title: t('about.sendFeedback'),
-    },
-    {
-      id: 1,
-      iconName: 'star',
-      iconType: 'font-awesome',
-      title: t('about.rateApp'),
-    },
-    {
-      id: 2,
-      iconName: 'apps',
-      iconType: 'material-community',
-      title: t('about.moreApps'),
-    },
-    {
-      id: 3,
-      iconName: 'github',
-      iconType: 'entypo',
-      title: t('about.github'),
-    },
-    {
-      id: 4,
-      iconName: 'gear',
-      iconType: 'font-awesome',
-      title: t('about.setting'),
-    },
-    {
-      id: 5,
-      iconName: 'info-circle',
-      iconType: 'font-awesome',
-      title: t('about.app'),
-    },
-  ]);
+  const aboutItems: IMoreItem[] = useMemo(() => {
+    return [
+      {
+        id: 0,
+        iconName: 'feedback',
+        iconType: 'material',
+        title: t('about.sendFeedback'),
+      },
+      {
+        id: 1,
+        iconName: 'star',
+        iconType: 'font-awesome',
+        title: t('about.rateApp'),
+      },
+      {
+        id: 2,
+        iconName: 'apps',
+        iconType: 'material-community',
+        title: t('about.moreApps'),
+      },
+      {
+        id: 3,
+        iconName: 'github',
+        iconType: 'entypo',
+        title: t('about.github'),
+      },
+      {
+        id: 4,
+        iconName: 'gear',
+        iconType: 'font-awesome',
+        title: t('about.setting'),
+      },
+      {
+        id: 5,
+        iconName: 'info-circle',
+        iconType: 'font-awesome',
+        title: t('about.app'),
+      },
+    ];
+  }, [t]);
 
   const onPressShowDialog = useCallback(() => setVisible(true), []);
   const onPressHideDialog = useCallback(() => setVisible(false), []);
@@ -157,9 +159,9 @@ const MoreTab = () => {
 
   return (
     <Components.AppBaseView
-      edges={['left', 'right', 'top']}
+      edges={['bottom', 'left', 'right']}
       style={[styles.container, { backgroundColor: colors.background }]}>
-      <ScrollView style={styles.scrollView}>
+      <Components.AppBaseView edges={['top']} scroll={true} style={styles.scrollView}>
         <View style={styles.subView}>
           <View style={[styles.imageBackground, largeScreenMode && styles.cardTablet]}>
             <Image source={Config.Images.icons.app_icon} resizeMode="contain" style={styles.appIcon} />
@@ -195,7 +197,7 @@ const MoreTab = () => {
             })}
           </View>
         </View>
-      </ScrollView>
+      </Components.AppBaseView>
 
       <Components.AboutFeedbackDialog
         visible={visible}

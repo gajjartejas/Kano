@@ -7,9 +7,11 @@ export interface ISettingItem {
   iconName: string;
   iconType: IconType;
   title: string;
-  description?: string;
+  description: string;
   route?: any;
   touchable?: boolean;
+  value?: any;
+  inputType?: 'input' | 'switch';
 }
 
 export interface ISettingSection {

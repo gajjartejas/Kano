@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { FlatList, InteractionManager, View } from 'react-native';
+import { FlatList, InteractionManager } from 'react-native';
 
 //ThirdParty
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
@@ -39,7 +39,7 @@ const License = ({ navigation }: Props) => {
   const largeScreenMode = useLargeScreenMode();
 
   //States
-  let [finalLicense, setFinalLicense] = useState<IFinalLicense[]>([]);
+  const [finalLicense, setFinalLicense] = useState<IFinalLicense[]>([]);
 
   const onGoBack = useCallback(() => {
     navigation.pop();
@@ -50,7 +50,7 @@ const License = ({ navigation }: Props) => {
     InteractionManager.runAfterInteractions(() => {
       const licenses: { [id: string]: ILicense } = require('../../../../licenses.json');
       const numberRegex = /\d+(\.\d+)*/;
-      const atRegex = /(?:@)/gi;
+      const atRegex = /@/gi;
       let newLicenses: IFinalLicense[] = [];
       for (const licensesKey in licenses) {
         const license = licenses[licensesKey];
@@ -81,14 +81,16 @@ const License = ({ navigation }: Props) => {
   }, []);
 
   return (
-    <View style={[styles.container, { backgroundColor: colors.background }]}>
+    <Components.AppBaseView
+      edges={['bottom', 'left', 'right']}
+      style={[styles.container, { backgroundColor: colors.background }]}>
       <AppHeader
         showBackButton={true}
         onPressBackButton={onGoBack}
         title={t('librariesScreen.title')}
         style={{ backgroundColor: colors.background }}
       />
-      <Components.AppBaseView edges={['bottom', 'left', 'right']} style={styles.subView}>
+      <Components.AppBaseView edges={[]} style={styles.subView}>
         <FlatList
           contentContainerStyle={[largeScreenMode && styles.cardTablet]}
           data={finalLicense}
@@ -96,7 +98,7 @@ const License = ({ navigation }: Props) => {
           keyExtractor={item => item.name}
         />
       </Components.AppBaseView>
-    </View>
+    </Components.AppBaseView>
   );
 };
 

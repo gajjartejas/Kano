@@ -28,6 +28,7 @@ export interface LearnCharAnimatedDrawingParams {
   svgPath: string;
   color: string;
 }
+export interface ChangeLanguageParams {}
 
 export enum LearnCharsType {
   Vowel = 0,
@@ -95,6 +96,7 @@ export type LoggedInTabNavigatorParams = {
   LearnCharAnimatedDrawing: LearnCharAnimatedDrawingParams;
   CardAnimation: CardAnimationParams;
   SwipeCardSetting: SwipeCardSettingParams;
+  ChangeLanguage: ChangeLanguageParams;
 };
 
 export type HomeTabsNavigatorParams = {

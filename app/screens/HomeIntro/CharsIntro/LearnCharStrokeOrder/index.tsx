@@ -42,7 +42,6 @@ const LearnCharStrokeOrder = ({ navigation, route }: Props) => {
     arrowSymbol,
     easingId,
     emptyStroke,
-    highlightStroke,
     arrowFill,
     stroke,
     showArrow,
@@ -54,7 +53,6 @@ const LearnCharStrokeOrder = ({ navigation, route }: Props) => {
     store.arrowSymbol,
     store.easingId,
     store.emptyStroke,
-    store.highlightStroke,
     store.arrowFill,
     store.stroke,
     store.showArrow,
@@ -73,8 +71,11 @@ const LearnCharStrokeOrder = ({ navigation, route }: Props) => {
   }, [navigation]);
 
   const otherProps = Platform.OS === 'ios' ? { statusBarHeight: 0 } : {};
+
   return (
-    <View style={[styles.container, { backgroundColor: `${color}15` }]}>
+    <Components.AppBaseView
+      edges={['bottom', 'left', 'right']}
+      style={[styles.container, { backgroundColor: `${color}15` }]}>
       <AppHeader
         showBackButton={true}
         onPressBackButton={onGoBack}
@@ -85,7 +86,7 @@ const LearnCharStrokeOrder = ({ navigation, route }: Props) => {
         {...otherProps}
       />
 
-      <Components.AppBaseView edges={['bottom', 'left', 'right']} style={styles.safeArea}>
+      <Components.AppBaseView edges={[]} style={styles.safeArea}>
         <ScrollView horizontal={largeScreenMode && isLandscape}>
           <View style={[styles.contentContainer]}>
             {!!svgPath && (
@@ -110,9 +111,9 @@ const LearnCharStrokeOrder = ({ navigation, route }: Props) => {
                           initialDelay={initialDelay}
                           duration={duration}
                           emptyStroke={emptyStroke}
-                          highlightStroke={highlightStroke}
+                          highlightStroke={stroke}
                           arrowFill={arrowFill}
-                          stroke={stroke}
+                          stroke={emptyStroke}
                           disableStrokeAnimation={true}
                           showArrow={showArrow}
                           strokeWidth={strokeWidth}
@@ -130,7 +131,7 @@ const LearnCharStrokeOrder = ({ navigation, route }: Props) => {
           </View>
         </ScrollView>
       </Components.AppBaseView>
-    </View>
+    </Components.AppBaseView>
   );
 };
 
