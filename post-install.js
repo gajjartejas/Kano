@@ -19,6 +19,8 @@ const sourceAssets = [
   './assets/audio/numbers',
   './assets/audio/barakhadi',
   './assets/audio/numbers',
+  './assets/fonts',
+  './assets/fonts',
 ];
 const destAssets = [
   './ios/assets/svgs/barakhadi',
@@ -29,6 +31,8 @@ const destAssets = [
   './ios/assets/audio/numbers',
   './android/app/src/main/res/raw',
   './android/app/src/main/res/raw',
+  './android/app/src/main/assets/fonts',
+  './ios/assets/fonts',
 ];
 
 for (let i = 0; i < sourceAssets.length; i++) {
