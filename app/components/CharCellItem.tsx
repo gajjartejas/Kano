@@ -96,7 +96,9 @@ const styles = StyleSheet.create({
     marginBottom: 6,
     marginHorizontal: 3,
   },
-  touchableButton: { flex: 1 },
+  touchableButton: {
+    flex: 1,
+  },
   titleText: {
     fontWeight: '600',
     fontSize: 30,
@@ -107,8 +109,15 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontFamily: Config.Fonts.NotoSansGujarati.Regular,
   },
-  iconTextContainer: { alignItems: 'center', justifyContent: 'center' },
-  iconTextContainerView: { flex: 1, alignItems: 'center', justifyContent: 'center' },
+  iconTextContainer: {
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  iconTextContainerView: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 });
 
 export default memo(CharCellItem, (p, n) => {

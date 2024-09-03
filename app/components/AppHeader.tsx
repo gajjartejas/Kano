@@ -4,7 +4,6 @@ import React, { memo } from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import { useTheme } from 'react-native-paper';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import DeviceInfo from 'react-native-device-info';
 
 //App modules
 import { AppTheme } from 'app/models/theme';
@@ -32,19 +31,17 @@ const AppHeader = (props: AppHeaderProps) => {
   //Ref
   const { colors } = useTheme<AppTheme>();
 
-  let tintColor = props.tintColor === undefined ? colors.onBackground : props.tintColor;
-  let textStyle = props.textStyle === undefined ? {} : props.textStyle;
-  let LeftViewComponent = props.RightViewComponent === undefined ? <></> : props.LeftViewComponent;
-  let backArrowImage = props.backArrowImage === undefined ? 'chevron-left' : props.backArrowImage;
-  let RightViewComponent = props.RightViewComponent === undefined ? <></> : props.RightViewComponent;
-  let SubTitleComponent = props.SubTitleComponent === undefined ? <></> : props.SubTitleComponent;
-
   //Const
   const insets = useSafeAreaInsets();
-  const isHasNotch = DeviceInfo.hasNotch();
-  let statusBarHeight = props.statusBarHeight === undefined ? insets.top + (isHasNotch ? 0 : 5) : props.statusBarHeight;
-
+  const statusBarHeight = props.statusBarHeight === undefined ? insets.top : props.statusBarHeight;
   const backButtonPaddingForTitle = !props.showBackButton ? { marginLeft: 0 } : { marginLeft: 60, marginRight: 60 };
+  const tintColor = props.tintColor === undefined ? colors.onBackground : props.tintColor;
+  const textStyle = props.textStyle === undefined ? {} : props.textStyle;
+  const LeftViewComponent = props.RightViewComponent === undefined ? <></> : props.LeftViewComponent;
+  const backArrowImage = props.backArrowImage === undefined ? 'chevron-left' : props.backArrowImage;
+  const RightViewComponent = props.RightViewComponent === undefined ? <></> : props.RightViewComponent;
+  const SubTitleComponent = props.SubTitleComponent === undefined ? <></> : props.SubTitleComponent;
+
   return (
     <View
       style={{

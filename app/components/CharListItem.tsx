@@ -127,11 +127,28 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.41,
     borderRadius: 20,
   },
-  iconTextContainer: { flex: 1, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
-  iconTextContainer1: { flex: 1, flexDirection: 'row', alignItems: 'center' },
-  leftIcon: { alignSelf: 'center' },
-  iconContainer: { marginHorizontal: 20, width: 44 },
-  textContainer: { marginRight: 8, flex: 1 },
+  iconTextContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  iconTextContainer1: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  leftIcon: {
+    alignSelf: 'center',
+  },
+  iconContainer: {
+    marginHorizontal: 20,
+    width: 44,
+  },
+  textContainer: {
+    marginRight: 8,
+    flex: 1,
+  },
 });
 
 export default memo(CharListItem);

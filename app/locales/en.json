@@ -70,8 +70,6 @@
       "itemSubTitle1": "10 hours, 19 lessons",
       "itemTitle2": "Learn in Sequence",
       "itemSubTitle2": "10 hours, 19 lessons",
-      "itemTitle3": "Memorize by Random Order",
-      "itemSubTitle3": "10 hours, 19 lessons",
       "itemTitle4": "Learn by Selected Characters",
       "itemTitleNum4": "Learn by Selected Numbers",
       "itemSubTitle4": "10 hours, 19 lessons"
@@ -80,10 +78,7 @@
     "listItemsSection2": {
       "itemTitle1": "Practice by Order",
       "itemSubTitle1": "10 hours, 19 lessons",
-      "itemTitle2": "Practice by Random Order",
-      "itemSubTitle2": "10 hours, 19 lessons",
       "itemTitle3": "Practice by Selected Characters",
-      "itemTitleNum3": "Practice by Selected Numbers",
       "itemSubTitle3": "10 hours, 19 lessons"
     }
   },
@@ -95,7 +90,7 @@
       "titleNumerals": "Numerals Chart",
       "vowels": "Vowels",
       "consonants": "Consonants",
-      "barakhadi": "Barakhadi: {{en}}/{{gu}}",
+      "barakhadi": "Barakhadi: {{id30001}}/{{id30002}}",
       "numerals": "Numerals"
     }
   },
@@ -107,7 +102,6 @@
     "diacritic": "DIACRITIC",
     "englishCharacter": "ENGLISH CHARACTER",
     "numberOfStrokes": "NUMBER OF STROKES",
-    "complexity": "COMPLEXITY",
     "length": "STROKE LENGTH",
     "moreInfo": "MORE INFO",
     "viewStrokeOrder": "VIEW STROKE ORDER",
@@ -122,11 +116,9 @@
       "titleNumerals": "Learn Numerals (Sequence)"
     },
     "completeDialog": {
-      "title": "SECTION {{section}} COMPLETED!",
-      "description": "Congratulation you finished {{section}} section."
+      "title": "SECTION {{id40001}} COMPLETED!",
+      "description": "Congratulation you finished {{id40002}} section."
     },
-    "switchToRandom": "SWITCH TO RANDOM ORDER",
-    "switchToSequence": "SWITCH TO SEQUENCE ORDER",
     "switchRandomAlert": {
       "title": "Change Mode",
       "descRandom": "Are you sure you want to switch to random mode?",
@@ -138,10 +130,7 @@
   "learnBySelectedChar": {
     "header": {
       "title": "Select Characters"
-    },
-    "section": "Select at least one character.",
-    "selectAll": "Select All",
-    "unselectAll": "Unselect All"
+    }
   },
   "LearnCharStrokeOrder": {
     "header": {
@@ -160,7 +149,7 @@
     "appearanceTitle": "Appearance",
     "appearanceSubTitle": "Customization of appearance",
     "languageTitle": "App Language",
-    "languageSubTitle": "{{language}}",
+    "languageSubTitle": "{{id10001}}",
     "generalTitle": "General",
     "generalSubTitle": "Functional settings of the app",
     "infoHeader": "Information",
@@ -197,7 +186,7 @@
     }
   },
   "about": {
-    "version": "Version: {{version}}",
+    "version": "Version: {{id0001}}",
     "sendFeedback": "Send Feedback",
     "rateApp": "Rate App",
     "moreApps": "More Apps",
@@ -266,10 +255,10 @@
     "header": {
       "title": "Card Animation"
     },
-    "initDelay": "Initial Delay: {{value}}s",
-    "duration": "Duration: {{value}}s",
-    "strokeWidth": "Stroke Width: {{value}}px",
-    "arrowFont": "Arrow Font: {{value}}px",
+    "initDelay": "Initial Delay: {{id20001}}s",
+    "duration": "Duration: {{id20002}}s",
+    "strokeWidth": "Stroke Width: {{id20003}}px",
+    "arrowFont": "Arrow Font: {{id20004}}px",
     "emptyStroke": "Empty Stroke",
     "stroke": "Stroke",
     "disableStrokeAnimation": "Disable Stroke Animation",

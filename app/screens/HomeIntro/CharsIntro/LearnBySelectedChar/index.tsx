@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef, useCallback } from 'react';
 import { View, Platform } from 'react-native';
 
 //ThirdParty
-import { Button, Chip, Text, useTheme } from 'react-native-paper';
+import { Button, Text, useTheme } from 'react-native-paper';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
 import { FlashList } from '@shopify/flash-list';
@@ -161,26 +161,18 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
       return (
         <View style={styles.listHeaderView}>
           <Text style={[styles.listHeaderText, { color: colors.textTitle }]}>{titleText}</Text>
-          <Chip
-            style={[styles.chipStyle, { backgroundColor: allSelected ? colors.primary : colors.white }]}
-            textStyle={[styles.chipText, { color: allSelected ? colors.white : colors.primary }]}
-            avatar={
-              <View style={styles.chipIconContainer}>
-                <Icon
-                  type="material-community"
-                  name={allSelected ? 'check-circle' : 'check-circle-outline'}
-                  color={allSelected ? colors.white : colors.primary}
-                  size={16}
-                />
-              </View>
-            }
-            onPress={() => onSelectCheckbox(index)}>
-            {allSelected ? t('learnBySelectedChar.unselectAll') : t('learnBySelectedChar.selectAll')}
-          </Chip>
+          <Icon
+            type="material-community"
+            onPress={() => onSelectCheckbox(index)}
+            name={allSelected ? 'check-circle' : 'check-circle-outline'}
+            color={allSelected ? colors.primary : `${colors.onBackground}90`}
+            size={24}
+            style={styles.iconButton}
+          />
         </View>
       );
     },
-    [colors.primary, colors.textTitle, colors.white, mappedGroupedEntries, onSelectCheckbox, selectedIds, t],
+    [colors.onBackground, colors.primary, colors.textTitle, mappedGroupedEntries, onSelectCheckbox, selectedIds],
   );
 
   const onPressContinue = useCallback(() => {

@@ -29,7 +29,7 @@ const useBarakhadiChartItems = (): ICharCellListSection[] => {
   const transformCharsToSectionVM = useCallback(
     (group: ICharGroupInfo): ICharCellListSection => {
       return {
-        title: t('learnCharsChartScreen.header.barakhadi', { en: group.en, gu: group.gu }),
+        title: t('learnCharsChartScreen.header.barakhadi', { id30001: group.en, id30002: group.gu }),
         data: group.chars?.map((v: ICharInfo) => transformCharToCellVM(v)) || [],
       };
     },

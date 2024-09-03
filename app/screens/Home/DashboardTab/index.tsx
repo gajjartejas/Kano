@@ -86,7 +86,7 @@ const DashboardTab = ({ navigation }: Props) => {
 
   return (
     <Components.AppBaseView
-      edges={['left', 'right']}
+      edges={['left', 'right', 'top']}
       style={[styles.container, { backgroundColor: colors.background }]}>
       <Components.AppBaseView edges={[]} scroll={true} style={styles.carouselContainer}>
         <View style={styles.headerContainer}>

@@ -137,8 +137,8 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
 
       if (refProgressIndex.current === refGroupedEntries.current[progressSection].data.length) {
         Toast.show({
-          text1: t('learnCharsCardScreen.completeDialog.title', { section: progressSection + 1 }),
-          text2: t('learnCharsCardScreen.completeDialog.description', { section: progressSection + 1 }),
+          text1: t('learnCharsCardScreen.completeDialog.title', { id40001: progressSection + 1 }),
+          text2: t('learnCharsCardScreen.completeDialog.description', { id40002: progressSection + 1 }),
           position: 'bottom',
         });
         if (progressSection === refGroupedEntries.current.length - 1) {

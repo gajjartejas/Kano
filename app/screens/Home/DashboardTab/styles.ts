@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
   },
   headerContainer: {
     paddingHorizontal: 16,
-    paddingTop: 80,
+    paddingTop: 36,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',

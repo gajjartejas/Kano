@@ -93,6 +93,10 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
     marginBottom: 8,
   },
+  iconButton: {
+    borderRadius: 11,
+    overflow: 'hidden',
+  },
 });
 
 export default styles;

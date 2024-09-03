@@ -15,10 +15,10 @@
     "github": "Github પર યોગદાન આપો",
     "moreApps": "વધુ એપ્સ",
     "rateApp": "એપ્લિકેશનને રેટ કરો",
-    "sendFeedback": "પ્રતિસાદ મોકલ",
+    "sendFeedback": "પ્રતિસાદ મોકલો",
     "sendFeedbackDetail": "તમે GitHub મુદ્દા પર તમારો મૂલ્યવાન પ્રતિસાદ મોકલી શકો છો.",
     "setting": "સેટિંગ્સ",
-    "version": "સંસ્કરણ: {{version}}"
+    "version": "સંસ્કરણ: {{id0001}}"
   },
   "aboutScreen": {
     "developerTitle": "વિકાસકર્તા",
@@ -29,13 +29,13 @@
     "infoHeader": "માહિતી",
     "instagramSubTitle": "મારો શોખ અને મારા ગેજેટ્સ",
     "instagramTitle": "ઇન્સ્ટાગ્રામ",
-    "portfolioSubTitle": "વિકાસકર્તા વિશે તમામ માહિતી",
+    "portfolioSubTitle": "વિકાસકર્તા વિશેની તમામ માહિતી",
     "portfolioTitle": "પોર્ટફોલિયો",
     "telegramSubTitle": "બગ્સ, સુધારાઓ, સુવિધાની વિનંતી અને વિકાસ સમાચાર વિશે ચર્ચા",
     "telegramTitle": "ટેલિગ્રામમાં જોડાઓ",
     "title": "કાનો વિશે",
     "twitterSubTitle": "વ્યક્તિગત માઇક્રો-બ્લોગ",
-    "twitterTitle": "Twitter"
+    "twitterTitle": "ટ્વિટર"
   },
   "appearanceSettings": {
     "accentColorSubTitle": "UI ઘટકોને રંગવા માટે વપરાયેલ રંગ",
@@ -54,20 +54,20 @@
   },
   "cardAnimation": {
     "animationEasing": "એનિમેશન સરળતા",
-    "arrowFont": "એરો ફૉન્ટ: {{value}}px",
+    "arrowFont": "એરો ફોન્ટ: {{id20004}}px",
     "arrowSymbol": "એરો સિમ્બોલ",
     "disableStrokeAnimation": "સ્ટ્રોક એનિમેશન અક્ષમ કરો",
-    "duration": "અવધિ: {{value}}s",
+    "duration": "અવધિ: {{id20002}}સે",
     "emptyStroke": "ખાલી સ્ટ્રોક",
     "header": {
       "title": "કાર્ડ એનિમેશન"
     },
-    "initDelay": "પ્રારંભિક વિલંબ: {{value}}s",
+    "initDelay": "પ્રારંભિક વિલંબ: {{id20001}}s",
     "replay": "રિપ્લે",
     "reset": "રીસેટ કરો",
     "showArrow": "એરો બતાવો",
     "stroke": "સ્ટ્રોક",
-    "strokeWidth": "સ્ટ્રોક પહોળાઈ: {{value}}px"
+    "strokeWidth": "સ્ટ્રોક પહોળાઈ: {{id20003}}px"
   },
   "changeLanguageScreen": {
     "title": "ભાષા બદલો"
@@ -80,7 +80,7 @@
     "finish": "સમાપ્ત કરો",
     "next": "આગળ",
     "noInternet": "ઇન્ટરનેટ કનેક્શન નથી",
-    "ok": "બરાબર",
+    "ok": "ઠીક છે",
     "value": "મૂલ્ય"
   },
   "generalSetting": {
@@ -95,7 +95,7 @@
       "header": "અન્ય",
       "row1": {
         "dialogSubTitle": "શું તમે ખરેખર એપ્લિકેશનની પ્રગતિ સાફ કરવા માંગો છો?",
-        "dialogTitle": "ઍપની પ્રગતિ સાફ કરીએ?",
+        "dialogTitle": "એપ્લિકેશનની પ્રગતિ સાફ કરીએ?",
         "subTitle": "બધી પ્રગતિ સાફ કરો",
         "title": "સ્પષ્ટ પ્રગતિ"
       }
@@ -135,8 +135,8 @@
       "itemSubTitle2": "34 વ્યંજન, 5 વિભાગો",
       "itemSubTitle3": "420 વ્યંજન, 5 વિભાગો",
       "itemTitle1": "નો પરિચય\n\nસ્વર(સ્વરા)",
-      "itemTitle2": "નો પરિચય\n\nવ્યંજનો (વ્યાંજના)",
-      "itemTitle3": "બારખાડીનો પરિચય \n\n(વ્યંજનો"
+      "itemTitle2": "નો પરિચય\n\nવ્યંજનો(વ્યાંજના)",
+      "itemTitle3": "બારખાડીનો પરિચય \n\n(વ્યંજન"
     },
     "listItemsSection3": {
       "itemSubTitle1": "101 નંબરો, 5 વિભાગો",
@@ -146,14 +146,10 @@
   "learnBySelectedChar": {
     "header": {
       "title": "અક્ષરો પસંદ કરો"
-    },
-    "section": "ઓછામાં ઓછું એક અક્ષર પસંદ કરો.",
-    "selectAll": "બધા પસંદ કરો",
-    "unselectAll": "બધાને નાપસંદ કરો"
+    }
   },
   "learnCharInfoScreen": {
     "character": "પાત્ર",
-    "complexity": "જટિલતા",
     "diacritic": "ડાયાક્રિટિક",
     "englishCharacter": "અંગ્રેજી પાત્ર",
     "header": {
@@ -168,8 +164,8 @@
   },
   "learnCharsCardScreen": {
     "completeDialog": {
-      "description": "અભિનંદન તમે {{section}} વિભાગ પૂર્ણ કર્યો.",
-      "title": "વિભાગ {{વિભાગ}} પૂર્ણ!"
+      "description": "તમે {{id40002}} વિભાગ પૂર્ણ કર્યો અભિનંદન.",
+      "title": "વિભાગ {{id40001}} પૂર્ણ થયું!"
     },
     "header": {
       "titleBarakhadi": "બારાખડી શીખો (ક્રમ)",
@@ -177,19 +173,17 @@
       "titleNumerals": "સંખ્યાઓ શીખો (ક્રમ)",
       "titleVowels": "સ્વરો શીખો (ક્રમ)"
     },
-    "play": "રમ",
-    "stop": "બંધ",
+    "play": "રમો",
+    "stop": "રોકો",
     "switchRandomAlert": {
       "descRandom": "શું તમે ખરેખર રેન્ડમ મોડ પર સ્વિચ કરવા માંગો છો?",
       "descSeq": "શું તમે ખરેખર ક્રમ મોડ પર સ્વિચ કરવા માંગો છો?",
       "title": "મોડ બદલો"
-    },
-    "switchToRandom": "રેન્ડમ ઓર્ડર પર સ્વિચ કરો",
-    "switchToSequence": "ક્રમ ક્રમ પર સ્વિચ કરો"
+    }
   },
   "learnCharsChartScreen": {
     "header": {
-      "barakhadi": "બારાખાડી: {{en}}/{{gu}}",
+      "barakhadi": "બારાખડી: {{id30001}}/{{id30002}}",
       "consonants": "વ્યંજન",
       "numerals": "અંકો",
       "titleBarakhadi": "બારાખાડી ચાર્ટ",
@@ -211,23 +205,18 @@
     "listItemsSection1": {
       "itemSubTitle1": "10 કલાક, 19 પાઠ",
       "itemSubTitle2": "10 કલાક, 19 પાઠ",
-      "itemSubTitle3": "10 કલાક, 19 પાઠ",
       "itemSubTitle4": "10 કલાક, 19 પાઠ",
       "itemTitle1": "અક્ષરો ચાર્ટ",
       "itemTitle2": "ક્રમમાં શીખો",
-      "itemTitle3": "રેન્ડમ ઓર્ડર દ્વારા યાદ રાખો",
       "itemTitle4": "પસંદ કરેલા પાત્રો દ્વારા શીખો",
       "itemTitleNum1": "નંબર્સ ચાર્ટ",
       "itemTitleNum4": "પસંદ કરેલા નંબરો દ્વારા શીખો"
     },
     "listItemsSection2": {
       "itemSubTitle1": "10 કલાક, 19 પાઠ",
-      "itemSubTitle2": "10 કલાક, 19 પાઠ",
       "itemSubTitle3": "10 કલાક, 19 પાઠ",
       "itemTitle1": "ઓર્ડર દ્વારા પ્રેક્ટિસ",
-      "itemTitle2": "રેન્ડમ ઓર્ડર દ્વારા પ્રેક્ટિસ",
-      "itemTitle3": "પસંદ કરેલા પાત્રો દ્વારા પ્રેક્ટિસ કરો",
-      "itemTitleNum3": "પસંદ કરેલી સંખ્યાઓ દ્વારા પ્રેક્ટિસ કરો"
+      "itemTitle3": "પસંદ કરેલા પાત્રો દ્વારા પ્રેક્ટિસ કરો"
     }
   },
   "learnIntroScreen": {
@@ -260,7 +249,7 @@
     "generalSubTitle": "એપ્લિકેશનની કાર્યાત્મક સેટિંગ્સ",
     "generalTitle": "જનરલ",
     "infoHeader": "માહિતી",
-    "languageSubTitle": "{{ભાષા}}",
+    "languageSubTitle": "{{id10001}}",
     "languageTitle": "એપ્લિકેશન ભાષા",
     "librariesSubTitle": "આ પ્રોજેક્ટમાં ઉપયોગમાં લેવાતી ઓપન સોર્સ લાઇબ્રેરીઓની યાદી",
     "librariesTitle": "પુસ્તકાલયો",

@@ -138,7 +138,7 @@ const CardAnimation = ({ navigation }: Props) => {
               <ScrollView showsVerticalScrollIndicator={false} style={styles.scrollView}>
                 <View style={styles.wrapRow}>
                   <View style={[styles.halfWidth, styles.rowMargin]}>
-                    <RowTitle title={t('cardAnimation.initDelay', { value: initialDelay / 1000 })} />
+                    <RowTitle title={t('cardAnimation.initDelay', { id20001: initialDelay / 1000 })} />
                     <Slider
                       style={styles.slider}
                       value={initialDelay}
@@ -152,7 +152,7 @@ const CardAnimation = ({ navigation }: Props) => {
                     />
                   </View>
                   <View style={[styles.halfWidth, styles.rowMargin]}>
-                    <RowTitle title={t('cardAnimation.duration', { value: duration / 1000 })} />
+                    <RowTitle title={t('cardAnimation.duration', { id20002: duration / 1000 })} />
                     <Slider
                       style={styles.slider}
                       value={duration}
@@ -167,7 +167,7 @@ const CardAnimation = ({ navigation }: Props) => {
                   </View>
 
                   <View style={[styles.halfWidth, styles.rowMargin]}>
-                    <RowTitle title={t('cardAnimation.strokeWidth', { value: strokeWidth })} />
+                    <RowTitle title={t('cardAnimation.strokeWidth', { id20003: strokeWidth })} />
                     <Slider
                       style={styles.slider}
                       value={strokeWidth}
@@ -181,7 +181,7 @@ const CardAnimation = ({ navigation }: Props) => {
                     />
                   </View>
                   <View style={[styles.halfWidth, styles.rowMargin]}>
-                    <RowTitle title={t('cardAnimation.arrowFont', { value: arrowFontSize })} />
+                    <RowTitle title={t('cardAnimation.arrowFont', { id20004: arrowFontSize })} />
                     <Slider
                       style={styles.slider}
                       value={arrowFontSize}
