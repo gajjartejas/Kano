@@ -29,13 +29,13 @@ export const ColorRow = React.memo(function ColorRow(props: {
     [onColor],
   );
 
-  const onPressColor = () => {
+  const onPressColor = useCallback(() => {
     setAccentColorDialogVisible(true);
-  };
+  }, []);
 
-  const onDismiss = () => {
+  const onDismiss = useCallback(() => {
     setAccentColorDialogVisible(false);
-  };
+  }, []);
 
   return (
     <View style={style}>

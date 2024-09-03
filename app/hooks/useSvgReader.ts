@@ -4,8 +4,7 @@ import { Platform } from 'react-native';
 //Third Party
 import { DOMParser } from '@xmldom/xmldom';
 import { svgPathProperties } from 'svg-path-properties';
-
-const RNFS = require('react-native-fs');
+import RNFS from 'react-native-fs';
 
 //Interface
 interface IParsedSVG {

@@ -61,11 +61,27 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     marginHorizontal: 8,
   },
-  buttonsContainer: { alignSelf: 'center' },
-  descriptionText: { fontSize: 16, alignSelf: 'center' },
-  titleText: { alignSelf: 'center' },
-  lottie: { width: 200, height: 200, alignSelf: 'center' },
-  lottie1: { width: 50, height: 50, alignSelf: 'center', marginBottom: 16 },
+  buttonsContainer: {
+    alignSelf: 'center',
+  },
+  descriptionText: {
+    fontSize: 16,
+    alignSelf: 'center',
+  },
+  titleText: {
+    alignSelf: 'center',
+  },
+  lottie: {
+    width: 200,
+    height: 200,
+    alignSelf: 'center',
+  },
+  lottie1: {
+    width: 50,
+    height: 50,
+    alignSelf: 'center',
+    marginBottom: 16,
+  },
   nextButtonStyle: {
     marginBottom: 16,
     marginHorizontal: 20,

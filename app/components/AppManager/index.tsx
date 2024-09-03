@@ -17,6 +17,7 @@ export type Props = {
 const AppManager = ({ children }: Props) => {
   const setIsDarkMode = useThemeConfigStore(store => store.setIsDarkMode);
   const appearance = useThemeConfigStore(store => store.appearance);
+  const isDark = useThemeConfigStore(store => store.isDark);
   const selectedLanguageCode = useAppLangConfigStore(store => store.selectedLanguageCode);
   const setThemeCardAnimationConfig = useCardAnimationConfigStore(store => store.setTheme);
 
@@ -28,12 +29,15 @@ const AppManager = ({ children }: Props) => {
     const onThemeChange = (preferences: AppearancePreferences) => {
       if (appearance === IAppearanceType.Auto) {
         setIsDarkMode(preferences.colorScheme === 'dark');
-        setThemeCardAnimationConfig(preferences.colorScheme === 'dark');
       }
     };
     const listener = Appearance.addChangeListener(onThemeChange);
     return () => listener.remove();
   }, [appearance, setIsDarkMode, setThemeCardAnimationConfig]);
+
+  useEffect(() => {
+    setThemeCardAnimationConfig(isDark);
+  }, [isDark, setThemeCardAnimationConfig]);
 
   return (
     <View style={styles.container}>
