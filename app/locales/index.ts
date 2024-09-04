@@ -19,7 +19,7 @@ const resources = {
   en: {
     translation: require('./en.json'),
   },
-  ru: {
+  gu: {
     translation: require('./gu.json'),
   },
 };
