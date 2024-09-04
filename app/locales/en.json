@@ -110,10 +110,14 @@
   },
   "learnCharsCardScreen": {
     "header": {
-      "titleVowels": "Learn Vowels (Sequence)",
-      "titleConsonants": "Learn Consonants (Sequence)",
-      "titleBarakhadi": "Learn Barakhadi (Sequence)",
-      "titleNumerals": "Learn Numerals (Sequence)"
+      "titleVowels": "{{id40003}} Vowels ({{id40004}})",
+      "titleConsonants": "{{id40003}} Consonants ({{id40004}})",
+      "titleBarakhadi": "{{id40003}} Barakhadi ({{id40004}})",
+      "titleNumerals": "{{id40003}} Numerals ({{id40004}})",
+      "learn": "Learn",
+      "practice": "Practice",
+      "sequence": "Sequence",
+      "random": "Random"
     },
     "completeDialog": {
       "title": "SECTION {{id40001}} COMPLETED!",

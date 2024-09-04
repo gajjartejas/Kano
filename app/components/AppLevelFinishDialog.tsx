@@ -67,9 +67,11 @@ const styles = StyleSheet.create({
   descriptionText: {
     fontSize: 16,
     alignSelf: 'center',
+    textAlign: 'center',
   },
   titleText: {
     alignSelf: 'center',
+    textAlign: 'center',
   },
   lottie: {
     width: 200,

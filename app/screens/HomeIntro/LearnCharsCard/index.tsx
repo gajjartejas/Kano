@@ -268,23 +268,26 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
   }, [correctAnswerIds.length, practiceLeftCardPerGroup.length, practiceMode, progressIndex, progressSection, t]);
 
   useEffect(() => {
+    const id40003 = isLearningMode ? t('learnCharsCardScreen.header.learn') : t('learnCharsCardScreen.header.practice');
+    const id40004 = isRandomMode ? t('learnCharsCardScreen.header.random') : t('learnCharsCardScreen.header.sequence');
+
     switch (type) {
       case LearnCharsType.Vowel:
-        setTitle(t('learnCharsCardScreen.header.titleVowels'));
+        setTitle(t('learnCharsCardScreen.header.titleVowels', { id40003: id40003, id40004: id40004 }));
         break;
       case LearnCharsType.Constant:
-        setTitle(t('learnCharsCardScreen.header.titleConsonants'));
+        setTitle(t('learnCharsCardScreen.header.titleConsonants', { id40003: id40003, id40004: id40004 }));
         break;
       case LearnCharsType.Barakhadi:
-        setTitle(t('learnCharsCardScreen.header.titleBarakhadi'));
+        setTitle(t('learnCharsCardScreen.header.titleBarakhadi', { id40003: id40003, id40004: id40004 }));
         break;
       case LearnCharsType.Number:
-        setTitle(t('learnCharsCardScreen.header.titleNumerals'));
+        setTitle(t('learnCharsCardScreen.header.titleNumerals', { id40003: id40003, id40004: id40004 }));
         break;
       default:
         break;
     }
-  }, [t, type]);
+  }, [isLearningMode, isRandomMode, t, type]);
 
   const onGoBack = useCallback(() => {
     navigation.pop();
@@ -615,8 +618,8 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
         </Components.AppBaseView>
       </DraxProvider>
       <Components.AppLevelFinishDialog
-        title={t('learnCharsCardScreen.completeDialog.title', { section: progressSection + 1 })}
-        description={t('learnCharsCardScreen.completeDialog.description', { section: progressSection + 1 })}
+        title={t('learnCharsCardScreen.completeDialog.title', { id40001: progressSection + 1 })}
+        description={t('learnCharsCardScreen.completeDialog.description', { id40002: progressSection + 1 })}
         buttonTitle={t('general.continue')}
         visible={finishLevelVisible}
         onPressHideDialog={onPressHideDialog}
