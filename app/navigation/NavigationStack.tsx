@@ -17,6 +17,7 @@ import useToastConfig from 'app/hooks/useToastConfig';
 import { PaperThemeDark, PaperThemeDefault } from 'app/config/app-theme-config';
 import useThemeConfigStore from 'app/store/themeConfig';
 import { useCallback, useRef } from 'react';
+import useAppRating from 'app/hooks/useAppRating';
 
 const homeOptions: Object = {
   title: 'Home',
@@ -29,6 +30,7 @@ const homeOptions: Object = {
 const RootNavigation: React.FC = () => {
   const navigationRef = useNavigationContainerRef();
   const routeNameRef = useRef<any | null>();
+  const { addItemView } = useAppRating();
 
   const isDark = useThemeConfigStore(state => state.isDark);
   const primary = useThemeConfigStore(state => state.primary);
@@ -74,9 +76,10 @@ const RootNavigation: React.FC = () => {
         screen_class: currentRouteName,
         screen_params: currentRouteParams,
       });
+      addItemView();
     }
     routeNameRef.current = currentRouteName;
-  }, [navigationRef]);
+  }, [addItemView, navigationRef]);
 
   return (
     <PaperProvider theme={theme}>
