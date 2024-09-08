@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { View } from 'react-native';
+import { useWindowDimensions, View } from 'react-native';
 
 //ThirdParty
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
@@ -47,6 +47,7 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
 
   //Constants
   const { colors } = useTheme<AppTheme>();
+  const { height } = useWindowDimensions();
   const { t } = useTranslation();
   const { play } = useSoundPlayer();
   const { type, learnMode, onlyInclude, isRandomMode, color } = route.params;
@@ -351,8 +352,19 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
           setIncorrectAnswerIds(newIds);
         }, 500);
       }
+      if (payload !== item.id) {
+        const toastMessage: any = {
+          type: 'error',
+          text1: 'Incorrect',
+          visibilityTime: 4000,
+          position: 'bottom',
+          bottomOffset: height * 0.3,
+        };
+
+        Toast.show(toastMessage);
+      }
     },
-    [correctAnswerIds, incorrectAnswerIds],
+    [correctAnswerIds, height, incorrectAnswerIds],
   );
 
   const onPressNext = useCallback(() => {
