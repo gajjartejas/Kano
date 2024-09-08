@@ -356,7 +356,7 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
         const toastMessage: any = {
           type: 'error',
           text1: 'Incorrect',
-          visibilityTime: 4000,
+          visibilityTime: 2000,
           position: 'bottom',
           bottomOffset: height * 0.3,
         };
