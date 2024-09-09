@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { memo, useCallback } from 'react';
 import { Dimensions, StyleSheet } from 'react-native';
 
 //Third Party
@@ -21,6 +21,20 @@ const AppToast = (props: ToastConfigParams<IAppSuccessToastProps>) => {
   const minHeight = text1 && text2 ? 50 : 40;
   const largeScreenMode = useLargeScreenMode();
 
+  const getIcon: any = useCallback(() => {
+    switch (props.type) {
+      case 'success': {
+        return 'check-circle';
+      }
+      case 'error': {
+        return 'times-circle';
+      }
+      case 'info': {
+        return 'info-circle';
+      }
+    }
+  }, [props.type]);
+
   return (
     <BaseToast
       {...rest}
@@ -33,7 +47,7 @@ const AppToast = (props: ToastConfigParams<IAppSuccessToastProps>) => {
         },
         largeScreenMode && { width: Dimensions.get('window').width * 0.7 },
       ]}
-      renderLeadingIcon={() => <Icon type={'font-awesome'} name={'info-circle'} color={colors.white} size={18} />}
+      renderLeadingIcon={() => <Icon type={'font-awesome'} name={getIcon()} color={colors.white} size={18} />}
       contentContainerStyle={styles.contentContainerStyle}
       text1Style={[styles.text1Style, { color: colors.white }]}
       text2Style={[styles.text2Style, { color: colors.white }]}
@@ -55,7 +69,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 0,
   },
   text1Style: {
-    fontSize: 13,
+    fontSize: 14,
     fontWeight: '600',
     marginHorizontal: 8,
   },

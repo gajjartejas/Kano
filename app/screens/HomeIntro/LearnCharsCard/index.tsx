@@ -11,6 +11,7 @@ import Icon from 'react-native-easy-icon';
 import Toast from 'react-native-toast-message';
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import IdleTimerManager from 'react-native-idle-timer';
+import crashlytics from '@react-native-firebase/crashlytics';
 
 //App modules
 import styles from './styles';
@@ -115,6 +116,30 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
   const [finishButtonTitle, setFinishButtonTitle] = useState('');
   const [finishButtonDisabled, setFinishButtonDisabled] = useState(false);
   const [finishLevelVisible, setFinishLevelVisible] = React.useState(false);
+
+  useEffect(() => {
+    crashlytics().setAttributes({
+      autoSwiping: autoSwiping.toString(),
+      practiceMode: practiceMode.toString(),
+      progressSection: progressSection.toString(),
+      progressIndex: progressIndex.toString(),
+      type: route.params.type.toString(),
+      learnMode: route.params.learnMode,
+      isRandomMode: route.params.isRandomMode.toString(),
+      onlyInclude: route.params.onlyInclude ? route.params.onlyInclude?.toString() : '',
+      color: route.params.color,
+    });
+  }, [
+    autoSwiping,
+    practiceMode,
+    progressIndex,
+    progressSection,
+    route.params.color,
+    route.params.isRandomMode,
+    route.params.learnMode,
+    route.params.onlyInclude,
+    route.params.type,
+  ]);
 
   useEffect(() => {
     IdleTimerManager.setIdleTimerDisabled(autoSwiping);
@@ -357,7 +382,7 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
           type: 'error',
           text1: 'Incorrect',
           visibilityTime: 2000,
-          position: 'bottom',
+          position: 'top',
           bottomOffset: height * 0.3,
         };
 
