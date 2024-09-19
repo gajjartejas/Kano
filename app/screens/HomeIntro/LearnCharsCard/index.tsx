@@ -29,6 +29,7 @@ import useHintConfig from 'app/hooks/useHintConfig';
 import useCardStatics from 'app/realm/crud/cardStatics';
 import useSoundPlayer from 'app/hooks/useAudioPlayer';
 import useCardAnimationConfigStore from 'app/store/cardAnimationConfig';
+import { useIsFocused } from '@react-navigation/native';
 
 //Params
 type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'LearnCharsCard'>;
@@ -58,6 +59,7 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
   const { addCardStatics } = useCardStatics();
   const insets = useSafeAreaInsets();
   const largeScreenMode = useLargeScreenMode();
+  const isFocused = useIsFocused();
   const [
     initialDelay,
     duration,
@@ -140,6 +142,12 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
     route.params.onlyInclude,
     route.params.type,
   ]);
+
+  useEffect(() => {
+    if (!isFocused && autoSwiping) {
+      setAutoSwiping(false);
+    }
+  }, [autoSwiping, isFocused]);
 
   useEffect(() => {
     IdleTimerManager.setIdleTimerDisabled(autoSwiping);
