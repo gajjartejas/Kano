@@ -143,19 +143,17 @@ const MoreTab = () => {
 
   const onPressGithub = useCallback(async () => {
     await Utils.openInAppBrowser(Config.Constants.ABOUT_NEW_GITHUB_ISSUE);
+    setTimeout(() => {
+      setVisible(false);
+    }, 200);
   }, []);
 
-  const onPressEmail = useCallback(async () => {
-    const email = Config.Constants.ABOUT_SUPPORT_EMAIL;
-    const subject = `${t('general.appname')} feedback`;
-    const osType = Platform.OS;
-    const systemVersion = DeviceInfo.getSystemVersion();
-    const brand = DeviceInfo.getBrand();
-    const model = DeviceInfo.getModel();
-    const readableVersion = DeviceInfo.getReadableVersion();
-    const body = `OS: ${osType} (${systemVersion})\nBrand: ${brand} (${model})\nApp Version: ${readableVersion}`;
-    await Utils.openBrowser(`mailto:${email}?subject=${subject}&body=${body}`);
-  }, [t]);
+  const onPressGithubDiscussion = useCallback(async () => {
+    await Utils.openInAppBrowser(Config.Constants.ABOUT_GITHUB_DISCUSSION);
+    setTimeout(() => {
+      setVisible(false);
+    }, 200);
+  }, []);
 
   return (
     <Components.AppBaseView
@@ -202,7 +200,7 @@ const MoreTab = () => {
       <Components.AboutFeedbackDialog
         visible={visible}
         onPressGithub={onPressGithub}
-        onPressEmail={onPressEmail}
+        onPressGithubDiscussion={onPressGithubDiscussion}
         onPressHideDialog={onPressHideDialog}
       />
     </Components.AppBaseView>
