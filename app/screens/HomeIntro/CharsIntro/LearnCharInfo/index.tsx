@@ -39,6 +39,14 @@ const LearnCharInfo = ({ navigation, route }: Props) => {
   const [currentIndex, setCurrentIndex] = useState(initialScrollIndex);
 
   useEffect(() => {
+    if (
+      !groupedEntries[sectionIndex] ||
+      !groupedEntries[sectionIndex].data ||
+      !groupedEntries[sectionIndex].data[currentIndex]
+    ) {
+      return;
+    }
+
     addChartStatics({
       charId: groupedEntries[sectionIndex].data[currentIndex].id,
       createdDate: new Date(),
