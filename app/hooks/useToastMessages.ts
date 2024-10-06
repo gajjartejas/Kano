@@ -6,6 +6,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 //App Modules
 import { IHintConfig } from 'app/hooks/useHintConfig';
+import crashlytics from '@react-native-firebase/crashlytics';
 
 interface ToastMessage {
   type: 'info' | 'success' | 'warning' | 'error';
@@ -48,7 +49,8 @@ const useToastMessages = (hintConfig: IHintConfig): null => {
         }, visibilityTime * index + (index + 1) * delay);
         timersRef.current.push(timer);
       });
-    }).catch(error => {
+    }).catch((error: any) => {
+      crashlytics().recordError(error, 'useToastMessages.ts->readSvg');
       console.log('error', error);
     });
 
