@@ -154,47 +154,51 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
     return () => IdleTimerManager.setIdleTimerDisabled(false);
   }, [autoSwiping]);
 
+  const onAutoSwipe = useCallback(() => {
+    if (refProgressIndex.current >= refGroupedEntries.current[progressSection].data.length - 1) {
+      Toast.show({
+        text1: t('learnCharsCardScreen.completeDialog.title', { id40001: progressSection + 1 }),
+        text2: t('learnCharsCardScreen.completeDialog.description', { id40002: progressSection + 1 }),
+        position: 'bottom',
+      });
+      if (progressSection >= refGroupedEntries.current.length - 1) {
+        setFinishLevelVisible(true);
+        refAutoSwipeTimer.current && clearInterval(refAutoSwipeTimer.current);
+        refAutoSwipeTimer.current = null;
+        return;
+      }
+
+      //Go to next level
+      refProgressIndex.current = 0;
+      setIncorrectAnswerIds([]);
+      setCorrectAnswerIds([]);
+      setPracticeMode(false);
+      setProgressSection(progressSection + 1);
+      setProgressIndex(0);
+      return;
+    }
+
+    //Increase progress index
+    refProgressIndex.current = refProgressIndex.current + 1;
+    setProgressIndex(refProgressIndex.current);
+  }, [progressSection, t]);
+
   useEffect(() => {
     if (!autoSwiping) {
       return;
     }
-    if (refAutoSwipeTimer.current === null) {
-      //Increase progress index
-      refProgressIndex.current = refProgressIndex.current + 1;
-      setProgressIndex(refProgressIndex.current);
-    }
+
+    onAutoSwipe();
 
     refAutoSwipeTimer.current = setInterval(() => {
-      //Increase progress index
-      refProgressIndex.current = refProgressIndex.current + 1;
-      setProgressIndex(refProgressIndex.current);
-
-      if (refProgressIndex.current === refGroupedEntries.current[progressSection].data.length) {
-        Toast.show({
-          text1: t('learnCharsCardScreen.completeDialog.title', { id40001: progressSection + 1 }),
-          text2: t('learnCharsCardScreen.completeDialog.description', { id40002: progressSection + 1 }),
-          position: 'bottom',
-        });
-        if (progressSection === refGroupedEntries.current.length - 1) {
-          navigation.pop();
-        }
-
-        //Go to next level
-        refProgressIndex.current = 0;
-        setIncorrectAnswerIds([]);
-        setCorrectAnswerIds([]);
-        setPracticeMode(false);
-        setProgressSection(progressSection + 1);
-        setProgressIndex(0);
-        return;
-      }
+      onAutoSwipe();
     }, cardAutoSwipeDuration);
 
     return () => {
       refAutoSwipeTimer.current && clearInterval(refAutoSwipeTimer.current);
       refAutoSwipeTimer.current = null;
     };
-  }, [autoSwiping, cardAutoSwipeDuration, navigation, progressSection, t]);
+  }, [autoSwiping, cardAutoSwipeDuration, navigation, progressSection, t, onAutoSwipe]);
 
   useEffect(() => {
     if (refGroupedEntries.current.length > 0) {

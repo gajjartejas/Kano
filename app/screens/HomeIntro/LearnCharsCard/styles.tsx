@@ -61,13 +61,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  card: {
-    position: 'absolute',
+  cardTouchableContainer: {
     backgroundColor: '#ffffff',
     shadowColor: 'black',
     shadowOffset: { width: 0, height: 0 },
     shadowOpacity: 0.1,
     shadowRadius: 4,
+    borderRadius: 8,
+  },
+  card: {
+    position: 'absolute',
     borderRadius: 8,
     alignItems: 'center',
     justifyContent: 'space-between',

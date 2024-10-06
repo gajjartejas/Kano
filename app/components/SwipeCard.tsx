@@ -37,7 +37,10 @@ const SwipeCard = (props: ISwipeCardProps) => {
 
   return (
     <TinderCard onSwipe={props.onSwipe} swipeRequirementType={'position'} swipeThreshold={100} preventSwipe={[]}>
-      <TouchableRipple rippleColor={`${colors.primary}20`} onPress={props.onPress}>
+      <TouchableRipple
+        style={styles.cardTouchableContainer}
+        rippleColor={`${colors.primary}20`}
+        onPress={props.onPress}>
         <View
           style={[
             styles.card,
