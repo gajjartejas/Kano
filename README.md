@@ -17,12 +17,12 @@ Get the app from Google Play [Paid]:
 
 |                                            |                                                 |                                             |                                              |
 |:------------------------------------------:|:-----------------------------------------------:|:-------------------------------------------:|:--------------------------------------------:|
-| ![Home](docs/images/v1.0/screenshot-1.png) | ![Sub Items](docs/images/v1.0/screenshot-2.png) | ![Chart](docs/images/v1.0/screenshot-3.png) | ![Detail](docs/images/v1.0/screenshot-4.png) |
+| ![Home](docs/images/v1.0/home.png) | ![Sub Items](docs/images/v1.0/learn-list.png) | ![Chart](docs/images/v1.0/char-chart.png) | ![Detail](docs/images/v1.0/char-info.png) |
 
 
 |                                                        |                                                             |                                                              |                                                          |
 |:------------------------------------------------------:|:-----------------------------------------------------------:|:------------------------------------------------------------:|:--------------------------------------------------------:|
-| ![Stroke Direction](docs/images/v1.0/screenshot-5.png) | ![Animated Stroke Order](docs/images/v1.0/screenshot-6.png) | ![Swipe Cards with audio](docs/images/v1.0/screenshot-7.png) | ![Learn and Practice](docs/images/v1.0/screenshot-8.png) |
+| ![Stroke Direction](docs/images/v1.0/stroke-order.png) | ![Animated Stroke Order](docs/images/v1.0/animated-drawing.png) | ![Swipe Cards with audio](docs/images/v1.0/char-card.png) | ![Learn and Practice](docs/images/v1.0/practice.png) |
 
 The application supports Android 5.0 (API 21+) and above.
 

@@ -1,47 +1,47 @@
 {
-    "@gorhom/bottom-sheet@4.4.7": {
-        "licenses": "MIT",
-        "repository": "https://github.com/gorhom/react-native-bottom-sheet",
-        "licenseUrl": "https://github.com/gorhom/react-native-bottom-sheet/raw/master/LICENSE",
-        "parents": "Kano"
-    },
-    "@react-native-async-storage/async-storage@1.19.0": {
+    "@react-native-async-storage/async-storage@1.24.0": {
         "licenses": "MIT",
         "repository": "https://github.com/react-native-async-storage/async-storage",
         "licenseUrl": "https://github.com/react-native-async-storage/async-storage/raw/master/LICENSE",
         "parents": "Kano"
     },
-    "@react-native-firebase/analytics@18.1.0": {
+    "@react-native-community/slider@4.5.2": {
+        "licenses": "MIT",
+        "repository": "https://github.com/callstack/react-native-slider",
+        "licenseUrl": "https://github.com/callstack/react-native-slider",
+        "parents": "Kano"
+    },
+    "@react-native-firebase/analytics@20.4.0": {
         "licenses": "Apache-2.0",
         "repository": "https://github.com/invertase/react-native-firebase/tree/main/packages/analytics",
         "licenseUrl": "https://github.com/invertase/react-native-firebase/tree/main/packages/analytics/raw/master/LICENSE",
         "parents": "Kano"
     },
-    "@react-native-firebase/app@18.1.0": {
+    "@react-native-firebase/app@20.4.0": {
         "licenses": "Apache-2.0",
         "repository": "https://github.com/invertase/react-native-firebase/tree/main/packages/app",
         "licenseUrl": "https://github.com/invertase/react-native-firebase/tree/main/packages/app/raw/master/LICENSE",
         "parents": "Kano"
     },
-    "@react-native-firebase/crashlytics@18.1.0": {
+    "@react-native-firebase/crashlytics@20.4.0": {
         "licenses": "Apache-2.0",
         "repository": "https://github.com/invertase/react-native-firebase/tree/main/packages/crashlytics",
         "licenseUrl": "https://github.com/invertase/react-native-firebase/tree/main/packages/crashlytics/raw/master/LICENSE",
         "parents": "Kano"
     },
-    "@react-navigation/material-bottom-tabs@6.2.16": {
+    "@react-navigation/material-bottom-tabs@6.2.29": {
         "licenses": "MIT",
         "repository": "https://github.com/react-navigation/react-navigation",
         "licenseUrl": "https://github.com/react-navigation/react-navigation/raw/master/LICENSE",
         "parents": "Kano"
     },
-    "@react-navigation/native-stack@6.9.13": {
+    "@react-navigation/native-stack@6.11.0": {
         "licenses": "MIT",
         "repository": "https://github.com/react-navigation/react-navigation",
         "licenseUrl": "https://github.com/react-navigation/react-navigation/raw/master/LICENSE",
         "parents": "Kano"
     },
-    "@react-navigation/native@6.1.7": {
+    "@react-navigation/native@6.1.18": {
         "licenses": "MIT",
         "repository": "https://github.com/react-navigation/react-navigation",
         "licenseUrl": "https://github.com/react-navigation/react-navigation/raw/master/LICENSE",
@@ -53,43 +53,43 @@
         "licenseUrl": "https://github.com/pmndrs/react-spring/raw/master/LICENSE",
         "parents": "Kano"
     },
-    "@shopify/flash-list@1.4.3": {
+    "@realm/react@0.10.0": {
+        "licenses": "Apache-2.0",
+        "repository": "https://github.com/realm/realm-js",
+        "licenseUrl": "https://github.com/realm/realm-js",
+        "parents": "Kano"
+    },
+    "@shopify/flash-list@1.7.1": {
         "licenses": "MIT",
         "repository": "https://github.com/Shopify/flash-list",
         "licenseUrl": "https://github.com/Shopify/flash-list/raw/master/LICENSE.md",
         "parents": "Kano"
     },
-    "@xmldom/xmldom@0.8.8": {
+    "@xmldom/xmldom@0.8.10": {
         "licenses": "MIT",
         "repository": "https://github.com/xmldom/xmldom",
         "licenseUrl": "https://github.com/xmldom/xmldom/raw/master/LICENSE",
         "parents": "Kano"
     },
-    "i18next@23.2.8": {
+    "i18next@23.14.0": {
         "licenses": "MIT",
         "repository": "https://github.com/i18next/i18next",
         "licenseUrl": "https://github.com/i18next/i18next/raw/master/LICENSE",
         "parents": "Kano"
     },
-    "lottie-react-native@5.1.6": {
+    "lottie-react-native@6.7.2": {
         "licenses": "Apache-2.0",
         "repository": "https://github.com/react-native-community/lottie-react-native",
-        "licenseUrl": "https://github.com/react-native-community/lottie-react-native/raw/master/LICENSE",
+        "licenseUrl": "https://github.com/react-native-community/lottie-react-native",
         "parents": "Kano"
     },
-    "react-i18next@13.0.1": {
+    "react-i18next@15.0.1": {
         "licenses": "MIT",
         "repository": "https://github.com/i18next/react-i18next",
         "licenseUrl": "https://github.com/i18next/react-i18next/raw/master/LICENSE",
         "parents": "Kano"
     },
-    "react-native-bootsplash@4.7.5": {
-        "licenses": "MIT",
-        "repository": "https://github.com/zoontek/react-native-bootsplash",
-        "licenseUrl": "https://github.com/zoontek/react-native-bootsplash/raw/master/LICENSE",
-        "parents": "Kano"
-    },
-    "react-native-device-info@10.7.0": {
+    "react-native-device-info@11.1.0": {
         "licenses": "MIT",
         "repository": "https://github.com/react-native-device-info/react-native-device-info",
         "licenseUrl": "https://github.com/react-native-device-info/react-native-device-info/raw/master/LICENSE",
@@ -113,10 +113,22 @@
         "licenseUrl": "https://github.com/itinance/react-native-fs/raw/master/LICENSE",
         "parents": "Kano"
     },
-    "react-native-gesture-handler@2.12.0": {
+    "react-native-gesture-handler@2.18.1": {
         "licenses": "MIT",
         "repository": "https://github.com/software-mansion/react-native-gesture-handler",
         "licenseUrl": "https://github.com/software-mansion/react-native-gesture-handler/raw/master/LICENSE",
+        "parents": "Kano"
+    },
+    "react-native-get-random-values@1.11.0": {
+        "licenses": "MIT",
+        "repository": "https://github.com/LinusU/react-native-get-random-values",
+        "licenseUrl": "https://github.com/LinusU/react-native-get-random-values/raw/master/LICENSE",
+        "parents": "Kano"
+    },
+    "react-native-idle-timer@2.2.3": {
+        "licenses": "MIT",
+        "repository": "https://github.com/marcshilling/react-native-idle-timer",
+        "licenseUrl": "https://github.com/marcshilling/react-native-idle-timer/raw/master/LICENSE.md",
         "parents": "Kano"
     },
     "react-native-in-app-review@4.3.3": {
@@ -131,31 +143,43 @@
         "licenseUrl": "https://github.com/proyecto26/react-native-inappbrowser/raw/master/LICENSE",
         "parents": "Kano"
     },
-    "react-native-localize@3.0.2": {
+    "react-native-localize@3.2.1": {
         "licenses": "MIT",
         "repository": "https://github.com/zoontek/react-native-localize",
         "licenseUrl": "https://github.com/zoontek/react-native-localize/raw/master/LICENSE",
         "parents": "Kano"
     },
-    "react-native-paper@5.9.1": {
+    "react-native-marked@6.0.4": {
+        "licenses": "MIT",
+        "repository": "https://github.com/gmsgowtham/react-native-marked",
+        "licenseUrl": "https://github.com/gmsgowtham/react-native-marked/raw/master/LICENSE",
+        "parents": "Kano"
+    },
+    "react-native-mmkv@2.12.2": {
+        "licenses": "(MIT AND BSD-3-Clause)",
+        "repository": "https://github.com/mrousavy/react-native-mmkv",
+        "licenseUrl": "https://github.com/mrousavy/react-native-mmkv/raw/master/LICENSE",
+        "parents": "Kano"
+    },
+    "react-native-paper@5.12.5": {
         "licenses": "MIT",
         "repository": "https://github.com/callstack/react-native-paper",
         "licenseUrl": "https://github.com/callstack/react-native-paper/raw/master/LICENSE.md",
         "parents": "Kano"
     },
-    "react-native-reanimated@3.3.0": {
+    "react-native-reanimated@3.15.0": {
         "licenses": "MIT",
         "repository": "https://github.com/software-mansion/react-native-reanimated",
         "licenseUrl": "https://github.com/software-mansion/react-native-reanimated/raw/master/LICENSE",
         "parents": "Kano"
     },
-    "react-native-safe-area-context@4.6.4": {
+    "react-native-safe-area-context@4.10.9": {
         "licenses": "MIT",
         "repository": "https://github.com/th3rdwave/react-native-safe-area-context",
         "licenseUrl": "https://github.com/th3rdwave/react-native-safe-area-context/raw/master/LICENSE",
         "parents": "Kano"
     },
-    "react-native-screens@3.22.1": {
+    "react-native-screens@3.34.0": {
         "licenses": "MIT",
         "repository": "https://github.com/software-mansion/react-native-screens",
         "licenseUrl": "https://github.com/software-mansion/react-native-screens/raw/master/LICENSE",
@@ -167,31 +191,37 @@
         "licenseUrl": "https://github.com/zmxv/react-native-sound/raw/master/LICENSE",
         "parents": "Kano"
     },
-    "react-native-svg@13.10.0": {
+    "react-native-svg@15.6.0": {
         "licenses": "MIT",
         "repository": "https://github.com/react-native-community/react-native-svg",
         "licenseUrl": "https://github.com/react-native-community/react-native-svg/raw/master/LICENSE",
         "parents": "Kano"
     },
-    "react-native-vector-icons@9.2.0": {
+    "react-native-toast-message@2.2.0": {
+        "licenses": "MIT",
+        "repository": "https://github.com/calintamas/react-native-toast-message",
+        "licenseUrl": "https://github.com/calintamas/react-native-toast-message/raw/master/LICENSE",
+        "parents": "Kano"
+    },
+    "react-native-vector-icons@10.1.0": {
         "licenses": "MIT",
         "repository": "https://github.com/oblador/react-native-vector-icons",
         "licenseUrl": "https://github.com/oblador/react-native-vector-icons/raw/master/LICENSE",
         "parents": "Kano"
     },
-    "react-native@0.72.1": {
+    "react-native@0.74.3": {
         "licenses": "MIT",
-        "repository": "github:facebook/react-native",
-        "licenseUrl": "github:facebook/react-native",
+        "repository": "https://github.com/facebook/react-native",
+        "licenseUrl": "https://github.com/facebook/react-native/raw/master/LICENSE",
         "parents": "Kano"
     },
-    "react-redux@8.1.1": {
+    "react-singleton-hook@4.0.1": {
         "licenses": "MIT",
-        "repository": "github:reduxjs/react-redux",
-        "licenseUrl": "github:reduxjs/react-redux",
+        "repository": "github:Light-Keeper/react-singleton-hook",
+        "licenseUrl": "github:Light-Keeper/react-singleton-hook",
         "parents": "Kano"
     },
-    "react-tinder-card@1.6.2": {
+    "react-tinder-card@1.6.4": {
         "licenses": "MIT",
         "repository": "https://github.com/3DJakob/react-tinder-card",
         "licenseUrl": "https://github.com/3DJakob/react-tinder-card/raw/master/LICENSE",
@@ -203,28 +233,22 @@
         "licenseUrl": "https://github.com/facebook/react/raw/master/LICENSE",
         "parents": "Kano"
     },
-    "redux-persist@6.0.0": {
-        "licenses": "MIT",
-        "repository": "https://github.com/rt2zz/redux-persist",
-        "licenseUrl": "https://github.com/rt2zz/redux-persist/raw/master/LICENSE",
+    "realm@12.13.1": {
+        "licenses": "apache-2.0",
+        "repository": "https://github.com/realm/realm-js",
+        "licenseUrl": "https://github.com/realm/realm-js",
         "parents": "Kano"
     },
-    "redux-saga@1.2.3": {
-        "licenses": "MIT",
-        "repository": "https://github.com/redux-saga/redux-saga/tree/main/packages/core",
-        "licenseUrl": "https://github.com/redux-saga/redux-saga/tree/main/packages/core/raw/master/LICENSE",
-        "parents": "Kano"
-    },
-    "redux@4.2.1": {
-        "licenses": "MIT",
-        "repository": "github:reduxjs/redux",
-        "licenseUrl": "github:reduxjs/redux",
-        "parents": "Kano"
-    },
-    "svg-path-properties@1.2.0": {
+    "svg-path-properties@1.3.0": {
         "licenses": "ISC",
         "repository": "https://github.com/rveciana/svg-path-properties",
         "licenseUrl": "https://github.com/rveciana/svg-path-properties/raw/master/LICENSE",
+        "parents": "Kano"
+    },
+    "zustand@4.5.5": {
+        "licenses": "MIT",
+        "repository": "https://github.com/pmndrs/zustand",
+        "licenseUrl": "https://github.com/pmndrs/zustand/raw/master/LICENSE",
         "parents": "Kano"
     }
 }

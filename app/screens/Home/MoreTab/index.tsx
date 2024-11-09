@@ -21,6 +21,7 @@ import styles from './styles';
 import { HomeTabsNavigatorParams, LoggedInTabNavigatorParams } from 'app/navigation/types';
 import { AppTheme } from 'app/models/theme';
 import useLargeScreenMode from 'app/hooks/useLargeScreenMode';
+import getSystemInfo from 'app/utils/getSystemInfo';
 
 //Interfaces
 interface IMoreItem {
@@ -142,14 +143,18 @@ const MoreTab = () => {
   );
 
   const onPressGithub = useCallback(async () => {
-    await Utils.openInAppBrowser(Config.Constants.ABOUT_NEW_GITHUB_ISSUE);
+    const { title, body } = getSystemInfo();
+    await Utils.openInAppBrowser(`${Config.Constants.ABOUT_NEW_GITHUB_ISSUE}?title=${title}&body=${body}`);
     setTimeout(() => {
       setVisible(false);
     }, 200);
   }, []);
 
   const onPressGithubDiscussion = useCallback(async () => {
-    await Utils.openInAppBrowser(Config.Constants.ABOUT_GITHUB_DISCUSSION);
+    const { title, body } = getSystemInfo();
+    await Utils.openInAppBrowser(
+      `${Config.Constants.ABOUT_GITHUB_DISCUSSION}?category=q-a&title=${title}&body=${body}`,
+    );
     setTimeout(() => {
       setVisible(false);
     }, 200);
