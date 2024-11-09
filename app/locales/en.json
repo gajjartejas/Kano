@@ -177,6 +177,10 @@
       "row1": {
         "title": "Swipe Card",
         "subTitle": "Change card animation & duration"
+      },
+      "row2": {
+        "title": "Gujarati Fonts",
+        "subTitle": "Change Gujarati fonts in the app"
       }
     },
     "section2": {

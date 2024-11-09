@@ -7,7 +7,6 @@ import SelectAccentDialog from './SelectAccentColorDialog';
 import AnimatedStroke from './AnimatedStroke';
 import AnimatedCharacter from './AnimatedCharacter';
 import HomeListItem from './HomeListItem';
-import WaveBackground from './WaveBackground';
 import CircularProgress from './CircularProgress';
 import CharListItem from './CharListItem';
 import CharCellItem from './CharCellItem';
@@ -30,7 +29,6 @@ const Components = {
   AnimatedStroke,
   AnimatedCharacter,
   HomeListItem,
-  WaveBackground,
   CircularProgress,
   CharListItem,
   CharCellItem,
