@@ -51,7 +51,7 @@ The application supports Android 5.0 (API 21+) and above.
 
 ## Building
 
->  Note: `-- Apache License 2.0` you can't Publish any Source code without permission.
+>  Note: You can't Publish any Source code without permission.
 
 ### Basic setup
 
