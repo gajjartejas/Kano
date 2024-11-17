@@ -7,7 +7,7 @@ Learn Gujarati alphabets, numbers, and more...
 
 ## Installation
 
-Get the app from Google Play [Paid]:
+Get the app from Google Play:
 
 <a href="https://play.google.com/store/apps/details?id=com.tejasgajjar.kano">
   <img alt="Android app on Google Play" src="https://developer.android.com/images/brand/en_generic_rgb_wo_60.png" />
@@ -50,6 +50,8 @@ The application supports Android 5.0 (API 21+) and above.
 - Tablet, iPad and Landscape support.
 
 ## Building
+
+>  Note: `-- Apache License 2.0` you can't Publish any Source code without permission.
 
 ### Basic setup
 
