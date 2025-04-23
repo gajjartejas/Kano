@@ -1,4 +1,4 @@
-import React, { memo, useEffect, useRef } from 'react';
+import React, { memo, useEffect, useMemo, useRef } from 'react';
 
 //ThirdParty
 import Animated, {
@@ -27,40 +27,39 @@ export const AnimatedStrokeEasing = Easing;
 export type AnimatedStrokeEasingFunction = EasingFunction;
 
 const AnimatedStroke = (props: AnimatedStrokeProps) => {
-  let { delay, duration, length, easing } = props;
+  let { delay, duration, length, easing, onFinish } = props;
   const ref = useRef<any>(null);
   const progress = useSharedValue(0);
-  const easingFn = easing === undefined ? AnimatedStrokeEasing.linear : easing;
+  const easingFn = useMemo(() => easing ?? AnimatedStrokeEasing.linear, [easing]);
 
   useEffect(() => {
     if (!length || delay === null || duration === null) {
       return;
     }
+
     progress.value = withDelay(
       delay,
-      withTiming(
-        1,
-        {
-          duration: duration,
-          easing: easingFn,
-        },
-        finished => {
-          if (finished) {
-            runOnJS(props.onFinish)();
-          }
-        },
-      ),
+      withTiming(1, { duration, easing: easingFn }, finished => {
+        if (finished) {
+          runOnJS(onFinish)();
+        }
+      }),
     );
 
-    // Cleanup function
     return () => {
-      progress.value = 0;
+      progress.value = withTiming(0, { duration: 100 });
     };
-  }, [progress, delay, duration, length, props, easingFn]);
+  }, [delay, duration, length, onFinish, easingFn, progress]);
 
-  const animatedProps = useAnimatedProps(() => ({
-    strokeDashoffset: length - length * easingFn(progress.value),
-  }));
+  const animatedProps = useAnimatedProps(() => {
+    'worklet';
+    if (length <= 0) {
+      return { strokeDashoffset: 0 };
+    }
+    return {
+      strokeDashoffset: length - length * easingFn(progress.value),
+    };
+  });
 
   return <AnimatedPath {...props} animatedProps={animatedProps} ref={ref} strokeDasharray={length} />;
 };

@@ -51,6 +51,14 @@ const GeneralSetting = ({ navigation }: Props) => {
             description: t('generalSetting.section1.row1.subTitle'),
             route: 'CardAnimation',
           },
+          {
+            id: 1,
+            iconName: 'format-font',
+            iconType: 'material-community',
+            title: t('generalSetting.section1.row2.title'),
+            description: t('generalSetting.section1.row2.subTitle'),
+            route: 'SelectGujaratiFonts',
+          },
         ],
       },
       {
@@ -80,6 +88,9 @@ const GeneralSetting = ({ navigation }: Props) => {
       switch (true) {
         case index === 0 && subIndex === 0:
           navigation.navigate('SwipeCardSetting', {});
+          break;
+        case index === 0 && subIndex === 1:
+          navigation.navigate('SelectGujaratiFonts', {});
           break;
         case index === 1 && subIndex === 0:
           setClearProgressAlertVisible(true);
@@ -118,8 +129,9 @@ const GeneralSetting = ({ navigation }: Props) => {
                   return (
                     <List.Item
                       key={subItem.id.toString()}
+                      style={styles.itemContainer}
                       titleStyle={{ color: colors.onSurface }}
-                      descriptionStyle={{ color: `${colors.onSurface}88` }}
+                      descriptionStyle={[{ color: `${colors.onSurface}88` }, styles.topMargin]}
                       onPress={() => onPressAppearanceOption(item, index, subItem, subIndex)}
                       title={subItem.title}
                       description={subItem.description}

@@ -170,8 +170,9 @@ const About = ({ navigation }: Props) => {
                   return (
                     <View key={subItem.id.toString()}>
                       <List.Item
-                        titleStyle={{ color: colors.onSurface,  }}
-                        descriptionStyle={{ color: `${colors.onSurface}88` }}
+                        style={styles.itemContainer}
+                        titleStyle={{ color: colors.onSurface }}
+                        descriptionStyle={[{ color: `${colors.onSurface}88` }, styles.topMargin]}
                         titleNumberOfLines={0}
                         onPress={() => onPressAboutOption(item, index, subItem, subIndex)}
                         title={subItem.title}

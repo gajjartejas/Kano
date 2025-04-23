@@ -12,14 +12,23 @@ const styles = StyleSheet.create({
   subView: {
     marginHorizontal: 32,
   },
-  listSubHeader: { marginLeft: 48 },
-  listItemIcon: { alignSelf: 'center', marginHorizontal: 12 },
+  listSubHeader: {},
+  itemContainer: {
+    paddingHorizontal: 16,
+  },
+  listItemIcon: {
+    alignSelf: 'center',
+    marginHorizontal: 12,
+  },
   cardTablet: {
     width: '70%',
     alignSelf: 'center',
   },
   listContainer: {
     paddingBottom: 8,
+  },
+  topMargin: {
+    marginTop: 6,
   },
 });
 

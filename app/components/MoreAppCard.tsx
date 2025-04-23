@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 import { StyleSheet, View, ViewStyle, Image } from 'react-native';
 
 //ThirdParty
-import { IconButton, Text, useTheme } from 'react-native-paper';
+import { IconButton, Text, TouchableRipple, useTheme } from 'react-native-paper';
 
 //App Modules
 import { AppTheme } from 'app/models/theme';
@@ -23,18 +23,22 @@ function MoreAppCard(props: IMoreAppCard) {
   const { colors } = useTheme<AppTheme>();
 
   return (
-    <View
+    <TouchableRipple
+      onPress={props.onPressPlayStore}
       style={[styles.container, { backgroundColor: `${colors.card}`, shadowColor: `${colors.shadow}` }, props.style]}>
-      <Image source={props.icon} style={styles.icon} />
-      <Text style={[styles.titleText, { color: colors.onSurface }]}>{props.title}</Text>
-      <Text style={[styles.descriptionText, { color: colors.onSurface }]}>{props.description}</Text>
-      {props.showLinks && (
-        <View style={styles.buttonContainer}>
-          <IconButton icon={'github'} style={styles.githubButton} onPress={props.onPressGithub} />
-          <IconButton icon={'android'} style={styles.playstoreButton} onPress={props.onPressPlayStore} />
+      <View>
+        <View style={styles.titleImageTextContainer}>
+          <Image source={props.icon} style={styles.icon} />
+          <Text style={[styles.titleText, { color: colors.onSurface }]}>{props.title}</Text>
+          {props.showLinks && (
+            <View style={styles.buttonContainer}>
+              <IconButton icon={'github'} style={styles.githubButton} onPress={props.onPressGithub} />
+            </View>
+          )}
         </View>
-      )}
-    </View>
+        <Text style={[styles.descriptionText, { color: colors.onSurface }]}>{props.description}</Text>
+      </View>
+    </TouchableRipple>
   );
 }
 
@@ -50,6 +54,11 @@ const styles = StyleSheet.create({
     elevation: 8,
     shadowOpacity: 0.2,
   },
+  titleImageTextContainer: {
+    flexDirection: 'row',
+    flex: 1,
+    alignItems: 'center',
+  },
   icon: {
     alignSelf: 'center',
     width: 80,
@@ -57,24 +66,17 @@ const styles = StyleSheet.create({
     borderRadius: 40,
   },
   titleText: {
-    alignSelf: 'center',
-    textAlign: 'center',
-    marginTop: 12,
-    fontWeight: 'bold',
-    fontSize: 16,
+    fontWeight: '600',
+    fontSize: 18,
     marginHorizontal: 16,
+    flex: 1,
   },
   descriptionText: {
-    alignSelf: 'center',
-    textAlign: 'center',
     marginTop: 12,
     fontSize: 14,
-    marginHorizontal: 16,
   },
   buttonContainer: {
     flexDirection: 'row',
-    alignSelf: 'center',
-    marginTop: 12,
   },
   githubButton: {
     alignSelf: 'center',

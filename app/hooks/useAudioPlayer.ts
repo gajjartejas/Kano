@@ -16,6 +16,8 @@ export const useSoundPlayer = (): ISoundPlayerProps => {
 
   useEffect(() => {
     Sound.setCategory('Playback');
+    Sound.setMode('SpokenAudio');
+
     return () => {
       soundRef.current?.release();
     };
