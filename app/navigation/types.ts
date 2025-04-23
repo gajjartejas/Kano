@@ -1,16 +1,9 @@
 import { NavigatorScreenParams } from '@react-navigation/native';
 import { ICharCellListSection } from 'app/components/CharCellItem';
-import { OtherStaticTypes } from 'app/realm/modals/otherStatics';
 
 export interface LoadingParams {}
 export interface DashboardTabParams {}
 export interface HomeTabsParams {}
-export interface GujaratiScriptIntroParams {
-  content: string;
-  title: string;
-  type: OtherStaticTypes;
-  color: string;
-}
 export interface GeneralSettingParams {}
 export interface SwipeCardSettingParams {}
 export interface MoreAppsParams {}
@@ -69,6 +62,8 @@ export interface LearnBySelectedCharParams {
 
 export interface CardAnimationParams {}
 
+export interface SelectGujaratiFontsParams {}
+
 export enum LearnCharsMode {
   Learn = 'Learn',
   Practice = 'Practice',
@@ -89,7 +84,6 @@ export type LoggedInTabNavigatorParams = {
   LearnCharInfo: LearnCharInfoParams;
   LearnCharsCard: LearnCharsCardParams;
   LearnBySelectedChar: LearnBySelectedCharParams;
-  GujaratiScriptIntro: GujaratiScriptIntroParams;
   DashboardTab: DashboardTabParams;
   MoreTab: MoreTabParams;
   LearnCharStrokeOrder: LearnCharStrokeOrderParams;
@@ -97,6 +91,7 @@ export type LoggedInTabNavigatorParams = {
   CardAnimation: CardAnimationParams;
   SwipeCardSetting: SwipeCardSettingParams;
   ChangeLanguage: ChangeLanguageParams;
+  SelectGujaratiFonts: SelectGujaratiFontsParams;
 };
 
 export type HomeTabsNavigatorParams = {

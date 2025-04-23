@@ -73,7 +73,7 @@ const CharCellItem = (props: ICharCellItemProps) => {
             </Text>
             <Text
               numberOfLines={2}
-              style={[styles.subTitleText, { color: `${colors.textTitle}99`, fontSize: subTitleFontSize }]}>
+              style={[styles.subTitleText, { color: `${colors.textTitle}`, fontSize: subTitleFontSize }]}>
               {`${item.en}${item.diacritic ? `/${item.diacritic}` : ''}`}
             </Text>
           </View>
@@ -101,12 +101,13 @@ const styles = StyleSheet.create({
   },
   titleText: {
     fontWeight: '600',
-    fontSize: 30,
+    fontSize: 16,
     fontFamily: Config.Fonts.NotoSansGujarati.Regular,
   },
   subTitleText: {
-    fontWeight: '500',
-    fontSize: 18,
+    fontSize: 13,
+    fontWeight: '400',
+    marginTop: 4,
     fontFamily: Config.Fonts.NotoSansGujarati.Regular,
   },
   iconTextContainer: {

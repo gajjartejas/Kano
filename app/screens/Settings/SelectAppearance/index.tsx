@@ -173,8 +173,9 @@ const SelectAppearance = ({ navigation }: Props) => {
                   return (
                     <List.Item
                       key={subItem.id.toString()}
+                      style={styles.itemContainer}
                       titleStyle={{ color: colors.onSurface }}
-                      descriptionStyle={{ color: `${colors.onSurface}88` }}
+                      descriptionStyle={[{ color: `${colors.onSurface}88` }, styles.topMargin]}
                       onPress={() => onPressAppearanceOption(item, index, subItem, subIndex)}
                       title={subItem.title}
                       description={subItem.description}

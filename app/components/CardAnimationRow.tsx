@@ -1,8 +1,8 @@
-import { Dimensions, StyleSheet, Switch, Text, TextStyle, TouchableOpacity, View, ViewStyle } from 'react-native';
+import { Dimensions, StyleSheet, Text, TextStyle, TouchableOpacity, View, ViewStyle } from 'react-native';
 import React, { useCallback, useState } from 'react';
 
 //ThirdParty
-import { Portal, useTheme } from 'react-native-paper';
+import { Portal, Switch, useTheme } from 'react-native-paper';
 
 //App Modules
 import { SelectAccentDialogColor } from 'app/components/SelectAccentColorDialog';
@@ -19,7 +19,7 @@ export const ColorRow = React.memo(function ColorRow(props: {
 }) {
   const { color, label, onColor, style } = props;
   const [accentColorDialogVisible, setAccentColorDialogVisible] = useState(false);
-  const { colors } = useTheme();
+  const { colors } = useTheme<AppTheme>();
 
   const onPressPrimaryColor = useCallback(
     (item: SelectAccentDialogColor) => {
@@ -115,7 +115,14 @@ export const ArrowRow = React.memo(function ArrowRow(props: {
           />
         )}
         {!!name && (
-          <Text style={[{ color: colors.onSurface, fontWeight: fontWeight }, styles.arrowMiniText]}>{name}</Text>
+          <Text
+            style={[
+              { color: colors.onSurface, fontWeight: fontWeight },
+              styles.arrowMiniText,
+              selected && styles.arrowMiniTextBold,
+            ]}>
+            {name}
+          </Text>
         )}
       </View>
     </TouchableOpacity>
@@ -158,5 +165,11 @@ const styles = StyleSheet.create({
   arrowMiniText: {
     fontSize: 8,
     marginVertical: 4,
+    fontWeight: '400',
+    fontFamily: Config.Fonts.NotoSansGujarati.Medium,
+  },
+  arrowMiniTextBold: {
+    fontWeight: '600',
+    fontFamily: Config.Fonts.NotoSansGujarati.Bold,
   },
 });

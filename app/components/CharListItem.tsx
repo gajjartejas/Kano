@@ -10,6 +10,7 @@ import { IconType } from 'react-native-easy-icon/src/Icon';
 import CircularProgress from './CircularProgress';
 import { AppTheme } from 'app/models/theme';
 import useLargeScreenMode from 'app/hooks/useLargeScreenMode';
+import Config from 'app/config';
 
 //Interface
 export interface ICharListItem {
@@ -65,7 +66,7 @@ const CharListItem = (props: ICharListItemProps) => {
               <Text numberOfLines={2} style={[styles.titleText, { color: colors.white }]}>
                 {item.title}
               </Text>
-              <Text numberOfLines={2} style={[styles.subtitleText, { color: `${colors.white}${colors.opacity}` }]}>
+              <Text numberOfLines={2} style={[styles.subTitleText, { color: `${colors.white}` }]}>
                 {item.subTitle}
               </Text>
             </View>
@@ -73,14 +74,14 @@ const CharListItem = (props: ICharListItemProps) => {
 
           <CircularProgress
             style={[styles.circularProgress]}
-            textColor={colors.text}
-            fill={colors.card}
+            textColor={colors.white}
+            fill={'transparent'}
             textSize={12}
-            pgColor={colors.primary}
-            bgColor={colors.card}
-            size={40}
+            pgColor={colors.white}
+            bgColor={`${colors.card}20`}
+            size={44}
             text={`${Math.round(progress * 1000) / 10}%`}
-            strokeWidth={1}
+            strokeWidth={4}
             progressPercent={progress * 100}
           />
         </View>
@@ -108,13 +109,14 @@ const styles = StyleSheet.create({
   },
   titleText: {
     fontWeight: '600',
-    fontSize: 15,
-    marginTop: 8,
+    fontSize: 16,
+    fontFamily: Config.Fonts.NotoSansGujarati.Regular,
   },
-  subtitleText: {
-    fontSize: 12,
-    fontWeight: '600',
+  subTitleText: {
+    fontSize: 13,
+    fontWeight: '400',
     marginTop: 4,
+    fontFamily: Config.Fonts.NotoSansGujarati.Regular,
   },
   circularProgress: {
     marginHorizontal: 20,

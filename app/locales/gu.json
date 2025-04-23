@@ -119,28 +119,19 @@
       "subTitle": "ફરી સ્વાગત છે!",
       "title": "હાય, 👋"
     },
-    "listItemSection1Title": "પરિચય",
-    "listItemSection2Title": "મૂળાક્ષરો",
-    "listItemSection3Title": "સંખ્યાઓ",
+    "listItemSection1Title": "મૂળાક્ષરો",
+    "listItemSection2Title": "સંખ્યાઓ",
     "listItemsSection1": {
-      "itemSubTitle1": "1 પાઠ",
-      "itemDesc1": "### Overview\n\n---\n\nThe Gujarati language is an Indo-Aryan language primarily spoken in the Indian state of Gujarat and among the Gujarati diaspora worldwide. It has official status in Gujarat and select union territories. Gujarati's linguistic evolution has been shaped by historical interactions with various languages and cultures, resulting in a unique linguistic identity.\n\n#### Key Aspects\n\n**Geographical Distribution**\n\nGujarati is the official language of Gujarat and holds significance among Gujarati communities globally.\n\n**Linguistic Characteristics**\nAs an Indo-Aryan language, Gujarati showcases its Indo-European lineage, while also incorporating loanwords from languages like Persian and English.\n\n**Writing System**\nThe language uses the Gujarati script, an abugida that combines consonants with inherent vowel sounds, adapted through history.\n\n**Vowels and Consonants**\nGujarati's phonetic structure involves a distinct set of vowels and consonants, crucial for pronunciation and word formation.\n\n**Vowels Chart**\n| Vowels | Front | Central | Back |\n|---------|-------|---------|------|\n| Close | /i/ | | /u/ |\n| | | | |\n| Mid | /e/ | | /o/ |\n| | /ɛ/ | /a/ | /ɔ/ |\n| Open | | /ā/ | |\n\n**Consonants Chart**\n| Consonants | Bilabial | Labio-dental | Dental | Alveolar | Retroflex | Post-alv./Palatal | Velar | Glottal |\n|-----------|----------|--------------|--------|----------|-----------|-------------------|-------|---------|\n| Stop | /p/ /pʰ/ | /b/ /bʱ/ | | /t/ /tʰ/ | /d/ /dʱ/ | /ṭ/ /ṭʰ/ | /k/ /kʰ/ | /g/ /gʱ/ |\n| Affricate | | | | | /tʃ/ /tʃʰ/| /dʒ/ /dʒʱ/ | | |\n| Nasal | /m/ | | | | | /n/ | /ɳ/ | [ɲ] |\n| Fricative | | | | | | /s/ | | /h/ |\n| Flap | | | | /ɾ/ | /ɽ/ /ɽʱ/ | | | |\n| Approximant| | /ʋ/ | | | | /j/ | | |\n| Lat. approximant| | | | /l/ | /ɭ/ | | | |\n\n**Cultural Legacy and Modern Usage**\nGujarati boasts a rich cultural heritage and continues to thrive in contemporary times, both in India and globally.\n",
-      "itemSubTitle2": "1 પાઠ",
-      "itemTitle1": "ગુજરાતી ભાષાની ઝાંખી",
-      "itemTitle2": "સાંસ્કૃતિક વારસો અને આધુનિક ઉપયોગ",
-      "itemDesc2": "### Cultural Legacy and Modern Usage\n\n---\n\nGujarati boasts a rich cultural heritage and continues to thrive in contemporary times, both in India and globally.\n\n#### Cultural and Literary Heritage\n\n\n**Literature:**\nGujarati has a diverse literary tradition spanning poetry, plays, novels, and essays, contributed by renowned figures.\n\n**Linguistic Evolution** \nThe language's historical journey involves shifts influenced by societal changes, while retaining its cultural significance.\n\n#### Global Influence and Modern Application\n**Diaspora Impact** \nThe Gujarati diaspora across the world has contributed to the language's spread and influence on various cultures.\n\n**Modern Usage**\nThe language remains relevant in education, media, business, and more, adapting to new contexts while preserving its heritage.\n\n**Conclusion:**\nThe Gujarati language stands as a testament to the rich linguistic and cultural diversity of India. Its intricate script, literary heritage, and global presence reflect the historical journey of a vibrant community and its language."
-    },
-    "listItemsSection2": {
       "itemSubTitle1": "12 સ્વરો, 5 વિભાગો",
       "itemSubTitle2": "34 વ્યંજન, 5 વિભાગો",
       "itemSubTitle3": "420 વ્યંજન, 5 વિભાગો",
-      "itemTitle1": "નો પરિચય\n\nસ્વર(સ્વરા)",
-      "itemTitle2": "નો પરિચય\n\nવ્યંજનો(વ્યાંજના)",
-      "itemTitle3": "બારખાડીનો પરિચય \n\n(વ્યંજન"
+      "itemTitle1": "નો પરિચય\nસ્વર(સ્વરા)",
+      "itemTitle2": "નો પરિચય\nવ્યંજનો(વ્યાંજના)",
+      "itemTitle3": "બારખાડીનો પરિચય \n(વ્યંજન"
     },
-    "listItemsSection3": {
+    "listItemsSection2": {
       "itemSubTitle1": "101 નંબરો, 5 વિભાગો",
-      "itemTitle1": "નો પરિચય\n\nગુજરાતી અંકો"
+      "itemTitle1": "નો પરિચય\nગુજરાતી અંકો"
     }
   },
   "learnBySelectedChar": {
@@ -217,11 +208,6 @@
       "itemSubTitle3": "10 કલાક, 19 પાઠ",
       "itemTitle1": "ઓર્ડર દ્વારા પ્રેક્ટિસ",
       "itemTitle3": "પસંદ કરેલા પાત્રો દ્વારા પ્રેક્ટિસ કરો"
-    }
-  },
-  "learnIntroScreen": {
-    "header": {
-      "title": "પરિચય"
     }
   },
   "librariesScreen": {

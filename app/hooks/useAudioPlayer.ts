@@ -15,6 +15,7 @@ const useSoundPlayer = (): ISoundPlayerProps => {
 
   useEffect(() => {
     Sound.setCategory('Playback');
+    Sound.setMode('SpokenAudio');
 
     return () => {
       // Clean up the sound instance

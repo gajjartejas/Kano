@@ -77,7 +77,7 @@ const CharCellItem = (props: ICharCellItemProps) => {
               numberOfLines={2}
               style={[
                 styles.subTitleText,
-                { color: selected ? `${colors.onPrimary}` : `${colors.textTitle}99`, fontSize: subTitleFontSize },
+                { color: selected ? `${colors.onPrimary}` : `${colors.textTitle}`, fontSize: subTitleFontSize },
               ]}>
               {item.subTitle}
             </Text>
@@ -106,12 +106,13 @@ const styles = StyleSheet.create({
   },
   titleText: {
     fontWeight: '600',
-    fontSize: 30,
+    fontSize: 16,
     fontFamily: Config.Fonts.NotoSansGujarati.Regular,
   },
   subTitleText: {
-    fontWeight: '500',
-    fontSize: 18,
+    fontSize: 13,
+    fontWeight: '400',
+    marginTop: 4,
     fontFamily: Config.Fonts.NotoSansGujarati.Regular,
   },
   iconTextContainer: {
