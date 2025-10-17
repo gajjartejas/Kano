@@ -2,13 +2,12 @@ import React, { memo } from 'react';
 import { StyleSheet, View } from 'react-native';
 
 //Third Party
-import Icon from 'react-native-easy-icon';
-import { IconType } from 'react-native-easy-icon/src/Icon';
 import { Text, TouchableRipple, useTheme } from 'react-native-paper';
 
 //App Modules
 import Config from 'app/config';
 import { AppTheme } from 'app/models/theme';
+import CommonIcon, { IconType } from 'app/components/CommonIcon';
 
 //Interface
 
@@ -46,7 +45,7 @@ const AppTitleValueItemCell = (props: IVovelCharCellItemProps) => {
             </Text>
           )}
           {iconFamily && iconName && (
-            <Icon
+            <CommonIcon
               style={styles.leftIcon}
               type={iconFamily}
               name={iconName}

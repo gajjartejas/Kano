@@ -12,10 +12,10 @@ import Utils from 'app/utils';
 import styles from './styles';
 import { LoggedInTabNavigatorParams } from 'app/navigation/types';
 import useLargeScreenMode from 'app/hooks/useLargeScreenMode';
+import CommonIcon from 'app/components/CommonIcon';
 
 //Modals
 import { ISettingItem, ISettingSection } from 'app/models/viewModels/settingItem';
-import Icon from 'react-native-easy-icon';
 import Components from 'app/components';
 import AppHeader from 'app/components/AppHeader';
 import useAppLangConfigStore from 'app/store/appLangConfig';
@@ -39,7 +39,7 @@ const Settings = ({ navigation }: Props) => {
         items: [
           {
             id: 0,
-            iconName: 'language',
+            iconName: 'translate',
             iconType: 'material',
             title: t('settings.languageTitle'),
             description: t('settings.languageSubTitle', {
@@ -49,7 +49,7 @@ const Settings = ({ navigation }: Props) => {
           },
           {
             id: 1,
-            iconName: 'wb-sunny',
+            iconName: 'theme-light-dark',
             iconType: 'material',
             title: t('settings.appearanceTitle'),
             description: t('settings.appearanceSubTitle')!,
@@ -57,7 +57,7 @@ const Settings = ({ navigation }: Props) => {
           },
           {
             id: 2,
-            iconName: 'app-settings-alt',
+            iconName: 'tune',
             iconType: 'material',
             title: t('settings.generalTitle'),
             description: t('settings.generalSubTitle'),
@@ -71,7 +71,7 @@ const Settings = ({ navigation }: Props) => {
         items: [
           {
             id: 0,
-            iconName: 'notes',
+            iconName: 'file-document-outline',
             iconType: 'material',
             title: t('settings.changelogTitle'),
             description: t('settings.changelogSubTitle')!,
@@ -79,39 +79,39 @@ const Settings = ({ navigation }: Props) => {
           },
           {
             id: 1,
-            iconName: 'library-shelves',
-            iconType: 'material-community',
+            iconName: 'book-open',
+            iconType: 'material',
             title: t('settings.librariesTitle'),
             description: t('settings.librariesSubTitle')!,
             route: 'License',
           },
           {
             id: 2,
-            iconName: 'frequently-asked-questions',
-            iconType: 'material-community',
+            iconName: 'help-circle-outline',
+            iconType: 'material',
             title: t('settings.faqTitle'),
             description: t('settings.faqSubTitle')!,
             route: 'FAQ',
           },
           {
             id: 3,
-            iconName: 'language',
-            iconType: 'ionicon',
+            iconName: 'earth',
+            iconType: 'material',
             title: t('settings.translateTitle'),
             description: t('settings.translateSubTitle')!,
             route: 'Translate',
           },
           {
             id: 4,
-            iconName: 'people',
-            iconType: 'ionicon',
+            iconName: 'account-multiple-outline',
+            iconType: 'material',
             title: t('settings.translatorsTitle'),
             description: t('settings.translatorsSubTitle')!,
             route: 'Translators',
           },
           {
             id: 5,
-            iconName: 'privacy-tip',
+            iconName: 'shield-check',
             iconType: 'material',
             title: t('settings.privacyTitle'),
             description: t('settings.privacySubTitle')!,
@@ -181,7 +181,7 @@ const Settings = ({ navigation }: Props) => {
                       title={subItem.title}
                       description={subItem.description}
                       left={() => (
-                        <Icon
+                        <CommonIcon
                           style={styles.listItemIcon}
                           type={subItem.iconType}
                           name={subItem.iconName}

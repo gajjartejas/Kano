@@ -17,7 +17,7 @@ interface ToastMessage {
 
 const useToastMessages = (hintConfig: IHintConfig): null => {
   const { id, hints } = hintConfig;
-  const timersRef = useRef<NodeJS.Timeout[]>([]);
+  const timersRef = useRef<any[]>([]);
 
   useEffect(() => {
     const clearToast = (): void => {

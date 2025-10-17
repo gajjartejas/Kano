@@ -153,7 +153,7 @@ const LearnCharsChart = ({ navigation, route }: Props) => {
             }}
             contentContainerStyle={{ ...styles.listContentContainer, paddingHorizontal: CONTAINER_SPACING - 1 }}
             stickyHeaderHiddenOnScroll={true}
-            estimatedItemSize={width - CONTAINER_SPACING * 2}
+            // estimatedItemSize={width - CONTAINER_SPACING * 2}
           />
         )}
       </Components.AppBaseView>

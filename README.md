@@ -29,19 +29,19 @@ The application supports Android 5.0 (API 21+) and above.
 ## Features include:
 
 - Characters Chart
-   - Explore characters, their details, and animations.
-   - Easily navigate by swiping.
+    - Explore characters, their details, and animations.
+    - Easily navigate by swiping.
 - Learn in Sequence
-   - Sequentially learn alphabets and numbers.
-   - Swipe through interactive cards with audio.
+    - Sequentially learn alphabets and numbers.
+    - Swipe through interactive cards with audio.
 - Learn by Selected Characters
-   - Customize learning by picking specific characters.
+    - Customize learning by picking specific characters.
 - Practice by Order
-   - Test your knowledge matching characters.
-   - Swipe through cards for practice.
+    - Test your knowledge matching characters.
+    - Swipe through cards for practice.
 - Practice by Selected Characters
-   - Focus on specific characters.
-   - Practice matching as in "Practice by Order."
+    - Focus on specific characters.
+    - Practice matching as in "Practice by Order."
 
 ## Additional Features
 

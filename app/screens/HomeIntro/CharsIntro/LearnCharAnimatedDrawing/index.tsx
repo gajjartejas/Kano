@@ -28,7 +28,7 @@ const LearnCharAnimatedDrawing = ({ navigation, route }: Props) => {
   const { t } = useTranslation();
   const { svgPath, color } = route.params;
 
-  const [
+  const {
     initialDelay,
     duration,
     strokeWidth,
@@ -40,19 +40,7 @@ const LearnCharAnimatedDrawing = ({ navigation, route }: Props) => {
     stroke,
     disableStrokeAnimation,
     showArrow,
-  ] = useCardAnimationConfigStore(store => [
-    store.initialDelay,
-    store.duration,
-    store.strokeWidth,
-    store.arrowFontSize,
-    store.arrowSymbol,
-    store.easingId,
-    store.emptyStroke,
-    store.arrowFill,
-    store.stroke,
-    store.disableStrokeAnimation,
-    store.showArrow,
-  ]);
+  } = useCardAnimationConfigStore();
 
   //States
   const [show, setShow] = useState(false);

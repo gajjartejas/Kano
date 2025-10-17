@@ -3,7 +3,7 @@ import { StyleSheet, View } from 'react-native';
 
 //ThirdParty
 import LottieView from 'lottie-react-native';
-import { Button, Dialog, Paragraph, Portal, useTheme } from 'react-native-paper';
+import { Button, Dialog, Portal, Text, useTheme } from 'react-native-paper';
 
 //ThirdParty
 
@@ -37,7 +37,9 @@ function AppLevelFinishDialog(props: IAppLevelFinishDialogProps) {
         </View>
 
         <Dialog.Content>
-          <Paragraph style={[styles.descriptionText, { color: `${colors.onBackground}88` }]}>{description}</Paragraph>
+          <Text variant={'bodySmall'} style={[styles.descriptionText, { color: `${colors.onBackground}88` }]}>
+            {description}
+          </Text>
         </Dialog.Content>
 
         <Dialog.Actions>

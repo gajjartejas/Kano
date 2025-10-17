@@ -10,7 +10,6 @@ import AppManager from 'app/components/AppManager';
 import Navigator from 'app/navigation';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import RealmContext from 'app/realm/RealmContext';
-import { SingletonHooksContainer } from 'react-singleton-hook';
 import { initialWindowMetrics, SafeAreaProvider } from 'react-native-safe-area-context';
 
 /**
@@ -26,7 +25,6 @@ const Entrypoint: React.FC = () => {
           <AppManager>
             <Navigator />
           </AppManager>
-          <SingletonHooksContainer />
         </RealmContext.RealmProvider>
       </SafeAreaProvider>
     </GestureHandlerRootView>
