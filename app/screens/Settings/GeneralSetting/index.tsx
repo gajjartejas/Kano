@@ -5,12 +5,9 @@ import { View } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import { Divider, List, useTheme } from 'react-native-paper';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import Icon from 'react-native-easy-icon';
 
 //App modules
 import styles from './styles';
-
-//ThirdParty
 
 //App Modules
 import { ISettingItem, ISettingSection } from 'app/models/viewModels/settingItem';
@@ -21,6 +18,7 @@ import { LoggedInTabNavigatorParams } from 'app/navigation/types';
 import useOtherStatics from 'app/realm/crud/otherStatics';
 import useLargeScreenMode from 'app/hooks/useLargeScreenMode';
 import AppHeader from 'app/components/AppHeader';
+import CommonIcon from 'app/components/CommonIcon';
 
 //Params
 type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'GeneralSetting'>;
@@ -47,8 +45,8 @@ const GeneralSetting = ({ navigation }: Props) => {
         items: [
           {
             id: 0,
-            iconName: 'cards',
-            iconType: 'material-community',
+            iconName: 'gesture-swipe',
+            iconType: 'material',
             title: t('generalSetting.section1.row1.title'),
             description: t('generalSetting.section1.row1.subTitle'),
             route: 'CardAnimation',
@@ -62,7 +60,7 @@ const GeneralSetting = ({ navigation }: Props) => {
           {
             id: 0,
             iconName: 'backup-restore',
-            iconType: 'material-community',
+            iconType: 'material',
             title: t('generalSetting.section2.row1.title'),
             description: t('generalSetting.section2.row1.subTitle'),
             route: 'SelectAppearance',
@@ -126,7 +124,7 @@ const GeneralSetting = ({ navigation }: Props) => {
                       title={subItem.title}
                       description={subItem.description}
                       left={() => (
-                        <Icon
+                        <CommonIcon
                           style={styles.listItemIcon}
                           type={subItem.iconType}
                           name={subItem.iconName}

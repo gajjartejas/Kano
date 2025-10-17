@@ -5,14 +5,10 @@ import { View } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import { Divider, List, useTheme } from 'react-native-paper';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import Icon from 'react-native-easy-icon';
-
-//App modules
-import styles from './styles';
-
-//ThirdParty
 
 //App Modules
+import styles from './styles';
+import CommonIcon from 'app/components/CommonIcon';
 import { ISettingItem, ISettingSection } from 'app/models/viewModels/settingItem';
 import Components from 'app/components';
 import { LoggedInTabNavigatorParams } from 'app/navigation/types';
@@ -44,16 +40,16 @@ const SwipeCardSetting = ({ navigation }: Props) => {
         items: [
           {
             id: 0,
-            iconName: 'animation-play',
-            iconType: 'material-community',
+            iconName: 'gesture',
+            iconType: 'material',
             title: t('swipeCardSetting.section1.row1.title'),
             description: t('swipeCardSetting.section1.row1.subTitle'),
             route: 'CardAnimation',
           },
           {
             id: 1,
-            iconName: 'gesture-swipe',
-            iconType: 'material-community',
+            iconName: 'timer-sand',
+            iconType: 'material',
             title: t('swipeCardSetting.section1.row2.title'),
             description: t('swipeCardSetting.section1.row2.subTitle'),
             route: 'CardAnimation',
@@ -116,7 +112,7 @@ const SwipeCardSetting = ({ navigation }: Props) => {
                       title={subItem.title}
                       description={subItem.description}
                       left={() => (
-                        <Icon
+                        <CommonIcon
                           style={styles.listItemIcon}
                           type={subItem.iconType}
                           name={subItem.iconName}

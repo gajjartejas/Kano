@@ -29,7 +29,7 @@ const homeOptions: Object = {
 
 const RootNavigation: React.FC = () => {
   const navigationRef = useNavigationContainerRef();
-  const routeNameRef = useRef<any | null>();
+  const routeNameRef = useRef<any | null>(null);
   const { addItemView } = useAppRating();
 
   const isDark = useThemeConfigStore(state => state.isDark);
@@ -39,7 +39,7 @@ const RootNavigation: React.FC = () => {
   const onSecondary = useThemeConfigStore(state => state.onSecondary);
   const Stack = createNativeStackNavigator<HomeTabNavigatorParams>();
   const toastConfig = useToastConfig();
-  const theme = isDark
+  const theme: any = isDark
     ? {
         ...PaperThemeDark,
         colors: {

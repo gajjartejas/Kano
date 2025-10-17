@@ -5,7 +5,7 @@ import { View, ScrollView, Appearance } from 'react-native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
 import { useTheme, Button } from 'react-native-paper';
-import Animated, { Easing, FadeIn, Layout } from 'react-native-reanimated';
+import Animated, { Easing, FadeIn, LinearTransition } from 'react-native-reanimated';
 import Slider from '@react-native-community/slider';
 
 //App modules
@@ -33,32 +33,39 @@ const CardAnimation = ({ navigation }: Props) => {
   const { colors } = useTheme();
   const { t } = useTranslation();
   const appearance = useThemeConfigStore(store => store.appearance);
-  const setTheme = useCardAnimationConfigStore(store => store.setTheme);
-  const reset = useCardAnimationConfigStore(store => store.reset);
   const largeScreenMode = useLargeScreenMode();
 
   //States
-  const [play, setPlay] = useCardAnimationConfigStore(store => [store.play, store.setPlay]);
-  const [initialDelay, setInitialDelay] = useCardAnimationConfigStore(store => [
-    store.initialDelay,
-    store.setInitialDelay,
-  ]);
-  const [duration, setDuration] = useCardAnimationConfigStore(store => [store.duration, store.setDuration]);
-  const [strokeWidth, setStrokeWidth] = useCardAnimationConfigStore(store => [store.strokeWidth, store.setStrokeWidth]);
-  const [arrowFontSize, setArrowFontSize] = useCardAnimationConfigStore(store => [
-    store.arrowFontSize,
-    store.setArrowFontSize,
-  ]);
-  const [arrowSymbol, setArrowSymbol] = useCardAnimationConfigStore(store => [store.arrowSymbol, store.setArrowSymbol]);
-  const [easingId, setEasingId] = useCardAnimationConfigStore(store => [store.easingId, store.setEasingId]);
-  const [emptyStroke, setEmptyStroke] = useCardAnimationConfigStore(store => [store.emptyStroke, store.setEmptyStroke]);
-  const [arrowFill, setArrowFill] = useCardAnimationConfigStore(store => [store.arrowFill, store.setArrowFill]);
-  const [stroke, setStroke] = useCardAnimationConfigStore(store => [store.stroke, store.setStroke]);
-  const [disableStrokeAnimation, setDisableStrokeAnimation] = useCardAnimationConfigStore(store => [
-    store.disableStrokeAnimation,
-    store.setDisableStrokeAnimation,
-  ]);
-  const [showArrow, setShowArrow] = useCardAnimationConfigStore(store => [store.showArrow, store.setShowArrow]);
+
+  const {
+    play,
+    setPlay,
+    initialDelay,
+    setInitialDelay,
+    duration,
+    setDuration,
+    strokeWidth,
+    setStrokeWidth,
+    arrowFontSize,
+    setArrowFontSize,
+    arrowSymbol,
+    setArrowSymbol,
+    easingId,
+    setEasingId,
+    emptyStroke,
+    setEmptyStroke,
+    arrowFill,
+    setArrowFill,
+    stroke,
+    setStroke,
+    disableStrokeAnimation,
+    setDisableStrokeAnimation,
+    showArrow,
+    setShowArrow,
+    setTheme,
+    reset,
+  } = useCardAnimationConfigStore();
+
   const [isReady, setIsReady] = useState(false);
 
   useDelayedEffect(
@@ -97,7 +104,7 @@ const CardAnimation = ({ navigation }: Props) => {
               <View style={largeScreenMode && [styles.rightSpacing32]}>
                 <Animated.View
                   entering={FadeIn.duration(1200).easing(Easing.bezierFn(1, 0, 0.17, 0.98))}
-                  layout={Layout.springify()}
+                  layout={LinearTransition.springify()}
                   style={styles.animatedChar}>
                   <AnimatedCharacter
                     initialDelay={initialDelay}

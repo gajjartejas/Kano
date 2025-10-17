@@ -7,7 +7,6 @@ import { useTranslation } from 'react-i18next';
 import { DraxProvider, DraxView } from 'react-native-drax';
 import { Button, IconButton, Text, useTheme } from 'react-native-paper';
 import Animated, { Easing, FadeInDown } from 'react-native-reanimated';
-import Icon from 'react-native-easy-icon';
 import Toast from 'react-native-toast-message';
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import IdleTimerManager from 'react-native-idle-timer';
@@ -27,9 +26,10 @@ import useLargeScreenMode from 'app/hooks/useLargeScreenMode';
 import useToastMessages from 'app/hooks/useToastMessages';
 import useHintConfig from 'app/hooks/useHintConfig';
 import useCardStatics from 'app/realm/crud/cardStatics';
-import useSoundPlayer from 'app/hooks/useAudioPlayer';
+import { useSoundPlayer } from 'app/hooks/useAudioPlayer';
 import useCardAnimationConfigStore from 'app/store/cardAnimationConfig';
 import { useIsFocused } from '@react-navigation/native';
+import CommonIcon from 'app/components/CommonIcon';
 
 //Params
 type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'LearnCharsCard'>;
@@ -60,7 +60,7 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
   const insets = useSafeAreaInsets();
   const largeScreenMode = useLargeScreenMode();
   const isFocused = useIsFocused();
-  const [
+  const {
     initialDelay,
     duration,
     strokeWidth,
@@ -73,20 +73,7 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
     disableStrokeAnimation,
     showArrow,
     cardAutoSwipeDuration,
-  ] = useCardAnimationConfigStore(store => [
-    store.initialDelay,
-    store.duration,
-    store.strokeWidth,
-    store.arrowFontSize,
-    store.arrowSymbol,
-    store.easingId,
-    store.emptyStroke,
-    store.arrowFill,
-    store.stroke,
-    store.disableStrokeAnimation,
-    store.showArrow,
-    store.cardAutoSwipeDuration,
-  ]);
+  } = useCardAnimationConfigStore();
   useToastMessages(cardHints);
 
   //States
@@ -564,7 +551,7 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
                           <Text style={styles.practiceCardText}>{v.gu}</Text>
                         </View>
                         {correctAnswerIds.map(l => l.left).includes(v.id) && (
-                          <Icon type="font-awesome" name={'check-circle'} color={'white'} size={16} />
+                          <CommonIcon type="fontawesome6" name="circle-check" color="white" size={16} />
                         )}
                       </DraxView>
                     );
@@ -610,9 +597,9 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
                 <IconButton
                   style={[styles.randomModeIconButton, { backgroundColor: `${color}60` }]}
                   icon={() => (
-                    <Icon
-                      type={'font-awesome'}
-                      name={isRandomMode ? 'long-arrow-right' : 'random'}
+                    <CommonIcon
+                      type="fontawesome6"
+                      name={isRandomMode ? 'arrow-right-long' : 'shuffle'}
                       color={colors.white}
                       size={18}
                     />
@@ -624,9 +611,9 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
                 <IconButton
                   style={[styles.muteUnmuteButton, { backgroundColor: `${color}60` }]}
                   icon={() => (
-                    <Icon
-                      type={'font-awesome5'}
-                      name={mute ? 'volume-mute' : 'volume-up'}
+                    <CommonIcon
+                      type="fontawesome6"
+                      name={mute ? 'volume-xmark' : 'volume-high'}
                       color={colors.white}
                       size={18}
                     />
@@ -650,14 +637,14 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
               <View style={styles.bottomSideButtons}>
                 <IconButton
                   style={[styles.settingButton, { backgroundColor: `${color}60` }]}
-                  icon={() => <Icon type={'font-awesome5'} name={'info'} color={colors.white} size={18} />}
+                  icon={() => <CommonIcon type="fontawesome6" name="circle-info" color={colors.white} size={18} />}
                   mode="contained-tonal"
                   onPress={onPresentCharInfo}
                 />
 
                 <IconButton
                   style={[styles.presentCharInfoButton, { backgroundColor: `${color}60` }]}
-                  icon={() => <Icon type={'font-awesome'} name={'gear'} color={colors.white} size={18} />}
+                  icon={() => <CommonIcon type="fontawesome6" name="gear" color={colors.white} size={18} />}
                   mode="contained-tonal"
                   onPress={onPressSetting}
                 />

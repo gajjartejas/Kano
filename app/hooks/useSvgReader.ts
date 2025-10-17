@@ -28,13 +28,6 @@ interface IParsedSVGGroup {
   svgClipPaths: IParsedSVGPath[];
 }
 
-interface IParsedSVGGroup {
-  id: string;
-  transform: string | null | undefined;
-  svgPaths: IParsedSVGPath[];
-  svgClipPaths: IParsedSVGPath[];
-}
-
 const useSvgReader = () => {
   //State
   const [parsedSvg, setParsedSvg] = useState<IParsedSVG>();

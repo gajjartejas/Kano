@@ -2,34 +2,29 @@ import { useCallback, useEffect, useRef } from 'react';
 
 //ThirdParty
 import Sound from 'react-native-sound';
-import { singletonHook } from 'react-singleton-hook';
 import crashlytics from '@react-native-firebase/crashlytics';
 
 interface ISoundPlayerProps {
-  play: ((soundFile: string) => void) | null;
-  pause: (() => void) | null;
+  play: (soundFile: string) => void;
+  pause: () => void;
 }
 
-const useSoundPlayer = (): ISoundPlayerProps => {
+let sharedInstance: ISoundPlayerProps | null = null;
+
+export const useSoundPlayer = (): ISoundPlayerProps => {
   const soundRef = useRef<Sound | null>(null);
 
   useEffect(() => {
     Sound.setCategory('Playback');
-
     return () => {
-      // Clean up the sound instance
-      if (soundRef.current) {
-        soundRef.current.release();
-      }
+      soundRef.current?.release();
     };
   }, []);
 
-  const playSound = useCallback((soundFile: string): void => {
+  const play = useCallback((soundFile: string) => {
     console.log('playSound:', soundFile);
-    if (soundRef.current) {
-      soundRef.current.stop();
-      soundRef.current.release();
-    }
+    soundRef.current?.stop();
+    soundRef.current?.release();
 
     soundRef.current = new Sound(soundFile, Sound.MAIN_BUNDLE, error => {
       if (error) {
@@ -37,7 +32,6 @@ const useSoundPlayer = (): ISoundPlayerProps => {
         crashlytics().recordError(error, `useAudioPlayer.ts->${soundFile}`);
         return;
       }
-
       soundRef.current?.play(success => {
         if (!success) {
           console.log(`playback failed due to audio decoding errors: ${soundFile}`);
@@ -46,19 +40,12 @@ const useSoundPlayer = (): ISoundPlayerProps => {
     });
   }, []);
 
-  const pauseSound = useCallback((): void => {
-    if (soundRef.current) {
-      soundRef.current.pause();
-    }
-  }, []);
+  const pause = useCallback(() => soundRef.current?.pause(), []);
 
-  return { play: playSound, pause: pauseSound };
+  const instance = { play, pause };
+
+  // Keep only one shared instance per app lifecycle
+  if (!sharedInstance) sharedInstance = instance;
+
+  return sharedInstance;
 };
-
-export default singletonHook(
-  {
-    play: null,
-    pause: null,
-  },
-  useSoundPlayer,
-);

@@ -4,12 +4,12 @@ import { Dimensions, StyleSheet } from 'react-native';
 //Third Party
 import { useTheme } from 'react-native-paper';
 import { BaseToast } from 'react-native-toast-message';
-import Icon from 'react-native-easy-icon';
 import { ToastConfigParams } from 'react-native-toast-message/lib/src/types';
 
 //App modules
 import { AppTheme } from 'app/models/theme';
 import useLargeScreenMode from 'app/hooks/useLargeScreenMode';
+import CommonIcon from 'app/components/CommonIcon';
 
 export interface IAppSuccessToastProps {
   type: 'success' | 'error' | 'info';
@@ -21,19 +21,21 @@ const AppToast = (props: ToastConfigParams<IAppSuccessToastProps>) => {
   const minHeight = text1 && text2 ? 50 : 40;
   const largeScreenMode = useLargeScreenMode();
 
-  const getIcon: any = useCallback(() => {
+  const getIcon = useCallback(() => {
     switch (props.type) {
-      case 'success': {
+      case 'success':
         return 'check-circle';
-      }
-      case 'error': {
-        return 'times-circle';
-      }
-      case 'info': {
-        return 'info-circle';
-      }
+      case 'error':
+        return 'close-circle';
+      case 'info':
+        return 'information';
+      default:
+        return 'help-circle';
     }
   }, [props.type]);
+
+
+
 
   return (
     <BaseToast
@@ -47,7 +49,7 @@ const AppToast = (props: ToastConfigParams<IAppSuccessToastProps>) => {
         },
         largeScreenMode && { width: Dimensions.get('window').width * 0.7 },
       ]}
-      renderLeadingIcon={() => <Icon type={'font-awesome'} name={getIcon()} color={colors.white} size={18} />}
+      renderLeadingIcon={() => <CommonIcon type="material" name={getIcon()} color={colors.white} size={18} />}
       contentContainerStyle={styles.contentContainerStyle}
       text1Style={[styles.text1Style, { color: colors.white }]}
       text2Style={[styles.text2Style, { color: colors.white }]}

@@ -123,3 +123,4 @@ vendor
 !.yarn/versions
 
 # Other
+*.cxx

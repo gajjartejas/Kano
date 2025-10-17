@@ -11,7 +11,7 @@ import Components from 'app/components';
 import { ICharCellItem } from 'app/components/CharCellItem';
 import styles from './styles';
 import { LoggedInTabNavigatorParams } from 'app/navigation/types';
-import useSoundPlayer from 'app/hooks/useAudioPlayer';
+import { useSoundPlayer } from 'app/hooks/useAudioPlayer';
 import useHintConfig from 'app/hooks/useHintConfig';
 import useToastMessages from 'app/hooks/useToastMessages';
 import useChartStatics from 'app/realm/crud/chartStatics';

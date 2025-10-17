@@ -16,6 +16,7 @@ end
 
 target 'Kano' do
   config = use_native_modules!
+
   use_frameworks! :linkage => :static
   $RNFirebaseAsStaticFramework = true
 
@@ -24,11 +25,6 @@ target 'Kano' do
     # An absolute path to your application root.
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
-
-  target 'KanoTests' do
-    inherit! :complete
-    # Pods for testing
-  end
 
   post_install do |installer|
     # https://github.com/facebook/react-native/blob/main/packages/react-native/scripts/react_native_pods.rb#L197-L202

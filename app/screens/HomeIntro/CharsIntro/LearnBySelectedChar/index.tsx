@@ -6,7 +6,7 @@ import { Button, Text, useTheme } from 'react-native-paper';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
 import { FlashList } from '@shopify/flash-list';
-import Icon from 'react-native-easy-icon';
+import CommonIcon from 'app/components/CommonIcon';
 
 //App modules
 import Components from 'app/components';
@@ -161,8 +161,8 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
       return (
         <View style={styles.listHeaderView}>
           <Text style={[styles.listHeaderText, { color: colors.textTitle }]}>{titleText}</Text>
-          <Icon
-            type="material-community"
+          <CommonIcon
+            type="material"
             onPress={() => onSelectCheckbox(index)}
             name={allSelected ? 'check-circle' : 'check-circle-outline'}
             color={allSelected ? colors.primary : `${colors.onBackground}90`}
@@ -220,7 +220,7 @@ const LearnBySelectedChar = ({ navigation, route }: Props) => {
               }}
               contentContainerStyle={{ ...styles.listContentContainer, paddingHorizontal: CONTAINER_SPACING }}
               stickyHeaderHiddenOnScroll={true}
-              estimatedItemSize={(parentWidth - CELL_SPACING * numberOfColumns * 2) / numberOfColumns}
+              // estimatedItemSize={(parentWidth - CELL_SPACING * numberOfColumns * 2) / numberOfColumns}
               keyExtractor={item => {
                 if (typeof item === 'string') {
                   return item;

@@ -87,19 +87,19 @@ const LearnCharInfoItemCell = (props: ILearnCharInfoItemCellProps) => {
           <AppTitleValueItemCell bold touchDisabled title={t('learnCharInfoScreen.moreInfo')} />
           <AppTitleValueItemCell
             iconName="chevron-right"
-            iconFamily="font-awesome"
+            iconFamily="fontawesome6"
             onPress={() => onPressStrokeOrder(item, index)}
             title={t('learnCharInfoScreen.viewStrokeOrder')}
           />
           <AppTitleValueItemCell
             iconName="chevron-right"
-            iconFamily="font-awesome"
+            iconFamily="fontawesome6"
             onPress={() => onPressViewAnimatedDrawing(item, index)}
             title={t('learnCharInfoScreen.viewAnimatedDrawing')}
           />
           <AppTitleValueItemCell
-            iconName="play-circle"
-            iconFamily="font-awesome"
+            iconName="circle-play"
+            iconFamily="fontawesome6"
             leftIconSize={20}
             onPress={() => onPressPlaySound(item, index)}
             title={t('learnCharInfoScreen.playSound')}

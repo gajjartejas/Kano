@@ -34,7 +34,7 @@ const LearnCharStrokeOrder = ({ navigation, route }: Props) => {
   const isLandscape = useIsLandscape();
   const cellDim = largeScreenMode ? width * 0.3 : width * 0.6;
 
-  const [
+  const {
     initialDelay,
     duration,
     strokeWidth,
@@ -45,18 +45,7 @@ const LearnCharStrokeOrder = ({ navigation, route }: Props) => {
     arrowFill,
     stroke,
     showArrow,
-  ] = useCardAnimationConfigStore(store => [
-    store.initialDelay,
-    store.duration,
-    store.strokeWidth,
-    store.arrowFontSize,
-    store.arrowSymbol,
-    store.easingId,
-    store.emptyStroke,
-    store.arrowFill,
-    store.stroke,
-    store.showArrow,
-  ]);
+  } = useCardAnimationConfigStore();
 
   //States
 

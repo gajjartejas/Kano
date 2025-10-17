@@ -3,13 +3,12 @@ import { View, StyleSheet } from 'react-native';
 
 //Third Party
 import { TouchableRipple, useTheme, Text } from 'react-native-paper';
-import Icon from 'react-native-easy-icon';
-import { IconType } from 'react-native-easy-icon/src/Icon';
 
 //App Modules
 import CircularProgress from './CircularProgress';
 import { AppTheme } from 'app/models/theme';
 import useLargeScreenMode from 'app/hooks/useLargeScreenMode';
+import CommonIcon, { IconType } from 'app/components/CommonIcon';
 
 //Interface
 export interface ICharListItem {
@@ -53,7 +52,7 @@ const CharListItem = (props: ICharListItemProps) => {
         <View style={styles.iconTextContainer}>
           <View style={styles.iconTextContainer1}>
             <View style={styles.iconContainer}>
-              <Icon
+              <CommonIcon
                 style={styles.leftIcon}
                 type={item.iconFamily}
                 name={item.iconName}
