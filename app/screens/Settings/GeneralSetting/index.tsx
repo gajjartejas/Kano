@@ -54,7 +54,7 @@ const GeneralSetting = ({ navigation }: Props) => {
           {
             id: 1,
             iconName: 'format-font',
-            iconType: 'material-community',
+            iconType: 'material',
             title: t('generalSetting.section1.row2.title'),
             description: t('generalSetting.section1.row2.subTitle'),
             route: 'SelectGujaratiFonts',

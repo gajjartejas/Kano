@@ -150,6 +150,7 @@ const styles = StyleSheet.create({
   arrowRow: {
     borderWidth: 1,
     alignItems: 'center',
+    justifyContent: 'center',
     marginHorizontal: 2,
     marginVertical: 2,
   },
@@ -167,6 +168,7 @@ const styles = StyleSheet.create({
     marginVertical: 4,
     fontWeight: '400',
     fontFamily: Config.Fonts.NotoSansGujarati.Medium,
+    textAlign: 'center'
   },
   arrowMiniTextBold: {
     fontWeight: '600',

@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   animatedChar: {
-    height: 250,
+    height: 150,
     marginRight: 16,
   },
   halfWidth: {

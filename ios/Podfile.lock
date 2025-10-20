@@ -3317,7 +3317,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   boost: 7e761d76ca2ce687f7cc98e698152abd03a18f90
-  DoubleConversion: cb417026b2400c8f53ae97020b2be961b59470cb
+  DoubleConversion: 76ab83afb40bddeeee456813d9c04f67f78771b5
   fast_float: b32c788ed9c6a8c584d114d0047beda9664e7cc6
   FBLazyVector: 941bef1c8eeabd9fe1f501e30a5220beee913886
   Firebase: f5439b235721ceeef14ca1f327c0da8e4e8556b5
@@ -3330,7 +3330,7 @@ SPEC CHECKSUMS:
   FirebaseRemoteConfigInterop: 66d61ad6cee1cd2137cb8dedf468112e9ba92c6a
   FirebaseSessions: 352b204966530e5cb7036c02d8c366922210e681
   fmt: a40bb5bd0294ea969aaaba240a927bd33d878cdd
-  glog: 5683914934d5b6e4240e497e0f4a3b42d1854183
+  glog: fdfdfe5479092de0c4bdbebedd9056951f092c4f
   GoogleAppMeasurement: 9074f50943fe26a7829be3a2b0043270ad935b9e
   GoogleDataTransport: aae35b7ea0c09004c3797d53c8c41f66f219d6a7
   GoogleUtilities: 00c88b9a86066ef77f0da2fab05f65d7768ed8e1

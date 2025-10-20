@@ -75,7 +75,7 @@ const HomeListItem = (props: IHomeListItemProps) => {
             style={[styles.circularProgress]}
             textColor={colors.white}
             fill={'transparent'}
-            textSize={12}
+            textSize={10}
             pgColor={colors.white}
             bgColor={`${colors.card}20`}
             size={44}
