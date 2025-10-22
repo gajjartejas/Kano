@@ -1,6 +1,6 @@
 {
   "name": "Kano",
-  "version": "0.0.1",
+  "version": "1.2.6",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
