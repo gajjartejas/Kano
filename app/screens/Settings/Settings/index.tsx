@@ -174,9 +174,10 @@ const Settings = ({ navigation }: Props) => {
                 {item.items.map((subItem, subIndex) => {
                   return (
                     <List.Item
-                      titleStyle={{ color: colors.onSurface }}
-                      descriptionStyle={{ color: `${colors.onSurface}88` }}
                       key={subItem.id.toString()}
+                      style={styles.itemContainer}
+                      titleStyle={{ color: colors.onSurface }}
+                      descriptionStyle={[{ color: `${colors.onSurface}88` }, styles.topMargin]}
                       onPress={() => onPress(subItem, subIndex)}
                       title={subItem.title}
                       description={subItem.description}

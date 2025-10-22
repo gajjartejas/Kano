@@ -17,7 +17,6 @@ import SelectAppearance from 'app/screens/Settings/SelectAppearance';
 import License from 'app/screens/Settings/License';
 import Translators from 'app/screens/Settings/Translators';
 import LearnCharsList from 'app/screens/HomeIntro/CharsIntro/LearnCharsList';
-import GujaratiScriptIntro from 'app/screens/HomeIntro/IntroductionToGujaratiScript/GujaratiScriptIntro';
 import LearnCharsChart from 'app/screens/HomeIntro/CharsIntro/LearnCharsChart';
 import LearnCharInfo from 'app/screens/HomeIntro/CharsIntro/LearnCharInfo';
 import LearnCharsCard from 'app/screens/HomeIntro/LearnCharsCard';
@@ -98,7 +97,6 @@ const LoggedInTabNavigator = () => {
       <LoggedInStack.Screen name="License" component={License} />
       <LoggedInStack.Screen name="Translators" component={Translators} />
       <LoggedInStack.Screen name="LearnCharsList" component={LearnCharsList} />
-      <LoggedInStack.Screen name="GujaratiScriptIntro" component={GujaratiScriptIntro} />
       <LoggedInStack.Screen name="LearnCharsChart" component={LearnCharsChart} />
       <LoggedInStack.Screen name="LearnCharInfo" component={LearnCharInfo} />
       <LoggedInStack.Screen name="LearnCharsCard" component={LearnCharsCard} />

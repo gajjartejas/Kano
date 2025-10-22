@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import { View, useWindowDimensions } from 'react-native';
+import { View } from 'react-native';
 
 //ThirdParty
 import { Text, useTheme } from 'react-native-paper';
@@ -36,7 +36,6 @@ const LearnCharsChart = ({ navigation, route }: Props) => {
   const groupedEntries = useChartItemForTypes(type);
   const { t } = useTranslation();
   const mappedGroupedEntries = groupedEntries.map(v => [v.title, v.data]).flat(1);
-  const { width } = useWindowDimensions();
   const [, chartHints] = useHintConfig();
   const largeScreenMode = useLargeScreenMode();
   useToastMessages(chartHints);

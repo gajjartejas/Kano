@@ -20,6 +20,7 @@ import useThemeConfigStore, { IAppearanceType } from 'app/store/themeConfig';
 import useDelayedEffect from 'app/hooks/useDelayedEffect';
 import useLargeScreenMode from 'app/hooks/useLargeScreenMode';
 import AppHeader from 'app/components/AppHeader';
+import { AppTheme } from 'app/models/theme';
 
 //Params
 type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'CardAnimation'>;
@@ -30,7 +31,7 @@ const CardAnimation = ({ navigation }: Props) => {
   //Action
 
   //Constants
-  const { colors } = useTheme();
+  const { colors } = useTheme<AppTheme>();
   const { t } = useTranslation();
   const appearance = useThemeConfigStore(store => store.appearance);
   const largeScreenMode = useLargeScreenMode();
@@ -153,7 +154,7 @@ const CardAnimation = ({ navigation }: Props) => {
                       minimumValue={1000}
                       step={500}
                       maximumValue={10000}
-                      minimumTrackTintColor={colors.primary}
+                      minimumTrackTintColor={`${colors.primary}${colors.opacity}`}
                       maximumTrackTintColor={colors.primary}
                       thumbTintColor={colors.primary}
                     />
@@ -167,7 +168,7 @@ const CardAnimation = ({ navigation }: Props) => {
                       minimumValue={0}
                       step={500}
                       maximumValue={10000}
-                      minimumTrackTintColor={colors.primary}
+                      minimumTrackTintColor={`${colors.primary}${colors.opacity}`}
                       maximumTrackTintColor={colors.primary}
                       thumbTintColor={colors.primary}
                     />
@@ -182,7 +183,7 @@ const CardAnimation = ({ navigation }: Props) => {
                       minimumValue={0}
                       step={0.5}
                       maximumValue={6}
-                      minimumTrackTintColor={colors.primary}
+                      minimumTrackTintColor={`${colors.primary}${colors.opacity}`}
                       maximumTrackTintColor={colors.primary}
                       thumbTintColor={colors.primary}
                     />
@@ -196,7 +197,7 @@ const CardAnimation = ({ navigation }: Props) => {
                       minimumValue={1}
                       step={1}
                       maximumValue={10}
-                      minimumTrackTintColor={colors.primary}
+                      minimumTrackTintColor={`${colors.primary}${colors.opacity}`}
                       maximumTrackTintColor={colors.primary}
                       thumbTintColor={colors.primary}
                     />

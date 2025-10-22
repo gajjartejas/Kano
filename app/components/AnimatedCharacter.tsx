@@ -1,4 +1,4 @@
-import React, { forwardRef, memo, useCallback, useEffect, useImperativeHandle, useState } from 'react';
+import React, { forwardRef, memo, useCallback, useEffect, useImperativeHandle, useMemo, useState } from 'react';
 import { ColorValue } from 'react-native';
 
 //ThirdParty
@@ -63,74 +63,63 @@ export interface IAnimatedCharacterRef extends PathProps {
 
 const AnimatedCharacter = forwardRef<IAnimatedCharacterRef, IAnimatedCharacterProps>((props, ref) => {
   const { parsedSvg, readSvg } = useSvgReader();
-  const [strokeTiming, setStrokeTiming] = useState<IAnimatedCharacterStrokeGroupTiming[]>([]);
 
-  const initialDelay = props.initialDelay === undefined ? 0 : props.initialDelay;
-  const path = props.path;
-  const emptyStroke = props.emptyStroke;
-  const play = props.play === undefined ? true : props.play;
-  const duration = props.duration === undefined ? 0 : props.duration;
-  const showArrow = props.showArrow;
-  const arrowSymbol = props.arrowSymbol === undefined ? '➤' : props.arrowSymbol;
-  const arrowFontSize = props.arrowFontSize === undefined ? 6 : props.arrowFontSize;
-  const highlightGroupIndex = props.highlightGroupIndex;
-  const highlightStrokeIndex = props.highlightStrokeIndex;
-  const stroke = props.stroke;
-  const highlightStroke = props.highlightStroke;
-  const arrowFill = props.arrowFill;
-  const disableStrokeAnimation = props.disableStrokeAnimation;
-  const onProgress = props.onProgress;
-  const onFinish = props.onFinish;
-  const easing = props.easing;
+  const {
+    path,
+    emptyStroke,
+    play = true,
+    duration = 0,
+    initialDelay = 0,
+    showArrow,
+    arrowSymbol = '➤',
+    arrowFontSize = 6,
+    highlightGroupIndex,
+    highlightStrokeIndex,
+    stroke,
+    highlightStroke,
+    arrowFill,
+    disableStrokeAnimation,
+    onProgress,
+    onFinish,
+    easing,
+  } = props;
 
-  useImperativeHandle(ref, () => ({
-    reset: () => {
-      let oldTimings = [...strokeTiming];
-      setStrokeTiming([]);
-      setTimeout(() => {
-        setStrokeTiming(oldTimings);
-      }, 1);
-    },
-  }));
+  // We'll introduce a resetKey (number or string) in state, and pass it as a key to the AnimatedStroke components.
+  // This forces them to re-mount and replay their animation when reset() is called.
+  const [resetKey, setResetKey] = useState(0);
 
-  useEffect(() => {
+  const getPathLength = useCallback((d: string) => {
+    return new svgPathProperties(d).getTotalLength();
+  }, []);
+
+  const strokeTiming: IAnimatedCharacterStrokeGroupTiming[] = useMemo(() => {
     if (!parsedSvg) {
-      return;
+      return [];
     }
+
     let durations: number[] = [];
     let counter = 0;
 
-    let totalLength = parsedSvg.groups
-      .map(g => {
-        return g.svgClipPaths
-          .map(p => {
-            const properties = new svgPathProperties(p.d);
-            return properties.getTotalLength();
-          })
-          .reduce((ps, a) => ps + a, 0);
-      })
-      .reduce((ps, a) => ps + a, 0);
+    const totalLength = parsedSvg.groups
+      .flatMap(g => g.svgClipPaths.map(p => getPathLength(p.d)))
+      .reduce((a, b) => a + b, 0);
 
-    let timings = parsedSvg.groups.map(g => {
-      let res = g.svgClipPaths.map(p => {
-        const properties = new svgPathProperties(p.d);
-        const l = properties.getTotalLength();
-        const _duration = (l * duration) / totalLength;
-        const delay = durations.slice(0, counter).reduce((ps, a) => ps + a, 0) + initialDelay;
+    return parsedSvg.groups.map(g => {
+      const timings = g.svgClipPaths.map(p => {
+        const length = getPathLength(p.d);
+        const _duration = (length * duration) / totalLength;
+        const delay = durations.slice(0, counter).reduce((a, b) => a + b, 0) + initialDelay;
         durations[counter] = _duration;
-        counter += 1;
-        return {
-          duration: _duration,
-          delay: delay,
-          length: l,
-        };
+        counter++;
+        return { duration: _duration, delay, length };
       });
-
-      return { timings: res };
+      return { timings };
     });
+  }, [parsedSvg, getPathLength, duration, initialDelay]);
 
-    setStrokeTiming(timings);
-  }, [initialDelay, parsedSvg, duration]);
+  useImperativeHandle(ref, () => ({
+    reset: () => setResetKey(v => v + 1),
+  }));
 
   useEffect(() => {
     readSvg(path);
@@ -185,7 +174,7 @@ const AnimatedCharacter = forwardRef<IAnimatedCharacterRef, IAnimatedCharacterPr
                     <AnimatedStroke
                       {...props}
                       id={p.id}
-                      key={p.id}
+                      key={`${p.id}-${resetKey}`}
                       onFinish={() => {
                         onFinishAnimation(index, g.svgClipPaths.length);
                       }}
@@ -221,8 +210,8 @@ const AnimatedCharacter = forwardRef<IAnimatedCharacterRef, IAnimatedCharacterPr
                 })}
               {showArrow &&
                 g.svgClipPaths.map(p => {
-                  const properties = new svgPathProperties(p.d);
-                  const tl = properties.getTotalLength() * 0.2;
+                  const pl = getPathLength(p.d);
+                  const tl = pl * 0.2;
                   const tr = Math.round(tl);
                   const end = new Array(tr).fill(0).map((_, i) => (i * 100) / tl);
 
@@ -244,5 +233,7 @@ const AnimatedCharacter = forwardRef<IAnimatedCharacterRef, IAnimatedCharacterPr
     </Svg>
   );
 });
+
 AnimatedCharacter.displayName = 'AnimatedCharacter';
+
 export default memo(AnimatedCharacter);

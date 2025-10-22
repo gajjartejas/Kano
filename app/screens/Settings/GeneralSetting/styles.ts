@@ -12,8 +12,9 @@ const styles = StyleSheet.create({
   subView: {
     marginHorizontal: 32,
   },
-  listSubHeader: {
-    marginLeft: 48,
+  listSubHeader: {},
+  itemContainer: {
+    paddingHorizontal: 16,
   },
   listItemIcon: {
     alignSelf: 'center',
@@ -25,6 +26,9 @@ const styles = StyleSheet.create({
   },
   listContainer: {
     paddingBottom: 8,
+  },
+  topMargin: {
+    marginTop: 6,
   },
 });
 

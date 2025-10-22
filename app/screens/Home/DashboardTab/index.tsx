@@ -14,7 +14,6 @@ import { IHomeListItem } from 'app/components/HomeListItem';
 import { LearnCharsType, LoggedInTabNavigatorParams } from 'app/navigation/types';
 import { AppTheme } from 'app/models/theme';
 import useHomeListProgressItems from 'app/hooks/useHomeListProgressItems';
-import { OtherStaticTypes } from 'app/realm/modals/otherStatics';
 import useHomeListItems from 'app/hooks/useHomeListItems';
 
 //Params
@@ -35,30 +34,16 @@ const DashboardTab = ({ navigation }: Props) => {
   const cardTapped = useCallback(
     (item: IHomeListItem, index: number, sectionIndex: number) => {
       if (sectionIndex === 0 && index === 0) {
-        navigation.push('GujaratiScriptIntro', {
-          content: t('homeScreen.listItemsSection1.itemDesc1'),
-          title: t('learnIntroScreen.header.title'),
-          type: OtherStaticTypes.OverViewIntro,
-          color: item.color,
-        });
-      } else if (sectionIndex === 0 && index === 1) {
-        navigation.push('GujaratiScriptIntro', {
-          content: t('homeScreen.listItemsSection1.itemDesc2'),
-          title: t('learnIntroScreen.header.title'),
-          type: OtherStaticTypes.CulturalIntro,
-          color: item.color,
-        });
-      } else if (sectionIndex === 1 && index === 0) {
         navigation.push('LearnCharsList', { type: LearnCharsType.Vowel, color: item.color });
-      } else if (sectionIndex === 1 && index === 1) {
+      } else if (sectionIndex === 0 && index === 1) {
         navigation.push('LearnCharsList', { type: LearnCharsType.Constant, color: item.color });
-      } else if (sectionIndex === 1 && index === 2) {
+      } else if (sectionIndex === 0 && index === 2) {
         navigation.push('LearnCharsList', { type: LearnCharsType.Barakhadi, color: item.color });
-      } else if (sectionIndex === 2 && index === 0) {
+      } else if (sectionIndex === 1 && index === 0) {
         navigation.push('LearnCharsList', { type: LearnCharsType.Number, color: item.color });
       }
     },
-    [navigation, t],
+    [navigation],
   );
 
   const renderItem = ({

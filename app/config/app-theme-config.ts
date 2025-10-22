@@ -41,8 +41,8 @@ export const PaperThemeDefault: ExtendedMD3Theme = {
     white: '#ffffff',
     black: '#000000',
     card: '#ffffff',
-    text: '#ffffff',
-    border: '#ffffff',
+    text: '#000000',
+    border: '#000000',
     notification: '#ffffff',
   },
 };

@@ -40,7 +40,7 @@ const AppTitleValueItemCell = (props: IVovelCharCellItemProps) => {
             {title}
           </Text>
           {!!value && (
-            <Text numberOfLines={2} style={[styles.subTitleText, { color: `${colors.text}99` }]}>
+            <Text numberOfLines={2} style={[styles.subTitleText, { color: `${colors.text}` }]}>
               {value}
             </Text>
           )}
@@ -70,6 +70,7 @@ const styles = StyleSheet.create({
   },
   titleText: {
     fontSize: 12,
+    fontWeight: '500',
     fontFamily: Config.Fonts.NotoSansGujarati.Medium,
   },
   textContainer: {
@@ -79,9 +80,9 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   subTitleText: {
+    fontSize: 16,
     fontWeight: '500',
-    fontSize: 14,
-    fontFamily: Config.Fonts.NotoSansGujarati.Medium,
+    fontFamily: Config.Fonts.NotoSansGujarati.Regular,
   },
   leftIcon: {
     alignSelf: 'center',
