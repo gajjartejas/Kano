@@ -1,15 +1,11 @@
 //ThirdParty
-import { useTranslation } from 'react-i18next';
 import { useMemo } from 'react';
 import { LearnCharsType } from 'app/navigation/types';
 import useCharListProgressForType from 'app/hooks/useCharListProgressForType';
-import useOtherStatics from 'app/realm/crud/otherStatics';
 
 const useHomeListProgressItems = (): { data: number[] }[] => {
   //Constants
-  const { t } = useTranslation();
   const { getCharListProgressForType } = useCharListProgressForType();
-  const { getOtherStatics } = useOtherStatics();
 
   return useMemo(() => {
     return [
@@ -34,7 +30,7 @@ const useHomeListProgressItems = (): { data: number[] }[] => {
         ],
       },
     ];
-  }, [getCharListProgressForType, getOtherStatics, t]);
+  }, [getCharListProgressForType]);
 };
 
 export default useHomeListProgressItems;
