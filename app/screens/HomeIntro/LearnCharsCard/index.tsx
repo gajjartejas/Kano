@@ -536,7 +536,7 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
                     return (
                       <DraxView
                         key={v.id.toString()}
-                        animateSnapback={false}
+                        animateSnap={false}
                         draggable={!correctAnswerIds.map(l => l.left).includes(v.id)}
                         draggingStyle={styles.dragging}
                         dragReleasedStyle={styles.dragging}
