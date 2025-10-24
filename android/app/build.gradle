@@ -84,8 +84,8 @@ android {
         applicationId "com.tejasgajjar.kano"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 18
-        versionName "1.2.5"
+        versionCode 20
+        versionName "1.2.6"
     }
     signingConfigs {
         debug {
