@@ -1,0 +1,54 @@
+Welcome to "Kano - Learn Gujarati Kakko," the ultimate app for kids and beginners to master the Gujarati language. Whether you're looking to explore the rich cultural legacy of Gujarat or simply want to learn the basics, this app has you covered. Here's what you'll find on the home page:
+
+1. Introduction
+1.1 Overview of Gujarati Language
+1.2 Cultural Legacy and Modern Usage
+
+2. Alphabets
+Dive into the world of the Gujarati alphabet with:
+2.1 Introduction to Vowels (Svara)
+2.2 Introduction to Consonants (Vyanjana)
+2.3 Introduction to Vowels and Consonants (Barakhadi)
+
+3. Numbers
+Discover Gujarati numerals with:
+3.1 Introduction to Gujarati numerals
+
+In each of these sections, you'll find five subsections designed to enhance your learning experience:
+
+1. Characters Chart
+Explore the characters' chart of consonants, vowels, barakhadi, and numbers.
+Tap on a cell to reveal the Gujarati character, diacritic, English character, and stroke length.
+Watch animated drawings and hear the character's pronunciation.
+Swipe left or right to navigate through the characters.
+
+2. Learn in Sequence
+Learn consonants, vowels, barakhadi, and numbers in a structured sequence.
+Swipe through cards displaying Gujarati and English characters.
+Enjoy animated drawings with audio to aid your learning.
+
+3. Learn by Selected Characters
+Customize your learning by selecting specific characters.
+Experience the same functionality as in "Learn in Sequence."
+
+4. Practice by Order
+Test your knowledge by matching Gujarati characters with English characters.
+Swipe through two or four cards, as shown in "Learn in Sequence."
+
+5. Practice by Selected Characters
+Focus your practice on specific characters of your choice.
+Utilize the same functionality as in "Practice by Order."
+
+Additionally, you have the freedom to personalize your learning experience:
+
+Switch between dark and light themes in the settings.
+Fine-tune character stroke animations by adjusting animation speed, initial delay, stroke width, directional arrows, and stroke colours.
+Keep track of your progress right on the home page, where you can see the completion percentage for each section. Watch as your skills in Gujarati language and culture grow with every swipe, tap, and practice session.
+
+Embark on your journey to mastering Gujarati with "Kano - Learn Gujarati Kakko" today. Whether you're a child or an adult beginner, this app is your gateway to a new language and culture. Start learning and exploring Gujarat like never before!
+
+We hope you enjoy our apps
+If you have any bugs or suggestions, please contact us at
+gajjartejas26@gmail.com
+
+This open-source app is written in React native.
