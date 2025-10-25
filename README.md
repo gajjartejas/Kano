@@ -17,12 +17,12 @@ Get the app from Google Play:
 
 |                                            |                                                 |                                             |                                              |
 |:------------------------------------------:|:-----------------------------------------------:|:-------------------------------------------:|:--------------------------------------------:|
-| ![Home](docs/images/v1.0/home.png) | ![Sub Items](docs/images/v1.0/learn-list.png) | ![Chart](docs/images/v1.0/char-chart.png) | ![Detail](docs/images/v1.0/char-info.png) |
+| ![Home](metadata/en-US/images/phoneScreenshots/1-home.png) | ![Sub Items](metadata/en-US/images/phoneScreenshots/2-learn-list.png) | ![Chart](metadata/en-US/images/phoneScreenshots/3-char-chart.png) | ![Detail](metadata/en-US/images/phoneScreenshots/4-char-info.png) |
 
 
 |                                                        |                                                             |                                                              |                                                          |
 |:------------------------------------------------------:|:-----------------------------------------------------------:|:------------------------------------------------------------:|:--------------------------------------------------------:|
-| ![Stroke Direction](docs/images/v1.0/stroke-order.png) | ![Animated Stroke Order](docs/images/v1.0/animated-drawing.png) | ![Swipe Cards with audio](docs/images/v1.0/char-card.png) | ![Learn and Practice](docs/images/v1.0/practice.png) |
+| ![Stroke Direction](metadata/en-US/images/phoneScreenshots/5-stroke-order.png) | ![Animated Stroke Order](metadata/en-US/images/phoneScreenshots/6-animated-drawing.png) | ![Swipe Cards with audio](metadata/en-US/images/phoneScreenshots/7-char-card.png) | ![Learn and Practice](metadata/en-US/images/phoneScreenshots/8-practice.png) |
 
 The application supports Android 5.0 (API 21+) and above.
 
