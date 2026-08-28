@@ -1,7 +1,7 @@
 import InAppReview from 'react-native-in-app-review';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useCallback, useRef } from 'react';
-import crashlytics from '@react-native-firebase/crashlytics';
+import { getCrashlytics, recordError } from '@react-native-firebase/crashlytics';
 
 const RATE_PROMPT_INTERVAL_DAYS = 30;
 const ONE_DAY_MS = 24 * 60 * 60 * 1000; // One day in milliseconds
@@ -44,7 +44,7 @@ const useAppRating = () => {
         console.warn('showRatingPrompt->Rating prompt is not available on this device.');
       }
     } catch (error: any) {
-      crashlytics().recordError(error, 'useAppRating.ts->showRatingPrompt');
+      recordError(getCrashlytics(), error, 'useAppRating.ts->showRatingPrompt');
       console.error('showRatingPrompt->Error showing rating prompt:', error);
     }
   }, []);
@@ -84,7 +84,7 @@ const useAppRating = () => {
         showRatingPrompt(currentDate);
       }
     } catch (error: any) {
-      crashlytics().recordError(error, 'useAppRating.ts->rateAppIfNeeded');
+      recordError(getCrashlytics(), error, 'useAppRating.ts->rateAppIfNeeded');
       console.error('showRatingPrompt->Error checking rating prompt:', error);
     }
   }, [eligibleForRating, showRatingPrompt]);

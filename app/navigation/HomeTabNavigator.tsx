@@ -27,6 +27,7 @@ import CardAnimation from 'app/screens/Settings/CardAnimation';
 import LearnCharAnimatedDrawing from 'app/screens/HomeIntro/CharsIntro/LearnCharAnimatedDrawing';
 import SwipeCardSetting from 'app/screens/Settings/SwipeCardSetting';
 import ChangeLanguage from 'app/screens/Settings/ChangeLanguage';
+import SelectGujaratiFonts from 'app/screens/Settings/SelectGujaratiFonts';
 
 //App Modules
 import { HomeTabsNavigatorParams, LoggedInTabNavigatorParams } from 'app/navigation/types';
@@ -102,6 +103,7 @@ const LoggedInTabNavigator = () => {
       <LoggedInStack.Screen name="LearnCharsCard" component={LearnCharsCard} />
       <LoggedInStack.Screen name="GeneralSetting" component={GeneralSetting} />
       <LoggedInStack.Screen name="SwipeCardSetting" component={SwipeCardSetting} />
+      <LoggedInStack.Screen name="SelectGujaratiFonts" component={SelectGujaratiFonts} />
       <LoggedInStack.Screen name="CardAnimation" component={CardAnimation} />
       <LoggedInStack.Screen name="ChangeLanguage" component={ChangeLanguage} />
       <LoggedInStack.Group screenOptions={{ presentation: 'modal' }}>

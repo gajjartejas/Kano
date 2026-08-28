@@ -1,0 +1,60 @@
+diff --git a/node_modules/react-native-worklets/android/build.gradle.kts b/node_modules/react-native-worklets/android/build.gradle.kts
+index 8a77bff..22e29bb 100644
+--- a/node_modules/react-native-worklets/android/build.gradle.kts
++++ b/node_modules/react-native-worklets/android/build.gradle.kts
+@@ -317,9 +317,54 @@ androidComponents {
+     }
+ }
+ 
++fun resolveNodeExecutable(): String {
++    val nodeProperty = safeAppExtGet("NODE_EXECUTABLE", null)?.toString()
++    if (!nodeProperty.isNullOrEmpty() && File(nodeProperty).exists()) {
++        return nodeProperty
++    }
++    val nodeEnv = System.getenv("NODE_BINARY")
++    if (!nodeEnv.isNullOrEmpty() && File(nodeEnv).exists()) {
++        return nodeEnv
++    }
++    val standardPaths = listOf(
++        "/opt/homebrew/bin/node",
++        "/usr/local/bin/node",
++        "/usr/bin/node",
++        "/bin/node"
++    )
++    for (path in standardPaths) {
++        if (File(path).exists()) return path
++    }
++    val userHome = System.getProperty("user.home") ?: ""
++    if (userHome.isNotEmpty()) {
++        val nvmDir = File(userHome, ".nvm/versions/node")
++        if (nvmDir.exists() && nvmDir.isDirectory) {
++            val nvmNodes = nvmDir.listFiles()
++                ?.filter { it.isDirectory }
++                ?.map { File(it, "bin/node") }
++                ?.filter { it.exists() }
++                ?.sortedByDescending { it.parentFile.parentFile.name }
++            if (!nvmNodes.isNullOrEmpty()) {
++                return nvmNodes.first().absolutePath
++            }
++        }
++        val managerPaths = listOf(
++            "$userHome/.local/share/fnm/current/bin/node",
++            "$userHome/.fnm/current/bin/node",
++            "$userHome/.volta/bin/node",
++            "$userHome/.asdf/shims/node",
++            "$userHome/.nodenv/shims/node"
++        )
++        for (path in managerPaths) {
++            if (File(path).exists()) return path
++        }
++    }
++    return "node"
++}
++
+ val validateReactNativeVersionResult = providers.exec {
+     workingDir(projectDir.path)
+-    commandLine("node", "./../scripts/validate-react-native-version.js", REACT_NATIVE_VERSION)
++    commandLine(resolveNodeExecutable(), "./../scripts/validate-react-native-version.js", REACT_NATIVE_VERSION)
+     isIgnoreExitValue = true
+ }
+ 

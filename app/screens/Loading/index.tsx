@@ -3,7 +3,7 @@ import React from 'react';
 //App Modules
 import { LoggedInTabNavigatorParams } from 'app/navigation/types';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import analytics from '@react-native-firebase/analytics';
+import { getAnalytics, logEvent } from '@react-native-firebase/analytics';
 import useAppRating from 'app/hooks/useAppRating';
 
 //Params
@@ -16,7 +16,7 @@ const Loading = ({ navigation }: Props) => {
   React.useEffect(() => {
     navigation.replace('HomeTabs', {});
     rateAppIfNeeded().then(() => {
-      analytics().logEvent('rate_app_opens');
+      logEvent(getAnalytics(), 'rate_app_opens');
     });
   }, [navigation, rateAppIfNeeded]);
 

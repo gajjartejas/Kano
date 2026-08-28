@@ -1,0 +1,172 @@
+diff --git a/node_modules/react-native-drax/lib/module/DraxView.js b/node_modules/react-native-drax/lib/module/DraxView.js
+index c4bdb68..df67beb 100644
+--- a/node_modules/react-native-drax/lib/module/DraxView.js
++++ b/node_modules/react-native-drax/lib/module/DraxView.js
+@@ -125,58 +125,14 @@ export const DraxView = /*#__PURE__*/memo(props => {
+     const view = viewRef.current;
+     if (!view || !parentViewRef.current) return;
+     view.measureLayout(parentViewRef.current, (x, y, width, height) => {
+-      if (Platform.OS === 'web') {
+-        // On web, measureLayout returns visual positions — add scroll to
+-        // convert to content-relative.
+-        const parentData = parentId ? getViewEntry(parentId) : undefined;
+-        const parentScroll = parentData?.scrollPosition?.value ?? {
+-          x: 0,
+-          y: 0
+-        };
+-        finalizeMeasurement(x + parentScroll.x, y + parentScroll.y, width, height, handler);
+-        return;
+-      }
+-
+-      // On Fabric, measureLayout uses includeTransform=false → returns Yoga
+-      // layout positions. This is correct for FlatList/FlashList, but wrong
+-      // for LegendList (which positions items via translateY, so all report y=0).
+-      //
+-      // Auto-detect: when measureLayout returns position=0 (the hallmark of
+-      // transform-positioned items: position:absolute, top:0), also call
+-      // measure() to get the visual position. If it differs, the item is
+-      // transform-positioned. Only check when layoutPosition=0 to avoid
+-      // false positives on shifted items (whose measureLayout is non-zero).
+-      const layoutX = x;
+-      const layoutY = y;
+-      if (layoutX !== 0 && layoutY !== 0) {
+-        // Non-zero layout position → normal Yoga layout, trust measureLayout.
+-        finalizeMeasurement(layoutX, layoutY, width, height, handler);
+-        return;
+-      }
+-      const parentView = parentViewRef.current;
+-      if (!parentView) {
+-        finalizeMeasurement(layoutX, layoutY, width, height, handler);
+-        return;
+-      }
+-      view.measure((_vx, _vy, _vw, _vh, pageX, pageY) => {
+-        parentView.measure((_px, _py, _pw, _ph, parentPageX, parentPageY) => {
+-          const parentData = parentId ? getViewEntry(parentId) : undefined;
+-          const parentScroll = parentData?.scrollPosition?.value ?? {
+-            x: 0,
+-            y: 0
+-          };
+-          const visualX = pageX - parentPageX + parentScroll.x;
+-          const visualY = pageY - parentPageY + parentScroll.y;
+-          // If visual position differs from layout, the view is transform-positioned.
+-          if (Math.abs(visualX - layoutX) > 1 || Math.abs(visualY - layoutY) > 1) {
+-            finalizeMeasurement(visualX, visualY, width, height, handler, 1);
+-          } else {
+-            finalizeMeasurement(layoutX, layoutY, width, height, handler);
+-          }
+-        });
+-      });
++      const parentData = parentId ? getViewEntry(parentId) : undefined;
++      const parentScroll = parentData?.scrollPosition?.value ?? {
++        x: 0,
++        y: 0
++      };
++      finalizeMeasurement(x + parentScroll.x, y + parentScroll.y, width, height, handler);
+     }, () => {});
+-  }, [id, parentId, viewRef, parentViewRef, getViewEntry, finalizeMeasurement]);
++  }, [parentId, viewRef, parentViewRef, getViewEntry, finalizeMeasurement]);
+ 
+   // ── Register/unregister with context ────────────────────────────────
+   // Keep a ref to the latest props so registry always has current callbacks
+diff --git a/node_modules/react-native-drax/lib/module/HoverLayer.js b/node_modules/react-native-drax/lib/module/HoverLayer.js
+index ba0b051..2494496 100644
+--- a/node_modules/react-native-drax/lib/module/HoverLayer.js
++++ b/node_modules/react-native-drax/lib/module/HoverLayer.js
+@@ -136,11 +136,12 @@ export const HoverLayer = /*#__PURE__*/memo(({
+ });
+ const styles = StyleSheet.create({
+   container: {
+-    ...StyleSheet.absoluteFillObject,
++    position: 'absolute',
++    top: 0,
++    left: 0,
+     // Default hidden — useAnimatedStyle overrides to opacity:1 when dragging.
+     // Prevents a one-frame flash on first mount before the animated style evaluates.
+-    opacity: 0,
+-    transformOrigin: 'top left'
++    opacity: 0
+   },
+   content: {
+     // Shrink-wrap to content width — without this the inner view stretches
+diff --git a/node_modules/react-native-drax/src/DraxView.tsx b/node_modules/react-native-drax/src/DraxView.tsx
+index 31a0c65..c2e16df 100644
+--- a/node_modules/react-native-drax/src/DraxView.tsx
++++ b/node_modules/react-native-drax/src/DraxView.tsx
+@@ -204,54 +204,13 @@ export const DraxView = memo((props: DraxViewProps): ReactNode => {
+     view.measureLayout(
+       parentViewRef.current,
+       (x, y, width, height) => {
+-        if (Platform.OS === 'web') {
+-          // On web, measureLayout returns visual positions — add scroll to
+-          // convert to content-relative.
+-          const parentData = parentId ? getViewEntry(parentId) : undefined;
+-          const parentScroll = parentData?.scrollPosition?.value ?? { x: 0, y: 0 };
+-          finalizeMeasurement(x! + parentScroll.x, y! + parentScroll.y, width!, height!, handler);
+-          return;
+-        }
+-
+-        // On Fabric, measureLayout uses includeTransform=false → returns Yoga
+-        // layout positions. This is correct for FlatList/FlashList, but wrong
+-        // for LegendList (which positions items via translateY, so all report y=0).
+-        //
+-        // Auto-detect: when measureLayout returns position=0 (the hallmark of
+-        // transform-positioned items: position:absolute, top:0), also call
+-        // measure() to get the visual position. If it differs, the item is
+-        // transform-positioned. Only check when layoutPosition=0 to avoid
+-        // false positives on shifted items (whose measureLayout is non-zero).
+-        const layoutX = x!;
+-        const layoutY = y!;
+-        if (layoutX !== 0 && layoutY !== 0) {
+-          // Non-zero layout position → normal Yoga layout, trust measureLayout.
+-          finalizeMeasurement(layoutX, layoutY, width!, height!, handler);
+-          return;
+-        }
+-        const parentView = parentViewRef.current;
+-        if (!parentView) {
+-          finalizeMeasurement(layoutX, layoutY, width!, height!, handler);
+-          return;
+-        }
+-        view.measure((_vx: number, _vy: number, _vw: number, _vh: number, pageX: number, pageY: number) => {
+-          parentView.measure((_px: number, _py: number, _pw: number, _ph: number, parentPageX: number, parentPageY: number) => {
+-            const parentData = parentId ? getViewEntry(parentId) : undefined;
+-            const parentScroll = parentData?.scrollPosition?.value ?? { x: 0, y: 0 };
+-            const visualX = pageX - parentPageX + parentScroll.x;
+-            const visualY = pageY - parentPageY + parentScroll.y;
+-            // If visual position differs from layout, the view is transform-positioned.
+-            if (Math.abs(visualX - layoutX) > 1 || Math.abs(visualY - layoutY) > 1) {
+-              finalizeMeasurement(visualX, visualY, width!, height!, handler, 1);
+-            } else {
+-              finalizeMeasurement(layoutX, layoutY, width!, height!, handler);
+-            }
+-          });
+-        });
++        const parentData = parentId ? getViewEntry(parentId) : undefined;
++        const parentScroll = parentData?.scrollPosition?.value ?? { x: 0, y: 0 };
++        finalizeMeasurement(x! + parentScroll.x, y! + parentScroll.y, width!, height!, handler);
+       },
+       () => {}
+     );
+-  }, [id, parentId, viewRef, parentViewRef, getViewEntry, finalizeMeasurement]);
++  }, [parentId, viewRef, parentViewRef, getViewEntry, finalizeMeasurement]);
+ 
+   // ── Register/unregister with context ────────────────────────────────
+   // Keep a ref to the latest props so registry always has current callbacks
+diff --git a/node_modules/react-native-drax/src/HoverLayer.tsx b/node_modules/react-native-drax/src/HoverLayer.tsx
+index 41031b3..6c6d3c1 100644
+--- a/node_modules/react-native-drax/src/HoverLayer.tsx
++++ b/node_modules/react-native-drax/src/HoverLayer.tsx
+@@ -152,11 +152,12 @@ export const HoverLayer = memo(
+ 
+ const styles = StyleSheet.create({
+   container: {
+-    ...StyleSheet.absoluteFillObject,
++    position: 'absolute',
++    top: 0,
++    left: 0,
+     // Default hidden — useAnimatedStyle overrides to opacity:1 when dragging.
+     // Prevents a one-frame flash on first mount before the animated style evaluates.
+     opacity: 0,
+-    transformOrigin: 'top left',
+   },
+   content: {
+     // Shrink-wrap to content width — without this the inner view stretches

@@ -24,6 +24,8 @@ interface IAppSliderDialogProps {
   value: number;
 }
 
+const SliderComponent = Slider as unknown as React.ComponentType<any>;
+
 function AppSliderDialog(props: IAppSliderDialogProps) {
   //Constants
   const { title, description, onPressConfirm, onPressCancel, confirmText, cancelText, range, step, unit, value } =
@@ -50,7 +52,7 @@ function AppSliderDialog(props: IAppSliderDialogProps) {
         <Dialog.Title style={{ color: colors.onBackground }}>{title}</Dialog.Title>
         <Dialog.Content>
           <Text style={[styles.descriptionText, { color: `${colors.onBackground}88` }]}>{description}</Text>
-          <Slider
+          <SliderComponent
             style={styles.slider}
             minimumValue={min}
             maximumValue={max}

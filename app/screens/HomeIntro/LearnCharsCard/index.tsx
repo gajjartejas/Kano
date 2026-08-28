@@ -10,7 +10,7 @@ import Animated, { Easing, FadeInDown } from 'react-native-reanimated';
 import Toast from 'react-native-toast-message';
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import IdleTimerManager from 'react-native-idle-timer';
-import crashlytics from '@react-native-firebase/crashlytics';
+import { getCrashlytics, setAttributes } from '@react-native-firebase/crashlytics';
 
 //App modules
 import styles from './styles';
@@ -30,6 +30,7 @@ import { useSoundPlayer } from 'app/hooks/useAudioPlayer';
 import useCardAnimationConfigStore from 'app/store/cardAnimationConfig';
 import { useIsFocused } from '@react-navigation/native';
 import CommonIcon from 'app/components/CommonIcon';
+import { useGujaratiFont } from 'app/store/fontConfig';
 
 //Params
 type Props = NativeStackScreenProps<LoggedInTabNavigatorParams, 'LearnCharsCard'>;
@@ -48,6 +49,7 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
   //Actions
 
   //Constants
+  const { fonts } = useGujaratiFont();
   const { colors } = useTheme<AppTheme>();
   const { height } = useWindowDimensions();
   const { t } = useTranslation();
@@ -107,7 +109,7 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
   const [finishLevelVisible, setFinishLevelVisible] = React.useState(false);
 
   useEffect(() => {
-    crashlytics().setAttributes({
+    setAttributes(getCrashlytics(), {
       autoSwiping: autoSwiping.toString(),
       practiceMode: practiceMode.toString(),
       progressSection: progressSection.toString(),
@@ -548,7 +550,7 @@ const LearnCharsCard = ({ navigation, route }: Props) => {
                         ]}
                         payload={v.id}>
                         <View style={styles.practiceCardTextIcon}>
-                          <Text style={styles.practiceCardText}>{v.gu}</Text>
+                          <Text style={[styles.practiceCardText, { fontFamily: fonts.SemiBold }]}>{v.gu}</Text>
                         </View>
                         {correctAnswerIds.map(l => l.left).includes(v.id) && (
                           <CommonIcon type="fontawesome6" name="circle-check" color="white" size={16} />

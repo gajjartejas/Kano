@@ -38,20 +38,19 @@ const SwipeCard = (props: ISwipeCardProps) => {
   return (
     <TinderCard onSwipe={props.onSwipe} swipeRequirementType={'position'} swipeThreshold={100} preventSwipe={[]}>
       <TouchableRipple
-        style={styles.cardTouchableContainer}
+        style={[
+          styles.cardTouchableContainer,
+          {
+            backgroundColor: `${props.color}30`,
+            width: props.width * 0.7,
+            height: props.width * 0.7,
+            top: (-props.width * 0.7) / 2 - 50,
+            left: (-props.width * 0.7) / 2,
+          },
+        ]}
         rippleColor={`${colors.primary}20`}
         onPress={props.onPress}>
-        <View
-          style={[
-            styles.card,
-            {
-              backgroundColor: `${props.color}30`,
-              width: props.width * 0.7,
-              height: props.width * 0.7,
-              top: (-props.width * 0.7) / 2 - 50,
-              left: (-props.width * 0.7) / 2,
-            },
-          ]}>
+        <View style={styles.card}>
           <Animated.View
             entering={FadeIn.duration(1200).easing(Easing.bezierFn(1, 0, 0.17, 0.98))}
             layout={Layout.springify()}

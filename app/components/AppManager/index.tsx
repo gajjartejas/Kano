@@ -33,7 +33,7 @@ const AppManager = ({ children }: Props) => {
     };
     const listener = Appearance.addChangeListener(onThemeChange);
     return () => listener.remove();
-  }, [appearance, setIsDarkMode, setThemeCardAnimationConfig]);
+  }, [appearance, setIsDarkMode]);
 
   useEffect(() => {
     setThemeCardAnimationConfig(isDark);

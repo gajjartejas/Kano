@@ -10,8 +10,9 @@ import Components from 'app/components/index';
 import { AppTheme } from 'app/models/theme';
 import Config from 'app/config';
 import useLargeScreenMode from 'app/hooks/useLargeScreenMode';
+import { useGujaratiFont } from 'app/store/fontConfig';
 
-export const ColorRow = React.memo(function ColorRow(props: {
+export const ColorRow = React.memo(function ColorRowComponent(props: {
   style?: ViewStyle | ViewStyle[];
   label: string;
   color: string;
@@ -57,7 +58,7 @@ export const ColorRow = React.memo(function ColorRow(props: {
   );
 });
 
-export const SwitchRow = React.memo(function SwitchRow(props: {
+export const SwitchRow = React.memo(function SwitchRowComponent(props: {
   style?: ViewStyle;
   label: string;
   value: boolean;
@@ -73,7 +74,7 @@ export const SwitchRow = React.memo(function SwitchRow(props: {
   );
 });
 
-export const ArrowRow = React.memo(function ArrowRow(props: {
+export const ArrowRow = React.memo(function ArrowRowComponent(props: {
   selected?: boolean;
   style?: ViewStyle;
   onPress: () => void;
@@ -82,6 +83,7 @@ export const ArrowRow = React.memo(function ArrowRow(props: {
 }) {
   const { style, arrow, onPress, name, selected } = props;
   const { colors } = useTheme<AppTheme>();
+  const { fonts } = useGujaratiFont();
   const marginTop = name ? 4 : 0;
   const fontWeight = selected ? '600' : '400';
   const largeScreenMode = useLargeScreenMode();
@@ -108,6 +110,7 @@ export const ArrowRow = React.memo(function ArrowRow(props: {
           <RowTitle
             style={{
               ...styles.arrowTitleFont,
+              fontFamily: fonts.Medium,
               color: colors.onSurface,
               marginTop,
             }}
@@ -117,7 +120,7 @@ export const ArrowRow = React.memo(function ArrowRow(props: {
         {!!name && (
           <Text
             style={[
-              { color: colors.onSurface, fontWeight: fontWeight },
+              { color: colors.onSurface, fontWeight: fontWeight, fontFamily: selected ? fonts.Bold : fonts.Medium },
               styles.arrowMiniText,
               selected && styles.arrowMiniTextBold,
             ]}>
@@ -129,7 +132,7 @@ export const ArrowRow = React.memo(function ArrowRow(props: {
   );
 });
 
-export const RowTitle = React.memo(function RowTitle(props: { title: string; style?: TextStyle }) {
+export const RowTitle = React.memo(function RowTitleComponent(props: { title: string; style?: TextStyle }) {
   const { colors } = useTheme();
   return <Text style={[props.style, { color: colors.onSurface }]}>{props.title}</Text>;
 });

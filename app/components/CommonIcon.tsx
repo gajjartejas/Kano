@@ -14,6 +14,7 @@ interface CommonIconProps {
   color?: string;
   style?: ViewStyle | TextStyle;
   onPress?: () => void;
+  iconStyle?: 'solid' | 'regular' | 'brand';
 }
 
 const iconMap = {
@@ -21,9 +22,12 @@ const iconMap = {
   material: MaterialDesignIcons,
 };
 
-const CommonIcon: React.FC<CommonIconProps> = ({ type, name, size, color, style, onPress }) => {
+const CommonIcon: React.FC<CommonIconProps> = ({ type, name, size, color, style, onPress, iconStyle = 'solid' }) => {
   const IconComponent = iconMap[type] as any;
-  return <IconComponent iconStyle={'solid'} name={name} size={size} color={color} style={style} onPress={onPress} />;
+  if (!IconComponent) {
+    return null;
+  }
+  return <IconComponent iconStyle={iconStyle} name={name} size={size} color={color} style={style} onPress={onPress} />;
 };
 
 export default CommonIcon;

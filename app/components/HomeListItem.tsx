@@ -11,6 +11,7 @@ import useLargeScreenMode from 'app/hooks/useLargeScreenMode';
 import CommonIcon, { IconType } from 'app/components/CommonIcon';
 import Config from 'app/config';
 
+
 //Interface
 export interface IHomeListItem {
   id: number;

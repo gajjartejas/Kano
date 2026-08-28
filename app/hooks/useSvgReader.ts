@@ -5,7 +5,7 @@ import { Platform } from 'react-native';
 import { DOMParser } from '@xmldom/xmldom';
 import { svgPathProperties } from 'svg-path-properties';
 import RNFS from 'react-native-fs';
-import crashlytics from '@react-native-firebase/crashlytics';
+import { getCrashlytics, recordError } from '@react-native-firebase/crashlytics';
 
 //Interface
 interface IParsedSVG {
@@ -101,7 +101,7 @@ const useSvgReader = () => {
               resolve(parsedSVGText);
             })
             .catch((e: Error) => {
-              crashlytics().recordError(e, 'useSvgReader.ts->readSvgSilently');
+              recordError(getCrashlytics(), e, 'useSvgReader.ts->readSvgSilently');
               reject(e);
             });
         } else if (Platform.OS === 'android') {
@@ -111,7 +111,7 @@ const useSvgReader = () => {
               resolve(parsedSVGText);
             })
             .catch((e: Error) => {
-              crashlytics().recordError(e, 'useSvgReader.ts->readSvgSilently');
+              recordError(getCrashlytics(), e, 'useSvgReader.ts->readSvgSilently');
               reject(e);
             });
         }
@@ -127,7 +127,7 @@ const useSvgReader = () => {
           setParsedSvg(svg);
         })
         .catch((e: Error) => {
-          crashlytics().recordError(e, 'useSvgReader.ts->readSvg');
+          recordError(getCrashlytics(), e, 'useSvgReader.ts->readSvg');
           console.log('readSvg Error:', e);
           setError(e);
         });

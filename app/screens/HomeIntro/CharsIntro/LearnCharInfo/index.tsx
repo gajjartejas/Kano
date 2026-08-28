@@ -129,7 +129,6 @@ const LearnCharInfo = ({ navigation, route }: Props) => {
           horizontal
           pagingEnabled={true}
           showsHorizontalScrollIndicator={false}
-          legacyImplementation={false}
           data={groupedEntries[sectionIndex].data}
           renderItem={renderItem}
           keyExtractor={photo => photo.id.toString()}

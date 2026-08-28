@@ -1,0 +1,12 @@
+diff --git a/node_modules/react-native-nitro-modules/android/build.gradle b/node_modules/react-native-nitro-modules/android/build.gradle
+index f564aad..8549520 100644
+--- a/node_modules/react-native-nitro-modules/android/build.gradle
++++ b/node_modules/react-native-nitro-modules/android/build.gradle
+@@ -102,6 +102,7 @@ android {
+ 
+   prefab {
+     NitroModules {
++      file("${project.buildDir}/headers/nitromodules/").mkdirs()
+       headers "${project.buildDir}/headers/nitromodules/"
+     }
+   }
