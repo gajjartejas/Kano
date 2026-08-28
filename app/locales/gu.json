@@ -1,94 +1,168 @@
 {
+  "general": {
+    "appname": "કાનો",
+    "close": "બંધ કરો",
+    "noInternet": "ઇન્ટરનેટ કનેક્શન નથી",
+    "finish": "પૂર્ણ કરો",
+    "next": "આગળ",
+    "continue": "ચાલુ રાખો",
+    "ok": "બરાબર",
+    "cancel": "રદ કરો",
+    "value": "કિંમત"
+  },
+  "hints": {
+    "card": {
+      "hint1": "આગલા કાર્ડ માટે 👈ડાબે/જમણે👉 સ્વાઇપ કરો",
+      "hint2": "👆 ફરીથી સાંભળવા/જોવા કાર્ડ પર ટેપ કરો"
+    },
+    "chart": {
+      "hint1": "👆 અક્ષરની વિગતો જોવા માટે ટેપ કરો."
+    },
+    "chartInfo": {
+      "hint1": "આગલા કાર્ડ માટે 👈ડાબે/જમણે👉 સ્વાઇપ કરો"
+    }
+  },
+  "homeScreen": {
+    "header": {
+      "title": "નમસ્તે, 👋",
+      "subTitle": "ફરી સ્વાગત છે!"
+    },
+    "listItemSection1Title": "મૂળાક્ષરો",
+    "listItemsSection1": {
+      "itemTitle1": "સ્વર શીખો\n(સ્વર)",
+      "itemSubTitle1": "12 સ્વર, 5 વિભાગો",
+      "itemTitle2": "વ્યંજન શીખો\n(કક્કો)",
+      "itemSubTitle2": "34 વ્યંજન, 5 વિભાગો",
+      "itemTitle3": "બારાખડી શીખો\n(સ્વર અને વ્યંજન)",
+      "itemSubTitle3": "420 અક્ષરો, 5 વિભાગો"
+    },
+    "listItemSection2Title": "સંખ્યાઓ",
+    "listItemsSection2": {
+      "itemTitle1": "અંકો શીખો",
+      "itemSubTitle1": "101 અંકો, 5 વિભાગો"
+    }
+  },
+  "learnCharsListScreen": {
+    "header": {
+      "titleVowels": "સ્વર શીખો",
+      "titleConsonants": "વ્યંજન શીખો",
+      "titleBarakhadi": "બારાખડી શીખો",
+      "titleNumerals": "અંકો શીખો"
+    },
+    "listItemSection1Title": "શીખો",
+    "listItemsSection1": {
+      "itemTitle1": "અક્ષર ચાર્ટ",
+      "itemTitleNum1": "અંક ચાર્ટ",
+      "itemSubTitle1": "10 કલાક, 19 પાઠ",
+      "itemTitle2": "ક્રમ અનુસાર શીખો",
+      "itemSubTitle2": "10 કલાક, 19 પાઠ",
+      "itemTitle4": "પસંદ કરેલા અક્ષરો શીખો",
+      "itemTitleNum4": "પસંદ કરેલા અંકો શીખો",
+      "itemSubTitle4": "10 કલાક, 19 પાઠ"
+    },
+    "listItemSection2Title": "પ્રેક્ટિસ",
+    "listItemsSection2": {
+      "itemTitle1": "ક્રમ અનુસાર પ્રેક્ટિસ",
+      "itemSubTitle1": "10 કલાક, 19 પાઠ",
+      "itemTitle3": "પસંદ કરેલા અક્ષરોની પ્રેક્ટિસ",
+      "itemSubTitle3": "10 કલાક, 19 પાઠ"
+    }
+  },
+  "learnCharsChartScreen": {
+    "header": {
+      "titleVowels": "સ્વર ચાર્ટ",
+      "titleConsonants": "વ્યંજન ચાર્ટ",
+      "titleBarakhadi": "બારાખડી ચાર્ટ",
+      "titleNumerals": "અંક ચાર્ટ",
+      "vowels": "સ્વર",
+      "consonants": "વ્યંજન",
+      "barakhadi": "બારાખડી: {{id30001}}/{{id30002}}",
+      "numerals": "અંકો"
+    }
+  },
+  "learnCharInfoScreen": {
+    "header": {
+      "title": "અક્ષર માહિતી"
+    },
+    "character": "અક્ષર",
+    "diacritic": "માત્રા / ચિહ્ન",
+    "englishCharacter": "અંગ્રેજી અક્ષર",
+    "numberOfStrokes": "સ્ટ્રોકની સંખ્યા",
+    "length": "સ્ટ્રોકની લંબાઈ",
+    "moreInfo": "વધુ માહિતી",
+    "viewStrokeOrder": "સ્ટ્રોક ક્રમ જુઓ",
+    "viewAnimatedDrawing": "એનિમેટેડ ડ્રોઇંગ જુઓ",
+    "playSound": "ઓડિયો સાંભળો"
+  },
+  "learnCharsCardScreen": {
+    "header": {
+      "titleVowels": "{{id40003}} સ્વર ({{id40004}})",
+      "titleConsonants": "{{id40003}} વ્યંજન ({{id40004}})",
+      "titleBarakhadi": "{{id40003}} બારાખડી ({{id40004}})",
+      "titleNumerals": "{{id40003}} અંકો ({{id40004}})",
+      "learn": "શીખો",
+      "practice": "પ્રેક્ટિસ",
+      "sequence": "ક્રમ",
+      "random": "રેન્ડમ"
+    },
+    "completeDialog": {
+      "title": "વિભાગ {{id40001}} પૂર્ણ થયો!",
+      "description": "અભિનંદન! તમે {{id40002}} વિભાગ સફળતાપૂર્વક પૂર્ણ કર્યો છે."
+    },
+    "switchRandomAlert": {
+      "title": "મોડ બદલો",
+      "descRandom": "શું તમે ખરેખર રેન્ડમ મોડ પર સ્વિચ કરવા માંગો છો?",
+      "descSeq": "શું તમે ખરેખર ક્રમ મોડ પર સ્વિચ કરવા માંગો છો?"
+    },
+    "stop": "રોકો",
+    "play": "પ્લે કરો"
+  },
+  "learnBySelectedChar": {
+    "header": {
+      "title": "અક્ષરો પસંદ કરો"
+    }
+  },
+  "LearnCharStrokeOrder": {
+    "header": {
+      "title": "સ્ટ્રોક ક્રમ"
+    }
+  },
   "LearnCharAnimatedDrawing": {
     "header": {
       "title": "એનિમેટેડ ડ્રોઇંગ"
     },
-    "repeat": "પુનરાવર્તન કરો"
+    "repeat": "ફરીથી જુઓ"
   },
-  "LearnCharStrokeOrder": {
-    "header": {
-      "title": "સ્ટ્રોક ઓર્ડર"
-    }
-  },
-  "about": {
-    "app": "કાનો વિશે",
-    "github": "Github પર યોગદાન આપો",
-    "moreApps": "વધુ એપ્સ",
-    "rateApp": "એપ્લિકેશનને રેટ કરો",
-    "sendFeedback": "પ્રતિસાદ મોકલો",
-    "sendFeedbackDetail": "તમે GitHub મુદ્દા પર તમારો મૂલ્યવાન પ્રતિસાદ મોકલી શકો છો.",
-    "setting": "સેટિંગ્સ",
-    "version": "સંસ્કરણ: {{id0001}}"
-  },
-  "aboutScreen": {
-    "developerTitle": "વિકાસકર્તા",
-    "githubSubTitle": "વિકાસકર્તા પ્રોફાઇલ અને ઓપન-સોર્સ પ્રોજેક્ટ્સની સૂચિ",
-    "githubTitle": "GitHub",
-    "infoAuthorNameTitle": "તેજસ ગજ્જર",
-    "infoDescTitle": "ગુજરાતી કક્કો, બારખાડી અને સંખ્યાઓ શીખવાની એક ઇન્ટરેક્ટિવ રીત.",
+  "settings": {
+    "title": "સેટિંગ્સ",
+    "commonHeader": "સામાન્ય સેટિંગ્સ",
+    "appearanceTitle": "દેખાવ",
+    "appearanceSubTitle": "થીમ અને રંગોનું કસ્ટમાઇઝેશન",
+    "languageTitle": "એપ્લિકેશનની ભાષા",
+    "languageSubTitle": "{{id10001}}",
+    "generalTitle": "સામાન્ય",
+    "generalSubTitle": "એપ્લિકેશનની મુખ્ય સેટિંગ્સ",
     "infoHeader": "માહિતી",
-    "instagramSubTitle": "મારો શોખ અને મારા ગેજેટ્સ",
-    "instagramTitle": "ઇન્સ્ટાગ્રામ",
-    "portfolioSubTitle": "વિકાસકર્તા વિશેની તમામ માહિતી",
-    "portfolioTitle": "પોર્ટફોલિયો",
-    "telegramSubTitle": "બગ્સ, સુધારાઓ, સુવિધાની વિનંતી અને વિકાસ સમાચાર વિશે ચર્ચા",
-    "telegramTitle": "ટેલિગ્રામમાં જોડાઓ",
-    "title": "કાનો વિશે",
-    "twitterSubTitle": "વ્યક્તિગત માઇક્રો-બ્લોગ",
-    "twitterTitle": "ટ્વિટર"
-  },
-  "appearanceSettings": {
-    "accentColorSubTitle": "UI ઘટકોને રંગવા માટે વપરાયેલ રંગ",
-    "accentColorTitle": "ઉચ્ચાર રંગ",
-    "interfaceHeader": "ઈન્ટરફેસ",
-    "otherHeader": "અન્ય",
-    "otherSubTitle": "ડિફૉલ્ટ થીમ સેટિંગ્સ પુનઃસ્થાપિત કરો",
-    "otherTitle": "ડિફૉલ્ટ થીમ પુનઃસ્થાપિત કરો",
-    "themeOption": "થીમ",
-    "themeOption1": "પ્રકાશ",
-    "themeOption2": "શ્યામ",
-    "themeOption3": "સિસ્ટમ ડિફોલ્ટ",
-    "themeSubTitle": "એપ્લિકેશનની મુખ્ય થીમ",
-    "themeTitle": "થીમ",
-    "title": "દેખાવ"
-  },
-  "cardAnimation": {
-    "animationEasing": "એનિમેશન સરળતા",
-    "arrowFont": "એરો ફોન્ટ: {{id20004}}px",
-    "arrowSymbol": "એરો સિમ્બોલ",
-    "disableStrokeAnimation": "સ્ટ્રોક એનિમેશન અક્ષમ કરો",
-    "duration": "અવધિ: {{id20002}}સે",
-    "emptyStroke": "ખાલી સ્ટ્રોક",
-    "header": {
-      "title": "કાર્ડ એનિમેશન"
-    },
-    "initDelay": "પ્રારંભિક વિલંબ: {{id20001}}s",
-    "replay": "રિપ્લે",
-    "reset": "રીસેટ કરો",
-    "showArrow": "એરો બતાવો",
-    "stroke": "સ્ટ્રોક",
-    "strokeWidth": "સ્ટ્રોક પહોળાઈ: {{id20003}}px"
-  },
-  "changeLanguageScreen": {
-    "title": "ભાષા બદલો"
-  },
-  "general": {
-    "appname": "કાનો",
-    "cancel": "રદ કરો",
-    "close": "બંધ",
-    "continue": "ચાલુ રાખો",
-    "finish": "સમાપ્ત કરો",
-    "next": "આગળ",
-    "noInternet": "ઇન્ટરનેટ કનેક્શન નથી",
-    "ok": "ઠીક છે",
-    "value": "મૂલ્ય"
+    "changelogTitle": "ચેન્જલોગ",
+    "changelogSubTitle": "તમામ અપડેટ્સમાં થયેલા ફેરફારોની યાદી",
+    "librariesTitle": "લાઇબ્રેરીઝ",
+    "librariesSubTitle": "આ પ્રોજેક્ટમાં વપરાયેલ ઓપન સોર્સ લાઇબ્રેરીઝ",
+    "faqTitle": "વારંવાર પૂછાતા પ્રશ્નો (FAQ)",
+    "faqSubTitle": "સામાન્ય પ્રશ્નો અને તેના જવાબો",
+    "translateTitle": "આ એપ્લિકેશનનો અનુવાદ કરો",
+    "translateSubTitle": "તમારી ભાષામાં અનુવાદ કરવામાં સહાય કરો",
+    "translatorsTitle": "અનુવાદકો",
+    "translatorsSubTitle": "સ્થાનિકીકરણમાં યોગદાન આપનાર મિત્રો",
+    "privacyTitle": "ગોપનીયતા નીતિ",
+    "privacySubTitle": "માહિતી અને પરવાનગી વપરાશ નીતિ"
   },
   "generalSetting": {
+    "title": "સામાન્ય",
     "section1": {
-      "header": "જનરલ",
+      "header": "સામાન્ય",
       "row1": {
-        "subTitle": "કાર્ડ એનિમેશન બદલો",
-        "title": "સ્વાઇપ કાર્ડ"
+        "title": "સ્વાઇપ કાર્ડ",
+        "subTitle": "કાર્ડ એનિમેશન અને સમયગાળો બદલો"
       },
       "row2": {
         "title": "ગુજરાતી ફોન્ટ્સ",
@@ -98,181 +172,111 @@
     "section2": {
       "header": "અન્ય",
       "row1": {
-        "dialogSubTitle": "શું તમે ખરેખર એપ્લિકેશનની પ્રગતિ સાફ કરવા માંગો છો?",
-        "dialogTitle": "એપ્લિકેશનની પ્રગતિ સાફ કરીએ?",
-        "subTitle": "બધી પ્રગતિ સાફ કરો",
-        "title": "સ્પષ્ટ પ્રગતિ"
+        "title": "પ્રગતિ સાફ કરો",
+        "subTitle": "બધી શીખવાની પ્રગતિ સાફ કરો",
+        "dialogTitle": "પ્રગતિ સાફ કરવી છે?",
+        "dialogSubTitle": "શું તમે ખરેખર બધી શીખવાની પ્રગતિ સાફ કરવા માંગો છો?"
       }
-    },
-    "title": "જનરલ"
-  },
-  "hints": {
-    "card": {
-      "hint1": "આગલા કાર્ડ માટે 👈ડાબે/જમણે સ્વાઇપ કરો",
-      "hint2": "👆 પુનરાવર્તન કરવા માટે કાર્ડ પર ટેપ કરો"
-    },
-    "chart": {
-      "hint1": "👆પાત્રની વિગતો જોવા માટે ટૅપ કરો."
-    },
-    "chartInfo": {
-      "hint1": "આગલા કાર્ડ માટે 👈ડાબે/જમણે સ્વાઇપ કરો"
     }
   },
-  "homeScreen": {
-    "header": {
-      "subTitle": "ફરી સ્વાગત છે!",
-      "title": "હાય, 👋"
-    },
-    "listItemSection1Title": "મૂળાક્ષરો",
-    "listItemSection2Title": "સંખ્યાઓ",
-    "listItemsSection1": {
-      "itemSubTitle1": "12 સ્વરો, 5 વિભાગો",
-      "itemSubTitle2": "34 વ્યંજન, 5 વિભાગો",
-      "itemSubTitle3": "420 વ્યંજન, 5 વિભાગો",
-      "itemTitle1": "નો પરિચય\nસ્વર(સ્વરા)",
-      "itemTitle2": "નો પરિચય\nવ્યંજનો(વ્યાંજના)",
-      "itemTitle3": "બારખાડીનો પરિચય \n(વ્યંજન"
-    },
-    "listItemsSection2": {
-      "itemSubTitle1": "101 નંબરો, 5 વિભાગો",
-      "itemTitle1": "નો પરિચય\nગુજરાતી અંકો"
-    }
-  },
-  "learnBySelectedChar": {
-    "header": {
-      "title": "અક્ષરો પસંદ કરો"
-    }
-  },
-  "learnCharInfoScreen": {
-    "character": "પાત્ર",
-    "diacritic": "ડાયાક્રિટિક",
-    "englishCharacter": "અંગ્રેજી પાત્ર",
-    "header": {
-      "title": "પાત્ર માહિતી"
-    },
-    "length": "સ્ટ્રોક લંબાઈ",
-    "moreInfo": "વધુ માહિતી",
-    "numberOfStrokes": "સ્ટ્રોકની સંખ્યા",
-    "playSound": "અવાજ વગાડો",
-    "viewAnimatedDrawing": "એનિમેટેડ ડ્રોઇંગ જુઓ",
-    "viewStrokeOrder": "સ્ટ્રોક ઓર્ડર જુઓ"
-  },
-  "learnCharsCardScreen": {
-    "completeDialog": {
-      "description": "તમે {{id40002}} વિભાગ પૂર્ણ કર્યો અભિનંદન.",
-      "title": "વિભાગ {{id40001}} પૂર્ણ થયું!"
-    },
-    "header": {
-      "titleBarakhadi": "બારાખડી શીખો (ક્રમ)",
-      "titleConsonants": "વ્યંજન શીખો (ક્રમ)",
-      "titleNumerals": "સંખ્યાઓ શીખો (ક્રમ)",
-      "titleVowels": "સ્વરો શીખો (ક્રમ)"
-    },
-    "play": "રમો",
-    "stop": "રોકો",
-    "switchRandomAlert": {
-      "descRandom": "શું તમે ખરેખર રેન્ડમ મોડ પર સ્વિચ કરવા માંગો છો?",
-      "descSeq": "શું તમે ખરેખર ક્રમ મોડ પર સ્વિચ કરવા માંગો છો?",
-      "title": "મોડ બદલો"
-    }
-  },
-  "learnCharsChartScreen": {
-    "header": {
-      "barakhadi": "બારાખડી: {{id30001}}/{{id30002}}",
-      "consonants": "વ્યંજન",
-      "numerals": "અંકો",
-      "titleBarakhadi": "બારાખાડી ચાર્ટ",
-      "titleConsonants": "વ્યંજન ચાર્ટ",
-      "titleNumerals": "અંકોનો ચાર્ટ",
-      "titleVowels": "સ્વર ચાર્ટ",
-      "vowels": "સ્વરો"
-    }
-  },
-  "learnCharsListScreen": {
-    "header": {
-      "titleBarakhadi": "બારાખડી શીખો",
-      "titleConsonants": "વ્યંજનો શીખો",
-      "titleNumerals": "અંકો શીખો",
-      "titleVowels": "સ્વર શીખો"
-    },
-    "listItemSection1Title": "જાણો",
-    "listItemSection2Title": "પ્રેક્ટિસ કરો",
-    "listItemsSection1": {
-      "itemSubTitle1": "10 કલાક, 19 પાઠ",
-      "itemSubTitle2": "10 કલાક, 19 પાઠ",
-      "itemSubTitle4": "10 કલાક, 19 પાઠ",
-      "itemTitle1": "અક્ષરો ચાર્ટ",
-      "itemTitle2": "ક્રમમાં શીખો",
-      "itemTitle4": "પસંદ કરેલા પાત્રો દ્વારા શીખો",
-      "itemTitleNum1": "નંબર્સ ચાર્ટ",
-      "itemTitleNum4": "પસંદ કરેલા નંબરો દ્વારા શીખો"
-    },
-    "listItemsSection2": {
-      "itemSubTitle1": "10 કલાક, 19 પાઠ",
-      "itemSubTitle3": "10 કલાક, 19 પાઠ",
-      "itemTitle1": "ઓર્ડર દ્વારા પ્રેક્ટિસ",
-      "itemTitle3": "પસંદ કરેલા પાત્રો દ્વારા પ્રેક્ટિસ કરો"
-    }
-  },
-  "librariesScreen": {
-    "title": "પુસ્તકાલયો"
+  "about": {
+    "version": "સંસ્કરણ: {{id0001}}",
+    "sendFeedback": "પ્રતિસાદ મોકલો",
+    "rateApp": "એપ રેટ કરો",
+    "moreApps": "વધુ એપ્સ",
+    "github": "GitHub પર યોગદાન આપો",
+    "setting": "સેટિંગ્સ",
+    "app": "કાનો વિશે",
+    "sendFeedbackDetail": "તમે GitHub issue દ્વારા તમારો મૂલ્યવાન પ્રતિસાદ મોકલી શકો છો."
   },
   "moreApps": {
-    "apps1Desc": "આ એપ્લિકેશન તમને Xiaomi (MIUI) ઉપકરણોમાં વિવિધ એપ્લિકેશનો માટે જાહેરાતો અથવા ભલામણોને સક્ષમ/અક્ષમ કરવાની મંજૂરી આપે છે.",
+    "appsTitle": "વધુ એપ્સ",
     "apps1Title": "MIUI - જાહેરાત સહાયક",
-    "apps2Desc": "ગુજરાતી કક્કો, બારખાડી અને સંખ્યાઓ શીખવાની એક ઇન્ટરેક્ટિવ રીત.",
+    "apps1Desc": "આ એપ્લિકેશન તમને Xiaomi (MIUI) ઉપકરણોમાં વિવિધ એપ્લિકેશનો માટે જાહેરાતો અથવા ભલામણોને સક્ષમ/અક્ષમ કરવાની સુવિધા આપે છે.",
     "apps2Title": "કાનો",
-    "apps3Desc": "PiGo - Raspberry Pi ઉત્સાહીઓ માટે ઓપન સોર્સ, મફત મોબાઇલ સાથી. \nસફરમાં બહુવિધ Pi સર્વર્સને વિના પ્રયાસે અન્વેષણ કરો અને મેનેજ કરો.",
+    "apps2Desc": "ગુજરાતી કક્કો, બારાખડી અને અંકો શીખવાની એક મનોરંજક અને ઇન્ટરેક્ટિવ રીત.",
     "apps3Title": "PiGo - સફરમાં તમારા Pi સર્વર્સનું અન્વેષણ કરો",
-    "apps4Desc": "`OHM-Client` એ એન્ડ્રોઇડ અને iOS માટેની બિનસત્તાવાર ઓપન હાર્ડવેર મોનિટર ક્લાયંટ એપ્લિકેશન છે જે રિએક્ટ-નેટિવમાં લખાયેલ છે. \nઆ એપનો ઉપયોગ કરીને તમે ઓપન હાર્ડવેર મોનિટર વેબ સર્વરને મોનિટર કરી શકો છો.",
+    "apps3Desc": "PiGo - Raspberry Pi ઉત્સાહીઓ માટે ઓપન-સોર્સ અને મફત મોબાઇલ સાથી. સફરમાં બહુવિધ Pi સર્વર્સનું સરળતાથી સંચાલન કરો.",
     "apps4Title": "OHM-ક્લાયન્ટ",
-    "appsTitle": "વધુ એપ્સ"
+    "apps4Desc": "`OHM-Client` એ Android અને iOS માટે React Native માં બનેલ ઓપન હાર્ડવેર મોનિટર ક્લાયન્ટ એપ્લિકેશન છે."
   },
-  "settings": {
-    "appearanceSubTitle": "દેખાવનું કસ્ટમાઇઝેશન",
-    "appearanceTitle": "દેખાવ",
-    "changelogSubTitle": "તમામ અપડેટ્સમાં થયેલા ફેરફારોની યાદી",
-    "changelogTitle": "ચેન્જલોગ",
-    "commonHeader": "સામાન્ય સેટિંગ્સ",
-    "faqSubTitle": "વારંવાર પૂછાતા પ્રશ્નોના જવાબ આપો",
-    "faqTitle": "FAQ",
-    "generalSubTitle": "એપ્લિકેશનની કાર્યાત્મક સેટિંગ્સ",
-    "generalTitle": "જનરલ",
-    "infoHeader": "માહિતી",
-    "languageSubTitle": "{{id10001}}",
-    "languageTitle": "એપ્લિકેશન ભાષા",
-    "librariesSubTitle": "આ પ્રોજેક્ટમાં ઉપયોગમાં લેવાતી ઓપન સોર્સ લાઇબ્રેરીઓની યાદી",
-    "librariesTitle": "પુસ્તકાલયો",
-    "privacySubTitle": "માહિતી અને પરવાનગી વપરાશ નીતિ",
-    "privacyTitle": "ગોપનીયતા નીતિ",
-    "title": "સેટિંગ્સ",
-    "translateSubTitle": "આ એપ્લિકેશનને તમારી ભાષામાં અનુવાદિત કરો",
-    "translateTitle": "આ એપ્લિકેશનનો અનુવાદ કરો",
-    "translatorsSubTitle": "જે લોકોએ આ એપ્લિકેશનને સ્થાનિકીકરણ કરવામાં મદદ કરી",
-    "translatorsTitle": "અનુવાદકો"
+  "appearanceSettings": {
+    "title": "દેખાવ",
+    "interfaceHeader": "ઇન્ટરફેસ",
+    "themeTitle": "થીમ",
+    "themeSubTitle": "એપ્લિકેશનની મુખ્ય થીમ",
+    "accentColorTitle": "એક્સેન્ટ કલર",
+    "accentColorSubTitle": "UI ઘટકો માટે વપરાતો મુખ્ય રંગ",
+    "otherHeader": "અન્ય",
+    "otherTitle": "ડિફૉલ્ટ થીમ પુનઃસ્થાપિત કરો",
+    "otherSubTitle": "મૂળ થીમ સેટિંગ્સ પાછી લાવો",
+    "themeOption": "થીમ",
+    "themeOption1": "લાઇટ",
+    "themeOption2": "ડાર્ક",
+    "themeOption3": "સિસ્ટમ ડિફૉલ્ટ"
   },
-  "swipeCardSetting": {
-    "section1": {
-      "header": "જનરલ",
-      "row1": {
-        "subTitle": "એનિમેશન અને સ્પીડ સેટિંગ",
-        "title": "કાર્ડ એનિમેશન"
-      },
-      "row2": {
-        "cardAutoSwipeDurationAlert": {
-          "desc": "કાર્ડ ઓટો સ્વાઇપ સમયગાળો સેકન્ડોમાં",
-          "title": "કાર્ડ ઓટો સ્વાઇપ સમયગાળો",
-          "unit": "સેકન્ડ(ઓ)"
-        },
-        "subTitle": "કાર્ડ ઓટો સ્વાઇપ સમયગાળો સેકન્ડોમાં",
-        "title": "કાર્ડ ઓટો સ્વાઇપ સમયગાળો"
-      }
-    },
-    "title": "સ્વાઇપ કાર્ડ"
+  "librariesScreen": {
+    "title": "લાઇબ્રેરીઝ"
   },
   "translatorsScreen": {
-    "emptyList": "અગ્રણી બનો - હજુ સુધી કોઈ ફાળો આપનાર મળ્યા નથી!",
-    "emptyListAction": "યોગદાન આપવા માટે અહીં ક્લિક કરો",
-    "title": "અનુવાદકો"
+    "title": "અનુવાદકો",
+    "emptyList": "પ્રથમ યોગદાનકર્તા બનો - હજુ સુધી કોઈ મળ્યા નથી!",
+    "emptyListAction": "યોગદાન આપવા માટે અહીં ક્લિક કરો"
+  },
+  "changeLanguageScreen": {
+    "title": "ભાષા બદલો"
+  },
+  "swipeCardSetting": {
+    "title": "સ્વાઇપ કાર્ડ",
+    "section1": {
+      "header": "સામાન્ય",
+      "row1": {
+        "title": "કાર્ડ એનિમેશન",
+        "subTitle": "એનિમેશન અને ઝડપ સેટિંગ"
+      },
+      "row2": {
+        "title": "કાર્ડ ઓટો-સ્વાઇપ સમયગાળો",
+        "subTitle": "કાર્ડ આપમેળે સ્વાઇપ થવાનો સમય સેકન્ડમાં",
+        "cardAutoSwipeDurationAlert": {
+          "title": "કાર્ડ ઓટો-સ્વાઇપ સમયગાળો",
+          "desc": "કાર્ડ આપમેળે સ્વાઇપ થવાનો સમય સેકન્ડમાં દાખલ કરો",
+          "unit": "સેકન્ડ"
+        }
+      }
+    }
+  },
+  "cardAnimation": {
+    "header": {
+      "title": "કાર્ડ એનિમેશન"
+    },
+    "initDelay": "પ્રારંભિક વિલંબ: {{id20001}} સેકન્ડ",
+    "duration": "સમયગાળો: {{id20002}} સેકન્ડ",
+    "strokeWidth": "સ્ટ્રોક પહોળાઈ: {{id20003}} px",
+    "arrowFont": "તીર સાઇઝ: {{id20004}} px",
+    "emptyStroke": "ખાલી સ્ટ્રોક રંગ",
+    "stroke": "સ્ટ્રોક રંગ",
+    "disableStrokeAnimation": "સ્ટ્રોક એનિમેશન બંધ કરો",
+    "showArrow": "તીર બતાવો",
+    "arrowSymbol": "તીરનું ચિહ્ન",
+    "animationEasing": "એનિમેશન ઇઝિંગ",
+    "replay": "ફરીથી જુઓ",
+    "reset": "રીસેટ કરો"
+  },
+  "aboutScreen": {
+    "title": "કાનો વિશે",
+    "infoHeader": "માહિતી",
+    "infoDescTitle": "ગુજરાતી કક્કો, બારાખડી અને અંકો શીખવાની એક મનોરંજક અને ઇન્ટરેક્ટિવ રીત.",
+    "infoAuthorNameTitle": "તેજસ ગજ્જર",
+    "developerTitle": "ડેવલપર",
+    "portfolioTitle": "પોર્ટફોલિયો",
+    "portfolioSubTitle": "ડેવલપર વિશે તમામ માહિતી",
+    "instagramTitle": "ઇન્સ્ટાગ્રામ",
+    "instagramSubTitle": "મારો શોખ અને ગેજેટ્સ",
+    "telegramTitle": "ટેલિગ્રામમાં જોડાઓ",
+    "telegramSubTitle": "બગ્સ, સુધારાઓ, નવી સુવિધાઓ અને વિકાસ સમાચારોની ચર્ચા",
+    "githubTitle": "GitHub",
+    "githubSubTitle": "ડેવલપર પ્રોફાઇલ અને ઓપન-સોર્સ પ્રોજેક્ટ્સ",
+    "twitterTitle": "Twitter",
+    "twitterSubTitle": "વ્યક્તિગત માઇક્રો-બ્લોગ"
   }
 }
