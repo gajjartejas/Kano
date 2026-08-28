@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef } from 'react';
 
 //ThirdParty
 import Sound from 'react-native-sound';
-import crashlytics from '@react-native-firebase/crashlytics';
+import { getCrashlytics, recordError } from '@react-native-firebase/crashlytics';
 
 interface ISoundPlayerProps {
   play: (soundFile: string) => void;
@@ -31,7 +31,7 @@ export const useSoundPlayer = (): ISoundPlayerProps => {
     soundRef.current = new Sound(soundFile, Sound.MAIN_BUNDLE, error => {
       if (error) {
         console.log(`failed to load the sound: ${soundFile}`, error);
-        crashlytics().recordError(error, `useAudioPlayer.ts->${soundFile}`);
+        recordError(getCrashlytics(), error, `useAudioPlayer.ts->${soundFile}`);
         return;
       }
       soundRef.current?.play(success => {

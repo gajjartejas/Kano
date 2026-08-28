@@ -34,9 +34,6 @@ const AppToast = (props: ToastConfigParams<IAppSuccessToastProps>) => {
     }
   }, [props.type]);
 
-
-
-
   return (
     <BaseToast
       {...rest}

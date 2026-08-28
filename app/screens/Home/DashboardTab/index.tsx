@@ -87,7 +87,6 @@ const DashboardTab = ({ navigation }: Props) => {
             <Image
               style={[styles.avatar, { backgroundColor: `${colors.primary}80` }]}
               resizeMode={'contain'}
-              borderRadius={25}
               source={Config.Images.icons.avatar}
             />
           </View>

@@ -4,6 +4,8 @@ apply plugin: "com.facebook.react"
 apply plugin: 'com.google.gms.google-services'
 apply plugin: 'com.google.firebase.crashlytics'
 
+project.ext.set("REACT_NATIVE_NODE_MODULES_DIR", "$rootDir/../node_modules/react-native")
+
 /**
  * This is the configuration block to customize your React Native Android app.
  * By default you don't need to apply any configuration, just uncomment the lines you need.
@@ -21,29 +23,54 @@ react {
 
     /* Variants */
     //   The list of variants to that are debuggable. For those we're going to
-    //   skip the bundling of the JS bundle and the assets. By default is just 'debug'.
+    //   skip the bundling of the JS bundle and the assets. Default is "debug", "debugOptimized".
     //   If you add flavors like lite, prod, etc. you'll have to list your debuggableVariants.
-    // debuggableVariants = ["liteDebug", "prodDebug"]
+    // debuggableVariants = ["liteDebug", "liteDebugOptimized", "prodDebug", "prodDebugOptimized"]
 
-    /* Bundling */
-    //   A list containing the node command and its flags. Default is just 'node'.
-    // nodeExecutableAndArgs = ["node"]
-    //
-    //   The command to run when bundling. By default is 'bundle'
-    // bundleCommand = "ram-bundle"
-    //
-    //   The path to the CLI configuration file. Default is empty.
-    // bundleConfig = file(../rn-cli.config.js)
-    //
-    //   The name of the generated asset file containing your JS bundle
-    // bundleAssetName = "MyApplication.android.bundle"
-    //
-    //   The entry file for bundle generation. Default is 'index.android.js' or 'index.js'
-    // entryFile = file("../js/MyApplication.android.js")
-    //
-    //   A list of extra flags to pass to the 'bundle' commands.
-    //   See https://github.com/react-native-community/cli/blob/main/docs/commands.md#bundle
-    // extraPackagerArgs = []
+    def resolveNodeExecutable = {
+        if (System.env.NODE_BINARY && new File(System.env.NODE_BINARY).exists()) {
+            return System.env.NODE_BINARY
+        }
+        def standardPaths = [
+            "/opt/homebrew/bin/node",
+            "/usr/local/bin/node",
+            "/usr/bin/node",
+            "/bin/node"
+        ]
+        for (path in standardPaths) {
+            if (new File(path).exists()) {
+                return path
+            }
+        }
+        def userHome = System.getProperty("user.home") ?: ""
+        if (userHome) {
+            def nvmDir = new File(userHome, ".nvm/versions/node")
+            if (nvmDir.exists() && nvmDir.isDirectory()) {
+                def nvmNodes = nvmDir.listFiles()?.findAll { it.isDirectory() }
+                    ?.collect { new File(it, "bin/node") }
+                    ?.findAll { it.exists() }
+                    ?.sort { a, b -> b.parentFile.parentFile.name <=> a.parentFile.parentFile.name }
+                if (nvmNodes && !nvmNodes.isEmpty()) {
+                    return nvmNodes.first().absolutePath
+                }
+            }
+            def managerPaths = [
+                "$userHome/.local/share/fnm/current/bin/node",
+                "$userHome/.fnm/current/bin/node",
+                "$userHome/.volta/bin/node",
+                "$userHome/.asdf/shims/node",
+                "$userHome/.nodenv/shims/node"
+            ]
+            for (path in managerPaths) {
+                if (new File(path).exists()) {
+                    return path
+                }
+            }
+        }
+        return "node"
+    }
+    nodeExecutableAndArgs = [resolveNodeExecutable()]
+
 
     /* Hermes Commands */
     //   The hermes compiler command to run. By default it is 'hermesc'
@@ -84,8 +111,8 @@ android {
         applicationId "com.tejasgajjar.kano"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 20
-        versionName "1.2.6"
+        versionCode 22
+        versionName "1.3.0"
     }
     signingConfigs {
         debug {
@@ -104,7 +131,7 @@ android {
             // see https://reactnative.dev/docs/signed-apk-android.
             signingConfig signingConfigs.debug
             minifyEnabled enableProguardInReleaseBuilds
-            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
 
             /* Add the firebaseCrashlytics extension (by default,
             * it's disabled to improve build speeds) and set

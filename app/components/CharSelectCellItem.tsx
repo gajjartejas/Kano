@@ -8,6 +8,7 @@ import { AppTheme } from 'app/models/theme';
 //App Modules
 import Config from 'app/config';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useGujaratiFont } from 'app/store/fontConfig';
 
 //Interface
 export interface ISelectCharCellItem {
@@ -38,6 +39,7 @@ interface ICharCellItemProps {
 const CharCellItem = (props: ICharCellItemProps) => {
   //Const
   const { colors } = useTheme<AppTheme>();
+  const { fonts } = useGujaratiFont();
   const { item, index, sectionIndex, numberOfColumns, cellSpacing, containerSpacing, selected, parentWidth } = props;
   const { width } = useWindowDimensions();
   const { left, right } = useSafeAreaInsets();
@@ -69,7 +71,11 @@ const CharCellItem = (props: ICharCellItemProps) => {
               numberOfLines={1}
               style={[
                 styles.titleText,
-                { color: selected ? colors.onPrimary : colors.textTitle, fontSize: titleFontSize },
+                {
+                  color: selected ? colors.onPrimary : colors.textTitle,
+                  fontSize: titleFontSize,
+                  fontFamily: fonts.SemiBold,
+                },
               ]}>
               {item.title}
             </Text>
@@ -77,7 +83,11 @@ const CharCellItem = (props: ICharCellItemProps) => {
               numberOfLines={2}
               style={[
                 styles.subTitleText,
-                { color: selected ? `${colors.onPrimary}` : `${colors.textTitle}`, fontSize: subTitleFontSize },
+                {
+                  color: selected ? `${colors.onPrimary}` : `${colors.textTitle}`,
+                  fontSize: subTitleFontSize,
+                  fontFamily: fonts.Regular,
+                },
               ]}>
               {item.subTitle}
             </Text>

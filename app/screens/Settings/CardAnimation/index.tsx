@@ -8,6 +8,8 @@ import { useTheme, Button } from 'react-native-paper';
 import Animated, { Easing, FadeIn, LinearTransition } from 'react-native-reanimated';
 import Slider from '@react-native-community/slider';
 
+const SliderComponent = Slider as unknown as React.ComponentType<any>;
+
 //App modules
 import styles from './styles';
 import AnimatedCharacter from 'app/components/AnimatedCharacter';
@@ -147,10 +149,10 @@ const CardAnimation = ({ navigation }: Props) => {
                 <View style={styles.wrapRow}>
                   <View style={[styles.halfWidth, styles.rowMargin]}>
                     <RowTitle title={t('cardAnimation.initDelay', { id20001: initialDelay / 1000 })} />
-                    <Slider
+                    <SliderComponent
                       style={styles.slider}
                       value={initialDelay}
-                      onSlidingComplete={v => setInitialDelay(v)}
+                      onSlidingComplete={(v: number) => setInitialDelay(v)}
                       minimumValue={1000}
                       step={500}
                       maximumValue={10000}
@@ -161,10 +163,10 @@ const CardAnimation = ({ navigation }: Props) => {
                   </View>
                   <View style={[styles.halfWidth, styles.rowMargin]}>
                     <RowTitle title={t('cardAnimation.duration', { id20002: duration / 1000 })} />
-                    <Slider
+                    <SliderComponent
                       style={styles.slider}
                       value={duration}
-                      onSlidingComplete={v => setDuration(v)}
+                      onSlidingComplete={(v: number) => setDuration(v)}
                       minimumValue={0}
                       step={500}
                       maximumValue={10000}
@@ -176,10 +178,10 @@ const CardAnimation = ({ navigation }: Props) => {
 
                   <View style={[styles.halfWidth, styles.rowMargin]}>
                     <RowTitle title={t('cardAnimation.strokeWidth', { id20003: strokeWidth })} />
-                    <Slider
+                    <SliderComponent
                       style={styles.slider}
                       value={strokeWidth}
-                      onSlidingComplete={v => setStrokeWidth(v)}
+                      onSlidingComplete={(v: number) => setStrokeWidth(v)}
                       minimumValue={0}
                       step={0.5}
                       maximumValue={6}
@@ -190,10 +192,10 @@ const CardAnimation = ({ navigation }: Props) => {
                   </View>
                   <View style={[styles.halfWidth, styles.rowMargin]}>
                     <RowTitle title={t('cardAnimation.arrowFont', { id20004: arrowFontSize })} />
-                    <Slider
+                    <SliderComponent
                       style={styles.slider}
                       value={arrowFontSize}
-                      onSlidingComplete={v => setArrowFontSize(v)}
+                      onSlidingComplete={(v: number) => setArrowFontSize(v)}
                       minimumValue={1}
                       step={1}
                       maximumValue={10}

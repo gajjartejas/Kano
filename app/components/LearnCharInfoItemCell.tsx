@@ -13,6 +13,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { AppTheme } from 'app/models/theme';
 import useSvgReader from 'app/hooks/useSvgReader';
 import useLargeScreenMode from 'app/hooks/useLargeScreenMode';
+import { useGujaratiFont } from 'app/store/fontConfig';
 
 //Interface
 interface ILearnCharInfoItemCellProps {
@@ -26,6 +27,7 @@ interface ILearnCharInfoItemCellProps {
 const LearnCharInfoItemCell = (props: ILearnCharInfoItemCellProps) => {
   //Const
   const { colors } = useTheme<AppTheme>();
+  const { fonts } = useGujaratiFont();
   const { parsedSvg, readSvg } = useSvgReader();
 
   const { width } = useWindowDimensions();
@@ -52,7 +54,7 @@ const LearnCharInfoItemCell = (props: ILearnCharInfoItemCellProps) => {
         style={[
           styles.headerText,
           largeScreenMode && styles.headerTextLargeMode,
-          { fontSize: fontSize, color: colors.text },
+          { fontSize: fontSize, color: colors.text, fontFamily: fonts.SemiBold },
         ]}>
         {gu}
       </Text>

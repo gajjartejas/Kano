@@ -3,6 +3,7 @@ import { View, StyleSheet, useWindowDimensions } from 'react-native';
 
 //App Modules
 import Config from 'app/config';
+import { useGujaratiFont } from 'app/store/fontConfig';
 
 //Third Party
 import { TouchableRipple, useTheme, Text } from 'react-native-paper';
@@ -41,6 +42,7 @@ interface ICharCellItemProps {
 const CharCellItem = (props: ICharCellItemProps) => {
   //Const
   const { colors } = useTheme<AppTheme>();
+  const { fonts } = useGujaratiFont();
   const { item, index, numberOfColumns, cellSpacing, containerSpacing, parentWidth, sectionIndex } = props;
   const { width } = useWindowDimensions();
   const { left, right } = useSafeAreaInsets();
@@ -68,7 +70,12 @@ const CharCellItem = (props: ICharCellItemProps) => {
         onPress={() => props.onPress(item, index, sectionIndex)}>
         <View style={styles.iconTextContainerView}>
           <View style={styles.iconTextContainer}>
-            <Text numberOfLines={1} style={[styles.titleText, { color: colors.textTitle, fontSize: titleFontSize }]}>
+            <Text
+              numberOfLines={1}
+              style={[
+                styles.titleText,
+                { color: colors.textTitle, fontSize: titleFontSize, fontFamily: fonts.SemiBold },
+              ]}>
               {item.gu}
             </Text>
             <Text

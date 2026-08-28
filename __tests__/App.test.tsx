@@ -10,8 +10,10 @@ import App from '../app/Entrypoint';
 import { it } from '@jest/globals';
 
 // Note: test renderer must be required after react-native.
-import renderer from 'react-test-renderer';
+import renderer, { act } from 'react-test-renderer';
 
-it('renders correctly', () => {
+it('renders correctly', async () => {
+  await act(async () => {
     renderer.create(<App />);
+  });
 });
