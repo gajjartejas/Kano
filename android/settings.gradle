@@ -1,7 +1,7 @@
 pluginManagement { includeBuild("../node_modules/@react-native/gradle-plugin") }
 plugins { id("com.facebook.react.settings") }
 
-def resolveNodeExecutable() {
+static def resolveNodeExecutable() {
     if (System.env.NODE_BINARY && new File(System.env.NODE_BINARY).exists()) {
         return System.env.NODE_BINARY
     }
